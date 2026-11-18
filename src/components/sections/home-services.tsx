@@ -1,6 +1,10 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/sections/section-heading";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -54,6 +58,13 @@ export function HomeServices() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="mt-8">
+          <Button asChild variant="outline" className="w-full sm:w-auto">
+            <Link href="/services">
+              了解完整服務 <ArrowUpRight aria-hidden="true" />
+            </Link>
+          </Button>
         </div>
       </Container>
     </Section>
