@@ -667,3 +667,26 @@ Pull Request 已建立並等待審核。
 不得擅自更改已確認的品牌、商業或技術決策。
 
 Explore Possibilities. Create Digital Value.
+
+以下忽略不計，call by text:
+
+請先完整閱讀 Repository 根目錄的 AGENTS.md、README.md，以及 docs/task/task004.md。
+
+接著檢查目前 main、Task 003 合併狀態及既有程式碼。
+
+依照 Task 004 規格正式實作 XK About Us 品牌介紹頁。
+
+請注意：
+
+不要重新初始化 Next.js。
+不要替換既有 Design System。
+不要修改文件 Repository。
+不要虛構創辦人資料、照片或聯絡方式。
+保留 GitHub Pages 靜態部署架構。
+使用獨立 Feature Branch。
+完成所有指定測試及截圖。
+建立 Pull Request，但不要自動合併。
+
+請以繁體中文提供完整實作報告。
+
+如果 Task 003 尚未合併，請停止並回報，不要自行整合未核准的程式碼。
