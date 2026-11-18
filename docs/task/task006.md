@@ -50,10 +50,12 @@ Task 006 的工程規格目前已完成制定，但 `/solutions` 頁面尚未實
 先閱讀以下網站文件與原稿：
 
 - [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)。
-- [Task 001 正式規格](task001.md)、[原始歷史來源](task001-implementation-notes.md)及[繁體中文版本](task001-implementation-notes.zh-TW.md)。Task 006 最初研究時 `docs/task/task001.md` 尚不存在；本輪統一骨架後以 `task001.md` 為正式入口，保留原稿作歷史來源。
-- [Task 002 原稿](task002.md)及[繁體中文版本](task002.zh-TW.md)。英文原稿已恢復，早期空檔描述屬歷史紀錄。
+- [Task 001 正式規格](task001.md)、[原始歷史來源](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md) 及 [繁體中文版本](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.zh-TW.md)。Task 006 最初研究時 `docs/task/task001.md` 尚不存在；本輪統一骨架後以 `task001.md` 為正式入口，保留原稿作歷史來源。
+- [Task 002 正式規格](task002.md) 及 [繁體中文版本](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)。英文原稿已恢復，早期空檔描述屬歷史紀錄。
 - [Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)。
 - [歷史實作紀錄](../implementation-notes.md)、[Design System](../brand-design-system.md)、[首頁實作](../homepage-implementation.md)、[About 實作](../about-implementation.md)、[Services 實作](../services-implementation.md)、[Pages 操作指南](../github-pages-deployment.md)。
+
+上述 Task 001 兩份替代原稿與 Task 002 繁體中文原稿已從目前 main 刪除；連結固定至歷史 Commit `895b9878b6c6244cf225772f6c4f8d3e5d97affe` 的快照，僅供來源查證，不復原刪檔。正式 canonical 入口仍是 `task001.md` 與 `task002.md`。
 
 規格優先順序：使用者當次明確指示、已合併網站架構與 Design System、這份任務明確範圍、經核對的業務文件、舊版規劃。記錄重要差異，不藉舊文件重建架構。
 
@@ -386,46 +388,69 @@ python3 -m http.server 3031 --bind 127.0.0.1 --directory "$solutions_preview_dir
 
 ## 11. Testing & Acceptance Criteria
 
-以下適用於未來正式實作，**目前所有驗收均為 Pending**。Required 必須實際執行；Optional 執行與否及原因須記錄；Not Applicable 必須說明不適用原因，不可當作 PASS。原生停用控制若實際存在，對應測試轉為 Required。
+### Test Status Definitions
+
+適用性與執行狀態分開記錄：`Required`、`Optional`、`Not Applicable` 表示測試是否適用；以下五個值才是執行狀態。所有待執行項目的初始狀態為 `PENDING`。
+
+| 狀態 | 意義與記錄規則 |
+| --- | --- |
+| PENDING | 尚未執行；記錄待辦事項。Optional 選擇不執行時，保留此狀態並說明原因，不因此改為 N/A。 |
+| PASS | 已實際執行且符合預期，附上可追溯證據。 |
+| FAIL | 已實際執行但未符合預期，記錄原因、影響、修正與重驗結果。 |
+| BLOCKED | 因外部服務、權限、素材或環境條件，無法開始或完成驗收；記錄實際阻礙及解除條件，不冒作 N/A。 |
+| N/A | 經本次適用性判定確認不適用，記錄理由與判定依據；不能用來掩蓋未執行、失敗或外部阻礙。 |
+
+歷史報告中的 `NOT RUN` 僅保留原始寫法；本次正式執行統一使用 `PENDING`。若測試已產生不符合預期的結果，保留 `FAIL` 與外部原因，不因外部原因改寫成 PASS。
+
+以下適用於未來正式實作，**目前所有驗收均為 PENDING**。Required 必須實際執行；Optional 執行與否及原因須記錄；Not Applicable 必須說明不適用原因，不可當作 PASS。原生停用控制若實際存在，對應測試轉為 Required。
 
 ### 11.1 Code Quality 與 Build
 
 | 項目 | 等級 | 驗收標準與原因 | 目前狀態 |
 | --- | --- | --- | --- |
-| `npm ci` | Required | Exit Code 0，依既有 lockfile 安裝成功，沒有套件或 lockfile 非預期異動。原因：可重現的既有依賴是本任務前置約束。 | Pending |
-| `npx tsc --noEmit` | Required | Exit Code 0。原因：驗證 Strict TypeScript 與資料／元件型別。 | Pending |
-| `npm run lint` | Required | Exit Code 0，符合既有零警告策略。原因：保留專案靜態品質規則。 | Pending |
-| `npm run build` | Required | Exit Code 0，Solutions 靜態預先產生且一般模式相容。原因：不得把 Pages 設定永久套入預設建置。 | Pending |
-| `npm run build:pages` | Required | Exit Code 0，輸出及 Validators 通過。原因：正式目標是 GitHub Pages 靜態網站。 | Pending |
+| `npm ci` | Required | Exit Code 0，依既有 lockfile 安裝成功，沒有套件或 lockfile 非預期異動。原因：可重現的既有依賴是本任務前置約束。 | PENDING |
+| `npx tsc --noEmit` | Required | Exit Code 0。原因：驗證 Strict TypeScript 與資料／元件型別。 | PENDING |
+| `npm run lint` | Required | Exit Code 0，符合既有零警告策略。原因：保留專案靜態品質規則。 | PENDING |
+| `npm run build` | Required | Exit Code 0，Solutions 靜態預先產生且一般模式相容。原因：不得把 Pages 設定永久套入預設建置。 | PENDING |
+| `npm run build:pages` | Required | Exit Code 0，輸出及 Validators 通過。原因：正式目標是 GitHub Pages 靜態網站。 | PENDING |
 
 ### 11.2 功能、瀏覽器與部署產物
 
 | 項目 | 等級 | 驗收標準與原因 | 目前狀態 |
 | --- | --- | --- | --- |
-| 路由與結構 | Required | 一般／Pages 四頁 HTTP 200；Solutions 九個主 Section、四個 Article、四個 Overview、三組合及五流程。原因：確認固定資訊架構與既有頁面回歸。 | Pending |
-| 內容來源 | Required | 四方案完整符合第 6.3 節，serviceIds／sourceRefs 有效；沒有無來源產品、客戶成果或承諾。原因：讓建議方案可追溯，避免誤作商業成果聲明。 | Pending |
-| Metadata | Required | 第 8.2 節所有欄位與語言正確，單一 H1，沒有假 OG Image／Schema，四頁原有 noindex 政策保留。原因：保留 construction-stage 索引保護與頁面專屬 SEO。 | Pending |
-| 全部有效連結 | Required | 收集四頁 Header／Footer／手機／內容的全部有效站內連結，逐一檢查 HTTP、目標 ID 與 Base Path，不只檢查 href 字串。原因：避免新路由破壞 Base Path 或既有錨點。 | Pending |
-| 實際動線 | Required | 首頁→Solutions→四個 Article；Solutions→Services 對應五個錨點→About／首頁聯絡；刷新深層路徑仍正常。原因：確認訪客可從需求導向有效的服務與聯絡入口。 | Pending |
-| Responsive | Required | 四頁 × 320／375／768／1440／1920px，至少 20 個案例；無水平溢出、重疊、裁切或無法閱讀的標籤。原因：四頁與指定五種寬度都是本次必要回歸範圍。 | Pending |
-| 手機視覺 | Required | 320／375px Hero 最後一行及 CTA 完整，Logo 等比例，Details／技術對照／流程順序清楚，卡片間距一致。原因：防止標語、圖形與 CTA 被容器裁切。 | Pending |
-| 手機操作 | Required | 至少 375px 觸控模擬實際點擊選單、方案卡與跨頁連結，不依賴 Hover；展開狀態與可及名稱正確。原因：觸控導覽不能依賴 Hover。 | Pending |
-| 選單關閉 | Required | Escape 關閉並還原焦點，選連結、外部點擊與切換桌面斷點後關閉，重新回手機不殘留展開狀態。原因：保留既有 MobileNavigation 的互動與焦點契約。 | Pending |
-| Keyboard／Focus | Required | Tab／Shift+Tab／Enter、Skip Link、方案卡與 CTA 均可操作，焦點可見；不把整頁鎖成 Modal。原因：確認不使用滑鼠也能完成導覽。 | Pending |
-| Disabled | Not Applicable（預設；若有原生停用操作則 Required） | 若有原生停用操作，實測不觸發且 Tab 略過；若本頁沒有，記錄不適用，不新增假停用按鈕，也不對 Link 使用 disabled。原因：本頁沒有規劃停用操作；正式實作時確認適用性，不為驗收製造假控制項。 | Pending |
-| Reduced Motion | Required | 啟用 prefers-reduced-motion，確認過渡為 0s／符合既有規則，無依賴動畫才能閱讀的內容。原因：維持既有減少動態偏好行為。 | Pending |
-| axe | Required | 四頁五種寬度及 Solutions 在 320／375／768px 展開手機選單，執行 WCAG 2／2.1 A／AA 自動掃描；記錄實際案例與違規數。原因：驗證可自動判定的規則，並保留人工檢查要求。 | Pending |
-| Console／Runtime／Network | Required | 無非預期錯誤、資源 404、字體／CSS／JS／SVG 載入失敗；預期未知路由／開發頁 404 以獨立 HTTP 檢查記錄，不掩蓋真正資源錯誤。原因：排除執行與資源載入失敗，不忽略真正錯誤。 | Pending |
-| 靜態檔案 | Required | index／about／services／solutions HTML、404、.nojekyll、引用資源皆存在且路徑正確；無公開 dev 路由或 payload。原因：確認產物可在不依賴 Server Runtime 的環境託管。 | Pending |
-| 遠端 CI | Required | 讀取本次 PR 的實際 head／run；quality、pages-build 成功，deploy skipped，Pages artifact 含 Solutions 並保留其他頁。原因：區分本機結果與該實作 head 的實際遠端證據。 | Pending |
-| 404 與開發保護 | Required | 一般未知路由與預設 `/dev/design-system` HTTP 404；靜態 unknown route 狀態及輸出 `404.html` 可用，dev route／payload 不公開。原因：保留既有公開路由邊界，簡易靜態伺服器不完全模擬 Pages 自訂 404。 | Pending |
-| `.nojekyll` | Required | `out/.nojekyll` 存在，保留 `_next` 資源。原因：沿用 Pages 的靜態發布保護。 | Pending |
-| Pages Validators | Required | Solutions 的 HTML、Title、Canonical、OG、robots、Base Path 與引用資源通過，既有首頁／About／Services／404 驗證不降低。原因：新頁不得破壞已合併的靜態產物規則。 | Pending |
-| 本機開發 Smoke | Optional | 可額外執行 `npm run dev` 檢查編輯體驗。原因：方便開發，但不取代一般 production server 與 Pages 靜態驗收。 | Pending（選擇不執行時記錄原因） |
-| 額外瀏覽器／實體裝置 | Optional | 可補充其他瀏覽器或實體手機。原因：擴大相容性證據，不取代指定 Viewport 與觸控模擬。 | Pending（選擇不執行時記錄原因） |
-| Backend／API／真實表單提交 | Not Applicable | 不建立 Backend、API 或聯絡表單，不以假的回應當作成功。原因：明確不在 Task 006 範圍。 | Pending（正式實作時記錄不適用確認） |
+| 路由與結構 | Required | 一般／Pages 四頁 HTTP 200；Solutions 九個主 Section、四個 Article、四個 Overview、三組合及五流程。原因：確認固定資訊架構與既有頁面回歸。 | PENDING |
+| 內容來源 | Required | 四方案完整符合第 6.3 節，serviceIds／sourceRefs 有效；沒有無來源產品、客戶成果或承諾。原因：讓建議方案可追溯，避免誤作商業成果聲明。 | PENDING |
+| Metadata | Required | 第 8.2 節所有欄位與語言正確，單一 H1，沒有假 OG Image／Schema，四頁原有 noindex 政策保留。原因：保留 construction-stage 索引保護與頁面專屬 SEO。 | PENDING |
+| 全部有效連結 | Required | 收集四頁 Header／Footer／手機／內容的全部有效站內連結，逐一檢查 HTTP、目標 ID 與 Base Path，不只檢查 href 字串。原因：避免新路由破壞 Base Path 或既有錨點。 | PENDING |
+| 實際動線 | Required | 首頁→Solutions→四個 Article；Solutions→Services 對應五個錨點→About／首頁聯絡；刷新深層路徑仍正常。原因：確認訪客可從需求導向有效的服務與聯絡入口。 | PENDING |
+| Responsive | Required | 四頁 × 320／375／768／1440／1920px，至少 20 個案例；無水平溢出、重疊、裁切或無法閱讀的標籤。原因：四頁與指定五種寬度都是本次必要回歸範圍。 | PENDING |
+| 手機視覺 | Required | 320／375px Hero 最後一行及 CTA 完整，Logo 等比例，Details／技術對照／流程順序清楚，卡片間距一致。原因：防止標語、圖形與 CTA 被容器裁切。 | PENDING |
+| 手機操作 | Required | 至少 375px 觸控模擬實際點擊選單、方案卡與跨頁連結，不依賴 Hover；展開狀態與可及名稱正確。原因：觸控導覽不能依賴 Hover。 | PENDING |
+| 選單關閉 | Required | Escape 關閉並還原焦點，選連結、外部點擊與切換桌面斷點後關閉，重新回手機不殘留展開狀態。原因：保留既有 MobileNavigation 的互動與焦點契約。 | PENDING |
+| Keyboard／Focus | Required | Tab／Shift+Tab／Enter、Skip Link、方案卡與 CTA 均可操作，焦點可見；不把整頁鎖成 Modal。原因：確認不使用滑鼠也能完成導覽。 | PENDING |
+| Disabled | Not Applicable（預設；若有原生停用操作則 Required） | 若有原生停用操作，實測不觸發且 Tab 略過；若本頁沒有，記錄不適用，不新增假停用按鈕，也不對 Link 使用 disabled。原因：本頁沒有規劃停用操作；正式實作時確認適用性，不為驗收製造假控制項。 | PENDING |
+| Reduced Motion | Required | 啟用 prefers-reduced-motion，確認過渡為 0s／符合既有規則，無依賴動畫才能閱讀的內容。原因：維持既有減少動態偏好行為。 | PENDING |
+| axe | Required | 四頁五種寬度及 Solutions 在 320／375／768px 展開手機選單，執行 WCAG 2／2.1 A／AA 自動掃描；記錄實際案例與違規數。原因：驗證可自動判定的規則，並保留人工檢查要求。 | PENDING |
+| Console／Runtime／Network | Required | 無非預期錯誤、資源 404、字體／CSS／JS／SVG 載入失敗；預期未知路由／開發頁 404 以獨立 HTTP 檢查記錄，不掩蓋真正資源錯誤。原因：排除執行與資源載入失敗，不忽略真正錯誤。 | PENDING |
+| 靜態檔案 | Required | index／about／services／solutions HTML、404、.nojekyll、引用資源皆存在且路徑正確；無公開 dev 路由或 payload。原因：確認產物可在不依賴 Server Runtime 的環境託管。 | PENDING |
+| 遠端 CI | Required | 讀取本次 PR 的實際 head／run；quality、pages-build 成功，deploy skipped，Pages artifact 含 Solutions 並保留其他頁。原因：區分本機結果與該實作 head 的實際遠端證據。 | PENDING |
+| 404 與開發保護 | Required | 一般未知路由與預設 `/dev/design-system` HTTP 404；靜態 unknown route 狀態及輸出 `404.html` 可用，dev route／payload 不公開。原因：保留既有公開路由邊界，簡易靜態伺服器不完全模擬 Pages 自訂 404。 | PENDING |
+| `.nojekyll` | Required | `out/.nojekyll` 存在，保留 `_next` 資源。原因：沿用 Pages 的靜態發布保護。 | PENDING |
+| Pages Validators | Required | Solutions 的 HTML、Title、Canonical、OG、robots、Base Path 與引用資源通過，既有首頁／About／Services／404 驗證不降低。原因：新頁不得破壞已合併的靜態產物規則。 | PENDING |
+| 本機開發 Smoke | Optional | 可額外執行 `npm run dev` 檢查編輯體驗。原因：方便開發，但不取代一般 production server 與 Pages 靜態驗收。 | PENDING（選擇不執行時記錄原因） |
+| 額外瀏覽器／實體裝置 | Optional | 可補充其他瀏覽器或實體手機。原因：擴大相容性證據，不取代指定 Viewport 與觸控模擬。 | PENDING（選擇不執行時記錄原因） |
+| Backend／API／真實表單提交 | Not Applicable | 不建立 Backend、API 或聯絡表單，不以假的回應當作成功。原因：明確不在 Task 006 範圍。 | PENDING（正式實作時記錄不適用確認） |
 
-工具可放在應用套件之外，不為驗收新增專案 npm Dependencies。檢查 Heading、可及名稱、色彩對比、裝飾元素、Focus 與人工閱讀；自動 axe 結果不等同完整無障礙認證。任何失敗必須修正並重跑受影響及指定驗收，記錄真實限制，不能把預期結果寫為 Pass。
+工具可放在應用套件之外，不為驗收新增專案 npm Dependencies。檢查 Heading、可及名稱、色彩對比、裝飾元素、Focus 與人工閱讀；自動 axe 結果不等同完整無障礙認證。任何失敗必須修正並重跑受影響及指定驗收，記錄真實限制，不能把預期結果寫為 PASS。
+
+### Test Failure Policy
+
+- `FAIL` 不得標記為 `PASS`，原始失敗與重驗紀錄均須保留。
+- 發現問題必須記錄原因、影響範圍及修正方式；可修正的問題應先修正，再重新執行相關測試及必要回歸。
+- 無法修正的問題必須列入報告的 Known Issues，註明嚴重程度、交付影響、目前狀態及後續處理方式。
+- 存在阻礙交付的 `FAIL` 或必要驗收的 `BLOCKED`，不得宣稱任務完整通過。交付須符合原規格；不適用項目只有在附上理由與依據後才能記為 `N/A`。
+- 不得透過跳過測試、降低驗收標準、隱藏錯誤或展示舊成功結果取得 `PASS`。
+- 外部服務、權限或環境造成的阻礙，必須記錄實際原因、發生時間、影響測試及解除條件；不得虛構執行結果。
 
 ## 12. Test Report & Evidence
 
@@ -437,7 +462,7 @@ python3 -m http.server 3031 --bind 127.0.0.1 --directory "$solutions_preview_dir
 
 - 實際 Base Commit／Branch、文件 Repository Commit 與 Blob、四方案的來源對照、提案與產品界線、元件分工及完整新增／修改清單。
 - 每個實際執行的完整命令與參數、Exit Code、執行日期／時間、作業系統、Node.js／npm／瀏覽器版本、一般或 Pages 模式、URL、Base Path、Viewport 及工具版本。
-- 第 11 節每項 Required／Optional／Not Applicable 的適用性與原因，實際 PASS／FAIL／Pending；未執行不能寫成 PASS，不適用必須記錄確認原因。
+- 第 11 節每項 Required／Optional／Not Applicable 的適用性與原因，實際 PENDING／PASS／FAIL／BLOCKED／N/A；未執行不能寫成 PASS，不適用必須記錄確認原因。
 - 五個品質命令的真實結果，一般 production server 與 Pages 靜態四頁結果，至少 20 個 Responsive 案例、觸控、全部有效連結與跨頁錨點的結果。
 - axe 規則／案例／違規數、鍵盤、Focus、Disabled 適用性、Reduced Motion、人工閱讀、Browser Console／Runtime／Network 及資源載入結果。
 - Pages HTML、Metadata、資源路徑、404、`.nojekyll`、開發頁排除、Validators 與 PR artifact 的實際證據。
@@ -463,6 +488,30 @@ python3 -m http.server 3031 --bind 127.0.0.1 --directory "$solutions_preview_dir
 
 另實際檢視 320px 與 375px Hero、Details／Technology／手機流程及桌面版，不只宣稱已存檔。若長圖需額外分段以方便審查，可增加截圖，原七個檔名仍須保留。實作報告記錄實際 PNG 尺寸、Viewport、對應內容與檢查結果，再加入存在圖檔的相對連結。
 
+### Evidence Requirements
+
+每項測試使用唯一 Test ID，盡可能完整提供下列欄位；無法取得的證據須在 Notes 說明實際原因。預期結果與實際結果分欄記錄，不得只寫「測試通過」而沒有可追溯的驗收依據。
+
+| 欄位 | 說明 |
+| --- | --- |
+| Test ID | 本次報告內唯一且穩定的測試識別碼，可供問題、截圖與重驗紀錄引用。 |
+| Test Item | 測試項目、對應第 11 節要求、適用性及範圍。 |
+| Command / Procedure | 實際執行的完整指令、參數或人工操作步驟。 |
+| Environment | OS、Node.js、npm、Browser 與工具版本；附執行時間、URL、建置模式、Base Path、Viewport 及受測程式碼版本。 |
+| Expected Result | 執行前依規格確認的預期結果，不因失敗而降低標準。 |
+| Actual Result | 本次實際觀察到的結果、錯誤、數值及測試範圍。 |
+| Exit Code | 真實退出代碼；人工操作或未啟動的命令填「不適用」並附原因，不捏造 0，且不因此把整項 Status 改為 N/A。 |
+| Status | 僅使用 PENDING / PASS / FAIL / BLOCKED / N/A，依第 11 節定義判定。 |
+| Evidence | 對應的 Log、Screenshot、HTTP Response、Actions run／job 或其他可追溯證據位置；無實際檔案不建立假連結。 |
+| Notes | 問題、限制、適用性理由、Known Issues、修正及重驗 Test ID／證據。 |
+
+### Report Completion Gate
+
+- 獨立實作／測試報告的本機驗收內容必須在建立 PR 前完成，並與功能程式碼一併納入該 PR；不得在缺少本機報告時宣稱可完整交付。
+- 報告須記錄受測程式碼的 Commit 或 tree／diff、測試時間及範圍，並在 PR 對照實際提交版本。最後一次本機測試必須對應實際提交的程式碼；不能引用舊版本結果冒充現版驗收。
+- 後續修改程式碼時，必須重跑受影響測試與必要回歸，同步更新報告、截圖及證據，再確認最終程式碼版本一致。僅新增報告或遠端結果時，也須確認受測程式碼未改變並檢查文件連結。
+- PR CI、PR Review、合併後 main CI、部署與公開網址驗證尚未發生時，如實保留 `PENDING` 並說明階段；實際發生後補上真實證據，不為了 PR 前完成報告而預填成功。
+
 ## 13. Git & Pull Request
 
 以下僅適用**未來已授權正式執行 Task 006**的開發階段：
@@ -477,20 +526,36 @@ python3 -m http.server 3031 --bind 127.0.0.1 --directory "$solutions_preview_dir
 
 Commit SHA、PR 編號、CI Run ID 與合併／發布狀態只能來自實際紀錄，不預填或虛構。以上是 Solutions 功能實作規則；文件骨架整理本身不觸發此 Feature PR 流程，其 Git 交付遵循當次使用者對文件工作的明確授權。
 
+### Review, Merge & Deployment Boundaries
+
+下列階段各自記錄狀態與證據，不能互相替代；本機／PR 交付不要求執行尚未授權的合併或發布。
+
+| 階段 | 必須確認的依據與界線 |
+| --- | --- |
+| 本機開發與驗收 | 第 11–12 節適用檢查、受測程式碼版本、實際結果與獨立報告。 |
+| Feature Branch Commit | 已提交並推送的實際 SHA 與完整 Diff，對照報告中的受測程式碼；Commit 本身不代表 PR CI 通過。 |
+| PR CI 驗收 | 本次 PR head 的實際 run／job、建置與 artifact；Deploy SKIPPED 不代表正式部署成功。 |
+| PR Review | 記錄實際審查狀態、意見及處理結果；CI 成功不等於審查通過。 |
+| 使用者授權合併 | 取得明確授權後才可合併，並記錄真實 PR／Merge SHA／時間；未授權時保持待審，不自行合併。 |
+| 合併後 main CI | 若已獲授權合併，核對 Merge SHA 對應的 main run／jobs，不沿用 PR CI 結果。 |
+| 正式部署與公開網址驗證 | 分別確認部署工作成功，以及實際公開 URL 的 HTTP、頁面內容、靜態資源、Base Path 與必要 Smoke；僅部署成功而未檢查公開 URL 時，公開驗證仍為 PENDING。 |
+
+不能把 PR CI 通過、artifact 產生或 PR 合併直接視為正式網站部署成功。未獲合併／發布授權，或未取得部署及公開 URL 證據時，最終報告須分別說明實際狀態，不更改既有部署條件來取得成功結果。
+
 ## 14. Deliverables
 
-正式實作交付時提供以下實際成果；目前 Solutions 頁未實作，以下全部為 Pending，不因本輪文件整理或文件 CI 通過而視為完成。
+正式實作交付時提供以下實際成果；目前 Solutions 頁未實作，以下全部為 PENDING，不因本輪文件整理或文件 CI 通過而視為完成。
 
 | 交付項目 | 必備內容 | 目前狀態 |
 | --- | --- | --- |
-| Solutions 功能 | `/solutions` 九主 Section、四 Article、四 Overview、三組合、五流程及全部指定文案／狀態界線 | Pending |
-| 共用整合 | Header／Footer／Mobile Navigation、首頁新入口、四頁回歸及保留舊錨點 | Pending |
-| 檔案與 Design System | 第 9 節實際新增／修改清單、typed config 與來源、原 Tokens／Logo／依賴保護 | Pending |
-| 獨立實作／測試報告 | `docs/solutions-implementation.md`，涵蓋第 11–12 節全部結果與限制 | Pending |
-| 截圖 | 七份指定真實 PNG 與人工檢視證據，必要時增加分段圖 | Pending |
-| Git Commit／PR | 已推送 `feature/website-solutions-page`、真實 Commit SHA 與待審核 PR URL | Pending |
-| CI 與 artifact | 該 head 的 quality／pages-build 成功、deploy skipped、含 Solutions 的 Pages artifact 已核對 | Pending |
-| 最終交付回報 | 繁體中文說明功能、來源、全部檔案、測試、截圖、Git／PR／CI、未完成與部署狀態 | Pending |
+| Solutions 功能 | `/solutions` 九主 Section、四 Article、四 Overview、三組合、五流程及全部指定文案／狀態界線 | PENDING |
+| 共用整合 | Header／Footer／Mobile Navigation、首頁新入口、四頁回歸及保留舊錨點 | PENDING |
+| 檔案與 Design System | 第 9 節實際新增／修改清單、typed config 與來源、原 Tokens／Logo／依賴保護 | PENDING |
+| 獨立實作／測試報告 | `docs/solutions-implementation.md`，涵蓋第 11–12 節全部結果與限制 | PENDING |
+| 截圖 | 七份指定真實 PNG 與人工檢視證據，必要時增加分段圖 | PENDING |
+| Git Commit／PR | 已推送 `feature/website-solutions-page`、真實 Commit SHA 與待審核 PR URL | PENDING |
+| CI 與 artifact | 該 head 的 quality／pages-build 成功、deploy skipped、含 Solutions 的 Pages artifact 已核對 | PENDING |
+| 最終交付回報 | 繁體中文說明功能、來源、全部檔案、測試、截圖、Git／PR／CI、未完成與部署狀態 | PENDING |
 
 最終以繁體中文回報上述項目及是否已部署。預設此階段僅有待審核 PR；只有另有明確授權與實際 main deploy 成功證據、對應 Commit 及公開站驗證，才能宣稱上線。不得虛構 PR、SHA、Actions Run ID 或發布狀態。
 
@@ -500,30 +565,37 @@ Commit SHA、PR 編號、CI Run ID 與合併／發布狀態只能來自實際紀
 
 Solutions 明細頁、Portfolio、Contact、Privacy、正式 AI 產品、CMS 與 Backend 均屬後續任務，不能以本任務名義提前實作。
 
-第 3 節列出的缺漏、建議套餐、中文品牌或生成範例，不因本規格正式化而轉為核准事實。頁面尚未實作，實作報告、七張截圖、功能 Commit／PR／CI 與上線證據也仍為 Pending。不得以文件或既有網站的發布結果冒充 Solutions 發布。
+第 3 節列出的缺漏、建議套餐、中文品牌或生成範例，不因本規格正式化而轉為核准事實。頁面尚未實作，實作報告、七張截圖、功能 Commit／PR／CI 與上線證據也仍為 PENDING。不得以文件或既有網站的發布結果冒充 Solutions 發布。
 
 ## 16. Final Delivery Checklist
 
-以下每項都屬未來 Solutions 功能交付，保持未勾選且為 **Pending**。規格完成、本輪文件重構、文件 Commit／PR／合併或文件 CI，均不是 Solutions 功能、測試或部署完成的證據。
+以下每項都屬未來 Solutions 功能交付，保持未勾選且為 **PENDING**。規格完成、本輪文件重構、文件 Commit／PR／合併或文件 CI，均不是 Solutions 功能、測試或部署完成的證據。
 
-- [ ] Pending — 前置 Task 005 合併、最新 main、實際 Base SHA、工作目錄與文件來源／衝突已確認。
-- [ ] Pending — `/solutions` 九主 Section、四 Article、四 Overview、三組合、五流程與指定文案實作完成。
-- [ ] Pending — Services 能力與建議方案有清楚區分；沒有假案例、Demo 完成宣稱或商用 SaaS 假聲明。
-- [ ] Pending — typed config、來源追溯、ServiceId、Design System、原稿 Logo 與現有依賴均保留。
-- [ ] Pending — 共用導覽、首頁入口、所有舊錨點、四頁及五個 Services 錨點正常。
-- [ ] Pending — `npm ci` 已實際完成，套件與 lockfile 未擅自改動。
-- [ ] Pending — `npx tsc --noEmit` 通過。
-- [ ] Pending — `npm run lint` 通過。
-- [ ] Pending — `npm run build` 與新啟的一般 production server 驗收通過。
-- [ ] Pending — `npm run build:pages`、靜態四頁、Metadata／Canonical／Open Graph／語言／noindex、Base Path、資源、404、`.nojekyll`、開發排除及 Validators 通過。
-- [ ] Pending — 功能、所有有效連結、跨頁操作、例外狀態與首頁／About／Services 回歸完成。
-- [ ] Pending — 四頁 × 五寬至少 20 個 Responsive 案例、375px 觸控與手機選單關閉行為驗收完成。
-- [ ] Pending — axe、Keyboard、Skip Link、Focus、Reduced Motion、Disabled 適用性及人工無障礙檢查完成。
-- [ ] Pending — Browser Console／Runtime／Network／靜態資源與 HTTP Status 驗收完成，沒有未處理錯誤。
-- [ ] Pending — 七份真實截圖、PNG 尺寸、對應內容與人工視覺檢視完成。
-- [ ] Pending — 獨立實作與測試報告完成，問題修正、修正後重驗、未完成事項與限制均有實際紀錄。
-- [ ] Pending — 完整 Git Diff 已核對，無 `.next/`、`out/`、node_modules、暫存工具或機密；未修改其他 Repository、未擅自更改 workflow／部署條件或新增 Backend／API／CMS／Analytics。
-- [ ] Pending — Feature Commit 已完成並推送，真實 SHA 可查。
-- [ ] Pending — 以 main 為 Base 的待審核 PR 已建立，未自動合併或發布。
-- [ ] Pending — 該 head 的實際 CI 與 Pages artifact 已確認，不沿用舊 run 或文件 CI。
-- [ ] Pending — 最終繁體中文交付報告完成，部署狀態以實際授權及發布／公開站證據說明。
+執行狀態依第 11 節統一使用 `PENDING`、`PASS`、`FAIL`、`BLOCKED`、`N/A`。僅有證據的 `PASS` 可勾選；其餘保持未勾選，`N/A` 附判定理由且不視為缺少適用驗收。必要項目仍為 `PENDING`、`FAIL` 或 `BLOCKED` 時，不得宣稱完整通過。以下是規格初始清單，本輪文件修訂不代填功能結果。
+
+- [ ] PENDING — 前置 Task 005 合併、最新 main、實際 Base SHA、工作目錄與文件來源／衝突已確認。
+- [ ] PENDING — `/solutions` 九主 Section、四 Article、四 Overview、三組合、五流程與指定文案實作完成。
+- [ ] PENDING — Services 能力與建議方案有清楚區分；沒有假案例、Demo 完成宣稱或商用 SaaS 假聲明。
+- [ ] PENDING — typed config、來源追溯、ServiceId、Design System、原稿 Logo 與現有依賴均保留。
+- [ ] PENDING — 共用導覽、首頁入口、所有舊錨點、四頁及五個 Services 錨點正常。
+- [ ] PENDING — `npm ci` 已實際完成，套件與 lockfile 未擅自改動。
+- [ ] PENDING — `npx tsc --noEmit` 通過。
+- [ ] PENDING — `npm run lint` 通過。
+- [ ] PENDING — `npm run build` 與新啟的一般 production server 驗收通過。
+- [ ] PENDING — `npm run build:pages`、靜態四頁、Metadata／Canonical／Open Graph／語言／noindex、Base Path、資源、404、`.nojekyll`、開發排除及 Validators 通過。
+- [ ] PENDING — 功能、所有有效連結、跨頁操作、例外狀態與首頁／About／Services 回歸完成。
+- [ ] PENDING — 四頁 × 五種指定寬度至少 20 個 Responsive 案例、375px 觸控與手機選單關閉行為驗收完成。
+- [ ] PENDING — axe、Keyboard、Skip Link、Focus、Reduced Motion、Disabled 適用性及人工無障礙檢查完成。
+- [ ] PENDING — Browser Console／Runtime／Network／靜態資源與 HTTP Status 驗收完成，沒有未處理錯誤。
+- [ ] PENDING — 七份真實截圖、PNG 尺寸、對應內容與人工視覺檢視完成。
+- [ ] PENDING — 獨立實作與測試報告完成，問題修正、修正後重驗、未完成事項與限制均有實際紀錄。
+- [ ] PENDING — 完整 Git Diff 已核對，無 `.next/`、`out/`、node_modules、暫存工具或機密；未修改其他 Repository、未擅自更改 workflow／部署條件或新增 Backend／API／CMS／Analytics。
+- [ ] PENDING — Feature Commit 已完成並推送，真實 SHA 可查。
+- [ ] PENDING — 以 main 為 Base 的待審核 PR 已建立，未自動合併或發布。
+- [ ] PENDING — 該 head 的實際 CI 與 Pages artifact 已確認，不沿用舊 run 或文件 CI。
+- [ ] PENDING — 最終繁體中文交付報告完成，部署狀態以實際授權及發布／公開站證據說明。
+
+- [ ] PENDING — Test Failure Policy 已遵守，失敗、阻礙與 Known Issues 有完整記錄，沒有阻礙交付的未解決必要驗收。
+- [ ] PENDING — 每項測試的 Test ID、預期／實際結果、狀態與可追溯證據已記錄，沒有以預期或舊結果代填。
+- [ ] PENDING — 獨立報告已在 PR 建立前完成並納入同一 PR，最後測試、後續重驗與實際提交的程式碼一致。
+- [ ] PENDING — 本機、Feature Commit、PR CI、PR Review、合併授權、main CI、部署與公開 URL 驗證分別記錄；未發生階段維持 PENDING 並說明，沒有冒稱已發布。

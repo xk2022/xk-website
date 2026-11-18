@@ -1,6 +1,6 @@
 # Task 003 — Corporate Homepage Development（官方企業網站首頁開發）
 
-本文件為 **Task Specification**，說明執行 Task 003 時的需求與驗收標準。章節統一不代表重新執行首頁開發；本文的驗收狀態預設為 **Pending**。已完成工作的實際結果、當時環境與歷史限制，請查閱 [首頁實作紀錄](../homepage-implementation.md) 與對應 GitHub 紀錄，不以本規格取代實作報告。
+本文件為 **Task Specification**，說明執行 Task 003 時的需求與驗收標準。章節統一不代表重新執行首頁開發；本文的驗收狀態預設為 **PENDING**。已完成工作的實際結果、當時環境與歷史限制，請查閱 [首頁實作紀錄](../homepage-implementation.md) 與對應 GitHub 紀錄，不以本規格取代實作報告。
 
 ## 1. Task Overview
 
@@ -46,11 +46,13 @@ Task 001 建立 Next.js 基礎架構；Task 002 建立 Brand Tokens、Typography
 
 - [README.md](../../README.md)、[AGENTS.md](../../AGENTS.md)。
 - [implementation notes](../implementation-notes.md)、[品牌設計系統](../brand-design-system.md)。
-- [Task 001 規格](task001.md)、[Task 002 規格](task002.md) 及必要的 [Task 002 繁體中文原稿](task002.zh-TW.md)。
-- Task 001 的歷史替代來源 [task001-implementation-notes.md](task001-implementation-notes.md)；不得假設所有原稿在當時或目前均存在。
+- [Task 001 規格](task001.md)、[Task 002 規格](task002.md) 及必要的 [Task 002 繁體中文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)。
+- Task 001 的歷史替代來源 [task001-implementation-notes.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md)；不得假設所有原稿在當時或目前均存在。
 - [首頁實作紀錄](../homepage-implementation.md)、[GitHub Pages 部署指南](../github-pages-deployment.md)。
 
 缺少文件時記錄缺漏與已確認來源，不自行補造規格、測試結果或發布狀態。既有報告是證據來源，不是將過去 PASS 複製為本次驗收結果的依據。
+
+Task 001 與 Task 002 的正式入口分別為 [task001.md](task001.md) 與 [task002.md](task002.md)。上述已刪除替代原稿的連結固定指向 `895b9878b6c6244cf225772f6c4f8d3e5d97affe` 的歷史快照，僅供追溯；不得將歷史快照誤作現行入口或復原已刪除檔案。
 
 ### 3.2 Documentation Repository
 
@@ -425,72 +427,95 @@ src/
 
 ## 11. Testing & Acceptance Criteria
 
+### Test Status Definitions
+
+適用性與執行狀態分開記錄：`Required`、`Optional`、`Not Applicable` 表示測試是否適用；以下五個值才是執行狀態。所有待執行項目的初始狀態為 `PENDING`。
+
+| 狀態 | 意義與記錄規則 |
+| --- | --- |
+| PENDING | 尚未執行；記錄待辦事項。Optional 選擇不執行時，保留此狀態並說明原因，不因此改為 N/A。 |
+| PASS | 已實際執行且符合預期，附上可追溯證據。 |
+| FAIL | 已實際執行但未符合預期，記錄原因、影響、修正與重驗結果。 |
+| BLOCKED | 因外部服務、權限、素材或環境條件，無法開始或完成驗收；記錄實際阻礙及解除條件，不冒作 N/A。 |
+| N/A | 經本次適用性判定確認不適用，記錄理由與判定依據；不能用來掩蓋未執行、失敗或外部阻礙。 |
+
+歷史報告中的 `NOT RUN` 僅保留原始寫法；本次正式執行統一使用 `PENDING`。若測試已產生不符合預期的結果，保留 `FAIL` 與外部原因，不因外部原因改寫成 PASS。
+
 ### 11.1 狀態與分類規則
 
-下表是待執行的驗收契約，**所有結果均為 Pending**。`Required` 必須完成；`Optional` 若不執行需說明限制；`Not Applicable` 必須在本次報告確認不適用原因，不可以省略後假裝已測。未執行 Task 003 時，不因既有頁面或歷史報告存在就勾選通過。
+下表是待執行的驗收契約，**所有結果均為 PENDING**。`Required` 必須完成；`Optional` 若不執行需說明限制；`Not Applicable` 必須在本次報告確認不適用原因，不可以省略後假裝已測。未執行 Task 003 時，不因既有頁面或歷史報告存在就勾選通過。
 
 ### 11.2 Code Quality 與 Build
 
 | 驗收項目 | 分類 | 必須確認的內容／原因 | 狀態 |
 | --- | --- | --- | --- |
-| `npm ci` | Required | 依已合併 lockfile 重現 Node.js 24.x 安裝與 CI 環境；記錄 Exit Code，不任意改 lockfile | Pending |
-| `npm install` | Required | 保留原 Task 003 指定指令的驗證；確認相依與 lockfile 未意外變更，必要變更須交代理由 | Pending |
-| `npx tsc --noEmit` | Required | Strict TypeScript 與既有元件 API 通過 | Pending |
-| `npm run lint` | Required | 使用既有 ESLint，記錄錯誤及警告，不以推測代替結果 | Pending |
-| `npm run build` | Required | 保留一般 Next.js／Vercel 相容 build，不把 Pages 模式產物誤用於 `npm run start` | Pending |
-| `npm run build:pages` | Required | 使用已確認 Pages 模式，驗證 `out/` 與現有 Script 斷言；無需任意變更 Dependencies | Pending |
-| 版本、原始 Logo、設定與 Diff 保護 | Required | 未重初始化，未任意升降級；原始 Path／Transform／比例與 Tokens 保留，禁止產物未進 Git | Pending |
-| 後端／資料庫／Contact API 測試 | Not Applicable | 本任務不建立這些功能，技術能力展示不代表官網依賴；報告須確認 N/A 理由 | Pending（待記錄 N/A） |
+| `npm ci` | Required | 依已合併 lockfile 重現 Node.js 24.x 安裝與 CI 環境；記錄 Exit Code，不任意改 lockfile | PENDING |
+| `npm install` | Required | 保留原 Task 003 指定指令的驗證；確認相依與 lockfile 未意外變更，必要變更須交代理由 | PENDING |
+| `npx tsc --noEmit` | Required | Strict TypeScript 與既有元件 API 通過 | PENDING |
+| `npm run lint` | Required | 使用既有 ESLint，記錄錯誤及警告，不以推測代替結果 | PENDING |
+| `npm run build` | Required | 保留一般 Next.js／Vercel 相容 build，不把 Pages 模式產物誤用於 `npm run start` | PENDING |
+| `npm run build:pages` | Required | 使用已確認 Pages 模式，驗證 `out/` 與現有 Script 斷言；無需任意變更 Dependencies | PENDING |
+| 版本、原始 Logo、設定與 Diff 保護 | Required | 未重初始化，未任意升降級；原始 Path／Transform／比例與 Tokens 保留，禁止產物未進 Git | PENDING |
+| 後端／資料庫／Contact API 測試 | Not Applicable | 本任務不建立這些功能，技術能力展示不代表官網依賴；報告須確認 N/A 理由 | PENDING（待記錄 N/A） |
 
 ### 11.3 Functional Testing
 
 | 驗收項目 | 分類 | Task 003 專屬斷言／原因 | 狀態 |
 | --- | --- | --- | --- |
-| Homepage 與區塊順序 | Required | `/` 正常；Header → 七個指定 Section → Footer，Page 只組合區塊與 Metadata | Pending |
-| Hero 內容與 CTA | Required | 品牌／技術標語、中文定位、真實服務及聯絡入口正確；未完成內頁不能成假連結 | Pending |
-| Introduction | Required | 標題與兩段品牌價值內容符合第 6 節，閱讀清楚且留白足夠 | Pending |
-| Services 完整性 | Required | 恰有 R01–R05 五類、各中英文名稱／說明／全部項目摘要及 Icon；R05 Maintenance 不遺失 | Pending |
-| Technologies／Why XK／Solutions | Required | 五組能力、四項價值、三個應用方向均完整；沒有認證、合作、統計或已商用產品的虛構宣稱 | Pending |
-| Desktop Header／Footer | Required | Logo、品牌、導覽、Contact CTA、五服務分類、Legal 狀態與程式產生年份正確 | Pending |
-| Mobile Navigation | Required | Button 有名稱及正確 `aria-expanded`；鍵盤、開／關、Escape、焦點還原、連結後狀態與桌面切換正常；不鎖住整頁 | Pending |
-| 所有有效連結與錨點 | Required | Header／Footer／CTA／Solutions／服務錨點均導向實際內容；Base Path 與既有跨頁導覽保留 | Pending |
-| Contact 未確認分支 | Required | 無已確認 Email／LinkedIn／表單時顯示待確認，不出現假表單、無效 mailto 或假成功操作 | Pending |
-| Contact 已確認分支 | Optional | 僅在使用者提供並確認可公開管道時測試該真實渠道；無資料則在報告說明未測原因 | Pending |
-| 未完成頁面／Privacy／例外狀態 | Required | planned route 不變假連結，Privacy 未建立不連錯頁，未知路由呈現 404 | Pending |
-| 保留 Task 001／002 與後續已合併功能 | Required | 原設計系統、開發工具保護及已有內頁／錨點沒有 Regression | Pending |
-| 聯絡表單提交／AI Chatbot／Analytics | Not Applicable | 本任務不提供這些功能，不建立假提交或追蹤 | Pending（待記錄 N/A） |
+| Homepage 與區塊順序 | Required | `/` 正常；Header → 七個指定 Section → Footer，Page 只組合區塊與 Metadata | PENDING |
+| Hero 內容與 CTA | Required | 品牌／技術標語、中文定位、真實服務及聯絡入口正確；未完成內頁不能成假連結 | PENDING |
+| Introduction | Required | 標題與兩段品牌價值內容符合第 6 節，閱讀清楚且留白足夠 | PENDING |
+| Services 完整性 | Required | 恰有 R01–R05 五類、各中英文名稱／說明／全部項目摘要及 Icon；R05 Maintenance 不遺失 | PENDING |
+| Technologies／Why XK／Solutions | Required | 五組能力、四項價值、三個應用方向均完整；沒有認證、合作、統計或已商用產品的虛構宣稱 | PENDING |
+| Desktop Header／Footer | Required | Logo、品牌、導覽、Contact CTA、五服務分類、Legal 狀態與程式產生年份正確 | PENDING |
+| Mobile Navigation | Required | Button 有名稱及正確 `aria-expanded`；鍵盤、開／關、Escape、焦點還原、連結後狀態與桌面切換正常；不鎖住整頁 | PENDING |
+| 所有有效連結與錨點 | Required | Header／Footer／CTA／Solutions／服務錨點均導向實際內容；Base Path 與既有跨頁導覽保留 | PENDING |
+| Contact 未確認分支 | Required | 無已確認 Email／LinkedIn／表單時顯示待確認，不出現假表單、無效 mailto 或假成功操作 | PENDING |
+| Contact 已確認分支 | Optional | 僅在使用者提供並確認可公開管道時測試該真實渠道；無資料則在報告說明未測原因 | PENDING |
+| 未完成頁面／Privacy／例外狀態 | Required | planned route 不變假連結，Privacy 未建立不連錯頁，未知路由呈現 404 | PENDING |
+| 保留 Task 001／002 與後續已合併功能 | Required | 原設計系統、開發工具保護及已有內頁／錨點沒有 Regression | PENDING |
+| 聯絡表單提交／AI Chatbot／Analytics | Not Applicable | 本任務不提供這些功能，不建立假提交或追蹤 | PENDING（待記錄 N/A） |
 
 ### 11.4 Responsive 與 Accessibility
 
 | 驗收項目 | 分類 | 具體標準／原因 | 狀態 |
 | --- | --- | --- | --- |
-| 320px Small Mobile | Required | 無水平溢出、標題重疊、Card 超出或 CTA 衝突；Header／Footer 可閱讀，服務一欄 | Pending |
-| 375px Mobile | Required | 手機選單與觸控 CTA 可操作，字體合理、裝飾不遮字，服務一欄 | Pending |
-| 768px Tablet | Required | 服務兩欄、內容間距一致，技術／Footer 分組不超出容器 | Pending |
-| 1440px Desktop | Required | 服務三欄且第二排自然排列，Header／Hero／Footer 層次清楚 | Pending |
-| 1920px Large Desktop | Required | Container 限寬及留白正常，無過度拉伸、文字重疊或多餘水平捲動 | Pending |
-| axe WCAG 2／2.1 A／AA | Required | 用可取得工具掃描首頁與展開手機選單，記錄版本、範圍、違規與修正；不宣稱完整認證 | Pending |
-| Keyboard、Focus、Names | Required | Tab／Enter、skip link、Escape、可見 Focus、Icon-only Label、Logo 替代名稱正常 | Pending |
-| 語意、Heading、Contrast 人工檢查 | Required | 單一 H1、H2／H3 階層、真實連結／Button、適當對比；深色 Footer 文字可讀 | Pending |
-| Reduced Motion | Required | `prefers-reduced-motion` 下過渡／動態符合既有 Tokens，不只依程式碼推測 | Pending |
-| 輔助科技深入檢查 | Optional | 視可取得的螢幕閱讀器／裝置進行；未做須記錄，不能用 axe 取代全部人工驗證 | Pending |
+| 320px Small Mobile | Required | 無水平溢出、標題重疊、Card 超出或 CTA 衝突；Header／Footer 可閱讀，服務一欄 | PENDING |
+| 375px Mobile | Required | 手機選單與觸控 CTA 可操作，字體合理、裝飾不遮字，服務一欄 | PENDING |
+| 768px Tablet | Required | 服務兩欄、內容間距一致，技術／Footer 分組不超出容器 | PENDING |
+| 1440px Desktop | Required | 服務三欄且第二排自然排列，Header／Hero／Footer 層次清楚 | PENDING |
+| 1920px Large Desktop | Required | Container 限寬及留白正常，無過度拉伸、文字重疊或多餘水平捲動 | PENDING |
+| axe WCAG 2／2.1 A／AA | Required | 用可取得工具掃描首頁與展開手機選單，記錄版本、範圍、違規與修正；不宣稱完整認證 | PENDING |
+| Keyboard、Focus、Names | Required | Tab／Enter、skip link、Escape、可見 Focus、Icon-only Label、Logo 替代名稱正常 | PENDING |
+| 語意、Heading、Contrast 人工檢查 | Required | 單一 H1、H2／H3 階層、真實連結／Button、適當對比；深色 Footer 文字可讀 | PENDING |
+| Reduced Motion | Required | `prefers-reduced-motion` 下過渡／動態符合既有 Tokens，不只依程式碼推測 | PENDING |
+| 輔助科技深入檢查 | Optional | 視可取得的螢幕閱讀器／裝置進行；未做須記錄，不能用 axe 取代全部人工驗證 | PENDING |
 
 ### 11.5 Browser、SEO 與 GitHub Pages
 
 | 驗收項目 | 分類 | 具體標準／原因 | 狀態 |
 | --- | --- | --- | --- |
-| 實際啟動網站與 HTTP | Required | 一般 production 首頁 200、開發工具預設 404；Pages 靜態首頁 200，未知路徑／404 文件行為合理 | Pending |
-| Console／Runtime／Network | Required | 不得有 JavaScript Runtime Errors；Console、CSS、JS、字體與其他資源載入錯誤逐項記錄 | Pending |
-| 所有靜態資源 | Required | Logo、CSS、JS、字體及提供圖片可取得，路徑適用實際 Base Path | Pending |
-| SEO Metadata | Required | Title／Description／Canonical／OG Title／Description／URL、`zh-TW`、單一 H1 正確；無虛構 OG Image | Pending |
-| Construction-stage Indexing | Required | 一般與 Pages 首頁均保留 `noindex, nofollow`；不得擅自開放索引 | Pending |
-| Pages Base Path | Required | `/xk-website` 或實際設定路徑下，導覽、跨頁及資源 URL 均有效，不硬編碼破壞站內連結 | Pending |
-| Pages 靜態輸出與保護 | Required | `index.html`、`404.html`、`.nojekyll` 存在；公開產物無 `/dev/design-system` 路由／payload | Pending |
-| 一般／Pages 模式回歸 | Required | 分別驗收兩種 build；切換模式後使用正確產物，不改壞一般 Next.js 執行 | Pending |
-| PR CI 與 artifact | Required | 核對本次實際 head 的 quality／pages-build、artifact 與 Deploy SKIPPED，不用本機或舊 run 代替 | Pending |
-| 量化效能工具 | Optional | 視環境使用 Lighthouse 等工具記錄方法與數值；原稿未指定分數，不自行捏造達標結果 | Pending |
-| main 發布／公開網站 Smoke | Optional | 只有另獲明確合併／發布授權後檢查實際 main workflow、URL 與內容；未發布不得宣稱已上線 | Pending |
-| DNS／Custom Domain／後端健康檢查 | Not Applicable | 本任務不擅改網域設定或建立 Backend；需獨立授權與範圍 | Pending（待記錄 N/A） |
+| 實際啟動網站與 HTTP | Required | 一般 production 首頁 200、開發工具預設 404；Pages 靜態首頁 200，未知路徑／404 文件行為合理 | PENDING |
+| Console／Runtime／Network | Required | 不得有 JavaScript Runtime Errors；Console、CSS、JS、字體與其他資源載入錯誤逐項記錄 | PENDING |
+| 所有靜態資源 | Required | Logo、CSS、JS、字體及提供圖片可取得，路徑適用實際 Base Path | PENDING |
+| SEO Metadata | Required | Title／Description／Canonical／OG Title／Description／URL、`zh-TW`、單一 H1 正確；無虛構 OG Image | PENDING |
+| Construction-stage Indexing | Required | 一般與 Pages 首頁均保留 `noindex, nofollow`；不得擅自開放索引 | PENDING |
+| Pages Base Path | Required | `/xk-website` 或實際設定路徑下，導覽、跨頁及資源 URL 均有效，不硬編碼破壞站內連結 | PENDING |
+| Pages 靜態輸出與保護 | Required | `index.html`、`404.html`、`.nojekyll` 存在；公開產物無 `/dev/design-system` 路由／payload | PENDING |
+| 一般／Pages 模式回歸 | Required | 分別驗收兩種 build；切換模式後使用正確產物，不改壞一般 Next.js 執行 | PENDING |
+| PR CI 與 artifact | Required | 核對本次實際 head 的 quality／pages-build、artifact 與 Deploy SKIPPED，不用本機或舊 run 代替 | PENDING |
+| 量化效能工具 | Optional | 視環境使用 Lighthouse 等工具記錄方法與數值；原稿未指定分數，不自行捏造達標結果 | PENDING |
+| main 發布／公開網站 Smoke | Optional | 只有另獲明確合併／發布授權後檢查實際 main workflow、URL 與內容；未發布不得宣稱已上線 | PENDING |
+| DNS／Custom Domain／後端健康檢查 | Not Applicable | 本任務不擅改網域設定或建立 Backend；需獨立授權與範圍 | PENDING（待記錄 N/A） |
+
+### Test Failure Policy
+
+- `FAIL` 不得標記為 `PASS`，原始失敗與重驗紀錄均須保留。
+- 發現問題必須記錄原因、影響範圍及修正方式；可修正的問題應先修正，再重新執行相關測試及必要回歸。
+- 無法修正的問題必須列入報告的 Known Issues，註明嚴重程度、交付影響、目前狀態及後續處理方式。
+- 存在阻礙交付的 `FAIL` 或必要驗收的 `BLOCKED`，不得宣稱任務完整通過。交付須符合原規格；不適用項目只有在附上理由與依據後才能記為 `N/A`。
+- 不得透過跳過測試、降低驗收標準、隱藏錯誤或展示舊成功結果取得 `PASS`。
+- 外部服務、權限或環境造成的阻礙，必須記錄實際原因、發生時間、影響測試及解除條件；不得虛構執行結果。
 
 ## 12. Test Report & Evidence
 
@@ -500,7 +525,7 @@ Task 003 的獨立實作與測試報告使用 [docs/homepage-implementation.md](
 
 - 實際 Repository、Base／Feature Branch、受測 Commit／tree、Task 002 合併確認、套件及文件版本。
 - 環境：作業系統、Node.js／npm、瀏覽器與自動化／axe 版本、測試模式、URL、Base Path、日期時間及旗標。
-- 每個實際執行指令、完整測試範圍、Exit Code、PASS／FAIL；未做的 Required／Optional／N/A 個別註明原因，不把 Pending 當 PASS。
+- 每個實際執行指令、完整測試範圍、Exit Code 與 PENDING／PASS／FAIL／BLOCKED／N/A 狀態；Required／Optional／Not Applicable 的適用性另列。未執行、不適用或受阻項目依第 11 節各記錄理由及證據，不把 PENDING 當 PASS。
 - 七個首頁區塊、Header／Footer／Desktop／Mobile Navigation、CTA、所有有效連結、Contact 待確認分支及例外狀態結果。
 - 320／375／768／1440／1920px 的逐項響應式結果，axe、鍵盤、Focus、Reduced Motion、Heading、Contrast 與人工限制。
 - Browser Console／Runtime／Network、資產與 HTTP、一般 build／Pages artifact、404、`.nojekyll`、Base Path、Metadata 及開發路由保護結果。
@@ -510,6 +535,30 @@ Task 003 的獨立實作與測試報告使用 [docs/homepage-implementation.md](
 - 尚未確認的聯絡方式、未完成頁面／品牌素材、工具或權限限制、需使用者決策事項與後續工作。
 
 現有報告中的實際通過結果與 legacy／待審核等敘述，保留其原始時點。文件重構不修改這些歷史報告，也不憑其內容預填本規格的 PASS、Commit、PR、CI 或部署成果。
+
+### Evidence Requirements
+
+每項測試使用唯一 Test ID，盡可能完整提供下列欄位；無法取得的證據須在 Notes 說明實際原因。預期結果與實際結果分欄記錄，不得只寫「測試通過」而沒有可追溯的驗收依據。
+
+| 欄位 | 說明 |
+| --- | --- |
+| Test ID | 本次報告內唯一且穩定的測試識別碼，可供問題、截圖與重驗紀錄引用。 |
+| Test Item | 測試項目、對應第 11 節要求、適用性及範圍。 |
+| Command / Procedure | 實際執行的完整指令、參數或人工操作步驟。 |
+| Environment | OS、Node.js、npm、Browser 與工具版本；附執行時間、URL、建置模式、Base Path、Viewport 及受測程式碼版本。 |
+| Expected Result | 執行前依規格確認的預期結果，不因失敗而降低標準。 |
+| Actual Result | 本次實際觀察到的結果、錯誤、數值及測試範圍。 |
+| Exit Code | 真實退出代碼；人工操作或未啟動的命令填「不適用」並附原因，不捏造 0，且不因此把整項 Status 改為 N/A。 |
+| Status | 僅使用 PENDING / PASS / FAIL / BLOCKED / N/A，依第 11 節定義判定。 |
+| Evidence | 對應的 Log、Screenshot、HTTP Response、Actions run／job 或其他可追溯證據位置；無實際檔案不建立假連結。 |
+| Notes | 問題、限制、適用性理由、Known Issues、修正及重驗 Test ID／證據。 |
+
+### Report Completion Gate
+
+- 獨立實作／測試報告的本機驗收內容必須在建立 PR 前完成，並與功能程式碼一併納入該 PR；不得在缺少本機報告時宣稱可完整交付。
+- 報告須記錄受測程式碼的 Commit 或 tree／diff、測試時間及範圍，並在 PR 對照實際提交版本。最後一次本機測試必須對應實際提交的程式碼；不能引用舊版本結果冒充現版驗收。
+- 後續修改程式碼時，必須重跑受影響測試與必要回歸，同步更新報告、截圖及證據，再確認最終程式碼版本一致。僅新增報告或遠端結果時，也須確認受測程式碼未改變並檢查文件連結。
+- PR CI、PR Review、合併後 main CI、部署與公開網址驗證尚未發生時，如實保留 `PENDING` 並說明階段；實際發生後補上真實證據，不為了 PR 前完成報告而預填成功。
 
 ## 13. Git & Pull Request
 
@@ -526,6 +575,22 @@ Task 003 的獨立實作與測試報告使用 [docs/homepage-implementation.md](
 PR Description 必須包含 Task Objective、Homepage Sections、Components Created、Responsive Implementation、SEO Changes、Accessibility Results、Quality Check Results、真實 Screenshots、Remaining Issues，以及必要的 Pages 相容性與聯絡限制。
 
 提交前檢查完整 Git Diff，確認只有授權範圍、沒有覆蓋使用者工作、沒有 `.next/`／`out/`／Secrets／暫存產物；相依與 lockfile 若變更須解釋。Commit SHA、PR 編號與 CI Run ID 均以實際紀錄為準，不預填或虛構。
+
+### Review, Merge & Deployment Boundaries
+
+下列階段各自記錄狀態與證據，不能互相替代；本機／PR 交付不要求執行尚未授權的合併或發布。
+
+| 階段 | 必須確認的依據與界線 |
+| --- | --- |
+| 本機開發與驗收 | 第 11–12 節適用檢查、受測程式碼版本、實際結果與獨立報告。 |
+| Feature Branch Commit | 已提交並推送的實際 SHA 與完整 Diff，對照報告中的受測程式碼；Commit 本身不代表 PR CI 通過。 |
+| PR CI 驗收 | 本次 PR head 的實際 run／job、建置與 artifact；Deploy SKIPPED 不代表正式部署成功。 |
+| PR Review | 記錄實際審查狀態、意見及處理結果；CI 成功不等於審查通過。 |
+| 使用者授權合併 | 取得明確授權後才可合併，並記錄真實 PR／Merge SHA／時間；未授權時保持待審，不自行合併。 |
+| 合併後 main CI | 若已獲授權合併，核對 Merge SHA 對應的 main run／jobs，不沿用 PR CI 結果。 |
+| 正式部署與公開網址驗證 | 分別確認部署工作成功，以及實際公開 URL 的 HTTP、頁面內容、靜態資源、Base Path 與必要 Smoke；僅部署成功而未檢查公開 URL 時，公開驗證仍為 PENDING。 |
+
+不能把 PR CI 通過、artifact 產生或 PR 合併直接視為正式網站部署成功。未獲合併／發布授權，或未取得部署及公開 URL 證據時，最終報告須分別說明實際狀態，不更改既有部署條件來取得成功結果。
 
 ## 14. Deliverables
 
@@ -554,31 +619,37 @@ PR Description 必須包含 Task Objective、Homepage Sections、Components Crea
 
 ## 16. Final Delivery Checklist
 
-以下均為 **Pending**；執行 Task 003 並取得對應證據後，才可在本次獨立報告確認，不用歷史紀錄或本次文件整理代替：
+以下均為 **PENDING**；執行 Task 003 並取得對應證據後，才可在本次獨立報告確認，不用歷史紀錄或本次文件整理代替：
 
-- [ ] Pending — 確認 Repository／最新 main／工作目錄及 Task 002 已合併；缺前置條件已停止回報。
-- [ ] Pending — 保留 Task 001／002 架構、Dependencies、Design System、原始 Logo 路徑與 Provisional 狀態。
-- [ ] Pending — 正式 Header、Desktop Navigation、Contact CTA 與可操作的 Mobile Navigation 完成。
-- [ ] Pending — Hero、Introduction、Services、Technology Capabilities、Why XK、Solutions、Contact CTA 七區塊順序與內容完整。
-- [ ] Pending — R01–R05 全部服務項目、五個技術群組、四項價值與三個應用方向均保留。
-- [ ] Pending — Footer 品牌／導航／五服務／Legal 狀態／程式產生年份完成。
-- [ ] Pending — 聯絡管道已驗證，或清楚標示待確認；無假表單、無效 mailto 或虛假功能。
-- [ ] Pending — 單一 H1、Title／Description／Canonical／Open Graph／語言與 noindex／nofollow 正確。
-- [ ] Pending — `npm ci`／原稿 `npm install` 已實際執行並記錄，沒有意外 lockfile 變更。
-- [ ] Pending — TypeScript 通過並有本次 Exit Code 與紀錄。
-- [ ] Pending — ESLint 通過並記錄實際錯誤／警告結果。
-- [ ] Pending — 一般 Next.js Build 通過，保留原部署模式。
-- [ ] Pending — Pages Build 通過，Base Path／404／`.nojekyll`／資源路徑與開發路由排除正確。
-- [ ] Pending — 首頁、全部連結／錨點、手機選單、CTA 與既有功能回歸測試完成。
-- [ ] Pending — 320／375／768／1440／1920px Responsive 驗收完成，無溢出／重疊／Card 超框。
-- [ ] Pending — axe WCAG 2／2.1 A／AA、鍵盤、Focus、Accessible Names、Contrast、Reduced Motion 與必要人工檢查完成。
-- [ ] Pending — Browser Console／Runtime／Network／資產／HTTP 與效能基本檢查完成。
-- [ ] Pending — 發現問題已修正並重新驗收，Optional／N/A／工具限制有明確說明。
-- [ ] Pending — 獨立測試與實作報告完成，包含環境、指令、Exit Code、PASS／FAIL、修復及重驗紀錄。
-- [ ] Pending — 本次實際 Desktop／Mobile 與相關區塊截圖完成，位置與受測版本可追溯。
-- [ ] Pending — Git Diff 檢查完成，只有授權範圍，無產物、機密或使用者工作遺失。
-- [ ] Pending — Conventional Commit 與 Feature Branch 推送完成，識別碼為實際紀錄。
-- [ ] Pending — PR 已建立，包含指定內容、截圖與剩餘事項，等待審核，未自動合併。
-- [ ] Pending — 本次 CI quality／pages-build／artifact 已確認；PR Deploy SKIPPED，沒有未授權發布。
-- [ ] Pending — 未修改 Documentation Repository、未開發 Backend，未加入虛假商業資訊。
-- [ ] Pending — 最終繁體中文交付報告完成；若另獲發布授權，已補實際 main 部署證據，否則明確標示未發布。
+執行狀態依第 11 節統一使用 `PENDING`、`PASS`、`FAIL`、`BLOCKED`、`N/A`。僅有證據的 `PASS` 可勾選；其餘保持未勾選，`N/A` 附判定理由且不視為缺少適用驗收。必要項目仍為 `PENDING`、`FAIL` 或 `BLOCKED` 時，不得宣稱完整通過。以下是規格初始清單，本輪文件修訂不代填功能結果。
+
+- [ ] PENDING — 確認 Repository／最新 main／工作目錄及 Task 002 已合併；缺前置條件已停止回報。
+- [ ] PENDING — 保留 Task 001／002 架構、Dependencies、Design System、原始 Logo 路徑與 Provisional 狀態。
+- [ ] PENDING — 正式 Header、Desktop Navigation、Contact CTA 與可操作的 Mobile Navigation 完成。
+- [ ] PENDING — Hero、Introduction、Services、Technology Capabilities、Why XK、Solutions、Contact CTA 七區塊順序與內容完整。
+- [ ] PENDING — R01–R05 全部服務項目、五個技術群組、四項價值與三個應用方向均保留。
+- [ ] PENDING — Footer 品牌／導航／五服務／Legal 狀態／程式產生年份完成。
+- [ ] PENDING — 聯絡管道已驗證，或清楚標示待確認；無假表單、無效 mailto 或虛假功能。
+- [ ] PENDING — 單一 H1、Title／Description／Canonical／Open Graph／語言與 noindex／nofollow 正確。
+- [ ] PENDING — `npm ci`／原稿 `npm install` 已實際執行並記錄，沒有意外 lockfile 變更。
+- [ ] PENDING — TypeScript 通過並有本次 Exit Code 與紀錄。
+- [ ] PENDING — ESLint 通過並記錄實際錯誤／警告結果。
+- [ ] PENDING — 一般 Next.js Build 通過，保留原部署模式。
+- [ ] PENDING — Pages Build 通過，Base Path／404／`.nojekyll`／資源路徑與開發路由排除正確。
+- [ ] PENDING — 首頁、全部連結／錨點、手機選單、CTA 與既有功能回歸測試完成。
+- [ ] PENDING — 320／375／768／1440／1920px Responsive 驗收完成，無溢出／重疊／Card 超框。
+- [ ] PENDING — axe WCAG 2／2.1 A／AA、鍵盤、Focus、Accessible Names、Contrast、Reduced Motion 與必要人工檢查完成。
+- [ ] PENDING — Browser Console／Runtime／Network／資產／HTTP 與效能基本檢查完成。
+- [ ] PENDING — 發現問題已修正並重新驗收，Optional／N/A／工具限制有明確說明。
+- [ ] PENDING — 獨立測試與實作報告完成，包含環境、指令、Exit Code、PENDING／PASS／FAIL／BLOCKED／N/A 狀態、適用性、修復及重驗紀錄。
+- [ ] PENDING — 本次實際 Desktop／Mobile 與相關區塊截圖完成，位置與受測版本可追溯。
+- [ ] PENDING — Git Diff 檢查完成，只有授權範圍，無產物、機密或使用者工作遺失。
+- [ ] PENDING — Conventional Commit 與 Feature Branch 推送完成，識別碼為實際紀錄。
+- [ ] PENDING — PR 已建立，包含指定內容、截圖與剩餘事項，等待審核，未自動合併。
+- [ ] PENDING — 本次 CI quality／pages-build／artifact 已確認；PR Deploy SKIPPED，沒有未授權發布。
+- [ ] PENDING — 未修改 Documentation Repository、未開發 Backend，未加入虛假商業資訊。
+- [ ] PENDING — 最終繁體中文交付報告完成；若另獲發布授權，已補實際 main 部署證據，否則明確標示未發布。
+- [ ] PENDING — Test Failure Policy 已遵守，失敗、阻礙與 Known Issues 有完整記錄，沒有阻礙交付的未解決必要驗收。
+- [ ] PENDING — 每項測試的 Test ID、預期／實際結果、狀態與可追溯證據已記錄，沒有以預期或舊結果代填。
+- [ ] PENDING — 獨立報告已在 PR 建立前完成並納入同一 PR，最後測試、後續重驗與實際提交的程式碼一致。
+- [ ] PENDING — 本機、Feature Commit、PR CI、PR Review、合併授權、main CI、部署與公開 URL 驗證分別記錄；未發生階段維持 PENDING 並說明，沒有冒稱已發布。
