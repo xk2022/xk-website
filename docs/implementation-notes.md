@@ -207,3 +207,16 @@ Task 003 以 `main` 的 `6feb400996e45e0e9bc285425a99e014f5381057` 為基準建�
 使用者另明確選擇 GitHub Pages 靜態部署，取代本次原先的 Vercel 部署方向。一般 `npm run build` 仍保留 Vercel 相容設定；新增 `build:pages` 輸出已驗證路徑的 `out/`、`.nojekyll`，排除開發驗收路由，並保留 `noindex, nofollow`。Actions 在 PR 執行品質與 Pages 建置，部署僅限 `main`。目前公開 Pages 曾使用舊 Jekyll 工作流程；新工作流程與來源設定是否已啟用，必須以本次最終部署紀錄為準，不能僅因已存在公開網址而宣稱 Next.js 已部署成功。
 
 完整實作紀錄：[首頁實作指南](homepage-implementation.md)；操作方式：[GitHub Pages 部署指南](github-pages-deployment.md)。**Task 003 最終品質、瀏覽器、無障礙、Actions 與部署結果待補**，不得沿用前兩個任務的通過紀錄。
+
+
+## Task 004 歷史更新 — About Us 品牌介紹頁
+
+本次以最新 `main` 的 `833db52344b16a270ef0e9531f33ab1f09b58200` 建立 `feature/website-about-page`。Task 003 已由 PR #3 合併（`0ca0760`）；其 main Actions run `44257982809` 已成功發布，並實際確認公開首頁 HTTP 200 與企業首頁內容。此為前置狀態，不代表 Task 004 的 About 頁已合併或發布。本次依 [Task 004](task/task004.md) 實作，保留目前 GitHub Pages 架構，交付 PR 待審核，不自動合併。
+
+新增 `/about` 與集中內容設定，呈現九個語意區塊：Hero、Who We Are、Mission、Vision、五類技術能力、五階段工作方式、匿名創辦人介紹、四項服務理念及 CTA。Task 004 明確允許描述創辦人一人全職經營；姓名與照片設定仍為 null，不新增未確認的身分、年資、證照、法人、辦公室或團隊。願景與 AI SaaS 仍以未來方向表達，CTA 回到真實首頁服務與聯絡錨點。
+
+Header／Footer／手機導覽的 About 更新為 `/about`，原首頁 `#about` 與 `#brand` 保留。新增頁面皆為 Server Components，沿用既有 Design System、字體與原始暫定 Logo；沒有新增依賴、Backend 或平行樣式系統。Pages 檢查工具增加 About 靜態輸出、Base Path、Canonical、Open Graph URL 及 noindex／nofollow 驗證，既有 workflow 不變。
+
+文件 Repository 的最新 main 仍為 `3996730176e4ad7237c66f541d61405f2667934e`；Week 02 與 Logo Tree SHA 均未改變，且只讀不寫。網站 `docs/task/task002.md` 已恢復英文規格（4534 bytes），先前紀錄的空檔狀態僅描述當時版本；繁體中文規格仍保留，AGENTS 已更新目前狀態。Task 001 歷史檔名仍使用 `task001-implementation-notes.md`。
+
+完整內容、來源、檔案清單、截圖與本次品質檢查見 [About Us 實作紀錄](about-implementation.md)。本次 npm ci、TypeScript、ESLint、一般 Build 與 Pages Build 皆 exit 0；加入原稿 `src/app/icon.svg` 後已重跑最終品質與瀏覽器 Suite，About／首頁均 HTTP 200、圖示 200、一般 production 開發頁 404。五種寬度、全部站內連結與錨點、Base Path、Metadata、九個區塊、五類能力、五階段流程及 axe A／AA（含展開的手機選單）全部通過，無水平溢出、JavaScript／Console／Runtime 錯誤或資源失敗；Skip Link、CTA 焦點與 Reduced Motion 0s 亦通過。圖示與提供的 symbol SVG 完全相同，未改畫 Logo 或修改全域 Layout。五份指定截圖已重拍，手機、核心能力、流程與頁尾已人工檢視。axe 結果只涵蓋本次頁面、狀態與自動化規則，不宣稱完成所有輔助科技或完整人工無障礙驗證。Commit 與 PR 以提交紀錄及最終交付報告為準，不預填識別碼，也不自動合併。

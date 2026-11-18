@@ -5,6 +5,7 @@ type SectionHeadingProps = {
   title: string;
   description: string;
   eyebrow?: string;
+  titleLang?: string;
   className?: string;
 };
 
@@ -13,6 +14,7 @@ export function SectionHeading({
   title,
   description,
   eyebrow,
+  titleLang = "en",
   className,
 }: SectionHeadingProps) {
   return (
@@ -22,7 +24,7 @@ export function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <h2 id={id} lang="en" className="type-h2 break-words text-primary">
+      <h2 id={id} lang={titleLang} className="type-h2 break-words text-primary">
         {title}
       </h2>
       <p className="type-body-lg text-muted-foreground">{description}</p>
