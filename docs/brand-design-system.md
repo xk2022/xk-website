@@ -4,7 +4,7 @@
 
 ## 範圍與規格來源
 
-依據 [Task 002](task/task002.md) 建置，保留 [Task 001](task/task001.md) 已完成的 Next.js、React、TypeScript、Tailwind CSS 4、shadcn/ui 與 Lucide React 架構，不重新初始化。網站基準為 `main` 的 `699a0cd3918203e502fe3bf1f970f2cdd819123b`，本次分支為 `feature/website-brand-design-system`。
+依據 [Task 002](task/task002.zh-TW.md) 建置，保留 [Task 001](task/task001-implementation-notes.md) 已完成的 Next.js、React、TypeScript、Tailwind CSS 4、shadcn/ui 與 Lucide React 架構，不重新初始化。網站基準為 `main` 的 `699a0cd3918203e502fe3bf1f970f2cdd819123b`，本次分支為 `feature/website-brand-design-system`。
 
 這一階段提供可重複使用的 Tokens、UI 元件與開發驗收頁。既有首頁只改用共用排版與元件，沒有新增完整首頁區塊、內頁、Backend、Contact API、AI Chatbot 或 Analytics。套件依賴沒有新增。
 

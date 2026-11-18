@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { connection } from "next/server";
 import { ArrowUpRight, Layers3, ScanLine } from "lucide-react";
 
 import { BrandPattern } from "@/components/brand/brand-pattern";
@@ -16,8 +17,6 @@ import {
   CardIcon,
   CardTitle,
 } from "@/components/ui/card";
-
-export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "品牌設計系統 · 開發驗收",
@@ -83,7 +82,12 @@ function ChapterHeading({ number, title, description }: {
   );
 }
 
-export default function DesignSystemPage() {
+export default async function DesignSystemPage() {
+  // A static Pages deployment never publishes this development route.
+  if (process.env.XK_PAGES_EXPORT === "1") {
+    notFound();
+  }
+  await connection();
   // This is a review tool, never a normal public route. Preview access is opt-in.
   if (process.env.NODE_ENV === "production" && process.env.XK_DESIGN_SYSTEM_PREVIEW !== "1") {
     notFound();
