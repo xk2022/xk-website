@@ -1,1218 +1,584 @@
-XK Website — Task 003
-Corporate Homepage Development
-官方企業網站首頁開發
+# Task 003 — Corporate Homepage Development（官方企業網站首頁開發）
 
-Project: Xplore Kaleidoscope
-Repository: xk-website
-Brand: XK
-Domain: https://xplorekaleidoscope.com
+本文件為 **Task Specification**，說明執行 Task 003 時的需求與驗收標準。章節統一不代表重新執行首頁開發；本文的驗收狀態預設為 **Pending**。已完成工作的實際結果、當時環境與歷史限制，請查閱 [首頁實作紀錄](../homepage-implementation.md) 與對應 GitHub 紀錄，不以本規格取代實作報告。
 
-Brand Slogan:
+## 1. Task Overview
 
-Explore Possibilities. Create Digital Value.
+| 項目 | 規格 |
+| --- | --- |
+| Task | Task 003 — Corporate Homepage Development |
+| 專案／品牌 | Xplore Kaleidoscope／XK |
+| Website Repository | `xk2022/xk-website` |
+| 品牌網域 | `https://xplorekaleidoscope.com` |
+| 主要語言 | 繁體中文，`zh-TW` |
+| Brand Slogan | Explore Possibilities. Create Digital Value. |
+| Technical Tagline | Building Digital Solutions with Web, Java & AI. |
+| 任務範圍 | 企業首頁、正式 Header／Footer／Navigation、必要設定與部署相容性 |
 
-Technical Tagline:
+Task 001 建立 Next.js 基礎架構；Task 002 建立 Brand Tokens、Typography、XkLogo、Button、Card、Container、Section、BrandPattern，以及響應式與 Accessibility 基礎。Task 003 必須在這些成果上完成具有專業企業形象、清楚服務定位及商業轉換入口的官方首頁。
 
-Building Digital Solutions with Web, Java & AI.
+預期首頁能呈現品牌定位、Website／Java／System Architecture／AI 技術能力與核心服務，提供清楚的服務導覽及真實聯絡資訊入口，支援 Desktop、Tablet、Mobile，並具備基本 SEO、Accessibility 與良好初始載入體驗。只開發 Homepage，不建立完整內頁或 Backend。
 
-1. Task Objective（任務目標）
+原稿要求可直接部署至 Vercel；使用者於 Task 003 執行期間另確認 GitHub Actions → GitHub Pages 靜態部署。兩者的歷史關係及目前需保留的雙建置模式見第 8 節，不能把舊目標誤寫成尚待選擇的新決策。
 
-本次任務正式進入 XK 官方企業網站首頁開發階段。
+## 2. Repository & Prerequisites
 
-Task 001 已完成 Next.js 專案基礎架構。
+| 項目 | 要求／來源性質 |
+| --- | --- |
+| Website Repository | `https://github.com/xk2022/xk-website.git`，所有網站原始碼、設定、素材及本次修改僅在此 Repository |
+| Documentation Repository | `https://github.com/xk2022/xplore-kaleidoscope`，Business Plan、品牌、技術與產品規劃；僅允許讀取 |
+| Base Branch | 執行時實際確認的最新 `main`；不得覆蓋未提交修改 |
+| Feature Branch | `feature/website-homepage`；若已存在，先檢查分支與工作狀態，不重設或覆蓋既有成果 |
+| 原 Task 003 Base Commit | `6feb400996e45e0e9bc285425a99e014f5381057`，僅為 [原實作報告](../homepage-implementation.md) 記載的歷史基準，不預設為重跑時最新版本 |
+| 前置任務 | Task 001、Task 002；必須實際確認 Task 002 已合併至 `main`，不可僅憑檔案存在或口頭預期 |
+| 原文件讀取版本 | `3996730176e4ad7237c66f541d61405f2667934e`，為 Task 003 報告記錄的文件 Repository 歷史版本；重新執行時記錄實際讀取版本 |
+| 部署前置狀態 | 檢查既有 Pages Source、公開網址、Environment 與實際 workflow；網址回應 200 不足以證明目前程式碼已發布 |
 
-Task 002 已完成 XK Brand Design System，包括：
+開始前必須檢查 Repository 身分、目前 Branch、Git Status、最新 `main`、套件版本及現有共用元件。若 Task 002 尚未合併，停止正式開發並回報，不自行合併未核准分支。
 
-Brand Design Tokens
-Typography
-XK Logo Component
-Button Component
-Card Component
-Container Component
-Section Component
-Brand Pattern
-Responsive Design 基礎
-Accessibility 基礎
+**歷史與現況須分開記錄：** Task 003 原報告中的 `task001.md` 缺失、`task002.md` 空檔、legacy Jekyll、API 403、待審核或待發布，均屬當時檢查快照。不得將這些敘述無條件套用到目前 Repository，也不得在文件重構時回填虛構的新狀態。當時規格替代來源與後續狀態以實際文件、Git、PR、Actions 與交付報告為準。
 
-Task 003 的目標是使用現有技術架構與 Design System，完成一個具有專業企業形象、清楚服務定位及商業轉換能力的官方首頁。
+## 3. Reference Documents
 
-首頁必須：
+### 3.1 Website Repository
 
-清楚呈現 Xplore Kaleidoscope 品牌定位。
-展示 Website、Java、System Architecture 與 AI 技術能力。
-介紹 XK 的核心商業服務。
-建立專業、國際化的企業形象。
-提供清楚的服務導覽。
-提供可使用的聯絡資訊入口。
-支援 Desktop、Tablet、Mobile。
-具備基本 SEO 與 Accessibility。
-可直接部署至 Vercel。
+開始實作前完整閱讀並確認實際檔名：
 
-本次只開發 Homepage，不開發完整內頁及 Backend。
+- [README.md](../../README.md)、[AGENTS.md](../../AGENTS.md)。
+- [implementation notes](../implementation-notes.md)、[品牌設計系統](../brand-design-system.md)。
+- [Task 001 規格](task001.md)、[Task 002 規格](task002.md) 及必要的 [Task 002 繁體中文原稿](task002.zh-TW.md)。
+- Task 001 的歷史替代來源 [task001-implementation-notes.md](task001-implementation-notes.md)；不得假設所有原稿在當時或目前均存在。
+- [首頁實作紀錄](../homepage-implementation.md)、[GitHub Pages 部署指南](../github-pages-deployment.md)。
 
-2. Repository Rules（Repository 管理規範）
+缺少文件時記錄缺漏與已確認來源，不自行補造規格、測試結果或發布狀態。既有報告是證據來源，不是將過去 PASS 複製為本次驗收結果的依據。
 
-本專案使用兩個獨立 Repository。
+### 3.2 Documentation Repository
 
-2.1 Documentation Repository
+Canonical Directory：`doc/01_business-plan/week-02/`。可讀取時優先閱讀下列主題，依實際 numbered bilingual 檔名辨識：
 
-Repository:
+| 主題 | 實際規劃文件 |
+| --- | --- |
+| 品牌識別 | `01_brand-identity_品牌視覺識別規範.md` |
+| Logo | `02_logo-guidelines_XK Logo 設計與使用規範.md` |
+| 色彩 | `03_color-palette_品牌色彩系統規範.md` |
+| 字體 | `04_typography_品牌字體與排版規範.md` |
+| 網站地圖 | `05_website-sitemap_ 官方網站資訊架構與網站地圖.md` |
+| 首頁文案 | `06_homepage-copywriting_官方網站首頁文案規劃.md` |
+| 架構 | `08_website-architecture_官方網站 Next.js 技術架構設計.md` |
+| MVP | `09_website-mvp_官方網站 MVP 開發規格.md` |
 
-xplore-kaleidoscope
+文件 Repository 僅供讀取。未核准的舊規劃、示例素材、聯絡信箱或完整 MVP 功能，不因出現在文件中就成為已實施功能或可公開商業事實。
 
-用途：
+### 3.3 規格優先順序
 
-Business Plan
-Brand Guidelines
-Technical Specifications
-Product Planning
-Project Documentation
+1. 已合併至 `main` 的 Task 001、Task 002 實際程式碼與元件 API。
+2. 本次 Task 003 明確規定及使用者後續已確認的指示。
+3. 已確認的品牌與商業決策。
+4. 舊版規劃文件。
 
-只允許讀取，不得修改。
+不得為配合舊文件而破壞已完成的 Design System。重要衝突先記錄並回報；README 舊里程碑若只把 Task 003 列為 Header／Footer，不取代本任務明確要求的完整企業首頁範圍。
 
-2.2 Website Repository
+## 4. Scope & Requirements
 
-Repository:
+### 4.1 必須完成
 
-xk-website
+- 正式 Header、Desktop Navigation、Contact CTA、可操作的 Mobile Navigation 與 Footer。
+- 按指定順序組合 Hero、Introduction、Services、Technology Capabilities、Why XK、Solutions、Contact CTA 七個首頁區塊。
+- 集中管理品牌、導覽、服務及已驗證聯絡資料，重用 Design System。
+- Desktop、Tablet、Mobile 響應式行為、基本 SEO、WCAG 2.1 AA 基礎與實際瀏覽器驗收。
+- 保留 construction-stage `noindex, nofollow`、Backend 獨立性及一般 Next.js build。
+- 維持已確認的 GitHub Actions → GitHub Pages 靜態建置、Base Path、資源與開發路由保護。
+- 完成獨立實作報告、測試證據、實際截圖、Conventional Commit 與 PR 審核交付。
 
-用途：
+### 4.2 既有成果保護
 
-Next.js Website
-Frontend Components
-Website Configuration
-Website Assets
-Deployment Configuration
+不得重新初始化專案、覆蓋未提交工作、重建平行 Design System、任意升降級套件或重複建立現有元件。若後續任務已完成 `/about`、`/services` 等內頁，重新檢查首頁時也必須保留其有效導覽，不能因 Task 003 當時只有首頁而退回舊狀態。
 
-本次所有程式碼修改只能發生在 xk-website。
+### 4.3 不得擅自擴充
 
-2.3 Git Rules
+不開發完整 About／Services／Solutions／Portfolio／Contact／Privacy 內頁、服務明細、Backend、Contact API、CMS、Authentication、Analytics 或 AI Chatbot。原稿允許在需要時提供簡潔且真實的 Contact 入口；無已確認管道時優先採用第 6 節的有效頁內聯絡區塊，不以此例外擴大成完整聯絡系統。
 
-本次使用：
+不得建立假表單、假提交、無效 Email Link、虛構客戶案例／Logo／評價／統計／排名／合作紀錄，或將未完成產品描述為已商用。
 
-feature/website-homepage
+## 5. Information Architecture & UX
 
-執行規範：
+### 5.1 區塊順序與職責
 
-不得直接修改 main。
-不得直接推送至 main。
-不得自動 Merge。
-必須先檢查目前 Git 狀態。
-不得覆蓋尚未提交的使用者修改。
-不得假設 Task 002 已經合併，必須實際檢查。
-如果 Task 002 尚未合併，停止正式開發並回報原因。
-完成後建立 Conventional Commit。
-準備 Pull Request 供審核。3. Documentation Inspection（文件檢查）
-
-開始開發前，先閱讀：
-
-3.1 Website Repository
-
-檢查以下文件：
-
-README.md
-AGENTS.md
-docs/implementation-notes.md
-docs/brand-design-system.md
-docs/task/task001.md
-docs/task/task002.md
-
-如果 task001.md、task002.md 或其他任務文件尚未存在於 Repository，不得假設其存在。
-
-3.2 Documentation Repository
-
-如果可以讀取 xplore-kaleidoscope，請檢查：
-
-Canonical Directory:
-
-doc/01_business-plan/week-02/
-
-優先閱讀：
-
-01*brand-identity*品牌視覺識別規範.md
-02*logo-guidelines_XK Logo 設計與使用規範.md
-03_color-palette*品牌色彩系統規範.md
-04*typography*品牌字體與排版規範.md
-05*website-sitemap* 官方網站資訊架構與網站地圖.md
-06*homepage-copywriting*官方網站首頁文案規劃.md
-08*website-architecture*官方網站 Next.js 技術架構設計.md
-09*website-mvp*官方網站 MVP 開發規格.md
-
-文件 Repository 僅供讀取。
-
-3.3 規格優先順序
-
-發生規格衝突時，依以下順序處理：
-
-已合併至 main 的 Task 001、Task 002 實際程式碼及元件 API。
-本次 Task 003 明確規定。
-已確認的品牌與商業決策。
-舊版規劃文件。
-
-不得為了配合舊文件而破壞已完成的 Design System。
-
-如果發現重要衝突，先記錄並回報。
-
-4. Confirmed Technology Stack（已確認技術架構）
-
-必須沿用：
-
-Technology Purpose
-Next.js Frontend Framework
-React UI Library
-TypeScript Type Safety
-Tailwind CSS 4 Styling
-shadcn/ui UI Components
-Lucide React Icons
-Vercel Deployment
-
-其他既有技術設定：
-
-App Router
-src/ directory
-Strict TypeScript
-ESLint
-@/\* Import Alias
-Server Components by default
-Client Components only when interaction is needed
-
-不得：
-
-重新初始化 Next.js。
-更換 Tailwind CSS。
-更換 shadcn/ui。
-更換現有套件架構。
-任意升級或降級 Dependencies。
-引入不必要的第三方套件。
-開發 Spring Boot Backend。
-建立 PostgreSQL Database。
-建立 Docker Backend。
-建立獨立 API Server。
-
-本次 Homepage 必須可以獨立運作，不依賴 Backend。
-
-5. Brand Design System（品牌設計系統）
-
-必須直接使用 Task 002 已完成的 Design System。
-
-5.1 Brand Colors
-Token HEX
-Primary #101A33
-Secondary #3157D5
-Accent #19B8D5
-Background #FFFFFF
-Surface #F5F7FB
-Foreground #172033
-Muted #667085
-Border #E4E8F0
-
-使用 CSS Semantic Tokens。
-
-不得在各個元件重複硬編碼品牌 HEX。
-
-注意：
-
---muted 是次要文字顏色。
-
-bg-muted 是對應 Surface 的背景工具類別。
-
-不得混用。
-
-5.2 Typography
-
-沿用：
-
-Inter
-Noto Sans TC
-Microsoft JhengHei
-PingFang TC
-Arial
-sans-serif
-
-使用 Task 002 定義的 Typography Utilities：
-
-type-display
-type-h1
-type-h2
-type-h3
-type-body-lg
-type-body
-type-body-sm
-type-caption
-type-button
-5.3 Logo
-
-使用：
-
-src/components/brand/xk-logo.tsx
-
-沿用：
-
-XK Logo 原始幾何結構。
-原始 SVG Path。
-原始 Transform。
-已提供的 Logo 配色。
-
-禁止重新繪製 Logo。
-
-禁止任意修改 Logo 比例。
-
-禁止將 Logo 當成一般文字重新排版。
-
-Logo 仍屬 Provisional 狀態，不得自行宣稱已經正式核准。
-
-5.4 Shared Components
-
-優先使用：
-
-Button
-Card
-CardHeader
-CardTitle
-CardDescription
-CardContent
-Container
-Section
-XkLogo
-BrandPattern
-
-如果現有元件可以滿足需求，不得重複建立類似元件。
-
-6. Homepage Information Architecture（首頁資訊架構）
-
-首頁採用以下區塊順序：
-
-text
+```text
 Homepage
-│
 ├── Header
-│
 ├── Hero Section
-│
 ├── Introduction Section
-│
 ├── Services Section
-│
 ├── Technology Capabilities Section
-│
 ├── Why XK Section
-│
 ├── Solutions Section
-│
 ├── Contact CTA Section
-│
 └── Footer
+```
 
-所有區塊必須具備一致的視覺風格、排版層次及響應式行為。
+Page 負責區塊組合與 Metadata；各 Section 管理自己的視覺與語意；Config 集中管理重複內容。所有區塊維持一致的視覺、排版層次、Section Spacing 與響應式行為。
 
-7. Header & Navigation
-   7.1 Header Requirements
+### 5.2 Header 與 Mobile Navigation
 
-建立正式網站 Header。
+Header 必須包含原稿 XkLogo、Xplore Kaleidoscope 品牌名稱、Desktop Navigation、Contact CTA 與 Mobile Navigation。使用白色背景、細緻邊框、適當水平留白、清楚字體與品牌色彩；高度合理，不過度佔用首屏。
 
-包含：
+Mobile Navigation 必須：
 
-XK Logo
-品牌名稱 Xplore Kaleidoscope
-Desktop Navigation
-Contact CTA
-Mobile Navigation
+- 由有 Accessible Label 的原生 Button 開啟／關閉，正確反映 `aria-expanded`，並與對應導覽區域建立關聯。
+- 支援鍵盤與 Escape 關閉；關閉後焦點處理清楚可預期，不讓開啟選單導致整頁無法操作。
+- 點擊連結能正確導向，且選單狀態與頁面操作保持一致。
+- 僅必要的導覽互動使用 Client Component，不能使整個 Layout 或所有 Sections 變成 Client Components。
 
-建議 Navigation：
+依既有已合併的非模態選單實作，回歸檢查連結後關閉、外部點擊、切換桌面寬度、Escape 與焦點還原；不以無效選單按鈕或單靠 Hover 操作取代手機導覽。
 
-Label Destination
-Home /
-About /about
-Services /services
-Solutions /solutions
-Portfolio /portfolio
-Contact /contact
-7.2 Header Design
+### 5.3 Hero 與裝飾
 
-設計方向：
+首屏須清楚傳達品牌定位，包含第 6 節的 H1、品牌／技術標語、簡介、主要服務 CTA 與次要聯絡 CTA。
 
-Clean Corporate Design
-White Background
-Subtle Border
-Appropriate Horizontal Spacing
-Clear Typography
-Consistent Brand Colors
+Hero Visual 沿用 BrandPattern、Geometric Shapes、CSS-based Kaleidoscope Elements、Brand Color Gradients 或 Abstract Technology Visuals，呈現幾何對稱、層次、現代科技與專業企業形象。裝飾不得遮蔽文字、接收不必要操作或增加不必要動畫成本。
 
-Header 高度應保持合理，不要佔據過多首屏空間。
+不得任意使用不相關 Stock Photos、虛構產品畫面、未提供的客戶 Logo、重新繪製的 XK Logo 或複雜動畫。
 
-7.3 Mobile Navigation
+### 5.4 服務卡片與其他區塊
 
-手機版必須提供可操作的 Navigation。
+- Services：Desktop 建議三欄，第二排自然排列其餘兩張；Tablet 兩欄；Mobile 一欄。Card 高度及視覺一致，含 Icon、Service ID、英文／中文服務名稱、說明與項目摘要。
+- 未完成服務明細頁時，使用非互動 Card；不可加入指向不存在頁面的「了解更多」。
+- Technology Capabilities：以 Technology Groups、文字 Tags、Icon Grid 或低調 Card 分類呈現，不用未證實認證或合作夥伴標章。
+- Introduction：簡潔、專業、清楚，保持足夠留白，不堆疊文字。
+- Solutions：描述應用方向，不建立虛構產品功能；可導向真實服務錨點。
+- Contact CTA：使用真實已確認管道；缺少管道時保留視覺與待確認說明，不偽裝成功操作。
 
-要求：
+### 5.5 Footer
 
-使用 Button 控制開啟及關閉。
-使用適當的 aria-expanded。
-提供可辨識的 Accessible Label。
-支援鍵盤操作。
-避免導覽開啟後頁面無法正常操作。
-點擊導覽連結後正確導向。
-適當處理 Escape 關閉操作。
+Footer 必須包含 Brand／XkLogo／品牌名稱／品牌標語、Navigation、五類 Service Categories、Legal／Privacy Policy 狀態，以及 `© {currentYear} Xplore Kaleidoscope. All rights reserved.`。
 
-如果使用 Client Component，僅將必要的 Navigation 部分設為 Client Component。
+只將已實作頁面或有效錨點設為連結。Privacy Policy 未建立時不得連到不存在的頁面。年份以程式取得，不寫死；靜態匯出時年份於 build 決定，重新建置才更新。
 
-不得讓整個網站 Layout 因此變成 Client Component。
+## 6. Content & Data Specification
 
-8. Hero Section
+### 6.1 文案與設定管理
 
-Hero 是首頁最重要的品牌展示區塊。
+以本節明確文案、已確認品牌資料及第 3 節來源為依據；舊規劃僅供比對。內容以繁體中文為主，保留品牌英文與技術名稱，不導入完整 i18n Framework，但保留未來英文版的內容擴充空間。
 
-必須在第一個畫面清楚傳達 XK 的品牌定位。
+沿用 `src/config/site.ts` 管理 Brand Name、Slogan、Technical Tagline、Website URL；導覽、服務分類及聯絡資訊集中管理。可依已合併架構使用 `src/config/homepage.ts`、`src/config/navigation.ts`、`src/config/contact.ts`，不要在多個元件重複定義相同內容。
 
-8.1 Main Content
+首頁設定、服務項目、技術群組、價值與 Solutions 使用明確 TypeScript 結構；延用既有型別或清楚的 readonly 資料，避免為靜態內容建立不必要抽象或假 API。聯絡資料僅放已驗證資訊，未確認的資料與有效渠道分開。
 
-品牌標語：
+### 6.2 Hero
 
-Explore Possibilities. Create Digital Value.
+| 內容 | 指定／建議文案 |
+| --- | --- |
+| Brand Slogan | Explore Possibilities. Create Digital Value. |
+| Technical Tagline | Building Digital Solutions with Web, Java & AI. |
+| 建議主要標題 | 整合 Web、Java 與 AI 技術，打造企業數位價值。 |
+| 建議副標題 | Xplore Kaleidoscope 協助企業整合網站開發、企業系統、系統架構與 AI 應用，將技術轉化為實際商業價值。 |
+| 主要 CTA | 探索我們的服務 |
+| 次要 CTA | 聯絡我們 |
 
-技術標語：
+原稿主要 CTA 建議 `/services`、次要 CTA 建議 `/contact`。目的頁尚未存在時不得假連結；可用真實的 `/#services`、`/#contact` 頁內區塊。原稿另容許簡潔的 Contact 頁面入口，但最終選擇必須符合實際完成範圍，不假設表單或聯絡管道已存在。
 
-Building Digital Solutions with Web, Java & AI.
+### 6.3 Introduction
 
-建議主要標題：
-
-「整合 Web、Java 與 AI 技術，打造企業數位價值。」
-
-建議副標題：
-
-「Xplore Kaleidoscope 協助企業整合網站開發、企業系統、系統架構與 AI 應用，將技術轉化為實際商業價值。」
-
-8.2 CTA
-
-主要 CTA：
-
-「探索我們的服務」
-
-導向：
-
-/services
-
-次要 CTA：
-
-「聯絡我們」
-
-導向：
-
-/contact
-
-注意：
-
-如果 /contact 尚未實作，不得建立看似可以使用但實際無法運作的連結。
-
-可以在本次同時建立簡潔的 Contact 頁面入口，或先將次要 CTA 設計為有效的頁內聯絡資訊區塊。
-
-最終選擇必須符合實際已完成頁面。
-
-8.3 Hero Visual
-
-使用 XK 品牌幾何視覺。
-
-可使用：
-
-BrandPattern
-Geometric Shapes
-CSS-based Kaleidoscope Elements
-Brand Color Gradients
-Abstract Technology Visuals
-
-視覺應呈現：
-
-幾何對稱。
-層次感。
-現代科技感。
-專業企業形象。
-
-禁止：
-
-隨意使用不相關的 Stock Photos。
-使用虛構產品畫面。
-使用未提供的客戶 Logo。
-重新繪製 XK Logo。
-使用過度複雜的動畫。
-
-Hero Visual 不應影響文字可讀性。
-
-9. Introduction Section
-
-區塊標題：
-
-「讓技術成為企業成長的力量」
+標題：**讓技術成為企業成長的力量**。
 
 建議內容：
 
-「Xplore Kaleidoscope 整合網站開發、Java 企業系統、系統架構與 AI 應用技術，協助企業建立穩定、可擴充且符合實際營運需求的數位解決方案。」
+> Xplore Kaleidoscope 整合網站開發、Java 企業系統、系統架構與 AI 應用技術，協助企業建立穩定、可擴充且符合實際營運需求的數位解決方案。
+>
+> 從網站建置、系統整合到 AI 應用，我們重視技術品質、實際效益與長期維護，讓數位技術真正創造商業價值。
 
-「從網站建置、系統整合到 AI 應用，我們重視技術品質、實際效益與長期維護，讓數位技術真正創造商業價值。」
+### 6.4 Services — 五項核心服務
 
-設計要求：
+區塊標題：**Our Services**。中文副標題：**整合技術能力，提供企業所需的數位解決方案。**
 
-簡潔。
-專業。
-清楚。
-不過度堆疊文字。
-具備足夠留白。10. Services Section
+#### R01 — Website Development
 
-區塊標題：
+- 中文名稱：**網站設計與開發**。
+- 說明：打造現代化、響應式且符合企業品牌形象的網站與 Web Application。
+- 服務項目：Corporate Website、Landing Page、Business Website、Next.js Web Application、CMS Integration、Multilingual Website。
+- Icon 建議：`Globe`。
 
-「Our Services」
+#### R02 — Java Enterprise Solutions
 
-中文副標題：
+- 中文名稱：**Java 企業系統開發**。
+- 說明：使用 Java 與 Spring Boot 建立穩定、可維護且具備擴充能力的企業後端系統。
+- 服務項目：Java / Spring Boot、Backend API、Enterprise System、Legacy System Refactoring、Database Integration。
+- Icon 建議：`Code2`。
 
-「整合技術能力，提供企業所需的數位解決方案。」
+#### R03 — System Architecture & Integration
 
-展示以下五項核心服務。
+- 中文名稱：**系統架構與整合**。
+- 說明：協助企業規劃系統架構、API 整合及後端系統，建立可靠的技術基礎。
+- 服務項目：System Architecture、API Integration、Requirements Analysis、Backend System Planning、Enterprise System Integration。
+- Icon 建議：`Network`。
 
-R01 — Website Development
+#### R04 — AI Business Solutions
 
-服務名稱：
+- 中文名稱：**AI 商業應用解決方案**。
+- 說明：將 AI、RAG 與 Workflow Automation 整合至企業流程，提升資訊應用及營運效率。
+- 服務項目：AI Chatbot、Enterprise RAG、AI Workflow Automation、AI Business Assistant、Custom AI Integration。
+- Icon 建議：`BrainCircuit`。
 
-網站設計與開發
+#### R05 — Maintenance Services
 
-說明：
+- 中文名稱：**系統維護與技術支援**。
+- 說明：提供網站、後端系統、API 與 AI 應用的持續維護及技術支援。
+- 服務項目：Website Maintenance、Backend Maintenance、API Monitoring、AI Application Maintenance、Cloud Deployment Support。
+- Icon 建議：`Settings`。
 
-「打造現代化、響應式且符合企業品牌形象的網站與 Web Application。」
+這五項是 Task 003 首頁規格；不得因後續 Services 內頁採用其他分類而移除首頁 R05 Maintenance、原 Service ID 或有效錨點。
 
-服務項目：
+### 6.5 Technology Capabilities
 
-Corporate Website
-Landing Page
-Business Website
-Next.js Web Application
-CMS Integration
-Multilingual Website
+區塊標題：**Technology Capabilities**。中文副標題：**整合多元技術，打造完整數位解決方案。**
 
-Icon 建議：
+| 分類 | 必須保留的能力清單 |
+| --- | --- |
+| Frontend Development | Next.js、React、TypeScript、Tailwind CSS |
+| Backend Development | Java、Spring Boot、REST API、Enterprise Backend |
+| Database & Integration | PostgreSQL、MySQL、API Integration、Database Design |
+| AI & Automation | OpenAI API、Claude Integration、RAG、AI Agents、Workflow Automation、n8n |
+| Infrastructure | Docker、GitHub、Vercel、Cloud VPS |
 
-Globe
+上述為創辦人及 XK 的技術服務能力，**不代表所有技術已部署於目前官網**。不得因此建立 Backend／Database，也不得宣稱與特定科技公司有官方合作夥伴關係或使用未經證實認證標章。
 
-R02 — Java Enterprise Solutions
+### 6.6 Why XK — 四項價值
 
-服務名稱：
+區塊標題：**Why Xplore Kaleidoscope**。中文副標題：**從技術實作到商業價值，提供完整的數位解決方案。**
 
-Java 企業系統開發
+| 價值 | 指定內容 |
+| --- | --- |
+| Integrated Technical Capabilities | 整合網站、企業系統、系統架構及 AI 技術，減少企業跨系統整合的複雜度。 |
+| Business-oriented Solutions | 以實際商業需求為出發點，提供符合企業營運目標的技術方案。 |
+| Scalable Architecture | 重視系統架構、程式碼品質及未來擴充能力，降低長期維護成本。 |
+| Long-term Technical Support | 從系統建置到後續維護，提供持續性的技術協助。 |
 
-說明：
+不得加入虛構客戶數量、成功案例、專案成長率、企業合作紀錄或未證實的業界排名。
 
-「使用 Java 與 Spring Boot 建立穩定、可維護且具備擴充能力的企業後端系統。」
+### 6.7 Solutions — 三種應用方向
 
-服務項目：
+區塊標題：**Digital Solutions for Business**。中文副標題：**依照企業需求，選擇適合的數位轉型方向。**
 
-Java / Spring Boot
-Backend API
-Enterprise System
-Legacy System Refactoring
-Database Integration
+| 方向 | 指定內容 |
+| --- | --- |
+| Website & Digital Presence | 協助企業建立專業網站及數位服務入口。 |
+| Enterprise System Modernization | 協助企業改善既有系統架構，整合後端服務與資料流程。 |
+| AI-powered Business Automation | 將 AI 與自動化技術導入企業知識管理及日常營運流程。 |
 
-Icon 建議：
+本區塊著重解決方案方向，不需要建立完整產品功能。不得將尚未完成的 XK AI Business Assistant 描述成正式商用產品。
 
-Code2
+### 6.8 Contact CTA 與未確認資料
 
-R03 — System Architecture & Integration
+| 內容 | 指定／建議文案 |
+| --- | --- |
+| 英文標題 | Let's Build Something Valuable |
+| 中文標題 | 讓我們一起探索更多可能。 |
+| 說明 | 無論是企業網站、Java 系統開發、系統整合或 AI 應用，歡迎與我們討論您的需求。 |
+| CTA | 開始討論您的專案 |
 
-服務名稱：
+開始開發前確認是否已有正式 Email、已確認的 LinkedIn 公司／品牌頁面或可用聯絡表單。只有已確認可實際使用的管道才可成為聯絡目的地。
 
-系統架構與整合
+`contact@xplorekaleidoscope.com` 在先前規劃中僅為建議地址，不代表信箱正式建立；不得發布無效 `mailto:` 或把範例信箱、泛用 LinkedIn 首頁當成已確認的聯絡渠道。
 
-說明：
+目前沒有已確認管道時，必須保留 Contact CTA 視覺區塊、將實際聯絡方式標示為待確認，不建立假表單、假提交或無效 Email Link，並在最終報告列出。原稿「開始討論您的專案」不授權建立無法運作的按鈕；可提供有效的服務瀏覽入口並清楚說明聯絡限制，直到使用者確認真實管道。
 
-「協助企業規劃系統架構、API 整合及後端系統，建立可靠的技術基礎。」
+## 7. Design System & Technical Constraints
 
-服務項目：
+### 7.1 確認技術與元件
 
-System Architecture
-API Integration
-Requirements Analysis
-Backend System Planning
-Enterprise System Integration
+沿用 Next.js、React、TypeScript、Tailwind CSS 4、shadcn/ui、Lucide React、App Router、`src/`、Strict TypeScript、ESLint、`@/*` alias，以及既有 Node.js 24.x／npm 環境。
 
-Icon 建議：
+Server Components 優先，只在實際需要互動時使用 Client Components。優先重用 `Button`、`Card`、`CardHeader`、`CardTitle`、`CardDescription`、`CardContent`、`Container`、`Section`、`XkLogo`、`BrandPattern`；現有元件足夠時不得複製相同功能。
 
-Network
+不得重新初始化、替換 Tailwind／shadcn／套件架構、任意升降級 Dependencies 或新增不必要套件。未改相依時不得意外更新 lockfile；必要變更必須說明理由並驗證。Task 003 歷史上僅為 Pages 增加 `package.json` Script，不能將該事實改寫為任意修改套件版本的授權。
 
-R04 — AI Business Solutions
+### 7.2 色彩、Typography 與 Logo
 
-服務名稱：
+| Token | HEX |
+| --- | --- |
+| Primary | `#101A33` |
+| Secondary | `#3157D5` |
+| Accent | `#19B8D5` |
+| Background | `#FFFFFF` |
+| Surface | `#F5F7FB` |
+| Foreground | `#172033` |
+| Muted | `#667085` |
+| Border | `#E4E8F0` |
 
-AI 商業應用解決方案
+使用既有 CSS Semantic Tokens，不在元件重複硬編碼品牌 HEX。`--muted` 是次要文字色；`bg-muted` 對應 Surface 背景，不得混用。
 
-說明：
+沿用 Inter、Noto Sans TC、Microsoft JhengHei、PingFang TC、Arial、sans-serif，以及 `type-display`、`type-h1`、`type-h2`、`type-h3`、`type-body-lg`、`type-body`、`type-body-sm`、`type-caption`、`type-button`。重用現有 Container、Section、Radius、Shadow、Focus、Reduced Motion 與 Responsive Tokens，不建另一套衝突規則。
 
-「將 AI、RAG 與 Workflow Automation 整合至企業流程，提升資訊應用及營運效率。」
+Logo 使用 `src/components/brand/xk-logo.tsx`，保留原始 XK 幾何、SVG Path、Transform、比例及提供的配色。不得重新繪製、任意變形或把原字標當一般文字重新排版；維持 **Provisional（暫定）**，不宣稱正式核准。既有可讀 HTML 品牌名稱可配合原圖形使用，不取代或改畫原始向量字標。
 
-服務項目：
+### 7.3 Accessibility 與效能
 
-AI Chatbot
-Enterprise RAG
-AI Workflow Automation
-AI Business Assistant
-Custom AI Integration
+使用語意化 HTML、正確 Heading Hierarchy、清楚 Accessible Names、Logo 替代名稱及可見 Focus；Icon-only Button 必須有 Label，裝飾圖案 `aria-hidden`。鍵盤、Mobile Navigation、對比及 `prefers-reduced-motion` 不得為視覺效果犧牲。
 
-Icon 建議：
+減少不必要 JavaScript、Client Components、重複渲染與 State；避免大型圖片、不必要 Animation Libraries、第三方 Tracking Scripts 及繁複 CSS。若使用已提供圖片，採 Next.js 合適處理方式並兼顧靜態匯出；不得以裝飾增加無必要的初始載入成本。
 
-BrainCircuit
+不建立 Spring Boot Backend、PostgreSQL Database、Docker Backend 或獨立 API Server；技術能力清單不構成這些網站依賴。
 
-R05 — Maintenance Services
+## 8. Navigation, SEO & Deployment
 
-服務名稱：
+### 8.1 路由與有效導覽
 
-系統維護與技術支援
+正式首頁為 `/`。原稿建議導覽及「目的頁未完成時」的替代如下；執行時以當時實際存在且已核准的頁面為準，不回退後續已完成頁面。
 
-說明：
+| Label | 已實作該頁時的原稿目的地 | 尚未實作時的處理 |
+| --- | --- | --- |
+| Home | `/` | 必須為真實首頁 |
+| About | `/about` | 可用真實 `/#about`；保留既有品牌錨點相容性 |
+| Services | `/services` | 可用真實 `/#services` |
+| Solutions | `/solutions` | 可用真實 `/#solutions` |
+| Portfolio | `/portfolio` | 以規劃文字呈現或不列入可點擊導覽 |
+| Contact | `/contact` | 可用真實 `/#contact`，不得暗示已有可用表單 |
+| Privacy Policy | `/privacy` | 未建立時不設失效連結 |
 
-「提供網站、後端系統、API 與 AI 應用的持續維護及技術支援。」
+Header、Mobile Navigation、Footer 應共用集中設定。Footer 的五項服務分類沿用 R01–R05，連至實際 `/#service-{anchor}`；必須存在相應 ID。所有 CTA、首頁錨點及跨頁操作都需驗證，不將 planned route 當有效路由。
 
-服務項目：
+### 8.2 SEO 與發布保護
 
-Website Maintenance
-Backend Maintenance
-API Monitoring
-AI Application Maintenance
-Cloud Deployment Support
+首頁使用 Next.js Metadata API：
 
-Icon 建議：
+| 項目 | 規格 |
+| --- | --- |
+| 建議 Title | Xplore Kaleidoscope \| Web, Java & AI Digital Solutions |
+| 建議 Description | Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。 |
+| Canonical | `https://xplorekaleidoscope.com`，保留品牌正式網域；允許框架正常輸出的根路徑斜線 |
+| Open Graph | 專屬 Title、Description、URL，與首頁品牌內容一致；不虛構 Image 路徑 |
+| 語言／語意 | `zh-TW`；保留英文品牌與標語；一個清楚 H1，後續 H2／H3 層次正確 |
+| Indexing | 保留 construction-stage `noindex, nofollow`，不得因首頁完成而自動開放搜尋引擎索引 |
 
-Settings
+正式開放索引是獨立決策；沒有已核准 Open Graph Image 時不建立假圖檔或虛構圖片 URL。
 
-Services Layout
+### 8.3 部署決策與建置模式
 
-Desktop：
+| 層次 | 必須區分的內容 |
+| --- | --- |
+| 原始 Task 003 目標 | Vercel；保留一般 Next.js production build 與 Vercel 相容性 |
+| 使用者後續已確認決策 | GitHub Actions → GitHub Pages 靜態網站，取代本次原始部署目的地 |
+| 一般模式 | `npm run build` 產生一般 Next.js build，`npm run start` 執行；不得拿 Pages 的 `out/` 當成一般伺服器產物 |
+| Pages 模式 | `npm run build:pages` 執行靜態匯出與驗證，輸出 `out/`；保持既有 Script、條件式設定與 Dependency 版本 |
+| Base Path | 預設 `/xk-website`；workflow 依 Pages 設定讀取實際 `base_path`，不可硬編碼破壞專案網址的站內連結或資源路徑 |
+| 品牌正式網域 | Canonical 保留 `https://xplorekaleidoscope.com`；不得擅改 DNS／Custom Domain 或宣稱已完成正式網域連接 |
 
-建議採用 3 欄 Grid。
-第二排自然排列剩餘服務。
-Card 高度及視覺保持一致。
+保持 `out/index.html`、`404.html`、`.nojekyll`、正確 CSS／JS／字體／Logo 路徑與 noindex。Pages 公開產物不得提供 `/dev/design-system` 路由或頁面 payload；一般開發工具仍按既有規則開放，production 預設 404，只有明確 `XK_DESIGN_SYSTEM_PREVIEW=1` 才可驗收。
 
-Tablet：
+既有工作流程為 quality → pages-build → deploy。PR 執行鎖定依賴安裝、TypeScript、Lint、一般 Build、Pages Build 與 artifact 上傳；僅 `main` push 或明確手動選擇 `main` 才進入 deploy。非 `main` 手動執行與 PR 不部署，不自動 Merge。
 
-建議 2 欄 Grid。
+不得把一般 `.next/` 診斷 artifact 誤稱為 Vercel `--prebuilt`，也不得只因產物存在或公開網址 200 就宣稱此版本已部署。Pages Source／Environment 若阻擋，依實際錯誤回報；是否修改設定或發布須有明確授權，不繞過保護或覆蓋未通過驗收的網站。
 
-Mobile：
+## 9. File Structure & Change Scope
 
-1 欄排列。
+以下為 **預計新增、修改或重用的位置**，不是本次文件整理已完成的檔案異動清單。實作時以現有結構與最終 Git Diff 為準，不因建議檔名而重複建立相同功能。
 
-每張 Card 包含：
-
-Icon。
-Service ID。
-英文服務名稱。
-中文服務名稱。
-簡短說明。
-服務項目摘要。
-
-如果尚未實作服務詳細頁，不得建立指向不存在頁面的連結。
-
-可使用非互動式 Card 展示服務內容。
-
-11. Technology Capabilities Section
-
-區塊標題：
-
-「Technology Capabilities」
-
-中文副標題：
-
-「整合多元技術，打造完整數位解決方案。」
-
-展示 XK 的技術能力。
-
-Frontend Development
-Next.js
-React
-TypeScript
-Tailwind CSS
-Backend Development
-Java
-Spring Boot
-REST API
-Enterprise Backend
-Database & Integration
-PostgreSQL
-MySQL
-API Integration
-Database Design
-AI & Automation
-OpenAI API
-Claude Integration
-RAG
-AI Agents
-Workflow Automation
-n8n
-Infrastructure
-Docker
-GitHub
-Vercel
-Cloud VPS
-Design Requirements
-
-使用分類式排版展示技術能力。
-
-可採：
-
-Technology Groups
-Text-based Technology Tags
-Icon Grid
-Subtle Card Layout
-
-不得使用未經證實的技術認證標章。
-
-不得宣稱與特定科技公司存在官方合作夥伴關係。
-
-注意：
-
-本區塊呈現創辦人及 XK 的技術服務能力，不代表所有技術都已部署於目前官方網站。
-
-12. Why XK Section
-
-區塊標題：
-
-「Why Xplore Kaleidoscope」
-
-中文副標題：
-
-「從技術實作到商業價值，提供完整的數位解決方案。」
-
-展示以下四項價值。
-
-12.1 Integrated Technical Capabilities
-
-整合網站、企業系統、系統架構及 AI 技術，減少企業跨系統整合的複雜度。
-
-12.2 Business-oriented Solutions
-
-以實際商業需求為出發點，提供符合企業營運目標的技術方案。
-
-12.3 Scalable Architecture
-
-重視系統架構、程式碼品質及未來擴充能力，降低長期維護成本。
-
-12.4 Long-term Technical Support
-
-從系統建置到後續維護，提供持續性的技術協助。
-
-不得使用：
-
-虛構客戶數量。
-虛構成功案例。
-虛構專案成長率。
-虛構企業合作紀錄。
-未經證實的業界排名。13. Solutions Section
-
-區塊標題：
-
-「Digital Solutions for Business」
-
-中文副標題：
-
-「依照企業需求，選擇適合的數位轉型方向。」
-
-展示三種應用方向。
-
-Website & Digital Presence
-
-協助企業建立專業網站及數位服務入口。
-
-Enterprise System Modernization
-
-協助企業改善既有系統架構，整合後端服務與資料流程。
-
-AI-powered Business Automation
-
-將 AI 與自動化技術導入企業知識管理及日常營運流程。
-
-此區塊著重解決方案方向，不需要建立完整產品功能。
-
-不得把尚未完成的 XK AI Business Assistant 描述成已正式商用的產品。
-
-14. Contact CTA Section
-
-區塊標題：
-
-「Let's Build Something Valuable」
-
-中文標題：
-
-「讓我們一起探索更多可能。」
-
-建議內容：
-
-「無論是企業網站、Java 系統開發、系統整合或 AI 應用，歡迎與我們討論您的需求。」
-
-CTA：
-
-「開始討論您的專案」
-
-Contact Destination
-
-優先使用已確認可以實際運作的聯絡管道。
-
-開始開發前，先檢查：
-
-是否已有正式聯絡 Email。
-是否已確認 LinkedIn 公司或品牌頁面。
-是否已有可使用的聯絡表單。
-
-重要：
-
-contact@xplorekaleidoscope.com 在先前規劃中僅屬建議地址，不代表信箱已正式建立。
-
-不得將未驗證的信箱描述成正式聯絡管道。
-
-如果目前沒有已確認的聯絡方式：
-
-保留 Contact CTA 視覺區塊。
-不建立虛假表單。
-不建立無效 Email Link。
-將實際聯絡方式標記為待確認。
-在最終報告中列出。15. Footer
-
-建立正式網站 Footer。
-
-包含：
-
-Brand
-XK Logo
-Xplore Kaleidoscope
-Brand Slogan
-Navigation
-Home
-About
-Services
-Solutions
-Portfolio
-Contact
-
-只有已實作的頁面才可成為有效連結。
-
-Service Categories
-Website Development
-Java Enterprise Solutions
-System Architecture & Integration
-AI Business Solutions
-Maintenance Services
-Legal
-Privacy Policy
-
-如果 Privacy Policy 尚未建立，不得連結至不存在的頁面。
-
-Copyright
-
-建議格式：
-
-© {currentYear} Xplore Kaleidoscope. All rights reserved.
-
-使用動態年份，不要寫死年份。
-
-16. Responsive Design（響應式設計）
-
-必須支援：
-
-Device Viewport
-Small Mobile 320px
-Mobile 375px
-Tablet 768px
-Desktop 1440px
-Large Desktop 1920px
-
-要求：
-
-不得出現水平溢出。
-Header 必須適應手機尺寸。
-Typography 必須合理縮放。
-Hero 不得因畫面縮小而產生文字重疊。
-Services Grid 必須自動調整。
-Card 不得超出容器。
-CTA 必須容易點擊。
-Section Spacing 必須保持一致。
-Footer 必須適合手機閱讀。
-
-優先使用既有：
-
-Container
-Section
-Typography Tokens
-Responsive Tailwind Utilities
-
-避免建立另一套互相衝突的 Responsive 規則。
-
-17. Accessibility（無障礙設計）
-
-必須符合基本 WCAG 2.1 AA 要求。
-
-至少確認：
-
-Semantic HTML。
-正確的 Heading Hierarchy。
-Navigation 使用適當語意。
-Button 具有 Accessible Name。
-Icon-only Button 具有 Accessible Label。
-Logo 具有適當的替代名稱。
-Keyboard Navigation 正常。
-Focus State 清楚。
-色彩對比符合要求。
-Mobile Navigation 支援鍵盤操作。
-裝飾性圖案使用 aria-hidden。
-支援 prefers-reduced-motion。
-
-不得為了視覺效果犧牲可讀性及可操作性。
-
-18. SEO & Metadata
-
-首頁必須具備基本 SEO。
-
-Title
-
-建議：
-
-Xplore Kaleidoscope | Web, Java & AI Digital Solutions
-
-Description
-
-建議：
-
-Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。
-
-Metadata Requirements
-Page Title
-Meta Description
-Canonical URL
-Open Graph Title
-Open Graph Description
-Open Graph URL
-Appropriate Language
-Semantic HTML
-
-網站主要語言：
-
-zh-TW
-
-保留品牌英文名稱及英文標語。
-
-Indexing
-
-Task 001 曾設定建置階段的：
-
-noindex, nofollow
-
-本次必須保留此保護設定，不得因完成首頁而自動開放搜尋引擎索引。
-
-是否開放索引屬於正式上線前的獨立決策。
-
-沒有經核准的 Open Graph Image 時，不得使用虛構圖片路徑。
-
-19. Performance（效能要求）
-
-注意：
-
-優先使用 Server Components。
-減少不必要的 Client Components。
-避免不必要的 JavaScript。
-避免大型圖片。
-不安裝不必要的 Animation Libraries。
-避免不必要的第三方 Tracking Scripts。
-使用 Next.js 合適的圖片處理方式。
-保持 CSS 結構簡潔。
-避免重複渲染及不必要的 State。
-
-首頁應具備良好的初始載入體驗。
-
-不應為了裝飾效果增加不必要的效能成本。
-
-20. Suggested Project Structure（建議專案結構）
-
-請依照現有 Task 001、Task 002 結構擴充，不得重新建立整個專案。
-
-text
+```text
 src/
 ├── app/
-│ ├── globals.css
-│ ├── layout.tsx
-│ ├── page.tsx
-│ └── dev/
-│ └── design-system/
-│ └── page.tsx
-│
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── dev/design-system/page.tsx
 ├── components/
-│ ├── brand/
-│ │ ├── xk-logo.tsx
-│ │ └── brand-pattern.tsx
-│ │
-│ ├── layout/
-│ │ ├── container.tsx
-│ │ ├── section.tsx
-│ │ ├── site-header.tsx
-│ │ ├── site-footer.tsx
-│ │ └── mobile-navigation.tsx
-│ │
-│ ├── sections/
-│ │ ├── home-hero.tsx
-│ │ ├── home-introduction.tsx
-│ │ ├── home-services.tsx
-│ │ ├── home-technologies.tsx
-│ │ ├── home-why-xk.tsx
-│ │ ├── home-solutions.tsx
-│ │ └── home-contact-cta.tsx
-│ │
-│ └── ui/
-│ ├── button.tsx
-│ └── card.tsx
-│
-├── config/
-│ └── site.ts
-│
-└── lib/
-└── utils.ts
+│   ├── brand/{xk-logo,brand-pattern}.tsx
+│   ├── layout/
+│   │   ├── container.tsx
+│   │   ├── section.tsx
+│   │   ├── site-header.tsx
+│   │   ├── site-footer.tsx
+│   │   └── mobile-navigation.tsx
+│   ├── sections/
+│   │   ├── home-hero.tsx
+│   │   ├── home-introduction.tsx
+│   │   ├── home-services.tsx
+│   │   ├── home-technologies.tsx
+│   │   ├── home-why-xk.tsx
+│   │   ├── home-solutions.tsx
+│   │   └── home-contact-cta.tsx
+│   └── ui/{button,card}.tsx
+├── config/{site,homepage,navigation,contact}.ts
+└── lib/utils.ts
+```
 
-如果現有檔案已存在，應優先修改及重用。
+- 共用 Section Heading 可沿用現有 `src/components/sections/section-heading.tsx`；若已有 `home-intro.tsx`，保留必要匯入相容性，不刪除既有功能。
+- Page 管理組合／Metadata；Layout 管理 Header／Footer；Config 管理重複資料；Sections 管理視覺與語意。
+- 僅在必要時調整 `next.config.ts`、`scripts/build-github-pages.mjs`、`.github/workflows/ci.yml` 與 `package.json` 的 build Script；記錄原因，不任意變更既有部署條件、依賴版本或 lockfile。
+- 執行功能任務時，實作報告使用 `docs/homepage-implementation.md`，部署操作使用 `docs/github-pages-deployment.md`；保留 README、AGENTS、Design System 與 implementation notes 的既有歷史，不覆蓋前面任務成果。
+- 不可修改文件 Repository，不提交 `.next/`、`out/`、`node_modules/`、暫存檔、Secrets、環境檔或憑證。
+- 本次統一骨架的修改邊界另依使用者文件整理指示；本 Task Specification 本身不授權在文件重構時變更任何網站程式碼、套件或 workflow。
 
-不得因為建議結構而重複建立相同功能的元件。
+## 10. Implementation Procedure
 
-21. Website Configuration
+1. 確認 Repository、Branch、Working Tree、最新 `main`、Task 002 合併關係與目前專案版本；保護未提交工作，缺前置條件即停止回報。
+2. 閱讀第 3 節的實際文件，核對品牌、服務、Logo、元件 API、聯絡資訊與部署現況；記錄缺漏與重要衝突。
+3. 建立或安全切換 `feature/website-homepage`，不能直接改／推 `main`，不能私自整合未核准分支。
+4. 規劃七個區塊、Header／Footer、服務資料、有效導覽與聯絡替代方案；不假設內頁或信箱已可用。
+5. 先完成共用 Header、Desktop／Mobile Navigation、Footer，再依順序實作 Hero、Introduction、Services、Technologies、Why XK、Solutions、Contact CTA。
+6. 使用既有元件、Tokens 與 Responsive Utilities 完成 Mobile／Tablet／Desktop／Large Desktop，不建立平行設計系統。
+7. 完成 Metadata、Heading Hierarchy、Accessible Navigation、Focus、Contrast、Reduced Motion、Pages Base Path 及開發路由保護。
+8. 在最終程式碼完成後實際執行第 11 節的 Code Quality、一般 Build、Pages Build、瀏覽器與功能檢查，記錄指令及 Exit Code。
+9. 若發現失敗，先修正，再重跑受影響項與必要完整驗收；不能把預期或歷史成功當本次結果。
+10. 檢查完整 Git Diff、實際檔案清單、套件／lockfile／原始 Logo 保護與禁止提交產物，產生實際截圖與獨立報告。
+11. 依第 13 節 Commit、Push Feature Branch、建立 PR；檢查本次實際 CI／artifact，回報交付狀態與剩餘事項，等待審核，不自動合併或發布。
 
-建立或延續集中管理的網站設定。
+## 11. Testing & Acceptance Criteria
 
-例如：
+### 11.1 狀態與分類規則
 
-src/config/site.ts
+下表是待執行的驗收契約，**所有結果均為 Pending**。`Required` 必須完成；`Optional` 若不執行需說明限制；`Not Applicable` 必須在本次報告確認不適用原因，不可以省略後假裝已測。未執行 Task 003 時，不因既有頁面或歷史報告存在就勾選通過。
 
-建議集中管理：
+### 11.2 Code Quality 與 Build
 
-Brand Name
-Brand Slogan
-Technical Tagline
-Website URL
-Navigation Items
-Service Categories
-Contact Information（僅限已驗證資訊）
+| 驗收項目 | 分類 | 必須確認的內容／原因 | 狀態 |
+| --- | --- | --- | --- |
+| `npm ci` | Required | 依已合併 lockfile 重現 Node.js 24.x 安裝與 CI 環境；記錄 Exit Code，不任意改 lockfile | Pending |
+| `npm install` | Required | 保留原 Task 003 指定指令的驗證；確認相依與 lockfile 未意外變更，必要變更須交代理由 | Pending |
+| `npx tsc --noEmit` | Required | Strict TypeScript 與既有元件 API 通過 | Pending |
+| `npm run lint` | Required | 使用既有 ESLint，記錄錯誤及警告，不以推測代替結果 | Pending |
+| `npm run build` | Required | 保留一般 Next.js／Vercel 相容 build，不把 Pages 模式產物誤用於 `npm run start` | Pending |
+| `npm run build:pages` | Required | 使用已確認 Pages 模式，驗證 `out/` 與現有 Script 斷言；無需任意變更 Dependencies | Pending |
+| 版本、原始 Logo、設定與 Diff 保護 | Required | 未重初始化，未任意升降級；原始 Path／Transform／比例與 Tokens 保留，禁止產物未進 Git | Pending |
+| 後端／資料庫／Contact API 測試 | Not Applicable | 本任務不建立這些功能，技術能力展示不代表官網依賴；報告須確認 N/A 理由 | Pending（待記錄 N/A） |
 
-避免在多個元件重複定義相同內容。
+### 11.3 Functional Testing
 
-未來新增英文網站時，應保留內容管理與國際化擴充空間，但本次不導入完整 i18n Framework。
+| 驗收項目 | 分類 | Task 003 專屬斷言／原因 | 狀態 |
+| --- | --- | --- | --- |
+| Homepage 與區塊順序 | Required | `/` 正常；Header → 七個指定 Section → Footer，Page 只組合區塊與 Metadata | Pending |
+| Hero 內容與 CTA | Required | 品牌／技術標語、中文定位、真實服務及聯絡入口正確；未完成內頁不能成假連結 | Pending |
+| Introduction | Required | 標題與兩段品牌價值內容符合第 6 節，閱讀清楚且留白足夠 | Pending |
+| Services 完整性 | Required | 恰有 R01–R05 五類、各中英文名稱／說明／全部項目摘要及 Icon；R05 Maintenance 不遺失 | Pending |
+| Technologies／Why XK／Solutions | Required | 五組能力、四項價值、三個應用方向均完整；沒有認證、合作、統計或已商用產品的虛構宣稱 | Pending |
+| Desktop Header／Footer | Required | Logo、品牌、導覽、Contact CTA、五服務分類、Legal 狀態與程式產生年份正確 | Pending |
+| Mobile Navigation | Required | Button 有名稱及正確 `aria-expanded`；鍵盤、開／關、Escape、焦點還原、連結後狀態與桌面切換正常；不鎖住整頁 | Pending |
+| 所有有效連結與錨點 | Required | Header／Footer／CTA／Solutions／服務錨點均導向實際內容；Base Path 與既有跨頁導覽保留 | Pending |
+| Contact 未確認分支 | Required | 無已確認 Email／LinkedIn／表單時顯示待確認，不出現假表單、無效 mailto 或假成功操作 | Pending |
+| Contact 已確認分支 | Optional | 僅在使用者提供並確認可公開管道時測試該真實渠道；無資料則在報告說明未測原因 | Pending |
+| 未完成頁面／Privacy／例外狀態 | Required | planned route 不變假連結，Privacy 未建立不連錯頁，未知路由呈現 404 | Pending |
+| 保留 Task 001／002 與後續已合併功能 | Required | 原設計系統、開發工具保護及已有內頁／錨點沒有 Regression | Pending |
+| 聯絡表單提交／AI Chatbot／Analytics | Not Applicable | 本任務不提供這些功能，不建立假提交或追蹤 | Pending（待記錄 N/A） |
 
-22. Development Workflow
+### 11.4 Responsive 與 Accessibility
 
-請按照以下順序執行：
+| 驗收項目 | 分類 | 具體標準／原因 | 狀態 |
+| --- | --- | --- | --- |
+| 320px Small Mobile | Required | 無水平溢出、標題重疊、Card 超出或 CTA 衝突；Header／Footer 可閱讀，服務一欄 | Pending |
+| 375px Mobile | Required | 手機選單與觸控 CTA 可操作，字體合理、裝飾不遮字，服務一欄 | Pending |
+| 768px Tablet | Required | 服務兩欄、內容間距一致，技術／Footer 分組不超出容器 | Pending |
+| 1440px Desktop | Required | 服務三欄且第二排自然排列，Header／Hero／Footer 層次清楚 | Pending |
+| 1920px Large Desktop | Required | Container 限寬及留白正常，無過度拉伸、文字重疊或多餘水平捲動 | Pending |
+| axe WCAG 2／2.1 A／AA | Required | 用可取得工具掃描首頁與展開手機選單，記錄版本、範圍、違規與修正；不宣稱完整認證 | Pending |
+| Keyboard、Focus、Names | Required | Tab／Enter、skip link、Escape、可見 Focus、Icon-only Label、Logo 替代名稱正常 | Pending |
+| 語意、Heading、Contrast 人工檢查 | Required | 單一 H1、H2／H3 階層、真實連結／Button、適當對比；深色 Footer 文字可讀 | Pending |
+| Reduced Motion | Required | `prefers-reduced-motion` 下過渡／動態符合既有 Tokens，不只依程式碼推測 | Pending |
+| 輔助科技深入檢查 | Optional | 視可取得的螢幕閱讀器／裝置進行；未做須記錄，不能用 axe 取代全部人工驗證 | Pending |
 
-Step 1 — Repository Inspection
-檢查 Git Branch。
-檢查 Git Status。
-確認 Task 002 已合併。
-確認目前專案版本。
-閱讀相關文件。
-Step 2 — Homepage Planning
-確認首頁區塊。
-確認 Header Navigation。
-確認服務內容。
-確認可用聯絡方式。
-確認有效頁面連結。
-Step 3 — Shared Layout
+### 11.5 Browser、SEO 與 GitHub Pages
 
-實作：
+| 驗收項目 | 分類 | 具體標準／原因 | 狀態 |
+| --- | --- | --- | --- |
+| 實際啟動網站與 HTTP | Required | 一般 production 首頁 200、開發工具預設 404；Pages 靜態首頁 200，未知路徑／404 文件行為合理 | Pending |
+| Console／Runtime／Network | Required | 不得有 JavaScript Runtime Errors；Console、CSS、JS、字體與其他資源載入錯誤逐項記錄 | Pending |
+| 所有靜態資源 | Required | Logo、CSS、JS、字體及提供圖片可取得，路徑適用實際 Base Path | Pending |
+| SEO Metadata | Required | Title／Description／Canonical／OG Title／Description／URL、`zh-TW`、單一 H1 正確；無虛構 OG Image | Pending |
+| Construction-stage Indexing | Required | 一般與 Pages 首頁均保留 `noindex, nofollow`；不得擅自開放索引 | Pending |
+| Pages Base Path | Required | `/xk-website` 或實際設定路徑下，導覽、跨頁及資源 URL 均有效，不硬編碼破壞站內連結 | Pending |
+| Pages 靜態輸出與保護 | Required | `index.html`、`404.html`、`.nojekyll` 存在；公開產物無 `/dev/design-system` 路由／payload | Pending |
+| 一般／Pages 模式回歸 | Required | 分別驗收兩種 build；切換模式後使用正確產物，不改壞一般 Next.js 執行 | Pending |
+| PR CI 與 artifact | Required | 核對本次實際 head 的 quality／pages-build、artifact 與 Deploy SKIPPED，不用本機或舊 run 代替 | Pending |
+| 量化效能工具 | Optional | 視環境使用 Lighthouse 等工具記錄方法與數值；原稿未指定分數，不自行捏造達標結果 | Pending |
+| main 發布／公開網站 Smoke | Optional | 只有另獲明確合併／發布授權後檢查實際 main workflow、URL 與內容；未發布不得宣稱已上線 | Pending |
+| DNS／Custom Domain／後端健康檢查 | Not Applicable | 本任務不擅改網域設定或建立 Backend；需獨立授權與範圍 | Pending（待記錄 N/A） |
 
-Header
-Navigation
-Mobile Navigation
-Footer
-Step 4 — Homepage Sections
+## 12. Test Report & Evidence
 
-依序實作：
+Task 003 的獨立實作與測試報告使用 [docs/homepage-implementation.md](../homepage-implementation.md)；部署操作與模式差異參閱 [docs/github-pages-deployment.md](../github-pages-deployment.md)。歷史總覽位於 [implementation notes](../implementation-notes.md)。
 
-Hero
-Introduction
-Services
-Technology Capabilities
-Why XK
-Solutions
-Contact CTA
-Step 5 — Responsive Design
+報告必須記錄：
 
-完成：
+- 實際 Repository、Base／Feature Branch、受測 Commit／tree、Task 002 合併確認、套件及文件版本。
+- 環境：作業系統、Node.js／npm、瀏覽器與自動化／axe 版本、測試模式、URL、Base Path、日期時間及旗標。
+- 每個實際執行指令、完整測試範圍、Exit Code、PASS／FAIL；未做的 Required／Optional／N/A 個別註明原因，不把 Pending 當 PASS。
+- 七個首頁區塊、Header／Footer／Desktop／Mobile Navigation、CTA、所有有效連結、Contact 待確認分支及例外狀態結果。
+- 320／375／768／1440／1920px 的逐項響應式結果，axe、鍵盤、Focus、Reduced Motion、Heading、Contrast 與人工限制。
+- Browser Console／Runtime／Network、資產與 HTTP、一般 build／Pages artifact、404、`.nojekyll`、Base Path、Metadata 及開發路由保護結果。
+- 發現的問題、具體修正、修正後重新執行的指令與最終驗收結果；若失敗不得只展示舊成功畫面。
+- 真實網站截圖及檔案位置：至少 Desktop／Mobile 首頁；可補手機導覽、服務、技術、Solutions、Contact。既有範例為 `docs/screenshots/task003-1440.png` 與 `docs/screenshots/task003-375.png`，新證據必須來自本次受測版本，不能冒充示意圖或沿用舊圖。
+- 實際 Commit、PR、Actions run／head、各 job 結果、artifact；未獲發布授權時明確標示未發布。獲授權後才記錄 main deploy、完成時間、URL 與公開頁面 Smoke。
+- 尚未確認的聯絡方式、未完成頁面／品牌素材、工具或權限限制、需使用者決策事項與後續工作。
 
-Mobile
-Tablet
-Desktop
-Large Desktop
-Step 6 — SEO & Accessibility
+現有報告中的實際通過結果與 legacy／待審核等敘述，保留其原始時點。文件重構不修改這些歷史報告，也不憑其內容預填本規格的 PASS、Commit、PR、CI 或部署成果。
 
-確認：
+## 13. Git & Pull Request
 
-Metadata
-Heading Hierarchy
-Accessible Navigation
-Keyboard Interaction
-Color Contrast
-Reduced Motion
-Step 7 — Quality Checks
+| 項目 | 要求 |
+| --- | --- |
+| Feature Branch | `feature/website-homepage` |
+| Base Branch | `main`，開始前確認最新版本與前置任務已合併 |
+| 建議 Commit | `feat(website): implement XK corporate homepage` |
+| PR Title | `Task 003: XK Corporate Homepage Development` |
+| 審核原則 | 不直接修改／Push `main`，不自動 Merge；功能分支經檢查後交付 PR 等待審核 |
+| CI | 以本次實際 head 的 quality、pages-build、artifact 及 Deploy SKIPPED 為準；失敗先修正並重驗 |
+| 發布 | 未經明確授權不合併／發布；工作流程存在不等同已部署 |
 
-執行所有品質檢查。
+PR Description 必須包含 Task Objective、Homepage Sections、Components Created、Responsive Implementation、SEO Changes、Accessibility Results、Quality Check Results、真實 Screenshots、Remaining Issues，以及必要的 Pages 相容性與聯絡限制。
 
-Step 8 — Git Delivery
-Commit
-Push Feature Branch
-Create Pull Request
-Report Results 23. Quality Checks（品質檢查）
+提交前檢查完整 Git Diff，確認只有授權範圍、沒有覆蓋使用者工作、沒有 `.next/`／`out/`／Secrets／暫存產物；相依與 lockfile 若變更須解釋。Commit SHA、PR 編號與 CI Run ID 均以實際紀錄為準，不預填或虛構。
 
-必須執行：
+## 14. Deliverables
 
-bash
-npm install
-npx tsc --noEmit
-npm run lint
-npm run build
+執行 Task 003 時應交付下列成果；實際完成與否由第 12 節報告及 GitHub 證據記錄，本清單不是文件重構的完成宣稱：
 
-如果沒有修改 Dependencies，原則上不需要更新 Package Lock。
+- 正式 Header、Desktop／Mobile Navigation、Footer，以及按順序組合的七個首頁區塊。
+- 集中品牌／首頁／服務／導覽／已確認聯絡設定，保留所有指定文案、技術能力與可用連結。
+- 既有 XK Design System、原稿暫定 Logo、語意 HTML、基本 SEO、Responsive 與 Accessibility 整合。
+- 一般 Next.js build、Pages 靜態產物與其保護／驗證；不將產物提交 Git。
+- 實際新增／修改檔案清單、理由與完整 Diff，不用建議結構冒充已完成清單。
+- 獨立首頁實作與測試報告、必要部署操作記錄、Desktop／Mobile 與相關區塊的真實截圖。
+- 實際 Conventional Commit、Feature Branch、PR、CI／artifact 結果與剩餘事項；發布須另有授權及證據。
 
-如果修改 Dependencies，必須說明原因。
+最終報告以繁體中文提供 Repository 狀態、Base／Feature Branch、實際 Commit／PR、Header／Footer／七區塊、Responsive、Metadata、Accessibility，以及 TypeScript／ESLint／一般 Build／Pages Build／Desktop Browser／Mobile Browser 的實際結果。
 
-Browser Testing
+## 15. Out of Scope & Future Work
 
-必須實際啟動網站並測試：
+- 完整 About、Services、服務明細、Solutions、Portfolio、Contact、Privacy 內頁，依後續已核准任務分別開發；不可因首頁有相關區塊就宣稱這些頁面已完成。
+- Spring Boot、PostgreSQL、Docker Backend、獨立 API Server、Contact API、CMS、Authentication、AI Chatbot、Analytics、第三方 Tracking 與不必要 Animation Libraries。
+- XK AI Business Assistant 的完整產品功能與正式商用宣稱；本次只描述未來方向／應用情境。
+- 尚待確認的公開 Email／LinkedIn／表單、最終 Logo 核准、Open Graph Image、正式網域連接與搜尋索引開放。
+- 價格、SLA、客戶數量、成果統計、認證、排名或合作紀錄等未經證實的商業內容。
+- 未授權的 DNS／Custom Domain／Pages 設定變更、功能分支發布與自動合併。
 
-Homepage
-Header
-Desktop Navigation
-Mobile Navigation
-Footer
-CTA
-所有有效連結
-Responsive Testing
+上述未完成項與決策在交付報告列明。後續已合併成果以實際版本為準，不因本原始首頁任務的歷史範圍而刪除或回退。
 
-至少測試：
+## 16. Final Delivery Checklist
 
-320px
-375px
-768px
-1440px
-1920px
+以下均為 **Pending**；執行 Task 003 並取得對應證據後，才可在本次獨立報告確認，不用歷史紀錄或本次文件整理代替：
 
-確認：
-
-無水平溢出。
-無文字重疊。
-無元件超出容器。
-無失效導覽。
-無 JavaScript Runtime Errors。
-Accessibility Testing
-
-使用可取得的工具檢查：
-
-WCAG 2.1 AA。
-Keyboard Navigation。
-Focus Visibility。
-Accessible Names。
-Color Contrast。
-
-不得只根據程式碼推測測試結果。
-
-24. Git Commit & Pull Request
-
-Branch：
-
-feature/website-homepage
-
-Commit Message 建議：
-
-feat(website): implement XK corporate homepage
-
-Pull Request Title：
-
-Task 003: XK Corporate Homepage Development
-
-Pull Request Description 必須包含：
-
-Task Objective
-Homepage Sections
-Components Created
-Responsive Implementation
-SEO Changes
-Accessibility Results
-Quality Check Results
-Screenshots
-Remaining Issues
-
-不得自動合併至 main。
-
-25. Final Report（最終執行報告）
-
-完成後，請提供完整報告。
-
-Repository
-Repository 狀態。
-Base Branch。
-Feature Branch。
-Git Commit Hash。
-Pull Request URL。
-Implementation
-新增檔案。
-修改檔案。
-Header 實作結果。
-Footer 實作結果。
-Homepage Sections。
-Responsive Design。
-SEO Metadata。
-Accessibility。
-Quality Checks
-Check Result
-TypeScript Pass / Fail
-ESLint Pass / Fail
-Production Build Pass / Fail
-Desktop Browser Pass / Fail
-Mobile Browser Pass / Fail
-Accessibility Pass / Fail
-
-必須填寫實際執行結果。
-
-Remaining Issues
-
-列出：
-
-尚未完成的功能。
-尚未確認的聯絡方式。
-尚未建立的頁面。
-尚未完成的品牌素材。
-需要使用者決策的事項。
-後續建議工作。26. Definition of Done（完成定義）
-
-Task 003 必須符合以下條件：
-
-保留 Task 001、Task 002 技術架構。
-使用現有 XK Design System。
-完成正式 Header。
-完成 Desktop Navigation。
-完成 Mobile Navigation。
-完成 Hero Section。
-完成 Introduction Section。
-完成 Services Section。
-完成 Technology Capabilities Section。
-完成 Why XK Section。
-完成 Solutions Section。
-完成 Contact CTA。
-完成 Footer。
-完成 Responsive Design。
-完成基本 SEO。
-保留 Construction-stage noindex 設定。
-通過 TypeScript。
-通過 ESLint。
-通過 Production Build。
-通過基本 Browser Testing。
-通過基本 Accessibility Testing。
-建立 Feature Branch。
-建立 Git Commit。
-準備 Pull Request。
-未修改 Documentation Repository。
-未開發 Backend。
-未建立虛假功能或未經證實的商業資訊。
-Final Goal
-
-完成 Xplore Kaleidoscope 第一版正式企業首頁。
-
-讓網站從單純的技術基礎架構，進一步成為可以展示品牌、技術能力、服務項目及商業價值的官方網站。
-
-所有設計及開發都必須符合：
-
-Explore Possibilities. Create Digital Value.
-
-Building Digital Solutions with Web, Java & AI.
+- [ ] Pending — 確認 Repository／最新 main／工作目錄及 Task 002 已合併；缺前置條件已停止回報。
+- [ ] Pending — 保留 Task 001／002 架構、Dependencies、Design System、原始 Logo 路徑與 Provisional 狀態。
+- [ ] Pending — 正式 Header、Desktop Navigation、Contact CTA 與可操作的 Mobile Navigation 完成。
+- [ ] Pending — Hero、Introduction、Services、Technology Capabilities、Why XK、Solutions、Contact CTA 七區塊順序與內容完整。
+- [ ] Pending — R01–R05 全部服務項目、五個技術群組、四項價值與三個應用方向均保留。
+- [ ] Pending — Footer 品牌／導航／五服務／Legal 狀態／程式產生年份完成。
+- [ ] Pending — 聯絡管道已驗證，或清楚標示待確認；無假表單、無效 mailto 或虛假功能。
+- [ ] Pending — 單一 H1、Title／Description／Canonical／Open Graph／語言與 noindex／nofollow 正確。
+- [ ] Pending — `npm ci`／原稿 `npm install` 已實際執行並記錄，沒有意外 lockfile 變更。
+- [ ] Pending — TypeScript 通過並有本次 Exit Code 與紀錄。
+- [ ] Pending — ESLint 通過並記錄實際錯誤／警告結果。
+- [ ] Pending — 一般 Next.js Build 通過，保留原部署模式。
+- [ ] Pending — Pages Build 通過，Base Path／404／`.nojekyll`／資源路徑與開發路由排除正確。
+- [ ] Pending — 首頁、全部連結／錨點、手機選單、CTA 與既有功能回歸測試完成。
+- [ ] Pending — 320／375／768／1440／1920px Responsive 驗收完成，無溢出／重疊／Card 超框。
+- [ ] Pending — axe WCAG 2／2.1 A／AA、鍵盤、Focus、Accessible Names、Contrast、Reduced Motion 與必要人工檢查完成。
+- [ ] Pending — Browser Console／Runtime／Network／資產／HTTP 與效能基本檢查完成。
+- [ ] Pending — 發現問題已修正並重新驗收，Optional／N/A／工具限制有明確說明。
+- [ ] Pending — 獨立測試與實作報告完成，包含環境、指令、Exit Code、PASS／FAIL、修復及重驗紀錄。
+- [ ] Pending — 本次實際 Desktop／Mobile 與相關區塊截圖完成，位置與受測版本可追溯。
+- [ ] Pending — Git Diff 檢查完成，只有授權範圍，無產物、機密或使用者工作遺失。
+- [ ] Pending — Conventional Commit 與 Feature Branch 推送完成，識別碼為實際紀錄。
+- [ ] Pending — PR 已建立，包含指定內容、截圖與剩餘事項，等待審核，未自動合併。
+- [ ] Pending — 本次 CI quality／pages-build／artifact 已確認；PR Deploy SKIPPED，沒有未授權發布。
+- [ ] Pending — 未修改 Documentation Repository、未開發 Backend，未加入虛假商業資訊。
+- [ ] Pending — 最終繁體中文交付報告完成；若另獲發布授權，已補實際 main 部署證據，否則明確標示未發布。

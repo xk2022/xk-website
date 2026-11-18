@@ -1,763 +1,502 @@
-Task 005 — Services 服務介紹頁實作
-任務目標
+# Task 005 — Services 服務介紹頁實作
 
-依據 XK Website 既有架構與品牌設計系統，正式開發 Xplore Kaleidoscope（XK）官方網站的 Services 服務介紹頁，建立清楚、完整且具商業價值的服務資訊，讓潛在客戶了解 XK 能提供的數位技術服務、適用情境、技術範圍與合作方式。
+## 1. Task Overview
 
-品牌標語：
+| 項目 | 規格 |
+| --- | --- |
+| Project | Xplore Kaleidoscope（XK） |
+| 任務 | Task 005 — Services 服務介紹頁實作 |
+| 目標路由 | `/services` |
+| 主要語言 | 繁體中文（`zh-TW`），保留必要英文技術名稱 |
+| Brand Slogan | Explore Possibilities. Create Digital Value. |
+| Technical Tagline | Building Digital Solutions with Web, Java & AI. |
 
-Explore Possibilities. Create Digital Value.
+依據既有網站架構與品牌設計系統，建立清楚、完整且具商業價值的 Services 服務介紹頁，讓潛在客戶了解 XK 的數位技術服務、適用情境、技術範圍與合作方式。延續企業首頁與 About Us，形成品牌認識至服務了解的流程。
 
-技術標語：
+本規格要求功能執行時直接操作既有 Repository，完成實作、實際驗收與交付，不能只提供程式碼範例、開發計畫或文件草稿。**本輪文件骨架標準化不重新執行 Task 005 功能開發，也不產生新的功能測試結果。**
 
-Building Digital Solutions with Web, Java & AI.
+本文的驗收狀態與 Checklist 一律初始化為 **Pending**，不是對過往 Task 005 成果的否定，也不表示本輪已重新驗收。歷史實作與實際結果維持在獨立的 [Services 實作紀錄](../services-implementation.md)；不得把歷史 PASS 複製為新的驗收結果。
 
-本次建立 /services，延續已完成的企業首頁與 About Us 品牌介紹頁，形成完整的品牌認識至服務了解流程。
+## 2. Repository & Prerequisites
 
-一、Repository 與前置檢查
-項目 規格
-Website Repository xk2022/xk-website
-Base Branch main
-Feature Branch feature/website-services-page
-前置任務 Task 001、002、003、004
-前置架構 Next.js、React、TypeScript、Tailwind CSS 4、shadcn/ui
-UI Icons Lucide React
-文件 Repository xk2022/xplore-kaleidoscope，僅供讀取
-部署方式 GitHub Actions → GitHub Pages
-本次目標路由 /services
+| 項目 | 規格／前置條件 |
+| --- | --- |
+| Website Repository | `xk2022/xk-website` |
+| Base Branch | `main`；執行前確認最新遠端版本與實際 Base Commit |
+| Feature Branch | `feature/website-services-page` |
+| 前置任務 | Task 001、002、003、004；必須實際確認 Task 004 已合併至 `main` |
+| 文件 Repository | `xk2022/xplore-kaleidoscope`；僅供讀取，不得修改 |
+| 既有架構 | Next.js、React、Strict TypeScript、Tailwind CSS 4、shadcn/ui、Lucide React |
+| 開發環境 | 保留既有 Node.js 24.x、npm 與套件版本 |
+| 部署方式 | GitHub Actions → GitHub Pages；保留一般 Next.js production build 相容性 |
+| 既有部署狀態 | 執行前檢查實際狀態與證據；不得由舊文件推斷目前功能已發布 |
 
-開始開發前，必須：
+開始前必須檢查 Repository、分支、Working Tree、最新 `main`、Task 004 合併狀態，以及 Header、Footer、MobileNavigation、Design Tokens 與共用元件 API。保留未提交的使用者修改；不得覆蓋既有成果或自行整合未核准功能。
 
-閱讀 Website Repository 的 README.md、AGENTS.md。
-閱讀 docs/implementation-notes.md。
-閱讀 docs/brand-design-system.md。
-閱讀 docs/homepage-implementation.md。
-閱讀 docs/about-implementation.md。
-閱讀 docs/github-pages-deployment.md。
-檢查 Task 004 是否已合併至 main。
-檢查現有 Header、Footer、Navigation、Design Tokens 與共用元件 API。
-讀取文件 Repository 中與服務規劃相關的原始資料。
+若實際 Base Commit 與歷史紀錄不同，以經確認的最新 `main` 為準，並在本次實作報告說明。若前置任務尚未合併，先回報依賴問題，不以假設取代檢查。
 
-不得重新初始化專案、重新建立 Next.js 架構或任意升降級既有套件。
+### 歷史基準與原稿來源
 
-若實際 Base Commit 與預期不同，以經確認的最新 main 為準，並在實作紀錄中說明。
+- [重構前 Task 005 原稿快照](https://github.com/xk2022/xk-website/blob/a429fdc/docs/task/task005.md) 保留原始需求及後段執行文字的來源；本文整併重複指示，不新增功能範圍。
+- 原功能實作紀錄的 Base Commit 為 `7a8ea793608c7bec8fa212bfee4b2f24b5cf192e`，當時 Task 004 的 PR #4／merge commit `57ad0f2` 為其祖先。這是原始時間點的紀錄，**不是未來執行時固定的最新 Base**。
+- 原服務資料閱讀版本為文件 Repository 的 `95ef1275a46ace76e11f668178ca881087483398`；來源 SHA 與當時的部署證據見 [Services 實作紀錄](../services-implementation.md)。功能執行時仍須確認可取得的文件版本與當前狀態。
 
-二、範圍與實作原則
+## 3. Reference Documents
 
-本次只實作 Services 服務介紹頁與必要的共用導覽更新。
+### Website Repository
 
-必須遵守：
+完整閱讀以下文件，確認實際存在的路徑與內容，不得假設檔案存在：
 
-延用既有 Design System。
-延用現有 SiteHeader、SiteFooter 與 MobileNavigation。
-延用既有 Container、Section、Card、Button、XkLogo。
-延用 GitHub Pages 靜態部署。
-內容集中管理，避免將大量文案直接寫在 Page Component。
-優先使用 Server Components。
-不新增不必要的 Client Components。
-不新增 npm Dependencies。
-不建立 Backend、Contact API、CMS、Authentication 或 Analytics。
-不實作尚未規劃的完整服務明細內頁。
-不宣稱尚未完成的產品、客戶案例或商業成果。
+- [README.md](../../README.md)、[AGENTS.md](../../AGENTS.md)。
+- [歷史 Implementation Notes](../implementation-notes.md)。
+- [品牌設計系統與元件 API](../brand-design-system.md)。
+- [首頁實作紀錄](../homepage-implementation.md)、[About 實作紀錄](../about-implementation.md)。
+- [GitHub Pages 部署指南](../github-pages-deployment.md)。
+- 本文及既有獨立的 [Services 實作紀錄](../services-implementation.md)。
+- Task 001–004 規格：[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)。Task 001 原始替代文件為 [英文原稿](task001-implementation-notes.md) 與 [繁體中文原稿](task001-implementation-notes.zh-TW.md)；Task 002 另有 [繁體中文原稿](task002.zh-TW.md)。保留這些歷史來源，不將當時的空檔或缺檔描述改寫成目前狀態。
 
-如舊規劃文件與已合併的網站架構存在衝突，以現有網站架構、Design System 及本次明確要求為優先。
+### Documentation Repository
 
-三、Services 頁面資訊架構
+僅讀取 `xk2022/xplore-kaleidoscope` 中與服務、品牌、網站資訊架構相關的原始資料。優先檢查：
 
-路由：/services
+- `doc/01_business-plan/week-01/02_service-catalog.md`、`02_服務項目.md`。
+- `doc/01_business-plan/week-02/` 下的品牌、色彩、網站地圖、首頁文案、技術架構與 MVP 文件。
+- 已提供的 Logo 素材與相關規範。
 
-頁面至少包含以下區塊：
+以實際檔名及可讀版本為準；缺少或無法存取的來源要如實記錄。舊資料中的建議價格、信箱、平台、品牌名稱及示範專案，不等於已確認的商業事實。
 
-1. Services Hero
+### 規格優先順序
 
-元件：ServicesHero
+保留已合併的網站架構、Design System 與元件 API，依 Task 005 明確要求及已確認品牌決策實作。舊版規劃不推翻目前的獨立網站 Repository、GitHub Pages、色彩或無 Backend 架構；重要差異須記錄於實作報告，不為配合舊文件而破壞既有功能。
 
-內容：
+## 4. Scope & Requirements
 
-中文 H1：我們提供的數位技術服務
-英文標題：Our Services
-品牌定位簡介。
-技術標語。
-簡短說明 XK 如何運用 Web、Java 與 AI 技術協助企業建立數位解決方案。
-前往服務內容及聯絡區塊的 CTA。
+本次功能範圍只有 Services 服務介紹頁與必要的共用導覽更新：
 
-視覺使用既有 BrandPattern，不重新繪製 Logo。
+1. 完成 `/services` 的十個內容區塊及五類服務。
+2. 提供服務定位、技術範圍、適用情境、服務組合與五階段合作流程。
+3. 集中管理文案與明確的 TypeScript 型別，不將大量內容寫在 Page Component。
+4. 重用 SiteHeader、SiteFooter、MobileNavigation、Container、Section、Card、Button、XkLogo 與既有 Design System。
+5. 完成響應式、SEO、Accessibility、GitHub Pages 靜態輸出及實際瀏覽器驗收。
+6. 更新必要文件，交付實作報告、七份真實截圖、功能分支與 PR。
 
-2. Service Overview
+不得重新初始化 Next.js、重建架構、任意升降級套件、修改 lockfile 或新增 npm Dependencies。優先使用 Server Components；沒有實際互動需求時不新增 Client Component。
 
-元件：ServicesOverview
+保護首頁、About、所有有效導覽與錨點。首頁原第五類服務是 **Maintenance**；Services 頁第五類是 **Cloud & Infrastructure**。兩者用途不同，不得為新頁分類而覆寫首頁 R05、原文或 `/#service-{anchor}`。首頁服務卡片可保留非互動呈現，依實際結構提供真實 `/services` 入口，不強行建立不存在的明細頁映射。
 
-說明 XK 的整體服務定位：
+不建立 Backend、Contact API、CMS、Authentication、Analytics 或完整服務明細內頁；不得宣稱未完成產品、客戶案例或商業成果。其餘排除項目見第 15 節。
 
-網站與數位產品開發。
-Java 企業系統開發。
-系統整合與資料管理。
-AI 應用與流程自動化。
-雲端與基礎架構。
+## 5. Information Architecture & UX
 
-說明各服務如何配合企業需求，形成完整的數位解決方案。
+路由為 `/services`，以下十個區塊依序呈現；Page 負責組合，元件負責視覺與語意，文案詳列於第 6 節。
 
-3. Website Development
+| 順序 | 區塊 | 建議元件 | 使用者目的 |
+| --- | --- | --- | --- |
+| 1 | Services Hero | `ServicesHero` | 理解服務定位，前往服務內容或真實聯絡資訊區塊 |
+| 2 | Service Overview | `ServicesOverview` | 掌握五類服務，前往頁內服務內容 |
+| 3 | Website Development | `ServiceWebsite` | 了解網站與數位產品開發 |
+| 4 | Java Enterprise Development | `ServiceJava` | 了解企業系統、API 與維護範圍 |
+| 5 | System Integration & Database | `ServiceIntegration` | 了解系統串接與資料管理 |
+| 6 | AI & Automation | `ServiceAI` | 了解 AI 應用與自動化方向 |
+| 7 | Cloud & Infrastructure | `ServiceCloud` | 了解部署、雲端與基礎架構 |
+| 8 | Service Integration | `ServicesIntegration` | 依需求理解五種服務組合示例 |
+| 9 | Our Process | `ServicesProcess` | 理解合作階段與確認範圍的方式 |
+| 10 | Services CTA | `ServicesCta` | 前往聯絡資訊、About 或首頁 |
 
-元件：ServiceWebsite
+### 互動與 Responsive 行為
 
-服務內容：
+- 概覽須清楚區分五類服務；只有確實導向內容的卡片才使用互動狀態，不建立假按鈕或死連結。
+- 沿用目前服務內容錨點：`website-development`、`java-enterprise`、`system-integration`、`ai-automation`、`cloud-infrastructure`；概覽、組合、流程與 CTA 使用實際對應的穩定 Section ID。
+- 卡片排列隨寬度調整；技術標籤可自然換行，不超出容器，卡片間距、圓角與文字層級保持一致。
+- 合作流程桌面橫向、手機垂直；不得依賴 Hover 才能操作。
+- 中文換行自然，Logo 不失真，CTA 不重疊。Hero 幾何裝飾不得遮住內容；手機內容須能自然決定高度，不以固定方形配合裁切隱藏文字。
+- 保留 Header、Footer 與手機導覽的有效操作，包含 Escape、可見焦點、點擊後關閉與跨頁連結。
 
-官方網站與企業網站開發。
-Responsive Web Design。
-前端介面與互動設計。
-Next.js 與 React 網站開發。
-TypeScript 應用。
-SEO 基礎建置。
-網站效能與可及性改善。
+## 6. Content & Data Specification
 
-技術範圍：
+### 服務 Hero 與 Overview
 
-HTML
-CSS
-JavaScript
-TypeScript
-React
-Next.js
-Tailwind CSS 4. Java Enterprise Development
+`ServicesHero` 必須包含：
 
-元件：ServiceJava
+- 中文 H1：**我們提供的數位技術服務**。
+- 英文標題：**Our Services**。
+- 品牌定位簡介、技術標語，以及 XK 如何運用 Web、Java 與 AI 協助企業建立數位解決方案的簡短說明。
+- 前往服務內容及聯絡區塊的真實 CTA。
+- 既有 BrandPattern 等幾何視覺；不重新繪製 Logo。
 
-服務內容：
+`ServicesOverview` 說明網站與數位產品開發、Java 企業系統開發、系統整合與資料管理、AI 應用與流程自動化、雲端與基礎架構五類服務如何配合企業需求，形成完整數位方案。
 
-Java 應用程式開發。
-Spring Boot 系統開發。
-REST API 設計與整合。
-企業應用系統。
-後端商業邏輯。
-系統維護與功能擴充。
+### Website Development — `ServiceWebsite`
 
-技術範圍：
+服務內容必須涵蓋：
 
-Java
-Spring Boot
-Spring Framework
-REST API
-Maven
-Gradle
+- 官方網站與企業網站開發。
+- Responsive Web Design。
+- 前端介面與互動設計。
+- Next.js 與 React 網站開發。
+- TypeScript 應用。
+- SEO 基礎建置。
+- 網站效能與可及性改善。
 
-不得暗示網站前端已具備本次未建立的 Java Backend。
+技術範圍：**HTML、CSS、JavaScript、TypeScript、React、Next.js、Tailwind CSS**。網站樣式框架仍沿用既有 Tailwind CSS 4，不因原稿的換行排版而把下一節編號併入技術名稱。
 
-5. System Integration & Database
+### Java Enterprise Development — `ServiceJava`
 
-元件：ServiceIntegration
+服務內容必須涵蓋：
 
-服務內容：
+- Java 應用程式開發。
+- Spring Boot 系統開發。
+- REST API 設計與整合。
+- 企業應用系統。
+- 後端商業邏輯。
+- 系統維護與功能擴充。
 
-系統整合。
-API 串接。
-資料庫規劃與整合。
-資料交換與處理。
-既有系統現代化。
-跨系統工作流程整合。
+技術範圍：**Java、Spring Boot、Spring Framework、REST API、Maven、Gradle**。這些是服務能力，不得暗示目前官網已建立 Java Backend。
 
-技術範圍依實際可提供的技術能力描述，不宣稱已有特定客戶系統整合案例。
+### System Integration & Database — `ServiceIntegration`
 
-6. AI & Automation
+服務內容必須涵蓋：
 
-元件：ServiceAI
+- 系統整合。
+- API 串接。
+- 資料庫規劃與整合。
+- 資料交換與處理。
+- 既有系統現代化。
+- 跨系統工作流程整合。
 
-服務內容：
+技術範圍依實際可提供的能力描述，不宣稱已有特定客戶系統整合案例。沿用已確認的服務設定與技術內容，不因展示能力而在官網加入 Database 或 API Runtime。
 
-AI 應用開發。
-LLM 應用整合。
-AI 輔助工作流程。
-智慧資料處理。
-企業流程自動化。
-AI 與既有系統整合。
+### AI & Automation — `ServiceAI`
 
-技術方向：
+服務內容必須涵蓋：
 
-Python
-AI API Integration
-LLM
-Spring AI
-Workflow Automation
+- AI 應用開發。
+- LLM 應用整合。
+- AI 輔助工作流程。
+- 智慧資料處理。
+- 企業流程自動化。
+- AI 與既有系統整合。
 
-不得宣稱已有正式商用 AI SaaS、已部署 AI 平台或已驗證的企業導入成果。
+技術方向：**Python、AI API Integration、LLM、Spring AI、Workflow Automation**。不得宣稱已有正式商用 AI SaaS、已部署 AI 平台或已驗證的企業導入成果。
 
-7. Cloud & Infrastructure
+### Cloud & Infrastructure — `ServiceCloud`
 
-元件：ServiceCloud
+服務內容必須涵蓋：
 
-服務內容：
+- Docker 容器化。
+- 應用程式部署規劃。
+- 雲端架構整合。
+- CI/CD 工作流程。
+- 基礎架構與部署維護。
+- 系統可擴充性規劃。
 
-Docker 容器化。
-應用程式部署規劃。
-雲端架構整合。
-CI/CD 工作流程。
-基礎架構與部署維護。
-系統可擴充性規劃。
+技術方向：**Docker、Git、GitHub Actions、CI/CD、Cloud Infrastructure**。不得宣稱未經確認的 24/7 監控、SLA 或企業級維運保證。
 
-技術方向：
+### 五種服務組合 — `ServicesIntegration`
 
-Docker
-Git
-GitHub Actions
-CI/CD
-Cloud Infrastructure
+說明五類服務能依需求組合，至少包含以下示例：
 
-不得宣稱 XK 已提供未經確認的 24/7 監控、SLA 或企業級維運保證。
+| 需求方向 | 組合 |
+| --- | --- |
+| 企業數位形象 | Website Development |
+| 企業內部管理系統 | Java Enterprise Development + Database Integration |
+| 跨系統流程 | System Integration + Automation |
+| 智慧化應用 | AI Integration + Existing Systems |
+| 系統部署 | Application Development + Cloud Infrastructure |
 
-8. Service Integration
+以上明確標示為**服務組合示例**，不得呈現成已完成的客戶案例。
 
-元件：ServicesIntegration
+### 五階段合作流程 — `ServicesProcess`
 
-說明五類服務並非完全獨立，而是可以依企業需求進行組合。
+1. **Discovery — 需求了解**。
+2. **Planning — 方案規劃**。
+3. **Development — 技術開發**。
+4. **Testing & Delivery — 測試與交付**。
+5. **Continuous Improvement — 後續改善**。
 
-展示範例：
+以清楚流程說明合作，不宣稱所有專案具有相同工期、報價或交付條件。價格、訂閱方案及時程須依已確認資料與個別專案處理，不把舊來源的建議值發布為正式承諾。
 
-企業數位形象：Website Development。
-企業內部管理系統：Java Enterprise Development + Database Integration。
-跨系統流程：System Integration + Automation。
-智慧化應用：AI Integration + Existing Systems。
-系統部署：Application Development + Cloud Infrastructure。
+### Services CTA 與未確認聯絡資訊
 
-以上為服務組合示例，不得呈現成已完成的客戶案例。
+邀請訪客討論數位需求，提供返回首頁、服務摘要、About 及聯絡資訊的導覽。依實際情境使用 `/#contact`、`/#services`、`/about` 或 `/` 等已存在的 URL。
 
-9. Our Process
+目前聯絡管道尚未確認時，不得自行建立 Email、mailto、假聯絡表單或虛構聯絡資訊。`contact@…`、`hello@…` 與通用 LinkedIn 首頁不等於已驗證的正式聯絡管道；入口可導向真實首頁聯絡區塊並說明待確認狀態。
 
-元件：ServicesProcess
+### 內容設定與 TypeScript 型別
 
-以五階段呈現合作流程：
+集中於 `src/config/services.ts` 管理 Hero、服務分類、各服務說明、技術清單、適用情境、服務組合、五階段流程及 CTA。所有服務資料使用明確型別；建議沿用既有 `ServiceCategory`、`ServiceTechnology`、`ServiceProcessStep`、`ServiceSolutionExample`，保留目前 `ServiceId` 與資料約束。
 
-Discovery — 需求了解。
-Planning — 方案規劃。
-Development — 技術開發。
-Testing & Delivery — 測試與交付。
-Continuous Improvement — 後續改善。
+避免在不同 Component 重複技術清單、說明或流程；可使用一個共用服務呈現元件及薄包裝元件指定分類，不複製五套樣式。文案以繁體中文為主，專業、清楚且具商業價值，不過度行銷、誇大能力或使用未經驗證數據。
 
-桌面使用橫向流程，手機使用垂直流程。
+## 7. Design System & Technical Constraints
 
-不得宣稱所有專案均採用完全相同的工期、報價或交付條件。
+完整沿用 Task 002 的 XK Design System，不建立第二套顏色、排版或間距系統。
 
-10. Services CTA
+| Token | HEX |
+| --- | --- |
+| Primary | `#101A33` |
+| Secondary | `#3157D5` |
+| Accent | `#19B8D5` |
+| Background | `#FFFFFF` |
+| Surface | `#F5F7FB` |
+| Foreground | `#172033` |
+| Muted | `#667085` |
+| Border | `#E4E8F0` |
 
-元件：ServicesCta
+- 使用 CSS 語意 Tokens，不在各元件重複硬編碼 HEX；`--muted` 是次要文字，`bg-muted` 對應 Surface，不得混用。
+- 沿用 Inter、Noto Sans TC 及既有字體設定；使用 `type-display`、`type-h1`、`type-h2`、`type-h3`、`type-body-lg`、`type-body`、`type-body-sm`、`type-caption`、`type-button`。
+- 重用 Container、Section、Card 系列、Button、SectionHeading、BrandPattern、XkLogo 與 Lucide React。中文 SectionHeading 明確使用適當的 `titleLang`，不改壞既有英文預設行為。
+- 保持原始 Logo Path、Transform、比例、已提供配色與 **Provisional（暫定版本）**，不宣稱最終核准、不重新繪製。
+- 保持企業級技術品牌形象、五類內容的一致層級與手機可讀性；技術名稱與一般說明清楚區隔，不用大量裝飾、動畫或 Glassmorphism 影響閱讀。
+- 延用 Focus、Reduced Motion、Spacing、Radius、Shadow 與共用斷點。單一 H1、正確 H2／H3、語意化 Section；裝飾圖示使用適當 `aria-hidden`。
+- 真實站內連結用 Next.js Link。Button `asChild` 搭配真實連結；停用操作使用原生 disabled Button，不建立看似停用卻可啟動的連結。互動 Card 有實際 href，內部不嵌套其他互動控制。
+- App Router、`src`、`@/*`、Strict TypeScript 與 Server Components 優先原則維持不變；只有實際互動才建立 Client Component。
+- 不新增 Dependencies，不任意升降級既有套件或 lockfile；沒有必要時不更動 package、全域 Tokens、字體或元件 API。
+- 保留一般 Next.js production build 與 GitHub Pages 靜態輸出。頁面不依賴 Backend 或外部執行服務；不新增 Tracking Scripts，不為裝飾增加不必要 JavaScript 或大型資產。
 
-內容：
+## 8. Navigation, SEO & Deployment
 
-邀請訪客討論數位需求。
-提供返回首頁及聯絡區塊的導覽。
-使用真實存在的 URL。
+### 共用導覽與有效連結
 
-目前聯絡管道尚未確認時，不得自行建立 Email、mailto、假聯絡表單或虛構聯絡資訊。
+修改 `src/config/navigation.ts`，將 Services 正式連至 `/services`，並把 `plannedRoutes` 對應狀態設為 `implemented`。Header、MobileNavigation 與 Footer 使用同一設定。
 
-聯絡入口使用：
+保留首頁 `/#services`、`/#service-{anchor}`、About 與其他有效導覽。首頁服務卡片是否連向新頁依實際結構調整，可提供「了解完整服務」入口；不可破壞原錨點或把未完成的 `/services/*` 明細頁公開為假連結。
 
-/#contact
-/#services
-/about
+### 專屬 Metadata
 
-依實際使用情境選擇。
+- **Title：** `服務項目 | Xplore Kaleidoscope`。
+- **Description：** `探索 Xplore Kaleidoscope 的網站開發、Java 企業系統、系統整合、AI 應用與雲端技術服務，打造符合企業需求的數位解決方案。`
+- **Canonical：** `https://xplorekaleidoscope.com/services`。
+- **Open Graph：** 專屬 Title、Description、相同品牌網域的 Services URL，以及 `zh_TW`。
+- **語言：** HTML 與既有 Layout 保持 `zh-TW`；英文技術文字適當標示。
+- **Indexing：** 保留 `noindex, nofollow`，不擅自開放搜尋索引。
+- 不虛構 Open Graph Image、Organization Rating、客戶評價、成果或結構化資料。避免根 Layout 標題模板重複附加品牌名。
 
-四、內容與設定管理
+Pages 的正常結尾斜線可接受，但 Canonical／Open Graph URL 不能變成錯誤的 GitHub 專案子路徑，也不得包含不應有的 Query 或 Fragment。
 
-新增：
+### GitHub Actions → GitHub Pages
 
-src/config/services.ts
+一般 `npm run build` 保持相容；`npm run build:pages` 輸出 `out/services/index.html`。以 Pages Base Path 實際檢查 `/xk-website/services/`，由既有 Next.js Link 正確處理站內路徑，不在元件硬編碼專案前綴。
 
-集中管理：
+必要時僅擴充 `scripts/build-github-pages.mjs`，增加 Services 輸出與 Metadata 驗證，並保留首頁、About、404、`.nojekyll`、資源 Base Path、noindex／nofollow 及開發驗收路由排除檢查。CSS、JavaScript、字體、圖片與 App icon 路徑須正常。
 
-Hero 文案。
-服務分類。
-各服務說明。
-技術清單。
-服務組合。
-五階段流程。
-CTA 文案。
+不任意修改 GitHub Actions workflow、部署條件、Pages Source、DNS 或 Custom Domain。PR 執行品質與靜態建置；只有依既有規則、取得所需授權後的 `main` 才能部署。不發布未審核功能分支，不把本機或 PR artifact 當成公開部署證據。
 
-所有服務資料應使用明確 TypeScript 型別。
+Pages 產物須用靜態伺服器掛載 `/xk-website` 路徑驗收，不能以 `npm run start` 代替；若要在 Pages export 後改測一般 Next.js server，先重新執行一般 Build。
 
-建議資料結構：
+## 9. File Structure & Change Scope
 
-ServiceCategory
-ServiceTechnology
-ServiceProcessStep
-ServiceSolutionExample
+以下是 **Task 005 功能執行時預計新增或完善的範圍**，不表示本輪文件重構已新增或完成這些成果。既有檔案優先重用；實際新增／修改以最終 Git Diff 為準。
 
-避免將技術清單、服務說明及流程重複寫入不同 Component。
-
-內容應使用繁體中文為主要語言，保留必要英文技術名稱。
-
-文案應專業、清楚且具商業價值，避免過度行銷、誇大能力或使用未經驗證的數據。
-
-五、元件與檔案架構
-
-建議新增：
-
-text
+```text
 src/
-├── app/
-│ └── services/
-│ └── page.tsx
-├── config/
-│ └── services.ts
-└── components/
-└── sections/
-└── services/
-├── services-hero.tsx
-├── services-overview.tsx
-├── service-website.tsx
-├── service-java.tsx
-├── service-integration.tsx
-├── service-ai.tsx
-├── service-cloud.tsx
-├── services-integration.tsx
-├── services-process.tsx
-└── services-cta.tsx
-
-可依既有程式碼風格調整檔案命名與元件拆分，但必須維持清楚的責任分工。
-
-src/app/services/page.tsx 負責：
-
-Metadata。
-頁面區塊組合。
-頁面語意與整體結構。
-
-各區塊負責自己的呈現與語意。
-
-預設使用 Server Components，只有實際需要互動時才建立 Client Components。
-
-六、Design System 與視覺規範
-
-完整沿用 Task 002 的 XK Design System。
-
-品牌色彩：
-
-Token HEX
-Primary #101A33
-Secondary #3157D5
-Accent #19B8D5
-Background #FFFFFF
-Surface #F5F7FB
-Foreground #172033
-Muted #667085
-Border #E4E8F0
-
-必須使用既有語意 Token，不在元件內重複硬編碼品牌 HEX。
-
-沿用：
-
-Inter。
-Noto Sans TC。
-Display、H1、H2、H3。
-Body 與 Caption Typography Utilities。
-Container 與 Section。
-Card。
-Button。
-BrandPattern。
-Lucide React。
-
-視覺原則：
-
-保持企業級數位技術品牌形象。
-清楚區分五類服務。
-服務內容具有一致的視覺層級。
-技術名稱與一般說明清楚區隔。
-避免大量裝飾影響閱讀。
-保持手機閱讀體驗。
-不任意修改原始 Logo。
-保留 Provisional Logo 狀態。
-
-不得建立第二套顏色、排版或間距系統。
-
-七、Navigation 與 Footer
-
-修改：
-
-src/config/navigation.ts
-
-將 Services 導覽正式連結至：
-
-/services
-
-更新 plannedRoutes 中 Services 的狀態為 implemented。
-
-Header、MobileNavigation 與 Footer 必須使用相同設定。
-
-首頁原有 /#services 與 /#service-{anchor} 錨點仍須正常運作，不得因 Services 內頁建立而破壞首頁既有導覽。
-
-首頁服務卡片是否改為連結至 Services 頁面，應視既有首頁內容結構調整，保留原本有效的服務錨點。
-
-未實作的服務明細頁不得變成失效連結。
-
-八、SEO 與 Metadata
-
-Services 頁面建立獨立 Metadata。
-
-建議：
-
-Title：
-
-服務項目 | Xplore Kaleidoscope
-
-Description：
-
-探索 Xplore Kaleidoscope 的網站開發、Java 企業系統、系統整合、AI 應用與雲端技術服務，打造符合企業需求的數位解決方案。
-
-Canonical：
-
-https://xplorekaleidoscope.com/services
-
-Open Graph：
-
-專屬 Title。
-專屬 Description。
-正確 Canonical URL。
-zh_TW 語言設定。
-
-其他要求：
-
-保留現有 noindex, nofollow。
-不虛構 Open Graph Image。
-不新增未經驗證的 Organization Rating。
-不建立虛構客戶評價或結構化資料。
-保持 HTML 語言與既有 Layout 一致。
-九、GitHub Pages 相容性
-
-延用：
-
-GitHub Actions → GitHub Pages。
-
-一般 Next.js Build 必須保持相容。
-
-Pages Build：
-
-bash
-npm run build:pages
-
-確認：
-
-/services 成功輸出。
-靜態檔案產生至 out/services/index.html。
-Base Path 正確。
-CSS、JS、字體資源路徑正確。
-Header、Footer、MobileNavigation 導覽正常。
-Canonical 與 Open Graph URL 正確。
-noindex, nofollow 保留。
-404 頁正常。
-開發驗收路由不會匯出至公開產物。
-.nojekyll 正常。
-
-必要時只擴充：
-
-scripts/build-github-pages.mjs
-
-不得破壞首頁與 About 頁既有驗證。
-
-GitHub Actions workflow 沿用現有設定，不任意修改部署條件。
-
-本次建立 PR，不自動合併或發布 main。
-
-十、Responsive 與 Accessibility
-
-必須驗收以下 Viewport：
-
-裝置 寬度
-Small Mobile 320px
-Mobile 375px
-Tablet 768px
-Desktop 1440px
-Large Desktop 1920px
-
-檢查：
-
-沒有水平溢出。
-服務卡片排列正確。
-技術標籤不會超出容器。
-中文文字換行自然。
-流程圖在手機正確轉為垂直排列。
-Header 與 MobileNavigation 正常。
-Footer 導覽正常。
-Logo 不失真。
-CTA 不會重疊。
-Focus 清楚可見。
-所有有效連結可以操作。
-
-Accessibility：
-
-單一 H1。
-正確 H2／H3 階層。
-語意化 Section。
-裝飾圖示使用適當 aria-hidden。
-真實連結使用 Next.js Link。
-鍵盤可正常操作。
-支援 Reduced Motion。
-色彩對比符合預期。
-
-使用 axe 執行 WCAG 2／2.1 A／AA 自動掃描，並進行鍵盤及人工視覺檢查。
-
-自動掃描結果不得宣稱等同完整無障礙認證。
-
-十一、品質與驗收指令
-
-使用既有 Node.js 24.x 與 npm 環境。
-
-bash
-npm ci
-npx tsc --noEmit
-npm run lint
-npm run build
-npm run build:pages
-
-以上指令必須在最終程式碼完成後實際執行。
-
-不得沿用 Task 001–004 的驗收結果代替本次測試。
-
-必須額外驗收：
-
-/services HTTP 200。
-首頁回歸測試。
-About 頁回歸測試。
-Header／Footer。
-MobileNavigation。
-所有有效導覽。
-五類服務內容。
-五階段合作流程。
-GitHub Pages Base Path。
-Metadata。
-404 與開發路由保護。
-Browser Console。
-JavaScript Runtime。
-CSS、JS、字體載入。
-axe A／AA。
-五種 Viewport。
-手機與桌面截圖。
-十二、截圖與交付成果
-
-新增：
-
-docs/screenshots/
-
-至少提供：
-
-截圖 檔案
-Services Desktop task005-services-desktop.png
-Services Mobile task005-services-mobile.png
-Website Development task005-services-website.png
-Java Development task005-services-java.png
-AI & Integration task005-services-ai.png
-Services Process task005-services-process.png
-Services Footer task005-services-footer.png
-
-截圖必須由本次實際執行的網站產生，不得使用示意圖代替。
-
-新增：
-
-docs/services-implementation.md
-
-記錄：
-
-實作內容。
-頁面資訊架構。
-元件設計。
-文案來源。
-SEO 設定。
-GitHub Pages 相容性。
-測試指令及結果。
-響應式驗收。
-Accessibility 驗收。
-截圖清單。
-尚未完成事項。
-
-更新：
-
-README.md
-AGENTS.md
-docs/implementation-notes.md
-
-保留既有歷史紀錄，不覆寫前面任務的實作成果。
-
-十三、Git 與 Pull Request
-
-Feature Branch：
-
-feature/website-services-page
-
-建議 Commit：
-
-feat(services): implement XK services page
-
-Pull Request：
-
-Base：main
-Compare：feature/website-services-page
-
-PR 描述必須包含：
-
-任務目標。
-服務頁面內容。
-共用元件使用方式。
-導覽修改。
-SEO 設定。
-GitHub Pages 相容性。
-品質檢查結果。
-Responsive 驗收結果。
-Accessibility 驗收結果。
-實際截圖。
-尚未完成事項。
-
-不得虛構 Commit SHA、PR 編號、Actions Run ID 或發布狀態。
-
-不得直接修改 main，不自動合併 PR。
-
-十四、完成標準
-
-以下條件全部滿足才可標記 Task 005 完成：
-
-/services 正常運作。
-十個服務頁面區塊完成。
-五類服務內容完整。
-服務組合與合作流程完成。
-共用 Header／Footer 導覽更新。
-Design System 一致。
-首頁與 About 頁回歸測試通過。
-SEO Metadata 正確。
-GitHub Pages 靜態輸出正常。
-Base Path 正確。
-五種 Viewport 通過。
-Accessibility 自動與人工檢查完成。
-TypeScript 通過。
-ESLint 通過。
-一般 Build 通過。
-Pages Build 通過。
-截圖完成。
-實作紀錄完成。
-README、AGENTS 與歷史紀錄更新。
-Feature Branch 與 PR 建立。
-不自動合併、不虛構部署成果。
-十五、後續任務
-
-Task 005 完成後，後續可依網站整體規劃逐步開發：
-
-Task 006：Solutions 解決方案介紹頁。
-Task 007：Portfolio 專案作品集。
-Task 008：Contact 聯絡頁。
-Task 009：Privacy Policy 隱私權政策。
-後續再評估服務明細頁、正式聯絡 API、CMS、AI Chatbot 與其他功能。
-
-以上功能不納入本次 Task 005。
-
-Task 005 核心交付目標：
-
-建立正式、專業且具商業說服力的 XK Services 服務介紹頁，讓潛在客戶能清楚理解 XK 在 Web、Java、System Integration、AI 與 Cloud Infrastructure 的技術服務能力，並透過一致的品牌體驗引導訪客進一步了解 XK 或聯絡洽談。
-
-以下忽略不計，call by text:
-
-Codex 執行指令 — Task 005
-
-請在目前已開啟的 xk2022/xk-website Repository 中，正式執行 docs/task/task005.md 的全部開發工作。
-
-一、執行原則
-先完整閱讀 AGENTS.md、README.md、docs/task/task005.md、docs/implementation-notes.md、docs/brand-design-system.md、docs/homepage-implementation.md、docs/about-implementation.md。
-檢查目前 Git 狀態、分支、main 最新版本及 Task 004 合併狀態。
-以 main 最新合併版本為基礎建立 Task 005 Feature Branch。
-保留既有 Next.js、React、TypeScript、Tailwind CSS 4、shadcn/ui、Lucide React 架構。
-不重新初始化、不升降級套件、不任意修改 lockfile。
-嚴格遵循 docs/task/task005.md 的功能及驗收規格。
-不修改或直接推送 main，不自動合併 Pull Request。
-二、正式開發
-
-完整實作 Task 005 規定的所有功能，包括：
-
-頁面路由與資訊架構。
-共用 Header、Footer、Mobile Navigation 的必要整合。
-XK Design System 元件與品牌 Tokens。
-響應式版面。
-SEO Metadata、Canonical、Open Graph。
-GitHub Pages 靜態輸出與 Base Path 相容性。
-無障礙、鍵盤操作、Focus 與 Reduced Motion。
-必要的設定、元件、文件及導覽更新。
-
-所有內容必須以實際規格及已確認的品牌資料為依據，不虛構公司資訊、聯絡方式、客戶案例、產品或服務成果。
-
-不建立未經 Task 005 授權的 Backend、API、Analytics 或其他額外功能。
-
-三、GitHub Pages
-
-延用現有 GitHub Actions → GitHub Pages 工作流程。
-
-保留一般 Next.js production build。
-保留 npm run build:pages。
-驗證靜態 HTML、CSS、JavaScript、圖片與 Base Path。
-驗證 Canonical、Open Graph 及 noindex 設定。
-不擅自修改 GitHub Pages Source、DNS 或 Custom Domain。
-不發布尚未審核的功能分支。
-四、實際驗收
-
-在所有修改完成後，重新執行：
-
-bash
-npm ci
-npx tsc --noEmit
-npm run lint
-npm run build
-npm run build:pages
-
-依 Task 005 要求執行：
-
-桌面與手機瀏覽器測試。
-320、375、768、1440、1920px 響應式測試。
-所有站內連結及錨點測試。
-GitHub Pages Base Path 測試。
-Keyboard Navigation、Focus、Disabled 狀態測試。
-axe WCAG 2.1 A/AA 掃描。
-Console、Runtime、Network 錯誤檢查。
-Reduced Motion 測試。
-實際頁面截圖及人工視覺檢查。
-
-任何測試失敗都應先修正並重新驗收，不得把預期結果寫成實際通過結果。
-
-五、文件更新
-
-依照既有文件風格更新：
-
-README.md
-AGENTS.md
-docs/implementation-notes.md
-新增 Task 005 實作紀錄文件。
-必要的部署或操作文件。
-docs/screenshots/ 實際驗收截圖。
-
-完整記錄新增、修改檔案與所有驗收結果。
-
-六、Git 與 Pull Request
-
-建議分支：
-
-feature/website-task005
-
-建議 Commit：
-
-feat(website): implement task 005
-
-完成後：
-
-檢查完整 Git Diff。
-確認沒有提交 .next/、out/、暫存檔或機密資訊。
-Commit 並 Push Feature Branch。
-建立以 main 為 Base 的 Pull Request。
-PR 說明實作內容、測試結果、截圖、部署注意事項及未完成事項。
-
-不得自行合併 Pull Request。
-
-七、最終回報
-
-完成後提供：
-
-實作功能摘要。
-Git Branch 與 Commit SHA。
-Pull Request URL。
-新增及修改檔案清單。
-每項測試的實際結果。
-桌面與手機截圖。
-GitHub Actions 執行結果。
-尚未完成及需要使用者確認的事項。
-是否已部署（必須有實際證據）。
-
-重要：請直接操作現有 Repository，完成 Task 005，而不是只提供程式碼範例、開發計畫或文件草稿。
+├── app/services/page.tsx
+├── config/services.ts
+└── components/sections/services/
+    ├── services-hero.tsx
+    ├── services-overview.tsx
+    ├── service-website.tsx
+    ├── service-java.tsx
+    ├── service-integration.tsx
+    ├── service-ai.tsx
+    ├── service-cloud.tsx
+    ├── services-integration.tsx
+    ├── services-process.tsx
+    └── services-cta.tsx
+```
+
+可依既有風格調整檔名與拆分，但職責須清楚：Page 管理 Metadata、組合及整體語意；Config 管理內容；各區塊管理呈現。可沿用必要的 `service-detail.tsx` 共用呈現，不重複實作。
+
+| 預計處理 | 檔案／範圍 | 限制 |
+| --- | --- | --- |
+| 新增或完善 | 上方 Services 路由、設定與元件 | 保留現有 API 與已確認內容 |
+| 必要修改 | `src/config/navigation.ts` | Services 正式路由與狀態；不公開未完成路由 |
+| 視現有結構必要修改 | `src/components/sections/home-services.tsx` | 保留原卡片、Maintenance 與所有錨點 |
+| 必要擴充 | `scripts/build-github-pages.mjs` | 不破壞首頁、About 或開發頁排除驗證 |
+| 實作報告 | `docs/services-implementation.md` | 獨立報告；保留既有歷史，新增實際執行證據 |
+| 指引與歷史 | `README.md`、`AGENTS.md`、`docs/implementation-notes.md` | 記錄實際本次範圍與結果，不覆寫前任務成果 |
+| 實際截圖 | `docs/screenshots/task005-services-*.png` | 七個指定目標，見第 12 節 |
+
+不得任意修改文件 Repository、依賴／lockfile、全域 Design System、原始 Logo、字體或 workflow；其他部署或操作文件僅在確實必要且屬任務範圍時更新並說明原因。不得提交 `.next/`、`out/`、測試暫存檔、工具套件或機密資訊。
+
+## 10. Implementation Procedure
+
+1. 檢查 Repository、分支、Working Tree、最新 `main`、Task 004 合併及部署前置狀態，保留使用者工作。
+2. 完整閱讀第 3 節來源與現有程式，記錄規格差異、缺少資料及可驗證聯絡方式。
+3. 從經確認的最新 `main` 建立或切換 `feature/website-services-page`，不重新初始化專案。
+4. 確認十個區塊、五類服務、服務組合、流程、資料型別、有效連結與共用元件分工。
+5. 實作集中 Config、Page、Server Components、必要導覽及 Pages Validator；沿用品牌 Tokens。
+6. 完成手機／桌面版面、SEO、鍵盤、Focus、Reduced Motion 及聯絡待確認狀態。
+7. 最終程式碼完成後實際執行 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`。
+8. 分別啟動一般 Next.js 與 Pages 靜態網站，完成第 11 節功能、三頁回歸、五寬、axe、鍵盤、資源與瀏覽器驗收。
+9. 發現問題先修復，重新執行受影響檢查及最終完整驗收；依實際網站重新擷取截圖並人工檢視。
+10. 完成獨立報告、README、AGENTS 與歷史紀錄；未完成或受限項目如實列出。
+11. 檢查完整 Git Diff、檔案範圍、Markdown links、截圖及未提交產物，確認沒有洩露機密。
+12. 依實際授權 Commit、Push 功能分支並建立以 `main` 為 Base 的 PR；回報真實 CI、Commit、PR 與交付狀態，不自動合併或發布。
+
+## 11. Testing & Acceptance Criteria
+
+**狀態初始值均為 Pending。** Required 是必要驗收；Optional 是符合條件時的補充；Not Applicable 表示本任務排除的功能，仍須確認排除理由，不代表需要開發它。正式報告依實際執行填入 PASS／FAIL／未執行或 N/A 與理由，不得預填成功。
+
+### 指令、功能與瀏覽器驗收矩陣
+
+| 驗收項目 | 適用性 | 原因／可驗證標準 | 狀態 |
+| --- | --- | --- | --- |
+| `npm ci` | Required | 使用既有 Node.js 24.x 與 npm 安裝鎖定依賴，不以舊安裝結果代替 | Pending |
+| `npx tsc --noEmit` | Required | 最終程式碼符合 Strict TypeScript；記錄 Exit Code | Pending |
+| `npm run lint` | Required | 執行既有 ESLint，處理任務引入的錯誤與警告 | Pending |
+| `npm run build` | Required | 保留一般 Next.js production build；不能只驗證 Pages | Pending |
+| `npm run build:pages` | Required | 實際匯出 Services 與既有頁面，執行產物驗證 | Pending |
+| Services HTTP 與結構 | Required | `/services` HTTP 200；單一指定 H1、十個 Section、五類完整服務與所有技術項目 | Pending |
+| 服務組合與流程 | Required | 五種組合均標示示例；五階段完整，沒有統一工期／價格／交付承諾 | Pending |
+| 首頁 Fresh Regression | Required | 首頁七個內容區塊、原五卡、Maintenance、服務與舊錨點可用，不以歷史 PASS 代替 | Pending |
+| About Fresh Regression | Required | About 九個內容區塊、既有內容與 CTA 正常，與 Services 往返可用 | Pending |
+| Header／Footer／MobileNavigation | Required | 三者共用設定，Services 連 `/services`，不引入死連結 | Pending |
+| 所有站內連結及跨頁操作 | Required | 實際列舉有效 URL，檢查 HTTP、錨點、Base Path，操作主要連結、CTA 與導覽 | Pending |
+| Metadata 與語言 | Required | Services 專屬 Title／Description／Canonical／Open Graph／zh_TW；HTML zh-TW，保留 noindex、nofollow | Pending |
+| 真實內容與禁止資料 | Required | 不含假案例、商用 AI 成果、未確認信箱、假表單、價格／SLA 保證、虛構 OG Image 或評價 Schema | Pending |
+| Responsive 320px | Required | Services、首頁、About 均檢查無水平溢出、重疊或容器超出 | Pending |
+| Responsive 375px | Required | Services、首頁、About 均檢查卡片、標籤、CTA、Header 與 Footer 閱讀操作 | Pending |
+| Responsive 768px | Required | Services、首頁、About 均檢查平板排列與內容可讀性 | Pending |
+| Responsive 1440px | Required | Services、首頁、About 均檢查桌面層級、卡片與橫向流程 | Pending |
+| Responsive 1920px | Required | Services、首頁、About 均檢查最大寬度、留白與元件邊界 | Pending |
+| Hero 內容完整與人工版面檢查 | Required | 特別檢查 320／375px figure 內 Logo、caption、標語及 CTA 未被裁切；Logo 比例正常、卡片間距一致、手機流程垂直 | Pending |
+| axe WCAG 2／2.1 A／AA | Required | 對本次 Services、首頁、About 五寬頁面與手機選單展開狀態執行掃描，記錄實際範圍及結果 | Pending |
+| Keyboard、Skip Link、Enter 與 Focus | Required | 鍵盤可達主要控制、Skip Link 進入 main，焦點可見，連結可用 Enter 啟動 | Pending |
+| Disabled 狀態 | Required | 沿用共用 Button 的原生停用語意；在可用開發示範驗證不能觸發、Tab 不停留，不為測試增加假公開控制 | Pending |
+| Reduced Motion | Required | 減少動態偏好下必要過渡停用或依既有規範降至 0s；不依賴動畫傳達功能 | Pending |
+| MobileNavigation 操作 | Required | 檢查 Accessible Name、aria-expanded／controls、展開／收合、連結點擊關閉、Escape 與焦點還原、外部點擊及桌面斷點重設 | Pending |
+| Browser Console | Required | 零未解釋的 Console Error；預期 404 測試須與資源失敗分開記錄 | Pending |
+| JavaScript Runtime | Required | 零未處理的 Runtime Error，不只檢查 HTTP 或 HTML | Pending |
+| Network 與靜態資源 | Required | CSS、JS、字體、圖片／App icon 正常，路徑與狀態正確；記錄本次實際資源清單與數量，不固定套用舊報告的 23 個資源 | Pending |
+| HTTP 與例外路由 | Required | 首頁、About、Services HTTP 200；未知路由依既有設定為 404，不以失敗載入假裝完成頁面 | Pending |
+| Pages Base Path | Required | 實際掛載 `/xk-website`，三頁及錨點導覽、直接載入、CSS／JS／字體／圖示路徑正確 | Pending |
+| 靜態輸出與既有 Validator | Required | `out/services/index.html`、首頁、About 與 `404.html` 存在；保留各頁 Metadata 與資源路徑驗證 | Pending |
+| `.nojekyll` | Required | 靜態輸出保留檔案，避免 Pages 忽略必要資源 | Pending |
+| 開發驗收路由保護 | Required | Pages 不含公開 `/dev/design-system` 內容／payload；一般 production 預設 404，只有明確預覽旗標才可用 | Pending |
+| 七份真實截圖與人工視覺 | Required | 依第 12 節檔名擷取本次實際網站；人工檢查，不以檔案存在代替目視 | Pending |
+| 觸控裝置補充驗收 | Optional | 可取得環境時補充 375px、isMobile／hasTouch 等模式，不取代五寬必要測試 | Pending |
+| 輔助科技擴充檢查 | Optional | 可取得時補充螢幕閱讀器或其他輔助科技；axe 不等同完整認證 | Pending |
+| 授權發布後公開站 Smoke | Optional | 只有另有合併／發布授權且部署成功後，才驗公開網址；未發布時列為未執行及原因 | Pending |
+| Backend／Contact API／Database Runtime | Not Applicable | 本次是獨立前端頁面，不建立或驗收被排除的後端功能 | Pending |
+| CMS／Authentication／Analytics 功能 | Not Applicable | 未納入本次範圍，不以文件要求為理由新增 | Pending |
+| Portfolio／服務明細內頁／AI SaaS 功能 | Not Applicable | 只驗 Services 內容與真實連結，不開發未授權產品或內頁 | Pending |
+
+以上品質指令與驗收必須在最終程式碼完成後實際執行。不得沿用 Task 001–004 的結果，也不得把 Task 005 既有歷史報告當作本次重新執行的結果。修正程式碼後須重新完成相關檢查與最終驗收。
+
+## 12. Test Report & Evidence
+
+### 獨立實作與測試報告
+
+使用 `docs/services-implementation.md` 作為 Task 005 的獨立實作／測試報告。檔案已存在時保留原歷史快照與既有證據，以清楚標示的新執行區段追加內容，不覆寫前面任務成果；本輪文件標準化不修改它。
+
+報告至少記錄：
+
+- 執行日期、Repository、Base Commit、Feature Branch、實際 Commit、測試環境、Node.js／npm、瀏覽器、網址、一般 Next.js 或 Pages 產物模式。
+- 本次實作內容、十區塊資訊架構、型別與元件分工、文案來源、Design System、導覽、SEO 與 Pages 相容性。
+- 每個實際測試指令、Exit Code、PASS／FAIL、範圍、必要日誌或證據位置；未執行及 N/A 附理由。
+- 五寬 Responsive、axe 範圍與違規、Keyboard／Focus／Disabled／Reduced Motion、手機選單、觸控（若有）、Console／Runtime／Network、HTTP、資源與靜態輸出結果。
+- 發現問題、原因、修正內容、修正後重驗與最終完整驗收結果；不得只把預期值列為成功。
+- 真實截圖、人工目視範圍、未完成事項、限制及需使用者確認的資料。
+- 真實 Git／PR／Actions 結果與部署狀態；沒有公開發布證據就明確寫未部署或未驗，不拿本機結果取代。
+
+舊報告中的資源數、連結數、axe 次數與截圖尺寸都是當時的實測結果，不是本規格固定的通過常數。自動掃描只涵蓋工具可判定的規則，不得宣稱完整無障礙認證。
+
+### 七份指定截圖
+
+以下為目標檔名及取景，不是本輪已完成紀錄。截圖須來自本次實際執行的網站，不以示意圖或舊執行截圖代替；產出後須人工檢視。
+
+| 內容 | 目標檔案 |
+| --- | --- |
+| Services Desktop | `docs/screenshots/task005-services-desktop.png` |
+| Services Mobile | `docs/screenshots/task005-services-mobile.png` |
+| Website Development | `docs/screenshots/task005-services-website.png` |
+| Java Development | `docs/screenshots/task005-services-java.png` |
+| AI & Integration | `docs/screenshots/task005-services-ai.png`；涵蓋相鄰 Integration 與 AI 內容，可用實際瀏覽器取景 |
+| Services Process | `docs/screenshots/task005-services-process.png` |
+| Services Footer | `docs/screenshots/task005-services-footer.png` |
+
+完整記錄檔案位置與實際尺寸。手機／桌面 Hero、服務內容、卡片、流程、頁尾與 Logo 的人工閱讀檢查，不能由 axe 或截圖檔案存在取代。
+
+## 13. Git & Pull Request
+
+| 項目 | 規格 |
+| --- | --- |
+| Feature Branch | `feature/website-services-page` |
+| Base Branch | `main` |
+| 建議 Commit | `feat(services): implement XK services page` |
+| PR Compare | `feature/website-services-page` |
+| CI | 檢查實際 PR Checks、品質與 Pages 建置結果；不得預填未執行結果 |
+
+原稿後段另有「建議分支」`feature/website-task005` 與「建議 Commit」`feat(website): implement task 005`。保留其歷史來源，但明確的主分支要求 `feature/website-services-page` 與前段 Services Commit 建議優先，不建立第二條功能分支。
+
+Commit／Push 前檢查完整 Git Diff、必要檔案、截圖與文件，排除 `.next/`、`out/`、暫存檔及機密資訊；不直接修改或推送 `main`。
+
+PR 描述須包含任務目標、服務頁內容、共用元件、導覽、SEO、Pages 相容性、品質／Responsive／Accessibility 結果、真實截圖、部署注意事項與未完成項目。Commit SHA、PR 編號、Actions Run ID 及發布狀態全部以實際紀錄為準，不預填或虛構。
+
+預設以 PR 待審核交付，不自動合併或發布；只有取得另外明確授權時才可進行相應動作。不得將 Task 005 的歷史合併或發布授權推定為其他任務的授權。
+
+## 14. Deliverables
+
+功能執行完成時，須交付實際成果，而非只列規劃：
+
+1. `/services` 十個區塊、五類完整服務、五組合示例、五階段流程及真實 CTA。
+2. 沿用共用 Header／Footer／MobileNavigation、Design System、有效導覽與保留的首頁／About 行為。
+3. 型別明確、集中管理的服務設定與職責清楚的元件。
+4. 正確 SEO、GitHub Pages 靜態輸出、Base Path、資源、404 與開發頁保護。
+5. 真實新增／修改檔案清單及經檢查的 Git Diff；不是把第 9 節預計清單標成完成。
+6. `docs/services-implementation.md` 的本次獨立實作／測試證據、README、AGENTS 與保留歷史的 Implementation Notes 更新。
+7. 七份本次網站截圖及人工視覺檢查紀錄。
+8. 實際 Feature Branch、Commit SHA、PR URL、CI 結果與本機工作目錄狀態。
+9. 繁體中文最終交付報告：功能摘要、檔案、各項實測、截圖、尚未完成與需確認事項，以及是否部署及其實際證據。
+
+## 15. Out of Scope & Future Work
+
+本次不開發 Backend、Contact API、Database Runtime、Docker Backend、CMS、Authentication、Analytics、AI Chatbot 或正式 AI SaaS；服務文字中的 Java、資料庫、Python、Docker 等不表示網站新增這些執行功能。
+
+不實作完整服務明細內頁、Portfolio、獨立 Contact 或 Privacy 頁面，不公開未確認的信箱、客戶案例、報價、固定時程、24/7、SLA 或企業級保證。不變更最終品牌核准、原始 Logo、正式網域或搜尋索引開放決策。
+
+保留原稿的後續方向，不納入本次範圍：
+
+- Task 006：Solutions 解決方案介紹頁。
+- Task 007：Portfolio 專案作品集。
+- Task 008：Contact 聯絡頁。
+- Task 009：Privacy Policy 隱私權政策。
+- 後續再評估服務明細頁、正式聯絡 API、CMS、AI Chatbot 與其他功能。
+
+尚未確認的聯絡管道、最終 Logo／OG Image、正式價格與交付條件等須列於報告，不自行填補；依各後續任務及使用者決策處理。
+
+## 16. Final Delivery Checklist
+
+所有項目保持未勾選，狀態為 Pending；只有實際完成並取得證據後才能在相應執行報告確認，不以歷史結果或本輪文件整理代替。
+
+- [ ] Pending — 已確認 Repository、Working Tree、最新 `main`、Task 004 合併及實際 Base Commit。
+- [ ] Pending — 已閱讀來源文件，記錄差異、缺漏與聯絡資訊狀態。
+- [ ] Pending — Feature Branch 使用 `feature/website-services-page`，保留既有使用者工作。
+- [ ] Pending — Services 十個內容區塊與五類服務完整實作。
+- [ ] Pending — 五種服務組合標示示例，五階段流程及合作條件表達正確。
+- [ ] Pending — 文案與技術清單集中管理，資料型別與元件職責清楚。
+- [ ] Pending — Header、Footer、MobileNavigation 與 `/services` 導覽整合完成。
+- [ ] Pending — 首頁 Maintenance、原卡片、所有服務錨點與 About 行為保留。
+- [ ] Pending — 既有 Design System、字體、Logo Provisional 與套件版本保持一致。
+- [ ] Pending — SEO Title、Description、Canonical、Open Graph、語言與 noindex／nofollow 正確。
+- [ ] Pending — `npm ci` 實際執行並記錄 Exit Code。
+- [ ] Pending — TypeScript 檢查通過並記錄證據。
+- [ ] Pending — ESLint 通過並記錄證據。
+- [ ] Pending — 一般 Next.js production build 通過。
+- [ ] Pending — GitHub Pages build 及 Services／首頁／About 靜態驗證通過。
+- [ ] Pending — 功能、HTTP、全部有效連結、跨頁 CTA 與舊錨點驗收完成。
+- [ ] Pending — Services、首頁、About 五種 Viewport Fresh 回歸完成。
+- [ ] Pending — Logo／標語完整可見、手機流程垂直、標籤／卡片／CTA 無溢出或重疊。
+- [ ] Pending — axe WCAG 2／2.1 A／AA 與必要人工檢查完成，記錄實際範圍及限制。
+- [ ] Pending — Keyboard、Skip Link、Enter、Focus、Disabled、Reduced Motion 與 MobileNavigation 驗收完成。
+- [ ] Pending — Console、Runtime、Network、CSS／JS／字體／icon 與 HTTP 狀態驗收完成。
+- [ ] Pending — Pages Base Path、404、`.nojekyll`、開發驗收路由保護與排除通過。
+- [ ] Pending — 發現問題已修正並重新完成最終驗收；Optional／Not Applicable 有明確處理理由。
+- [ ] Pending — 七份指定真實截圖已重新產出並人工檢視。
+- [ ] Pending — 獨立實作／測試報告、README、AGENTS 與歷史紀錄完成，未覆寫既有證據。
+- [ ] Pending — Git Diff、允許檔案、Markdown links 與無機密／build 產物檢查完成。
+- [ ] Pending — Conventional Commit 與功能分支 Push 完成，記錄真實 SHA。
+- [ ] Pending — PR 已建立，以 `main` 為 Base，完整附上實測、截圖與限制。
+- [ ] Pending — CI Checks 與實際交付／部署狀態已確認，不虛構識別碼或發布結果。
+- [ ] Pending — 繁體中文最終交付報告完成；未另獲授權時 PR 保持待審，不自動合併或發布。
