@@ -1,7 +1,7 @@
 {
   "task": "Task 006 Solutions",
-  "asOf": "2026-11-18T17:03:05.567820+00:00",
-  "status": "PASS: local implementation and acceptance; remote stages not yet executed",
+  "asOf": "2026-11-18T17:21:10.972161+00:00",
+  "status": "PASS: local acceptance and first PR head CI/artifact; later head/merge/deployment recorded separately in PR #10",
   "baseSha": "35639d881f2805765f6ceee0bb159d5225984975",
   "featureBranch": "feature/website-solutions-page",
   "documentationCommit": "95ef1275a46ace76e11f668178ca881087483398",
@@ -30445,8 +30445,1728 @@
   },
   "harnessSha256": "5ed341b0f02900041c0f3f151f1f5af0ea203e2376da121af4667859078bc86a",
   "remote": {
-    "status": "PENDING",
-    "note": "Pre-PR local snapshot. Actual PR/head/CI/merge/deployment/public evidence is added after events, never inferred from these local results."
+    "snapshotAt": "2026-11-18T17:21:10.972161+00:00",
+    "status": "PASS: first PR head CI/artifact; subsequent phases PENDING at snapshot",
+    "featureCommit": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+    "pullRequest": {
+      "number": 10,
+      "url": "https://github.com/xk2022/xk-website/pull/10",
+      "baseSha": "35639d881f2805765f6ceee0bb159d5225984975",
+      "headSha": "654997c49d74442ef261ac8d1c8ffbfb75142b92"
+    },
+    "firstHeadCI": {
+      "observedAt": "2026-11-18T17:14:47.937825+00:00",
+      "repository": "xk2022/xk-website",
+      "pullRequest": 10,
+      "expectedHead": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+      "run": {
+        "id": 44356017395,
+        "name": "Website CI and GitHub Pages",
+        "node_id": "WFR_kwLOVymmos8AAAAKU9Mc8w",
+        "head_branch": "feature/website-solutions-page",
+        "head_sha": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+        "path": ".github/workflows/ci.yml",
+        "display_title": "feat(solutions): implement Task 006 solutions page",
+        "run_number": 22,
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "workflow_id": 422294725,
+        "check_suite_id": 120070951761,
+        "check_suite_node_id": "CS_kwDOVymmos8AAAAb9MlTUQ",
+        "url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44356017395",
+        "html_url": "https://github.com/xk2022/xk-website/actions/runs/44356017395",
+        "pull_requests": [
+          {
+            "url": "https://api.github.com/repos/xk2022/xk-website/pulls/10",
+            "id": 5380618056,
+            "number": 10,
+            "head": {
+              "ref": "feature/website-solutions-page",
+              "sha": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+              "repo": {
+                "id": 1462347426,
+                "url": "https://api.github.com/repos/xk2022/xk-website",
+                "name": "xk-website"
+              }
+            },
+            "base": {
+              "ref": "main",
+              "sha": "35639d881f2805765f6ceee0bb159d5225984975",
+              "repo": {
+                "id": 1462347426,
+                "url": "https://api.github.com/repos/xk2022/xk-website",
+                "name": "xk-website"
+              }
+            }
+          }
+        ],
+        "created_at": "2026-11-18T17:12:22Z",
+        "updated_at": "2026-11-18T17:14:03Z",
+        "actor": {
+          "login": "xk2022",
+          "id": 90815560,
+          "node_id": "MDQ6VXNlcjkwODE1NTYw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/90815560?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/xk2022",
+          "html_url": "https://github.com/xk2022",
+          "followers_url": "https://api.github.com/users/xk2022/followers",
+          "following_url": "https://api.github.com/users/xk2022/following{/other_user}",
+          "gists_url": "https://api.github.com/users/xk2022/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/xk2022/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/xk2022/subscriptions",
+          "organizations_url": "https://api.github.com/users/xk2022/orgs",
+          "repos_url": "https://api.github.com/users/xk2022/repos",
+          "events_url": "https://api.github.com/users/xk2022/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/xk2022/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "run_attempt": 1,
+        "referenced_workflows": [],
+        "run_started_at": "2026-11-18T17:12:22Z",
+        "triggering_actor": {
+          "login": "xk2022",
+          "id": 90815560,
+          "node_id": "MDQ6VXNlcjkwODE1NTYw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/90815560?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/xk2022",
+          "html_url": "https://github.com/xk2022",
+          "followers_url": "https://api.github.com/users/xk2022/followers",
+          "following_url": "https://api.github.com/users/xk2022/following{/other_user}",
+          "gists_url": "https://api.github.com/users/xk2022/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/xk2022/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/xk2022/subscriptions",
+          "organizations_url": "https://api.github.com/users/xk2022/orgs",
+          "repos_url": "https://api.github.com/users/xk2022/repos",
+          "events_url": "https://api.github.com/users/xk2022/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/xk2022/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "jobs_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44356017395/jobs",
+        "logs_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44356017395/logs",
+        "check_suite_url": "https://api.github.com/repos/xk2022/xk-website/check-suites/120070951761",
+        "artifacts_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44356017395/artifacts",
+        "cancel_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44356017395/cancel",
+        "rerun_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44356017395/rerun",
+        "previous_attempt_url": null,
+        "workflow_url": "https://api.github.com/repos/xk2022/xk-website/actions/workflows/422294725",
+        "head_commit": {
+          "id": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+          "tree_id": "e2c78227f682f199464c2cbf2befaf67f1dd3937",
+          "message": "feat(solutions): implement XK solutions page",
+          "timestamp": "2026-11-18T17:09:39Z",
+          "author": {
+            "name": "Louis Chen",
+            "email": "system.xk2022@gmail.com"
+          },
+          "committer": {
+            "name": "Louis Chen",
+            "email": "system.xk2022@gmail.com"
+          }
+        },
+        "repository": {
+          "id": 1462347426,
+          "node_id": "R_kgDOVymmog",
+          "name": "xk-website",
+          "full_name": "xk2022/xk-website",
+          "private": false,
+          "owner": {
+            "login": "xk2022",
+            "id": 90815560,
+            "node_id": "MDQ6VXNlcjkwODE1NTYw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/90815560?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/xk2022",
+            "html_url": "https://github.com/xk2022",
+            "followers_url": "https://api.github.com/users/xk2022/followers",
+            "following_url": "https://api.github.com/users/xk2022/following{/other_user}",
+            "gists_url": "https://api.github.com/users/xk2022/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/xk2022/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/xk2022/subscriptions",
+            "organizations_url": "https://api.github.com/users/xk2022/orgs",
+            "repos_url": "https://api.github.com/users/xk2022/repos",
+            "events_url": "https://api.github.com/users/xk2022/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/xk2022/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/xk2022/xk-website",
+          "description": "官方網站，獨立交給 Codex 開發。",
+          "fork": false,
+          "url": "https://api.github.com/repos/xk2022/xk-website",
+          "forks_url": "https://api.github.com/repos/xk2022/xk-website/forks",
+          "keys_url": "https://api.github.com/repos/xk2022/xk-website/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/xk2022/xk-website/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/xk2022/xk-website/teams",
+          "hooks_url": "https://api.github.com/repos/xk2022/xk-website/hooks",
+          "issue_events_url": "https://api.github.com/repos/xk2022/xk-website/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/xk2022/xk-website/events",
+          "assignees_url": "https://api.github.com/repos/xk2022/xk-website/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/xk2022/xk-website/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/xk2022/xk-website/tags",
+          "blobs_url": "https://api.github.com/repos/xk2022/xk-website/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/xk2022/xk-website/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/xk2022/xk-website/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/xk2022/xk-website/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/xk2022/xk-website/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/xk2022/xk-website/languages",
+          "stargazers_url": "https://api.github.com/repos/xk2022/xk-website/stargazers",
+          "contributors_url": "https://api.github.com/repos/xk2022/xk-website/contributors",
+          "subscribers_url": "https://api.github.com/repos/xk2022/xk-website/subscribers",
+          "subscription_url": "https://api.github.com/repos/xk2022/xk-website/subscription",
+          "commits_url": "https://api.github.com/repos/xk2022/xk-website/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/xk2022/xk-website/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/xk2022/xk-website/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/xk2022/xk-website/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/xk2022/xk-website/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/xk2022/xk-website/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/xk2022/xk-website/merges",
+          "archive_url": "https://api.github.com/repos/xk2022/xk-website/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/xk2022/xk-website/downloads",
+          "issues_url": "https://api.github.com/repos/xk2022/xk-website/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/xk2022/xk-website/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/xk2022/xk-website/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/xk2022/xk-website/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/xk2022/xk-website/labels{/name}",
+          "releases_url": "https://api.github.com/repos/xk2022/xk-website/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/xk2022/xk-website/deployments"
+        },
+        "head_repository": {
+          "id": 1462347426,
+          "node_id": "R_kgDOVymmog",
+          "name": "xk-website",
+          "full_name": "xk2022/xk-website",
+          "private": false,
+          "owner": {
+            "login": "xk2022",
+            "id": 90815560,
+            "node_id": "MDQ6VXNlcjkwODE1NTYw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/90815560?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/xk2022",
+            "html_url": "https://github.com/xk2022",
+            "followers_url": "https://api.github.com/users/xk2022/followers",
+            "following_url": "https://api.github.com/users/xk2022/following{/other_user}",
+            "gists_url": "https://api.github.com/users/xk2022/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/xk2022/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/xk2022/subscriptions",
+            "organizations_url": "https://api.github.com/users/xk2022/orgs",
+            "repos_url": "https://api.github.com/users/xk2022/repos",
+            "events_url": "https://api.github.com/users/xk2022/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/xk2022/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/xk2022/xk-website",
+          "description": "官方網站，獨立交給 Codex 開發。",
+          "fork": false,
+          "url": "https://api.github.com/repos/xk2022/xk-website",
+          "forks_url": "https://api.github.com/repos/xk2022/xk-website/forks",
+          "keys_url": "https://api.github.com/repos/xk2022/xk-website/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/xk2022/xk-website/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/xk2022/xk-website/teams",
+          "hooks_url": "https://api.github.com/repos/xk2022/xk-website/hooks",
+          "issue_events_url": "https://api.github.com/repos/xk2022/xk-website/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/xk2022/xk-website/events",
+          "assignees_url": "https://api.github.com/repos/xk2022/xk-website/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/xk2022/xk-website/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/xk2022/xk-website/tags",
+          "blobs_url": "https://api.github.com/repos/xk2022/xk-website/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/xk2022/xk-website/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/xk2022/xk-website/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/xk2022/xk-website/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/xk2022/xk-website/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/xk2022/xk-website/languages",
+          "stargazers_url": "https://api.github.com/repos/xk2022/xk-website/stargazers",
+          "contributors_url": "https://api.github.com/repos/xk2022/xk-website/contributors",
+          "subscribers_url": "https://api.github.com/repos/xk2022/xk-website/subscribers",
+          "subscription_url": "https://api.github.com/repos/xk2022/xk-website/subscription",
+          "commits_url": "https://api.github.com/repos/xk2022/xk-website/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/xk2022/xk-website/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/xk2022/xk-website/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/xk2022/xk-website/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/xk2022/xk-website/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/xk2022/xk-website/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/xk2022/xk-website/merges",
+          "archive_url": "https://api.github.com/repos/xk2022/xk-website/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/xk2022/xk-website/downloads",
+          "issues_url": "https://api.github.com/repos/xk2022/xk-website/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/xk2022/xk-website/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/xk2022/xk-website/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/xk2022/xk-website/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/xk2022/xk-website/labels{/name}",
+          "releases_url": "https://api.github.com/repos/xk2022/xk-website/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/xk2022/xk-website/deployments"
+        }
+      },
+      "jobs": {
+        "total_count": 3,
+        "jobs": [
+          {
+            "id": 134984200193,
+            "run_id": 44356017395,
+            "workflow_name": "Website CI and GitHub Pages",
+            "head_branch": "feature/website-solutions-page",
+            "run_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44356017395",
+            "run_attempt": 1,
+            "node_id": "CR_kwDOVymmos8AAAAfba9wAQ",
+            "head_sha": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+            "url": "https://api.github.com/repos/xk2022/xk-website/actions/jobs/134984200193",
+            "html_url": "https://github.com/xk2022/xk-website/actions/runs/44356017395/job/134984200193",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-18T17:12:23Z",
+            "started_at": "2026-11-18T17:12:26Z",
+            "completed_at": "2026-11-18T17:13:16Z",
+            "name": "Typecheck, lint and production build",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-11-18T17:12:27Z",
+                "completed_at": "2026-11-18T17:12:30Z"
+              },
+              {
+                "name": "Check out source",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-11-18T17:12:30Z",
+                "completed_at": "2026-11-18T17:12:37Z"
+              },
+              {
+                "name": "Set up Node.js",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-11-18T17:12:37Z",
+                "completed_at": "2026-11-18T17:12:50Z"
+              },
+              {
+                "name": "Install locked dependencies",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-11-18T17:12:50Z",
+                "completed_at": "2026-11-18T17:12:58Z"
+              },
+              {
+                "name": "Check TypeScript",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-11-18T17:12:58Z",
+                "completed_at": "2026-11-18T17:13:01Z"
+              },
+              {
+                "name": "Check ESLint",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-11-18T17:13:01Z",
+                "completed_at": "2026-11-18T17:13:03Z"
+              },
+              {
+                "name": "Build production website",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-11-18T17:13:03Z",
+                "completed_at": "2026-11-18T17:13:10Z"
+              },
+              {
+                "name": "Upload Next.js build output",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-11-18T17:13:10Z",
+                "completed_at": "2026-11-18T17:13:13Z"
+              },
+              {
+                "name": "Post Set up Node.js",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-11-18T17:13:13Z",
+                "completed_at": "2026-11-18T17:13:13Z"
+              },
+              {
+                "name": "Post Check out source",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 16,
+                "started_at": "2026-11-18T17:13:13Z",
+                "completed_at": "2026-11-18T17:13:13Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 17,
+                "started_at": "2026-11-18T17:13:13Z",
+                "completed_at": "2026-11-18T17:13:13Z"
+              }
+            ],
+            "check_run_url": "https://api.github.com/repos/xk2022/xk-website/check-runs/134984200193",
+            "labels": [
+              "ubuntu-24.04"
+            ],
+            "runner_id": 1000000308,
+            "runner_name": "GitHub Actions 1000000308",
+            "runner_group_id": 0,
+            "runner_group_name": "GitHub Actions"
+          },
+          {
+            "id": 134984807091,
+            "run_id": 44356017395,
+            "workflow_name": "Website CI and GitHub Pages",
+            "head_branch": "feature/website-solutions-page",
+            "run_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44356017395",
+            "run_attempt": 1,
+            "node_id": "CR_kwDOVymmos8AAAAfbbiysw",
+            "head_sha": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+            "url": "https://api.github.com/repos/xk2022/xk-website/actions/jobs/134984807091",
+            "html_url": "https://github.com/xk2022/xk-website/actions/runs/44356017395/job/134984807091",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-18T17:13:16Z",
+            "started_at": "2026-11-18T17:13:19Z",
+            "completed_at": "2026-11-18T17:14:02Z",
+            "name": "Build GitHub Pages artifact",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-11-18T17:13:20Z",
+                "completed_at": "2026-11-18T17:13:24Z"
+              },
+              {
+                "name": "Check out source",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-11-18T17:13:24Z",
+                "completed_at": "2026-11-18T17:13:31Z"
+              },
+              {
+                "name": "Set up Node.js",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-11-18T17:13:31Z",
+                "completed_at": "2026-11-18T17:13:41Z"
+              },
+              {
+                "name": "Read GitHub Pages site configuration",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-11-18T17:13:41Z",
+                "completed_at": "2026-11-18T17:13:41Z"
+              },
+              {
+                "name": "Install locked dependencies",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-11-18T17:13:41Z",
+                "completed_at": "2026-11-18T17:13:50Z"
+              },
+              {
+                "name": "Build and verify static website",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-11-18T17:13:50Z",
+                "completed_at": "2026-11-18T17:13:57Z"
+              },
+              {
+                "name": "Upload GitHub Pages artifact",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-11-18T17:13:57Z",
+                "completed_at": "2026-11-18T17:13:59Z"
+              },
+              {
+                "name": "Post Set up Node.js",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13,
+                "started_at": "2026-11-18T17:13:59Z",
+                "completed_at": "2026-11-18T17:13:59Z"
+              },
+              {
+                "name": "Post Check out source",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-11-18T17:13:59Z",
+                "completed_at": "2026-11-18T17:14:00Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-11-18T17:14:00Z",
+                "completed_at": "2026-11-18T17:14:00Z"
+              }
+            ],
+            "check_run_url": "https://api.github.com/repos/xk2022/xk-website/check-runs/134984807091",
+            "labels": [
+              "ubuntu-24.04"
+            ],
+            "runner_id": 1000000309,
+            "runner_name": "GitHub Actions 1000000309",
+            "runner_group_id": 0,
+            "runner_group_name": "GitHub Actions"
+          },
+          {
+            "id": 134985335127,
+            "run_id": 44356017395,
+            "workflow_name": "Website CI and GitHub Pages",
+            "head_branch": "feature/website-solutions-page",
+            "run_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44356017395",
+            "run_attempt": 1,
+            "node_id": "CR_kwDOVymmos8AAAAfbcDBVw",
+            "head_sha": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+            "url": "https://api.github.com/repos/xk2022/xk-website/actions/jobs/134985335127",
+            "html_url": "https://github.com/xk2022/xk-website/actions/runs/44356017395/job/134985335127",
+            "status": "completed",
+            "conclusion": "skipped",
+            "created_at": "2026-11-18T17:14:02Z",
+            "started_at": "2026-11-18T17:14:02Z",
+            "completed_at": "2026-11-18T17:14:02Z",
+            "name": "Deploy GitHub Pages",
+            "steps": [],
+            "check_run_url": "https://api.github.com/repos/xk2022/xk-website/check-runs/134985335127",
+            "labels": [
+              "ubuntu-24.04"
+            ],
+            "runner_id": null,
+            "runner_name": null,
+            "runner_group_id": null,
+            "runner_group_name": null
+          }
+        ]
+      },
+      "artifacts": {
+        "total_count": 2,
+        "artifacts": [
+          {
+            "id": 14452321583,
+            "node_id": "MDg6QXJ0aWZhY3QxNDQ1MjMyMTU4Mw==",
+            "name": "github-pages",
+            "size_in_bytes": 5081423,
+            "url": "https://api.github.com/repos/xk2022/xk-website/actions/artifacts/14452321583",
+            "archive_download_url": "https://api.github.com/repos/xk2022/xk-website/actions/artifacts/14452321583/zip",
+            "expired": false,
+            "digest": "sha256:51a47c3bc80220dc6b90777941788b6e8f893b2d9e593df57af262d1e8b1ca01",
+            "created_at": "2026-11-18T17:13:59Z",
+            "updated_at": "2026-11-18T17:13:59Z",
+            "expires_at": "2026-11-25T17:13:57Z",
+            "workflow_run": {
+              "id": 44356017395,
+              "repository_id": 1462347426,
+              "head_repository_id": 1462347426,
+              "head_branch": "feature/website-solutions-page",
+              "head_sha": "654997c49d74442ef261ac8d1c8ffbfb75142b92"
+            }
+          },
+          {
+            "id": 14451851130,
+            "node_id": "MDg6QXJ0aWZhY3QxNDQ1MTg1MTEzMA==",
+            "name": "nextjs-build-output",
+            "size_in_bytes": 7116606,
+            "url": "https://api.github.com/repos/xk2022/xk-website/actions/artifacts/14451851130",
+            "archive_download_url": "https://api.github.com/repos/xk2022/xk-website/actions/artifacts/14451851130/zip",
+            "expired": false,
+            "digest": "sha256:cbde219e76e113d578d8dab6d8f9ae4b01160218f00e2b79926cc7b0d66586df",
+            "created_at": "2026-11-18T17:13:12Z",
+            "updated_at": "2026-11-18T17:13:12Z",
+            "expires_at": "2026-11-25T17:13:10Z",
+            "workflow_run": {
+              "id": 44356017395,
+              "repository_id": 1462347426,
+              "head_repository_id": 1462347426,
+              "head_branch": "feature/website-solutions-page",
+              "head_sha": "654997c49d74442ef261ac8d1c8ffbfb75142b92"
+            }
+          }
+        ]
+      }
+    },
+    "pagesArtifact": {
+      "observedAt": "2026-11-18T17:18:55.034036+00:00",
+      "repository": "xk2022/xk-website",
+      "runId": "44356017395",
+      "runUrl": "https://github.com/xk2022/xk-website/actions/runs/44356017395",
+      "head": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+      "artifactId": "14452321583",
+      "archive": "/tmp/xk-task006/pr-a-artifact/github-pages.zip",
+      "destination": "/tmp/xk-task006/pr-a-artifact/site-corrected",
+      "command": "python3 /tmp/xk-task006/check-pages-artifact.py --archive /tmp/xk-task006/pr-a-artifact/github-pages.zip --destination /tmp/xk-task006/pr-a-artifact/site-corrected --report /tmp/xk-task006/pr-a-artifact-check.json --run-id 44356017395 --head 654997c49d74442ef261ac8d1c8ffbfb75142b92 --artifact-id 14452321583",
+      "scope": "Actual downloaded Pages artifact only; no application build, browser, or deployment executed.",
+      "status": "PASS",
+      "checks": [
+        {
+          "item": "Downloaded ZIP exists",
+          "status": "PASS"
+        },
+        {
+          "item": "ZIP CRC is valid",
+          "status": "PASS"
+        },
+        {
+          "item": "ZIP contains only artifact.tar",
+          "status": "PASS"
+        },
+        {
+          "item": "Inspection destination starts empty",
+          "status": "PASS"
+        },
+        {
+          "item": "Archive size and member count are bounded",
+          "status": "PASS"
+        },
+        {
+          "item": "All tar members are ordinary files/directories within the destination",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: about/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: services/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: solutions/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: icon.svg",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: 404.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: .nojekyll",
+          "status": "PASS"
+        },
+        {
+          "item": "No public dev route files",
+          "status": "PASS"
+        },
+        {
+          "item": "No /dev/design-system reference in any HTML/TXT/JSON payload",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions exact title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions nine main Sections and four Articles",
+          "status": "PASS"
+        },
+        {
+          "item": "Referenced resources are self-hosted",
+          "status": "PASS"
+        },
+        {
+          "item": "All HTML resources and CSS URL resources exist with the correct base path",
+          "status": "PASS"
+        },
+        {
+          "item": "Downloaded ZIP SHA256 matches the GitHub artifact digest",
+          "status": "PASS"
+        }
+      ],
+      "archiveSha256": "51a47c3bc80220dc6b90777941788b6e8f893b2d9e593df57af262d1e8b1ca01",
+      "archiveBytes": 5081423,
+      "tarSha256": "44eb8c96b4a11f0542e163e38e44954c5c7fc827b1d51866923fa9ad58cfb35e",
+      "fileCount": 173,
+      "scannedPayloadCount": 32,
+      "pages": [
+        {
+          "path": "index.html",
+          "title": "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
+          "description": "Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。",
+          "canonical": "https://xplorekaleidoscope.com/",
+          "openGraph": {
+            "og:title": "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
+            "og:description": "Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。",
+            "og:url": "https://xplorekaleidoscope.com/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "about",
+            "services",
+            "technologies",
+            "why-xk",
+            "solutions",
+            "contact"
+          ],
+          "articles": []
+        },
+        {
+          "path": "about/index.html",
+          "title": "關於 XK | Xplore Kaleidoscope",
+          "description": "認識 Xplore Kaleidoscope（XK），了解我們的品牌理念、網站開發、Java 企業系統、系統整合與 AI 應用技術能力。",
+          "canonical": "https://xplorekaleidoscope.com/about/",
+          "openGraph": {
+            "og:title": "關於 XK | Xplore Kaleidoscope",
+            "og:description": "認識 Xplore Kaleidoscope（XK），了解我們的品牌理念、網站開發、Java 企業系統、系統整合與 AI 應用技術能力。",
+            "og:url": "https://xplorekaleidoscope.com/about/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "who-we-are",
+            "mission",
+            "vision",
+            "capabilities",
+            "approach",
+            "founder",
+            "commitment",
+            "about-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "services/index.html",
+          "title": "服務項目 | Xplore Kaleidoscope",
+          "description": "探索 Xplore Kaleidoscope 的網站開發、Java 企業系統、系統整合、AI 應用與雲端技術服務，打造符合企業需求的數位解決方案。",
+          "canonical": "https://xplorekaleidoscope.com/services/",
+          "openGraph": {
+            "og:title": "服務項目 | Xplore Kaleidoscope",
+            "og:description": "探索 Xplore Kaleidoscope 的網站開發、Java 企業系統、系統整合、AI 應用與雲端技術服務，打造符合企業需求的數位解決方案。",
+            "og:url": "https://xplorekaleidoscope.com/services/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "service-overview",
+            "website-development",
+            "java-enterprise",
+            "system-integration",
+            "ai-automation",
+            "cloud-infrastructure",
+            "service-combinations",
+            "services-process",
+            "services-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "solutions/index.html",
+          "title": "解決方案 | Xplore Kaleidoscope",
+          "description": "探索 XK 如何依企業需求組合網站開發、Java 企業系統、API 與資料整合、AI 應用及部署技術，規劃合適的數位解決方案。",
+          "canonical": "https://xplorekaleidoscope.com/solutions/",
+          "openGraph": {
+            "og:title": "解決方案 | Xplore Kaleidoscope",
+            "og:description": "探索 XK 如何依企業需求組合網站開發、Java 企業系統、API 與資料整合、AI 應用及部署技術，規劃合適的數位解決方案。",
+            "og:url": "https://xplorekaleidoscope.com/solutions/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "solutions-hero",
+            "business-challenges",
+            "solutions-overview",
+            "solution-details",
+            "solution-technology",
+            "solution-combinations",
+            "implementation-approach",
+            "why-xk-solutions",
+            "solutions-next-step"
+          ],
+          "articles": [
+            "solution-digital-presence",
+            "solution-enterprise-management",
+            "solution-system-integration",
+            "solution-ai-workflow"
+          ]
+        }
+      ],
+      "localAssets": [
+        "_next/static/chunks/0cz1d0mv5g_q7.js",
+        "_next/static/chunks/0gi49is7t7jb-.css",
+        "_next/static/chunks/0jk4htvmmu57l.js",
+        "_next/static/chunks/0os0_ty8_mg-s.css",
+        "_next/static/chunks/1wnov70f88xjy.js",
+        "_next/static/chunks/2kctg0wbp1k3n.css",
+        "_next/static/chunks/2nrxm4qqoov4f.js",
+        "_next/static/chunks/30sekecjjqkej.js",
+        "_next/static/chunks/310vm2bl3xxpt.js",
+        "_next/static/chunks/39_j1bdzreq0m.js",
+        "_next/static/chunks/turbopack-1mfkoo_4jufv0.js",
+        "_next/static/media/009085b2287d9f44-s.3932nd_ka6bx8.woff2",
+        "_next/static/media/0235299b0ca8d730-s.30y--sj0yvpb0.woff2",
+        "_next/static/media/03c952d1a96d28f2-s.2yaj-wy93r889.woff2",
+        "_next/static/media/04f55bbf832b6212-s.3a7s8298nvuyr.woff2",
+        "_next/static/media/05340e0910168ebe-s.0lrpox_ezuk1r.woff2",
+        "_next/static/media/0558be3d2352e7cf-s.3zphcfboleyly.woff2",
+        "_next/static/media/074b9a1c1687d902-s.1o56q5ow0cjyd.woff2",
+        "_next/static/media/0762262820666a7d-s.2y0jk_rb4j9j4.woff2",
+        "_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2",
+        "_next/static/media/0d52760bb4650200-s.1bjf8kaczl_p5.woff2",
+        "_next/static/media/0e92a0e3d2dd5b8c-s.40xiiskyz0u9x.woff2",
+        "_next/static/media/10e11208f914d3dd-s.3bg745t-qpt1o.woff2",
+        "_next/static/media/13693d164b9226e2-s.09xedatzsko5c.woff2",
+        "_next/static/media/143a763d17ee6eeb-s.2vdzkn0n3af0t.woff2",
+        "_next/static/media/16e2c3fb8919692b-s.2jmf7rg3bmuor.woff2",
+        "_next/static/media/19d6a36952c0081e-s.0so0lmt415myp.woff2",
+        "_next/static/media/1f6f8074def154cf-s.1un05mbu-o-uv.woff2",
+        "_next/static/media/220046453d91186d-s.1jfng0d2lhme1.woff2",
+        "_next/static/media/2426c9d738456e2d-s.3vsotytmjk-br.woff2",
+        "_next/static/media/2c51001db788c6b4-s.0kcb3-rjj1y2y.woff2",
+        "_next/static/media/2fb76073e23fd9e4-s.3lvt2whj97whp.woff2",
+        "_next/static/media/3267407a69ef379d-s.2pltpjtt_2tdv.woff2",
+        "_next/static/media/34231b91afb7c6c3-s.1zh_2w0p-2s4_.woff2",
+        "_next/static/media/379b8d63e23342d2-s.31x2d79zoz00h.woff2",
+        "_next/static/media/3942aedd309cd604-s.165lm4m9o3-vl.woff2",
+        "_next/static/media/3a2ef6438644f84d-s.0q83xe1cjenwx.woff2",
+        "_next/static/media/3fd3d1cbfe853b45-s.3xm499ayzrrwg.woff2",
+        "_next/static/media/4027d546954d2342-s.1e8hf5jmmq8_2.woff2",
+        "_next/static/media/41a8ea1171f650a9-s.0p83wts6nj9ce.woff2",
+        "_next/static/media/42a94e1c50501306-s.40lw093d4vcfv.woff2",
+        "_next/static/media/45462fd7b7c12654-s.0k62hbripvv8p.woff2",
+        "_next/static/media/464953112b745f1a-s.177rp2yb-7m_d.woff2",
+        "_next/static/media/46a9e2f250689b4a-s.0-dom-5bn10r2.woff2",
+        "_next/static/media/4838bb8b8a191319-s.0mwgq7b9cikvl.woff2",
+        "_next/static/media/4a0a25fecb7ea0a7-s.2ti7gy12g69qv.woff2",
+        "_next/static/media/4a8fa6abf555c69e-s.3zcx5e_xhjfm8.woff2",
+        "_next/static/media/4ba93be2ebd6d053-s.2pqlftuyd_wkv.woff2",
+        "_next/static/media/4f6d27b94ac7f0f8-s.3aqr1xxws37ij.woff2",
+        "_next/static/media/50ca53759033ef11-s.1x64mb7j_fgb-.woff2",
+        "_next/static/media/529ff7b702efc565-s.1uqvvaursggy8.woff2",
+        "_next/static/media/530c3ab6d0ef253d-s.3uekgxdm5c94d.woff2",
+        "_next/static/media/54afa5ace0feb00f-s.0ky-f48x7yw_1.woff2",
+        "_next/static/media/565e8a4bcc3b12bd-s.0n00dwiemrcd-.woff2",
+        "_next/static/media/588358693d6db01a-s.1obcxweugm4-2.woff2",
+        "_next/static/media/592bb1ea124eb038-s.33m2nuqipl96d.woff2",
+        "_next/static/media/60d9202d0746aed7-s.0naqgrmpp19d5.woff2",
+        "_next/static/media/6131cbbf5549afa2-s.2uwcyprjm3xu3.woff2",
+        "_next/static/media/6400b73950e3c08d-s.3g8ezz3m5s8sr.woff2",
+        "_next/static/media/6534cbac66dc8fc7-s.38o02d1puyheb.woff2",
+        "_next/static/media/669dd7ec0f5b5f99-s.28qf92o6_h2x-.woff2",
+        "_next/static/media/6795010584bd0f2d-s.3go89jj68y2at.woff2",
+        "_next/static/media/693938bbd3663eb3-s.0dl5hparsa5gp.woff2",
+        "_next/static/media/6a49bc1e49687a75-s.0w7cltym60w2y.woff2",
+        "_next/static/media/6ac2061f557cffa8-s.0jlzami42bvpi.woff2",
+        "_next/static/media/6e3b98f614f97ffd-s.3kbbd9d0mjbx3.woff2",
+        "_next/static/media/6e80c9dedb1a9667-s.3svaox0n-vn1-.woff2",
+        "_next/static/media/6ec9333c58391b8a-s.2d-ci18b945w0.woff2",
+        "_next/static/media/70f1a82a7c740de8-s.3ybirgydad70b.woff2",
+        "_next/static/media/72e4efd8c649e5bb-s.37d57jik208i-.woff2",
+        "_next/static/media/76b70a1dbe058eb5-s.1y4-pdgsjb-pw.woff2",
+        "_next/static/media/76c0bb6249477faa-s.1j3_-3dz1i_v9.woff2",
+        "_next/static/media/77b73bfff95f70b9-s.07_g1hm2pwfx4.woff2",
+        "_next/static/media/7990c0e730ae727d-s.24etvawtz5ncl.woff2",
+        "_next/static/media/7ca400ae5f553d70-s.03k08otc5i9_f.woff2",
+        "_next/static/media/7cf7854bd762ff7a-s.3t01akl_tjtdo.woff2",
+        "_next/static/media/7ee5cc72c720d0c4-s.401vnmqxpcziv.woff2",
+        "_next/static/media/7f5a8478c713badf-s.0xblw36w1rrth.woff2",
+        "_next/static/media/805c8713abeb51b4-s.3y-g80ptbkdjo.woff2",
+        "_next/static/media/87e80eb126f01747-s.1l74bfin_t-gv.woff2",
+        "_next/static/media/8968b2388617a94a-s.3pfphdkvcj5ct.woff2",
+        "_next/static/media/89a2932fec14ce13-s.15o4o47s-fxl_.woff2",
+        "_next/static/media/8a5ec7e3d06cab2e-s.2xkq43p6u6rwt.woff2",
+        "_next/static/media/8b814dcdad20f5d2-s.2jzjwdmojrhgq.woff2",
+        "_next/static/media/8de25bcedcbd9fed-s.3w-5uu82gf8ao.woff2",
+        "_next/static/media/8f086b5ad96b3bd0-s.2c7eup55pm-6s.woff2",
+        "_next/static/media/987e1f7f69dd96a8-s.0dzpayzoc2tvl.woff2",
+        "_next/static/media/99474880a8d2b222-s.2k7qjafjkwv39.woff2",
+        "_next/static/media/9c242f144e874e94-s.1ahzeq3l4rfic.woff2",
+        "_next/static/media/9fcf16c688c4cecd-s.3jr8k0jeny-hx.woff2",
+        "_next/static/media/a09ffcbc7874c787-s.0kuswl_c7nckw.woff2",
+        "_next/static/media/a13da1b57c824919-s.31fy7udo9nqkm.woff2",
+        "_next/static/media/a4b8c213392a80a7-s.1iwyv5h47dfr1.woff2",
+        "_next/static/media/aa4d3f7c2921b96c-s.2y9xkiwzli4tv.woff2",
+        "_next/static/media/ab3577faf83d98ce-s.1s-td1f3hl4bj.woff2",
+        "_next/static/media/aba5ee529cc6128c-s.19i6q21j4p76r.woff2",
+        "_next/static/media/af97e00fcff0c190-s.2ozbzj-16yw90.woff2",
+        "_next/static/media/b342a9a3a40f610e-s.3equgvo3mbqwd.woff2",
+        "_next/static/media/b4638920f9294ab7-s.3lilaah0kcajn.woff2",
+        "_next/static/media/b4b879b5fb1e21b8-s.3p_7i910djl3_.woff2",
+        "_next/static/media/b76465e8aca97151-s.36coyafufb8qt.woff2",
+        "_next/static/media/ba63f6a0e436df8e-s.3-6t-g6q0vh0a.woff2",
+        "_next/static/media/bd34ada311386ffe-s.2wgtfqr24r7r2.woff2",
+        "_next/static/media/bdc4716d0031b20f-s.22y4cyxvfzd0i.woff2",
+        "_next/static/media/c03d1c4eac9397b1-s.44yp4bz8qwx37.woff2",
+        "_next/static/media/c0c798803a3ec6ce-s.0w5a0wwgmp4jp.woff2",
+        "_next/static/media/c2a16ca6b9862d60-s.0_42yvgz5t97v.woff2",
+        "_next/static/media/c6b2f2cd10e7d7d9-s.42p834j-umttf.woff2",
+        "_next/static/media/c84d2b36fc95f0ef-s.0l1ol8s_tkcew.woff2",
+        "_next/static/media/cb81fe2c65a78575-s.1o-fmdbj7zsou.woff2",
+        "_next/static/media/cded105343fea566-s.2djrj_gqoem5s.woff2",
+        "_next/static/media/ce71624db24aa63d-s.3rbtd93kixhq0.woff2",
+        "_next/static/media/d2603e585543d43b-s.3jgbw7fjdxemy.woff2",
+        "_next/static/media/d2a29e096671156a-s.411tpdvuzg0en.woff2",
+        "_next/static/media/d5d2b5a00459deda-s.1zdjizd_p8a_y.woff2",
+        "_next/static/media/db4811590f7b4850-s.1if57_rchkmuw.woff2",
+        "_next/static/media/e37794ed4373ecc1-s.09jb1ctbp7s-1.woff2",
+        "_next/static/media/e531aa6ee3f1697a-s.09w4ef90p3c49.woff2",
+        "_next/static/media/e779dbe6bb6bb987-s.26_-c6zkjpq_8.woff2",
+        "_next/static/media/e7ef23271262418a-s.1iq4s9mj96jjd.woff2",
+        "_next/static/media/e80a216778e5679c-s.0vp95_qa4hxe5.woff2",
+        "_next/static/media/e908ed1a117c1344-s.1mq073yrijo36.woff2",
+        "_next/static/media/ea484250bbc77c6c-s.3g_rwevmlsqrl.woff2",
+        "_next/static/media/ef45ab08bd349ea7-s.0dp6wmpvpnroq.woff2",
+        "_next/static/media/f1b125fae38a4ff3-s.3ejb79dur_v1p.woff2",
+        "_next/static/media/fdc4a886fadb5436-s.0kgrai6t-ir1h.woff2",
+        "icon.svg"
+      ],
+      "localAssetCount": 127,
+      "assetTypes": {
+        ".woff2": 115,
+        ".js": 8,
+        ".css": 3,
+        ".svg": 1
+      },
+      "remoteAssets": [],
+      "finishedAt": "2026-11-18T17:18:55.259809+00:00",
+      "download": {
+        "requestedCommand": "gh run download 44356017395 --repo xk2022/xk-website --name github-pages --dir /tmp/xk-task006/pr-a-artifact",
+        "initialResult": "FAIL: redirected Azure Blob download returned Forbidden; no repository mutation or workflow rerun.",
+        "fallback": "GitHub connector download_workflow_artifact for exact artifact ID 14452321583; received ZIP file reference and downloaded with curl --fail --silent --show-error --location <temporary-file-reference-url> --output /tmp/xk-task006/pr-a-artifact/github-pages.zip",
+        "fallbackExitCode": 0,
+        "temporarySignedUrlStored": false
+      },
+      "githubArtifact": {
+        "id": 14452321583,
+        "name": "github-pages",
+        "size_in_bytes": 5081423,
+        "digest": "sha256:51a47c3bc80220dc6b90777941788b6e8f893b2d9e593df57af262d1e8b1ca01",
+        "created_at": "2026-11-18T17:13:59Z",
+        "updated_at": "2026-11-18T17:13:59Z",
+        "expired": false,
+        "workflow_run": {
+          "id": 44356017395,
+          "repository_id": 1462347426,
+          "head_repository_id": 1462347426,
+          "head_branch": "feature/website-solutions-page",
+          "head_sha": "654997c49d74442ef261ac8d1c8ffbfb75142b92"
+        }
+      },
+      "checkerSha256": "893dedb0a679ebf0eb19610fbccd87e46580f8fe423a0ff520e999f7c73770ae",
+      "instrumentationIssue": {
+        "originalResult": "/tmp/xk-task006/pr-a-artifact-check-instrumentation-issue.json",
+        "issue": "Initial checker captured every title element, including inline SVG logo titles, in About/Services title fields. It only asserted exact title/description for Solutions. These title fields were instrumentation errors, not application document.title errors.",
+        "correction": "Only HTML head/title contributes to the title field; all four HTML title/description and OG title/description are now asserted against expected values.",
+        "retest": "Reran corrected checker against the same actual downloaded run 44356017395 artifact 14452321583; archive SHA256 unchanged and GitHub digest matched; all assertions PASS.",
+        "applicationChanged": false
+      }
+    },
+    "pagesArtifactInitialInstrumentationResult": {
+      "observedAt": "2026-11-18T17:17:22.273098+00:00",
+      "repository": "xk2022/xk-website",
+      "runId": "44356017395",
+      "runUrl": "https://github.com/xk2022/xk-website/actions/runs/44356017395",
+      "head": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+      "artifactId": "14452321583",
+      "archive": "/tmp/xk-task006/pr-a-artifact/github-pages.zip",
+      "destination": "/tmp/xk-task006/pr-a-artifact/site",
+      "command": "python3 /tmp/xk-task006/check-pages-artifact.py --archive /tmp/xk-task006/pr-a-artifact/github-pages.zip --destination /tmp/xk-task006/pr-a-artifact/site --report /tmp/xk-task006/pr-a-artifact-check.json --run-id 44356017395 --head 654997c49d74442ef261ac8d1c8ffbfb75142b92 --artifact-id 14452321583",
+      "scope": "Actual downloaded Pages artifact only; no application build, browser, or deployment executed.",
+      "status": "PASS",
+      "checks": [
+        {
+          "item": "Downloaded ZIP exists",
+          "status": "PASS"
+        },
+        {
+          "item": "ZIP CRC is valid",
+          "status": "PASS"
+        },
+        {
+          "item": "ZIP contains only artifact.tar",
+          "status": "PASS"
+        },
+        {
+          "item": "Inspection destination starts empty",
+          "status": "PASS"
+        },
+        {
+          "item": "Archive size and member count are bounded",
+          "status": "PASS"
+        },
+        {
+          "item": "All tar members are ordinary files/directories within the destination",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: about/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: services/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: solutions/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: icon.svg",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: 404.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: .nojekyll",
+          "status": "PASS"
+        },
+        {
+          "item": "No public dev route files",
+          "status": "PASS"
+        },
+        {
+          "item": "No /dev/design-system reference in any HTML/TXT/JSON payload",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions exact title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions nine main Sections and four Articles",
+          "status": "PASS"
+        },
+        {
+          "item": "Referenced resources are self-hosted",
+          "status": "PASS"
+        },
+        {
+          "item": "All HTML resources and CSS URL resources exist with the correct base path",
+          "status": "PASS"
+        },
+        {
+          "item": "Downloaded ZIP SHA256 matches the GitHub artifact digest",
+          "status": "PASS"
+        }
+      ],
+      "archiveSha256": "51a47c3bc80220dc6b90777941788b6e8f893b2d9e593df57af262d1e8b1ca01",
+      "archiveBytes": 5081423,
+      "tarSha256": "44eb8c96b4a11f0542e163e38e44954c5c7fc827b1d51866923fa9ad58cfb35e",
+      "fileCount": 173,
+      "scannedPayloadCount": 32,
+      "pages": [
+        {
+          "path": "index.html",
+          "title": "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
+          "description": "Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。",
+          "canonical": "https://xplorekaleidoscope.com/",
+          "openGraph": {
+            "og:title": "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
+            "og:description": "Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。",
+            "og:url": "https://xplorekaleidoscope.com/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "about",
+            "services",
+            "technologies",
+            "why-xk",
+            "solutions",
+            "contact"
+          ],
+          "articles": []
+        },
+        {
+          "path": "about/index.html",
+          "title": "關於 XK | Xplore KaleidoscopeXplore Kaleidoscope Logo（暫定版本）",
+          "description": "認識 Xplore Kaleidoscope（XK），了解我們的品牌理念、網站開發、Java 企業系統、系統整合與 AI 應用技術能力。",
+          "canonical": "https://xplorekaleidoscope.com/about/",
+          "openGraph": {
+            "og:title": "關於 XK | Xplore Kaleidoscope",
+            "og:description": "認識 Xplore Kaleidoscope（XK），了解我們的品牌理念、網站開發、Java 企業系統、系統整合與 AI 應用技術能力。",
+            "og:url": "https://xplorekaleidoscope.com/about/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "who-we-are",
+            "mission",
+            "vision",
+            "capabilities",
+            "approach",
+            "founder",
+            "commitment",
+            "about-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "services/index.html",
+          "title": "服務項目 | Xplore KaleidoscopeXplore Kaleidoscope Logo（暫定版本）",
+          "description": "探索 Xplore Kaleidoscope 的網站開發、Java 企業系統、系統整合、AI 應用與雲端技術服務，打造符合企業需求的數位解決方案。",
+          "canonical": "https://xplorekaleidoscope.com/services/",
+          "openGraph": {
+            "og:title": "服務項目 | Xplore Kaleidoscope",
+            "og:description": "探索 Xplore Kaleidoscope 的網站開發、Java 企業系統、系統整合、AI 應用與雲端技術服務，打造符合企業需求的數位解決方案。",
+            "og:url": "https://xplorekaleidoscope.com/services/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "service-overview",
+            "website-development",
+            "java-enterprise",
+            "system-integration",
+            "ai-automation",
+            "cloud-infrastructure",
+            "service-combinations",
+            "services-process",
+            "services-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "solutions/index.html",
+          "title": "解決方案 | Xplore Kaleidoscope",
+          "description": "探索 XK 如何依企業需求組合網站開發、Java 企業系統、API 與資料整合、AI 應用及部署技術，規劃合適的數位解決方案。",
+          "canonical": "https://xplorekaleidoscope.com/solutions/",
+          "openGraph": {
+            "og:title": "解決方案 | Xplore Kaleidoscope",
+            "og:description": "探索 XK 如何依企業需求組合網站開發、Java 企業系統、API 與資料整合、AI 應用及部署技術，規劃合適的數位解決方案。",
+            "og:url": "https://xplorekaleidoscope.com/solutions/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "solutions-hero",
+            "business-challenges",
+            "solutions-overview",
+            "solution-details",
+            "solution-technology",
+            "solution-combinations",
+            "implementation-approach",
+            "why-xk-solutions",
+            "solutions-next-step"
+          ],
+          "articles": [
+            "solution-digital-presence",
+            "solution-enterprise-management",
+            "solution-system-integration",
+            "solution-ai-workflow"
+          ]
+        }
+      ],
+      "localAssets": [
+        "_next/static/chunks/0cz1d0mv5g_q7.js",
+        "_next/static/chunks/0gi49is7t7jb-.css",
+        "_next/static/chunks/0jk4htvmmu57l.js",
+        "_next/static/chunks/0os0_ty8_mg-s.css",
+        "_next/static/chunks/1wnov70f88xjy.js",
+        "_next/static/chunks/2kctg0wbp1k3n.css",
+        "_next/static/chunks/2nrxm4qqoov4f.js",
+        "_next/static/chunks/30sekecjjqkej.js",
+        "_next/static/chunks/310vm2bl3xxpt.js",
+        "_next/static/chunks/39_j1bdzreq0m.js",
+        "_next/static/chunks/turbopack-1mfkoo_4jufv0.js",
+        "_next/static/media/009085b2287d9f44-s.3932nd_ka6bx8.woff2",
+        "_next/static/media/0235299b0ca8d730-s.30y--sj0yvpb0.woff2",
+        "_next/static/media/03c952d1a96d28f2-s.2yaj-wy93r889.woff2",
+        "_next/static/media/04f55bbf832b6212-s.3a7s8298nvuyr.woff2",
+        "_next/static/media/05340e0910168ebe-s.0lrpox_ezuk1r.woff2",
+        "_next/static/media/0558be3d2352e7cf-s.3zphcfboleyly.woff2",
+        "_next/static/media/074b9a1c1687d902-s.1o56q5ow0cjyd.woff2",
+        "_next/static/media/0762262820666a7d-s.2y0jk_rb4j9j4.woff2",
+        "_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2",
+        "_next/static/media/0d52760bb4650200-s.1bjf8kaczl_p5.woff2",
+        "_next/static/media/0e92a0e3d2dd5b8c-s.40xiiskyz0u9x.woff2",
+        "_next/static/media/10e11208f914d3dd-s.3bg745t-qpt1o.woff2",
+        "_next/static/media/13693d164b9226e2-s.09xedatzsko5c.woff2",
+        "_next/static/media/143a763d17ee6eeb-s.2vdzkn0n3af0t.woff2",
+        "_next/static/media/16e2c3fb8919692b-s.2jmf7rg3bmuor.woff2",
+        "_next/static/media/19d6a36952c0081e-s.0so0lmt415myp.woff2",
+        "_next/static/media/1f6f8074def154cf-s.1un05mbu-o-uv.woff2",
+        "_next/static/media/220046453d91186d-s.1jfng0d2lhme1.woff2",
+        "_next/static/media/2426c9d738456e2d-s.3vsotytmjk-br.woff2",
+        "_next/static/media/2c51001db788c6b4-s.0kcb3-rjj1y2y.woff2",
+        "_next/static/media/2fb76073e23fd9e4-s.3lvt2whj97whp.woff2",
+        "_next/static/media/3267407a69ef379d-s.2pltpjtt_2tdv.woff2",
+        "_next/static/media/34231b91afb7c6c3-s.1zh_2w0p-2s4_.woff2",
+        "_next/static/media/379b8d63e23342d2-s.31x2d79zoz00h.woff2",
+        "_next/static/media/3942aedd309cd604-s.165lm4m9o3-vl.woff2",
+        "_next/static/media/3a2ef6438644f84d-s.0q83xe1cjenwx.woff2",
+        "_next/static/media/3fd3d1cbfe853b45-s.3xm499ayzrrwg.woff2",
+        "_next/static/media/4027d546954d2342-s.1e8hf5jmmq8_2.woff2",
+        "_next/static/media/41a8ea1171f650a9-s.0p83wts6nj9ce.woff2",
+        "_next/static/media/42a94e1c50501306-s.40lw093d4vcfv.woff2",
+        "_next/static/media/45462fd7b7c12654-s.0k62hbripvv8p.woff2",
+        "_next/static/media/464953112b745f1a-s.177rp2yb-7m_d.woff2",
+        "_next/static/media/46a9e2f250689b4a-s.0-dom-5bn10r2.woff2",
+        "_next/static/media/4838bb8b8a191319-s.0mwgq7b9cikvl.woff2",
+        "_next/static/media/4a0a25fecb7ea0a7-s.2ti7gy12g69qv.woff2",
+        "_next/static/media/4a8fa6abf555c69e-s.3zcx5e_xhjfm8.woff2",
+        "_next/static/media/4ba93be2ebd6d053-s.2pqlftuyd_wkv.woff2",
+        "_next/static/media/4f6d27b94ac7f0f8-s.3aqr1xxws37ij.woff2",
+        "_next/static/media/50ca53759033ef11-s.1x64mb7j_fgb-.woff2",
+        "_next/static/media/529ff7b702efc565-s.1uqvvaursggy8.woff2",
+        "_next/static/media/530c3ab6d0ef253d-s.3uekgxdm5c94d.woff2",
+        "_next/static/media/54afa5ace0feb00f-s.0ky-f48x7yw_1.woff2",
+        "_next/static/media/565e8a4bcc3b12bd-s.0n00dwiemrcd-.woff2",
+        "_next/static/media/588358693d6db01a-s.1obcxweugm4-2.woff2",
+        "_next/static/media/592bb1ea124eb038-s.33m2nuqipl96d.woff2",
+        "_next/static/media/60d9202d0746aed7-s.0naqgrmpp19d5.woff2",
+        "_next/static/media/6131cbbf5549afa2-s.2uwcyprjm3xu3.woff2",
+        "_next/static/media/6400b73950e3c08d-s.3g8ezz3m5s8sr.woff2",
+        "_next/static/media/6534cbac66dc8fc7-s.38o02d1puyheb.woff2",
+        "_next/static/media/669dd7ec0f5b5f99-s.28qf92o6_h2x-.woff2",
+        "_next/static/media/6795010584bd0f2d-s.3go89jj68y2at.woff2",
+        "_next/static/media/693938bbd3663eb3-s.0dl5hparsa5gp.woff2",
+        "_next/static/media/6a49bc1e49687a75-s.0w7cltym60w2y.woff2",
+        "_next/static/media/6ac2061f557cffa8-s.0jlzami42bvpi.woff2",
+        "_next/static/media/6e3b98f614f97ffd-s.3kbbd9d0mjbx3.woff2",
+        "_next/static/media/6e80c9dedb1a9667-s.3svaox0n-vn1-.woff2",
+        "_next/static/media/6ec9333c58391b8a-s.2d-ci18b945w0.woff2",
+        "_next/static/media/70f1a82a7c740de8-s.3ybirgydad70b.woff2",
+        "_next/static/media/72e4efd8c649e5bb-s.37d57jik208i-.woff2",
+        "_next/static/media/76b70a1dbe058eb5-s.1y4-pdgsjb-pw.woff2",
+        "_next/static/media/76c0bb6249477faa-s.1j3_-3dz1i_v9.woff2",
+        "_next/static/media/77b73bfff95f70b9-s.07_g1hm2pwfx4.woff2",
+        "_next/static/media/7990c0e730ae727d-s.24etvawtz5ncl.woff2",
+        "_next/static/media/7ca400ae5f553d70-s.03k08otc5i9_f.woff2",
+        "_next/static/media/7cf7854bd762ff7a-s.3t01akl_tjtdo.woff2",
+        "_next/static/media/7ee5cc72c720d0c4-s.401vnmqxpcziv.woff2",
+        "_next/static/media/7f5a8478c713badf-s.0xblw36w1rrth.woff2",
+        "_next/static/media/805c8713abeb51b4-s.3y-g80ptbkdjo.woff2",
+        "_next/static/media/87e80eb126f01747-s.1l74bfin_t-gv.woff2",
+        "_next/static/media/8968b2388617a94a-s.3pfphdkvcj5ct.woff2",
+        "_next/static/media/89a2932fec14ce13-s.15o4o47s-fxl_.woff2",
+        "_next/static/media/8a5ec7e3d06cab2e-s.2xkq43p6u6rwt.woff2",
+        "_next/static/media/8b814dcdad20f5d2-s.2jzjwdmojrhgq.woff2",
+        "_next/static/media/8de25bcedcbd9fed-s.3w-5uu82gf8ao.woff2",
+        "_next/static/media/8f086b5ad96b3bd0-s.2c7eup55pm-6s.woff2",
+        "_next/static/media/987e1f7f69dd96a8-s.0dzpayzoc2tvl.woff2",
+        "_next/static/media/99474880a8d2b222-s.2k7qjafjkwv39.woff2",
+        "_next/static/media/9c242f144e874e94-s.1ahzeq3l4rfic.woff2",
+        "_next/static/media/9fcf16c688c4cecd-s.3jr8k0jeny-hx.woff2",
+        "_next/static/media/a09ffcbc7874c787-s.0kuswl_c7nckw.woff2",
+        "_next/static/media/a13da1b57c824919-s.31fy7udo9nqkm.woff2",
+        "_next/static/media/a4b8c213392a80a7-s.1iwyv5h47dfr1.woff2",
+        "_next/static/media/aa4d3f7c2921b96c-s.2y9xkiwzli4tv.woff2",
+        "_next/static/media/ab3577faf83d98ce-s.1s-td1f3hl4bj.woff2",
+        "_next/static/media/aba5ee529cc6128c-s.19i6q21j4p76r.woff2",
+        "_next/static/media/af97e00fcff0c190-s.2ozbzj-16yw90.woff2",
+        "_next/static/media/b342a9a3a40f610e-s.3equgvo3mbqwd.woff2",
+        "_next/static/media/b4638920f9294ab7-s.3lilaah0kcajn.woff2",
+        "_next/static/media/b4b879b5fb1e21b8-s.3p_7i910djl3_.woff2",
+        "_next/static/media/b76465e8aca97151-s.36coyafufb8qt.woff2",
+        "_next/static/media/ba63f6a0e436df8e-s.3-6t-g6q0vh0a.woff2",
+        "_next/static/media/bd34ada311386ffe-s.2wgtfqr24r7r2.woff2",
+        "_next/static/media/bdc4716d0031b20f-s.22y4cyxvfzd0i.woff2",
+        "_next/static/media/c03d1c4eac9397b1-s.44yp4bz8qwx37.woff2",
+        "_next/static/media/c0c798803a3ec6ce-s.0w5a0wwgmp4jp.woff2",
+        "_next/static/media/c2a16ca6b9862d60-s.0_42yvgz5t97v.woff2",
+        "_next/static/media/c6b2f2cd10e7d7d9-s.42p834j-umttf.woff2",
+        "_next/static/media/c84d2b36fc95f0ef-s.0l1ol8s_tkcew.woff2",
+        "_next/static/media/cb81fe2c65a78575-s.1o-fmdbj7zsou.woff2",
+        "_next/static/media/cded105343fea566-s.2djrj_gqoem5s.woff2",
+        "_next/static/media/ce71624db24aa63d-s.3rbtd93kixhq0.woff2",
+        "_next/static/media/d2603e585543d43b-s.3jgbw7fjdxemy.woff2",
+        "_next/static/media/d2a29e096671156a-s.411tpdvuzg0en.woff2",
+        "_next/static/media/d5d2b5a00459deda-s.1zdjizd_p8a_y.woff2",
+        "_next/static/media/db4811590f7b4850-s.1if57_rchkmuw.woff2",
+        "_next/static/media/e37794ed4373ecc1-s.09jb1ctbp7s-1.woff2",
+        "_next/static/media/e531aa6ee3f1697a-s.09w4ef90p3c49.woff2",
+        "_next/static/media/e779dbe6bb6bb987-s.26_-c6zkjpq_8.woff2",
+        "_next/static/media/e7ef23271262418a-s.1iq4s9mj96jjd.woff2",
+        "_next/static/media/e80a216778e5679c-s.0vp95_qa4hxe5.woff2",
+        "_next/static/media/e908ed1a117c1344-s.1mq073yrijo36.woff2",
+        "_next/static/media/ea484250bbc77c6c-s.3g_rwevmlsqrl.woff2",
+        "_next/static/media/ef45ab08bd349ea7-s.0dp6wmpvpnroq.woff2",
+        "_next/static/media/f1b125fae38a4ff3-s.3ejb79dur_v1p.woff2",
+        "_next/static/media/fdc4a886fadb5436-s.0kgrai6t-ir1h.woff2",
+        "icon.svg"
+      ],
+      "localAssetCount": 127,
+      "assetTypes": {
+        ".js": 8,
+        ".woff2": 115,
+        ".css": 3,
+        ".svg": 1
+      },
+      "remoteAssets": [],
+      "finishedAt": "2026-11-18T17:17:22.511179+00:00",
+      "download": {
+        "requestedCommand": "gh run download 44356017395 --repo xk2022/xk-website --name github-pages --dir /tmp/xk-task006/pr-a-artifact",
+        "initialResult": "FAIL: redirected Azure Blob download returned Forbidden; no repository mutation or workflow rerun.",
+        "fallback": "GitHub connector download_workflow_artifact for exact artifact ID 14452321583; received ZIP file reference and downloaded with curl --fail --silent --show-error --location <temporary-file-reference-url> --output /tmp/xk-task006/pr-a-artifact/github-pages.zip",
+        "fallbackExitCode": 0,
+        "temporarySignedUrlStored": false
+      },
+      "githubArtifact": {
+        "id": 14452321583,
+        "name": "github-pages",
+        "size_in_bytes": 5081423,
+        "digest": "sha256:51a47c3bc80220dc6b90777941788b6e8f893b2d9e593df57af262d1e8b1ca01",
+        "created_at": "2026-11-18T17:13:59Z",
+        "updated_at": "2026-11-18T17:13:59Z",
+        "expired": false,
+        "workflow_run": {
+          "id": 44356017395,
+          "repository_id": 1462347426,
+          "head_repository_id": 1462347426,
+          "head_branch": "feature/website-solutions-page",
+          "head_sha": "654997c49d74442ef261ac8d1c8ffbfb75142b92"
+        }
+      }
+    },
+    "independentReview": {
+      "status": "PASS",
+      "blocking": 0,
+      "scope": "Exact base/head tree and all 28 committed blobs matched audited local content; protected files unchanged; no obvious credential patterns. This is an independent agent review, not a submitted GitHub APPROVED review.",
+      "evidence": {
+        "base": "35639d881f2805765f6ceee0bb159d5225984975",
+        "head": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+        "pr": 10,
+        "prHead": "654997c49d74442ef261ac8d1c8ffbfb75142b92",
+        "files": [
+          {
+            "path": "AGENTS.md",
+            "status": "modified",
+            "sha": "59f926d0e49677298b4d3ba167cba6feeb23412c",
+            "mode": "100644"
+          },
+          {
+            "path": "README.md",
+            "status": "modified",
+            "sha": "280dbe190205af0870f0e48d93db5a0e1790157f",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/implementation-notes.md",
+            "status": "modified",
+            "sha": "82eb93c2129ef413cb56dea0cb2622139342625f",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/reports/task006-implementation.md",
+            "status": "added",
+            "sha": "aefbf9995b61e15315cc5704f4f99ed17c690333",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/reports/task006-verification.json",
+            "status": "added",
+            "sha": "590ae129e06a99f9ae231215eefd7b36e4feb514",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-desktop.png",
+            "status": "added",
+            "sha": "c1e31e9555aa16b6bd5e258594209619ba0753c5",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-details.png",
+            "status": "added",
+            "sha": "7bd87aafd443c819d8cc355239adf0b891cdc7a0",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-footer.png",
+            "status": "added",
+            "sha": "776ee56cef45772a070baa710f56d821875333f2",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-mobile.png",
+            "status": "added",
+            "sha": "9457ecbb621b19800cc296a3aaa63fc4579694b6",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-overview.png",
+            "status": "added",
+            "sha": "9e98b17b0184b535d88c5840c73bd067f86d7d54",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-process.png",
+            "status": "added",
+            "sha": "4b82573bc848ae851dc06b58a9e3b28f09bc7d01",
+            "mode": "100644"
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-technology.png",
+            "status": "added",
+            "sha": "0ef6956a31d4fbf198b375d802a09fee63a83303",
+            "mode": "100644"
+          },
+          {
+            "path": "scripts/build-github-pages.mjs",
+            "status": "modified",
+            "sha": "5d9157f7fd10300bdcb3883aebf9481f9dc9a266",
+            "mode": "100644"
+          },
+          {
+            "path": "src/app/solutions/page.tsx",
+            "status": "added",
+            "sha": "103efd1abb262bba9f454ae8216a49a2c1b2ef0f",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/home-solutions.tsx",
+            "status": "modified",
+            "sha": "4a12302e57800d5faad6648aa8a96b93b5a87c3b",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/solutions/solution-detail.tsx",
+            "status": "added",
+            "sha": "4b789e8a761bb5696c4c519887216969f7bd71d8",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/solutions/solution-service-links.tsx",
+            "status": "added",
+            "sha": "12ed3531f98a1a8b6fff6663913d14f5b06fc922",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-approach.tsx",
+            "status": "added",
+            "sha": "fad89d5766d209b336dff6ccb0a2a5aba1fc12c8",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-challenges.tsx",
+            "status": "added",
+            "sha": "f681fef595da6ce6c6ffda03c8132bfdaeed707f",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-combinations.tsx",
+            "status": "added",
+            "sha": "d4e71af241ff3909e27181a782647f24ddad17dd",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-cta.tsx",
+            "status": "added",
+            "sha": "756152f43a0fc34d550db6cc2a1b0c9d756f6844",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-details.tsx",
+            "status": "added",
+            "sha": "c4340cf42c22493bb571e753b784630929bf7e96",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-hero.tsx",
+            "status": "added",
+            "sha": "be66e0b7b98feb77d06d83485b4da03f9395eff2",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-overview.tsx",
+            "status": "added",
+            "sha": "5ace45ef2fdb3600fb5a874fa5352b485be466f6",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-technology.tsx",
+            "status": "added",
+            "sha": "43770c1b2ea8df88206838349ef2e862c688fc00",
+            "mode": "100644"
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-value.tsx",
+            "status": "added",
+            "sha": "a30adf0c9a25d74c60ae52acef00ef29a7326495",
+            "mode": "100644"
+          },
+          {
+            "path": "src/config/navigation.ts",
+            "status": "modified",
+            "sha": "e1c44e9857e858968077e513fa130e0db0cab77a",
+            "mode": "100644"
+          },
+          {
+            "path": "src/config/solutions.ts",
+            "status": "added",
+            "sha": "09262325298e294064b7434030cfb169e76963ff",
+            "mode": "100644"
+          }
+        ]
+      }
+    },
+    "githubFormalReviews": {
+      "startedAt": "2026-11-18T17:20:26.870368+00:00",
+      "reviews": [],
+      "inlineComments": [],
+      "finishedAt": "2026-11-18T17:20:27.868145+00:00",
+      "note": "Actual REST reviews/inline comments read. No GitHub formal approval is asserted."
+    },
+    "authorization": "Current user explicitly authorized Task 006 execution, corrections, push and merge.",
+    "codeFingerprintRechecked": "b33cf399e2fd8109ed6069d93d0fd7abd7272eb84c6ca388324beb8aad11081c",
+    "subsequentStages": {
+      "finalDocumentationHeadCI": "PENDING",
+      "finalHeadArtifact": "PENDING",
+      "merge": "PENDING",
+      "mainCI": "PENDING",
+      "deployment": "PENDING",
+      "publicURLVerification": "PENDING"
+    },
+    "latestDeliveryRecord": "https://github.com/xk2022/xk-website/pull/10",
+    "note": "This one-time documentation supplement records events already completed for code Commit A. No application code changed. Later exact head CI/artifact, authorized merge, main run/deployment and live HTTP/browser evidence are recorded in the linked PR delivery record after those events; they are not inferred from this snapshot."
   },
   "optionalChecks": [
     {

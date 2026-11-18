@@ -1,6 +1,6 @@
 # Task 006 — Solutions 實作與驗證報告
 
-本報告記錄本次正式功能實作的**實際本機驗收**。一般模式 15 項、最終 Pages 70 項及 S06-N01 補充盤點通過；五個品質指令均 Exit Code 0。首兩次 Pages 工具失敗保留為 FAIL，不回寫成 PASS。PR／CI／合併／部署尚未發生的階段維持 PENDING，不能由本機結果推定。
+本報告記錄本次正式功能實作的**實際本機驗收**及第 10 節指定時點的 PR 證據。一般模式 15 項、最終 Pages 70 項及 S06-N01 補充盤點通過；五個品質指令均 Exit Code 0。首兩次 Pages 工具失敗保留為 FAIL，不回寫成 PASS。後續最終 head／合併／部署依 PR 最新交付紀錄確認，不能由本機結果推定。
 
 ## 1. Repository、版本與受測範圍
 
@@ -10,7 +10,7 @@
 - 規格：[Task 006](../task/task006.md)；原規格的初始 PENDING／歷史研究快照保留，不回填成本輪成果。來源、章節與採用界線在 `src/config/solutions.ts`，不把私有路徑堆進訪客流程。
 - Next.js 16.4.6、React／React DOM 19.3.1、TypeScript 5.9.3、Tailwind CSS 4.3.3、shadcn 4.23.0、Lucide React 1.74.0；套件、lockfile、Next 設定、Actions、原始 Logo 與 Tokens 未改。
 
-受測程式碼內容指紋（不是尚未產生的 Commit SHA）：
+受測程式碼內容指紋（對應第 10 節實作 Commit，不涵蓋純文件補正）：
 
 ```text
 b33cf399e2fd8109ed6069d93d0fd7abd7272eb84c6ca388324beb8aad11081c
@@ -140,6 +140,22 @@ Pages：新 build:pages 產物複製至臨時目錄 `/tmp/xk-task006-pages.SqrpM
 
 ## 10. Git、PR、CI 與部署階段
 
-本快照於建立 PR 前完成，本機內容與程式碼指紋已固定。Feature Commit／PR／CI 尚未產生者保持 PENDING，不預填識別碼。PR 建立後以至多一次文件補正加入真實 PR URL、已存在程式碼 Commit 與當時實際 CI；該次文件補正不改程式碼。後續新 head／main／deploy／公開 URL 的實際事件會在該 PR 最新交付紀錄補齊，避免報告自身 SHA 自參或把先前 run 當成新 head。
+本機報告與七張截圖已在 PR 建立前納入實作 Commit。這是 PR 建立後的一次純文件補正；程式碼指紋再次核對不變。此節是第一輪 PR 的實際證據快照，不把它當成後續新 head 或 main 的結果。
 
-[功能分支比較](https://github.com/xk2022/xk-website/compare/main...feature/website-solutions-page) 供 Push 後檢閱；此連結不是 PR 已建立或已合併的證明。目前 PR CI／Review／Merge／main CI／Deployment／Public URL verification：**PENDING**。使用者已授權 Push and merge，但仍須確認本次實際 PR Checks，不能以本機成功代替遠端結果。
+| 階段 | 實際證據與狀態 |
+| --- | --- |
+| 實作 Commit／Push | `654997c49d74442ef261ac8d1c8ffbfb75142b92`，已推送 `feature/website-solutions-page` |
+| Pull Request | [PR #10](https://github.com/xk2022/xk-website/pull/10)，Base `main@35639d881f2805765f6ceee0bb159d5225984975` |
+| 第一輪 PR CI | [Run 44356017395](https://github.com/xk2022/xk-website/actions/runs/44356017395)，精確 head 為上述實作 Commit，2026-11-18 17:12:22–17:14:03 UTC，SUCCESS |
+| Quality | [Job 134984200193](https://github.com/xk2022/xk-website/actions/runs/44356017395/job/134984200193)，SUCCESS；17:12:26–17:13:16 UTC |
+| Pages build | [Job 134984807091](https://github.com/xk2022/xk-website/actions/runs/44356017395/job/134984807091)，SUCCESS；17:13:19–17:14:02 UTC |
+| PR Deploy | [Job 134985335127](https://github.com/xk2022/xk-website/actions/runs/44356017395/job/134985335127)，SKIPPED；功能分支未部署 |
+| Review | 獨立程式／來源／文件覆核 Blocking 0；精確比較兩端 Tree，28 個 Commit Blob 與受測內容一致，沒有受保護檔案或機密變更。此為獨立覆核，不是 GitHub 正式 APPROVED review；當時 GitHub reviews 為空 |
+| 使用者合併授權 | 本輪已明確授權 Push and merge；仍須確認最終 head 的實際 Checks 與 artifact |
+| 後續階段 | 此快照時，純文件補正的新 head CI／合併／main CI／部署／公開網址驗證均 PENDING；實際事件發生後在下述 PR 最新交付紀錄補齊 |
+
+第一輪實際 Pages artifact `14452321583` 已下載核對：49 項斷言 PASS（含 digest），173 檔、32 個 HTML／TXT／JSON payload 無 dev，四頁、404、`.nojekyll` 及 127 個 HTML／CSS 引用資源均存在且 Base Path 正確。127 是全部靜態引用，與瀏覽器實際載入的 27 個資源分開計算。ZIP SHA256 `51a47c3bc80220dc6b90777941788b6e8f893b2d9e593df57af262d1e8b1ca01` 與 GitHub digest 相符。證據見結構化 JSON 的 `remote.pagesArtifact`；本輪沒有把下載產物提交至 Repository。
+
+下載時 `gh run download` 的 Azure Blob redirect 實際回覆 Forbidden；改由 GitHub connector 取得同一 artifact 並成功下載，未保存暫時 signed URL。產物檢查器初稿誤把舊頁 SVG 的 `<title>` 併入 HTML Title 欄位；已限制為 HTML head/title，新增四頁精確 Title／Description／OG 比對，對同一 ZIP 完整重驗 49 項通過。原結果原封保存在 JSON 的 `remote.pagesArtifactInitialInstrumentationResult`，修正與重驗詳見 `instrumentationIssue`。這是驗收工具修正，沒有修改應用程式或降低標準。
+
+最終文件 Commit 的 CI、artifact、Merge SHA、main CI、部署與公開網址驗證將記錄於 [PR #10 最新交付紀錄](https://github.com/xk2022/xk-website/pull/10)。每階段只採用已完成的精確 SHA／Run，不沿用第一輪 CI，不透過追加自參 SHA 製造無限文件 Commit。合併、CI 與正式部署各自查證。
