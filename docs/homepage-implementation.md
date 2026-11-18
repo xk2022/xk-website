@@ -105,6 +105,7 @@ Logo 仍使用兩個原始 XK 路徑、18 個字標路徑與既有 Transform，�
 
 | 狀態 | 檔案 | 用途 |
 | --- | --- | --- |
+| 新增 | `docs/screenshots/task003-1440.png`、`task003-375.png` | 以 Pages 靜態產物擷取的桌面／手機首屏截圖 |
 | 新增 | `.github/workflows/ci.yml` | 品質檢查、兩種 Build、Pages 發布 |
 | 新增 | `scripts/build-github-pages.mjs` | 靜態匯出與產物檢查 |
 | 新增 | `src/components/layout/mobile-navigation.tsx` | 可操作的手機導覽 |
@@ -160,3 +161,11 @@ Logo 仍使用兩個原始 XK 路徑、18 個字標路徑與既有 Transform，�
 已確認可公開的聯絡管道仍待使用者提供；內頁 `/about`、`/services`、服務明細、`/solutions`、`/portfolio`、`/contact`、`/privacy` 尚未實作。最終 Logo 核准、Open Graph Image、正式網域連接、搜尋索引開放與其他後續功能須另依任務執行。沒有建立 Backend 的必要，也沒有在本次引入。
 
 Pages 實際來源設定與發布情況，以部署指南及最終 Actions 結果為準。現有 ESLint 9 與上游 Next.js plugins 的相容性限制維持既有紀錄，本次沒有為此升降級套件。
+
+## PR 視覺證據
+
+以下截圖直接由本次 GitHub Pages 靜態產物擷取，非示意圖。完整頁面與各區塊截圖另隨任務回報提供。
+
+![桌面首頁首屏](screenshots/task003-1440.png)
+
+![手機首頁首屏](screenshots/task003-375.png)
