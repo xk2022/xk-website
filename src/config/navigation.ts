@@ -1,8 +1,15 @@
-// Only implemented destinations belong in public navigation.
+// Only implemented homepage destinations belong in public navigation.
 export const primaryNavigation = [
   { href: "/", label: "首頁" },
-  { href: "/#brand", label: "品牌理念" },
+  { href: "/#about", label: "關於 XK" },
+  { href: "/#services", label: "服務項目" },
+  { href: "/#solutions", label: "解決方案" },
 ] as const;
+
+export const contactNavigation = {
+  href: "/#contact",
+  label: "聯絡我們",
+} as const;
 
 // Planning inventory only. Publish each route after its content is implemented.
 export const plannedRoutes = [
