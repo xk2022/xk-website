@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/sections/section-heading";
+import { Button } from "@/components/ui/button";
 import { solutionDirections } from "@/config/homepage";
 
 export function HomeSolutions() {
@@ -41,6 +42,13 @@ export function HomeSolutions() {
               </span>
             </Link>
           ))}
+        </div>
+        <div className="mt-8">
+          <Button asChild variant="outline" className="w-full sm:w-auto">
+            <Link href="/solutions">
+              了解解決方案 <ArrowUpRight aria-hidden="true" />
+            </Link>
+          </Button>
         </div>
       </Container>
     </Section>
