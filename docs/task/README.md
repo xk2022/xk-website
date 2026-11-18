@@ -4,550 +4,245 @@
 
 所有任務以獨立、可驗收、可追蹤的開發單位執行。每個 Task 原則上只處理一種類型的功能，不將不同頁面、不同技術領域或不同部署工作合併在同一任務。
 
----
+本輪依 [Task 006–014 規格撰寫指示](temp.md) 補齊九份獨立工程規格；**只編寫文件，不實作、測試或發布這九項功能**。保留原索引的任務分類、四階段、共通工程原則、獨立報告、完成門檻與歷史進度，修正原先未閉合的 code fence／表格格式，並補上可執行的依賴與文件連結。
 
 ## 1. Repository
 
-| 項目               | 設定                              |
-| ------------------ | --------------------------------- |
-| Website Repository | `xk2022/xk-website`               |
-| Base Branch        | `main`                            |
-| Feature Branch     | 每個 Task 使用獨立 Feature Branch |
-| Framework          | Next.js                           |
-| Language           | TypeScript                        |
-| Styling            | Tailwind CSS                      |
-| Deployment         | 依各任務指定的平台與設定          |
-| Package Manager    | npm                               |
+| 項目 | 設定 |
+| --- | --- |
+| Website Repository | `xk2022/xk-website`，唯一允許修改的 Repository |
+| Base Branch | `main`；每次執行重新核對最新已合併版本及實際 Base SHA |
+| 本輪規格撰寫基準 | `e2a8f5a33f24d1ea65a3afc3780014a33c204528` |
+| 本輪文件分支 | `docs/task-specifications-006-014`，不是功能分支 |
+| Feature Branch | 每個功能 Task 使用獨立分支，詳各 Task 第 13 節 |
+| 技術架構 | Next.js App Router、React、Strict TypeScript、Tailwind CSS 4、shadcn/ui、Lucide React |
+| 已核對版本快照 | Next.js 16.4.6、React 19.3.1、TypeScript 5.9.3、Tailwind CSS 4.3.3；實作時依 manifest／lockfile 重新確認 |
+| Package Manager／環境 | npm、Node.js 24.x；不任意變更 Dependencies 或 lockfile |
+| 現有部署 | GitHub Actions → GitHub Pages；保留一般 Next.js production build |
+| 未來部署任務 | Task 013 Vercel 與 Task 014 Domain 分別執行；規格存在不授權切換 Pages、部署或修改 DNS |
+| Documentation Repository | `xk2022/xplore-kaleidoscope`，僅讀取，不修改文件、建立開發分支、Commit、Push 或 Merge |
+| 文件版本 | `main@95ef1275a46ace76e11f668178ca881087483398`；本輪唯讀取得 51 檔並核對 Git Blob |
 
-文件 Repository：
-
-- `xk2022/xplore-kaleidoscope`
-- 僅供讀取，不得直接修改。
-
----
+重要來源見各 Task 第 3 節，記錄 Repository、Branch、Commit、路徑、可取得的 Blob SHA、核准狀態及採用內容。可由 [固定版本的文件 Tree](https://github.com/xk2022/xplore-kaleidoscope/tree/95ef1275a46ace76e11f668178ca881087483398) 追溯；未核准規劃不當作既有功能或商業事實。
 
 ## 2. 任務總覽
 
-| Task | 任務名稱               | 開發類型                     | 主要交付                                                   |
-| ---- | ---------------------- | ---------------------------- | ---------------------------------------------------------- |
-| 001  | Repository Bootstrap   | Repository Infrastructure    | 專案初始化、Next.js、TypeScript、Git、開發環境             |
-| 002  | XK Brand Design System | Design System                | 品牌色彩、Typography、Logo、共用 UI 元件                   |
-| 003  | Corporate Homepage     | Website Page                 | 首頁、Header、Footer、Navigation                           |
-| 004  | About Us               | Website Page                 | 品牌介紹、Mission、Vision、Capabilities、Founder           |
-| 005  | Services               | Website Page                 | 服務分類、服務內容、合作流程                               |
-| 006  | Solutions              | Website Page                 | 解決方案介紹、需求情境、技術解決方向                       |
-| 007  | Portfolio              | Website Page                 | 技術作品集、專案展示、Demo Project                         |
-| 008  | Contact                | Website Page                 | 聯絡方式、聯絡表單或其他已確認的聯絡管道                   |
-| 009  | Privacy Policy         | Website Page / Legal Content | 隱私權政策                                                 |
-| 010  | SEO                    | Technical Optimization       | Metadata、Canonical、Open Graph、Structured Data、Indexing |
-| 011  | Performance            | Technical Optimization       | Core Web Vitals、資源最佳化、載入效能                      |
-| 012  | Accessibility          | Technical Optimization       | WCAG、鍵盤操作、Focus、螢幕閱讀器相容性                    |
-| 013  | Vercel Deployment      | Deployment Infrastructure    | Vercel 專案、Build、Production Deployment                  |
-| 014  | Domain Configuration   | Domain Infrastructure        | Custom Domain、DNS、SSL、正式網址                          |
+| Task／文件 | 任務名稱 | 開發類型 | 主要交付 |
+| --- | --- | --- | --- |
+| [001](task001.md) | Repository Bootstrap | Repository Infrastructure | 專案初始化、Next.js、TypeScript、Git、開發環境 |
+| [002](task002.md) | XK Brand Design System | Design System | 品牌色彩、Typography、Logo、共用 UI 元件 |
+| [003](task003.md) | Corporate Homepage | Website Page | 首頁、Header、Footer、Navigation |
+| [004](task004.md) | About Us | Website Page | 品牌介紹、Mission、Vision、Capabilities、Founder |
+| [005](task005.md) | Services | Website Page | 服務分類、服務內容、合作流程 |
+| [006](task006.md) | Solutions | Website Page | 企業需求、解決方向、服務組合與應用情境 |
+| [007](task007.md) | Portfolio | Website Page | 技術作品、分類、狀態、專案說明與真實素材界線 |
+| [008](task008.md) | Contact | Website Page | 已確認聯絡管道；無管道時的誠實呈現，表單另有條件 |
+| [009](task009.md) | Privacy | Website Page / Legal Content | 真實資料處理盤點、法律審查與隱私權政策 |
+| [010](task010.md) | SEO | Technical Optimization | Metadata、Canonical、OG／Twitter、Sitemap、robots、Schema、索引策略 |
+| [011](task011.md) | Performance | Technical Optimization | Core Web Vitals、圖片／字體／Bundle、可重現量測及最佳化 |
+| [012](task012.md) | Accessibility | Technical Optimization | WCAG 2.2 AA、Keyboard／Focus／Screen Reader 與人工驗收 |
+| [013](task013.md) | Vercel Deployment | Deployment Infrastructure | Vercel 專案、Preview／Production、權限、驗收與 Rollback |
+| [014](task014.md) | Domain Configuration | Domain Infrastructure | DNS、SSL／TLS、HTTPS、apex／www、正式網址與網域管理 |
 
-**任務拆分原則：**
-
-- Solutions 與 Portfolio 是兩種不同的頁面目的，分開執行。
-- Contact 與 Privacy Policy 是不同類型的內容，分開執行。
-- SEO、Performance、Accessibility 各自獨立驗收。
-- Vercel Deployment 與 Domain Configuration 分開執行。
-- 不得因為功能相互關聯，就將不同任務合併。
-
----
+Solutions 與 Portfolio、Contact 與 Privacy、SEO／Performance／Accessibility、Vercel 與 Domain 均各自獨立，不因關聯而合併開發、測試報告或完成狀態。
 
 ## 3. 任務執行順序
 
-### Phase 1 — Foundation
+| 建議階段 | 任務 | 目的與執行方式 |
+| --- | --- | --- |
+| Phase 1 — Foundation | 001、002 | 基礎環境與 Design System；已有合併成果，後續保護並回歸 |
+| Phase 2 — Corporate Website | 003–009 | 首頁及獨立內頁；003–005 已合併，006／007／008 可依前置條件平行，009 與 008 資料處理設計協調 |
+| Phase 3 — Technical Optimization | 010、011、012 | 各自獨立驗收；可先針對目前已合併路由改善，其他頁面合併後補回歸 |
+| Phase 4 — Deployment | 013、014 | Vercel 與 Domain 分開操作；013 可先完成準備／獲授權的 Preview，014 必須取得實際 Vercel target 及 DNS 授權 |
 
-| Task | 任務                   |
-| ---- | ---------------------- |
-| 001  | Repository Bootstrap   |
-| 002  | XK Brand Design System |
-
-建立專案基礎環境與品牌設計系統。
-
-### Phase 2 — Corporate Website
-
-| Task | 任務               |
-| ---- | ------------------ |
-| 003  | Corporate Homepage |
-| 004  | About Us           |
-| 005  | Services           |
-| 006  | Solutions          |
-| 007  | Portfolio          |
-| 008  | Contact            |
-| 009  | Privacy Policy     |
-
-完成官方網站主要頁面。
-
-### Phase 3 — Technical Optimization
-
-| Task | 任務          |
-| ---- | ------------- |
-| 010  | SEO           |
-| 011  | Performance   |
-| 012  | Accessibility |
-
-分別改善搜尋引擎、網站效能與無障礙品質。
-
-### Phase 4 — Deployment
-
-| Task | 任務                 |
-| ---- | -------------------- |
-| 013  | Vercel Deployment    |
-| 014  | Domain Configuration |
-
-完成正式部署與網域設定。
-
----
+這是建議順序，不是 006→007→…→014 的強制串行。已具備前置條件的任務可以平行；同時修改導覽、Metadata 或共用元件時，從最新 main 重整並回歸，不能自行整合未核准分支。詳細依賴與發布門檻見第 8 節。
 
 ## 4. 任務文件規範
 
-每個任務必須有獨立 Markdown 文件：
+每個任務必須有獨立 Markdown 規格。本輪交付後，實際規格入口為 `docs/task/task001.md` 至 `docs/task/task014.md`；本索引與 [temp.md](temp.md) 是任務管理／本輪輸入文件，不是網站功能。
+
+每份 Task 採以下 16 章，非頁面型工作仍保留章節並說明適用性：
+
+1. Task Overview
+2. Repository & Prerequisites
+3. Reference Documents
+4. Scope & Requirements
+5. Information Architecture & UX
+6. Content & Data Specification
+7. Design System & Technical Constraints
+8. Navigation, SEO & Deployment
+9. File Structure & Change Scope
+10. Implementation Procedure
+11. Testing & Acceptance Criteria
+12. Test Report & Evidence
+13. Git & Pull Request
+14. Deliverables
+15. Out of Scope & Future Work
+16. Final Delivery Checklist
+
+規格必須說明目標、範圍、前置條件、功能與技術約束、不在範圍項目、預計檔案異動、驗收／指令、報告、Git／PR 及未完成事項。預計檔案與計畫測試不等於實際完成，實作後另記真實結果。
+
+## 5. 共通開發規範
+
+### 5.1 開發原則
+
+- 先讀根 [README](../../README.md)、[AGENTS](../../AGENTS.md)、最新核准 Task 與既有實作報告；檢查 main、remote、status 及未提交變更，不覆蓋使用者工作。
+- 使用已合併功能作為基礎，不假設前一任務尚未合併的內容已完成。保護既有路由、部署、Logo 原稿與 Provisional 狀態。
+- 優先重用既有 Design System、共用元件與集中設定；Server Components 優先，必要互動才使用 Client Components，不重複建立相同功能／樣式。
+- 保持 Semantic HTML、Responsive、Accessible UI、可見 Focus 與 Reduced Motion，不任意增加 npm Dependencies。
+- 不虛構品牌、公司法定資訊、聯絡管道、客戶、作品成果、產品狀態或商業承諾。
+- 根 README 舊里程碑／已刪原稿入口與 AGENTS 的舊缺檔敘述仍待另行同步；本輪不修改它們。Task 001 正式入口已存在，Task 001–005 的歷史報告保留原時點，不倒填現況。衝突依當次使用者指示、最新核准 Task 及實際已合併架構處理。
+
+### 5.2 Git 規範
+
+每個功能 Task 由最新 main 建立獨立分支，依各 Task 的實際名稱，例如：
 
 ```text
-docs/
-└── task/
-    ├── README.md
-    ├── task001.md
-    ├── task002.md
-    ├── task003.md
-    ├── task004.md
-    ├── task005.md
-    ├── task006.md
-    ├── task007.md
-    ├── task008.md
-    ├── task009.md
-    ├── task010.md
-    ├── task011.md
-    ├── task012.md
-    ├── task013.md
-    └── task014.md
-每份 Task 文件應包含：
-
-任務目標
-
-Repository 與前置條件
-
-開發範圍
-
-功能需求
-
-技術與設計規範
-
-不在本次範圍的項目
-
-預期檔案異動
-
-驗收標準
-
-測試指令
-
-測試結果與交付報告要求
-
-Git Branch、Commit 與 Pull Request 規範
-
-尚未完成事項
-
-不得只記錄預計執行的測試，必須記錄實際執行結果。
-
-5. 共通開發規範
-5.1 開發原則
-遵循既有 Repository 的 README.md 與 AGENTS.md。
-
-開發前先檢查目前 main 的實際狀態。
-
-以已合併程式碼為基礎，不假設前一任務已完成尚未合併的功能。
-
-優先重用既有 Design System 與共用元件。
-
-不重複建立相同功能的元件或樣式。
-
-不得任意新增 npm Dependencies。
-
-不得自行建立未經核准的品牌資訊、聯絡方式、客戶案例或商業承諾。
-
-不得破壞既有頁面、路由與部署設定。
-
-5.2 Git 規範
-每個 Task 使用獨立 Feature Branch。
-
-命名格式：
-
-
-text
 feature/website-{task-name}
-Commit 格式：
+```
 
+Commit 使用 Conventional Commits，保留既有格式：
 
-text
+```text
 feat(scope): implement feature
 fix(scope): resolve issue
 docs(scope): update documentation
-每個任務必須：
+```
 
-由 main 建立 Feature Branch。
+正式功能流程為開發→本機驗收／報告→Feature Commit／Push→PR CI→PR Review→使用者授權合併→main CI→部署／公開 URL 驗證。禁止直接推送 main、未授權自動合併或發布，不能將這些階段互相替代。本輪文件工作的外部 Git 操作依第 10 節限制。
 
-完成開發與測試。
+### 5.3 品質檢查
 
-提交 Commit。
+正式功能任務依規格及 Repository 設定實際執行：
 
-建立 Pull Request。
-
-等待 CI 通過。
-
-經審核後合併至 main。
-
-禁止直接修改 main，禁止未經授權自動合併。
-
-5.3 品質檢查
-依 Repository 實際設定執行適用的檢查：
-
-
-bash
+```sh
 npm ci
 npx tsc --noEmit
 npm run lint
 npm run build
-如任務涉及靜態匯出或 GitHub Pages，另執行：
-
-
-bash
 npm run build:pages
-不得只因為指令存在，就宣稱已通過測試。必須確認實際執行結果與 Exit Code。
-
-5.4 瀏覽器驗收
-涉及網站頁面的任務，應依實際需求驗收：
-
-Desktop / Tablet / Mobile Responsive。
-
-頁面內容及元件完整性。
-
-Header、Footer、Navigation。
-
-站內連結及錨點。
-
-Console、Runtime 與 Network Errors。
-
-Keyboard Navigation。
-
-Focus Visibility。
-
-Reduced Motion。
-
-Accessibility 自動掃描及必要人工檢查。
-
-SEO Metadata。
-
-靜態輸出與 Base Path（適用時）。
-
-5.5 截圖
-涉及視覺頁面的任務，必須產出實際網站截圖。
-
-建議存放位置：
-
-
-text
-docs/screenshots/
-至少包含：
-
-Desktop Full Page
-
-Mobile Full Page
-
-重要內容區塊
-
-截圖必須來自實際執行的網站，不得使用示意圖冒充驗收結果。
-
-6. 測試報告與交付要求
-每個 Task 必須產出獨立實作紀錄：
-
-
-text
-docs/
-└── task-{name}-implementation.md
-交付報告至少包含：
-
-項目
-
-必要內容
-
-Repository
-
-Repository 名稱
-
-Base Commit
-
-開發基準 Commit
-
-Feature Branch
-
-實際分支名稱
-
-Commit
-
-實際 Commit SHA
-
-Pull Request
-
-實際 PR 編號與網址
-
-CI
-
-實際執行結果
-
-TypeScript
-
-實際執行結果
-
-Lint
-
-實際執行結果
-
-Build
-
-實際執行結果
-
-Browser QA
-
-實際驗收結果
-
-Responsive
-
-實際檢查尺寸
-
-Accessibility
-
-實際掃描及人工檢查結果
-
-Screenshots
-
-實際產出檔案
-
-Known Issues
-
-已知問題及限制
-
-Deployment
-
-是否已合併及公開發布
-
-測試結果標示
-統一使用以下狀態：
-
-PASS：實際執行並通過。
-
-FAIL：實際執行但未通過。
-
-NOT RUN：尚未執行。
-
-BLOCKED：受外部條件阻礙。
-
-N/A：不適用，並說明原因。
-
-禁止：
-
-將預計執行描述成已通過。
-
-虛構 Commit SHA、PR 編號或 Actions Run ID。
-
-使用舊任務的測試結果代替本次驗收。
-
-將 PR 建立描述成已合併。
-
-將 CI 通過描述成已正式發布。
-
-7. 任務完成定義（Definition of Done）
-每個 Task 必須符合以下條件，才能標記為完成：
-
-
-符合 Task 原始需求。
-
-沒有超出任務範圍的未授權變更。
-
-程式碼符合 Repository 規範。
-
-TypeScript 檢查通過（適用時）。
-
-Lint 通過（適用時）。
-
-Build 通過。
-
-完成適用的瀏覽器驗收。
-
-完成必要的 Responsive 與 Accessibility 檢查。
-
-產出必要截圖。
-
-更新實作紀錄及測試報告。
-
-建立 Pull Request。
-
-CI 結果有實際紀錄。
-
-未完成事項與限制清楚列出。
-任務的程式碼完成、PR 通過、合併及正式發布是不同狀態，必須分別記錄。
-
-8. 任務相依性
-
-text
-Task 001 Repository Bootstrap
-    |
-    v
-Task 002 XK Brand Design System
-    |
-    v
-Task 003 Corporate Homepage
-    |
-    +--> Task 004 About Us
-    |
-    +--> Task 005 Services
-    |
-    +--> Task 006 Solutions
-    |
-    +--> Task 007 Portfolio
-    |
-    +--> Task 008 Contact
-    |
-    +--> Task 009 Privacy Policy
-              |
-              v
-       Task 010 SEO
-              |
-              v
-       Task 011 Performance
-              |
-              v
-       Task 012 Accessibility
-              |
-              v
-       Task 013 Vercel Deployment
-              |
-              v
-       Task 014 Domain Configuration
-說明：
-
-Task 001、002 為後續網站開發基礎。
-
-Task 003 提供共用網站外框及導覽。
-
-Task 004–009 為獨立頁面任務，可依實際相依條件安排。
-
-Task 010–012 為獨立技術品質任務。
-
-Task 013、014 分別處理部署與網域。
-
-實際執行時仍須以各 Task 的前置條件與 Repository 現況為準。
-
-9. 目前任務進度
-以下為任務規劃清單，不代表所有任務已完成或發布。
-
-Task
-
-任務名稱
-
-狀態
-
-001
-
-Repository Bootstrap
-
-依 Repository 紀錄確認
-
-002
-
-XK Brand Design System
-
-已有實作紀錄
-
-003
-
-Corporate Homepage
-
-已有實作紀錄
-
-004
-
-About Us
-
-已有實作紀錄
-
-005
-
-Services
-
-已有實作紀錄
-
-006
-
-Solutions
-
-待依獨立規格執行
-
-007
-
-Portfolio
-
-待建立獨立規格
-
-008
-
-Contact
-
-待建立獨立規格
-
-009
-
-Privacy Policy
-
-待建立獨立規格
-
-010
-
-SEO
-
-待建立獨立規格
-
-011
-
-Performance
-
-待建立獨立規格
-
-012
-
-Accessibility
-
-待建立獨立規格
-
-013
-
-Vercel Deployment
-
-待建立獨立規格
-
-014
-
-Domain Configuration
-
-待建立獨立規格
-
-10. 最終原則
-一個 Task 對應一種類型的開發工作。
-
-一個 Task 必須具備獨立規格、實作紀錄及驗收報告。
-
-不得將未執行的測試標記為通過。
-
-不得虛構品牌、商業、技術或部署成果。
-
-不得破壞已完成且已合併的功能。
-
-不得未經授權修改文件 Repository。
-
-所有功能以 Pull Request 審核及合併為交付流程。
-
-正式發布必須有實際部署證據。
-
-本 README 為 XK 官方網站開發任務的總索引。各 Task 文件是個別工作的正式執行規格；若有範圍衝突，以最新核准的 Task 規格及已合併的 Repository 實際狀態為準。
 ```
+
+一般 build 與 Pages build 分開；共用 `.next/` 時先驗一般 server 並停止，再輸出 Pages。`npm run start` 不用來提供 `out/`；切回一般 server 前須重建。各 Task 第 11 節以 Required／Optional／Not Applicable 與原因定義適用性，不能只因命令存在就宣稱通過，也不能為方便而降低門檻。部署或 DNS 任務的品質檢查不能替代真實外部驗證。
+
+**本輪只有規格文件撰寫，不安裝套件、不執行以上網站指令；實際只做 Markdown、來源、路徑、規格一致性與 Git Diff 檢查。**
+
+### 5.4 瀏覽器驗收
+
+未來涉及頁面的 Task 驗收 Desktop／Tablet／Mobile（320、375、768、1440、1920px）、內容／元件、Header／Footer／Navigation、有效連結／錨點、Console／Runtime／Network、HTTP／靜態資源、Keyboard、Focus、Reduced Motion、自動 axe 與必要人工檢查、Metadata、Pages Base Path／404／.nojekyll。Task 012 以 WCAG 2.2 AA 為目標，其他頁面仍保留原規定的 WCAG 2／2.1 A／AA 回歸；自動掃描不代表完整無障礙認證。
+
+### 5.5 截圖
+
+未來視覺頁面任務依各 Task 要求產出真實網站截圖，存放 `docs/screenshots/`，至少含適用的 Desktop／Mobile 與重要區塊，記錄版本、Viewport、尺寸及人工檢視。效能、輔助科技或外部部署任務使用其專屬證據；不以示意圖、舊截圖或檔案存在取代實測。帳戶／DNS 截圖遮蔽機密。Task 001／002 原先 Optional 截圖要求維持原規格，不追補虛構歷史畫面。
+
+## 6. 測試報告與交付要求
+
+### 獨立報告位置
+
+Task 001–005 既有獨立或歷史報告保留，不重新命名或覆寫：
+
+| Task | 現有紀錄 |
+| --- | --- |
+| 001 | [implementation notes](../implementation-notes.md) 的 Bootstrap 歷史；若重新執行，依 Task 001 的獨立報告要求 |
+| 002 | [品牌設計系統](../brand-design-system.md) |
+| 003 | [首頁實作](../homepage-implementation.md) |
+| 004 | [About 實作](../about-implementation.md) |
+| 005 | [Services 實作](../services-implementation.md) |
+
+本輪統一 Task 006–014 未來報告位置如下，**目前皆未建立**，故僅列 code path，不建立假連結或測試結果：
+
+```text
+docs/reports/task006-implementation.md
+docs/reports/task007-implementation.md
+docs/reports/task008-implementation.md
+docs/reports/task009-implementation.md
+docs/reports/task010-implementation.md
+docs/reports/task011-implementation.md
+docs/reports/task012-implementation.md
+docs/reports/task013-implementation.md
+docs/reports/task014-implementation.md
+```
+
+### 報告、證據與失敗處理
+
+報告須包含 Repository／Git 狀態、Base SHA、Feature Branch、實際修改檔案、完整指令、環境／工具版本、結果、真實 Exit Code、Browser QA、Responsive、Accessibility、Console／Runtime／Network／HTTP、適用截圖、問題／修正／重驗、Commit／PR／CI、部署狀態與 Known Issues。各 Task 第 12 節定義其專屬範圍與 Evidence Requirements 十欄：Test ID、Test Item、Command / Procedure、Environment、Expected Result、Actual Result、Exit Code、Status、Evidence、Notes。
+
+本機報告在建立 PR 前完成，納入同一功能 PR，與實際提交的程式碼版本一致；後續改程式碼須重跑受影響測試及更新證據。PR CI／Review／Merge／main CI／Deploy 尚未發生時保留 PENDING，發生後補真實紀錄，不預填未來結果。
+
+FAIL 不改寫為 PASS；記錄原因、影響與修正，保留原失敗及重驗證據。無法修正列 Known Issues；阻礙交付的 FAIL 或必要驗收 BLOCKED 不可宣稱完整通過，不得以跳測、降標或隱藏錯誤取得 PASS。外部服務／權限／環境限制記錄實際原因與解除條件。
+
+### 狀態管理
+
+| 執行狀態 | 意義 |
+| --- | --- |
+| PENDING | 尚未執行；本輪九份規格的初始驗收狀態 |
+| PASS | 已實際執行、符合預期且有可追溯證據 |
+| FAIL | 已實際執行但未通過，記原因／影響／修正／重驗 |
+| BLOCKED | 因外部服務、權限、素材或環境條件無法驗收，記阻礙及解除條件 |
+| N/A | 確認不適用，記理由與依據；不是跳測或受阻的代稱 |
+
+Required／Optional／Not Applicable 是適用性，不是執行結果。Optional 未執行保留 PENDING 並說明，不能直接當 N/A。Checklist 僅有證據的 PASS 可勾，其餘未勾；合法 N/A 不算遺漏適用驗收。舊索引的 NOT RUN 於新紀錄統一為 PENDING，歷史報告不改寫。
+
+禁止將計畫／舊任務／不同版本的成功冒作當次結果，虛構 Commit／PR／Run ID，或把 PR 建立、CI 成功、Merge 當成正式發布。規格完成、功能完成、PR 狀態、部署與公開站驗證分別記錄。
+
+## 7. 任務完成定義（Definition of Done）
+
+正式功能 Task 只有在符合原始需求、沒有未授權變更、程式碼符合規範、適用品質／Build／功能／Responsive／Accessibility／Browser 驗收完成、真實截圖與獨立報告齊備、PR 與 CI 有實際紀錄、限制及待確認事項清楚列明後，才能依各 Task 門檻交付。必要項目仍為 PENDING／FAIL／BLOCKED 時不得宣稱完整通過。
+
+部署／DNS／法律內容的必要 gate 按 Task 專屬規則判斷，不能以一般 build 取代；已交付本機或 PR 結果不代表使用者已授權發布。程式碼完成、PR 通過、Review、Merge、部署與公開 URL 驗證是不同狀態。
+
+本輪 Definition of Done 是九份規格與索引完整、來源／路徑／Markdown／相依／範圍檢查通過，不是九項網站功能完成。
+
+## 8. 任務相依性
+
+| Task | 必要基礎／可平行範圍 | 額外發布條件 |
+| --- | --- | --- |
+| 001–003 | 001 基礎→002 Design System→003 首頁及外框；已有合併成果 | 保護歷史與既有部署，不重新初始化 |
+| 004、005 | 以已合併基礎與首頁／外框開發；既有成果保留 | 以實際 main 為準，不私自整合未核准分支 |
+| 006、007 | 001–005；Solutions 與 Portfolio 可平行 | 006 是提案方向；007 的案例／狀態／素材需來源與公開授權 |
+| 008 | 已合併外框與聯絡設定，可與 006／007 平行 | 已確認管道才公開；真實表單需送出服務、反垃圾與資料決策另行核准 |
+| 009 | 與 008 協調資料處理設計；無表單也須盤點實際網站／託管資料行為 | 法律正文、主體、權利聯絡等由品牌負責人／法律審查確認；不以草案冒充有效政策 |
+| 010 | 依實際已合併路由先完成保護模式，可與頁面工作平行 | 正式開放索引須內容與 Privacy gate、013／014 實際正式網址及明確授權；不強等未規劃公開的頁面 |
+| 011 | 目前實際網站即可先量測／最佳化，可與 010／012 平行 | 新頁面或新部署環境合併後再量測；沒有足夠 field 資料不得宣稱 field CWV 達標 |
+| 012 | 目前實際頁面／互動 inventory 即可驗收，可與 010／011 平行 | 新頁面、真實表單或元件改動後補回歸；必要人工輔助科技未驗不可冒稱完整通過 |
+| 013 | 已合併可用網站、雙模式 build、Vercel／GitHub owner 與權限 | Project／Git integration／Preview／Production 按授權階段操作，保留 Pages；可先用已核准的 Vercel 網址驗證 |
+| 014 | 013 的實際 Vercel Project／Domain target，加上 DNS 控制權與變更授權 | 先審閱 changeset／回滾，再改 DNS；完成 TLS／redirect／公開 URL 驗證，不能猜 record 值 |
+
+008 的無表單模式不因 009 尚未審核而虛構提交功能；若正式啟用表單，必須先協調 009 的資料內容並取得核准。009 的盤點也不要求先公開未核准的 008 表單。013 可以先處理獲授權的 Preview／平台 Production 驗證，014 再接正式網域；未完成 014 不宣稱品牌網域已生效。
+
+## 9. 目前任務進度
+
+以下為 `main@e2a8f5a` 的可查證歷史與本輪規格狀態，**不代表本輪重新驗收或發布網站**。Task 001–005 的實作、報告與既有路由已存在；下列 Merge 為本輪基準的祖先：
+
+| Task | 已確認紀錄／功能狀態 | 本輪規格工作 |
+| --- | --- | --- |
+| 001 | [PR #1](https://github.com/xk2022/xk-website/pull/1)，Merge `a0dfdd063f3780059ce159184451d7df876fa273`；Bootstrap 已合併 | 保留原規格與歷史紀錄 |
+| 002 | [PR #2](https://github.com/xk2022/xk-website/pull/2)，Merge `17a81ba32bd2067980088951f10a497bf4fa9c5d`；Design System 已合併 | 保留原規格與歷史紀錄 |
+| 003 | [PR #3](https://github.com/xk2022/xk-website/pull/3)，Merge `0ca076078c1d10e6e08a64b0b49d736e1c5f61fd`；首頁與 Pages 外框已合併 | 保留原規格與歷史紀錄 |
+| 004 | [PR #4](https://github.com/xk2022/xk-website/pull/4)，Merge `57ad0f26477c670d556c5b8a29a98380b4051be2`；About 已合併 | 保留原規格與歷史紀錄 |
+| 005 | [PR #5](https://github.com/xk2022/xk-website/pull/5)，Merge `e341f12d4d3a93127402ed0b4889d2526b253244`；Services 已合併 | 保留原規格與歷史紀錄 |
+| 006 | 功能 PENDING，尚無 `/solutions` | 保留已有規格與 17 筆來源，依本輪補齊關聯及報告命名 |
+| 007 | 功能 PENDING，三示範作品無完成／Live 證據 | 本輪新增獨立 Portfolio 規格 |
+| 008 | 功能 PENDING，`verifiedContactChannels` 仍為空 | 本輪新增 Contact 規格，管道／表單決策 Pending Confirmation |
+| 009 | 功能 PENDING，沒有核准 Privacy 正文 | 本輪新增 Privacy 規格，法律與資料決策 Pending Confirmation |
+| 010 | 專屬優化 PENDING，既有 Metadata／noindex 保留 | 本輪新增 SEO 規格 |
+| 011 | 專屬優化 PENDING，不把先前基本檢查當成 CWV 改善成果 | 本輪新增 Performance 規格 |
+| 012 | 專屬改善 PENDING，既有 A／AA 基本回歸不冒作 2.2 AA 完整認證 | 本輪新增 Accessibility 規格 |
+| 013 | PENDING，沒有本輪 Vercel Project／Production 驗收 | 本輪新增 Vercel Deployment 規格 |
+| 014 | PENDING，實際 DNS Provider／控制權／record 值待確認 | 本輪新增 Domain Configuration 規格 |
+
+歷史報告中的「待審／未部署／legacy Pages」屬原時點快照，保留不回寫。本索引不以舊報告推論目前外部帳戶狀態；正式執行各 Task 時重新查實際 main、權限與發布證據。文件 Repository 的規劃信箱、客戶成效、產品與 Demo 均未因本輪規格撰寫轉為已確認事實。
+
+## 10. 最終原則
+
+一個 Task 對應一類工作，具備獨立規格、報告與驗收；保護已合併功能，不虛構業務、技術、測試或部署成果，不修改文件 Repository。正式發布需要實際授權、部署證據與公開站驗證，不能由文件完成或 CI 成功推定。
+
+本輪只允許修改本索引與 `task006.md`–`task014.md`。不改 src／public／設定／Dependencies／lockfile／Actions，不安裝套件、不執行網站測試、不改 Vercel／DNS、不建假報告或截圖，也不提交 `.next/`／`out/`／暫存工具或機密。保留所有使用者未提交工作。
+
+依本輪指示，沒有這項新任務的明確授權時，不 Push main、不自動建立或合併 PR、不發布正式網站；先完成可檢閱文件與實際文件檢查。文件工作建議 Commit Message：
+
+```text
+docs(task): add XK website task specifications 006-014
+```
+
+本 README 為官方網站開發任務的總索引。個別規格控制任務範圍；若有衝突，以當次明確指示、最新核准 Task 及已合併 Repository 實際狀態為準。Pending Confirmation 必須在各 Task 指定由誰、何時確認，以及未確認時的處理方式，不能用猜測補齊。

@@ -2,7 +2,7 @@
 
 ## 1. Task Overview
 
-Task 006 的工程規格目前已完成制定，但 `/solutions` 頁面尚未實作。**只有使用者另行明確授權正式執行 Task 006，以下功能開發、測試與功能 PR 流程才開始。** 本輪統一文件骨架不觸發 Solutions 網站開發。
+Task 006 已有工程規格，但 `/solutions` 頁面尚未實作。**只有使用者另行明確授權正式執行 Task 006，以下功能開發、測試與功能 PR 流程才開始。** 本輪依 `temp.md` 編寫 Task 006–014 規格，保留既有 Solutions 專屬需求，不觸發網站功能開發。
 
 歷史：本檔在 Website `main@5d04f0fcd0089dd64614156faff86a4d5ce48c1d` 已有製作指示草稿，後續正式化為工程規格；當時只製作本檔，沒有實作頁面。以下建置、瀏覽器、截圖、CI 與部署條件都是未來必須完成的驗收，不代表已執行或通過。
 
@@ -38,10 +38,14 @@ Task 006 的工程規格目前已完成制定，但 `/solutions` 頁面尚未實
 | 本檔原研究的 Website Base | `5d04f0fcd0089dd64614156faff86a4d5ce48c1d`，只作歷史快照，不鎖定未來開發 Base |
 | Documentation Repository / 研究版本 | `xk2022/xplore-kaleidoscope` / `95ef1275a46ace76e11f668178ca881087483398`，僅供讀取，實作時重新核對 |
 | 前置 Task | Task 001–005 已合併成果及既有 Design System、首頁、About、Services、Pages 架構 |
+| 本輪規格撰寫基準 | Website `main@e2a8f5a33f24d1ea65a3afc3780014a33c204528`；文件 main 重新確認仍為上述 `95ef1275…` |
+| 規格文件分支 | `docs/task-specifications-006-014`，不是 Solutions 功能分支 |
 
 歷史規格研究時，Task 005 已由 [PR #5](https://github.com/xk2022/xk-website/pull/5) 合併，Merge Commit 為 `e341f12d4d3a93127402ed0b4889d2526b253244`；[main run 44269605915](https://github.com/xk2022/xk-website/actions/runs/44269605915) 的品質、Pages 建置與部署已成功。這是前置快照，不能當作 Task 006 的測試或發布證據。
 
 未來實作必須重新確認 Task 005 已合併且其成果是最新 `main` 的祖先；若尚未合併，停止並回報依賴，不自行整合未核准分支。以當次最新已合併 `main` 建立功能分支，記錄實際 Base SHA，不要求停留在本文件研究快照。
+
+Task 006 與 [Task 007 Portfolio](task007.md) 可在前置成果具備後平行進行，無須等 Contact、Privacy、SEO 或 Vercel 任務完成。當前只有首頁、About、Services 三個公開頁面；下文四頁回歸是加入 Solutions 後的最低範圍。若其他頁面已先合併，須保留並擴充回歸範圍，不把固定四頁當作刪除其他成果或略過回歸的理由。
 
 ## 3. Reference Documents
 
@@ -50,9 +54,10 @@ Task 006 的工程規格目前已完成制定，但 `/solutions` 頁面尚未實
 先閱讀以下網站文件與原稿：
 
 - [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)。
-- [Task 001 正式規格](task001.md)、[原始歷史來源](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md) 及 [繁體中文版本](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.zh-TW.md)。Task 006 最初研究時 `docs/task/task001.md` 尚不存在；本輪統一骨架後以 `task001.md` 為正式入口，保留原稿作歷史來源。
+- [Task 001 正式規格](task001.md)、[原始歷史來源](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md) 及 [繁體中文版本](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.zh-TW.md)。Task 006 最初研究時 `docs/task/task001.md` 尚不存在；前次骨架標準化後以 `task001.md` 為正式入口，保留原稿作歷史來源。
 - [Task 002 正式規格](task002.md) 及 [繁體中文版本](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)。英文原稿已恢復，早期空檔描述屬歷史紀錄。
 - [Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)。
+- [任務索引與相依條件](README.md)、[Task 007 Portfolio](task007.md)、[Task 008 Contact](task008.md)、[Task 009 Privacy](task009.md)、[Task 010 SEO](task010.md)。後續 Task 的規格存在不代表其功能已完成。
 - [歷史實作紀錄](../implementation-notes.md)、[Design System](../brand-design-system.md)、[首頁實作](../homepage-implementation.md)、[About 實作](../about-implementation.md)、[Services 實作](../services-implementation.md)、[Pages 操作指南](../github-pages-deployment.md)。
 
 上述 Task 001 兩份替代原稿與 Task 002 繁體中文原稿已從目前 main 刪除；連結固定至歷史 Commit `895b9878b6c6244cf225772f6c4f8d3e5d97affe` 的快照，僅供來源查證，不復原刪檔。正式 canonical 入口仍是 `task001.md` 與 `task002.md`。
@@ -63,9 +68,13 @@ Task 006 的工程規格目前已完成制定，但 `/solutions` 頁面尚未實
 
 原規格研究日期：2026-11-18；當時唯讀確認文件最新 `main` 為 **`95ef1275a46ace76e11f668178ca881087483398`**，當時已檢查完整 Tree 及相關內容，**沒有獨立且已定稿的 Solutions 規劃文件**。以下四個方案是依既有服務能力與需求情境整理的頁面資訊架構，不是已核准上架的產品目錄。
 
+本輪於同日再次查詢文件 Repository 最新 main，版本未變；完整唯讀快照的 51 個檔案均已核對 Git Blob。來源可由 [固定版本業務文件目錄](https://github.com/xk2022/xplore-kaleidoscope/tree/95ef1275a46ace76e11f668178ca881087483398/doc/01_business-plan) 查閱。下列品牌、服務及技術資料用於支持內容方向；商業計畫、生成對話、產品提案與示範案例沒有因此取得商用核准。核准狀態與本次採用界線見各列及第 15 節，不以檔名含「正式」推定所有內文均已核准。
+
 正式實作時再次查最新文件 main；若版本改變，讀取差異並記錄新的 Commit／Blob SHA。不得只更新版本號而混用舊內容，也不得把任何新增建議當成商業核准。
 
 以下路徑均相對於文件 Repository 的 `doc/01_business-plan/`，版本固定為上述 Commit。表內來源代碼供內容與實作紀錄追溯。
+
+表內各份業務文件的文件級核准狀態均為「規劃／未取得獨立核准紀錄」；只採用與已合併 Task 品牌、服務能力及現行架構一致的部分。已確認決策的依據是對應 Task 與實際程式碼，不代表整份商業規劃、示範專案或產品路線已核准。
 
 | 代碼 | 原始文件 | Git Blob SHA | 可採用內容 |
 | --- | --- | --- | --- |
@@ -223,6 +232,8 @@ Cloud／部署是共同支援能力，不另湊第五項解決方案。以下是
 
 保留 Next.js App Router、React、Strict TypeScript、Tailwind CSS 4、shadcn/ui、Lucide React 與現有 Node.js／npm 架構，不重新初始化、升降級套件或任意修改 lockfile。遵循已安裝 Next.js 版本的文件與 AGENTS 指示。
 
+本輪依 manifest／lockfile 核對的版本為 Next.js 16.4.6、React 19.3.1、TypeScript 5.9.3、Tailwind CSS 4.3.3、shadcn 4.23.0、Lucide React 1.74.0，Node.js 要求為 24.x。這是規格撰寫時的快照，未來執行須讀取實際版本並保護相容性，不以本表為升降級指令。
+
 重用 Section、Container、Card／CardHeader／CardTitle／CardContent、Button、SectionHeading、XkLogo、BrandPattern 與 Lucide。沿用 Inter／Noto Sans TC、九個 Typography Utilities、Spacing、Radius、Shadow、Focus 與 Reduced Motion。
 
 `SectionHeading` 的 `titleLang` 預設為 `en`，中文標題必須明確傳入 `zh-TW`。`CardTitle` 預設為 H3；Details 的 Article 標題為 H3，其內子標題使用 H4 或段落標籤，避免錯誤層級及語言標註。
@@ -321,7 +332,7 @@ Pages 模式可依既有 `trailingSlash: true` 將 URL 正常化為 `/solutions/
 | 新增 | `src/components/sections/solutions/solutions-approach.tsx` | 五階段方式 |
 | 新增 | `src/components/sections/solutions/solutions-value.tsx` | 合作與技術原則 |
 | 新增 | `src/components/sections/solutions/solutions-cta.tsx` | 有效站內 CTA |
-| 新增 | `docs/solutions-implementation.md` | 來源、檔案、實際驗收、截圖、未完成事項 |
+| 新增 | `docs/reports/task006-implementation.md` | 來源、檔案、實際驗收、截圖、未完成事項 |
 | 新增 | `docs/screenshots/task006-solutions-*.png` | 第 12.2 節七張真實截圖 |
 | 修改 | `src/config/navigation.ts` | Solutions 正式路由及 implemented 狀態 |
 | 修改 | `src/components/sections/home-solutions.tsx` | 保留舊動線，新增完整 Solutions 入口 |
@@ -454,7 +465,7 @@ python3 -m http.server 3031 --bind 127.0.0.1 --directory "$solutions_preview_dir
 
 ## 12. Test Report & Evidence
 
-正式執行 Task 006 時，必須新增獨立實作與測試報告 `docs/solutions-implementation.md`。此路徑是未來交付要求，目前報告尚未建立；本輪文件整理不建檔，也不把它寫成已存在的 Markdown Link。
+正式執行 Task 006 時，必須新增獨立實作與測試報告 `docs/reports/task006-implementation.md`。此路徑是未來交付要求，目前報告尚未建立；本輪文件撰寫不建立報告，也不把它寫成已存在的 Markdown Link。前版建議的 `docs/solutions-implementation.md` 亦未建立，本輪依最新指令統一命名，不要求維護兩份重複報告。
 
 ### 12.1 必備報告與真實證據
 
@@ -466,7 +477,7 @@ python3 -m http.server 3031 --bind 127.0.0.1 --directory "$solutions_preview_dir
 - 五個品質命令的真實結果，一般 production server 與 Pages 靜態四頁結果，至少 20 個 Responsive 案例、觸控、全部有效連結與跨頁錨點的結果。
 - axe 規則／案例／違規數、鍵盤、Focus、Disabled 適用性、Reduced Motion、人工閱讀、Browser Console／Runtime／Network 及資源載入結果。
 - Pages HTML、Metadata、資源路徑、404、`.nojekyll`、開發頁排除、Validators 與 PR artifact 的實際證據。
-- 每個發現的問題、錯誤訊息與影響範圍、修正內容、修正後重跑的命令／測試，以及最終重新驗收結果；有未解決項目時不得標記功能已完成。
+- 每個發現的問題、錯誤訊息與影響範圍、修正內容、修正後重跑的命令／測試，以及最終重新驗收結果；有阻礙交付的未解決項目時不得標記功能已完成，其餘限制仍列入 Known Issues。
 - 真實截圖位置、PNG 實際尺寸、Viewport、對應內容與人工檢視結果；圖檔存在後才加入相對連結。
 - 該實作 Commit／PR／CI Run 的實際識別碼與連結、各 Job 狀態、artifact 核對、未完成事項、環境或工具限制，以及是否部署的明確證據。
 
@@ -551,7 +562,7 @@ Commit SHA、PR 編號、CI Run ID 與合併／發布狀態只能來自實際紀
 | Solutions 功能 | `/solutions` 九主 Section、四 Article、四 Overview、三組合、五流程及全部指定文案／狀態界線 | PENDING |
 | 共用整合 | Header／Footer／Mobile Navigation、首頁新入口、四頁回歸及保留舊錨點 | PENDING |
 | 檔案與 Design System | 第 9 節實際新增／修改清單、typed config 與來源、原 Tokens／Logo／依賴保護 | PENDING |
-| 獨立實作／測試報告 | `docs/solutions-implementation.md`，涵蓋第 11–12 節全部結果與限制 | PENDING |
+| 獨立實作／測試報告 | `docs/reports/task006-implementation.md`，涵蓋第 11–12 節全部結果與限制 | PENDING |
 | 截圖 | 七份指定真實 PNG 與人工檢視證據，必要時增加分段圖 | PENDING |
 | Git Commit／PR | 已推送 `feature/website-solutions-page`、真實 Commit SHA 與待審核 PR URL | PENDING |
 | CI 與 artifact | 該 head 的 quality／pages-build 成功、deploy skipped、含 Solutions 的 Pages artifact 已核對 | PENDING |
@@ -563,7 +574,19 @@ Commit SHA、PR 編號、CI Run ID 與合併／發布狀態只能來自實際紀
 
 正式聯絡管道、最終 Logo／OG 素材核准、產品與 Demo 真實進度、可公開客戶授權、價格／工期／SLA、正式中文品牌、正式網域與搜尋索引仍待後續確認。缺少這些資料時採本規格的保守呈現，不阻擋有來源的靜態頁，但不可自行補造。
 
-Solutions 明細頁、Portfolio、Contact、Privacy、正式 AI 產品、CMS 與 Backend 均屬後續任務，不能以本任務名義提前實作。
+Solutions 明細頁、[Portfolio（Task 007）](task007.md)、[Contact（Task 008）](task008.md)、[Privacy（Task 009）](task009.md)、正式 AI 產品、CMS 與 Backend 均不屬本任務，不能以 Solutions 名義提前實作。[SEO（Task 010）](task010.md)、[Performance（Task 011）](task011.md)、[Accessibility（Task 012）](task012.md)、[Vercel Deployment（Task 013）](task013.md)、[Domain Configuration（Task 014）](task014.md) 各自驗收；本頁仍須完成既定的基本 SEO、效能與可及性，不能把必要品質延後到後續任務。
+
+### Pending Confirmation
+
+| 尚未確認 | 確認責任與時點 | 未確認時的處理 |
+| --- | --- | --- |
+| 獨立 Solutions 商業目錄與最終方案文案 | 品牌負責人於功能 PR 審查前核對四個方向及來源 | 沿用有來源的需求／服務組合，固定 `proposed-direction`；不描述成正式套餐或產品 |
+| Demo／產品真實進度、客戶案例與公開授權 | 品牌負責人提供可查證作品與授權後，由 Task 007 處理 | 不新增案例、成果、Live 入口或完成宣稱 |
+| 正式聯絡管道 | 品牌負責人於 Task 008 發布前確認，功能實作者同步檢查既有設定 | Solutions 保留有效的 `/#contact` 待確認區塊，不編造 Email 或表單 |
+| 最終 Logo、OG Image、中文品牌名稱 | 品牌負責人於素材或名稱公開前確認 | 保留既有 Provisional Logo、英文品牌與無假 OG Image 的 Metadata |
+| 報價、固定工期、SLA、產品功能與效益保證 | 品牌負責人於任何相關文案採用前提供核准與依據 | 不顯示價格、時程或保證；改善目標明示依需求評估 |
+
+以上待確認項目屬內容邊界，不預先冒稱測試已受阻；正式執行若因此無法完成某項必要驗收，依第 11 節記 `BLOCKED`，而非 `N/A` 或 `PASS`。
 
 第 3 節列出的缺漏、建議套餐、中文品牌或生成範例，不因本規格正式化而轉為核准事實。頁面尚未實作，實作報告、七張截圖、功能 Commit／PR／CI 與上線證據也仍為 PENDING。不得以文件或既有網站的發布結果冒充 Solutions 發布。
 
