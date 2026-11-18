@@ -2,19 +2,27 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-/* Task 001 palette. No dark theme is approved for this milestone. */
 :root {
   color-scheme: light;
-  --primary: #101a33;
-  --secondary: #3157d5;
-  --accent: #19b8d5;
-  --background: #ffffff;
-  --surface: #f5f7fb;
-  --foreground: #172033;
-  --muted: #667085;
-  --border: #e4e8f0;
 
-  /* Accessible semantic pairs for shadcn/ui. Muted text uses --muted. */
+  /* Confirmed brand palette. Components consume semantic aliases below. */
+  --brand-primary: #101a33;
+  --brand-secondary: #3157d5;
+  --brand-accent: #19b8d5;
+  --brand-background: #ffffff;
+  --brand-surface: #f5f7fb;
+  --brand-foreground: #172033;
+  --brand-muted: #667085;
+  --brand-border: #e4e8f0;
+
+  --primary: var(--brand-primary);
+  --secondary: var(--brand-secondary);
+  --accent: var(--brand-accent);
+  --background: var(--brand-background);
+  --surface: var(--brand-surface);
+  --foreground: var(--brand-foreground);
+  --muted: var(--brand-muted);
+  --border: var(--brand-border);
   --primary-foreground: var(--background);
   --secondary-foreground: var(--background);
   --accent-foreground: var(--primary);
@@ -25,9 +33,39 @@
   --popover-foreground: var(--foreground);
   --input: var(--border);
   --ring: var(--secondary);
-  /* Functional error state, separate from the brand palette. */
   --destructive: #b42318;
+
+  /* Supplied artwork colors are preserved independently of UI brand tokens. */
+  --logo-primary: #101828;
+  --logo-secondary: #2563eb;
+
+  /* Responsive type roles; unitless line heights support mixed CJK/Latin text. */
+  --type-display-size: clamp(2.5rem, 1.65rem + 3.6vw, 4rem);
+  --type-h1-size: clamp(2.25rem, 1.55rem + 3vw, 3.5rem);
+  --type-h2-size: clamp(1.875rem, 1.5rem + 1.5vw, 2.5rem);
+  --type-h3-size: clamp(1.5rem, 1.3rem + 0.6vw, 1.75rem);
+  --type-body-lg-size: clamp(1.0625rem, 1rem + 0.25vw, 1.125rem);
+  --type-body-size: 1rem;
+  --type-body-sm-size: 0.875rem;
+  --type-caption-size: 0.75rem;
+  --type-button-size: 0.875rem;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --leading-display: 1.15;
+  --leading-heading: 1.25;
+  --leading-body: 1.7;
+  --leading-ui: 1.5;
+
+  /* Spacing uses Tailwind's 0.25rem base; no parallel arbitrary scale. */
+  --container-max: 80rem;
+  --container-gutter: 1.5rem;
+  --section-space: clamp(4rem, 3rem + 3vw, 6rem);
+  --section-space-compact: clamp(2.5rem, 2rem + 2vw, 4rem);
   --radius: 0.625rem;
+  --motion-duration: 160ms;
+  --motion-ease: cubic-bezier(0.2, 0, 0, 1);
 }
 
 @theme inline {
@@ -40,7 +78,7 @@
   --color-background: var(--background);
   --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  /* shadcn's bg-muted utility expects a surface, not the brand's text gray. */
+  /* Brand muted means text gray; shadcn bg-muted means a quiet surface. */
   --color-muted: var(--surface);
   --color-muted-foreground: var(--muted-foreground);
   --color-border: var(--border);
@@ -58,25 +96,155 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-full: 9999px;
+  --shadow-subtle: 0 1px 3px color-mix(in srgb, var(--primary) 6%, transparent);
+  --shadow-default: 0 4px 16px color-mix(in srgb, var(--primary) 8%, transparent);
+  --shadow-elevated: 0 12px 32px color-mix(in srgb, var(--primary) 12%, transparent);
+  --ease-brand: var(--motion-ease);
+}
+
+@media (width >= 40rem) {
+  :root { --container-gutter: 2rem; }
+}
+
+@media (width >= 64rem) {
+  :root { --container-gutter: 3rem; }
+}
+
+@utility xk-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-gutter);
+}
+
+@utility xk-section {
+  padding-block: var(--section-space);
+}
+
+@utility xk-section-compact {
+  padding-block: var(--section-space-compact);
+}
+
+@utility type-display {
+  font-size: var(--type-display-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-display);
+  text-wrap: balance;
+}
+
+@utility type-h1 {
+  font-size: var(--type-h1-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-heading);
+  text-wrap: balance;
+}
+
+@utility type-h2 {
+  font-size: var(--type-h2-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-heading);
+  text-wrap: balance;
+}
+
+@utility type-h3 {
+  font-size: var(--type-h3-size);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-heading);
+  text-wrap: balance;
+}
+
+@utility type-body-lg {
+  font-size: var(--type-body-lg-size);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+}
+
+@utility type-body {
+  font-size: var(--type-body-size);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+}
+
+@utility type-body-sm {
+  font-size: var(--type-body-sm-size);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-body);
+}
+
+@utility type-caption {
+  font-size: var(--type-caption-size);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-ui);
+}
+
+@utility type-button {
+  font-size: var(--type-button-size);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-ui);
+}
+
+@utility duration-brand {
+  transition-duration: var(--motion-duration);
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background font-sans text-base text-foreground;
-    line-height: 1.7;
-  }
-
+  * { @apply border-border; }
+  body { @apply bg-background font-sans type-body text-foreground; }
   :focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 4px;
   }
-
   ::selection {
     background: var(--primary);
     color: var(--primary-foreground);
+  }
+  /* Preserve natural Chinese spacing; tighter tracking is opt-in for Latin. */
+  :where([lang="en"]).type-display,
+  :where([lang="en"]).type-h1 {
+    letter-spacing: -0.025em;
+  }
+}
+
+@layer components {
+  .brand-pattern-grid {
+    background-image:
+      linear-gradient(color-mix(in srgb, var(--secondary) 9%, transparent) 1px, transparent 1px),
+      linear-gradient(90deg, color-mix(in srgb, var(--secondary) 9%, transparent) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+    mask-image: linear-gradient(to bottom, black, transparent);
+  }
+  .brand-pattern-kaleidoscope {
+    background-image: repeating-conic-gradient(from 45deg, color-mix(in srgb, var(--secondary) 7%, transparent) 0deg 45deg, transparent 45deg 90deg);
+    background-size: 6rem 6rem;
+    mask-image: radial-gradient(ellipse at center, black, transparent 75%);
+  }
+  .brand-pattern-gradient {
+    background-image: radial-gradient(ellipse at top right, color-mix(in srgb, var(--accent) 12%, transparent), transparent 65%);
+  }
+  .brand-pattern-shapes::before,
+  .brand-pattern-shapes::after {
+    content: "";
+    position: absolute;
+    width: clamp(8rem, 24vw, 18rem);
+    aspect-ratio: 1;
+    top: 15%;
+    right: -3rem;
+    border: 1px solid color-mix(in srgb, var(--secondary) 15%, transparent);
+    transform: rotate(45deg);
+  }
+  .brand-pattern-shapes::after {
+    top: 50%;
+    right: 2rem;
+    background: color-mix(in srgb, var(--accent) 5%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

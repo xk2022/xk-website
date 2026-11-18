@@ -12,9 +12,9 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## XK repository rules
 
 - This repository contains only the Xplore Kaleidoscope website. Read business specifications from `xk2022/xplore-kaleidoscope`, especially `doc/01_business-plan/week-02/`, without modifying that repository.
-- The Task 001 brief retained in README.md controls conflicts with older planning documents. Use the independent website repository root and the confirmed task palette. Record material discrepancies in `docs/implementation-notes.md`.
+- Use the task specifications in `docs/task/task001.md` and `docs/task/task002.md`, together with current user instructions, to resolve conflicts with older planning documents. Keep the independent website repository root and the confirmed task palette. Record material discrepancies in `docs/implementation-notes.md` and the relevant task implementation document.
 - Keep Next.js App Router, React, TypeScript, Tailwind CSS, shadcn/ui, and Lucide React. The deployment target is Vercel. Keep the website independently runnable without a backend. Do not introduce Spring Boot, databases, Docker, or a separate API server.
-- Preserve existing work. Work on feature branches, never push directly to `main`, and do not merge automatically. Task 001 uses `feature/website-bootstrap`.
+- Preserve existing work. Work on the feature branch specified by each task, never push directly to `main`, and do not merge automatically. Task 001 uses `feature/website-bootstrap`; Task 002 uses `feature/website-brand-design-system`. Create the task pull request for review.
 - Use strict TypeScript and the `@/*` alias for `src/*`. Prefer Server Components; add Client Components only when interaction needs them. Use semantic HTML, accessible navigation, visible focus, and responsive mobile-first layouts.
 - Use kebab-case filenames and PascalCase exported React components. Put route entry points and metadata in `src/app`, shared layout in `src/components/layout`, homepage sections in `src/components/sections`, shadcn components in `src/components/ui`, configuration in `src/config`, and utilities in `src/lib`.
 - Centralize design tokens in `src/app/globals.css`. Preserve shadcn semantic token integration. The initial website uses a light theme; dark mode is deferred. Use Lucide for interface icons.
