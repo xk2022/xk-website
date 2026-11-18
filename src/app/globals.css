@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Task 001 palette. No dark theme is approved for this milestone. */
+:root {
+  color-scheme: light;
+  --primary: #101a33;
+  --secondary: #3157d5;
+  --accent: #19b8d5;
+  --background: #ffffff;
+  --surface: #f5f7fb;
+  --foreground: #172033;
+  --muted: #667085;
+  --border: #e4e8f0;
+
+  /* Accessible semantic pairs for shadcn/ui. Muted text uses --muted. */
+  --primary-foreground: var(--background);
+  --secondary-foreground: var(--background);
+  --accent-foreground: var(--primary);
+  --muted-foreground: var(--muted);
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --input: var(--border);
+  --ring: var(--secondary);
+  /* Functional error state, separate from the brand palette. */
+  --destructive: #b42318;
+  --radius: 0.625rem;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  /* shadcn's bg-muted utility expects a surface, not the brand's text gray. */
+  --color-muted: var(--surface);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --font-sans: var(--font-inter), var(--font-noto-sans-tc), "Microsoft JhengHei", "PingFang TC", Arial, sans-serif;
+  --font-heading: var(--font-sans);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background font-sans text-base text-foreground;
+    line-height: 1.7;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 4px;
+  }
+
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+}

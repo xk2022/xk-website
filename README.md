@@ -245,3 +245,34 @@ Can be deployed to Vercel.
 Do not begin backend development.
 
 Do not change any confirmed business or technology decisions.
+
+
+---
+
+## Local development
+
+Task 001 establishes the website foundation. The original project brief above is preserved. Use Node.js 24.x and npm from the repository root:
+
+```sh
+npm install
+npm run dev
+```
+
+Open http://localhost:3000. No environment variables or backend services are required. The foundation intentionally sets `noindex, nofollow` until launch review. `next/font/google` downloads Inter and Noto Sans TC at build time, so builds require Google Fonts access.
+
+```sh
+npx tsc --noEmit
+npm run lint
+npm run build
+npm run start
+```
+
+`npm run start` serves the production build after `npm run build`. `npm run typecheck` is also available as an alias for the TypeScript check.
+
+## Vercel deployment
+
+Import `xk2022/xk-website` into Vercel, select the Next.js framework preset, and use repository root `.` as the Root Directory. Use Node.js 24.x, `npm install` for installation, `npm run build` for the build, and the default Next.js output settings. No environment variables are required.
+
+Keep `main` as the production branch and review `feature/website-bootstrap` through a pull request and Preview Deployment before merging. This bootstrap does not provision a Vercel project, change DNS, or deploy the domain. Configure `xplorekaleidoscope.com` and its HTTPS settings in Vercel when release work is authorized.
+
+See [implementation notes](docs/implementation-notes.md) for repository inspection, documentation mappings, decisions, structure, validation status, and remaining work. Contributor instructions are in [AGENTS.md](AGENTS.md).
