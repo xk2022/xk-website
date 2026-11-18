@@ -8,7 +8,7 @@ Task 001 | Repository Bootstrap
 Task 002 | XK Brand Design System
 Task 003 | Corporate Homepage（包含 Header / Footer / Navigation）
 Task 004 | About Us 品牌介紹頁
-Task 005 | About / Services
+Task 005 | Services 服務介紹頁
 Task 006 | Solutions / Portfolio
 Task 007 | Contact / Privacy
 Task 008 | SEO / Performance / Accessibility
@@ -75,3 +75,22 @@ npm run build:pages
 Task 004 指定的品質指令為 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`。Pages 部署流程延用 Task 003；本次 About 功能先以獨立 PR 供審核，不自動合併或宣稱已發布。
 
 規格：[Task 004](docs/task/task004.md)。實作、截圖與本次驗收結果：[About Us 實作紀錄](docs/about-implementation.md)。Task 002 英文原稿也已恢復於 [task002.md](docs/task/task002.md)，繁體中文版本仍保留。
+
+
+## Task 005 服務介紹頁
+
+新增 `/services`，以網站開發、Java 企業系統、系統整合與資料管理、AI 與自動化、雲端基礎架構五類服務說明技術範圍、適用情境、服務組合與五階段合作方式。首頁已新增「了解完整服務」連結；既有首頁 R05 Maintenance 服務分類及首頁服務錨點仍保留，沒有新增服務明細內頁。
+
+本機執行 `npm run dev` 後開啟 http://localhost:3000/services。Pages 靜態匯出路徑為 `/xk-website/services/`；共用「服務項目」導覽改為 `/services`。目前聯絡入口仍使用真實的首頁 `/#contact`，不公開未確認的信箱、表單、價格或服務保證。
+
+本次驗收指令：
+
+```sh
+npm ci
+npx tsc --noEmit
+npm run lint
+npm run build
+npm run build:pages
+```
+
+規格：[Task 005](docs/task/task005.md)。內容來源、實作分工、截圖與本次實際驗收結果：[Services 實作紀錄](docs/services-implementation.md)。Task 005 已完成本次五個品質指令、一般／靜態三頁回歸、五寬與觸控驗收、axe、鍵盤與資源檢查，七份指定截圖已產出；本次遠端 CI 結果見 PR Checks 與最終交付報告；本次使用 `feature/website-services-page` 建立 PR，等待審核，不自動合併或發布 main。

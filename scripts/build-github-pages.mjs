@@ -42,20 +42,26 @@ function metadataAttribute(html, selectorAttribute, selectorValue, targetAttribu
 }
 
 verifyExportedPage("index.html", "homepage");
-const aboutHtml = verifyExportedPage("about/index.html", "About Us page");
-function verifyAboutUrl(value, label) {
+function verifyBrandUrl(value, expectedPath, label) {
   assert.ok(value, `${label} is missing.`);
   const url = new URL(value);
   assert.equal(url.origin, "https://xplorekaleidoscope.com", `${label} origin is incorrect.`);
-  assert.equal(url.pathname.replace(/\/$/, ""), "/about", `${label} path is incorrect.`);
+  assert.equal(url.pathname.replace(/\/$/, ""), expectedPath, `${label} path is incorrect.`);
   assert.equal(url.search, "", `${label} must not contain a query string.`);
   assert.equal(url.hash, "", `${label} must not contain a fragment.`);
 }
-verifyAboutUrl(metadataAttribute(aboutHtml, "rel", "canonical", "href"), "About canonical URL");
-verifyAboutUrl(metadataAttribute(aboutHtml, "property", "og:url", "content"), "About Open Graph URL");
-const aboutRobots = metadataAttribute(aboutHtml, "name", "robots", "content") ?? "";
-assert.match(aboutRobots, /noindex/, "About must retain noindex metadata.");
-assert.match(aboutRobots, /nofollow/, "About must retain nofollow metadata.");
+
+for (const [relativePath, pagePath, label] of [
+  ["about/index.html", "/about", "About Us"],
+  ["services/index.html", "/services", "Services"],
+]) {
+  const html = verifyExportedPage(relativePath, `${label} page`);
+  verifyBrandUrl(metadataAttribute(html, "rel", "canonical", "href"), pagePath, `${label} canonical URL`);
+  verifyBrandUrl(metadataAttribute(html, "property", "og:url", "content"), pagePath, `${label} Open Graph URL`);
+  const robots = metadataAttribute(html, "name", "robots", "content") ?? "";
+  assert.match(robots, /noindex/, `${label} must retain noindex metadata.`);
+  assert.match(robots, /nofollow/, `${label} must retain nofollow metadata.`);
+}
 
 function verifyStaticTree(directory) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
