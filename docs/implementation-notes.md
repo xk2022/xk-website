@@ -233,3 +233,18 @@ Header／Footer／手機導覽的 About 更新為 `/about`，原首頁 `#about` 
 GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validator 以驗證 `out/services/index.html`、Base Path、Metadata、noindex／nofollow，同時保留首頁／About 及開發路由保護。正式聯絡方式仍待確認，不建立假表單、無效 mailto、服務價格或未確認的維運保證。
 
 完整來源、元件分工、檔案清單及驗收結果見 [Services 實作紀錄](services-implementation.md)。320px 人工檢查發現 Hero 固定方形裁切標語，改為 sm:aspect-square 後已完整重驗；npm ci、TypeScript、ESLint（零警告）、一般 Build 與 Pages Build 均 exit 0。本次一般 Next.js 的三頁、開發頁保護、Disabled 與鍵盤計數／重設均實測正常。Fresh 靜態 Suite 結果 PASS：五寬三頁共 15 個 Responsive Case、18 次 axe（含三個展開選單）零 A／AA 違規，21 個站內目標與實際跨頁點擊正常，23 個 CSS／JS／字體／圖示全 200。十區塊、五類完整技術清單、五組合、五流程、Metadata、noindex／nofollow、Base Path、404、`.nojekyll` 與開發頁排除均通過；Skip Link、可見 Focus、Reduced Motion 0s、選單 Escape／焦點／外部點擊／斷點關閉亦通過，無非預期 Console／Runtime／Network Error。375px 觸控與 2x 裝置模式也已檢查，七張指定 PNG 已產出。人工視覺通過：320／375px Hero 全標語未裁切、Logo 192 × 192、CTA 不重疊，375px 概覽五卡／垂直流程與 Integration＋AI 圖均清楚、間距一致且標籤無溢出，1440px Hero／Website／組合／流程與 Integration＋AI 亦正常；axe 範圍與人工視覺範圍詳列於報告，不宣稱完整無障礙認證。以上為 Task 005 本次驗收，不沿用先前任務結果；遠端 run、Commit 與 PR 以本次 PR Checks、提交紀錄及最終交付報告為準，不預填識別碼、不自動合併或發布 main。
+
+
+## Task 006 歷史更新 — Solutions 解決方案介紹頁
+
+本次以 `main@35639d881f2805765f6ceee0bb159d5225984975` 建立 `feature/website-solutions-page`；Task 005 Merge `e341f12d4d3a93127402ed0b4889d2526b253244` 已是祖先。使用者此次明確要求執行 Task 006、核對規格／程式、修錯、產出驗證文件並 Push and merge；不把此授權擴及 Portfolio、Contact／Privacy、Vercel 或 DNS。
+
+唯讀再次確認文件 Repository main 為 `95ef1275a46ace76e11f668178ca881087483398`，51 檔 Blob 與實際使用 17 筆來源均核對。沒有獨立商用 Solutions 目錄，四案保持 `proposed-direction`，只是有來源的企業需求／服務組合；無客戶成果、產品販售、報價或 SLA。頁面完成九個 Section／四個 Article、八項方案內容、技術與既有 ServiceId 對照、三示例及直接重用的五階段流程。新區塊維持 Server Components，Design System／Logo／Tokens／相依版本與一般 Next／Pages 雙模式保留。
+
+共用 Solutions 導覽改到 `/solutions`，首頁原三方向與 `#solutions` 保留，只新增「了解解決方案」入口。Pages validator 加入 Solutions 精確 Metadata／四頁 canonical／robots／Base Path／HTML／CSS 資源實體檢查，保留 404／.nojekyll／dev payload 保護；不改 workflow、Next 設定或部署條件。根 README／AGENTS 的已刪替代原稿入口已同步至 canonical 規格，舊實作報告不回寫。
+
+五個 fresh 品質指令 npm ci、TypeScript、ESLint（零錯誤／警告）、一般 build、build:pages 皆 Exit 0。一般模式 15 項與最終Pages 70 項完整通過，涵蓋四頁、20 個響應式案例、23 次 axe（0 違規）、27 個站內目的地／錨點、27 個資源、鍵盤／手機／375px touch／Reduced Motion、Metadata／noindex與靜態保護。S06-N01 確認 Solutions 實際 DOM 無 disabled／form／mailto，不創造假功能。七份真實 PNG及320／375px補充畫面已人工閱讀，正式圖與已檢視圖 SHA256 全相同。
+
+原兩次Pages 工具 FAIL 保留：logical href Base Path 預期錯判，以及 HEAD 事件分類器的空URL解析。以原始Promise／CDP／Next source／後續 tree GET 交叉證明 165 個 HEAD 實際成功 200；僅符合精確條件才分類，其他錯誤仍 FAIL。修工具後全套重驗 Exit 0；app 程式碼指紋全程相同，沒有以改產品 prefetch、跳過測試或刪除錯誤換取通過。安裝時既有 ESLint deprecated 提示保留，未升降級套件。
+
+正式實作／驗證與失敗重驗證據見 [Task 006 報告](reports/task006-implementation.md) 及 [結構化驗證紀錄](reports/task006-verification.json)。此紀錄截止於建立 PR 前；真實 Commit／PR／CI 與後續 main 部署／公開站結果須在實際發生後補入報告與同PR交付紀錄，不能由本機結果或過去任務推定。
