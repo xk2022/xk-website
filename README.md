@@ -7,7 +7,7 @@
 Task 001 | Repository Bootstrap
 Task 002 | XK Brand Design System
 Task 003 | Corporate Homepage（包含 Header / Footer / Navigation）
-Task 004 | Homepage
+Task 004 | About Us 品牌介紹頁
 Task 005 | About / Services
 Task 006 | Solutions / Portfolio
 Task 007 | Contact / Privacy
@@ -65,3 +65,13 @@ npm run build:pages
 `out/` 是靜態 artifact，不能以 `npm run start` 當作 Pages 伺服器。靜態匯出排除 `/dev/design-system`，並保留建置階段的 `noindex, nofollow`；正式開放索引是後續獨立決策。
 
 本次規格：[Task 003](docs/task/task003.md)。實作、檔案異動與驗收紀錄：[首頁實作指南](docs/homepage-implementation.md)。Actions、Pages 來源設定與本機靜態預覽：[部署指南](docs/github-pages-deployment.md)。
+
+## Task 004 品牌介紹頁
+
+新增 `/about`，提供品牌介紹、使命、願景、核心能力、工作方式、創辦人介紹與服務理念。Header、手機選單與 Footer 的「關於 XK」現在指向此頁；既有首頁 `#about`／`#brand` 錨點仍保留。
+
+本機執行 `npm run dev` 後開啟 http://localhost:3000/about。GitHub Pages 匯出使用 `/xk-website/about/` 路徑，CTA 返回實際首頁服務與聯絡區塊。頁面保留 `noindex, nofollow`，沒有公開未確認的創辦人姓名、照片或聯絡方式。
+
+Task 004 指定的品質指令為 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`。Pages 部署流程延用 Task 003；本次 About 功能先以獨立 PR 供審核，不自動合併或宣稱已發布。
+
+規格：[Task 004](docs/task/task004.md)。實作、截圖與本次驗收結果：[About Us 實作紀錄](docs/about-implementation.md)。Task 002 英文原稿也已恢復於 [task002.md](docs/task/task002.md)，繁體中文版本仍保留。

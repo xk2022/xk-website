@@ -1,7 +1,7 @@
-// Only implemented homepage destinations belong in public navigation.
+// Public navigation includes implemented pages and existing homepage anchors.
 export const primaryNavigation = [
   { href: "/", label: "首頁" },
-  { href: "/#about", label: "關於 XK" },
+  { href: "/about", label: "關於 XK" },
   { href: "/#services", label: "服務項目" },
   { href: "/#solutions", label: "解決方案" },
 ] as const;
@@ -14,7 +14,7 @@ export const contactNavigation = {
 // Planning inventory only. Publish each route after its content is implemented.
 export const plannedRoutes = [
   { path: "/", label: "首頁", status: "implemented" },
-  { path: "/about", label: "關於我們", status: "planned" },
+  { path: "/about", label: "關於我們", status: "implemented" },
   { path: "/services", label: "服務總覽", status: "planned" },
   { path: "/services/website-development", label: "網站建置", status: "planned" },
   { path: "/services/java-enterprise", label: "Java 企業系統", status: "planned" },

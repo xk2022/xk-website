@@ -24,11 +24,38 @@ rmSync(join(output, "dev.html"), { force: true });
 rmSync(join(output, "dev.txt"), { force: true });
 writeFileSync(join(output, ".nojekyll"), "");
 
-assert.ok(existsSync(join(output, "index.html")), "Missing exported homepage.");
 assert.ok(existsSync(join(output, "404.html")), "Missing GitHub Pages 404 document.");
-const html = readFileSync(join(output, "index.html"), "utf8");
-assert.match(html, /noindex/, "Construction-stage noindex metadata must be retained.");
-assert.ok(html.includes(`${basePath}/_next/static/`), "Exported asset URLs do not match the Pages base path.");
+
+function verifyExportedPage(relativePath, label) {
+  const path = join(output, relativePath);
+  assert.ok(existsSync(path), `Missing exported ${label}.`);
+  const html = readFileSync(path, "utf8");
+  assert.match(html, /noindex/, `${label} must retain construction-stage noindex metadata.`);
+  assert.ok(html.includes(`${basePath}/_next/static/`), `${label} asset URLs do not match the Pages base path.`);
+  return html;
+}
+
+function metadataAttribute(html, selectorAttribute, selectorValue, targetAttribute) {
+  const tags = html.match(/<(?:meta|link)\b[^>]*>/g) ?? [];
+  const tag = tags.find((value) => value.includes(`${selectorAttribute}="${selectorValue}"`));
+  return tag?.match(new RegExp(`\\b${targetAttribute}="([^"]*)"`))?.[1];
+}
+
+verifyExportedPage("index.html", "homepage");
+const aboutHtml = verifyExportedPage("about/index.html", "About Us page");
+function verifyAboutUrl(value, label) {
+  assert.ok(value, `${label} is missing.`);
+  const url = new URL(value);
+  assert.equal(url.origin, "https://xplorekaleidoscope.com", `${label} origin is incorrect.`);
+  assert.equal(url.pathname.replace(/\/$/, ""), "/about", `${label} path is incorrect.`);
+  assert.equal(url.search, "", `${label} must not contain a query string.`);
+  assert.equal(url.hash, "", `${label} must not contain a fragment.`);
+}
+verifyAboutUrl(metadataAttribute(aboutHtml, "rel", "canonical", "href"), "About canonical URL");
+verifyAboutUrl(metadataAttribute(aboutHtml, "property", "og:url", "content"), "About Open Graph URL");
+const aboutRobots = metadataAttribute(aboutHtml, "name", "robots", "content") ?? "";
+assert.match(aboutRobots, /noindex/, "About must retain noindex metadata.");
+assert.match(aboutRobots, /nofollow/, "About must retain nofollow metadata.");
 
 function verifyStaticTree(directory) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
