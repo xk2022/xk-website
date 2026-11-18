@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { XkLogo } from "@/components/brand/xk-logo";
 import { Container } from "@/components/layout/container";
 import { primaryNavigation } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
@@ -12,16 +13,11 @@ export function SiteHeader() {
           href="/"
           className="flex min-h-11 items-center gap-3 rounded-sm text-primary"
         >
-          {/* Provisional text treatment; this is not an approved brand logo. */}
-          <span
-            className="flex size-11 items-center justify-center border-2 border-primary text-lg font-bold tracking-tight"
-          >
-            {siteConfig.abbreviation}
-          </span>
+          <XkLogo size={56} showWordmark={false} decorative />
           <span lang="en" className="text-sm font-semibold sm:text-base">
             {siteConfig.name}
           </span>
-          <span className="sr-only">首頁</span>
+          <span className="sr-only">首頁，Logo 為暫定版本</span>
         </Link>
         <nav aria-label="主要導覽">
           <ul className="flex flex-wrap gap-1 sm:gap-4">

@@ -181,3 +181,16 @@ The original README prefix was verified byte-for-byte and `git diff --check` pas
 Branch: `feature/website-bootstrap`. Delivery uses a Conventional Commit and a review pull request targeting `main`. No changes are made to `main`, and no automatic merge is performed. Commit and pull request identifiers are reported in the task handoff.
 
 Task 001 prepares the foundation for design-system work and the later content pages. Remaining work includes approved logo and sharing assets, final content and legal review, a verified contact channel before any contact UI is published, implementation of the future routes, reviewing construction-stage noindex metadata, the ESLint upstream compatibility update, and actual Vercel/domain setup. None of these require backend development in this milestone.
+
+
+## Task 002 歷史更新 — 品牌設計系統
+
+以上 Task 001 內容保留為當時的檢查與驗收紀錄。Task 002 從網站 `main` 的 `699a0cd3918203e502fe3bf1f970f2cdd819123b` 建立 `feature/website-brand-design-system`，以 [docs/task/task002.md](task/task002.md) 為本次規格，不重新初始化專案。README 已由使用者更新為里程碑規劃，因此 Task 001 原始規格現在以 [docs/task/task001.md](task/task001.md) 為準。
+
+本次新增集中管理的 Typography、Spacing、Radius、Shadow、Container、Section 與 Motion Tokens，完善共用 Button、Card、Container、Section、XkLogo 與裝飾性 BrandPattern，並建立 `/dev/design-system` 開發驗收頁。既有首頁僅改用共用元件與排版角色，沒有擴充完整首頁內容；套件依賴維持不變。
+
+文件 Repository 讀取版本更新為 `3996730176e4ad7237c66f541d61405f2667934e`。Week 02 規劃文件未變，但現在已提供 `assets/brand/logo/` 素材；本次保留其 XK 路徑及文字輪廓。Task 002 仍規定 Logo 為暫定版本，不宣稱最終核准。來源素材使用 `#101828`、`#2563EB`，以獨立 Logo Tokens 保留原稿色彩；UI 繼續使用已確認的八個色彩。文件 Repository 未修改。
+
+設計系統頁在 `npm run dev` 可用；production 預設 404，僅在明確設定伺服器端 `XK_DESIGN_SYSTEM_PREVIEW=1` 時開放驗收，且保持 `noindex, nofollow`，不加入網站導覽。
+
+完整 API、來源說明與驗收紀錄見 [品牌設計系統](brand-design-system.md)。Task 002 最終 TypeScript、ESLint（零警告）與 Build 皆通過；五種寬度的首頁及展示頁皆無水平溢出或檢出的 axe WCAG A/AA 違規，鍵盤操作、真實連結、按鈕停用及 reduced-motion 皆通過。production 預設 404 與旗標啟用 200 均已實測；詳細結果與素材比對紀錄列於設計系統指南。
