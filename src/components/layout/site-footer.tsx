@@ -46,7 +46,6 @@ export function SiteFooter() {
                   {contactNavigation.label}
                 </Link>
               </li>
-              <li className="pt-2 text-primary-foreground/65">作品案例（規劃中）</li>
             </ul>
           </nav>
 
