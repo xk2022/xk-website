@@ -1009,7 +1009,7 @@
     "publicFeatureVerification": "PENDING",
     "updateLocation": "SamePRdescriptionafteractualevents;no extra ownSHA-onlycommit."
   },
-  "finalDocumentationValidation": {
+  "fontOnlyDocumentationValidation": {
     "status": "PASS",
     "checkedAt": "2026-11-19T08:28:09.339800+00:00",
     "linkedPathsChecked": 81,
@@ -1348,5 +1348,421 @@
     "requiredPass": 19,
     "runtimeChangesSinceFormalTests": false,
     "scope": "Actual final docs/links/archive+source validation only; no new website tests or remote deployment claim."
+  },
+  "finalSourceAddendum": {
+    "status": "PASS",
+    "finalSourceFingerprint": "3d00df42565635715b36078fb9a244bdac5fb001388dc26b0d40cef3989061eb",
+    "fontOnlyFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+    "verification": "source-fix-verification.json",
+    "bridge": "source-artifact-bridge.json",
+    "performanceRemeasured": false,
+    "freshCommandsExit0": 5,
+    "freshQaNormalPass": 18,
+    "freshQaPagesPass": 23
+  },
+  "finalDocumentationValidation": {
+    "sourceFixSupplementVerified": 96,
+    "status": "PASS",
+    "checkedAt": "2026-11-19T08:53:57.119652+00:00",
+    "linkedPathsChecked": 87,
+    "linkChecks": [
+      [
+        "README.md",
+        "docs/task/README.md"
+      ],
+      [
+        "README.md",
+        "docs/subagent-workflow.md"
+      ],
+      [
+        "README.md",
+        "AGENTS.md"
+      ],
+      [
+        "README.md",
+        "docs/github-pages-deployment.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task001.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task002.md"
+      ],
+      [
+        "README.md",
+        "docs/brand-design-system.md"
+      ],
+      [
+        "README.md",
+        "docs/implementation-notes.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task003.md"
+      ],
+      [
+        "README.md",
+        "docs/homepage-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/github-pages-deployment.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task004.md"
+      ],
+      [
+        "README.md",
+        "docs/about-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task002.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task005.md"
+      ],
+      [
+        "README.md",
+        "docs/services-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task006.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task006-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task007.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task007-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task007-verification.json"
+      ],
+      [
+        "README.md",
+        "docs/reports/task007-evidence.json.gz"
+      ],
+      [
+        "README.md",
+        "docs/task/task008.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task008-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task008-verification.json"
+      ],
+      [
+        "README.md",
+        "docs/reports/task008-evidence.json.gz"
+      ],
+      [
+        "README.md",
+        "docs/task/task009.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task009-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task010.md"
+      ],
+      [
+        "README.md",
+        "docs/seo-operations.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task010-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/performance-measurement.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task011-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "temp.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task001.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task002.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task003.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task004.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task005.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task006.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task007.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task008.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task009.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task010.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task011.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task012.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task013.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task014.md"
+      ],
+      [
+        "docs/task/README.md",
+        "temp.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../../README.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../../AGENTS.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../implementation-notes.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../brand-design-system.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../homepage-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../about-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../services-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../reports/task009-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../seo-operations.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../reports/task010-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../reports/task011-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../performance-measurement.md"
+      ],
+      [
+        "docs/performance-measurement.md",
+        "task/task011.md"
+      ],
+      [
+        "docs/performance-measurement.md",
+        "reports/task011-implementation.md"
+      ],
+      [
+        "docs/performance-measurement.md",
+        "subagent-workflow.md"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "../task/task011.md"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "../subagent-workflow.md"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/verification.json"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "../screenshots/task011-performance-mobile.png"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "../screenshots/task011-performance-desktop.png"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "../performance-measurement.md"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/README.md"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/measurements.json"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/verification.json"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/manifest.json"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/evidence.json.xz"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/source-artifact-bridge.json"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/source-fix-verification.json"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/source-fix-evidence.json.xz"
+      ],
+      [
+        "docs/reports/task011-artifacts/README.md",
+        "../task011-implementation.md"
+      ],
+      [
+        "docs/reports/task011-artifacts/README.md",
+        "../../performance-measurement.md"
+      ],
+      [
+        "docs/reports/task011-artifacts/README.md",
+        "../../performance-measurement.md"
+      ],
+      [
+        "docs/reports/task011-artifacts/README.md",
+        "source-fix-verification.json"
+      ],
+      [
+        "docs/reports/task011-artifacts/README.md",
+        "source-artifact-bridge.json"
+      ],
+      [
+        "docs/reports/task011-artifacts/README.md",
+        "source-fix-evidence.json.xz"
+      ],
+      [
+        "docs/implementation-notes.md new section",
+        "reports/task011-implementation.md"
+      ],
+      [
+        "docs/implementation-notes.md new section",
+        "performance-measurement.md"
+      ],
+      [
+        "docs/implementation-notes.md new section",
+        "reports/task011-artifacts/README.md"
+      ]
+    ],
+    "archive": "evidence.json.xz",
+    "archiveSha256": "fbf1b4415bab2dcf96ccf66de35c3d7d0bd4a4d067c9dc59ae4490c9adbd500c",
+    "restoredPayloads": 1944,
+    "secretPatternMatches": 0,
+    "sourceFilesVerified": 107,
+    "sourceFingerprint": "3d00df42565635715b36078fb9a244bdac5fb001388dc26b0d40cef3989061eb",
+    "requiredPass": 19,
+    "runtimeChangesSinceFormalTests": false,
+    "scope": "Actual final docs/links/archive+source validation only; no new website tests or remote deployment claim.",
+    "markdown": {
+      "final-markdown": {
+        "status": "FAIL",
+        "exitCode": 1,
+        "command": [
+          "node",
+          "/tmp/xk-md-lint-cache/_npx/3c2a9ea6c4b6e0a2/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs",
+          "README.md",
+          "docs/task/README.md",
+          "docs/performance-measurement.md",
+          "docs/reports/task011-implementation.md",
+          "docs/reports/task011-artifacts/README.md",
+          "/tmp/xk-task011-public/final-agent-fragment.md",
+          "/tmp/xk-task011-public/final-notes-fragment.md",
+          "--config",
+          "/tmp/xk-task-policy-20261118/markdownlint.json"
+        ],
+        "log": "markdownlint-cli2 v0.24.1 (markdownlint v0.42.1)\nFinding: README.md docs/task/README.md docs/performance-measurement.md docs/reports/task011-implementation.md docs/reports/task011-artifacts/README.md /tmp/xk-task011-public/final-agent-fragment.md /tmp/xk-task011-public/final-notes-fragment.md\nLinting: 7 files\nSummary: 1 issue in 1 file\n../../tmp/xk-task011-public/final-notes-fragment.md:15 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]\n",
+        "notes": "NewTask011note separator hadtwo blanklines;normalizedonlythisnewseparator and reranMarkdown,no runtimechange."
+      },
+      "final-markdown-retest": {
+        "status": "PASS",
+        "exitCode": 0,
+        "command": [
+          "node",
+          "/tmp/xk-md-lint-cache/_npx/3c2a9ea6c4b6e0a2/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs",
+          "README.md",
+          "docs/task/README.md",
+          "docs/performance-measurement.md",
+          "docs/reports/task011-implementation.md",
+          "docs/reports/task011-artifacts/README.md",
+          "/tmp/xk-task011-public/final-agent-fragment.md",
+          "/tmp/xk-task011-public/final-notes-fragment.md",
+          "--config",
+          "/tmp/xk-task-policy-20261118/markdownlint.json"
+        ],
+        "log": "markdownlint-cli2 v0.24.1 (markdownlint v0.42.1)\nFinding: README.md docs/task/README.md docs/performance-measurement.md docs/reports/task011-implementation.md docs/reports/task011-artifacts/README.md /tmp/xk-task011-public/final-agent-fragment.md /tmp/xk-task011-public/final-notes-fragment.md\nLinting: 7 files\nSummary: 0 issues in 0 files\n",
+        "notes": "NewTask011note separator hadtwo blanklines;normalizedonlythisnewseparator and reranMarkdown,no runtimechange."
+      }
+    }
   }
 }

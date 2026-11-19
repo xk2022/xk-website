@@ -46,3 +46,7 @@ print("Verified", len(record["files"]), "members")
 Lighthouse／受控 CDP 是不同方法，僅各自比較相同條件的 baseline／after。原始 `COMPLETE` 表示量測程序完成，目標是否達標另見衍生結果；TBT、Long Tasks 或少量 Event Timing 不是 field INP。原始網路事件保留完整 redirect／failure，unique requestId map 數不等於所有 HTTP transactions；暖快取的 load 與 interaction 分期另列，不能混成原頁 initial payload。
 
 頁面 PNG 僅作 UI 證據。沒有 DevTools UI 截圖時，直接交付真實 trace／network／font 資料，不把資料圖或網站截圖冒稱 DevTools 畫面。可用 Chrome Performance 匯入解開的 trace JSON 作進一步檢視。
+
+## CI 來源修正補充證據
+
+[source-fix-verification.json](source-fix-verification.json) 記錄最終原碼、五個品質命令、普通 18／Pages 23 定向補驗及 [204 檔 bridge](source-artifact-bridge.json)。[source-fix-evidence.json.xz](source-fix-evidence.json.xz) 保留其原始資料與失敗／重驗；使用相同 files／blobs 還原方式，archive SHA／member count 改讀該 verification 的 evidenceArchive。原始 font-only 量測與主封存不變，不能把補驗當成效能重測。

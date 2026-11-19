@@ -332,3 +332,7 @@ robots 允許讀取 public HTML 的 noindex，依 Base Path 排除 dev 與 draft
 完成版本的 npm ci、TypeScript、ESLint、一般 Build、Pages Build 均真 Exit 0。普通 QA 18／18 PASS；Pages 33 PASS＋1 有據 Disabled N/A、45 responsive／48 axe 零違規，25 contexts 皆實際取得 after snapshot，159 資源成功、387 個 HEAD 原始事件嚴格分類、unexpected 0。兩張網站 PNG 與另外三種寬度視口已由 Root 實看；頁面圖不是效能 metric 或 DevTools UI。初輪 Header／gzip 與 nomodule checker 工具 FAIL、服務清理與環境探測限制均保留，修正僅定向重驗，沒有假 PASS 或無關網站重跑。
 
 獨立 [Task 011 實作與驗證](reports/task011-implementation.md)、[量測指南](performance-measurement.md) 與 [原始證據操作說明](reports/task011-artifacts/README.md) 記錄完整版本、全部 runs／範圍、來源、失敗／重驗與限制。19 個 Required 驗收通過，field CWV／真機仍 Optional PENDING；缺 field 資料不開放索引或新增資料蒐集。後續實際 Commit／PR／CI／merge／main 部署及公開網址結果依協作流程更新同 PR 說明，不從本機通過推定已部署。
+
+### Task 011 CI artifact 來源修正
+
+初次 PR #16 head `180e4f8` 的 CI 已成功，但下載 artifact 後發現新驗收資料意外增加全域 utilities，CSS 多 1241 bytes；沒有先合併。於 globals.css 明確排除 Task 011 報告／原始證據掃描，三份 CSS 恢復原受測 bytes。最終 source fingerprint `3d00df42565635715b36078fb9a244bdac5fb001388dc26b0d40cef3989061eb` 與 font-only `cc60…` 分開記錄；runtime bridge 為 204 檔一致，142 raw 相同、62 只差經驗證的 Build ID。新增 source 規則後重跑品質與普通／Pages 針對性驗收，舊 156 樣本、圖片與來源紀錄不改稱新測量。實際補驗與後續新 head CI／merge／部署見同一報告與 PR。

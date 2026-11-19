@@ -1,0 +1,4179 @@
+{
+  "task": "Task 011 source/artifact consistency bridge",
+  "reviewer": "/root/ui_components",
+  "reviewedAt": "2026-11-19T08:43:11.798780+00:00",
+  "status": "PASS",
+  "purpose": "Directed equivalence check after excluding Task 011 report/artifacts from Tailwind utility scanning; no browser or performance rerun is claimed.",
+  "testedArtifact": "/tmp/xk-task011/after/pages-root/xk-website",
+  "currentSnapshot": "/tmp/xk-task011-public/bridge-current-out",
+  "snapshotReceipt": "/tmp/xk-task011-public/source-artifact-bridge-snapshot.json",
+  "fileCount": 204,
+  "testedRuntimeFingerprintReference": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+  "buildIds": {
+    "tested": "x1j1qrvUridQYBC8Nou6C",
+    "current": "eXOz3W5ax9told1T-j2gJ",
+    "provenance": "Each Build ID was parsed from the root RSC __next._tree.txt 0-record b property and independently matched to the unique _next/static/<id>/_buildManifest.js directory."
+  },
+  "normalizationPolicy": {
+    "paths": "Only the exact independently extracted Build ID component in _next/static/<BUILD_ID>/ manifest paths.",
+    "payloads": "Only the full exact JSON property token \"b\":\"<known id>\" in plain RSC, or the corresponding escaped Flight JSON token in HTML. No arbitrary string stripping, regex content removal, whitespace changes or asset-body normalization.",
+    "assetBytes": "All CSS, JavaScript including relocated manifests, fonts, icons and public artwork bytes must match raw.",
+    "allLogicalPathsEqual": true
+  },
+  "groupResults": {
+    "Other exported files": {
+      "files": 4,
+      "rawByteIdentical": 4,
+      "knownBuildIdOnly": 0,
+      "failures": 0
+    },
+    "HTML": {
+      "files": 12,
+      "rawByteIdentical": 0,
+      "knownBuildIdOnly": 12,
+      "failures": 0
+    },
+    "RSC": {
+      "files": 50,
+      "rawByteIdentical": 0,
+      "knownBuildIdOnly": 50,
+      "failures": 0
+    },
+    "JavaScript": {
+      "files": 13,
+      "rawByteIdentical": 13,
+      "knownBuildIdOnly": 0,
+      "failures": 0
+    },
+    "CSS": {
+      "files": 3,
+      "rawByteIdentical": 3,
+      "knownBuildIdOnly": 0,
+      "failures": 0
+    },
+    "Fonts": {
+      "files": 115,
+      "rawByteIdentical": 115,
+      "knownBuildIdOnly": 0,
+      "failures": 0
+    },
+    "Icons/SVG": {
+      "files": 2,
+      "rawByteIdentical": 2,
+      "knownBuildIdOnly": 0,
+      "failures": 0
+    },
+    "Public source artwork/documentation": {
+      "files": 5,
+      "rawByteIdentical": 5,
+      "knownBuildIdOnly": 0,
+      "failures": 0
+    }
+  },
+  "rawByteIdenticalFiles": 142,
+  "knownBuildIdOnlyContentFiles": 62,
+  "buildIdRelocatedManifests": [
+    "_next/static/<BUILD_ID>/_buildManifest.js",
+    "_next/static/<BUILD_ID>/_clientMiddlewareManifest.js",
+    "_next/static/<BUILD_ID>/_ssgManifest.js"
+  ],
+  "sourceExclusionChange": {
+    "file": "/workspace/xk-website/src/app/globals.css",
+    "sha256": "c63894c0e379119259b157b9915f624ae7b019cde8c9337449296d63fe25b75a",
+    "directives": [
+      "@source not \"../../docs/reports/task011-artifacts\";",
+      "@source not \"../../docs/reports/task011-implementation.md\";"
+    ],
+    "effect": "Current compiled CSS is raw byte-identical to the tested artifact; the source directives exclude report/evidence text from utility generation."
+  },
+  "failures": [],
+  "entries": [
+    {
+      "logicalPath": ".nojekyll",
+      "testedPath": ".nojekyll",
+      "currentPath": ".nojekyll",
+      "testedBytes": 0,
+      "currentBytes": 0,
+      "testedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "currentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "404.html",
+      "testedPath": "404.html",
+      "currentPath": "404.html",
+      "testedBytes": 32523,
+      "currentBytes": 32523,
+      "testedSha256": "c4c2d08398fa37344e97a7bf59d6fd288d8d8f063273e1a0d4dc67689fbfd17c",
+      "currentSha256": "b66d62a1212a2d30f4a5420f8f1fa245818b843c9ff8dd538a50cb3b2f3713fd",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "24e4ce476d34e828877950f2f01df952b075d8f7d188f6aaed956b221357c6d8",
+        "current": "24e4ce476d34e828877950f2f01df952b075d8f7d188f6aaed956b221357c6d8"
+      }
+    },
+    {
+      "logicalPath": "404/index.html",
+      "testedPath": "404/index.html",
+      "currentPath": "404/index.html",
+      "testedBytes": 32523,
+      "currentBytes": 32523,
+      "testedSha256": "c4c2d08398fa37344e97a7bf59d6fd288d8d8f063273e1a0d4dc67689fbfd17c",
+      "currentSha256": "b66d62a1212a2d30f4a5420f8f1fa245818b843c9ff8dd538a50cb3b2f3713fd",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "24e4ce476d34e828877950f2f01df952b075d8f7d188f6aaed956b221357c6d8",
+        "current": "24e4ce476d34e828877950f2f01df952b075d8f7d188f6aaed956b221357c6d8"
+      }
+    },
+    {
+      "logicalPath": "__next.__PAGE__.txt",
+      "testedPath": "__next.__PAGE__.txt",
+      "currentPath": "__next.__PAGE__.txt",
+      "testedBytes": 46941,
+      "currentBytes": 46941,
+      "testedSha256": "05e6b10176a515794790d86e2a6cf4141fc027d84926e1fb7d95064b0e231510",
+      "currentSha256": "be9598143c5eff26984f7cb9678ecff38b74ac17ef6d36b746a3c47cc11b2b30",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "67d41cb2bf9304f8a86e7f43da90c39a1da213663862a3774ed39da7b6654782",
+        "current": "67d41cb2bf9304f8a86e7f43da90c39a1da213663862a3774ed39da7b6654782"
+      }
+    },
+    {
+      "logicalPath": "__next._full.txt",
+      "testedPath": "__next._full.txt",
+      "currentPath": "__next._full.txt",
+      "testedBytes": 61134,
+      "currentBytes": 61134,
+      "testedSha256": "1c781cfb918ec3ae2e89b68ad6120314cd8b05b4df2ea8d498cf18334e738153",
+      "currentSha256": "50ff2220042819811b5cbb5b08fe9d421f5e9f182f57deff9fd77c356233cac3",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "e4cfd01660f9172b72654566503c5f01724a62b2d8215d2429d6122e91d7d0ca",
+        "current": "e4cfd01660f9172b72654566503c5f01724a62b2d8215d2429d6122e91d7d0ca"
+      }
+    },
+    {
+      "logicalPath": "__next._index.txt",
+      "testedPath": "__next._index.txt",
+      "currentPath": "__next._index.txt",
+      "testedBytes": 12581,
+      "currentBytes": 12581,
+      "testedSha256": "c3177d2cb5daac1ecfa5a3246a02d3f38e43c79f053efb8225286ff471a67170",
+      "currentSha256": "1021ea4e756278d2285aa1a378a5f8f23f9dc3316a3dfa026f16fcff41f7109d",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0",
+        "current": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0"
+      }
+    },
+    {
+      "logicalPath": "__next._tree.txt",
+      "testedPath": "__next._tree.txt",
+      "currentPath": "__next._tree.txt",
+      "testedBytes": 430,
+      "currentBytes": 430,
+      "testedSha256": "638de24ae6efce98fd56d3e1a0b92d2ea168d572f3180cde88e62175e5a67e96",
+      "currentSha256": "81e7fa93bba533f66b94efe43919a87d494e3fd442c737e37f96e78b8a43527d",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "47c21d0944dfe8ee4f8b38e8da7e86ee219c1aeee50484a2c59c0575bb25e4d3",
+        "current": "47c21d0944dfe8ee4f8b38e8da7e86ee219c1aeee50484a2c59c0575bb25e4d3"
+      }
+    },
+    {
+      "logicalPath": "_next/static/<BUILD_ID>/_buildManifest.js",
+      "testedPath": "_next/static/x1j1qrvUridQYBC8Nou6C/_buildManifest.js",
+      "currentPath": "_next/static/eXOz3W5ax9told1T-j2gJ/_buildManifest.js",
+      "testedBytes": 219,
+      "currentBytes": 219,
+      "testedSha256": "9476e0afd3f9da68a64e6ec58631191fd3eaca62c9f5a377e7517fe9a89e59ea",
+      "currentSha256": "9476e0afd3f9da68a64e6ec58631191fd3eaca62c9f5a377e7517fe9a89e59ea",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": [],
+      "pathDifference": "Exact independently extracted Build ID directory component only"
+    },
+    {
+      "logicalPath": "_next/static/<BUILD_ID>/_clientMiddlewareManifest.js",
+      "testedPath": "_next/static/x1j1qrvUridQYBC8Nou6C/_clientMiddlewareManifest.js",
+      "currentPath": "_next/static/eXOz3W5ax9told1T-j2gJ/_clientMiddlewareManifest.js",
+      "testedBytes": 96,
+      "currentBytes": 96,
+      "testedSha256": "5483e3295dc35dfe29ea932efc85341c916f10ff78ff5b0e965e003710893a4a",
+      "currentSha256": "5483e3295dc35dfe29ea932efc85341c916f10ff78ff5b0e965e003710893a4a",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": [],
+      "pathDifference": "Exact independently extracted Build ID directory component only"
+    },
+    {
+      "logicalPath": "_next/static/<BUILD_ID>/_ssgManifest.js",
+      "testedPath": "_next/static/x1j1qrvUridQYBC8Nou6C/_ssgManifest.js",
+      "currentPath": "_next/static/eXOz3W5ax9told1T-j2gJ/_ssgManifest.js",
+      "testedBytes": 109,
+      "currentBytes": 109,
+      "testedSha256": "d5fb3470a00964f8d90d64db17b68ea25da4e2b3d6611ebdd9561582c5cc4717",
+      "currentSha256": "d5fb3470a00964f8d90d64db17b68ea25da4e2b3d6611ebdd9561582c5cc4717",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": [],
+      "pathDifference": "Exact independently extracted Build ID directory component only"
+    },
+    {
+      "logicalPath": "_next/static/chunks/0cz1d0mv5g_q7.js",
+      "testedPath": "_next/static/chunks/0cz1d0mv5g_q7.js",
+      "currentPath": "_next/static/chunks/0cz1d0mv5g_q7.js",
+      "testedBytes": 112594,
+      "currentBytes": 112594,
+      "testedSha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683",
+      "currentSha256": "0973c1d64c88adc8e3c950410cb58b288f72118d5965b78049438deb8f2f9683",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/0jk4htvmmu57l.js",
+      "testedPath": "_next/static/chunks/0jk4htvmmu57l.js",
+      "currentPath": "_next/static/chunks/0jk4htvmmu57l.js",
+      "testedBytes": 42472,
+      "currentBytes": 42472,
+      "testedSha256": "1d74615706fdc83700962d1a24f5ae4e58c1119b5880adf40dc671e7bae69c75",
+      "currentSha256": "1d74615706fdc83700962d1a24f5ae4e58c1119b5880adf40dc671e7bae69c75",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/0mr-7pbzposdm.css",
+      "testedPath": "_next/static/chunks/0mr-7pbzposdm.css",
+      "currentPath": "_next/static/chunks/0mr-7pbzposdm.css",
+      "testedBytes": 103613,
+      "currentBytes": 103613,
+      "testedSha256": "ce25680942558ee80c80ecb657ce6bff3934b922f36c52941b7a0598334f3b30",
+      "currentSha256": "ce25680942558ee80c80ecb657ce6bff3934b922f36c52941b7a0598334f3b30",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/1h1bnlt906pi-.js",
+      "testedPath": "_next/static/chunks/1h1bnlt906pi-.js",
+      "currentPath": "_next/static/chunks/1h1bnlt906pi-.js",
+      "testedBytes": 2291,
+      "currentBytes": 2291,
+      "testedSha256": "f00687c555b71c898b4c8af2592ce83dfb9a2bfa59e37c531717e8cf6d596b3b",
+      "currentSha256": "f00687c555b71c898b4c8af2592ce83dfb9a2bfa59e37c531717e8cf6d596b3b",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/1pn4841-8jdsz.css",
+      "testedPath": "_next/static/chunks/1pn4841-8jdsz.css",
+      "currentPath": "_next/static/chunks/1pn4841-8jdsz.css",
+      "testedBytes": 38228,
+      "currentBytes": 38228,
+      "testedSha256": "33ea6bf0c0ba9978c0eb25a430409ba3bd75956bc624341da0cf4d39e8a12cce",
+      "currentSha256": "33ea6bf0c0ba9978c0eb25a430409ba3bd75956bc624341da0cf4d39e8a12cce",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/1wnov70f88xjy.js",
+      "testedPath": "_next/static/chunks/1wnov70f88xjy.js",
+      "currentPath": "_next/static/chunks/1wnov70f88xjy.js",
+      "testedBytes": 29127,
+      "currentBytes": 29127,
+      "testedSha256": "279a2bc6537b1cdd6b489788ca91ab8582f1a7d1a4c34b94a0cf0b75ee0784b1",
+      "currentSha256": "279a2bc6537b1cdd6b489788ca91ab8582f1a7d1a4c34b94a0cf0b75ee0784b1",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/2kctg0wbp1k3n.css",
+      "testedPath": "_next/static/chunks/2kctg0wbp1k3n.css",
+      "currentPath": "_next/static/chunks/2kctg0wbp1k3n.css",
+      "testedBytes": 2065,
+      "currentBytes": 2065,
+      "testedSha256": "b513711a1380cfc44d5747b58acac16bfbe714a33952e53152b971af7a4819fa",
+      "currentSha256": "b513711a1380cfc44d5747b58acac16bfbe714a33952e53152b971af7a4819fa",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/2olhm2sgwzw-8.js",
+      "testedPath": "_next/static/chunks/2olhm2sgwzw-8.js",
+      "currentPath": "_next/static/chunks/2olhm2sgwzw-8.js",
+      "testedBytes": 16377,
+      "currentBytes": 16377,
+      "testedSha256": "3639e186070171e757cf03ccad528c652d5c232c52003f6c1374e13988a9c4ee",
+      "currentSha256": "3639e186070171e757cf03ccad528c652d5c232c52003f6c1374e13988a9c4ee",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/30sekecjjqkej.js",
+      "testedPath": "_next/static/chunks/30sekecjjqkej.js",
+      "currentPath": "_next/static/chunks/30sekecjjqkej.js",
+      "testedBytes": 170080,
+      "currentBytes": 170080,
+      "testedSha256": "1fa20b85bfd96a2674057419a58f501d570a421fd26f902361a0c049587fcf4a",
+      "currentSha256": "1fa20b85bfd96a2674057419a58f501d570a421fd26f902361a0c049587fcf4a",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/310vm2bl3xxpt.js",
+      "testedPath": "_next/static/chunks/310vm2bl3xxpt.js",
+      "currentPath": "_next/static/chunks/310vm2bl3xxpt.js",
+      "testedBytes": 5364,
+      "currentBytes": 5364,
+      "testedSha256": "8a943b00599e56b53569f36f4341e3465ae7705c1391562cd6c7e1f290c0c387",
+      "currentSha256": "8a943b00599e56b53569f36f4341e3465ae7705c1391562cd6c7e1f290c0c387",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/39_j1bdzreq0m.js",
+      "testedPath": "_next/static/chunks/39_j1bdzreq0m.js",
+      "currentPath": "_next/static/chunks/39_j1bdzreq0m.js",
+      "testedBytes": 229288,
+      "currentBytes": 229288,
+      "testedSha256": "a0cb7a4a53fbd01da1ea4c537d56e06ebcef9d3fdd6e79cb7b24809c70b41f82",
+      "currentSha256": "a0cb7a4a53fbd01da1ea4c537d56e06ebcef9d3fdd6e79cb7b24809c70b41f82",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/3qfy96eoyh-ek.js",
+      "testedPath": "_next/static/chunks/3qfy96eoyh-ek.js",
+      "currentPath": "_next/static/chunks/3qfy96eoyh-ek.js",
+      "testedBytes": 13994,
+      "currentBytes": 13994,
+      "testedSha256": "0f13eecc75702fa059f047636cf8814acbb7acaf3702e75d5835ef85a49528b1",
+      "currentSha256": "0f13eecc75702fa059f047636cf8814acbb7acaf3702e75d5835ef85a49528b1",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/chunks/turbopack-1mfkoo_4jufv0.js",
+      "testedPath": "_next/static/chunks/turbopack-1mfkoo_4jufv0.js",
+      "currentPath": "_next/static/chunks/turbopack-1mfkoo_4jufv0.js",
+      "testedBytes": 9985,
+      "currentBytes": 9985,
+      "testedSha256": "9d618f1d65744e54736fe93f19396ab3ba010dc3fa56b74cf602bb97a360f8f1",
+      "currentSha256": "9d618f1d65744e54736fe93f19396ab3ba010dc3fa56b74cf602bb97a360f8f1",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/009085b2287d9f44-s.3932nd_ka6bx8.woff2",
+      "testedPath": "_next/static/media/009085b2287d9f44-s.3932nd_ka6bx8.woff2",
+      "currentPath": "_next/static/media/009085b2287d9f44-s.3932nd_ka6bx8.woff2",
+      "testedBytes": 48756,
+      "currentBytes": 48756,
+      "testedSha256": "667100352c59a0dd39b56e82c3ac86f5c73dd9e3810a53c4d21efbab41ec65a0",
+      "currentSha256": "667100352c59a0dd39b56e82c3ac86f5c73dd9e3810a53c4d21efbab41ec65a0",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/0235299b0ca8d730-s.30y--sj0yvpb0.woff2",
+      "testedPath": "_next/static/media/0235299b0ca8d730-s.30y--sj0yvpb0.woff2",
+      "currentPath": "_next/static/media/0235299b0ca8d730-s.30y--sj0yvpb0.woff2",
+      "testedBytes": 42232,
+      "currentBytes": 42232,
+      "testedSha256": "e03b6a56192612f88cd859a22bf442ab0c62db833a8999288e991e3ab6af6483",
+      "currentSha256": "e03b6a56192612f88cd859a22bf442ab0c62db833a8999288e991e3ab6af6483",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/03c952d1a96d28f2-s.2yaj-wy93r889.woff2",
+      "testedPath": "_next/static/media/03c952d1a96d28f2-s.2yaj-wy93r889.woff2",
+      "currentPath": "_next/static/media/03c952d1a96d28f2-s.2yaj-wy93r889.woff2",
+      "testedBytes": 47696,
+      "currentBytes": 47696,
+      "testedSha256": "fcee483f001694459a0f57a492fa90957f1bd9bc637dc34796cfca0f5919c74b",
+      "currentSha256": "fcee483f001694459a0f57a492fa90957f1bd9bc637dc34796cfca0f5919c74b",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/04f55bbf832b6212-s.3a7s8298nvuyr.woff2",
+      "testedPath": "_next/static/media/04f55bbf832b6212-s.3a7s8298nvuyr.woff2",
+      "currentPath": "_next/static/media/04f55bbf832b6212-s.3a7s8298nvuyr.woff2",
+      "testedBytes": 35764,
+      "currentBytes": 35764,
+      "testedSha256": "85807b744aa799ea8b352f2cda2313d727b4a8a0bbdd43b68d32667453930437",
+      "currentSha256": "85807b744aa799ea8b352f2cda2313d727b4a8a0bbdd43b68d32667453930437",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/05340e0910168ebe-s.0lrpox_ezuk1r.woff2",
+      "testedPath": "_next/static/media/05340e0910168ebe-s.0lrpox_ezuk1r.woff2",
+      "currentPath": "_next/static/media/05340e0910168ebe-s.0lrpox_ezuk1r.woff2",
+      "testedBytes": 10504,
+      "currentBytes": 10504,
+      "testedSha256": "4312479e6cb3106a84c96f2c2269e27d9d8e868718d0c7c39269af5f84f3eeda",
+      "currentSha256": "4312479e6cb3106a84c96f2c2269e27d9d8e868718d0c7c39269af5f84f3eeda",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/0558be3d2352e7cf-s.3zphcfboleyly.woff2",
+      "testedPath": "_next/static/media/0558be3d2352e7cf-s.3zphcfboleyly.woff2",
+      "currentPath": "_next/static/media/0558be3d2352e7cf-s.3zphcfboleyly.woff2",
+      "testedBytes": 49152,
+      "currentBytes": 49152,
+      "testedSha256": "a202eea5840cde6c29563a0cb8aeebcfa8174a73ec9c35d12a3a170821795283",
+      "currentSha256": "a202eea5840cde6c29563a0cb8aeebcfa8174a73ec9c35d12a3a170821795283",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/074b9a1c1687d902-s.1o56q5ow0cjyd.woff2",
+      "testedPath": "_next/static/media/074b9a1c1687d902-s.1o56q5ow0cjyd.woff2",
+      "currentPath": "_next/static/media/074b9a1c1687d902-s.1o56q5ow0cjyd.woff2",
+      "testedBytes": 12096,
+      "currentBytes": 12096,
+      "testedSha256": "79c146fb0ed932496f6c1348b6bea5b4d8abbc6f0e27d2d9aa0515f3e8177df8",
+      "currentSha256": "79c146fb0ed932496f6c1348b6bea5b4d8abbc6f0e27d2d9aa0515f3e8177df8",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/0762262820666a7d-s.2y0jk_rb4j9j4.woff2",
+      "testedPath": "_next/static/media/0762262820666a7d-s.2y0jk_rb4j9j4.woff2",
+      "currentPath": "_next/static/media/0762262820666a7d-s.2y0jk_rb4j9j4.woff2",
+      "testedBytes": 30744,
+      "currentBytes": 30744,
+      "testedSha256": "cf44163df4f687a55cf47dc80b676d394e39387f213f06c768fd104cf3968dba",
+      "currentSha256": "cf44163df4f687a55cf47dc80b676d394e39387f213f06c768fd104cf3968dba",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2",
+      "testedPath": "_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2",
+      "currentPath": "_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2",
+      "testedBytes": 48432,
+      "currentBytes": 48432,
+      "testedSha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "currentSha256": "c940764593d0fe5d596be327ca7558855e018039fb78509aa21921fd3644c3e4",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/0d52760bb4650200-s.1bjf8kaczl_p5.woff2",
+      "testedPath": "_next/static/media/0d52760bb4650200-s.1bjf8kaczl_p5.woff2",
+      "currentPath": "_next/static/media/0d52760bb4650200-s.1bjf8kaczl_p5.woff2",
+      "testedBytes": 68564,
+      "currentBytes": 68564,
+      "testedSha256": "2fd1b861e7b1ae40250b722bdbf213d9776d51e4f7a930e893e713b64239d350",
+      "currentSha256": "2fd1b861e7b1ae40250b722bdbf213d9776d51e4f7a930e893e713b64239d350",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/0e92a0e3d2dd5b8c-s.40xiiskyz0u9x.woff2",
+      "testedPath": "_next/static/media/0e92a0e3d2dd5b8c-s.40xiiskyz0u9x.woff2",
+      "currentPath": "_next/static/media/0e92a0e3d2dd5b8c-s.40xiiskyz0u9x.woff2",
+      "testedBytes": 18720,
+      "currentBytes": 18720,
+      "testedSha256": "5e0a4eed943758363fef0366e8fdd5b32f178e9808e5e0687cae9b3297db23f7",
+      "currentSha256": "5e0a4eed943758363fef0366e8fdd5b32f178e9808e5e0687cae9b3297db23f7",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/10e11208f914d3dd-s.3bg745t-qpt1o.woff2",
+      "testedPath": "_next/static/media/10e11208f914d3dd-s.3bg745t-qpt1o.woff2",
+      "currentPath": "_next/static/media/10e11208f914d3dd-s.3bg745t-qpt1o.woff2",
+      "testedBytes": 35488,
+      "currentBytes": 35488,
+      "testedSha256": "7db8549ca6e4378b2bfee731b2cdce3d152e9ac9834f80e193390b5f3b2846ea",
+      "currentSha256": "7db8549ca6e4378b2bfee731b2cdce3d152e9ac9834f80e193390b5f3b2846ea",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/13693d164b9226e2-s.09xedatzsko5c.woff2",
+      "testedPath": "_next/static/media/13693d164b9226e2-s.09xedatzsko5c.woff2",
+      "currentPath": "_next/static/media/13693d164b9226e2-s.09xedatzsko5c.woff2",
+      "testedBytes": 24460,
+      "currentBytes": 24460,
+      "testedSha256": "9b2380f1902926784c4bc0b33cfe27f3ad0e966add95bb3b33726d1683bd60bb",
+      "currentSha256": "9b2380f1902926784c4bc0b33cfe27f3ad0e966add95bb3b33726d1683bd60bb",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/143a763d17ee6eeb-s.2vdzkn0n3af0t.woff2",
+      "testedPath": "_next/static/media/143a763d17ee6eeb-s.2vdzkn0n3af0t.woff2",
+      "currentPath": "_next/static/media/143a763d17ee6eeb-s.2vdzkn0n3af0t.woff2",
+      "testedBytes": 40096,
+      "currentBytes": 40096,
+      "testedSha256": "5a1030d7160b328f81b6e71b95b629e422d0374288a67ac3bc53a7e9959f72b7",
+      "currentSha256": "5a1030d7160b328f81b6e71b95b629e422d0374288a67ac3bc53a7e9959f72b7",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/16e2c3fb8919692b-s.2jmf7rg3bmuor.woff2",
+      "testedPath": "_next/static/media/16e2c3fb8919692b-s.2jmf7rg3bmuor.woff2",
+      "currentPath": "_next/static/media/16e2c3fb8919692b-s.2jmf7rg3bmuor.woff2",
+      "testedBytes": 43424,
+      "currentBytes": 43424,
+      "testedSha256": "4e2fb902a1072aa4eee19676862d2b5ccd3a078fbdbd4a2c0910feeeaa2aa86f",
+      "currentSha256": "4e2fb902a1072aa4eee19676862d2b5ccd3a078fbdbd4a2c0910feeeaa2aa86f",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/19d6a36952c0081e-s.0so0lmt415myp.woff2",
+      "testedPath": "_next/static/media/19d6a36952c0081e-s.0so0lmt415myp.woff2",
+      "currentPath": "_next/static/media/19d6a36952c0081e-s.0so0lmt415myp.woff2",
+      "testedBytes": 73264,
+      "currentBytes": 73264,
+      "testedSha256": "141e56d4f38d83e508cfbe3ceafd7be134497a264c4ddf7f815a9449265fa5fb",
+      "currentSha256": "141e56d4f38d83e508cfbe3ceafd7be134497a264c4ddf7f815a9449265fa5fb",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/1f6f8074def154cf-s.1un05mbu-o-uv.woff2",
+      "testedPath": "_next/static/media/1f6f8074def154cf-s.1un05mbu-o-uv.woff2",
+      "currentPath": "_next/static/media/1f6f8074def154cf-s.1un05mbu-o-uv.woff2",
+      "testedBytes": 71384,
+      "currentBytes": 71384,
+      "testedSha256": "f0121989024b9abe872fdabd63d1c69e6ccca9434352cb24b2bc7733f451d513",
+      "currentSha256": "f0121989024b9abe872fdabd63d1c69e6ccca9434352cb24b2bc7733f451d513",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/220046453d91186d-s.1jfng0d2lhme1.woff2",
+      "testedPath": "_next/static/media/220046453d91186d-s.1jfng0d2lhme1.woff2",
+      "currentPath": "_next/static/media/220046453d91186d-s.1jfng0d2lhme1.woff2",
+      "testedBytes": 43580,
+      "currentBytes": 43580,
+      "testedSha256": "b08b45760bbc8dffd61b9c96b0fb01e9789775043b98682152a10f7275d6bbee",
+      "currentSha256": "b08b45760bbc8dffd61b9c96b0fb01e9789775043b98682152a10f7275d6bbee",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/2426c9d738456e2d-s.3vsotytmjk-br.woff2",
+      "testedPath": "_next/static/media/2426c9d738456e2d-s.3vsotytmjk-br.woff2",
+      "currentPath": "_next/static/media/2426c9d738456e2d-s.3vsotytmjk-br.woff2",
+      "testedBytes": 27472,
+      "currentBytes": 27472,
+      "testedSha256": "179e8be447ed235b0984be9a1873a7e569a75e9ac00ed46d9593e097e36bc0ea",
+      "currentSha256": "179e8be447ed235b0984be9a1873a7e569a75e9ac00ed46d9593e097e36bc0ea",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/2c51001db788c6b4-s.0kcb3-rjj1y2y.woff2",
+      "testedPath": "_next/static/media/2c51001db788c6b4-s.0kcb3-rjj1y2y.woff2",
+      "currentPath": "_next/static/media/2c51001db788c6b4-s.0kcb3-rjj1y2y.woff2",
+      "testedBytes": 20976,
+      "currentBytes": 20976,
+      "testedSha256": "d649825f6ee73c163c772c1e2525d2598f1f2d95174971d46f5c47b0955803ca",
+      "currentSha256": "d649825f6ee73c163c772c1e2525d2598f1f2d95174971d46f5c47b0955803ca",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/2fb76073e23fd9e4-s.3lvt2whj97whp.woff2",
+      "testedPath": "_next/static/media/2fb76073e23fd9e4-s.3lvt2whj97whp.woff2",
+      "currentPath": "_next/static/media/2fb76073e23fd9e4-s.3lvt2whj97whp.woff2",
+      "testedBytes": 11272,
+      "currentBytes": 11272,
+      "testedSha256": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+      "currentSha256": "a2e2c783ca6f9c20486e81e72a279203e86730bbf8f01ff6a5ee9dbd09e1c271",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/3267407a69ef379d-s.2pltpjtt_2tdv.woff2",
+      "testedPath": "_next/static/media/3267407a69ef379d-s.2pltpjtt_2tdv.woff2",
+      "currentPath": "_next/static/media/3267407a69ef379d-s.2pltpjtt_2tdv.woff2",
+      "testedBytes": 41080,
+      "currentBytes": 41080,
+      "testedSha256": "032eb8e7a7c9c24c7af9a05868f083ef77b3fe6e73e4506ea0f76032a6adf53f",
+      "currentSha256": "032eb8e7a7c9c24c7af9a05868f083ef77b3fe6e73e4506ea0f76032a6adf53f",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/34231b91afb7c6c3-s.1zh_2w0p-2s4_.woff2",
+      "testedPath": "_next/static/media/34231b91afb7c6c3-s.1zh_2w0p-2s4_.woff2",
+      "currentPath": "_next/static/media/34231b91afb7c6c3-s.1zh_2w0p-2s4_.woff2",
+      "testedBytes": 44484,
+      "currentBytes": 44484,
+      "testedSha256": "436ed423caaf97610ece1885aa244e57bdbc8ae95696923794e40be290fff7de",
+      "currentSha256": "436ed423caaf97610ece1885aa244e57bdbc8ae95696923794e40be290fff7de",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/379b8d63e23342d2-s.31x2d79zoz00h.woff2",
+      "testedPath": "_next/static/media/379b8d63e23342d2-s.31x2d79zoz00h.woff2",
+      "currentPath": "_next/static/media/379b8d63e23342d2-s.31x2d79zoz00h.woff2",
+      "testedBytes": 72392,
+      "currentBytes": 72392,
+      "testedSha256": "c7ac93d97ee2f4553c61e00b8d3d310ec823703df4b45a978ad08168b2a9a570",
+      "currentSha256": "c7ac93d97ee2f4553c61e00b8d3d310ec823703df4b45a978ad08168b2a9a570",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/3942aedd309cd604-s.165lm4m9o3-vl.woff2",
+      "testedPath": "_next/static/media/3942aedd309cd604-s.165lm4m9o3-vl.woff2",
+      "currentPath": "_next/static/media/3942aedd309cd604-s.165lm4m9o3-vl.woff2",
+      "testedBytes": 37304,
+      "currentBytes": 37304,
+      "testedSha256": "6957699139372f5317bc9b6139f1b919b2f2261908c5680b51daaf7a116ab8b8",
+      "currentSha256": "6957699139372f5317bc9b6139f1b919b2f2261908c5680b51daaf7a116ab8b8",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/3a2ef6438644f84d-s.0q83xe1cjenwx.woff2",
+      "testedPath": "_next/static/media/3a2ef6438644f84d-s.0q83xe1cjenwx.woff2",
+      "currentPath": "_next/static/media/3a2ef6438644f84d-s.0q83xe1cjenwx.woff2",
+      "testedBytes": 40512,
+      "currentBytes": 40512,
+      "testedSha256": "01c6f3235c9d349b33a331310279045a860081fea74bbfcc522f8110618e3bd9",
+      "currentSha256": "01c6f3235c9d349b33a331310279045a860081fea74bbfcc522f8110618e3bd9",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/3fd3d1cbfe853b45-s.3xm499ayzrrwg.woff2",
+      "testedPath": "_next/static/media/3fd3d1cbfe853b45-s.3xm499ayzrrwg.woff2",
+      "currentPath": "_next/static/media/3fd3d1cbfe853b45-s.3xm499ayzrrwg.woff2",
+      "testedBytes": 40180,
+      "currentBytes": 40180,
+      "testedSha256": "072c1b0898490395e6cf8c57e5cd258cc978684bc55aba7e4e347066737fbcd4",
+      "currentSha256": "072c1b0898490395e6cf8c57e5cd258cc978684bc55aba7e4e347066737fbcd4",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/4027d546954d2342-s.1e8hf5jmmq8_2.woff2",
+      "testedPath": "_next/static/media/4027d546954d2342-s.1e8hf5jmmq8_2.woff2",
+      "currentPath": "_next/static/media/4027d546954d2342-s.1e8hf5jmmq8_2.woff2",
+      "testedBytes": 9292,
+      "currentBytes": 9292,
+      "testedSha256": "d163480c2a19da84965a4780c809b48cb5491dd510c2b83596e74f32eb1755f4",
+      "currentSha256": "d163480c2a19da84965a4780c809b48cb5491dd510c2b83596e74f32eb1755f4",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/41a8ea1171f650a9-s.0p83wts6nj9ce.woff2",
+      "testedPath": "_next/static/media/41a8ea1171f650a9-s.0p83wts6nj9ce.woff2",
+      "currentPath": "_next/static/media/41a8ea1171f650a9-s.0p83wts6nj9ce.woff2",
+      "testedBytes": 43316,
+      "currentBytes": 43316,
+      "testedSha256": "14221c0372bf430c4bb52b2e55f95f86266a7555b741e2eaecc25d4f70be677e",
+      "currentSha256": "14221c0372bf430c4bb52b2e55f95f86266a7555b741e2eaecc25d4f70be677e",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/42a94e1c50501306-s.40lw093d4vcfv.woff2",
+      "testedPath": "_next/static/media/42a94e1c50501306-s.40lw093d4vcfv.woff2",
+      "currentPath": "_next/static/media/42a94e1c50501306-s.40lw093d4vcfv.woff2",
+      "testedBytes": 8776,
+      "currentBytes": 8776,
+      "testedSha256": "62244b787eb59caef83297fcc4cbc04a227c60848e6843baed961025277ea285",
+      "currentSha256": "62244b787eb59caef83297fcc4cbc04a227c60848e6843baed961025277ea285",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/45462fd7b7c12654-s.0k62hbripvv8p.woff2",
+      "testedPath": "_next/static/media/45462fd7b7c12654-s.0k62hbripvv8p.woff2",
+      "currentPath": "_next/static/media/45462fd7b7c12654-s.0k62hbripvv8p.woff2",
+      "testedBytes": 10280,
+      "currentBytes": 10280,
+      "testedSha256": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+      "currentSha256": "8db00ff46c67b22cda8bed865acf7077651cac8d2841d5b40980556b48961931",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/464953112b745f1a-s.177rp2yb-7m_d.woff2",
+      "testedPath": "_next/static/media/464953112b745f1a-s.177rp2yb-7m_d.woff2",
+      "currentPath": "_next/static/media/464953112b745f1a-s.177rp2yb-7m_d.woff2",
+      "testedBytes": 49780,
+      "currentBytes": 49780,
+      "testedSha256": "977f73fae9769ae3449e8c5087ad08b9c56560a5dab1744c55026f49fa1debc2",
+      "currentSha256": "977f73fae9769ae3449e8c5087ad08b9c56560a5dab1744c55026f49fa1debc2",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/46a9e2f250689b4a-s.0-dom-5bn10r2.woff2",
+      "testedPath": "_next/static/media/46a9e2f250689b4a-s.0-dom-5bn10r2.woff2",
+      "currentPath": "_next/static/media/46a9e2f250689b4a-s.0-dom-5bn10r2.woff2",
+      "testedBytes": 25844,
+      "currentBytes": 25844,
+      "testedSha256": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+      "currentSha256": "fccca918fea40089dacadc7045861314d1a6bc91f1f323cc1eeb22ebcdb321b5",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/4838bb8b8a191319-s.0mwgq7b9cikvl.woff2",
+      "testedPath": "_next/static/media/4838bb8b8a191319-s.0mwgq7b9cikvl.woff2",
+      "currentPath": "_next/static/media/4838bb8b8a191319-s.0mwgq7b9cikvl.woff2",
+      "testedBytes": 41584,
+      "currentBytes": 41584,
+      "testedSha256": "3151c0badedddeff81e87cfa33009ff1b42127bc6e0c4e13d04f81f9ca059345",
+      "currentSha256": "3151c0badedddeff81e87cfa33009ff1b42127bc6e0c4e13d04f81f9ca059345",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/4a0a25fecb7ea0a7-s.2ti7gy12g69qv.woff2",
+      "testedPath": "_next/static/media/4a0a25fecb7ea0a7-s.2ti7gy12g69qv.woff2",
+      "currentPath": "_next/static/media/4a0a25fecb7ea0a7-s.2ti7gy12g69qv.woff2",
+      "testedBytes": 43828,
+      "currentBytes": 43828,
+      "testedSha256": "a7e408350126a7814ca808d77d55e2c60e03c2a75a3db825f1b71e57f357ee34",
+      "currentSha256": "a7e408350126a7814ca808d77d55e2c60e03c2a75a3db825f1b71e57f357ee34",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/4a8fa6abf555c69e-s.3zcx5e_xhjfm8.woff2",
+      "testedPath": "_next/static/media/4a8fa6abf555c69e-s.3zcx5e_xhjfm8.woff2",
+      "currentPath": "_next/static/media/4a8fa6abf555c69e-s.3zcx5e_xhjfm8.woff2",
+      "testedBytes": 35564,
+      "currentBytes": 35564,
+      "testedSha256": "ef69e13e87b855852970e6ab4388a7ac552929f0f840f92b9d30f5f85c9bfdbd",
+      "currentSha256": "ef69e13e87b855852970e6ab4388a7ac552929f0f840f92b9d30f5f85c9bfdbd",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/4ba93be2ebd6d053-s.2pqlftuyd_wkv.woff2",
+      "testedPath": "_next/static/media/4ba93be2ebd6d053-s.2pqlftuyd_wkv.woff2",
+      "currentPath": "_next/static/media/4ba93be2ebd6d053-s.2pqlftuyd_wkv.woff2",
+      "testedBytes": 26924,
+      "currentBytes": 26924,
+      "testedSha256": "96746867099d20f9c9a989ac1f7bcb9b2bb58908aa3a113c42ba4207aa7a4054",
+      "currentSha256": "96746867099d20f9c9a989ac1f7bcb9b2bb58908aa3a113c42ba4207aa7a4054",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/4f6d27b94ac7f0f8-s.3aqr1xxws37ij.woff2",
+      "testedPath": "_next/static/media/4f6d27b94ac7f0f8-s.3aqr1xxws37ij.woff2",
+      "currentPath": "_next/static/media/4f6d27b94ac7f0f8-s.3aqr1xxws37ij.woff2",
+      "testedBytes": 24936,
+      "currentBytes": 24936,
+      "testedSha256": "770ef1046c100dd483d8abb2147c557bef32b910a8f416367c605a1137f89c81",
+      "currentSha256": "770ef1046c100dd483d8abb2147c557bef32b910a8f416367c605a1137f89c81",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/50ca53759033ef11-s.1x64mb7j_fgb-.woff2",
+      "testedPath": "_next/static/media/50ca53759033ef11-s.1x64mb7j_fgb-.woff2",
+      "currentPath": "_next/static/media/50ca53759033ef11-s.1x64mb7j_fgb-.woff2",
+      "testedBytes": 50816,
+      "currentBytes": 50816,
+      "testedSha256": "35c092c64c1b07b0b5d80993ec18b51e35fa3d221484c11e2fee1fd3c0e15b11",
+      "currentSha256": "35c092c64c1b07b0b5d80993ec18b51e35fa3d221484c11e2fee1fd3c0e15b11",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/529ff7b702efc565-s.1uqvvaursggy8.woff2",
+      "testedPath": "_next/static/media/529ff7b702efc565-s.1uqvvaursggy8.woff2",
+      "currentPath": "_next/static/media/529ff7b702efc565-s.1uqvvaursggy8.woff2",
+      "testedBytes": 31236,
+      "currentBytes": 31236,
+      "testedSha256": "e75c8aa79180e51f02224ff6ab0e4442b12250ea8fac334fca4084d8dc8ce8ad",
+      "currentSha256": "e75c8aa79180e51f02224ff6ab0e4442b12250ea8fac334fca4084d8dc8ce8ad",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/530c3ab6d0ef253d-s.3uekgxdm5c94d.woff2",
+      "testedPath": "_next/static/media/530c3ab6d0ef253d-s.3uekgxdm5c94d.woff2",
+      "currentPath": "_next/static/media/530c3ab6d0ef253d-s.3uekgxdm5c94d.woff2",
+      "testedBytes": 79056,
+      "currentBytes": 79056,
+      "testedSha256": "aab7a74cf2552cb71de376c7dadd09af38d9bdbee8b105277361d338c3401e9f",
+      "currentSha256": "aab7a74cf2552cb71de376c7dadd09af38d9bdbee8b105277361d338c3401e9f",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/54afa5ace0feb00f-s.0ky-f48x7yw_1.woff2",
+      "testedPath": "_next/static/media/54afa5ace0feb00f-s.0ky-f48x7yw_1.woff2",
+      "currentPath": "_next/static/media/54afa5ace0feb00f-s.0ky-f48x7yw_1.woff2",
+      "testedBytes": 15264,
+      "currentBytes": 15264,
+      "testedSha256": "129acbd9d5f7a1a1ab4fcdb773e6332fcba4cb5375e2a2c20d2d2206e53418ea",
+      "currentSha256": "129acbd9d5f7a1a1ab4fcdb773e6332fcba4cb5375e2a2c20d2d2206e53418ea",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/565e8a4bcc3b12bd-s.0n00dwiemrcd-.woff2",
+      "testedPath": "_next/static/media/565e8a4bcc3b12bd-s.0n00dwiemrcd-.woff2",
+      "currentPath": "_next/static/media/565e8a4bcc3b12bd-s.0n00dwiemrcd-.woff2",
+      "testedBytes": 38320,
+      "currentBytes": 38320,
+      "testedSha256": "e3a3aa16e9a5ffc6320578b2d894c3651fb480858857f5939d5448e72d4e304b",
+      "currentSha256": "e3a3aa16e9a5ffc6320578b2d894c3651fb480858857f5939d5448e72d4e304b",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/588358693d6db01a-s.1obcxweugm4-2.woff2",
+      "testedPath": "_next/static/media/588358693d6db01a-s.1obcxweugm4-2.woff2",
+      "currentPath": "_next/static/media/588358693d6db01a-s.1obcxweugm4-2.woff2",
+      "testedBytes": 43536,
+      "currentBytes": 43536,
+      "testedSha256": "83a12ac056eb6765dc1ad8e4a0b5a83b30075b23df4f88cbf2296ff79555fbb7",
+      "currentSha256": "83a12ac056eb6765dc1ad8e4a0b5a83b30075b23df4f88cbf2296ff79555fbb7",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/592bb1ea124eb038-s.33m2nuqipl96d.woff2",
+      "testedPath": "_next/static/media/592bb1ea124eb038-s.33m2nuqipl96d.woff2",
+      "currentPath": "_next/static/media/592bb1ea124eb038-s.33m2nuqipl96d.woff2",
+      "testedBytes": 52016,
+      "currentBytes": 52016,
+      "testedSha256": "f987c77c3a76b3300ab555d09b5e0d00be8ddb589cad356aac573fc186b3bf2e",
+      "currentSha256": "f987c77c3a76b3300ab555d09b5e0d00be8ddb589cad356aac573fc186b3bf2e",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/60d9202d0746aed7-s.0naqgrmpp19d5.woff2",
+      "testedPath": "_next/static/media/60d9202d0746aed7-s.0naqgrmpp19d5.woff2",
+      "currentPath": "_next/static/media/60d9202d0746aed7-s.0naqgrmpp19d5.woff2",
+      "testedBytes": 53920,
+      "currentBytes": 53920,
+      "testedSha256": "00f55318fa37fe8d38421bd3266faf7477133bc59fd35cbec72762d96b740015",
+      "currentSha256": "00f55318fa37fe8d38421bd3266faf7477133bc59fd35cbec72762d96b740015",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/6131cbbf5549afa2-s.2uwcyprjm3xu3.woff2",
+      "testedPath": "_next/static/media/6131cbbf5549afa2-s.2uwcyprjm3xu3.woff2",
+      "currentPath": "_next/static/media/6131cbbf5549afa2-s.2uwcyprjm3xu3.woff2",
+      "testedBytes": 19044,
+      "currentBytes": 19044,
+      "testedSha256": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+      "currentSha256": "46dd4cdca58c26ae87cc6927657bf83b2e8abfc39ffd0ab176e301a8d28d22bf",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/6400b73950e3c08d-s.3g8ezz3m5s8sr.woff2",
+      "testedPath": "_next/static/media/6400b73950e3c08d-s.3g8ezz3m5s8sr.woff2",
+      "currentPath": "_next/static/media/6400b73950e3c08d-s.3g8ezz3m5s8sr.woff2",
+      "testedBytes": 37652,
+      "currentBytes": 37652,
+      "testedSha256": "85c448d825c6e7a3027a437c423aff1b6dbd4c38ac6ff7ffe2765e947a8daed9",
+      "currentSha256": "85c448d825c6e7a3027a437c423aff1b6dbd4c38ac6ff7ffe2765e947a8daed9",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/6534cbac66dc8fc7-s.38o02d1puyheb.woff2",
+      "testedPath": "_next/static/media/6534cbac66dc8fc7-s.38o02d1puyheb.woff2",
+      "currentPath": "_next/static/media/6534cbac66dc8fc7-s.38o02d1puyheb.woff2",
+      "testedBytes": 37240,
+      "currentBytes": 37240,
+      "testedSha256": "accbac1e72c74ebb9ca07de4535357643a05f6f500b9df7d53da453990b7d1a3",
+      "currentSha256": "accbac1e72c74ebb9ca07de4535357643a05f6f500b9df7d53da453990b7d1a3",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/669dd7ec0f5b5f99-s.28qf92o6_h2x-.woff2",
+      "testedPath": "_next/static/media/669dd7ec0f5b5f99-s.28qf92o6_h2x-.woff2",
+      "currentPath": "_next/static/media/669dd7ec0f5b5f99-s.28qf92o6_h2x-.woff2",
+      "testedBytes": 60152,
+      "currentBytes": 60152,
+      "testedSha256": "8b7f1ce19089f89bc80d7d251951f3e07f7849f03418c47391737cf3f6bcf35c",
+      "currentSha256": "8b7f1ce19089f89bc80d7d251951f3e07f7849f03418c47391737cf3f6bcf35c",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/6795010584bd0f2d-s.3go89jj68y2at.woff2",
+      "testedPath": "_next/static/media/6795010584bd0f2d-s.3go89jj68y2at.woff2",
+      "currentPath": "_next/static/media/6795010584bd0f2d-s.3go89jj68y2at.woff2",
+      "testedBytes": 8980,
+      "currentBytes": 8980,
+      "testedSha256": "eea83dd7c3c670f708a432771691d81b223c78934ce12e5efdc4b6fc64f8be20",
+      "currentSha256": "eea83dd7c3c670f708a432771691d81b223c78934ce12e5efdc4b6fc64f8be20",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/693938bbd3663eb3-s.0dl5hparsa5gp.woff2",
+      "testedPath": "_next/static/media/693938bbd3663eb3-s.0dl5hparsa5gp.woff2",
+      "currentPath": "_next/static/media/693938bbd3663eb3-s.0dl5hparsa5gp.woff2",
+      "testedBytes": 70056,
+      "currentBytes": 70056,
+      "testedSha256": "3fbb91d8ad8497d2b41400c2a619930f52479197ea99a60a09e5b9bc885eafbb",
+      "currentSha256": "3fbb91d8ad8497d2b41400c2a619930f52479197ea99a60a09e5b9bc885eafbb",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/6a49bc1e49687a75-s.0w7cltym60w2y.woff2",
+      "testedPath": "_next/static/media/6a49bc1e49687a75-s.0w7cltym60w2y.woff2",
+      "currentPath": "_next/static/media/6a49bc1e49687a75-s.0w7cltym60w2y.woff2",
+      "testedBytes": 39088,
+      "currentBytes": 39088,
+      "testedSha256": "42b0ec3f8fed854406c30dd33ca472408069049e78211e9692a20ea9deaed234",
+      "currentSha256": "42b0ec3f8fed854406c30dd33ca472408069049e78211e9692a20ea9deaed234",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/6ac2061f557cffa8-s.0jlzami42bvpi.woff2",
+      "testedPath": "_next/static/media/6ac2061f557cffa8-s.0jlzami42bvpi.woff2",
+      "currentPath": "_next/static/media/6ac2061f557cffa8-s.0jlzami42bvpi.woff2",
+      "testedBytes": 50640,
+      "currentBytes": 50640,
+      "testedSha256": "9976b3630dcf287ca152e51f3174a657bbd38b0b115b360c9af16a4c7fc45e94",
+      "currentSha256": "9976b3630dcf287ca152e51f3174a657bbd38b0b115b360c9af16a4c7fc45e94",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/6e3b98f614f97ffd-s.3kbbd9d0mjbx3.woff2",
+      "testedPath": "_next/static/media/6e3b98f614f97ffd-s.3kbbd9d0mjbx3.woff2",
+      "currentPath": "_next/static/media/6e3b98f614f97ffd-s.3kbbd9d0mjbx3.woff2",
+      "testedBytes": 8860,
+      "currentBytes": 8860,
+      "testedSha256": "93f230853b8ce16c686a29dc0f5d357a8342112ff986de06fdd067d7fb5810cc",
+      "currentSha256": "93f230853b8ce16c686a29dc0f5d357a8342112ff986de06fdd067d7fb5810cc",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/6e80c9dedb1a9667-s.3svaox0n-vn1-.woff2",
+      "testedPath": "_next/static/media/6e80c9dedb1a9667-s.3svaox0n-vn1-.woff2",
+      "currentPath": "_next/static/media/6e80c9dedb1a9667-s.3svaox0n-vn1-.woff2",
+      "testedBytes": 2624,
+      "currentBytes": 2624,
+      "testedSha256": "0ad7a13d9d80661c7f95212d6783eb27a9d32b17522fa4aae179d1686a228967",
+      "currentSha256": "0ad7a13d9d80661c7f95212d6783eb27a9d32b17522fa4aae179d1686a228967",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/6ec9333c58391b8a-s.2d-ci18b945w0.woff2",
+      "testedPath": "_next/static/media/6ec9333c58391b8a-s.2d-ci18b945w0.woff2",
+      "currentPath": "_next/static/media/6ec9333c58391b8a-s.2d-ci18b945w0.woff2",
+      "testedBytes": 42964,
+      "currentBytes": 42964,
+      "testedSha256": "24d992ba69bb6192bdb5e2cfbd5da37c795b6cb2da475b97330ab2d72f54d7ad",
+      "currentSha256": "24d992ba69bb6192bdb5e2cfbd5da37c795b6cb2da475b97330ab2d72f54d7ad",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/70f1a82a7c740de8-s.3ybirgydad70b.woff2",
+      "testedPath": "_next/static/media/70f1a82a7c740de8-s.3ybirgydad70b.woff2",
+      "currentPath": "_next/static/media/70f1a82a7c740de8-s.3ybirgydad70b.woff2",
+      "testedBytes": 9908,
+      "currentBytes": 9908,
+      "testedSha256": "df4138e7fb3e00e754a71aa2499de868ae6245f41feecc5aaec9222a7ae09110",
+      "currentSha256": "df4138e7fb3e00e754a71aa2499de868ae6245f41feecc5aaec9222a7ae09110",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/72e4efd8c649e5bb-s.37d57jik208i-.woff2",
+      "testedPath": "_next/static/media/72e4efd8c649e5bb-s.37d57jik208i-.woff2",
+      "currentPath": "_next/static/media/72e4efd8c649e5bb-s.37d57jik208i-.woff2",
+      "testedBytes": 3552,
+      "currentBytes": 3552,
+      "testedSha256": "db5a5fe408e99a715ad04d7c1dd03289f6ebbcb2667315c1bd49a480b2250e87",
+      "currentSha256": "db5a5fe408e99a715ad04d7c1dd03289f6ebbcb2667315c1bd49a480b2250e87",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/76b70a1dbe058eb5-s.1y4-pdgsjb-pw.woff2",
+      "testedPath": "_next/static/media/76b70a1dbe058eb5-s.1y4-pdgsjb-pw.woff2",
+      "currentPath": "_next/static/media/76b70a1dbe058eb5-s.1y4-pdgsjb-pw.woff2",
+      "testedBytes": 18744,
+      "currentBytes": 18744,
+      "testedSha256": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+      "currentSha256": "aebf2ab4a4ce6810d73c1ac7be7cafb4e5ec4cee2d6db5fb3e09691747ec4bd6",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/76c0bb6249477faa-s.1j3_-3dz1i_v9.woff2",
+      "testedPath": "_next/static/media/76c0bb6249477faa-s.1j3_-3dz1i_v9.woff2",
+      "currentPath": "_next/static/media/76c0bb6249477faa-s.1j3_-3dz1i_v9.woff2",
+      "testedBytes": 71260,
+      "currentBytes": 71260,
+      "testedSha256": "57432a9313004ea509e2e40e642dc4c0a82ef206579a244ddc81185fb006391d",
+      "currentSha256": "57432a9313004ea509e2e40e642dc4c0a82ef206579a244ddc81185fb006391d",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/77b73bfff95f70b9-s.07_g1hm2pwfx4.woff2",
+      "testedPath": "_next/static/media/77b73bfff95f70b9-s.07_g1hm2pwfx4.woff2",
+      "currentPath": "_next/static/media/77b73bfff95f70b9-s.07_g1hm2pwfx4.woff2",
+      "testedBytes": 42940,
+      "currentBytes": 42940,
+      "testedSha256": "b81a39ab618e62b1bc899d30375e1922bb7ad20146b710109466d31e14a0ed0e",
+      "currentSha256": "b81a39ab618e62b1bc899d30375e1922bb7ad20146b710109466d31e14a0ed0e",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/7990c0e730ae727d-s.24etvawtz5ncl.woff2",
+      "testedPath": "_next/static/media/7990c0e730ae727d-s.24etvawtz5ncl.woff2",
+      "currentPath": "_next/static/media/7990c0e730ae727d-s.24etvawtz5ncl.woff2",
+      "testedBytes": 35252,
+      "currentBytes": 35252,
+      "testedSha256": "7b1702f53b9fc6408a9f39bdf722f22f86af1da07852f752340ee7a778679265",
+      "currentSha256": "7b1702f53b9fc6408a9f39bdf722f22f86af1da07852f752340ee7a778679265",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/7ca400ae5f553d70-s.03k08otc5i9_f.woff2",
+      "testedPath": "_next/static/media/7ca400ae5f553d70-s.03k08otc5i9_f.woff2",
+      "currentPath": "_next/static/media/7ca400ae5f553d70-s.03k08otc5i9_f.woff2",
+      "testedBytes": 24640,
+      "currentBytes": 24640,
+      "testedSha256": "dd9838f6c6e5c558689a9b99323a3c7bf1c8250f94a9732da01d1a6a54cc8882",
+      "currentSha256": "dd9838f6c6e5c558689a9b99323a3c7bf1c8250f94a9732da01d1a6a54cc8882",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/7cf7854bd762ff7a-s.3t01akl_tjtdo.woff2",
+      "testedPath": "_next/static/media/7cf7854bd762ff7a-s.3t01akl_tjtdo.woff2",
+      "currentPath": "_next/static/media/7cf7854bd762ff7a-s.3t01akl_tjtdo.woff2",
+      "testedBytes": 74096,
+      "currentBytes": 74096,
+      "testedSha256": "f58224db7e1606f2415120ae080bafe194d52b6b461fc6f29516efacd92b2141",
+      "currentSha256": "f58224db7e1606f2415120ae080bafe194d52b6b461fc6f29516efacd92b2141",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/7ee5cc72c720d0c4-s.401vnmqxpcziv.woff2",
+      "testedPath": "_next/static/media/7ee5cc72c720d0c4-s.401vnmqxpcziv.woff2",
+      "currentPath": "_next/static/media/7ee5cc72c720d0c4-s.401vnmqxpcziv.woff2",
+      "testedBytes": 7436,
+      "currentBytes": 7436,
+      "testedSha256": "71622852998a2f52e61cceb57bc0da3ebe4f840a0f3fb133b9bc4b73e01a3261",
+      "currentSha256": "71622852998a2f52e61cceb57bc0da3ebe4f840a0f3fb133b9bc4b73e01a3261",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/7f5a8478c713badf-s.0xblw36w1rrth.woff2",
+      "testedPath": "_next/static/media/7f5a8478c713badf-s.0xblw36w1rrth.woff2",
+      "currentPath": "_next/static/media/7f5a8478c713badf-s.0xblw36w1rrth.woff2",
+      "testedBytes": 84908,
+      "currentBytes": 84908,
+      "testedSha256": "78465bc935dfc6e65583e2a6ff91ca5cf458469d4824d13fcb1c8d77377e2252",
+      "currentSha256": "78465bc935dfc6e65583e2a6ff91ca5cf458469d4824d13fcb1c8d77377e2252",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/805c8713abeb51b4-s.3y-g80ptbkdjo.woff2",
+      "testedPath": "_next/static/media/805c8713abeb51b4-s.3y-g80ptbkdjo.woff2",
+      "currentPath": "_next/static/media/805c8713abeb51b4-s.3y-g80ptbkdjo.woff2",
+      "testedBytes": 36616,
+      "currentBytes": 36616,
+      "testedSha256": "d20aeed1b20d6c790c8071bf9d0277c15700bd77173f5b8fed787cf40aa529e4",
+      "currentSha256": "d20aeed1b20d6c790c8071bf9d0277c15700bd77173f5b8fed787cf40aa529e4",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/87e80eb126f01747-s.1l74bfin_t-gv.woff2",
+      "testedPath": "_next/static/media/87e80eb126f01747-s.1l74bfin_t-gv.woff2",
+      "currentPath": "_next/static/media/87e80eb126f01747-s.1l74bfin_t-gv.woff2",
+      "testedBytes": 1552,
+      "currentBytes": 1552,
+      "testedSha256": "ba011cd01b4bc25bfeea62ec4795f6168991746558e5b97579a8d4b0a88fdfc7",
+      "currentSha256": "ba011cd01b4bc25bfeea62ec4795f6168991746558e5b97579a8d4b0a88fdfc7",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/8968b2388617a94a-s.3pfphdkvcj5ct.woff2",
+      "testedPath": "_next/static/media/8968b2388617a94a-s.3pfphdkvcj5ct.woff2",
+      "currentPath": "_next/static/media/8968b2388617a94a-s.3pfphdkvcj5ct.woff2",
+      "testedBytes": 43988,
+      "currentBytes": 43988,
+      "testedSha256": "eed1f2735b843b1cff3c2f2a78787541a3bcb236e3f5b6e9a8aaa6c0b905e68b",
+      "currentSha256": "eed1f2735b843b1cff3c2f2a78787541a3bcb236e3f5b6e9a8aaa6c0b905e68b",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/89a2932fec14ce13-s.15o4o47s-fxl_.woff2",
+      "testedPath": "_next/static/media/89a2932fec14ce13-s.15o4o47s-fxl_.woff2",
+      "currentPath": "_next/static/media/89a2932fec14ce13-s.15o4o47s-fxl_.woff2",
+      "testedBytes": 29504,
+      "currentBytes": 29504,
+      "testedSha256": "5c9a590cbfb8f2ba1b523b42f319e9b77f99c3cf093ea2da414266132c5f797a",
+      "currentSha256": "5c9a590cbfb8f2ba1b523b42f319e9b77f99c3cf093ea2da414266132c5f797a",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/8a5ec7e3d06cab2e-s.2xkq43p6u6rwt.woff2",
+      "testedPath": "_next/static/media/8a5ec7e3d06cab2e-s.2xkq43p6u6rwt.woff2",
+      "currentPath": "_next/static/media/8a5ec7e3d06cab2e-s.2xkq43p6u6rwt.woff2",
+      "testedBytes": 42552,
+      "currentBytes": 42552,
+      "testedSha256": "6844c326482e70ca318e0944258f0f63f9835c42ea6d2fc9d403ba9f2f306ed9",
+      "currentSha256": "6844c326482e70ca318e0944258f0f63f9835c42ea6d2fc9d403ba9f2f306ed9",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/8b814dcdad20f5d2-s.2jzjwdmojrhgq.woff2",
+      "testedPath": "_next/static/media/8b814dcdad20f5d2-s.2jzjwdmojrhgq.woff2",
+      "currentPath": "_next/static/media/8b814dcdad20f5d2-s.2jzjwdmojrhgq.woff2",
+      "testedBytes": 51152,
+      "currentBytes": 51152,
+      "testedSha256": "64933f8dd6f0419c1f425824b87b4feb79cdcbbe098a5e8f1f168f68146ac588",
+      "currentSha256": "64933f8dd6f0419c1f425824b87b4feb79cdcbbe098a5e8f1f168f68146ac588",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/8de25bcedcbd9fed-s.3w-5uu82gf8ao.woff2",
+      "testedPath": "_next/static/media/8de25bcedcbd9fed-s.3w-5uu82gf8ao.woff2",
+      "currentPath": "_next/static/media/8de25bcedcbd9fed-s.3w-5uu82gf8ao.woff2",
+      "testedBytes": 27908,
+      "currentBytes": 27908,
+      "testedSha256": "f60007de91a9bfd6840e06f072a641494ec1c5ffc7876770bb97990a9fd65a67",
+      "currentSha256": "f60007de91a9bfd6840e06f072a641494ec1c5ffc7876770bb97990a9fd65a67",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/8f086b5ad96b3bd0-s.2c7eup55pm-6s.woff2",
+      "testedPath": "_next/static/media/8f086b5ad96b3bd0-s.2c7eup55pm-6s.woff2",
+      "currentPath": "_next/static/media/8f086b5ad96b3bd0-s.2c7eup55pm-6s.woff2",
+      "testedBytes": 9632,
+      "currentBytes": 9632,
+      "testedSha256": "544ffa370e08691a75aea2b3feeee74ca58bca859e0570018bbddac8a2fcbaac",
+      "currentSha256": "544ffa370e08691a75aea2b3feeee74ca58bca859e0570018bbddac8a2fcbaac",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/987e1f7f69dd96a8-s.0dzpayzoc2tvl.woff2",
+      "testedPath": "_next/static/media/987e1f7f69dd96a8-s.0dzpayzoc2tvl.woff2",
+      "currentPath": "_next/static/media/987e1f7f69dd96a8-s.0dzpayzoc2tvl.woff2",
+      "testedBytes": 62976,
+      "currentBytes": 62976,
+      "testedSha256": "c14c1e4212a62972219dd25187d7ae163564c01247998f7254f1f0533fed4529",
+      "currentSha256": "c14c1e4212a62972219dd25187d7ae163564c01247998f7254f1f0533fed4529",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/99474880a8d2b222-s.2k7qjafjkwv39.woff2",
+      "testedPath": "_next/static/media/99474880a8d2b222-s.2k7qjafjkwv39.woff2",
+      "currentPath": "_next/static/media/99474880a8d2b222-s.2k7qjafjkwv39.woff2",
+      "testedBytes": 74672,
+      "currentBytes": 74672,
+      "testedSha256": "18cf3b67d3e52b45d6dc00018d65be3e0a1a117269e61ee6c448cc181b04b282",
+      "currentSha256": "18cf3b67d3e52b45d6dc00018d65be3e0a1a117269e61ee6c448cc181b04b282",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/9c242f144e874e94-s.1ahzeq3l4rfic.woff2",
+      "testedPath": "_next/static/media/9c242f144e874e94-s.1ahzeq3l4rfic.woff2",
+      "currentPath": "_next/static/media/9c242f144e874e94-s.1ahzeq3l4rfic.woff2",
+      "testedBytes": 42280,
+      "currentBytes": 42280,
+      "testedSha256": "55b884895da2089ab8cfd597b5447876378c12afeb7d7a9e63bbd0fea4ef3d8c",
+      "currentSha256": "55b884895da2089ab8cfd597b5447876378c12afeb7d7a9e63bbd0fea4ef3d8c",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/9fcf16c688c4cecd-s.3jr8k0jeny-hx.woff2",
+      "testedPath": "_next/static/media/9fcf16c688c4cecd-s.3jr8k0jeny-hx.woff2",
+      "currentPath": "_next/static/media/9fcf16c688c4cecd-s.3jr8k0jeny-hx.woff2",
+      "testedBytes": 29252,
+      "currentBytes": 29252,
+      "testedSha256": "ed39040297a53beaf5f14c403195ce15db7ea886c4d9a83aab92165abcee6b75",
+      "currentSha256": "ed39040297a53beaf5f14c403195ce15db7ea886c4d9a83aab92165abcee6b75",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/a09ffcbc7874c787-s.0kuswl_c7nckw.woff2",
+      "testedPath": "_next/static/media/a09ffcbc7874c787-s.0kuswl_c7nckw.woff2",
+      "currentPath": "_next/static/media/a09ffcbc7874c787-s.0kuswl_c7nckw.woff2",
+      "testedBytes": 49816,
+      "currentBytes": 49816,
+      "testedSha256": "273d7b5e649f0fcc495dd51efcdcef0d08b4060f06ee0147d20f1354c05c07e7",
+      "currentSha256": "273d7b5e649f0fcc495dd51efcdcef0d08b4060f06ee0147d20f1354c05c07e7",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/a13da1b57c824919-s.31fy7udo9nqkm.woff2",
+      "testedPath": "_next/static/media/a13da1b57c824919-s.31fy7udo9nqkm.woff2",
+      "currentPath": "_next/static/media/a13da1b57c824919-s.31fy7udo9nqkm.woff2",
+      "testedBytes": 32656,
+      "currentBytes": 32656,
+      "testedSha256": "9ce801ff5009e81e8a79010dcc2616935158d389504dac64ea0260dab7fc57d7",
+      "currentSha256": "9ce801ff5009e81e8a79010dcc2616935158d389504dac64ea0260dab7fc57d7",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/a4b8c213392a80a7-s.1iwyv5h47dfr1.woff2",
+      "testedPath": "_next/static/media/a4b8c213392a80a7-s.1iwyv5h47dfr1.woff2",
+      "currentPath": "_next/static/media/a4b8c213392a80a7-s.1iwyv5h47dfr1.woff2",
+      "testedBytes": 42352,
+      "currentBytes": 42352,
+      "testedSha256": "f712f7ae112cc5927f9964503473c8482b6f29953277adf1dfb66c858698c4b1",
+      "currentSha256": "f712f7ae112cc5927f9964503473c8482b6f29953277adf1dfb66c858698c4b1",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/aa4d3f7c2921b96c-s.2y9xkiwzli4tv.woff2",
+      "testedPath": "_next/static/media/aa4d3f7c2921b96c-s.2y9xkiwzli4tv.woff2",
+      "currentPath": "_next/static/media/aa4d3f7c2921b96c-s.2y9xkiwzli4tv.woff2",
+      "testedBytes": 45240,
+      "currentBytes": 45240,
+      "testedSha256": "4ef0d332ff241e2965e0f59558178902437799c57f368cfd7152bc1e72e13bfc",
+      "currentSha256": "4ef0d332ff241e2965e0f59558178902437799c57f368cfd7152bc1e72e13bfc",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/ab3577faf83d98ce-s.1s-td1f3hl4bj.woff2",
+      "testedPath": "_next/static/media/ab3577faf83d98ce-s.1s-td1f3hl4bj.woff2",
+      "currentPath": "_next/static/media/ab3577faf83d98ce-s.1s-td1f3hl4bj.woff2",
+      "testedBytes": 36304,
+      "currentBytes": 36304,
+      "testedSha256": "b83c76f3136a38a7754f46b9337a1281bac91b510c63dbf51fbc61769eb23aa8",
+      "currentSha256": "b83c76f3136a38a7754f46b9337a1281bac91b510c63dbf51fbc61769eb23aa8",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/aba5ee529cc6128c-s.19i6q21j4p76r.woff2",
+      "testedPath": "_next/static/media/aba5ee529cc6128c-s.19i6q21j4p76r.woff2",
+      "currentPath": "_next/static/media/aba5ee529cc6128c-s.19i6q21j4p76r.woff2",
+      "testedBytes": 54812,
+      "currentBytes": 54812,
+      "testedSha256": "963016e4ce91fcd80a96b59a34dc1b3b55f490743b048988da621e4ba3cf5795",
+      "currentSha256": "963016e4ce91fcd80a96b59a34dc1b3b55f490743b048988da621e4ba3cf5795",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/af97e00fcff0c190-s.2ozbzj-16yw90.woff2",
+      "testedPath": "_next/static/media/af97e00fcff0c190-s.2ozbzj-16yw90.woff2",
+      "currentPath": "_next/static/media/af97e00fcff0c190-s.2ozbzj-16yw90.woff2",
+      "testedBytes": 43904,
+      "currentBytes": 43904,
+      "testedSha256": "c152240d996e777b004addd36b69aaf1963552525e0202cbbf4c1e9012c4c38b",
+      "currentSha256": "c152240d996e777b004addd36b69aaf1963552525e0202cbbf4c1e9012c4c38b",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/b342a9a3a40f610e-s.3equgvo3mbqwd.woff2",
+      "testedPath": "_next/static/media/b342a9a3a40f610e-s.3equgvo3mbqwd.woff2",
+      "currentPath": "_next/static/media/b342a9a3a40f610e-s.3equgvo3mbqwd.woff2",
+      "testedBytes": 56824,
+      "currentBytes": 56824,
+      "testedSha256": "36274c7ac03360721f7cc1ec514dfe54c4fac0a2a645c453c762e9c057e7650d",
+      "currentSha256": "36274c7ac03360721f7cc1ec514dfe54c4fac0a2a645c453c762e9c057e7650d",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/b4638920f9294ab7-s.3lilaah0kcajn.woff2",
+      "testedPath": "_next/static/media/b4638920f9294ab7-s.3lilaah0kcajn.woff2",
+      "currentPath": "_next/static/media/b4638920f9294ab7-s.3lilaah0kcajn.woff2",
+      "testedBytes": 44488,
+      "currentBytes": 44488,
+      "testedSha256": "1dee18d563236cc0d58f13f7fd2ac569d42bf40e80c2fbf9f1b8f7066102abe3",
+      "currentSha256": "1dee18d563236cc0d58f13f7fd2ac569d42bf40e80c2fbf9f1b8f7066102abe3",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/b4b879b5fb1e21b8-s.3p_7i910djl3_.woff2",
+      "testedPath": "_next/static/media/b4b879b5fb1e21b8-s.3p_7i910djl3_.woff2",
+      "currentPath": "_next/static/media/b4b879b5fb1e21b8-s.3p_7i910djl3_.woff2",
+      "testedBytes": 34788,
+      "currentBytes": 34788,
+      "testedSha256": "699f10cea532469635254a112504b2cbc76f54f9e63cce5bde4999b19a8d8425",
+      "currentSha256": "699f10cea532469635254a112504b2cbc76f54f9e63cce5bde4999b19a8d8425",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/b76465e8aca97151-s.36coyafufb8qt.woff2",
+      "testedPath": "_next/static/media/b76465e8aca97151-s.36coyafufb8qt.woff2",
+      "currentPath": "_next/static/media/b76465e8aca97151-s.36coyafufb8qt.woff2",
+      "testedBytes": 72244,
+      "currentBytes": 72244,
+      "testedSha256": "3b80c5a68afe07c5b4e8dcad3c57c0857c3b9f626defa54d4c7ee1202053b3ce",
+      "currentSha256": "3b80c5a68afe07c5b4e8dcad3c57c0857c3b9f626defa54d4c7ee1202053b3ce",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/ba63f6a0e436df8e-s.3-6t-g6q0vh0a.woff2",
+      "testedPath": "_next/static/media/ba63f6a0e436df8e-s.3-6t-g6q0vh0a.woff2",
+      "currentPath": "_next/static/media/ba63f6a0e436df8e-s.3-6t-g6q0vh0a.woff2",
+      "testedBytes": 85272,
+      "currentBytes": 85272,
+      "testedSha256": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+      "currentSha256": "a28eb6d3ccb534ae0c94ca999371df024aab60b08c3c8a5720ee9e32fa0faaa2",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/bd34ada311386ffe-s.2wgtfqr24r7r2.woff2",
+      "testedPath": "_next/static/media/bd34ada311386ffe-s.2wgtfqr24r7r2.woff2",
+      "currentPath": "_next/static/media/bd34ada311386ffe-s.2wgtfqr24r7r2.woff2",
+      "testedBytes": 26572,
+      "currentBytes": 26572,
+      "testedSha256": "e86bb7320af4963e4b643d6f76a276a3d7fab6c7ce7008538eb4dc178dc67e8b",
+      "currentSha256": "e86bb7320af4963e4b643d6f76a276a3d7fab6c7ce7008538eb4dc178dc67e8b",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/bdc4716d0031b20f-s.22y4cyxvfzd0i.woff2",
+      "testedPath": "_next/static/media/bdc4716d0031b20f-s.22y4cyxvfzd0i.woff2",
+      "currentPath": "_next/static/media/bdc4716d0031b20f-s.22y4cyxvfzd0i.woff2",
+      "testedBytes": 65208,
+      "currentBytes": 65208,
+      "testedSha256": "5511f51d9e422abae930b6acf219682ec14295ef23b0c1fac178f29641157ce6",
+      "currentSha256": "5511f51d9e422abae930b6acf219682ec14295ef23b0c1fac178f29641157ce6",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/c03d1c4eac9397b1-s.44yp4bz8qwx37.woff2",
+      "testedPath": "_next/static/media/c03d1c4eac9397b1-s.44yp4bz8qwx37.woff2",
+      "currentPath": "_next/static/media/c03d1c4eac9397b1-s.44yp4bz8qwx37.woff2",
+      "testedBytes": 30496,
+      "currentBytes": 30496,
+      "testedSha256": "bed8b24421ca60e5e38b0c4923ea8cf2fdd182327218d45858fd6af0b28ff97e",
+      "currentSha256": "bed8b24421ca60e5e38b0c4923ea8cf2fdd182327218d45858fd6af0b28ff97e",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/c0c798803a3ec6ce-s.0w5a0wwgmp4jp.woff2",
+      "testedPath": "_next/static/media/c0c798803a3ec6ce-s.0w5a0wwgmp4jp.woff2",
+      "currentPath": "_next/static/media/c0c798803a3ec6ce-s.0w5a0wwgmp4jp.woff2",
+      "testedBytes": 8148,
+      "currentBytes": 8148,
+      "testedSha256": "1335271c626ff934cdc919ffdd4eefd4d74d3818303816f14114804608056f0f",
+      "currentSha256": "1335271c626ff934cdc919ffdd4eefd4d74d3818303816f14114804608056f0f",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/c2a16ca6b9862d60-s.0_42yvgz5t97v.woff2",
+      "testedPath": "_next/static/media/c2a16ca6b9862d60-s.0_42yvgz5t97v.woff2",
+      "currentPath": "_next/static/media/c2a16ca6b9862d60-s.0_42yvgz5t97v.woff2",
+      "testedBytes": 14304,
+      "currentBytes": 14304,
+      "testedSha256": "57caa1727fe4165fb123ebbf525be978ccb3b7aa1a471ac8659e80023c539cee",
+      "currentSha256": "57caa1727fe4165fb123ebbf525be978ccb3b7aa1a471ac8659e80023c539cee",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/c6b2f2cd10e7d7d9-s.42p834j-umttf.woff2",
+      "testedPath": "_next/static/media/c6b2f2cd10e7d7d9-s.42p834j-umttf.woff2",
+      "currentPath": "_next/static/media/c6b2f2cd10e7d7d9-s.42p834j-umttf.woff2",
+      "testedBytes": 71768,
+      "currentBytes": 71768,
+      "testedSha256": "fd8ad962af3045b44d9cfa2f710ff6812b17f3ca80bc4230e126f03b52476ef4",
+      "currentSha256": "fd8ad962af3045b44d9cfa2f710ff6812b17f3ca80bc4230e126f03b52476ef4",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/c84d2b36fc95f0ef-s.0l1ol8s_tkcew.woff2",
+      "testedPath": "_next/static/media/c84d2b36fc95f0ef-s.0l1ol8s_tkcew.woff2",
+      "currentPath": "_next/static/media/c84d2b36fc95f0ef-s.0l1ol8s_tkcew.woff2",
+      "testedBytes": 20960,
+      "currentBytes": 20960,
+      "testedSha256": "a3d1885ef6102119a1dae16137aa603728eac120e9b5b972fb6298f9c5a19b21",
+      "currentSha256": "a3d1885ef6102119a1dae16137aa603728eac120e9b5b972fb6298f9c5a19b21",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/cb81fe2c65a78575-s.1o-fmdbj7zsou.woff2",
+      "testedPath": "_next/static/media/cb81fe2c65a78575-s.1o-fmdbj7zsou.woff2",
+      "currentPath": "_next/static/media/cb81fe2c65a78575-s.1o-fmdbj7zsou.woff2",
+      "testedBytes": 40436,
+      "currentBytes": 40436,
+      "testedSha256": "b9d8d2c7ed713a99fb0c7a76ffd5926b1aa3b4ffe6e82e6472fb116a1153b3b6",
+      "currentSha256": "b9d8d2c7ed713a99fb0c7a76ffd5926b1aa3b4ffe6e82e6472fb116a1153b3b6",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/cded105343fea566-s.2djrj_gqoem5s.woff2",
+      "testedPath": "_next/static/media/cded105343fea566-s.2djrj_gqoem5s.woff2",
+      "currentPath": "_next/static/media/cded105343fea566-s.2djrj_gqoem5s.woff2",
+      "testedBytes": 45028,
+      "currentBytes": 45028,
+      "testedSha256": "23d4975cbe637a5efb50012328a90d07c6b7b21420cd5a956f84c57645be74de",
+      "currentSha256": "23d4975cbe637a5efb50012328a90d07c6b7b21420cd5a956f84c57645be74de",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/ce71624db24aa63d-s.3rbtd93kixhq0.woff2",
+      "testedPath": "_next/static/media/ce71624db24aa63d-s.3rbtd93kixhq0.woff2",
+      "currentPath": "_next/static/media/ce71624db24aa63d-s.3rbtd93kixhq0.woff2",
+      "testedBytes": 34220,
+      "currentBytes": 34220,
+      "testedSha256": "a0ac89e84b196345f3e85e01c3e1b24c58197fd3ab76188a02367753144749cb",
+      "currentSha256": "a0ac89e84b196345f3e85e01c3e1b24c58197fd3ab76188a02367753144749cb",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/d2603e585543d43b-s.3jgbw7fjdxemy.woff2",
+      "testedPath": "_next/static/media/d2603e585543d43b-s.3jgbw7fjdxemy.woff2",
+      "currentPath": "_next/static/media/d2603e585543d43b-s.3jgbw7fjdxemy.woff2",
+      "testedBytes": 29016,
+      "currentBytes": 29016,
+      "testedSha256": "16ea48778a406f69c486a7f6285dd4df9b20f1a3eed2fd4a003fbf2b19f0cb14",
+      "currentSha256": "16ea48778a406f69c486a7f6285dd4df9b20f1a3eed2fd4a003fbf2b19f0cb14",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/d2a29e096671156a-s.411tpdvuzg0en.woff2",
+      "testedPath": "_next/static/media/d2a29e096671156a-s.411tpdvuzg0en.woff2",
+      "currentPath": "_next/static/media/d2a29e096671156a-s.411tpdvuzg0en.woff2",
+      "testedBytes": 7628,
+      "currentBytes": 7628,
+      "testedSha256": "66019107eddc3144e733238eef0f328cb8936888fa2128811ae252287cbc5789",
+      "currentSha256": "66019107eddc3144e733238eef0f328cb8936888fa2128811ae252287cbc5789",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/d5d2b5a00459deda-s.1zdjizd_p8a_y.woff2",
+      "testedPath": "_next/static/media/d5d2b5a00459deda-s.1zdjizd_p8a_y.woff2",
+      "currentPath": "_next/static/media/d5d2b5a00459deda-s.1zdjizd_p8a_y.woff2",
+      "testedBytes": 39556,
+      "currentBytes": 39556,
+      "testedSha256": "302956edb33b99adacca898373d8c6ec220a64f17e5e6096c5a8bcc062d0478f",
+      "currentSha256": "302956edb33b99adacca898373d8c6ec220a64f17e5e6096c5a8bcc062d0478f",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/db4811590f7b4850-s.1if57_rchkmuw.woff2",
+      "testedPath": "_next/static/media/db4811590f7b4850-s.1if57_rchkmuw.woff2",
+      "currentPath": "_next/static/media/db4811590f7b4850-s.1if57_rchkmuw.woff2",
+      "testedBytes": 33040,
+      "currentBytes": 33040,
+      "testedSha256": "8fb9fa171164f044f890f7757a28ed720ce995c793c8a8e22c6ccf4c19210550",
+      "currentSha256": "8fb9fa171164f044f890f7757a28ed720ce995c793c8a8e22c6ccf4c19210550",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/e37794ed4373ecc1-s.09jb1ctbp7s-1.woff2",
+      "testedPath": "_next/static/media/e37794ed4373ecc1-s.09jb1ctbp7s-1.woff2",
+      "currentPath": "_next/static/media/e37794ed4373ecc1-s.09jb1ctbp7s-1.woff2",
+      "testedBytes": 62384,
+      "currentBytes": 62384,
+      "testedSha256": "2eba2398f2d45df7524ce50c5747c4edabd8a31fea2b77baf39b042c1148ccca",
+      "currentSha256": "2eba2398f2d45df7524ce50c5747c4edabd8a31fea2b77baf39b042c1148ccca",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/e531aa6ee3f1697a-s.09w4ef90p3c49.woff2",
+      "testedPath": "_next/static/media/e531aa6ee3f1697a-s.09w4ef90p3c49.woff2",
+      "currentPath": "_next/static/media/e531aa6ee3f1697a-s.09w4ef90p3c49.woff2",
+      "testedBytes": 52908,
+      "currentBytes": 52908,
+      "testedSha256": "2dccf4fb22c4be85105ea24066c2dd8f2a19ceece31d02e0a8e3c0abe4e2e4c3",
+      "currentSha256": "2dccf4fb22c4be85105ea24066c2dd8f2a19ceece31d02e0a8e3c0abe4e2e4c3",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/e779dbe6bb6bb987-s.26_-c6zkjpq_8.woff2",
+      "testedPath": "_next/static/media/e779dbe6bb6bb987-s.26_-c6zkjpq_8.woff2",
+      "currentPath": "_next/static/media/e779dbe6bb6bb987-s.26_-c6zkjpq_8.woff2",
+      "testedBytes": 63124,
+      "currentBytes": 63124,
+      "testedSha256": "892cd9a30d21806c440c5bfd6ab00657d658c48f6970e43282e5f6db8665cbe3",
+      "currentSha256": "892cd9a30d21806c440c5bfd6ab00657d658c48f6970e43282e5f6db8665cbe3",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/e7ef23271262418a-s.1iq4s9mj96jjd.woff2",
+      "testedPath": "_next/static/media/e7ef23271262418a-s.1iq4s9mj96jjd.woff2",
+      "currentPath": "_next/static/media/e7ef23271262418a-s.1iq4s9mj96jjd.woff2",
+      "testedBytes": 43316,
+      "currentBytes": 43316,
+      "testedSha256": "e8a8de35da35e641fb38f87ea5325cb68327a24b025c0dc2a866fce5f2dfdd2f",
+      "currentSha256": "e8a8de35da35e641fb38f87ea5325cb68327a24b025c0dc2a866fce5f2dfdd2f",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/e80a216778e5679c-s.0vp95_qa4hxe5.woff2",
+      "testedPath": "_next/static/media/e80a216778e5679c-s.0vp95_qa4hxe5.woff2",
+      "currentPath": "_next/static/media/e80a216778e5679c-s.0vp95_qa4hxe5.woff2",
+      "testedBytes": 22748,
+      "currentBytes": 22748,
+      "testedSha256": "1da9326ac295e4e7337a9a07005a0727e9247614705d487711b6b29ca9f52da6",
+      "currentSha256": "1da9326ac295e4e7337a9a07005a0727e9247614705d487711b6b29ca9f52da6",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/e908ed1a117c1344-s.1mq073yrijo36.woff2",
+      "testedPath": "_next/static/media/e908ed1a117c1344-s.1mq073yrijo36.woff2",
+      "currentPath": "_next/static/media/e908ed1a117c1344-s.1mq073yrijo36.woff2",
+      "testedBytes": 72848,
+      "currentBytes": 72848,
+      "testedSha256": "de11da868dee513cd71dba3fd6b401c57f107e7135d013580586cccb3081ac6e",
+      "currentSha256": "de11da868dee513cd71dba3fd6b401c57f107e7135d013580586cccb3081ac6e",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/ea484250bbc77c6c-s.3g_rwevmlsqrl.woff2",
+      "testedPath": "_next/static/media/ea484250bbc77c6c-s.3g_rwevmlsqrl.woff2",
+      "currentPath": "_next/static/media/ea484250bbc77c6c-s.3g_rwevmlsqrl.woff2",
+      "testedBytes": 33972,
+      "currentBytes": 33972,
+      "testedSha256": "ecbca8e720c6a27ff22ab20371921ecb0807e6bce6fa02fd98b27cc35f9ba772",
+      "currentSha256": "ecbca8e720c6a27ff22ab20371921ecb0807e6bce6fa02fd98b27cc35f9ba772",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/ef45ab08bd349ea7-s.0dp6wmpvpnroq.woff2",
+      "testedPath": "_next/static/media/ef45ab08bd349ea7-s.0dp6wmpvpnroq.woff2",
+      "currentPath": "_next/static/media/ef45ab08bd349ea7-s.0dp6wmpvpnroq.woff2",
+      "testedBytes": 5736,
+      "currentBytes": 5736,
+      "testedSha256": "ad3176818b2a43fe060e9f1d5c2ba40f48c28806107a7b058b6c89f4ab2c1e57",
+      "currentSha256": "ad3176818b2a43fe060e9f1d5c2ba40f48c28806107a7b058b6c89f4ab2c1e57",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/f1b125fae38a4ff3-s.3ejb79dur_v1p.woff2",
+      "testedPath": "_next/static/media/f1b125fae38a4ff3-s.3ejb79dur_v1p.woff2",
+      "currentPath": "_next/static/media/f1b125fae38a4ff3-s.3ejb79dur_v1p.woff2",
+      "testedBytes": 67908,
+      "currentBytes": 67908,
+      "testedSha256": "93f62d4b4bb1b23dc3cfcfe8fd19893dda1bd307422f0ac86e4d4a972df39e7d",
+      "currentSha256": "93f62d4b4bb1b23dc3cfcfe8fd19893dda1bd307422f0ac86e4d4a972df39e7d",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/fdc4a886fadb5436-s.0kgrai6t-ir1h.woff2",
+      "testedPath": "_next/static/media/fdc4a886fadb5436-s.0kgrai6t-ir1h.woff2",
+      "currentPath": "_next/static/media/fdc4a886fadb5436-s.0kgrai6t-ir1h.woff2",
+      "testedBytes": 37664,
+      "currentBytes": 37664,
+      "testedSha256": "a134242bc0e564c0ebeb93742ff35777d28879e505b2558c562109192f2d0efd",
+      "currentSha256": "a134242bc0e564c0ebeb93742ff35777d28879e505b2558c562109192f2d0efd",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_next/static/media/icon.3tqzehpiw5ej6.svg",
+      "testedPath": "_next/static/media/icon.3tqzehpiw5ej6.svg",
+      "currentPath": "_next/static/media/icon.3tqzehpiw5ej6.svg",
+      "testedBytes": 411,
+      "currentBytes": 411,
+      "testedSha256": "b61e1a188bd5d043692780e058e24ad83ba6347dea3bdf3619b334ffae246119",
+      "currentSha256": "b61e1a188bd5d043692780e058e24ad83ba6347dea3bdf3619b334ffae246119",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "_not-found/__next._full.txt",
+      "testedPath": "_not-found/__next._full.txt",
+      "currentPath": "_not-found/__next._full.txt",
+      "testedBytes": 16390,
+      "currentBytes": 16390,
+      "testedSha256": "027fd94c9d0d253c77404f03aef1fc729463948c68b5562ddf3251cc18029c9f",
+      "currentSha256": "88df9baba12b3e56ca5e5b89095a4239c0cc20609fb853e9130596a67f634e7f",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "0a209418a6791fd43804b10d5a35871cfa6ca0764d0331c46f2bb38866754645",
+        "current": "0a209418a6791fd43804b10d5a35871cfa6ca0764d0331c46f2bb38866754645"
+      }
+    },
+    {
+      "logicalPath": "_not-found/__next._index.txt",
+      "testedPath": "_not-found/__next._index.txt",
+      "currentPath": "_not-found/__next._index.txt",
+      "testedBytes": 12581,
+      "currentBytes": 12581,
+      "testedSha256": "c3177d2cb5daac1ecfa5a3246a02d3f38e43c79f053efb8225286ff471a67170",
+      "currentSha256": "1021ea4e756278d2285aa1a378a5f8f23f9dc3316a3dfa026f16fcff41f7109d",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0",
+        "current": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0"
+      }
+    },
+    {
+      "logicalPath": "_not-found/__next._not-found.__PAGE__.txt",
+      "testedPath": "_not-found/__next._not-found.__PAGE__.txt",
+      "currentPath": "_not-found/__next._not-found.__PAGE__.txt",
+      "testedBytes": 2899,
+      "currentBytes": 2899,
+      "testedSha256": "7421607774406b8ab18623d20cfa884d9e075eb74510dcdd7dba540c0cbce745",
+      "currentSha256": "b0cc5e401003728e7dd2cdcb68cb17c0408606bf97ec70690af573c72a54b630",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "5614660f3caf8e2fb55fe7ea8eeceb39a604a3e4b5b6d3aa81a0e2c1cf8cc32f",
+        "current": "5614660f3caf8e2fb55fe7ea8eeceb39a604a3e4b5b6d3aa81a0e2c1cf8cc32f"
+      }
+    },
+    {
+      "logicalPath": "_not-found/__next._tree.txt",
+      "testedPath": "_not-found/__next._tree.txt",
+      "currentPath": "_not-found/__next._tree.txt",
+      "testedBytes": 359,
+      "currentBytes": 359,
+      "testedSha256": "9479cf514927a4b14fc562b449b6eae68188c6b4e227c7d063fe4145cc288cd0",
+      "currentSha256": "21cbaad389a35c47fd8c8a13a939cdb8f9592c7bbd990359d7f6802e6d09a08d",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "54aa2d0ed422433d069da3681921478318aee33127c12b14b2ff46b4059cb4a8",
+        "current": "54aa2d0ed422433d069da3681921478318aee33127c12b14b2ff46b4059cb4a8"
+      }
+    },
+    {
+      "logicalPath": "_not-found/index.html",
+      "testedPath": "_not-found/index.html",
+      "currentPath": "_not-found/index.html",
+      "testedBytes": 32523,
+      "currentBytes": 32523,
+      "testedSha256": "c4c2d08398fa37344e97a7bf59d6fd288d8d8f063273e1a0d4dc67689fbfd17c",
+      "currentSha256": "b66d62a1212a2d30f4a5420f8f1fa245818b843c9ff8dd538a50cb3b2f3713fd",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "24e4ce476d34e828877950f2f01df952b075d8f7d188f6aaed956b221357c6d8",
+        "current": "24e4ce476d34e828877950f2f01df952b075d8f7d188f6aaed956b221357c6d8"
+      }
+    },
+    {
+      "logicalPath": "_not-found/index.txt",
+      "testedPath": "_not-found/index.txt",
+      "currentPath": "_not-found/index.txt",
+      "testedBytes": 16390,
+      "currentBytes": 16390,
+      "testedSha256": "027fd94c9d0d253c77404f03aef1fc729463948c68b5562ddf3251cc18029c9f",
+      "currentSha256": "88df9baba12b3e56ca5e5b89095a4239c0cc20609fb853e9130596a67f634e7f",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "0a209418a6791fd43804b10d5a35871cfa6ca0764d0331c46f2bb38866754645",
+        "current": "0a209418a6791fd43804b10d5a35871cfa6ca0764d0331c46f2bb38866754645"
+      }
+    },
+    {
+      "logicalPath": "about/__next._full.txt",
+      "testedPath": "about/__next._full.txt",
+      "currentPath": "about/__next._full.txt",
+      "testedBytes": 55003,
+      "currentBytes": 55003,
+      "testedSha256": "27bcd9e36d70e9bce29c10b7081cb816a4c13f8d0d3efcf2af8d312159ed89bd",
+      "currentSha256": "6466dc52d69e0585673c6351ae822d069efa4a6bf005da223adcbed1662e1756",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "8752aa5424e078645d9678b5c2dfe6b345afdeefeeeb868b7b7457749f192f24",
+        "current": "8752aa5424e078645d9678b5c2dfe6b345afdeefeeeb868b7b7457749f192f24"
+      }
+    },
+    {
+      "logicalPath": "about/__next._index.txt",
+      "testedPath": "about/__next._index.txt",
+      "currentPath": "about/__next._index.txt",
+      "testedBytes": 12581,
+      "currentBytes": 12581,
+      "testedSha256": "c3177d2cb5daac1ecfa5a3246a02d3f38e43c79f053efb8225286ff471a67170",
+      "currentSha256": "1021ea4e756278d2285aa1a378a5f8f23f9dc3316a3dfa026f16fcff41f7109d",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0",
+        "current": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0"
+      }
+    },
+    {
+      "logicalPath": "about/__next._tree.txt",
+      "testedPath": "about/__next._tree.txt",
+      "currentPath": "about/__next._tree.txt",
+      "testedBytes": 478,
+      "currentBytes": 478,
+      "testedSha256": "f02f42cd5c6513805030fb9a4187c468b094fda43165d7ada8c0738f57c438db",
+      "currentSha256": "841f1699fbfcebfa6eca8bc836e7990c7a433522f0fcc21816424aac97cb202d",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "066222449e57ea1831b885be3e13e72098038b8df0ca6dc636c772da41d9b1d8",
+        "current": "066222449e57ea1831b885be3e13e72098038b8df0ca6dc636c772da41d9b1d8"
+      }
+    },
+    {
+      "logicalPath": "about/__next.about.__PAGE__.txt",
+      "testedPath": "about/__next.about.__PAGE__.txt",
+      "currentPath": "about/__next.about.__PAGE__.txt",
+      "testedBytes": 40815,
+      "currentBytes": 40815,
+      "testedSha256": "3fe98108d8f966b96971fdd38c33dc6f7e62421067a1a7720b38be11f344a3a2",
+      "currentSha256": "ab680b8cfd0184e402c30b5864c2e8fd844f0d5cd70786ac225d65745d4ad246",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "9c6ad4e4596e66b62db0fec309dd31a257a7f0897b7bd5915e8a786b8ed02e5c",
+        "current": "9c6ad4e4596e66b62db0fec309dd31a257a7f0897b7bd5915e8a786b8ed02e5c"
+      }
+    },
+    {
+      "logicalPath": "about/index.html",
+      "testedPath": "about/index.html",
+      "currentPath": "about/index.html",
+      "testedBytes": 106571,
+      "currentBytes": 106571,
+      "testedSha256": "eb8fdeddded9f30b1b60f63b7615835034fc0f8b138079f76f7113289451ef5d",
+      "currentSha256": "85983fb80ddff1da2baaadae0bb2bf6917574dd1d0c7dd94074c4f97ddda4f9b",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "4d7eac06e689bab5a80c0d7b4f5394d5222394a4dfb900256cc664c6e0ed69b0",
+        "current": "4d7eac06e689bab5a80c0d7b4f5394d5222394a4dfb900256cc664c6e0ed69b0"
+      }
+    },
+    {
+      "logicalPath": "about/index.txt",
+      "testedPath": "about/index.txt",
+      "currentPath": "about/index.txt",
+      "testedBytes": 55003,
+      "currentBytes": 55003,
+      "testedSha256": "27bcd9e36d70e9bce29c10b7081cb816a4c13f8d0d3efcf2af8d312159ed89bd",
+      "currentSha256": "6466dc52d69e0585673c6351ae822d069efa4a6bf005da223adcbed1662e1756",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "8752aa5424e078645d9678b5c2dfe6b345afdeefeeeb868b7b7457749f192f24",
+        "current": "8752aa5424e078645d9678b5c2dfe6b345afdeefeeeb868b7b7457749f192f24"
+      }
+    },
+    {
+      "logicalPath": "brand/source/README.md",
+      "testedPath": "brand/source/README.md",
+      "currentPath": "brand/source/README.md",
+      "testedBytes": 3148,
+      "currentBytes": 3148,
+      "testedSha256": "f49c47ee4f239c87d3f9b0fee4e7fbce52adff119431b366843c8d505139678a",
+      "currentSha256": "f49c47ee4f239c87d3f9b0fee4e7fbce52adff119431b366843c8d505139678a",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "brand/source/xk-logo-horizontal.svg",
+      "testedPath": "brand/source/xk-logo-horizontal.svg",
+      "currentPath": "brand/source/xk-logo-horizontal.svg",
+      "testedBytes": 5921,
+      "currentBytes": 5921,
+      "testedSha256": "08b60bfba88d9598aaaf072bdb7b6e95658784598b8d132a4e3bcb2383446a5b",
+      "currentSha256": "08b60bfba88d9598aaaf072bdb7b6e95658784598b8d132a4e3bcb2383446a5b",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "brand/source/xk-logo-primary.svg",
+      "testedPath": "brand/source/xk-logo-primary.svg",
+      "currentPath": "brand/source/xk-logo-primary.svg",
+      "testedBytes": 5920,
+      "currentBytes": 5920,
+      "testedSha256": "ef827ae4c8a6e06a4bc3522bc3fa6a0ea531f740bde4331811e126b50ca168db",
+      "currentSha256": "ef827ae4c8a6e06a4bc3522bc3fa6a0ea531f740bde4331811e126b50ca168db",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "brand/source/xk-logo-symbol.svg",
+      "testedPath": "brand/source/xk-logo-symbol.svg",
+      "currentPath": "brand/source/xk-logo-symbol.svg",
+      "testedBytes": 411,
+      "currentBytes": 411,
+      "testedSha256": "b61e1a188bd5d043692780e058e24ad83ba6347dea3bdf3619b334ffae246119",
+      "currentSha256": "b61e1a188bd5d043692780e058e24ad83ba6347dea3bdf3619b334ffae246119",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "brand/source/xk-logo-white.svg",
+      "testedPath": "brand/source/xk-logo-white.svg",
+      "currentPath": "brand/source/xk-logo-white.svg",
+      "testedBytes": 5920,
+      "currentBytes": 5920,
+      "testedSha256": "3ef6fe4c3968992e1c18df2f05233f39ffebd9da26dd9be91e7be81c02087250",
+      "currentSha256": "3ef6fe4c3968992e1c18df2f05233f39ffebd9da26dd9be91e7be81c02087250",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "contact/__next._full.txt",
+      "testedPath": "contact/__next._full.txt",
+      "currentPath": "contact/__next._full.txt",
+      "testedBytes": 41564,
+      "currentBytes": 41564,
+      "testedSha256": "b4e3ee8b73f6ba52f2170c4feb9c5cf3822f61c657ea695be8c2293cc57c14f9",
+      "currentSha256": "b6a80ef44b84e880f5887a0913386fb181661e26ab00b5f141dc6385cdf02e98",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "e88ddaae4dc67c548d20c3a6c30afd1137cfb8267fa856b176f00c4bb822839b",
+        "current": "e88ddaae4dc67c548d20c3a6c30afd1137cfb8267fa856b176f00c4bb822839b"
+      }
+    },
+    {
+      "logicalPath": "contact/__next._index.txt",
+      "testedPath": "contact/__next._index.txt",
+      "currentPath": "contact/__next._index.txt",
+      "testedBytes": 12581,
+      "currentBytes": 12581,
+      "testedSha256": "c3177d2cb5daac1ecfa5a3246a02d3f38e43c79f053efb8225286ff471a67170",
+      "currentSha256": "1021ea4e756278d2285aa1a378a5f8f23f9dc3316a3dfa026f16fcff41f7109d",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0",
+        "current": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0"
+      }
+    },
+    {
+      "logicalPath": "contact/__next._tree.txt",
+      "testedPath": "contact/__next._tree.txt",
+      "currentPath": "contact/__next._tree.txt",
+      "testedBytes": 480,
+      "currentBytes": 480,
+      "testedSha256": "69a3d32d873b8aa22dea325756d11821f4321f9aeb4ee7ad7686f956db0f5329",
+      "currentSha256": "10b9837fb85267c1f2f76ca684e887a0e32987733be301bb5b0af7011ac3d9f1",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "e793ac79dffe54299bd2860583db48f429687b9beb2687cb36540de7b2d2cad6",
+        "current": "e793ac79dffe54299bd2860583db48f429687b9beb2687cb36540de7b2d2cad6"
+      }
+    },
+    {
+      "logicalPath": "contact/__next.contact.__PAGE__.txt",
+      "testedPath": "contact/__next.contact.__PAGE__.txt",
+      "currentPath": "contact/__next.contact.__PAGE__.txt",
+      "testedBytes": 27239,
+      "currentBytes": 27239,
+      "testedSha256": "0a447e4699b372139eafe48cd4f5bc6036c5955414791494a5e53ac97cc72052",
+      "currentSha256": "3ada28d43a223cad44a61dc140a08419476c0069fd393e0094b45fc9cff035c4",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "f5bbc2742513a8367cddfab4bd4fbbc314801587ed22cdb65e7e94cfb3b84b4a",
+        "current": "f5bbc2742513a8367cddfab4bd4fbbc314801587ed22cdb65e7e94cfb3b84b4a"
+      }
+    },
+    {
+      "logicalPath": "contact/index.html",
+      "testedPath": "contact/index.html",
+      "currentPath": "contact/index.html",
+      "testedBytes": 82046,
+      "currentBytes": 82046,
+      "testedSha256": "e95e91fa3d90f0afdec8e60031f548289ab3923d589dbb12101daf4667406511",
+      "currentSha256": "96445d403eb3a8216e2b88230b06299800ad8d26a52b2749dfd328d525d1a290",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "cf3b56954c949455bf82cb19866542d68ae550299908ee038b866fcfee9356c2",
+        "current": "cf3b56954c949455bf82cb19866542d68ae550299908ee038b866fcfee9356c2"
+      }
+    },
+    {
+      "logicalPath": "contact/index.txt",
+      "testedPath": "contact/index.txt",
+      "currentPath": "contact/index.txt",
+      "testedBytes": 41564,
+      "currentBytes": 41564,
+      "testedSha256": "b4e3ee8b73f6ba52f2170c4feb9c5cf3822f61c657ea695be8c2293cc57c14f9",
+      "currentSha256": "b6a80ef44b84e880f5887a0913386fb181661e26ab00b5f141dc6385cdf02e98",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "e88ddaae4dc67c548d20c3a6c30afd1137cfb8267fa856b176f00c4bb822839b",
+        "current": "e88ddaae4dc67c548d20c3a6c30afd1137cfb8267fa856b176f00c4bb822839b"
+      }
+    },
+    {
+      "logicalPath": "icon.svg",
+      "testedPath": "icon.svg",
+      "currentPath": "icon.svg",
+      "testedBytes": 411,
+      "currentBytes": 411,
+      "testedSha256": "b61e1a188bd5d043692780e058e24ad83ba6347dea3bdf3619b334ffae246119",
+      "currentSha256": "b61e1a188bd5d043692780e058e24ad83ba6347dea3bdf3619b334ffae246119",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "icons/.gitkeep",
+      "testedPath": "icons/.gitkeep",
+      "currentPath": "icons/.gitkeep",
+      "testedBytes": 0,
+      "currentBytes": 0,
+      "testedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "currentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "images/.gitkeep",
+      "testedPath": "images/.gitkeep",
+      "currentPath": "images/.gitkeep",
+      "testedBytes": 0,
+      "currentBytes": 0,
+      "testedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "currentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "index.html",
+      "testedPath": "index.html",
+      "currentPath": "index.html",
+      "testedBytes": 118995,
+      "currentBytes": 118995,
+      "testedSha256": "480337fd232a66b1ea5fae1a5ecea4792e08abcbd0e4ce714675306d5903e99c",
+      "currentSha256": "5ef79f04f546f3d6dd237404c96bca4d39951b95e1449726feb068ee867000f4",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "f8a27166eae1fc8cedaed3b55d89201cf1c117c26a6f33bda61e1dd4125fe310",
+        "current": "f8a27166eae1fc8cedaed3b55d89201cf1c117c26a6f33bda61e1dd4125fe310"
+      }
+    },
+    {
+      "logicalPath": "index.txt",
+      "testedPath": "index.txt",
+      "currentPath": "index.txt",
+      "testedBytes": 61134,
+      "currentBytes": 61134,
+      "testedSha256": "1c781cfb918ec3ae2e89b68ad6120314cd8b05b4df2ea8d498cf18334e738153",
+      "currentSha256": "50ff2220042819811b5cbb5b08fe9d421f5e9f182f57deff9fd77c356233cac3",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "e4cfd01660f9172b72654566503c5f01724a62b2d8215d2429d6122e91d7d0ca",
+        "current": "e4cfd01660f9172b72654566503c5f01724a62b2d8215d2429d6122e91d7d0ca"
+      }
+    },
+    {
+      "logicalPath": "portfolio/__next._full.txt",
+      "testedPath": "portfolio/__next._full.txt",
+      "currentPath": "portfolio/__next._full.txt",
+      "testedBytes": 50254,
+      "currentBytes": 50254,
+      "testedSha256": "b45d3770720ba97eae1fb6b48887ee8f8ce94ad542f0af5529338ec5c60ee04c",
+      "currentSha256": "60104ac32f507041b958e94d8c048925290f1d04ef333295977d0b6524a18cf3",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "12cbde2c76490fa023204dd142920c7ca4ef15d4333e5c8fede95e156a0ee4a5",
+        "current": "12cbde2c76490fa023204dd142920c7ca4ef15d4333e5c8fede95e156a0ee4a5"
+      }
+    },
+    {
+      "logicalPath": "portfolio/__next._index.txt",
+      "testedPath": "portfolio/__next._index.txt",
+      "currentPath": "portfolio/__next._index.txt",
+      "testedBytes": 12581,
+      "currentBytes": 12581,
+      "testedSha256": "c3177d2cb5daac1ecfa5a3246a02d3f38e43c79f053efb8225286ff471a67170",
+      "currentSha256": "1021ea4e756278d2285aa1a378a5f8f23f9dc3316a3dfa026f16fcff41f7109d",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0",
+        "current": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0"
+      }
+    },
+    {
+      "logicalPath": "portfolio/__next._tree.txt",
+      "testedPath": "portfolio/__next._tree.txt",
+      "currentPath": "portfolio/__next._tree.txt",
+      "testedBytes": 482,
+      "currentBytes": 482,
+      "testedSha256": "de4655ac1ce34b81c2f212a0a5a59533aeec1ba50fd69829a413677f92f18f59",
+      "currentSha256": "d87bc47c1d90db0aa5a8bb641a6c4141f531e06e75d88fa9dceb6db425ce975e",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "b0a8e29aa20c6a8bff740300bba6ff3a5ed08067723819dc7be6b1deb220eff3",
+        "current": "b0a8e29aa20c6a8bff740300bba6ff3a5ed08067723819dc7be6b1deb220eff3"
+      }
+    },
+    {
+      "logicalPath": "portfolio/__next.portfolio.__PAGE__.txt",
+      "testedPath": "portfolio/__next.portfolio.__PAGE__.txt",
+      "currentPath": "portfolio/__next.portfolio.__PAGE__.txt",
+      "testedBytes": 36119,
+      "currentBytes": 36119,
+      "testedSha256": "d3c92f4538e38406b1f2c4055a5e51eb9de8b1fe9a2e1d918ffdd51d688100cd",
+      "currentSha256": "4fb834c5494894cf4dd2e6e223b50c22e5da2baade8c582ef9c8d182c162a8c3",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "2f3c5b683f968415c25ab170a71df8366eda7a1e427c78facbfcb2cb98f116bd",
+        "current": "2f3c5b683f968415c25ab170a71df8366eda7a1e427c78facbfcb2cb98f116bd"
+      }
+    },
+    {
+      "logicalPath": "portfolio/corporate-website/__next._full.txt",
+      "testedPath": "portfolio/corporate-website/__next._full.txt",
+      "currentPath": "portfolio/corporate-website/__next._full.txt",
+      "testedBytes": 42053,
+      "currentBytes": 42053,
+      "testedSha256": "8f9b3e0fb020af7ee42d0e089ef898513724066628ddcddbd0464774f7a35e43",
+      "currentSha256": "5ca508e07f632d255c09b983531ab3bc02ccb542929742181b191bfc477e2530",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "348bee6d0f98e41f72906b918fd2fda1ec7415b5c48ad0289b56ac36f28bcd11",
+        "current": "348bee6d0f98e41f72906b918fd2fda1ec7415b5c48ad0289b56ac36f28bcd11"
+      }
+    },
+    {
+      "logicalPath": "portfolio/corporate-website/__next._index.txt",
+      "testedPath": "portfolio/corporate-website/__next._index.txt",
+      "currentPath": "portfolio/corporate-website/__next._index.txt",
+      "testedBytes": 12585,
+      "currentBytes": 12585,
+      "testedSha256": "292ca23bc8823b30353568209b2c30c30415d1e2d26bfb79da2e436a99232c84",
+      "currentSha256": "c8220602664a6286b8f1599679662a53f70ff292ae81d904443d4e18bed676a7",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "f4a478c93ac96a4eea0203022a2c762b0e71697f8b306055a0cc0a69a0385008",
+        "current": "f4a478c93ac96a4eea0203022a2c762b0e71697f8b306055a0cc0a69a0385008"
+      }
+    },
+    {
+      "logicalPath": "portfolio/corporate-website/__next._tree.txt",
+      "testedPath": "portfolio/corporate-website/__next._tree.txt",
+      "currentPath": "portfolio/corporate-website/__next._tree.txt",
+      "testedBytes": 585,
+      "currentBytes": 585,
+      "testedSha256": "7dbf35de018855370ab08ad3568e3ad06e2f1949d33e563f7bf1ccdeb36a3952",
+      "currentSha256": "f5b160cab8c0c543aa6d37883f15a946572ed0938e6b1233bd6fb9debeae136a",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "2966f1fb5448ffd713e7eecf6b40468e2eba705f40feea4624fcac2d9d4cc51d",
+        "current": "2966f1fb5448ffd713e7eecf6b40468e2eba705f40feea4624fcac2d9d4cc51d"
+      }
+    },
+    {
+      "logicalPath": "portfolio/corporate-website/__next.portfolio.$d$slug.__PAGE__.txt",
+      "testedPath": "portfolio/corporate-website/__next.portfolio.$d$slug.__PAGE__.txt",
+      "currentPath": "portfolio/corporate-website/__next.portfolio.$d$slug.__PAGE__.txt",
+      "testedBytes": 27929,
+      "currentBytes": 27929,
+      "testedSha256": "a8557618b64c6ada9034327d7b246e7d37259dd1c3b38b54ef8fb0c1e4e8c3b9",
+      "currentSha256": "34d3a610e52f374d0179c13768669af858b4d1b94364461a67bb871a1a9a3e15",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "335d67e27cf40cf52ed8f4b0e7d9fc4a673839c6f49787b21239a703a5abb8ca",
+        "current": "335d67e27cf40cf52ed8f4b0e7d9fc4a673839c6f49787b21239a703a5abb8ca"
+      }
+    },
+    {
+      "logicalPath": "portfolio/corporate-website/index.html",
+      "testedPath": "portfolio/corporate-website/index.html",
+      "currentPath": "portfolio/corporate-website/index.html",
+      "testedBytes": 80181,
+      "currentBytes": 80181,
+      "testedSha256": "3afdb469d1de54025dd2e9db4af9673c4084347091449bb2161a2da8b9b647e4",
+      "currentSha256": "899313c48efad448354514864cf6dbfc123f0a6032a9cf7037d63247a04687ff",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "f77555acf48f363e60059fe8b5e1900d9af9cd7f61fb74a9454db5fa58507b00",
+        "current": "f77555acf48f363e60059fe8b5e1900d9af9cd7f61fb74a9454db5fa58507b00"
+      }
+    },
+    {
+      "logicalPath": "portfolio/corporate-website/index.txt",
+      "testedPath": "portfolio/corporate-website/index.txt",
+      "currentPath": "portfolio/corporate-website/index.txt",
+      "testedBytes": 42053,
+      "currentBytes": 42053,
+      "testedSha256": "8f9b3e0fb020af7ee42d0e089ef898513724066628ddcddbd0464774f7a35e43",
+      "currentSha256": "5ca508e07f632d255c09b983531ab3bc02ccb542929742181b191bfc477e2530",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "348bee6d0f98e41f72906b918fd2fda1ec7415b5c48ad0289b56ac36f28bcd11",
+        "current": "348bee6d0f98e41f72906b918fd2fda1ec7415b5c48ad0289b56ac36f28bcd11"
+      }
+    },
+    {
+      "logicalPath": "portfolio/enterprise-management/__next._full.txt",
+      "testedPath": "portfolio/enterprise-management/__next._full.txt",
+      "currentPath": "portfolio/enterprise-management/__next._full.txt",
+      "testedBytes": 43534,
+      "currentBytes": 43534,
+      "testedSha256": "03641856c7c9a20c27b31f73e5f1169e6782aa36da5920a8923028fbd525187a",
+      "currentSha256": "10e7a9656cb2d9c3b03f9cf03a41dccf37539b96cc335fd4ab27d46d923c3800",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "1ee2475fc4a015439075090f601ebc3a1872667380a94953934869f939a84e32",
+        "current": "1ee2475fc4a015439075090f601ebc3a1872667380a94953934869f939a84e32"
+      }
+    },
+    {
+      "logicalPath": "portfolio/enterprise-management/__next._index.txt",
+      "testedPath": "portfolio/enterprise-management/__next._index.txt",
+      "currentPath": "portfolio/enterprise-management/__next._index.txt",
+      "testedBytes": 12585,
+      "currentBytes": 12585,
+      "testedSha256": "292ca23bc8823b30353568209b2c30c30415d1e2d26bfb79da2e436a99232c84",
+      "currentSha256": "c8220602664a6286b8f1599679662a53f70ff292ae81d904443d4e18bed676a7",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "f4a478c93ac96a4eea0203022a2c762b0e71697f8b306055a0cc0a69a0385008",
+        "current": "f4a478c93ac96a4eea0203022a2c762b0e71697f8b306055a0cc0a69a0385008"
+      }
+    },
+    {
+      "logicalPath": "portfolio/enterprise-management/__next._tree.txt",
+      "testedPath": "portfolio/enterprise-management/__next._tree.txt",
+      "currentPath": "portfolio/enterprise-management/__next._tree.txt",
+      "testedBytes": 589,
+      "currentBytes": 589,
+      "testedSha256": "3039a6c3391a0a5733a648eef031b72981cc7c6f4953e5a5f33d9fc840c80d6c",
+      "currentSha256": "48b7a4e2d85243b47c902e6a0974615e1ad4031dd7c2be08bf34d559784e5c12",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "9ab67bac5281ee7b94f0714430db34b555e87fc6e46d5d884f630503862fd3f5",
+        "current": "9ab67bac5281ee7b94f0714430db34b555e87fc6e46d5d884f630503862fd3f5"
+      }
+    },
+    {
+      "logicalPath": "portfolio/enterprise-management/__next.portfolio.$d$slug.__PAGE__.txt",
+      "testedPath": "portfolio/enterprise-management/__next.portfolio.$d$slug.__PAGE__.txt",
+      "currentPath": "portfolio/enterprise-management/__next.portfolio.$d$slug.__PAGE__.txt",
+      "testedBytes": 29387,
+      "currentBytes": 29387,
+      "testedSha256": "0317538f602ad8e122ade162f0438cec7be33686c943c6f86f1eed6ff75de7f2",
+      "currentSha256": "798caad7b3791ff1403c77f3c42d6428d1db36ce54f3235d4e38859437ab1f82",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "5f521086a9a8ea39d1ce98c5ecfdf5ff9dc8866cabf99c895b63d3c29612fea7",
+        "current": "5f521086a9a8ea39d1ce98c5ecfdf5ff9dc8866cabf99c895b63d3c29612fea7"
+      }
+    },
+    {
+      "logicalPath": "portfolio/enterprise-management/index.html",
+      "testedPath": "portfolio/enterprise-management/index.html",
+      "currentPath": "portfolio/enterprise-management/index.html",
+      "testedBytes": 83181,
+      "currentBytes": 83181,
+      "testedSha256": "e7ac8fa703a2fdefcc3d71f7202a5ea902ae8d76259dbb91d6f8203e2c435c8d",
+      "currentSha256": "ac924a9896073a8a62c93e6ef07869dc28287d9c1803b5deb49a8d80a8a595b5",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "fbe5098dfa80959b77b0800d50a1e9fa3dde5ce717e80112755bd7b00c8b5a7b",
+        "current": "fbe5098dfa80959b77b0800d50a1e9fa3dde5ce717e80112755bd7b00c8b5a7b"
+      }
+    },
+    {
+      "logicalPath": "portfolio/enterprise-management/index.txt",
+      "testedPath": "portfolio/enterprise-management/index.txt",
+      "currentPath": "portfolio/enterprise-management/index.txt",
+      "testedBytes": 43534,
+      "currentBytes": 43534,
+      "testedSha256": "03641856c7c9a20c27b31f73e5f1169e6782aa36da5920a8923028fbd525187a",
+      "currentSha256": "10e7a9656cb2d9c3b03f9cf03a41dccf37539b96cc335fd4ab27d46d923c3800",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "1ee2475fc4a015439075090f601ebc3a1872667380a94953934869f939a84e32",
+        "current": "1ee2475fc4a015439075090f601ebc3a1872667380a94953934869f939a84e32"
+      }
+    },
+    {
+      "logicalPath": "portfolio/index.html",
+      "testedPath": "portfolio/index.html",
+      "currentPath": "portfolio/index.html",
+      "testedBytes": 97809,
+      "currentBytes": 97809,
+      "testedSha256": "fa57ada6c3e26a3edbdcc4eef90af632149ff65152d571af375c00a6bb99415a",
+      "currentSha256": "10a252bfe5ac862e75ec601f6e499c46d5e607e9d79339a33606b61ce5b0f6e2",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "7e99ed19aca7cccfb0e41f6b6887f2d181681883f6ab7868f77130026f6d0502",
+        "current": "7e99ed19aca7cccfb0e41f6b6887f2d181681883f6ab7868f77130026f6d0502"
+      }
+    },
+    {
+      "logicalPath": "portfolio/index.txt",
+      "testedPath": "portfolio/index.txt",
+      "currentPath": "portfolio/index.txt",
+      "testedBytes": 50254,
+      "currentBytes": 50254,
+      "testedSha256": "b45d3770720ba97eae1fb6b48887ee8f8ce94ad542f0af5529338ec5c60ee04c",
+      "currentSha256": "60104ac32f507041b958e94d8c048925290f1d04ef333295977d0b6524a18cf3",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "12cbde2c76490fa023204dd142920c7ca4ef15d4333e5c8fede95e156a0ee4a5",
+        "current": "12cbde2c76490fa023204dd142920c7ca4ef15d4333e5c8fede95e156a0ee4a5"
+      }
+    },
+    {
+      "logicalPath": "portfolio/integration-hub/__next._full.txt",
+      "testedPath": "portfolio/integration-hub/__next._full.txt",
+      "currentPath": "portfolio/integration-hub/__next._full.txt",
+      "testedBytes": 43315,
+      "currentBytes": 43315,
+      "testedSha256": "c353092797f31e37a7d407a7daba57ded9e9b7a2fce8d2ebb264b05933b103e3",
+      "currentSha256": "8c6aba6227be3dab6e69b71637e0c829b8fabec5000588bd160119fa5ff8c63c",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "00cd6dfb8327f706ff5c808a10d51726e589eec0d294c100449ad5696896ebc9",
+        "current": "00cd6dfb8327f706ff5c808a10d51726e589eec0d294c100449ad5696896ebc9"
+      }
+    },
+    {
+      "logicalPath": "portfolio/integration-hub/__next._index.txt",
+      "testedPath": "portfolio/integration-hub/__next._index.txt",
+      "currentPath": "portfolio/integration-hub/__next._index.txt",
+      "testedBytes": 12585,
+      "currentBytes": 12585,
+      "testedSha256": "292ca23bc8823b30353568209b2c30c30415d1e2d26bfb79da2e436a99232c84",
+      "currentSha256": "c8220602664a6286b8f1599679662a53f70ff292ae81d904443d4e18bed676a7",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "f4a478c93ac96a4eea0203022a2c762b0e71697f8b306055a0cc0a69a0385008",
+        "current": "f4a478c93ac96a4eea0203022a2c762b0e71697f8b306055a0cc0a69a0385008"
+      }
+    },
+    {
+      "logicalPath": "portfolio/integration-hub/__next._tree.txt",
+      "testedPath": "portfolio/integration-hub/__next._tree.txt",
+      "currentPath": "portfolio/integration-hub/__next._tree.txt",
+      "testedBytes": 583,
+      "currentBytes": 583,
+      "testedSha256": "483444ffc504553436696b2f0dfff9e8efbd0cb95c5c565e8d4b85f66d639140",
+      "currentSha256": "8482f9dc0f7d52b17ef0773b6766b38fb25830b62c48ba858d5e8a341bc92534",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "668c6490c61bc8638e4384145fb3351f7e938a8ec010e31f2e139ebea97e1c66",
+        "current": "668c6490c61bc8638e4384145fb3351f7e938a8ec010e31f2e139ebea97e1c66"
+      }
+    },
+    {
+      "logicalPath": "portfolio/integration-hub/__next.portfolio.$d$slug.__PAGE__.txt",
+      "testedPath": "portfolio/integration-hub/__next.portfolio.$d$slug.__PAGE__.txt",
+      "currentPath": "portfolio/integration-hub/__next.portfolio.$d$slug.__PAGE__.txt",
+      "testedBytes": 29164,
+      "currentBytes": 29164,
+      "testedSha256": "1b5e47b665af108a634b3b555500d117183b6f04209d36d0a68d86733d95d495",
+      "currentSha256": "32b4994975de86f7360b68ac16774661410aed708488d5c5cc93c6e5eefa9bb5",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "ee5c79fb388a5a074f1e29c02844ec049e2a424516f819d595baa71bef7587ff",
+        "current": "ee5c79fb388a5a074f1e29c02844ec049e2a424516f819d595baa71bef7587ff"
+      }
+    },
+    {
+      "logicalPath": "portfolio/integration-hub/index.html",
+      "testedPath": "portfolio/integration-hub/index.html",
+      "currentPath": "portfolio/integration-hub/index.html",
+      "testedBytes": 82809,
+      "currentBytes": 82809,
+      "testedSha256": "10a5ef3052da3fa3fd45e1ceafa98b8b0cc9743d88733de052a582ba1b1f1a80",
+      "currentSha256": "1626bba77e9d00c71013ee6a67ac98b85da5d941b38ec97bc94889e7568e6cfc",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "c040e0f5a07ad473733fc626ddb02858e78b54d9810d6088d8f07c8b61241fd3",
+        "current": "c040e0f5a07ad473733fc626ddb02858e78b54d9810d6088d8f07c8b61241fd3"
+      }
+    },
+    {
+      "logicalPath": "portfolio/integration-hub/index.txt",
+      "testedPath": "portfolio/integration-hub/index.txt",
+      "currentPath": "portfolio/integration-hub/index.txt",
+      "testedBytes": 43315,
+      "currentBytes": 43315,
+      "testedSha256": "c353092797f31e37a7d407a7daba57ded9e9b7a2fce8d2ebb264b05933b103e3",
+      "currentSha256": "8c6aba6227be3dab6e69b71637e0c829b8fabec5000588bd160119fa5ff8c63c",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "00cd6dfb8327f706ff5c808a10d51726e589eec0d294c100449ad5696896ebc9",
+        "current": "00cd6dfb8327f706ff5c808a10d51726e589eec0d294c100449ad5696896ebc9"
+      }
+    },
+    {
+      "logicalPath": "robots.txt",
+      "testedPath": "robots.txt",
+      "currentPath": "robots.txt",
+      "testedBytes": 92,
+      "currentBytes": 92,
+      "testedSha256": "4efb40913d6e78accceaef86f3aaa37d00ee6c28da83aac7a6b4881773d3b1c4",
+      "currentSha256": "4efb40913d6e78accceaef86f3aaa37d00ee6c28da83aac7a6b4881773d3b1c4",
+      "rawByteIdentical": true,
+      "comparisonMethod": "raw byte identity",
+      "equivalent": true,
+      "normalizations": []
+    },
+    {
+      "logicalPath": "services/__next._full.txt",
+      "testedPath": "services/__next._full.txt",
+      "currentPath": "services/__next._full.txt",
+      "testedBytes": 77530,
+      "currentBytes": 77530,
+      "testedSha256": "229e1c309021545ff8d72b709f13b94c9dd371c822193b5558c5ac265fab0e2c",
+      "currentSha256": "bc94d3f6ee563934baecdc6ed8d8336dcd23ec762a6e0c1a0f40d19a9df7e515",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "e4cd1124f5662a9630c0a0f9983f856d304157420c6fee1102d3d5e41bfd7ad8",
+        "current": "e4cd1124f5662a9630c0a0f9983f856d304157420c6fee1102d3d5e41bfd7ad8"
+      }
+    },
+    {
+      "logicalPath": "services/__next._index.txt",
+      "testedPath": "services/__next._index.txt",
+      "currentPath": "services/__next._index.txt",
+      "testedBytes": 12581,
+      "currentBytes": 12581,
+      "testedSha256": "c3177d2cb5daac1ecfa5a3246a02d3f38e43c79f053efb8225286ff471a67170",
+      "currentSha256": "1021ea4e756278d2285aa1a378a5f8f23f9dc3316a3dfa026f16fcff41f7109d",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0",
+        "current": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0"
+      }
+    },
+    {
+      "logicalPath": "services/__next._tree.txt",
+      "testedPath": "services/__next._tree.txt",
+      "currentPath": "services/__next._tree.txt",
+      "testedBytes": 481,
+      "currentBytes": 481,
+      "testedSha256": "930e24bbc8050e6e9e9ef5264a43853a93dfcde16e0a0d7cac9bf65a7aa6b18e",
+      "currentSha256": "6863cbc7319efcabdb9c3109e24b02a0b6ddf91e6ff08651498965372568bb68",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "47e47a15f6be558a811a09d67e33f4f608e5cb6f67e37e3e1fbbd3278e68fb38",
+        "current": "47e47a15f6be558a811a09d67e33f4f608e5cb6f67e37e3e1fbbd3278e68fb38"
+      }
+    },
+    {
+      "logicalPath": "services/__next.services.__PAGE__.txt",
+      "testedPath": "services/__next.services.__PAGE__.txt",
+      "currentPath": "services/__next.services.__PAGE__.txt",
+      "testedBytes": 62988,
+      "currentBytes": 62988,
+      "testedSha256": "79df0e635256f9fca314cb8834b9a9782618d092a05cf673defbe0446d335ad2",
+      "currentSha256": "782143af88925f2c1aac096e95a5c5998c2af57fd4026a1acea15a1009983c0b",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "c9555cb32e914660d9acacd95b3733248ac5d22574da81fe2c12310aed454abe",
+        "current": "c9555cb32e914660d9acacd95b3733248ac5d22574da81fe2c12310aed454abe"
+      }
+    },
+    {
+      "logicalPath": "services/index.html",
+      "testedPath": "services/index.html",
+      "currentPath": "services/index.html",
+      "testedBytes": 151283,
+      "currentBytes": 151283,
+      "testedSha256": "0e4dd90ae68ac504880dd36bbd870cb42c7618c728eb82f6b36f4c9f998f34d3",
+      "currentSha256": "3631bd5eb9709a1db138ea68b18ccd9d1c2200e8e68febec0d690c1715879d47",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "f277b644d5d00933ca979a79827e0b78df4f1652e2a7e46ed552cb12f7b6963a",
+        "current": "f277b644d5d00933ca979a79827e0b78df4f1652e2a7e46ed552cb12f7b6963a"
+      }
+    },
+    {
+      "logicalPath": "services/index.txt",
+      "testedPath": "services/index.txt",
+      "currentPath": "services/index.txt",
+      "testedBytes": 77530,
+      "currentBytes": 77530,
+      "testedSha256": "229e1c309021545ff8d72b709f13b94c9dd371c822193b5558c5ac265fab0e2c",
+      "currentSha256": "bc94d3f6ee563934baecdc6ed8d8336dcd23ec762a6e0c1a0f40d19a9df7e515",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "e4cd1124f5662a9630c0a0f9983f856d304157420c6fee1102d3d5e41bfd7ad8",
+        "current": "e4cd1124f5662a9630c0a0f9983f856d304157420c6fee1102d3d5e41bfd7ad8"
+      }
+    },
+    {
+      "logicalPath": "solutions/__next._full.txt",
+      "testedPath": "solutions/__next._full.txt",
+      "currentPath": "solutions/__next._full.txt",
+      "testedBytes": 116830,
+      "currentBytes": 116830,
+      "testedSha256": "17a89ca22ab03e7c8881b2c330d84e13d68e2b465f5c378e4f6722e0b33cbf20",
+      "currentSha256": "84248514a247d641b690159ec09bab4c37ecb4209f6b08d0a771dd9a9ba42a66",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "f80ebbd25c4ef97fd44df71a59f772e05e939289e16d1b1d5bbac5653ea3d2b7",
+        "current": "f80ebbd25c4ef97fd44df71a59f772e05e939289e16d1b1d5bbac5653ea3d2b7"
+      }
+    },
+    {
+      "logicalPath": "solutions/__next._index.txt",
+      "testedPath": "solutions/__next._index.txt",
+      "currentPath": "solutions/__next._index.txt",
+      "testedBytes": 12581,
+      "currentBytes": 12581,
+      "testedSha256": "c3177d2cb5daac1ecfa5a3246a02d3f38e43c79f053efb8225286ff471a67170",
+      "currentSha256": "1021ea4e756278d2285aa1a378a5f8f23f9dc3316a3dfa026f16fcff41f7109d",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0",
+        "current": "1c15d07a20bc01aaf43feda09a29f4a27145e14872f05ab73d35d0411e385ca0"
+      }
+    },
+    {
+      "logicalPath": "solutions/__next._tree.txt",
+      "testedPath": "solutions/__next._tree.txt",
+      "currentPath": "solutions/__next._tree.txt",
+      "testedBytes": 482,
+      "currentBytes": 482,
+      "testedSha256": "14f8c86722b52247d6707da333c3e2017666f6ec93fd43beefb995644f761fc1",
+      "currentSha256": "5ad3a794f99afc8e3bd4907857291848888e1a7973a87fea9c187b9abd574ede",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "e35b3ef6337768d2a870d93e57300a454e96fec95f1572ac80142cb3c7d7254f",
+        "current": "e35b3ef6337768d2a870d93e57300a454e96fec95f1572ac80142cb3c7d7254f"
+      }
+    },
+    {
+      "logicalPath": "solutions/__next.solutions.__PAGE__.txt",
+      "testedPath": "solutions/__next.solutions.__PAGE__.txt",
+      "currentPath": "solutions/__next.solutions.__PAGE__.txt",
+      "testedBytes": 101940,
+      "currentBytes": 101940,
+      "testedSha256": "08e16c46c08acdf19002222332c9609b40ad1e8d64aadbb287ba380c1a43612e",
+      "currentSha256": "f9bbd0ec7f34685c82d7544c6167d1178d5274fd40333116efb1f8814e6cee73",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "a847fc44d13f30df5f702c6a34a11a80d28f5882a7e2562c304745e9be5fca2c",
+        "current": "a847fc44d13f30df5f702c6a34a11a80d28f5882a7e2562c304745e9be5fca2c"
+      }
+    },
+    {
+      "logicalPath": "solutions/index.html",
+      "testedPath": "solutions/index.html",
+      "currentPath": "solutions/index.html",
+      "testedBytes": 225052,
+      "currentBytes": 225052,
+      "testedSha256": "4b5c7b33e319f5622fa687776f2064f2d3a89416b3a2825eac97158c6397560c",
+      "currentSha256": "6af4dafcd7d6e9dce8e482bcd167e211e50bf03ddf9aaac9d4bc2ba840aeb506",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "HTML escaped Flight JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "8cdc8c8afa6406efc11ba04acc52384ed52f18a781e13a70a81a78e753264615",
+        "current": "8cdc8c8afa6406efc11ba04acc52384ed52f18a781e13a70a81a78e753264615"
+      }
+    },
+    {
+      "logicalPath": "solutions/index.txt",
+      "testedPath": "solutions/index.txt",
+      "currentPath": "solutions/index.txt",
+      "testedBytes": 116830,
+      "currentBytes": 116830,
+      "testedSha256": "17a89ca22ab03e7c8881b2c330d84e13d68e2b465f5c378e4f6722e0b33cbf20",
+      "currentSha256": "84248514a247d641b690159ec09bab4c37ecb4209f6b08d0a771dd9a9ba42a66",
+      "rawByteIdentical": false,
+      "comparisonMethod": "exact known Build ID JSON b-field normalization",
+      "equivalent": true,
+      "normalizations": [
+        {
+          "side": "tested",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "side": "current",
+          "entries": [
+            {
+              "context": "RSC JSON b field",
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "normalizedSha256": {
+        "tested": "f80ebbd25c4ef97fd44df71a59f772e05e939289e16d1b1d5bbac5653ea3d2b7",
+        "current": "f80ebbd25c4ef97fd44df71a59f772e05e939289e16d1b1d5bbac5653ea3d2b7"
+      }
+    }
+  ],
+  "conclusion": "All 204 files have equivalent logical paths and content. Runtime asset bodies are raw byte-identical; HTML/RSC differences are exclusively the validated build identity fields. This bridge supports preservation of the tested rendered runtime after the build-only Tailwind source exclusion.",
+  "limits": [
+    "The comparison is against the captured current artifact and preserved tested copy, not a future rebuild or deployed CI artifact.",
+    "No browser, full specification reread, font decoding, Lighthouse or new performance measurement was performed.",
+    "Performance timings and previous visual/functional reviews remain the original evidence; this is an artifact identity bridge and does not restate them as newly executed."
+  ]
+}

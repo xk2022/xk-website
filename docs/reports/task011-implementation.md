@@ -1,6 +1,6 @@
 # Task 011 — 網站效能最佳化與驗證
 
-日期：2026-11-19 UTC。本報告是建立 PR 前的本機驗收快照；之後實際發生的 PR CI、Review、merge、main CI、部署與公開驗證更新於同一 PR 說明，避免為記錄自身 SHA 製造循環 Commit。實驗室結果不代表 field CWV、真機結果或對外 SLA。
+日期：2026-11-19 UTC。本報告保留初次 PR 前的字體量測快照，並在末節記錄 CI 發現的原碼掃描修正及補驗；之後實際發生的 PR CI、Review、merge、main CI、部署與公開驗證更新於同一 PR 說明，避免為記錄自身 SHA 製造循環 Commit。實驗室結果不代表 field CWV、真機結果或對外 SLA。
 
 ## 基準、授權與來源
 
@@ -28,7 +28,7 @@ CDP 實際 applied rule IDs 與 Network ExtraInfo 一致。Lighthouse 實際設�
 
 一般 Next.js production 使用 loopback 3080；Pages 使用 3081 與 `/xk-website/`。after 先完成一般模式，再停止服務與建置 Pages；baseline 的 idle server 清理例外另記於下方失敗／限制。Pages 靜態伺服器同一原碼、預先 gzip level 6、hashed 資源 `max-age=600`、HTML `no-cache`／ETag，woff2 不再 gzip；這是固定本機模型，不是 CDN Header 修改或公開網路模擬。
 
-基準 `0c51f6fcc2cc912e625bd16e0e638dbeeb073629daba82b71dd42786a4e7a8a9`；after freeze `cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4`。兩者皆以 107 個 runtime／素材／scripts／manifest／lockfile／Next／TS／workflow 檔案逐檔 SHA map 的排序 JSON 計算。after 由基準加封存的精確 diff 識別，PR Commit 必須保留此 map；不以未產生的 Commit SHA 冒充已提交版本。
+基準 `0c51f6fcc2cc912e625bd16e0e638dbeeb073629daba82b71dd42786a4e7a8a9`；after freeze `cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4`。兩者皆以 107 個 runtime／素材／scripts／manifest／lockfile／Next／TS／workflow 檔案逐檔 SHA map 的排序 JSON 計算。此 after 是 font-only Commit `180e4f8` 的受測 map；CI 後的建置來源修正有不同原碼指紋與 runtime 等價 bridge，見末節，不冒稱已重跑效能量測。
 
 ## 清單、瓶頸與最小修正
 
@@ -195,9 +195,9 @@ Test ID 對應：PERF-M01–M07 為上述效能、Bundle／Fonts／Cache；PERF-
 
 證據包含全 156 個 CDP runs、12 份可比較 Lighthouse 加單次 normal 診斷、失敗／重驗、工具／profile、trace、Network、Coverage 與 storage。壓縮前可去重相同內容，不能刪除不利結果；gzip 容器無損展開，原壓縮 SHA 與 payload SHA 均保留，還原驗證見 manifest。不把 raw 的 COMPLETE 狀態當成 target PASS。
 
-## Git／CI／部署階段
+## 初次 PR 前的 Git／CI／部署階段
 
-| 階段 | PR 建立前快照 |
+| 階段 | 初次 PR 建立前快照 |
 | --- | --- |
 | 本機開發與驗收 | PASS，final frozen runtime map 對應上述全部實際結果 |
 | Feature Commit／Push | PENDING，提交後的實際 SHA／Diff 對照放同 PR 說明 |
@@ -210,3 +210,19 @@ Test ID 對應：PERF-M01–M07 為上述效能、Bundle／Fonts／Cache；PERF-
 這些遠端事件只在實際發生後更新同一 PR 說明，不為補自身 SHA 另做 docs-only Commit。正式網站索引、法律政策、Vercel／Domain 及 field CWV 依各自條件，不能從 PR CI 或本次技術合併推定。
 
 最終證據使用標準函式庫 XZ 無損壓縮，大小 18755608 bytes，SHA-256 `fbf1b4415bab2dcf96ccf66de35c3d7d0bd4a4d067c9dc59ae4490c9adbd500c`；共 1944 個 member／1444 個唯一 payload，展開 459308269 bytes，逐檔還原 SHA 驗證 1944／1944。初次 gzip 封存亦保留完成回執；更換外層壓縮沒有刪減原始 runs 或改變 payload。
+
+## CI 後修正：驗收文件的 Tailwind 掃描邊界
+
+PR #16 的首個 head `180e4f8`、CI `44488123241` 兩個 build job 成功，但實際下載 artifact 並核對 API digest 後，發現 global CSS 39469 bytes，比受測的 38228 多 1241。差異精確為驗證 JSON／報告中的 `filter`、`lowercase` utility 及其 properties；Noto／Inter CSS 與字體修正本身正常。第一輪 artifact byte checker 真 Exit 1 保留，沒有因 CI 綠燈就合併。
+
+修正只在 `src/app/globals.css` 增加兩條 `@source not`，排除本 Task 的 `docs/reports/task011-artifacts` 與 `docs/reports/task011-implementation.md`。Tokens／樣式定義／互動 API 不改，其他掃描來源保留；未新增套件或修改部署流程。驗收資料應保留為證據，不能意外增加網站 utilities。
+
+最終原碼指紋為 `3d00df42565635715b36078fb9a244bdac5fb001388dc26b0d40cef3989061eb`，107 檔中只有 Layout 與 CSS source directives 相對基準變更，其餘 105 檔相同。原 `cc60…` font-only 量測、指紋與 459 MB 原始 payload 全部保留，不改舊測試版本。
+
+定向獨立 [artifact bridge](task011-artifacts/source-artifact-bridge.json) 核對 204 個 logical files：142 檔 raw byte-identical，含三個 CSS、JS、115 個字檔、icon／SVG／原稿；另 12 HTML 與 50 RSC 只差嚴格驗證的 Build ID。ID 由 root RSC 0-record 的 b 欄位取得，與唯一 manifest 目錄互證，只替換該完整 JSON token／目錄 component，不任意刪除差異。三個 CSS 回到原受測的 filename／SHA，沒有新的瀏覽器 runtime 行為。
+
+影響判斷：保留原 font-only 的同條件 before／after 數據，透過實際編譯產物等價性連到最終原碼；不把它改稱新來源的重新量測。重跑最終來源的五個品質命令、普通 18 項及 Pages 23 項針對性驗收，並驗證最終 CI artifact。原 45 responsive／48 axe／五寬人工圖與效能樣本對應已確認相同的 runtime，不因 source fingerprint 不同重跑無改變的畫面與採樣；不降低原門檻。
+
+新增補驗、命令／退出碼、版本與 bridge 入口為 [source-fix-verification.json](task011-artifacts/source-fix-verification.json)，原始資料為 [source-fix-evidence.json.xz](task011-artifacts/source-fix-evidence.json.xz)。此增補屬實際程式修正，使用同一 PR 的新 Commit／新 head CI；先前 head 成功不代替修正版 CI。後續 merge／main CI／部署／公開新版證據仍更新同一 PR 說明。
+
+最終來源的 npm ci／TypeScript／ESLint／normal Build／Pages Build 全部真 Exit 0；普通 18／18（10 contexts／10 after）與 Pages 23／23（14／14）補驗真 Exit 0。Pages 152 資源成功、183 個 HEAD 嚴格分類、unexpected 0。補驗工具的 module import、CLI artifact signed-host 與初次 artifact 差異的原 FAIL／修正記錄均在補充證據；臨時下載 URL 有明確 redaction，不公開 capability。補充封存 383940 bytes，96 members 全還原校驗，SHA-256 `43c3f52f9538deef5be7f699bea7cb7a88c13e19e3b456a656cb1ed8bedbab6a`。

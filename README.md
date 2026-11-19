@@ -151,3 +151,5 @@ XK_PRIVACY_PREVIEW=1 npm run start -- --hostname 127.0.0.1 --port 3062
 Pages 是主要受控量測模式；九個公開頁分別進行手機／桌面冷載入，Home 與最大內容風險頁補暖快取及實際互動，一般 Next.js production 另測代表頁。固定節流、至少三次 runs、中位數／範圍、Lighthouse JSON／HTML 與原始 trace 分開保存；本機模型不等於 CDN 或真機，沒有 field 資料時不能宣稱 CWV p75 通過。
 
 重現條件、Cache 與驗收界線見 [效能量測指南](docs/performance-measurement.md)，實際基準／after、測試結果與限制見 [Task 011 實作與驗證](docs/reports/task011-implementation.md)。沿用五個品質指令及 GitHub Pages 工作流程；Metadata／noindex／nofollow、Privacy 草案保護與 Contact 無收件狀態不變。
+
+Task 011 另以明確的 Tailwind 掃描排除規則保護本次驗收資料／報告；CI artifact 曾揭露文件文字增加無用 utilities，已修正並以完整產物 bridge 與最終來源補驗確認受測 runtime 保持一致，詳細版本界線見實作報告。

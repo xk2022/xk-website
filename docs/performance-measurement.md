@@ -46,3 +46,5 @@ Lighthouse 使用實際 DevTools 節流，不與 simulated 結果混比。13.6.0
 程式 freeze 後執行 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`，以及九頁五寬、有效連結／錨點、鍵盤／Focus／選單、axe、Reduced Motion、Console／Runtime／Network、SEO 與發布保護回歸。效能採樣與功能回歸錯開，截圖人工檢視。頁面截圖只證明畫面，不當作 LCP／waterfall 或真機證據。
 
 在 PR 前完成同版本報告；原始資料附 SHA manifest，保留重現工具／profile 與 log。巨大資料可壓縮保存，必須可還原及核對 SHA，不能為縮檔刪除不利結果。之後依實際 Diff 選擇重驗範圍；純文件、遠端識別碼及報告補記不觸發無關網站重跑。
+
+產生報告後也要核對實際 CI artifact：Tailwind 自動掃描可能把驗收資料當成 utility 來源。本 Task 在 globals.css 明確排除兩個 Task 011 證據／報告路徑，避免文件補記影響 production CSS。若新增排除規則後所有 runtime assets 相同、HTML／RSC 僅差嚴格已知的 Build ID，可以版本 bridge 保留原量測並針對建置來源補驗；不可單憑原碼指紋或 CI 綠燈假定產物相同。
