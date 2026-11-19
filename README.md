@@ -2,7 +2,7 @@
 
 官方網站，獨立交給 Codex 開發。
 
-開發里程碑與完整規格請見 [Task 001–014 任務索引](docs/task/README.md)。Task 001–008 的技術基礎、Design System、首頁、About、Services、Solutions、Portfolio 與 Contact 已合併。Task 009 提供 Privacy 草案與發布保護；Task 010 提供 SEO 保護模式。正式法律政策、索引 release、GSC、Performance、Accessibility、Vercel 與 Domain 仍依各自前置及獨立驗收，不因技術區塊存在而視為完成。
+開發里程碑與完整規格請見 [Task 001–014 任務索引](docs/task/README.md)。Task 001–008 的技術基礎、Design System、首頁、About、Services、Solutions、Portfolio 與 Contact 已合併。Task 009 提供 Privacy 草案與發布保護；Task 010 提供 SEO 保護模式；Task 011 提供受控效能量測與字體 CSS 最佳化。正式法律政策、索引 release、GSC、field CWV、Accessibility、Vercel 與 Domain 仍依各自前置及獨立驗收，不因技術區塊存在而視為完成。
 
 開發協作與驗收請先讀 [Subagent 作業紀錄與執行流程](docs/subagent-workflow.md)，並依 [AGENTS.md](AGENTS.md) 與當次 Task 規格執行。流程包含分工責任、提早檢查完整 Diff、持久化退出碼及依變更影響決定重驗範圍。
 
@@ -143,3 +143,11 @@ XK_PRIVACY_PREVIEW=1 npm run start -- --hostname 127.0.0.1 --port 3062
 規格：[Task 010](docs/task/task010.md)。候選／排除清冊、robots 範圍、正式 Sitemap 生成規則、Owner 權責及後續 release／Search Console 待辦：[SEO 操作指南](docs/seo-operations.md)。合併技術保護模式不代表正式索引、GSC 提交或品牌網域設定已完成。
 
 本次來源、逐頁 exact Metadata、實測結果與階段界線見 [Task 010 實作與驗證](docs/reports/task010-implementation.md)。
+
+## Task 011 效能量測與最佳化
+
+以實際 production baseline 驗證載入成本，保留 Inter／Noto Sans TC、四個既有文字字重與 `display: swap`；Noto 使用可變字重宣告，避免同一組字體子集的重複 CSS。沒有換字體、改 Logo／Tokens／內容、關閉必要互動、增加 Dependencies 或加入追蹤。
+
+Pages 是主要受控量測模式；九個公開頁分別進行手機／桌面冷載入，Home 與最大內容風險頁補暖快取及實際互動，一般 Next.js production 另測代表頁。固定節流、至少三次 runs、中位數／範圍、Lighthouse JSON／HTML 與原始 trace 分開保存；本機模型不等於 CDN 或真機，沒有 field 資料時不能宣稱 CWV p75 通過。
+
+重現條件、Cache 與驗收界線見 [效能量測指南](docs/performance-measurement.md)，實際基準／after、測試結果與限制見 [Task 011 實作與驗證](docs/reports/task011-implementation.md)。沿用五個品質指令及 GitHub Pages 工作流程；Metadata／noindex／nofollow、Privacy 草案保護與 Contact 無收件狀態不變。

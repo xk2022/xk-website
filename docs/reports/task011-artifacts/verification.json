@@ -1,0 +1,1352 @@
+{
+  "schema": "xk-task011-verification-v1",
+  "generatedAt": "2026-11-19T08:21:40.131650+00:00",
+  "task": "Task011 Performance",
+  "testedCode": {
+    "base": "633d135b50fe292368ab4479b9ae69af91b31928",
+    "beforeFingerprint": "0c51f6fcc2cc912e625bd16e0e638dbeeb073629daba82b71dd42786a4e7a8a9",
+    "afterFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+    "sourceMapMember": "frozen-code.json",
+    "sourceFileCount": 107,
+    "exactRuntimeDiff": "diff --git a/src/app/layout.tsx b/src/app/layout.tsx\nindex 6b8e900..a14e935 100644\n--- a/src/app/layout.tsx\n+++ b/src/app/layout.tsx\n@@ -17,7 +17,8 @@ const inter = Inter({\n \n const notoSansTC = Noto_Sans_TC({\n   subsets: [\"latin\"],\n-  weight: [\"400\", \"500\", \"600\", \"700\"],\n+  // Each Unicode subset already contains all weights; declare it only once.\n+  weight: \"variable\",\n   variable: \"--font-noto-sans-tc\",\n   display: \"swap\",\n   preload: false,\n",
+    "finalCommit": "PENDING atprePRsnapshot;actualfeatureSHA and exactCI in samePRdescription"
+  },
+  "environment": {
+    "recordedAt": "2026-11-19T07:33:26.649181+00:00",
+    "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "node": "v24.22.1",
+    "npm": "11.9.0",
+    "cpuModel": "AMD EPYC 9V74 80-Core Processor",
+    "logicalCpus": 5,
+    "cpuQuota": "400000 100000",
+    "memoryLimit": "17179869184",
+    "power": "Managed cloud virtual/container host; physical power state not exposed or controllable",
+    "background": "No GUI browser/manual browser QA/concurrent build during formal measurements. Host-side workload not observable. Agents coordinate one measurement stream.",
+    "measurementToolVersions": {
+      "node": "v24.22.1",
+      "chromium": "156.0.8078.79",
+      "playwright": "1.65.1"
+    },
+    "lighthouse": "13.6.0",
+    "axeCore": "4.14.1",
+    "profiles": {
+      "mobile": {
+        "viewport": {
+          "width": 375,
+          "height": 812
+        },
+        "deviceScaleFactor": 1,
+        "isMobile": true,
+        "hasTouch": true,
+        "cpu": 4,
+        "latency": 150,
+        "down": 200000,
+        "up": 93750,
+        "userAgent": "Mozilla/5.0 (Linux; Android 13; XK Lab Emulation) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36"
+      },
+      "desktop": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "deviceScaleFactor": 1,
+        "isMobile": false,
+        "hasTouch": false,
+        "cpu": 1,
+        "latency": 0,
+        "down": -1,
+        "up": -1,
+        "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36"
+      }
+    },
+    "normalOrigin": "http://127.0.0.1:3080/",
+    "pagesOrigin": "http://127.0.0.1:3081/xk-website/",
+    "transportModel": "serve-pages.py fixedgzip6/asset600/HTMLno-cache;notCDN"
+  },
+  "summary": {
+    "required": 19,
+    "requiredPass": 19,
+    "optionalPass": 2,
+    "optionalPending": 2,
+    "notApplicable": 2,
+    "statusCounts": {
+      "PASS": 21,
+      "PENDING": 2,
+      "N/A": 2
+    },
+    "technicalStatus": "PASS",
+    "fieldCwv": "PENDING",
+    "fieldInp": "PENDING"
+  },
+  "items": [
+    {
+      "testId": "PERF-C01",
+      "specSection": "11",
+      "specTableRowOrder": 1,
+      "testItem": "`npm ci`",
+      "applicability": "Required",
+      "applicabilityReason": "鎖定既有套件可安裝，記錄版本、真實 Exit Code，無未授權 lockfile 變更",
+      "expectedResult": "鎖定既有套件可安裝，記錄版本、真實 Exit Code，無未授權 lockfile 變更",
+      "procedure": "Root執行npm ci，保存runner命令、版本、Log、真實退出碼及lockfile差異。",
+      "status": "PASS",
+      "actualResult": "Actual locked command completed successfully;original restrictions preserved.",
+      "exitCode": 0,
+      "evidence": [
+        "checks/npm-ci-after.json",
+        "checks/npm-ci-after.log"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Observed actual POSIX child wait exit.",
+      "commandProcedure": [
+        "npm",
+        "ci"
+      ]
+    },
+    {
+      "testId": "PERF-C02",
+      "specSection": "11",
+      "specTableRowOrder": 2,
+      "testItem": "`npx tsc --noEmit`",
+      "applicability": "Required",
+      "applicabilityReason": "Strict TS 與既有元件 API 保持相容",
+      "expectedResult": "Strict TS 與既有元件 API 保持相容",
+      "procedure": "Root執行npx tsc --noEmit，核對Strict TS及原元件API，保留真實回執。",
+      "status": "PASS",
+      "actualResult": "Actual locked command completed successfully;original restrictions preserved.",
+      "exitCode": 0,
+      "evidence": [
+        "checks/tsc-after.json",
+        "checks/tsc-after.log"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Observed actual POSIX child wait exit.",
+      "commandProcedure": [
+        "npx",
+        "tsc",
+        "--noEmit"
+      ]
+    },
+    {
+      "testId": "PERF-C03",
+      "specSection": "11",
+      "specTableRowOrder": 3,
+      "testItem": "`npm run lint`",
+      "applicability": "Required",
+      "applicabilityReason": "依既有規則零錯誤／警告，記錄輸出",
+      "expectedResult": "依既有規則零錯誤／警告，記錄輸出",
+      "procedure": "Root執行npm run lint，使用既有零警告規則，不降低規則。",
+      "status": "PASS",
+      "actualResult": "Actual locked command completed successfully;original restrictions preserved.",
+      "exitCode": 0,
+      "evidence": [
+        "checks/lint-after.json",
+        "checks/lint-after.log"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Observed actual POSIX child wait exit.",
+      "commandProcedure": [
+        "npm",
+        "run",
+        "lint"
+      ]
+    },
+    {
+      "testId": "PERF-C04",
+      "specSection": "11",
+      "specTableRowOrder": 4,
+      "testItem": "`npm run build`",
+      "applicability": "Required",
+      "applicabilityReason": "一般 production Build 成功，不忽略型別／Lint 錯誤",
+      "expectedResult": "一般 production Build 成功，不忽略型別／Lint 錯誤",
+      "procedure": "Root執行npm run build，在Pages覆寫.next前驗一般production代表頁。",
+      "status": "PASS",
+      "actualResult": "Actual locked command completed successfully;original restrictions preserved.",
+      "exitCode": 0,
+      "evidence": [
+        "checks/build-after.json",
+        "checks/build-after.log"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Observed actual POSIX child wait exit.",
+      "commandProcedure": [
+        "npm",
+        "run",
+        "build"
+      ]
+    },
+    {
+      "testId": "PERF-C05",
+      "specSection": "11",
+      "specTableRowOrder": 5,
+      "testItem": "`npm run build:pages`",
+      "applicability": "Required",
+      "applicabilityReason": "所有實際公開路由靜態輸出，Pages Validator 正常",
+      "expectedResult": "所有實際公開路由靜態輸出，Pages Validator 正常",
+      "procedure": "Root執行npm run build:pages，驗全部九公開頁與既有保護斷言。",
+      "status": "PASS",
+      "actualResult": "Actual locked command completed successfully;original restrictions preserved.",
+      "exitCode": 0,
+      "evidence": [
+        "checks/pages-build-after.json",
+        "checks/pages-build-after.log"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Observed actual POSIX child wait exit.",
+      "commandProcedure": [
+        "npm",
+        "run",
+        "build:pages"
+      ]
+    },
+    {
+      "testId": "PERF-M01",
+      "specSection": "11",
+      "specTableRowOrder": 6,
+      "testItem": "Lighthouse HTML／JSON",
+      "applicability": "Required",
+      "applicabilityReason": "以當次可取得且版本固定的 CLI 或 DevTools 跑 production URL；保存 profile 與全部 runs，不預填分數",
+      "expectedResult": "以當次可取得且版本固定的 CLI 或 DevTools 跑 production URL；保存 profile 與全部 runs，不預填分數",
+      "procedure": "使用實際固定版Lighthouse CLI或DevTools，匯出原始JSON及HTML，完整記錄實際設定與工具版本；不可虛構script或分數。",
+      "status": "PASS",
+      "actualResult": "12 comparable Lighthouse JSON/HTML reports plus full trace/devtools; before/after same tools/profile/settings/URL. One earlier normal diagnostic excluded.",
+      "exitCode": null,
+      "evidence": [
+        "baseline/pages/lighthouse/summary.json",
+        "after/pages/lighthouse/summary.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "使用實際固定版Lighthouse CLI或DevTools，匯出原始JSON及HTML，完整記錄實際設定與工具版本；不可虛構script或分數。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-M02",
+      "specSection": "11",
+      "specTableRowOrder": 7,
+      "testItem": "Production baseline／after",
+      "applicability": "Required",
+      "applicabilityReason": "同條件每案例至少三 runs、中位數／範圍可重現；修改前 baseline 缺失不得宣稱提升",
+      "expectedResult": "同條件每案例至少三 runs、中位數／範圍可重現；修改前 baseline 缺失不得宣稱提升",
+      "procedure": "修改前所有九public路由×mobile/desktop冷載入建立baseline；每比較案例≥3有效runs、保留全部原值，用同條件after中位數與範圍比較。首頁及最大內容/互動風險頁補warm及真導航；一般Next代表頁另列。",
+      "status": "PASS",
+      "actualResult": "156 CDP runs;26 groups each3 before and3 after;normal12+Pages66 perstage;22 Pages groups incl18cold+4warm. All original values/ranges retained.",
+      "exitCode": null,
+      "evidence": [
+        "performance-comparison.json",
+        "performance-comparison-verification.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "修改前所有九public路由×mobile/desktop冷載入建立baseline；每比較案例≥3有效runs、保留全部原值，用同條件after中位數與範圍比較。首頁及最大內容/互動風險頁補warm及真導航；一般Next代表頁另列。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-M03",
+      "specSection": "11",
+      "specTableRowOrder": 8,
+      "testItem": "Lab LCP／CLS target",
+      "applicability": "Required",
+      "applicabilityReason": "在預先記錄 profile 下評估 ≤2.5s／≤0.1；記錄實際值、差異、瓶頸及不達標原因，不能藏掉 FAIL",
+      "expectedResult": "在預先記錄 profile 下評估 ≤2.5s／≤0.1；記錄實際值、差異、瓶頸及不達標原因，不能藏掉 FAIL",
+      "procedure": "在預先鎖定profile下呈現各run及中位數/範圍；LCP≤2500ms/CLS≤0.1為工程target，未達如實FAIL與分析，不挑最好一次。",
+      "status": "PASS",
+      "actualResult": "All26 after LCP/CLS median verdicts PASS at existing2500ms/0.1 limits;27 Pages mobilecold actualsamples<=1884ms. Original nine Pages mobilecold baseline medianFAIL preserved. FieldCWV not judged.",
+      "exitCode": null,
+      "evidence": [
+        "performance-comparison.json",
+        "performance-summary.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "在預先鎖定profile下呈現各run及中位數/範圍；LCP≤2500ms/CLS≤0.1為工程target，未達如實FAIL與分析，不挑最好一次。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-O01",
+      "specSection": "11",
+      "specTableRowOrder": 9,
+      "testItem": "Field CWV p75",
+      "applicability": "Optional",
+      "applicabilityReason": "只有足夠實際資料及讀取權限才能判定三項 CWV；無資料保留 PENDING／限制，非 lab PASS",
+      "expectedResult": "只有足夠實際資料及讀取權限才能判定三項 CWV；無資料保留 PENDING／限制，非 lab PASS",
+      "procedure": "只有可授權讀取且足夠樣本時才記CrUX/既有GSC來源、URL/origin、window、device、p75及sampleavailability；缺資料保留PENDING及原因，不用lab/TBT判CWV PASS。",
+      "status": "PENDING",
+      "actualResult": null,
+      "exitCode": null,
+      "evidence": [],
+      "notes": "Optional not executed: no authorized sufficient RUM/CrUX/GSC field dataset,window orp75 samples provided. Cannot judge fieldCWV/INP;owner to provide source/access before futureclaim.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command."
+    },
+    {
+      "testId": "PERF-M04",
+      "specSection": "11",
+      "specTableRowOrder": 10,
+      "testItem": "INP／互動診斷",
+      "applicability": "Required",
+      "applicabilityReason": "量測真實選單／導覽／CTA 的 Event Timing、Long Tasks 與反應；TBT 是 lab 診斷而非 field INP",
+      "expectedResult": "量測真實選單／導覽／CTA 的 Event Timing、Long Tasks 與反應；TBT 是 lab 診斷而非 field INP",
+      "procedure": "真實mobile menu、導航、CTA記錄Event Timing/DevTools responsiveness/Long Tasks、觸發節點與時間；受控診斷不等於field INP，未量到填null加原因。",
+      "status": "PASS",
+      "actualResult": "Actual menu/Escape/About/Header/Footer/CTA actions;EventTiming16ms threshold and temporal after-action view;LongTasks retained, no TBT/INP substitution. Warm network confirms no new Document navigation;clock limitation stated.",
+      "exitCode": null,
+      "evidence": [
+        "performance-comparison.json",
+        "bundle-observations.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "真實mobile menu、導航、CTA記錄Event Timing/DevTools responsiveness/Long Tasks、觸發節點與時間；受控診斷不等於field INP，未量到填null加原因。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-M05",
+      "specSection": "11",
+      "specTableRowOrder": 11,
+      "testItem": "Bundle／Code Splitting",
+      "applicability": "Required",
+      "applicabilityReason": "比對每代表路由 initial／async JS 的實際 transfer／decoded Bytes、chunks 與 hydrate 邊界，變動可解釋",
+      "expectedResult": "比對每代表路由 initial／async JS 的實際 transfer／decoded Bytes、chunks 與 hydrate 邊界，變動可解釋",
+      "procedure": "每代表route記錄initial/async JS chunks的transfer與decoded bytes、coverage/執行/hydration邊界；不可將未載入devchunk存在判失敗或手刪hashchunk。",
+      "status": "PASS",
+      "actualResult": "Measured perroute load/interaction script bytes,raw chunk URL/initiator/resource decoded bytes and JS/CSS coverage;necessary client boundary preserved,no unsupported compressed unused-byte claims.",
+      "exitCode": null,
+      "evidence": [
+        "performance-comparison.json",
+        "bundle-observations.json",
+        "code-audit.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "每代表route記錄initial/async JS chunks的transfer與decoded bytes、coverage/執行/hydration邊界；不可將未載入devchunk存在判失敗或手刪hashchunk。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-M06",
+      "specSection": "11",
+      "specTableRowOrder": 12,
+      "testItem": "圖片／SVG／Fonts",
+      "applicability": "Required",
+      "applicabilityReason": "有效格式、預留空間、LCP 載入、fallback／CJK／preload、原稿 Logo 與 Network 記錄正常",
+      "expectedResult": "有效格式、預留空間、LCP 載入、fallback／CJK／preload、原稿 Logo 與 Network 記錄正常",
+      "procedure": "盤點實際SVG/圖片字節尺寸格式與預留空間、LCP優先序、Inter/Noto waterfall/fallback/字重/CJK/preload；保留Logo原稿，不盲目preload全部或換字體。",
+      "status": "PASS",
+      "actualResult": "Noto411784->103613 decodedbytes,433->109faces;108unicode/binarySHA identical,all115fontbinaries same;Inter/globalCSS and106other runtimefiles identical;SVGoriginalreservedsize.",
+      "exitCode": null,
+      "evidence": [
+        "font-after-audit.json",
+        "code-audit.json",
+        "visual-review.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "盤點實際SVG/圖片字節尺寸格式與預留空間、LCP優先序、Inter/Noto waterfall/fallback/字重/CJK/preload；保留Logo原稿，不盲目preload全部或換字體。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-M07",
+      "specSection": "11",
+      "specTableRowOrder": 13,
+      "testItem": "冷／暖 Cache、Network",
+      "applicability": "Required",
+      "applicabilityReason": "清楚分開測試，檢查命中／Header／壓縮／waterfall／redirect，記錄不能控制的主機政策",
+      "expectedResult": "清楚分開測試，檢查命中／Header／壓縮／waterfall／redirect，記錄不能控制的主機政策",
+      "procedure": "新context/清storage測冷，warm採相同流程重複且以Network命中證據確認；分清Lighthouse reset、壓縮/header/redirect/waterfall，主機不可控明列限制。",
+      "status": "PASS",
+      "actualResult": "Newcontextcold and primed same-contextwarm separated;actualcachehits,responseheaders/gzip,requestpriorities,initiators/redirects retained. Fixedlocaltransport notCDN.",
+      "exitCode": null,
+      "evidence": [
+        "performance-comparison.json",
+        "serve-pages.py",
+        "public-baseline-headers.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "新context/清storage測冷，warm採相同流程重複且以Network命中證據確認；分清Lighthouse reset、壓縮/header/redirect/waterfall，主機不可控明列限制。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-O02",
+      "specSection": "11",
+      "specTableRowOrder": 14,
+      "testItem": "真實行動裝置與網路",
+      "applicability": "Optional",
+      "applicabilityReason": "可取得真機時執行同一操作及記錄機型／OS／網路；未取得不能冒稱已測真機",
+      "expectedResult": "可取得真機時執行同一操作及記錄機型／OS／網路；未取得不能冒稱已測真機",
+      "procedure": "有真實行動裝置才記機型/OS/網路並完成同一流程；Chrome mobile emulation不能冒充真機。",
+      "status": "PENDING",
+      "actualResult": null,
+      "exitCode": null,
+      "evidence": [],
+      "notes": "Optional not executed: no physicalmobiledevice/network available. Chromiumemulation never claimedrealdevice.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command."
+    },
+    {
+      "testId": "PERF-O03",
+      "specSection": "11",
+      "specTableRowOrder": 15,
+      "testItem": "Lighthouse Performance Score",
+      "applicability": "Optional",
+      "applicabilityReason": "可報告實值作輔助，不設沒有來源的 90 分門檻，不用分數取代 CWV／UX",
+      "expectedResult": "可報告實值作輔助，不設沒有來源的 90 分門檻，不用分數取代 CWV／UX",
+      "procedure": "若提供Performance Score只報實值及方法作輔助，不設90門檻、不能代替LCP/CLS/INP或UX。",
+      "status": "PASS",
+      "actualResult": "Observed mobileLHscore median0.81->0.88,all threevalues/ranges retained;desktop1->1.No90pointgate orCWVclaim.",
+      "exitCode": null,
+      "evidence": [
+        "performance-comparison.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command."
+    },
+    {
+      "testId": "PERF-F01",
+      "specSection": "11",
+      "specTableRowOrder": 16,
+      "testItem": "所有公開頁及有效連結",
+      "applicability": "Required",
+      "applicabilityReason": "至少當下首頁／About／Services，另納入新實作路由；HTTP 200、內容／CTA／錨點及選單功能無退化",
+      "expectedResult": "至少當下首頁／About／Services，另納入新實作路由；HTTP 200、內容／CTA／錨點及選單功能無退化",
+      "procedure": "一般/Pages回歸九public route HTTP/主要內容/真Link/首頁舊anchors與serviceanchors，實際跨頁及mobilemenu/CTA流程，非單查href。",
+      "status": "PASS",
+      "actualResult": "Nine publicroutes finalHTTP/HTML,all valid links/anchors,CTA andnavigation PASS in normal andPages freshfunctional QA.",
+      "exitCode": null,
+      "evidence": [
+        "acceptance-summary.json",
+        "qa-handoff.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "一般/Pages回歸九public route HTTP/主要內容/真Link/首頁舊anchors與serviceanchors，實際跨頁及mobilemenu/CTA流程，非單查href。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-R01",
+      "specSection": "11",
+      "specTableRowOrder": 17,
+      "testItem": "320／375／768／1440／1920px",
+      "applicability": "Required",
+      "applicabilityReason": "五種指定寬度無水平溢出／重疊，字體及媒體無失真，Layout Shift 與真實操作可視檢查",
+      "expectedResult": "五種指定寬度無水平溢出／重疊，字體及媒體無失真，Layout Shift 與真實操作可視檢查",
+      "procedure": "所有受影響公開頁於320/375/768/1440/1920px確認不溢出/重疊/裁切、字體/Logo/媒體不失真與實際操作布局穩定。",
+      "status": "PASS",
+      "actualResult": "45responsive cases at320/375/768/1440/1920;five actualrepresentative viewportimages manually viewed byRoot;no observed overflow/overlap.",
+      "exitCode": null,
+      "evidence": [
+        "acceptance-summary.json",
+        "visual-review.json",
+        "screenshot-manifest.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "所有受影響公開頁於320/375/768/1440/1920px確認不溢出/重疊/裁切、字體/Logo/媒體不失真與實際操作布局穩定。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-A01",
+      "specSection": "11",
+      "specTableRowOrder": 18,
+      "testItem": "axe WCAG 2／2.1 A／AA 與鍵盤",
+      "applicability": "Required",
+      "applicabilityReason": "不為效能犧牲 headings／names／focus／skip link／Escape／Contrast／Reduced Motion；Task 012 若已採 2.2 亦保持其成果",
+      "expectedResult": "不為效能犧牲 headings／names／focus／skip link／Escape／Contrast／Reduced Motion；Task 012 若已採 2.2 亦保持其成果",
+      "procedure": "WCAG2/2.1 A/AA axe含適用展開選單，另真鍵盤skip/Tab/ShiftTab/Enter/Escape/focus/對比/reducedmotion；自動掃描非完整認證。",
+      "status": "PASS",
+      "actualResult": "48 axe scans WCAG2/2.1A/AA zero violations inclexpanded menus;keyboard/focus/skip/Escape/touch/reducedmotion PASS. NotcompleteWCAGcertification.",
+      "exitCode": null,
+      "evidence": [
+        "acceptance-summary.json",
+        "qa-handoff.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "WCAG2/2.1 A/AA axe含適用展開選單，另真鍵盤skip/Tab/ShiftTab/Enter/Escape/focus/對比/reducedmotion；自動掃描非完整認證。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-F02",
+      "specSection": "11",
+      "specTableRowOrder": 19,
+      "testItem": "Console／Runtime／Network",
+      "applicability": "Required",
+      "applicabilityReason": "無未處理錯誤、資源失敗與 hydration 問題；外部問題照實記錄不假 PASS",
+      "expectedResult": "無未處理錯誤、資源失敗與 hydration 問題；外部問題照實記錄不假 PASS",
+      "procedure": "新正式run保存console/runtime/network及hydration觀察；必要資源依本次清冊成功，預期404另列，不遮蔽失敗。",
+      "status": "PASS",
+      "actualResult": "Normal andPages functional QAzero unexpectedConsole/Runtime/Network;HEADonly strict same-document/source/HTTP/tree evidence;rawperfHEADfailures retained independently,never blanketignored.",
+      "exitCode": null,
+      "evidence": [
+        "runtime-inventory.json",
+        "acceptance-summary.json",
+        "network-provenance.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "新正式run保存console/runtime/network及hydration觀察；必要資源依本次清冊成功，預期404另列，不遮蔽失敗。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-G01",
+      "specSection": "11",
+      "specTableRowOrder": 20,
+      "testItem": "Pages Base Path／HTML／資源",
+      "applicability": "Required",
+      "applicabilityReason": "正確 Base Path、CSS／JS／fonts／Logo、404、`.nojekyll` 與開發頁排除",
+      "expectedResult": "正確 Base Path、CSS／JS／fonts／Logo、404、`.nojekyll` 與開發頁排除",
+      "procedure": "驗實際BasePath公開HTML/CSS/JS/fonts/icon/Logo、404、.nojekyll及dev/draft頁面與payload排除；不破壞原validator。",
+      "status": "PASS",
+      "actualResult": "Pagesvalidator plusfreshBrowser verifiesnineHTML/assets/fonts/icon/Logo/BasePath/404/.nojekyll/dev+Privacyexclude;all159observedassets successful.",
+      "exitCode": null,
+      "evidence": [
+        "checks/pages-build-after.json",
+        "qa-handoff.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "驗實際BasePath公開HTML/CSS/JS/fonts/icon/Logo、404、.nojekyll及dev/draft頁面與payload排除；不破壞原validator。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-G02",
+      "specSection": "11",
+      "specTableRowOrder": 21,
+      "testItem": "Metadata／noindex",
+      "applicability": "Required",
+      "applicabilityReason": "原 Canonical／OG／語言保持正確，noindex／nofollow 沒有被優化移除",
+      "expectedResult": "原 Canonical／OG／語言保持正確，noindex／nofollow 沒有被優化移除",
+      "procedure": "保留Task010精確meta/brandcanonical/OG/Twitter/語言/noindex/nofollow、WebSite、robots無Sitemap及sitemap404；Privacy保持draftguard不因performance解鎖。",
+      "status": "PASS",
+      "actualResult": "ExactTitle/description/Canonical/OG/Twitter/WebSiteJSONLD/language/noindex/nofollow preserved on9pages;robotsprotected,noSitemap.",
+      "exitCode": null,
+      "evidence": [
+        "acceptance-summary.json",
+        "qa-handoff.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "保留Task010精確meta/brandcanonical/OG/Twitter/語言/noindex/nofollow、WebSite、robots無Sitemap及sitemap404；Privacy保持draftguard不因performance解鎖。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-G03",
+      "specSection": "11",
+      "specTableRowOrder": 22,
+      "testItem": "一般 production 開發路由",
+      "applicability": "Required",
+      "applicabilityReason": "預設 `/dev/design-system` 404；既有預覽旗標只用於明確驗收，不擴公開產物",
+      "expectedResult": "預設 `/dev/design-system` 404；既有預覽旗標只用於明確驗收，不擴公開產物",
+      "procedure": "普通production /dev/design-system預設404；只在明確隔離驗收使用既有旗標，Pages保持排除。",
+      "status": "PASS",
+      "actualResult": "Normal production dev/Privacy/Sitemap/unknown routes404;Pagesbody/payloadexclude,previewflagsnotpublished.",
+      "exitCode": null,
+      "evidence": [
+        "acceptance-summary.json",
+        "qa-handoff.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command.",
+      "commandProcedure": {
+        "procedure": "普通production /dev/design-system預設404；只在明確隔離驗收使用既有旗標，Pages保持排除。",
+        "exactCommands": "processOutcomes and referenced raw runner receipts",
+        "captureContract": "Same frozen107-file map;expectedcounts and complete endmarkers checked."
+      }
+    },
+    {
+      "testId": "PERF-X01",
+      "specSection": "11",
+      "specTableRowOrder": 23,
+      "testItem": "個資追蹤／RUM 上報",
+      "applicability": "Not Applicable",
+      "applicabilityReason": "本 Task 不授權新增 Analytics、第三方追蹤或資料蒐集，不做假報表",
+      "expectedResult": "本 Task 不授權新增 Analytics、第三方追蹤或資料蒐集，不做假報表",
+      "procedure": "此Task不授權RUM/Analytics/Tracking或上報API；保留無新增收件/追蹤，不為取field數據實作。",
+      "status": "N/A",
+      "actualResult": "No RUM/tracking/collection authorized or added;source+freshbrowser inventory verify scope. No fake RUMreport.",
+      "exitCode": null,
+      "evidence": [
+        "frozen-code.json",
+        "runtime-inventory.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command."
+    },
+    {
+      "testId": "PERF-O04",
+      "specSection": "11",
+      "specTableRowOrder": 24,
+      "testItem": "公開主機／Cache 觀察",
+      "applicability": "Optional",
+      "applicabilityReason": "有實際公開版本才獨立記錄主機／網路條件；本機結果不能代替公開環境",
+      "expectedResult": "有實際公開版本才獨立記錄主機／網路條件；本機結果不能代替公開環境",
+      "procedure": "若觀察已存在公開版本，獨立記URL/commit/主機/網路/CacheHeader等；不與localhost直接算提升率。",
+      "status": "PASS",
+      "actualResult": "Existing publicdeployment7906539025 SHA633d135 success;HTTP200HTML/CSS actualgzip/max-age600 observed. Notafterfeaturedeployment orpublicperformancecomparison.",
+      "exitCode": null,
+      "evidence": [
+        "public-baseline-headers.json",
+        "checks/base-deployment.json",
+        "checks/base-deployment.log",
+        "checks/public-baseline-headers-retest.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command."
+    },
+    {
+      "testId": "PERF-X02",
+      "specSection": "11",
+      "specTableRowOrder": 25,
+      "testItem": "Cache／平台寫入",
+      "applicability": "Not Applicable",
+      "applicabilityReason": "平台設定、Secrets、DNS／CDN／Vercel 改動屬另外授權，不用改發布條件取得通過",
+      "expectedResult": "平台設定、Secrets、DNS／CDN／Vercel 改動屬另外授權，不用改發布條件取得通過",
+      "procedure": "不執行CDN/Cache平台/Secrets/DNS/Vercel設定寫入；有建議僅記觀察及待授權變更。",
+      "status": "N/A",
+      "actualResult": "No externalCache/platformwrite authorized or performed;temporarylocalmodel only. Workflow/config/DNS/PagesSourceunchanged.",
+      "exitCode": null,
+      "evidence": [
+        "frozen-code.json",
+        "optimization-decision.json"
+      ],
+      "notes": "Finalcurrent-task evidence;initialmatrix retainedseparately. No historicalPASS reused.",
+      "environmentRef": "environment",
+      "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+      "exitCodeNotes": "Derived/multi-process/assertion item: no synthetic standalone OS exit. See actual processOutcomes for each parent command."
+    }
+  ],
+  "processOutcomes": {
+    "baseline/normal/cdp-process.json": {
+      "command": [
+        "node",
+        "/tmp/xk-task011/measure.cjs",
+        "--stage=baseline",
+        "--mode=normal",
+        "--base=http://127.0.0.1:3080/",
+        "--code-map=/tmp/xk-task011/base.json"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T07:39:22.104212+00:00",
+      "finishedAt": "2026-11-19T07:40:34.869959+00:00",
+      "receiptMember": "baseline/normal/cdp-process.json",
+      "logFile": "/tmp/xk-task011/baseline/normal/cdp-process.log"
+    },
+    "baseline/pages/cdp-process.json": {
+      "command": [
+        "node",
+        "/tmp/xk-task011/measure.cjs",
+        "--stage=baseline",
+        "--mode=pages",
+        "--base=http://127.0.0.1:3081/xk-website/",
+        "--code-map=/tmp/xk-task011/base.json"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T07:43:38.412177+00:00",
+      "finishedAt": "2026-11-19T07:50:25.740707+00:00",
+      "receiptMember": "baseline/pages/cdp-process.json",
+      "logFile": "/tmp/xk-task011/baseline/pages/cdp-process.log"
+    },
+    "after/normal/cdp-process.json": {
+      "command": [
+        "node",
+        "/tmp/xk-task011/measure.cjs",
+        "--stage=after",
+        "--mode=normal",
+        "--base=http://127.0.0.1:3080/",
+        "--code-map=/tmp/xk-task011/frozen-code.json"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T07:58:02.615272+00:00",
+      "finishedAt": "2026-11-19T07:59:09.118699+00:00",
+      "receiptMember": "after/normal/cdp-process.json",
+      "logFile": "/tmp/xk-task011/after/normal/cdp-process.log"
+    },
+    "after/pages/cdp-process.json": {
+      "command": [
+        "node",
+        "/tmp/xk-task011/measure.cjs",
+        "--stage=after",
+        "--mode=pages",
+        "--base=http://127.0.0.1:3081/xk-website/",
+        "--code-map=/tmp/xk-task011/frozen-code.json"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T08:03:00.558496+00:00",
+      "finishedAt": "2026-11-19T08:09:05.220012+00:00",
+      "receiptMember": "after/pages/cdp-process.json",
+      "logFile": "/tmp/xk-task011/after/pages/cdp-process.log"
+    },
+    "baseline/pages/lighthouse-series-process.json": {
+      "command": [
+        "python3",
+        "/tmp/xk-task011/run-lighthouse.py",
+        "--stage",
+        "baseline",
+        "--base",
+        "http://127.0.0.1:3081/xk-website/",
+        "--code-map",
+        "/tmp/xk-task011/base.json"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T07:50:55.605406+00:00",
+      "finishedAt": "2026-11-19T07:52:48.369559+00:00",
+      "receiptMember": "baseline/pages/lighthouse-series-process.json",
+      "logFile": "/tmp/xk-task011/baseline/pages/lighthouse-series.log"
+    },
+    "after/pages/lighthouse-series-process.json": {
+      "command": [
+        "python3",
+        "/tmp/xk-task011/run-lighthouse.py",
+        "--stage",
+        "after",
+        "--base",
+        "http://127.0.0.1:3081/xk-website/",
+        "--code-map",
+        "/tmp/xk-task011/frozen-code.json"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T08:09:18.932787+00:00",
+      "finishedAt": "2026-11-19T08:11:08.032455+00:00",
+      "receiptMember": "after/pages/lighthouse-series-process.json",
+      "logFile": "/tmp/xk-task011/after/pages/lighthouse-series.log"
+    },
+    "comparison-process.json": {
+      "command": [
+        "python3",
+        "/tmp/xk-task011/compare.py"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T08:11:30.930419+00:00",
+      "finishedAt": "2026-11-19T08:11:32.744668+00:00",
+      "receiptMember": "comparison-process.json",
+      "logFile": "/tmp/xk-task011/comparison.log"
+    },
+    "comparison-verification-process.json": {
+      "command": [
+        "python3",
+        "/tmp/xk-task011/verify-comparison.py"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T08:13:08.529316+00:00",
+      "finishedAt": "2026-11-19T08:13:08.633911+00:00",
+      "receiptMember": "comparison-verification-process.json",
+      "logFile": "/tmp/xk-task011/comparison-verification.log"
+    },
+    "general-process.json": {
+      "command": [
+        "node",
+        "/tmp/xk-task011/browser.cjs",
+        "--mode=general",
+        "--base=http://127.0.0.1:3080/",
+        "--run=general",
+        "--expected-fingerprint=cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T07:59:49.151728+00:00",
+      "finishedAt": "2026-11-19T08:00:13.436936+00:00",
+      "receiptMember": "general-process.json",
+      "logFile": "/tmp/xk-task011/general-process.log"
+    },
+    "pages-process.json": {
+      "command": [
+        "node",
+        "/tmp/xk-task011/browser.cjs",
+        "--mode=pages",
+        "--base=http://127.0.0.1:3081/xk-website/",
+        "--run=pages",
+        "--expected-fingerprint=cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T08:11:50.907212+00:00",
+      "finishedAt": "2026-11-19T08:14:13.348072+00:00",
+      "receiptMember": "pages-process.json",
+      "logFile": "/tmp/xk-task011/pages-process.log"
+    },
+    "bundle-observations-retest-process.json": {
+      "command": [
+        "python3",
+        "/tmp/xk-task011/observe-bundles.py"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T08:17:54.605761+00:00",
+      "finishedAt": "2026-11-19T08:17:55.197290+00:00",
+      "receiptMember": "bundle-observations-retest-process.json",
+      "logFile": "/tmp/xk-task011/bundle-observations-retest.log"
+    },
+    "checks/npm-ci-after.json": {
+      "command": [
+        "npm",
+        "ci"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T07:54:11.894027+00:00",
+      "finishedAt": "2026-11-19T07:54:24.235045+00:00",
+      "receiptMember": "checks/npm-ci-after.json",
+      "logFile": "/tmp/xk-task011/checks/npm-ci-after.log"
+    },
+    "checks/tsc-after.json": {
+      "command": [
+        "npx",
+        "tsc",
+        "--noEmit"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T07:55:08.782668+00:00",
+      "finishedAt": "2026-11-19T07:55:11.593533+00:00",
+      "receiptMember": "checks/tsc-after.json",
+      "logFile": "/tmp/xk-task011/checks/tsc-after.log"
+    },
+    "checks/lint-after.json": {
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T07:55:08.810297+00:00",
+      "finishedAt": "2026-11-19T07:55:13.428692+00:00",
+      "receiptMember": "checks/lint-after.json",
+      "logFile": "/tmp/xk-task011/checks/lint-after.log"
+    },
+    "checks/build-after.json": {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T07:55:32.633647+00:00",
+      "finishedAt": "2026-11-19T07:55:39.179387+00:00",
+      "receiptMember": "checks/build-after.json",
+      "logFile": "/tmp/xk-task011/checks/build-after.log"
+    },
+    "checks/pages-build-after.json": {
+      "command": [
+        "npm",
+        "run",
+        "build:pages"
+      ],
+      "exitCode": 0,
+      "returnCode": 0,
+      "startedAt": "2026-11-19T08:01:15.565278+00:00",
+      "finishedAt": "2026-11-19T08:01:22.880612+00:00",
+      "receiptMember": "checks/pages-build-after.json",
+      "logFile": "/tmp/xk-task011/checks/pages-build-after.log"
+    }
+  },
+  "preservedFailures": [
+    {
+      "scope": "bundle offline checker initialassertion",
+      "status": "FAIL",
+      "exitCode": 1,
+      "evidence": "bundle-observations-process.json",
+      "reason": "HTMLincludes unrequestednomodule fallback;wrongfullset equality",
+      "retest": "bundle-observations-retest-process.json actualexit0;raw/app unchanged"
+    },
+    {
+      "scope": "baselineLCPtarget",
+      "status": "FAIL",
+      "evidence": "performance-comparison.json",
+      "resolution": "MinimalfontCSS fix;aftertargetPASS withnew3runs,oldverdictsremain."
+    },
+    {
+      "scope": "publicheader tool firstattempt",
+      "status": "FAIL",
+      "exitCode": 1,
+      "evidence": "checks/public-baseline-headers.json",
+      "reason": "Case-sensitiveheaderdictionarymissedgzip;UnicodeDecodeError",
+      "retest": "checks/public-baseline-headers-retest.json,actualexit0"
+    },
+    {
+      "scope": "orchestration/cleanup",
+      "evidence": [
+        "normal-baseline-server-cleanup.json",
+        "normal-after-cleanup.json"
+      ],
+      "reason": "BaselinefuserlookupmissedPID;oldserveridleuntilTERMafterPagesbuild,nooverlappingnormalsampling. Lateradhocsocketprobeunderdisablednetworkfailedbeforeconnection;missingfirstexitnotinvented;permittedretryactual0.",
+      "blocking": false
+    },
+    {
+      "scope": "runnercontractselfchecks",
+      "evidence": [
+        "checks/runner-zero.json",
+        "checks/runner-seven.json",
+        "checks/runner-timeout.json"
+      ],
+      "actualExits": [
+        0,
+        7,
+        124
+      ],
+      "notes": "Expectedsyntheticoutcomes,notapp failures or alteredto0."
+    }
+  ],
+  "knownIssues": [
+    {
+      "issue": "MobileLH TBT312.780..577.031ms after;no clearstableCPU/longtask improvement",
+      "severity": "Follow-up performance limitation",
+      "deliveryBlocking": false,
+      "next": "Profile actualinitial CPU work withoutchangingconfirmedstack/functionality;no inventedhardbudget."
+    },
+    {
+      "issue": "FieldCWVp75/INP unavailable;realmobiledevice unavailable",
+      "status": "PENDING",
+      "deliveryBlocking": false,
+      "next": "Ownerprovideexistingauthorizedfieldsource/samples/device beforeclaims;noanalyticsorindexreleaseinferred."
+    },
+    {
+      "issue": "Virtualhost/powerandpublicCDNnetworkconditionsnotcontrolled",
+      "next": "Newenvironmentrequiresnewcomparablestablebaseline."
+    }
+  ],
+  "remoteStages": {
+    "localAcceptance": "PASS",
+    "featureCommit": "PENDING",
+    "prCi": "PENDING",
+    "prReview": "PENDING",
+    "userMergeAuthorization": "PASS:explicitcurrentTask011request",
+    "mainCi": "PENDING",
+    "deployment": "PENDING",
+    "publicFeatureVerification": "PENDING",
+    "updateLocation": "SamePRdescriptionafteractualevents;no extra ownSHA-onlycommit."
+  },
+  "finalDocumentationValidation": {
+    "status": "PASS",
+    "checkedAt": "2026-11-19T08:28:09.339800+00:00",
+    "linkedPathsChecked": 81,
+    "linkChecks": [
+      [
+        "README.md",
+        "docs/task/README.md"
+      ],
+      [
+        "README.md",
+        "docs/subagent-workflow.md"
+      ],
+      [
+        "README.md",
+        "AGENTS.md"
+      ],
+      [
+        "README.md",
+        "docs/github-pages-deployment.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task001.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task002.md"
+      ],
+      [
+        "README.md",
+        "docs/brand-design-system.md"
+      ],
+      [
+        "README.md",
+        "docs/implementation-notes.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task003.md"
+      ],
+      [
+        "README.md",
+        "docs/homepage-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/github-pages-deployment.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task004.md"
+      ],
+      [
+        "README.md",
+        "docs/about-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task002.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task005.md"
+      ],
+      [
+        "README.md",
+        "docs/services-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task006.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task006-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task007.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task007-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task007-verification.json"
+      ],
+      [
+        "README.md",
+        "docs/reports/task007-evidence.json.gz"
+      ],
+      [
+        "README.md",
+        "docs/task/task008.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task008-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task008-verification.json"
+      ],
+      [
+        "README.md",
+        "docs/reports/task008-evidence.json.gz"
+      ],
+      [
+        "README.md",
+        "docs/task/task009.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task009-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/task/task010.md"
+      ],
+      [
+        "README.md",
+        "docs/seo-operations.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task010-implementation.md"
+      ],
+      [
+        "README.md",
+        "docs/performance-measurement.md"
+      ],
+      [
+        "README.md",
+        "docs/reports/task011-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "temp.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task001.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task002.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task003.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task004.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task005.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task006.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task007.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task008.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task009.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task010.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task011.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task012.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task013.md"
+      ],
+      [
+        "docs/task/README.md",
+        "task014.md"
+      ],
+      [
+        "docs/task/README.md",
+        "temp.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../../README.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../../AGENTS.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../implementation-notes.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../brand-design-system.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../homepage-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../about-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../services-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../reports/task009-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../seo-operations.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../reports/task010-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../reports/task011-implementation.md"
+      ],
+      [
+        "docs/task/README.md",
+        "../performance-measurement.md"
+      ],
+      [
+        "docs/performance-measurement.md",
+        "task/task011.md"
+      ],
+      [
+        "docs/performance-measurement.md",
+        "reports/task011-implementation.md"
+      ],
+      [
+        "docs/performance-measurement.md",
+        "subagent-workflow.md"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "../task/task011.md"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "../subagent-workflow.md"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/verification.json"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "../screenshots/task011-performance-mobile.png"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "../screenshots/task011-performance-desktop.png"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "../performance-measurement.md"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/README.md"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/measurements.json"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/verification.json"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/manifest.json"
+      ],
+      [
+        "docs/reports/task011-implementation.md",
+        "task011-artifacts/evidence.json.xz"
+      ],
+      [
+        "docs/reports/task011-artifacts/README.md",
+        "../task011-implementation.md"
+      ],
+      [
+        "docs/reports/task011-artifacts/README.md",
+        "../../performance-measurement.md"
+      ],
+      [
+        "docs/reports/task011-artifacts/README.md",
+        "../../performance-measurement.md"
+      ],
+      [
+        "docs/implementation-notes.md new section",
+        "reports/task011-implementation.md"
+      ],
+      [
+        "docs/implementation-notes.md new section",
+        "performance-measurement.md"
+      ],
+      [
+        "docs/implementation-notes.md new section",
+        "reports/task011-artifacts/README.md"
+      ]
+    ],
+    "archive": "evidence.json.xz",
+    "archiveSha256": "fbf1b4415bab2dcf96ccf66de35c3d7d0bd4a4d067c9dc59ae4490c9adbd500c",
+    "restoredPayloads": 1944,
+    "secretPatternMatches": 0,
+    "sourceFilesVerified": 107,
+    "sourceFingerprint": "cc60b45174efe19f57f9b812c9eac2e97c26205773777f54454047a087be9df4",
+    "requiredPass": 19,
+    "runtimeChangesSinceFormalTests": false,
+    "scope": "Actual final docs/links/archive+source validation only; no new website tests or remote deployment claim."
+  }
+}

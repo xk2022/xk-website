@@ -320,3 +320,15 @@ robots 允許讀取 public HTML 的 noindex，依 Base Path 排除 dev 與 draft
 正式 Sitemap、index release 與 GSC 在前置不足時保持待辦／gate BLOCKED；這不阻擋規格指定的保護模式交付。Owner／期限／fallback、候選與排除、生成規則及操作界線見 [SEO 操作指南](seo-operations.md)。遠端 PR、CI、合併、main 部署與公開驗收只在實際發生後補同 PR，不做只記錄自身 SHA 的循環提交。
 
 本次五個品質指令、普通／隔離草案／Pages 網站驗收均首輪真 Exit 0；九頁五寬 45 case、48 次 axe、實際 HTTP／head／robots／Schema、完整 Context 前後快照與機器產物有本輪證據。沒有可見 UI 改動，不提交新正式截圖；Root 另實看本輪五寬代表頁 QA 圖。完整逐項結果、工具原始 EPERM 與修正、版本及限制見 [Task 010 實作與驗證](reports/task010-implementation.md)。
+
+## Task 011 — Performance 效能量測與字體 CSS 最佳化
+
+本次基準為已合併 Task 010 的 `main@633d135b50fe292368ab4479b9ae69af91b31928`，分支 `feature/website-performance`；初始工作目錄乾淨，文件 Repository fresh main 仍為 `95ef1275a46ace76e11f668178ca881087483398`，51 個 Blob 相符且未修改。使用者明確授權本次 Push／PR、CI 通過後合併與確認部署；不延伸為索引、法律政策、Analytics、DNS 或 Vercel 核准。
+
+先完成 production baseline，再依實際阻塞鏈作最小修正：Noto 四個字重重複宣告相同 108 個可變字體子集，僅將 Root Layout 改為 `weight: "variable"`。CSS 411784 → 103613 bytes，433 → 109 faces；108 個子集／115 個全部字檔 SHA、Inter／global CSS 與其餘 106 個 runtime／素材／設定檔維持相同。沒有換字體、改品牌 Tokens／Logo／內容、拆除必要 Client 互動或關閉預取，也沒有新增 Dependencies／追蹤／Backend。
+
+同工具／profile／cache／傳輸模型完成 156 個 CDP before／after 樣本、12 份比較用 Lighthouse 及單次原始診斷；Pages 全九路由 mobile／desktop 三次冷載入，Home／最大內容風險 Solutions 補暖快取與選單／真導覽。Pages mobile Home LCP 中位 2632 → 1672 ms，Solutions 2796 → 1796 ms；Lighthouse mobile Home 中位 2616.339 → 1636.630 ms。27 個 after Pages mobile cold 實際值皆 ≤1884 ms、CLS 0；desktop 小幅上下波動保留。TBT 未見穩定改善，不將 lab TBT／Event Timing 當成 field INP 或 CWV p75。
+
+完成版本的 npm ci、TypeScript、ESLint、一般 Build、Pages Build 均真 Exit 0。普通 QA 18／18 PASS；Pages 33 PASS＋1 有據 Disabled N/A、45 responsive／48 axe 零違規，25 contexts 皆實際取得 after snapshot，159 資源成功、387 個 HEAD 原始事件嚴格分類、unexpected 0。兩張網站 PNG 與另外三種寬度視口已由 Root 實看；頁面圖不是效能 metric 或 DevTools UI。初輪 Header／gzip 與 nomodule checker 工具 FAIL、服務清理與環境探測限制均保留，修正僅定向重驗，沒有假 PASS 或無關網站重跑。
+
+獨立 [Task 011 實作與驗證](reports/task011-implementation.md)、[量測指南](performance-measurement.md) 與 [原始證據操作說明](reports/task011-artifacts/README.md) 記錄完整版本、全部 runs／範圍、來源、失敗／重驗與限制。19 個 Required 驗收通過，field CWV／真機仍 Optional PENDING；缺 field 資料不開放索引或新增資料蒐集。後續實際 Commit／PR／CI／merge／main 部署及公開網址結果依協作流程更新同 PR 說明，不從本機通過推定已部署。

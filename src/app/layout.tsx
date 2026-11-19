@@ -17,7 +17,8 @@ const inter = Inter({
 
 const notoSansTC = Noto_Sans_TC({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  // Each Unicode subset already contains all weights; declare it only once.
+  weight: "variable",
   variable: "--font-noto-sans-tc",
   display: "swap",
   preload: false,
