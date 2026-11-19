@@ -2,6 +2,10 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* Generated acceptance data must not add utilities to the production bundle. */
+@source not "../../docs/reports/task011-artifacts";
+@source not "../../docs/reports/task011-implementation.md";
+
 :root {
   color-scheme: light;
 
