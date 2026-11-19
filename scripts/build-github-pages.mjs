@@ -7,11 +7,32 @@ import { spawnSync } from "node:child_process";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const basePath = (process.env.XK_PAGES_BASE_PATH ?? "/xk-website").replace(/\/+$/, "");
 assert.match(basePath, /^(\/[A-Za-z0-9._~-]+)*$/, "XK_PAGES_BASE_PATH must be empty or a URL path such as /xk-website.");
+const { privacyPolicy, privacyDraftMarker, privacyPageMetadata } = await import(new URL("../src/config/privacy.ts", import.meta.url));
+assert.ok(["draft", "approved"].includes(privacyPolicy.status), "Unknown Privacy policy status.");
+const privacyApproved = privacyPolicy.status === "approved";
+const privacySectionIds = ["policy-scope", "data-collection", "data-use", "retention", "third-parties", "cookies-tracking", "your-rights", "privacy-contact", "policy-updates"];
+assert.deepEqual(privacyPolicy.sections.map(({ id }) => id), privacySectionIds, "Privacy must retain its nine required sections.");
+
+if (privacyApproved) {
+  // Structural consistency only; this cannot establish owner/legal approval.
+  assert.ok(privacyPolicy.version?.trim() && !/^draft/i.test(privacyPolicy.version), "Approved Privacy requires a non-draft version.");
+  assert.ok(privacyPolicy.controllerName?.trim(), "Approved Privacy requires a confirmed controller.");
+  assert.match(privacyPolicy.effectiveDate ?? "", /^\d{4}-\d{2}-\d{2}$/, "Approved Privacy requires an effective date.");
+  const date = new Date(`${privacyPolicy.effectiveDate}T00:00:00Z`);
+  assert.ok(!Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === privacyPolicy.effectiveDate, "Privacy effective date is invalid.");
+  assert.ok(privacyPolicy.rightsContact?.label.trim(), "Approved Privacy requires a rights-contact label.");
+  const contact = new URL(privacyPolicy.rightsContact.href);
+  assert.ok(
+    (contact.protocol === "https:" && !!contact.hostname && !contact.username && !contact.password) ||
+    (contact.protocol === "mailto:" && /^[^\s@?]+@[^\s@?]+\.[^\s@?]+$/.test(contact.pathname) && !contact.search && !contact.hash),
+    "Approved Privacy requires a valid HTTPS or mailto rights contact.",
+  );
+}
 
 const result = spawnSync(process.execPath, [join(root, "node_modules/next/dist/bin/next"), "build"], {
   cwd: root,
   stdio: "inherit",
-  env: { ...process.env, XK_PAGES_EXPORT: "1", XK_PAGES_BASE_PATH: basePath },
+  env: { ...process.env, XK_PAGES_EXPORT: "1", XK_PAGES_BASE_PATH: basePath, XK_PRIVACY_PREVIEW: "0" },
 });
 if (result.error) throw result.error;
 if (result.status !== 0) process.exit(result.status ?? 1);
@@ -22,6 +43,12 @@ const output = join(root, "out");
 rmSync(join(output, "dev"), { recursive: true, force: true });
 rmSync(join(output, "dev.html"), { force: true });
 rmSync(join(output, "dev.txt"), { force: true });
+if (!privacyApproved) {
+  rmSync(join(output, "privacy"), { recursive: true, force: true });
+  rmSync(join(output, "privacy.html"), { force: true });
+  rmSync(join(output, "privacy.txt"), { force: true });
+  assert.ok(!readdirSync(output).some((name) => name === "privacy" || name.startsWith("privacy.")), "Draft Privacy route or payload remains in the public export.");
+}
 writeFileSync(join(output, ".nojekyll"), "");
 
 assert.ok(existsSync(join(output, "404.html")), "Missing GitHub Pages 404 document.");
@@ -133,6 +160,7 @@ for (const [relativePath, pagePath, label] of [
   ["services/index.html", "/services", "Services"],
   ["solutions/index.html", "/solutions", "Solutions"],
   ["contact/index.html", "/contact", "Contact"],
+  ...(privacyApproved ? [["privacy/index.html", "/privacy", "Privacy"]] : []),
   ...portfolioPages.map(({ pagePath, label }) => [`${pagePath.slice(1)}/index.html`, pagePath, label]),
 ]) {
   const html = verifyExportedPage(relativePath, `${label} page`);
@@ -195,7 +223,31 @@ for (const [relativePath, pagePath, label] of [
     assert.doesNotMatch(main, /<(?:form|input|textarea|select)\b/i, "Contact must not publish a form or input controls.");
     assert.doesNotMatch(main, /<button\b[^>]*\btype="submit"/i, "Contact must not publish a submit button.");
     assert.doesNotMatch(main, /\bhref="(?:mailto:|tel:)/i, "Contact must not publish an unconfirmed email or phone channel.");
-    assert.doesNotMatch(main, /\bhref="[^"]*\/privacy(?:\/|[?#"])/i, "Contact must not link to the unpublished Privacy route.");
+    if (!privacyApproved) {
+      assert.doesNotMatch(main, /\bhref="[^"]*\/privacy(?:\/|[?#"])/i, "Contact must not link to the unpublished Privacy route.");
+    }
+  }
+
+  if (pagePath === "/privacy") {
+    const title = "隱私權政策 | Xplore Kaleidoscope";
+    const description = "了解 Xplore Kaleidoscope 網站的個人資料處理、第三方服務與隱私權相關資訊。";
+    assert.equal(privacyPageMetadata.title, title, "Privacy metadata config title is incorrect.");
+    assert.equal(privacyPageMetadata.description, description, "Privacy metadata config description is incorrect.");
+    const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/)?.[1] ?? "";
+    assert.equal(head.match(/<title>([^<]*)<\/title>/)?.[1], title, "Privacy title is incorrect.");
+    assert.equal(metadataAttribute(html, "name", "description", "content"), description, "Privacy description is incorrect.");
+    assert.equal(metadataAttribute(html, "property", "og:title", "content"), title, "Privacy Open Graph title is incorrect.");
+    assert.equal(metadataAttribute(html, "property", "og:description", "content"), description, "Privacy Open Graph description is incorrect.");
+    assert.equal(metadataAttribute(html, "property", "og:locale", "content"), "zh_TW", "Privacy Open Graph locale is incorrect.");
+    assert.equal(metadataAttribute(html, "property", "og:type", "content"), "website", "Privacy Open Graph type is incorrect.");
+    const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? "";
+    const headings = [...main.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
+    assert.equal(headings.length, 1, "Privacy must have exactly one H1.");
+    assert.equal(headings[0][1].replace(/<[^>]*>/g, "").trim(), "隱私權政策", "Privacy H1 is incorrect.");
+    assert.deepEqual([...main.matchAll(/<section\b[^>]*>/g)].map(([tag]) => tagAttribute(tag, "id")), privacySectionIds, "Privacy section order is incorrect.");
+    const text = decodePublicText(main);
+    assert.ok(text.includes(privacyPolicy.version) && text.includes(privacyPolicy.effectiveDate), "Privacy version or effective date is missing.");
+    assert.ok(!text.includes(privacyDraftMarker), "Approved Privacy must not render the draft marker.");
   }
 }
 
@@ -231,4 +283,34 @@ function verifyStaticTree(directory) {
   }
 }
 verifyStaticTree(output);
+
+function decodePublicText(text) {
+  const entities = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'" };
+  for (let pass = 0; pass < 2; pass++) {
+    text = text.replaceAll("\\\\", "\\").replaceAll('\\"', '"')
+      .replace(/\\u([\da-f]{4})/gi, (_, code) => String.fromCharCode(parseInt(code, 16)))
+      .replace(/&#(x[\da-f]+|\d+);/gi, (entity, code) => {
+        const point = parseInt(code.replace(/^x/i, ""), /^x/i.test(code) ? 16 : 10);
+        return point <= 0x10ffff ? String.fromCodePoint(point) : entity;
+      })
+      .replace(/&(amp|lt|gt|quot|apos);/g, (_, name) => entities[name]);
+  }
+  return text;
+}
+
+if (!privacyApproved) {
+  const draftMarkers = [privacyDraftMarker, ...privacyPolicy.sections.flatMap(({ paragraphs }) => paragraphs)];
+  assert.ok(draftMarkers.every((marker) => typeof marker === "string" && marker.trim()), "Privacy draft markers must contain real review text.");
+  function verifyNoDraftText(directory) {
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      const path = join(directory, entry.name);
+      if (entry.isDirectory()) verifyNoDraftText(path);
+      else if (entry.isFile() && /\.(html|txt|json|js|mjs|map|css|svg|xml|webmanifest)$/.test(entry.name)) {
+        const text = decodePublicText(readFileSync(path, "utf8"));
+        assert.ok(!draftMarkers.some((marker) => text.includes(marker)), `Unapproved Privacy draft text leaked into ${path}.`);
+      }
+    }
+  }
+  verifyNoDraftText(output);
+}
 console.log(`GitHub Pages static artifact verified: out/ (base path: ${basePath || "/"}).`);

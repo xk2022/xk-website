@@ -292,3 +292,15 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 已實際執行 14 項工具檢查，整體 Exit 0：成功 0、真失敗 7、timeout 124／無存活子程序、覆寫拒絕 2、缺少 executable 127、wrapper 受信號 143（即使 child 自行 Exit 0 仍 FAIL）、child signal 原 returnCode -15，以及非法 timeout 拒絕。預期的非零退出是測試輸入，未將其原始 FAIL 回執改為 PASS；工具契約符合預期的測試才判 PASS。完整原始結果暫存於 `/tmp/xk-subagent-workflow/`，PR 記錄最終檢查與遠端實際結果。
 
 本次只有文件與開發工具，沒有變動 src、public、依賴／lockfile、Next／TypeScript 設定、Pages builder 或 workflow。本機驗證針對工具、Markdown／連結、完整 staged／unstaged Diff 與受保護檔案；既有 PR／main CI 仍照常執行，不重跑不受影響的九頁瀏覽器矩陣。CI、合併及部署以實際發生後的 PR 紀錄為準。
+
+## Task 009 — Privacy 草案與發布保護
+
+本次從乾淨且 fresh fetch 的 `main@4c6646fa7e54b1b1e2589615eee82926e9e54d7a` 建立 `feature/website-privacy-policy`；Task 008 PR #12 已合併。使用者明確授權開發、產出驗證文件、Push、PR、CI 通過後合併 main 及確認部署。本會話另確認目前「尚無」正式政策核准資料，因此本次只交付草案技術，不能把合併／部署授權視為法律正文核准。
+
+文件 Repository 最新 main 仍為 `95ef1275a46ace76e11f668178ca881087483398`，fresh Tree 與 51 個 Blob bytes 核對相符，保持唯讀。八份指定來源是商業規劃或程式模板，沒有新增已核准政策、法定主體、權利管道、保存期限或跨境證據；建議信箱與候選表單沒有升格為現行功能。
+
+新增集中 `privacy.ts`、九區塊 Server Component、具名目錄、精確 Metadata 及 server-only publication guard。版本為 `draft-1`，controllerName／effectiveDate／rightsContact 為 null；正常公開 production `/privacy` 預設 404，只在開發或 loopback 隔離明確旗標預覽。Footer 改為「隱私權政策（待確認）」純文字，路由保持 planned。Contact 維持無表單／無正式管道；未新增 Backend、API、Analytics、同意控制或 dependencies。
+
+Pages builder 以既有 Node.js 24 原生讀取 typed data，強制停用預覽旗標、排除草案 HTML／payload，並掃描公開文字及 JS 的草案內容與轉義形式；保留全部九頁、資源、404、.nojekyll、noindex 與 dev 排除。核准狀態仍須同版本真實 Owner／法律審查；結構 guard 不能證明法律核准。package／lockfile、Next／Tailwind 設定、workflow、品牌素材及 DNS 未變。
+
+實際品質指令、一般／受控預覽／Pages 驗收、工具失敗與修正重驗、三張真實草案截圖、資料流清冊及 Owner／法律／Hosting 待確認責任見 [Task 009 實作與驗證](reports/task009-implementation.md)。測試使用本輪程式碼 map 指紋，沒有以舊任務結果代填；法律正式發布與核准正式頁持續 BLOCKED，不宣稱 Task 009 全部完成。PR CI、授權合併、main CI、部署與公開 URL 各階段實際結果於同 PR 紀錄補充，不增加只記錄自身 SHA 的循環提交。

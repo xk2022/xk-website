@@ -246,3 +246,7 @@ docs(task): add XK website task specifications 006-014
 ```
 
 本 README 為官方網站開發任務的總索引。個別規格控制任務範圍；若有衝突，以當次明確指示、最新核准 Task 及已合併 Repository 實際狀態為準。Pending Confirmation 必須在各 Task 指定由誰、何時確認，以及未確認時的處理方式，不能用猜測補齊。
+
+## Task 009 執行紀錄入口
+
+2026-11-19 的 Task 009 以已合併 Task 008 的 `main@4c6646f` 為基準。上方第 9 節保留原規格撰寫時點；目前 Privacy 交付範圍為受控草案與發布保護，Owner 已回覆尚無正式核准資料。法律核准及核准正式頁仍為 BLOCKED，不以技術合併解鎖政策或新個資收件。實際來源、測試與階段結果見 [Task 009 實作與驗證](../reports/task009-implementation.md)。

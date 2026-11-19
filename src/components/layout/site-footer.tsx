@@ -5,6 +5,7 @@ import { Container } from "@/components/layout/container";
 import { services } from "@/config/homepage";
 import { contactNavigation, primaryNavigation } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
+import { isPrivacyPolicyPublished } from "@/lib/privacy-publication";
 
 const footerLinkStyles =
   "inline-flex min-h-11 items-center rounded-sm text-primary-foreground/80 transition-colors duration-brand ease-brand hover:text-primary-foreground motion-reduce:transition-none";
@@ -65,7 +66,11 @@ export function SiteFooter() {
 
         <div className="type-body-sm mt-12 flex flex-col gap-4 border-t border-primary-foreground/20 pt-6 text-primary-foreground/65 sm:flex-row sm:items-center sm:justify-between">
           <p lang="en">© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-          <p>隱私權政策（待建立）</p>
+          {isPrivacyPolicyPublished() ? (
+            <Link href="/privacy" className={footerLinkStyles}>隱私權政策</Link>
+          ) : (
+            <p>隱私權政策（待確認）</p>
+          )}
         </div>
       </Container>
     </footer>
