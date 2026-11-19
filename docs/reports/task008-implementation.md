@@ -275,3 +275,15 @@ B01 原始紀錄另有 **506 個 HEAD 完成事件**，全數保留，依精確�
 本機驗收報告、逐項摘要、原始 bytes 封存與七張真實 PNG 均在 PR 建立前完成，納入同一功能 PR。壓縮封存包含原始 Log／JSON／axe／exact工具 snapshot／trace／fixture與截圖，依 SHA256 驗 bytes，可安全還原；報告不以摘要取代原始失敗。最後文件格式、相對路徑、原 notes 前綴／Next generated block、source 指紋、完整Diff與秘密／產物檢查另記實際結果。
 
 逐項驗證見 [Task 008 結構化摘要](task008-verification.json)，原始 bytes 見 [Task 008 壓縮證據](task008-evidence.json.gz)。本次封存包含所有正式、診斷、補圖與兩 source epoch 的原始檔；打包時全部逐 bytes 還原一致，後續獨立讀取封存再次驗 SHA256。七張正式 PNG 與來源候選 bytes 相同。
+
+## 實際 PR／CI 補記（第一個 Code Commit 快照）
+
+功能 Commit：`d5042910e14041bd3f5d71193cde31c1febf19c9`，已 Push 至 feature branch；[PR #12](https://github.com/xk2022/xk-website/pull/12) 以 main 為 Base。建立時 main 已由 `99e375e…` 前進為 `dabcdad6a7394478f0fec478c38b755419a8a3d4`，只改 `docs/task/temp.md` 的 Task 007 規劃文件。已在 feature 以 `3e16e5c58639b643c1e76685ca34b6a7b2d9303a` 同步並保留，app 指紋仍為 42c8e5bf…，沒有整合未核准分支或改寫該文件。
+
+[PR head A Actions run 44445276310](https://github.com/xk2022/xk-website/actions/runs/44445276310) 實際 success：quality job `135295790172` 與 pages-build job `135296095319` success，deploy job `135296403011` skipped。此為該 exact head 的 C08-CI01 PASS，並非正式部署。GitHub Reviews 0、inline comments 0，不稱真人審核核准；獨立本機審核 Blocking 0。
+
+實際下載 github-pages artifact `14492923340`，ZIP SHA256 `632ea46626b904242ca2474def1fc717595b0f72df5403c3da0b9bfb7030c100` 與 GitHub digest 相同。檢查通過：九頁、203 個實體檔、62 個 HTML／TXT／JSON payload、127 個靜態資源實體（115 woff2、3 CSS、8 JS、1 SVG），精確 Metadata／Canonical／noindex、Contact 六區塊／誠實空狀態、Base Path、404／.nojekyll／dev 保護及恰三 Portfolio slugs 全符合。
+
+此補記僅修改報告與結構化 remoteSnapshot，原始 gzip、七圖及 app 程式不變。前方本機矩陣保留 PR 前時點；新增實際 remoteSnapshot 承接 C08-CI01 已發生的結果。最終 evidence Commit 的自身 SHA／新 head CI、使用者授權 merge、main CI、部署與公開 smoke 將在同一 PR 的最新交付紀錄逐階段補上，不以 head A 成功替代最終 head 或 main。後續真實狀態請見 [同 PR 最新交付](https://github.com/xk2022/xk-website/pull/12)。
+
+本次 PR／CI 補記初次 Markdown 檢查另發現一個新增標題前的多餘空行（MD012、實際 Exit 1）；已移除後重新完整格式／連結檢查 Exit 0。此為文件補記的修正，原始輸出與兩次實際退出碼保留於 remoteSnapshot，沒有改 app 或重用舊文件檢查冒充通過。

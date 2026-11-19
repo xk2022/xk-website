@@ -15252,9 +15252,957 @@
     "reconstruction": "gzip-decompress JSON; for each manifest entry base64-decode blobs[entry.sha256].data; assert length and SHA-256, then restore to the relative manifest path. Helper --verify-archive [--restore-to /tmp/path] performs this verification."
   },
   "remoteSnapshot": {
-    "status": "PENDING",
-    "phase": "pre-PR local snapshot",
-    "note": "No feature commit/PR run/artifact/review/authorized merge/main CI/deployment/public verification is inferred. Add actual remote evidence later without rewriting the local archive."
+    "asOf": "2026-11-19T02:39:12.904798+00:00",
+    "scope": "Actual first code commit/PR-head A evidence. A subsequent documentation-only evidence commit and approved-main document integration keep the same tested application fingerprint. Final head CI/merge/main/live are separate later stages in the same PR.",
+    "codeCommit": "d5042910e14041bd3f5d71193cde31c1febf19c9",
+    "appFingerprint": "42c8e5bf5b069f643981fdef2741cd530cd55809123c744c24ded3d2c2a4c62b",
+    "pr": {
+      "number": 12,
+      "url": "https://github.com/xk2022/xk-website/pull/12",
+      "base": "main",
+      "baseShaAtCreation": "dabcdad6a7394478f0fec478c38b755419a8a3d4",
+      "headShaAtSnapshot": "d5042910e14041bd3f5d71193cde31c1febf19c9",
+      "state": "open",
+      "merged": false
+    },
+    "ci01AtExactHeadA": {
+      "status": "PASS",
+      "runId": 44445276310,
+      "url": "https://github.com/xk2022/xk-website/actions/runs/44445276310",
+      "headSha": "d5042910e14041bd3f5d71193cde31c1febf19c9",
+      "event": "pull_request",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 135295790172,
+          "name": "Typecheck, lint and production build",
+          "conclusion": "success",
+          "url": "https://github.com/xk2022/xk-website/actions/runs/44445276310/job/135295790172",
+          "startedAt": "2026-11-19T02:34:21Z",
+          "completedAt": "2026-11-19T02:35:00Z"
+        },
+        {
+          "id": 135296095319,
+          "name": "Build GitHub Pages artifact",
+          "conclusion": "success",
+          "url": "https://github.com/xk2022/xk-website/actions/runs/44445276310/job/135296095319",
+          "startedAt": "2026-11-19T02:35:03Z",
+          "completedAt": "2026-11-19T02:35:46Z"
+        },
+        {
+          "id": 135296403011,
+          "name": "Deploy GitHub Pages",
+          "conclusion": "skipped",
+          "url": "https://github.com/xk2022/xk-website/actions/runs/44445276310/job/135296403011",
+          "startedAt": "2026-11-19T02:35:46Z",
+          "completedAt": "2026-11-19T02:35:46Z"
+        }
+      ]
+    },
+    "artifactAtExactHeadA": {
+      "observedAt": "2026-11-19T02:37:19.170816+00:00",
+      "repository": "xk2022/xk-website",
+      "runId": "44445276310",
+      "runUrl": "https://github.com/xk2022/xk-website/actions/runs/44445276310",
+      "head": "d5042910e14041bd3f5d71193cde31c1febf19c9",
+      "artifactId": "14492923340",
+      "archive": "/tmp/xk-task008/pr-a-artifact/github-pages.zip",
+      "destination": "/tmp/xk-task008/pr-a-artifact/unpacked",
+      "command": "python3 /tmp/xk-task008/check-pages-artifact.py --archive /tmp/xk-task008/pr-a-artifact/github-pages.zip --destination /tmp/xk-task008/pr-a-artifact/unpacked --report /tmp/xk-task008/pr-a-artifact-check.json --run-id 44445276310 --head d5042910e14041bd3f5d71193cde31c1febf19c9 --artifact-id 14492923340",
+      "scope": "Actual downloaded Pages artifact only; no application build, browser, or deployment executed.",
+      "status": "PASS",
+      "checks": [
+        {
+          "item": "Downloaded ZIP exists",
+          "status": "PASS"
+        },
+        {
+          "item": "ZIP CRC is valid",
+          "status": "PASS"
+        },
+        {
+          "item": "ZIP contains only artifact.tar",
+          "status": "PASS"
+        },
+        {
+          "item": "Inspection destination starts empty",
+          "status": "PASS"
+        },
+        {
+          "item": "Archive size and member count are bounded",
+          "status": "PASS"
+        },
+        {
+          "item": "All tar members are ordinary files/directories within the destination",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: about/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: services/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: solutions/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: contact/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: portfolio/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: portfolio/corporate-website/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: portfolio/enterprise-management/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: portfolio/integration-hub/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: icon.svg",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: 404.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: .nojekyll",
+          "status": "PASS"
+        },
+        {
+          "item": "No public dev route files",
+          "status": "PASS"
+        },
+        {
+          "item": "No /dev/design-system reference in any HTML/TXT/JSON payload",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions exact title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions nine main Sections and four Articles",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: correct Open Graph locale and type",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: required Portfolio section count",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: correct Open Graph locale and type",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: required Portfolio section count",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: correct Open Graph locale and type",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: required Portfolio section count",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: correct Open Graph locale and type",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: required Portfolio section count",
+          "status": "PASS"
+        },
+        {
+          "item": "contact/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "contact/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "contact/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "contact/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "contact/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "contact/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "contact/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "Contact correct Open Graph locale and type",
+          "status": "PASS"
+        },
+        {
+          "item": "Contact six sections in exact reading order",
+          "status": "PASS"
+        },
+        {
+          "item": "Contact exact single H1",
+          "status": "PASS"
+        },
+        {
+          "item": "Contact honest unavailable state and explanation",
+          "status": "PASS"
+        },
+        {
+          "item": "Contact accurate no-form and hosting-provider data note",
+          "status": "PASS"
+        },
+        {
+          "item": "Contact no form, input, submit, or unconfirmed email/phone channels",
+          "status": "PASS"
+        },
+        {
+          "item": "Contact no unpublished Privacy link",
+          "status": "PASS"
+        },
+        {
+          "item": "Only the three registered Portfolio detail directories exist",
+          "status": "PASS"
+        },
+        {
+          "item": "Only overview and three registered Portfolio HTML pages are exported; no unknown/legacy/fallback HTML",
+          "status": "PASS"
+        },
+        {
+          "item": "Referenced resources are self-hosted",
+          "status": "PASS"
+        },
+        {
+          "item": "All HTML resources and CSS URL resources exist with the correct base path",
+          "status": "PASS"
+        }
+      ],
+      "archiveSha256": "632ea46626b904242ca2474def1fc717595b0f72df5403c3da0b9bfb7030c100",
+      "archiveBytes": 5228816,
+      "tarSha256": "2bc5744c293f7423ef73179af276feec7f6bee53e313c5b3b9492974436b6e15",
+      "fileCount": 203,
+      "scannedPayloadCount": 62,
+      "pages": [
+        {
+          "path": "index.html",
+          "title": "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
+          "description": "Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。",
+          "canonical": "https://xplorekaleidoscope.com/",
+          "openGraph": {
+            "og:title": "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
+            "og:description": "Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。",
+            "og:url": "https://xplorekaleidoscope.com/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "about",
+            "services",
+            "technologies",
+            "why-xk",
+            "solutions",
+            "contact"
+          ],
+          "articles": []
+        },
+        {
+          "path": "about/index.html",
+          "title": "關於 XK | Xplore Kaleidoscope",
+          "description": "認識 Xplore Kaleidoscope（XK），了解我們的品牌理念、網站開發、Java 企業系統、系統整合與 AI 應用技術能力。",
+          "canonical": "https://xplorekaleidoscope.com/about/",
+          "openGraph": {
+            "og:title": "關於 XK | Xplore Kaleidoscope",
+            "og:description": "認識 Xplore Kaleidoscope（XK），了解我們的品牌理念、網站開發、Java 企業系統、系統整合與 AI 應用技術能力。",
+            "og:url": "https://xplorekaleidoscope.com/about/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "who-we-are",
+            "mission",
+            "vision",
+            "capabilities",
+            "approach",
+            "founder",
+            "commitment",
+            "about-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "services/index.html",
+          "title": "服務項目 | Xplore Kaleidoscope",
+          "description": "探索 Xplore Kaleidoscope 的網站開發、Java 企業系統、系統整合、AI 應用與雲端技術服務，打造符合企業需求的數位解決方案。",
+          "canonical": "https://xplorekaleidoscope.com/services/",
+          "openGraph": {
+            "og:title": "服務項目 | Xplore Kaleidoscope",
+            "og:description": "探索 Xplore Kaleidoscope 的網站開發、Java 企業系統、系統整合、AI 應用與雲端技術服務，打造符合企業需求的數位解決方案。",
+            "og:url": "https://xplorekaleidoscope.com/services/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "service-overview",
+            "website-development",
+            "java-enterprise",
+            "system-integration",
+            "ai-automation",
+            "cloud-infrastructure",
+            "service-combinations",
+            "services-process",
+            "services-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "solutions/index.html",
+          "title": "解決方案 | Xplore Kaleidoscope",
+          "description": "探索 XK 如何依企業需求組合網站開發、Java 企業系統、API 與資料整合、AI 應用及部署技術，規劃合適的數位解決方案。",
+          "canonical": "https://xplorekaleidoscope.com/solutions/",
+          "openGraph": {
+            "og:title": "解決方案 | Xplore Kaleidoscope",
+            "og:description": "探索 XK 如何依企業需求組合網站開發、Java 企業系統、API 與資料整合、AI 應用及部署技術，規劃合適的數位解決方案。",
+            "og:url": "https://xplorekaleidoscope.com/solutions/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "solutions-hero",
+            "business-challenges",
+            "solutions-overview",
+            "solution-details",
+            "solution-technology",
+            "solution-combinations",
+            "implementation-approach",
+            "why-xk-solutions",
+            "solutions-next-step"
+          ],
+          "articles": [
+            "solution-digital-presence",
+            "solution-enterprise-management",
+            "solution-system-integration",
+            "solution-ai-workflow"
+          ]
+        },
+        {
+          "path": "portfolio/index.html",
+          "title": "技術作品集 | Xplore Kaleidoscope",
+          "description": "探索 XK 的網站、Java 企業系統與 API 整合展示規劃，了解各專案的背景、技術方向與實際開發狀態。",
+          "canonical": "https://xplorekaleidoscope.com/portfolio/",
+          "openGraph": {
+            "og:title": "技術作品集 | Xplore Kaleidoscope",
+            "og:description": "探索 XK 的網站、Java 企業系統與 API 整合展示規劃，了解各專案的背景、技術方向與實際開發狀態。",
+            "og:url": "https://xplorekaleidoscope.com/portfolio/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "portfolio-hero",
+            "portfolio-introduction",
+            "portfolio-projects",
+            "portfolio-technology",
+            "portfolio-transparency",
+            "portfolio-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "portfolio/corporate-website/index.html",
+          "title": "XK Corporate Website Showcase | XK 技術作品集",
+          "description": "XK Corporate Website Showcase 自製展示規劃，目前為 Planned；探索企業網站的品牌資訊、響應式版面與可維護前端方向，尚未提供完整案例系統的實作與部署證據。",
+          "canonical": "https://xplorekaleidoscope.com/portfolio/corporate-website/",
+          "openGraph": {
+            "og:title": "XK Corporate Website Showcase | XK 技術作品集",
+            "og:description": "XK Corporate Website Showcase 自製展示規劃，目前為 Planned；探索企業網站的品牌資訊、響應式版面與可維護前端方向，尚未提供完整案例系統的實作與部署證據。",
+            "og:url": "https://xplorekaleidoscope.com/portfolio/corporate-website/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "project-overview",
+            "project-challenge",
+            "project-solution",
+            "project-technology",
+            "project-evidence",
+            "project-status",
+            "project-services",
+            "project-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "portfolio/enterprise-management/index.html",
+          "title": "XK Enterprise Management System | XK 技術作品集",
+          "description": "XK Enterprise Management System 自製展示規劃，目前為 Planned；了解 Java 管理系統的流程、資料與權限規劃，模組範圍仍待確認，尚未提供實作完成證據。",
+          "canonical": "https://xplorekaleidoscope.com/portfolio/enterprise-management/",
+          "openGraph": {
+            "og:title": "XK Enterprise Management System | XK 技術作品集",
+            "og:description": "XK Enterprise Management System 自製展示規劃，目前為 Planned；了解 Java 管理系統的流程、資料與權限規劃，模組範圍仍待確認，尚未提供實作完成證據。",
+            "og:url": "https://xplorekaleidoscope.com/portfolio/enterprise-management/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "project-overview",
+            "project-challenge",
+            "project-solution",
+            "project-technology",
+            "project-evidence",
+            "project-status",
+            "project-services",
+            "project-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "portfolio/integration-hub/index.html",
+          "title": "XK Enterprise Integration Hub | XK 技術作品集",
+          "description": "XK Enterprise Integration Hub 自製展示規劃，目前為 Planned；探索模擬系統之間的 API 與資料交換方向，AI 與 n8n 屬後續規劃，尚未提供實作完成證據。",
+          "canonical": "https://xplorekaleidoscope.com/portfolio/integration-hub/",
+          "openGraph": {
+            "og:title": "XK Enterprise Integration Hub | XK 技術作品集",
+            "og:description": "XK Enterprise Integration Hub 自製展示規劃，目前為 Planned；探索模擬系統之間的 API 與資料交換方向，AI 與 n8n 屬後續規劃，尚未提供實作完成證據。",
+            "og:url": "https://xplorekaleidoscope.com/portfolio/integration-hub/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "project-overview",
+            "project-challenge",
+            "project-solution",
+            "project-technology",
+            "project-evidence",
+            "project-status",
+            "project-services",
+            "project-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "contact/index.html",
+          "title": "聯絡我們 | Xplore Kaleidoscope",
+          "description": "了解如何與 Xplore Kaleidoscope（XK）討論網站、Java 企業系統、系統整合與 AI 應用需求，查看已確認的聯絡資訊與合作準備事項。",
+          "canonical": "https://xplorekaleidoscope.com/contact/",
+          "openGraph": {
+            "og:title": "聯絡我們 | Xplore Kaleidoscope",
+            "og:description": "了解如何與 Xplore Kaleidoscope（XK）討論網站、Java 企業系統、系統整合與 AI 應用需求，查看已確認的聯絡資訊與合作準備事項。",
+            "og:url": "https://xplorekaleidoscope.com/contact/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "contact-hero",
+            "contact-channels",
+            "contact-preparation",
+            "contact-process",
+            "contact-data-note",
+            "contact-next-step"
+          ],
+          "articles": []
+        }
+      ],
+      "localAssets": [
+        "_next/static/chunks/0cz1d0mv5g_q7.js",
+        "_next/static/chunks/0d0h1va2zehi6.css",
+        "_next/static/chunks/0jk4htvmmu57l.js",
+        "_next/static/chunks/0os0_ty8_mg-s.css",
+        "_next/static/chunks/1wnov70f88xjy.js",
+        "_next/static/chunks/2kctg0wbp1k3n.css",
+        "_next/static/chunks/2olhm2sgwzw-8.js",
+        "_next/static/chunks/30sekecjjqkej.js",
+        "_next/static/chunks/310vm2bl3xxpt.js",
+        "_next/static/chunks/39_j1bdzreq0m.js",
+        "_next/static/chunks/turbopack-1mfkoo_4jufv0.js",
+        "_next/static/media/009085b2287d9f44-s.3932nd_ka6bx8.woff2",
+        "_next/static/media/0235299b0ca8d730-s.30y--sj0yvpb0.woff2",
+        "_next/static/media/03c952d1a96d28f2-s.2yaj-wy93r889.woff2",
+        "_next/static/media/04f55bbf832b6212-s.3a7s8298nvuyr.woff2",
+        "_next/static/media/05340e0910168ebe-s.0lrpox_ezuk1r.woff2",
+        "_next/static/media/0558be3d2352e7cf-s.3zphcfboleyly.woff2",
+        "_next/static/media/074b9a1c1687d902-s.1o56q5ow0cjyd.woff2",
+        "_next/static/media/0762262820666a7d-s.2y0jk_rb4j9j4.woff2",
+        "_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2",
+        "_next/static/media/0d52760bb4650200-s.1bjf8kaczl_p5.woff2",
+        "_next/static/media/0e92a0e3d2dd5b8c-s.40xiiskyz0u9x.woff2",
+        "_next/static/media/10e11208f914d3dd-s.3bg745t-qpt1o.woff2",
+        "_next/static/media/13693d164b9226e2-s.09xedatzsko5c.woff2",
+        "_next/static/media/143a763d17ee6eeb-s.2vdzkn0n3af0t.woff2",
+        "_next/static/media/16e2c3fb8919692b-s.2jmf7rg3bmuor.woff2",
+        "_next/static/media/19d6a36952c0081e-s.0so0lmt415myp.woff2",
+        "_next/static/media/1f6f8074def154cf-s.1un05mbu-o-uv.woff2",
+        "_next/static/media/220046453d91186d-s.1jfng0d2lhme1.woff2",
+        "_next/static/media/2426c9d738456e2d-s.3vsotytmjk-br.woff2",
+        "_next/static/media/2c51001db788c6b4-s.0kcb3-rjj1y2y.woff2",
+        "_next/static/media/2fb76073e23fd9e4-s.3lvt2whj97whp.woff2",
+        "_next/static/media/3267407a69ef379d-s.2pltpjtt_2tdv.woff2",
+        "_next/static/media/34231b91afb7c6c3-s.1zh_2w0p-2s4_.woff2",
+        "_next/static/media/379b8d63e23342d2-s.31x2d79zoz00h.woff2",
+        "_next/static/media/3942aedd309cd604-s.165lm4m9o3-vl.woff2",
+        "_next/static/media/3a2ef6438644f84d-s.0q83xe1cjenwx.woff2",
+        "_next/static/media/3fd3d1cbfe853b45-s.3xm499ayzrrwg.woff2",
+        "_next/static/media/4027d546954d2342-s.1e8hf5jmmq8_2.woff2",
+        "_next/static/media/41a8ea1171f650a9-s.0p83wts6nj9ce.woff2",
+        "_next/static/media/42a94e1c50501306-s.40lw093d4vcfv.woff2",
+        "_next/static/media/45462fd7b7c12654-s.0k62hbripvv8p.woff2",
+        "_next/static/media/464953112b745f1a-s.177rp2yb-7m_d.woff2",
+        "_next/static/media/46a9e2f250689b4a-s.0-dom-5bn10r2.woff2",
+        "_next/static/media/4838bb8b8a191319-s.0mwgq7b9cikvl.woff2",
+        "_next/static/media/4a0a25fecb7ea0a7-s.2ti7gy12g69qv.woff2",
+        "_next/static/media/4a8fa6abf555c69e-s.3zcx5e_xhjfm8.woff2",
+        "_next/static/media/4ba93be2ebd6d053-s.2pqlftuyd_wkv.woff2",
+        "_next/static/media/4f6d27b94ac7f0f8-s.3aqr1xxws37ij.woff2",
+        "_next/static/media/50ca53759033ef11-s.1x64mb7j_fgb-.woff2",
+        "_next/static/media/529ff7b702efc565-s.1uqvvaursggy8.woff2",
+        "_next/static/media/530c3ab6d0ef253d-s.3uekgxdm5c94d.woff2",
+        "_next/static/media/54afa5ace0feb00f-s.0ky-f48x7yw_1.woff2",
+        "_next/static/media/565e8a4bcc3b12bd-s.0n00dwiemrcd-.woff2",
+        "_next/static/media/588358693d6db01a-s.1obcxweugm4-2.woff2",
+        "_next/static/media/592bb1ea124eb038-s.33m2nuqipl96d.woff2",
+        "_next/static/media/60d9202d0746aed7-s.0naqgrmpp19d5.woff2",
+        "_next/static/media/6131cbbf5549afa2-s.2uwcyprjm3xu3.woff2",
+        "_next/static/media/6400b73950e3c08d-s.3g8ezz3m5s8sr.woff2",
+        "_next/static/media/6534cbac66dc8fc7-s.38o02d1puyheb.woff2",
+        "_next/static/media/669dd7ec0f5b5f99-s.28qf92o6_h2x-.woff2",
+        "_next/static/media/6795010584bd0f2d-s.3go89jj68y2at.woff2",
+        "_next/static/media/693938bbd3663eb3-s.0dl5hparsa5gp.woff2",
+        "_next/static/media/6a49bc1e49687a75-s.0w7cltym60w2y.woff2",
+        "_next/static/media/6ac2061f557cffa8-s.0jlzami42bvpi.woff2",
+        "_next/static/media/6e3b98f614f97ffd-s.3kbbd9d0mjbx3.woff2",
+        "_next/static/media/6e80c9dedb1a9667-s.3svaox0n-vn1-.woff2",
+        "_next/static/media/6ec9333c58391b8a-s.2d-ci18b945w0.woff2",
+        "_next/static/media/70f1a82a7c740de8-s.3ybirgydad70b.woff2",
+        "_next/static/media/72e4efd8c649e5bb-s.37d57jik208i-.woff2",
+        "_next/static/media/76b70a1dbe058eb5-s.1y4-pdgsjb-pw.woff2",
+        "_next/static/media/76c0bb6249477faa-s.1j3_-3dz1i_v9.woff2",
+        "_next/static/media/77b73bfff95f70b9-s.07_g1hm2pwfx4.woff2",
+        "_next/static/media/7990c0e730ae727d-s.24etvawtz5ncl.woff2",
+        "_next/static/media/7ca400ae5f553d70-s.03k08otc5i9_f.woff2",
+        "_next/static/media/7cf7854bd762ff7a-s.3t01akl_tjtdo.woff2",
+        "_next/static/media/7ee5cc72c720d0c4-s.401vnmqxpcziv.woff2",
+        "_next/static/media/7f5a8478c713badf-s.0xblw36w1rrth.woff2",
+        "_next/static/media/805c8713abeb51b4-s.3y-g80ptbkdjo.woff2",
+        "_next/static/media/87e80eb126f01747-s.1l74bfin_t-gv.woff2",
+        "_next/static/media/8968b2388617a94a-s.3pfphdkvcj5ct.woff2",
+        "_next/static/media/89a2932fec14ce13-s.15o4o47s-fxl_.woff2",
+        "_next/static/media/8a5ec7e3d06cab2e-s.2xkq43p6u6rwt.woff2",
+        "_next/static/media/8b814dcdad20f5d2-s.2jzjwdmojrhgq.woff2",
+        "_next/static/media/8de25bcedcbd9fed-s.3w-5uu82gf8ao.woff2",
+        "_next/static/media/8f086b5ad96b3bd0-s.2c7eup55pm-6s.woff2",
+        "_next/static/media/987e1f7f69dd96a8-s.0dzpayzoc2tvl.woff2",
+        "_next/static/media/99474880a8d2b222-s.2k7qjafjkwv39.woff2",
+        "_next/static/media/9c242f144e874e94-s.1ahzeq3l4rfic.woff2",
+        "_next/static/media/9fcf16c688c4cecd-s.3jr8k0jeny-hx.woff2",
+        "_next/static/media/a09ffcbc7874c787-s.0kuswl_c7nckw.woff2",
+        "_next/static/media/a13da1b57c824919-s.31fy7udo9nqkm.woff2",
+        "_next/static/media/a4b8c213392a80a7-s.1iwyv5h47dfr1.woff2",
+        "_next/static/media/aa4d3f7c2921b96c-s.2y9xkiwzli4tv.woff2",
+        "_next/static/media/ab3577faf83d98ce-s.1s-td1f3hl4bj.woff2",
+        "_next/static/media/aba5ee529cc6128c-s.19i6q21j4p76r.woff2",
+        "_next/static/media/af97e00fcff0c190-s.2ozbzj-16yw90.woff2",
+        "_next/static/media/b342a9a3a40f610e-s.3equgvo3mbqwd.woff2",
+        "_next/static/media/b4638920f9294ab7-s.3lilaah0kcajn.woff2",
+        "_next/static/media/b4b879b5fb1e21b8-s.3p_7i910djl3_.woff2",
+        "_next/static/media/b76465e8aca97151-s.36coyafufb8qt.woff2",
+        "_next/static/media/ba63f6a0e436df8e-s.3-6t-g6q0vh0a.woff2",
+        "_next/static/media/bd34ada311386ffe-s.2wgtfqr24r7r2.woff2",
+        "_next/static/media/bdc4716d0031b20f-s.22y4cyxvfzd0i.woff2",
+        "_next/static/media/c03d1c4eac9397b1-s.44yp4bz8qwx37.woff2",
+        "_next/static/media/c0c798803a3ec6ce-s.0w5a0wwgmp4jp.woff2",
+        "_next/static/media/c2a16ca6b9862d60-s.0_42yvgz5t97v.woff2",
+        "_next/static/media/c6b2f2cd10e7d7d9-s.42p834j-umttf.woff2",
+        "_next/static/media/c84d2b36fc95f0ef-s.0l1ol8s_tkcew.woff2",
+        "_next/static/media/cb81fe2c65a78575-s.1o-fmdbj7zsou.woff2",
+        "_next/static/media/cded105343fea566-s.2djrj_gqoem5s.woff2",
+        "_next/static/media/ce71624db24aa63d-s.3rbtd93kixhq0.woff2",
+        "_next/static/media/d2603e585543d43b-s.3jgbw7fjdxemy.woff2",
+        "_next/static/media/d2a29e096671156a-s.411tpdvuzg0en.woff2",
+        "_next/static/media/d5d2b5a00459deda-s.1zdjizd_p8a_y.woff2",
+        "_next/static/media/db4811590f7b4850-s.1if57_rchkmuw.woff2",
+        "_next/static/media/e37794ed4373ecc1-s.09jb1ctbp7s-1.woff2",
+        "_next/static/media/e531aa6ee3f1697a-s.09w4ef90p3c49.woff2",
+        "_next/static/media/e779dbe6bb6bb987-s.26_-c6zkjpq_8.woff2",
+        "_next/static/media/e7ef23271262418a-s.1iq4s9mj96jjd.woff2",
+        "_next/static/media/e80a216778e5679c-s.0vp95_qa4hxe5.woff2",
+        "_next/static/media/e908ed1a117c1344-s.1mq073yrijo36.woff2",
+        "_next/static/media/ea484250bbc77c6c-s.3g_rwevmlsqrl.woff2",
+        "_next/static/media/ef45ab08bd349ea7-s.0dp6wmpvpnroq.woff2",
+        "_next/static/media/f1b125fae38a4ff3-s.3ejb79dur_v1p.woff2",
+        "_next/static/media/fdc4a886fadb5436-s.0kgrai6t-ir1h.woff2",
+        "icon.svg"
+      ],
+      "localAssetCount": 127,
+      "assetTypes": {
+        ".woff2": 115,
+        ".css": 3,
+        ".js": 8,
+        ".svg": 1
+      },
+      "remoteAssets": [],
+      "finishedAt": "2026-11-19T02:37:19.397887+00:00"
+    },
+    "gitHubReviews": {
+      "count": 0,
+      "actualStates": [],
+      "inlineComments": 0,
+      "humanApprovalClaimed": false,
+      "independentLocalAuditBlocking": 0
+    },
+    "mainDocumentationIntegration": {
+      "observedAt": "2026-11-19T02:35:28.531554+00:00",
+      "initialBase": "99e375e6f9621862b0ab1a0db9351f4963f199fb",
+      "latestApprovedMain": "dabcdad6a7394478f0fec478c38b755419a8a3d4",
+      "mainChangedPaths": [
+        "docs/task/temp.md"
+      ],
+      "localFeatureMerge": "3e16e5c58639b643c1e76685ca34b6a7b2d9303a",
+      "applicationFingerprintUnchanged": "42c8e5bf5b069f643981fdef2741cd530cd55809123c744c24ded3d2c2a4c62b",
+      "reason": "Main advanced only an existing Task007 planning document while Task008 QA ran. Preserve it by merging origin/main into feature; no Task008 behavior/source/quality/deployment change."
+    },
+    "finalHeadCI": {
+      "status": "PENDING"
+    },
+    "merge": {
+      "status": "PENDING",
+      "userExplicitAuthorization": true
+    },
+    "mainCI": {
+      "status": "PENDING"
+    },
+    "deployment": {
+      "status": "PENDING"
+    },
+    "publicLiveVerification": {
+      "status": "PENDING"
+    },
+    "immutableRawArchive": {
+      "sha256": "e8caec3378253f8d63db807511caa559c067d61aea0d4a8abb1957d68456db56",
+      "files": 415,
+      "unchanged": true
+    },
+    "documentationSupplementValidation": {
+      "scope": "Documentation-only PR evidence supplement. Original raw archive/app/screenshots unchanged.",
+      "initial": {
+        "testId": "C08-D03-docs-b",
+        "status": "FAIL",
+        "actualExitCode": 1,
+        "checkedAt": "2026-11-19T02:39:56.069836+00:00",
+        "command": [
+          "node",
+          "/tmp/xk-md-lint-cache/_npx/3c2a9ea6c4b6e0a2/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs",
+          "README.md",
+          "docs/reports/task008-implementation.md",
+          "--config",
+          "/tmp/xk-task-policy-20261118/markdownlint.json"
+        ],
+        "stdout": "markdownlint-cli2 v0.24.1 (markdownlint v0.42.1)\nFinding: README.md docs/reports/task008-implementation.md\nLinting: 2 files\nSummary: 1 issue in 1 file\n",
+        "stderr": "docs/reports/task008-implementation.md:279 error MD012/no-multiple-blanks Multiple consecutive blank lines [Expected: 1; Actual: 2]\n",
+        "expectedResult": "Markdown exit0, existing relative links, unchanged app",
+        "reason": "One extra blank line before newly appended PR evidence heading; MD012.",
+        "fix": "Remove one blank line; no app change."
+      },
+      "final": {
+        "testId": "C08-D03-docs-b-R01",
+        "status": "PASS",
+        "actualExitCode": 0,
+        "checkedAt": "2026-11-19T02:40:48.372933+00:00",
+        "command": [
+          "node",
+          "/tmp/xk-md-lint-cache/_npx/3c2a9ea6c4b6e0a2/node_modules/markdownlint-cli2/markdownlint-cli2-bin.mjs",
+          "README.md",
+          "docs/reports/task008-implementation.md",
+          "--config",
+          "/tmp/xk-task-policy-20261118/markdownlint.json"
+        ],
+        "stdout": "markdownlint-cli2 v0.24.1 (markdownlint v0.42.1)\nFinding: README.md docs/reports/task008-implementation.md\nLinting: 2 files\nSummary: 0 issues in 0 files\n",
+        "stderr": "",
+        "checks": {
+          "markdownExitZero": true,
+          "allRelativeLinksExist": true,
+          "historicalNotesPrefixUnchanged": true,
+          "generatedNextRulesUnchanged": true,
+          "testedCodeUnchanged": true,
+          "gitDiffCheckExitZero": true
+        },
+        "relativeLinkCount": 34
+      }
+    }
   },
   "limitations": [
     "No approved public contact channel, provider, form or real sending/receiving test.",
@@ -15262,5 +16210,10 @@
     "Axe/Chromium automation is not full WCAG or assistive-technology certification.",
     "App no-form/storage observations do not prove hosting/CDN has no access logs or data processing.",
     "Optional extra environments remain PENDING with reasons; current local matrix CI remains a pre-PR snapshot."
-  ]
+  ],
+  "remoteSnapshotUpdatedAt": "2026-11-19T02:39:13.110270+00:00",
+  "remoteSnapshotSource": {
+    "file": "remote-snapshot-a.json",
+    "sha256": "af9b2d0d9aba107054b02c18d51a0d21d3006ad9aa1c409487e913f39df26927"
+  }
 }
