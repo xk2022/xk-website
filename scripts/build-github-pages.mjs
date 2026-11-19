@@ -132,6 +132,7 @@ for (const [relativePath, pagePath, label] of [
   ["about/index.html", "/about", "About Us"],
   ["services/index.html", "/services", "Services"],
   ["solutions/index.html", "/solutions", "Solutions"],
+  ["contact/index.html", "/contact", "Contact"],
   ...portfolioPages.map(({ pagePath, label }) => [`${pagePath.slice(1)}/index.html`, pagePath, label]),
 ]) {
   const html = verifyExportedPage(relativePath, `${label} page`);
@@ -161,6 +162,40 @@ for (const [relativePath, pagePath, label] of [
     assert.equal(metadataAttribute(html, "property", "og:description", "content"), portfolioPage.description, `${label} Open Graph description is incorrect.`);
     assert.equal(metadataAttribute(html, "property", "og:locale", "content"), "zh_TW", `${label} Open Graph locale is incorrect.`);
     assert.equal(metadataAttribute(html, "property", "og:type", "content"), "website", `${label} Open Graph type is incorrect.`);
+  }
+
+  if (pagePath === "/contact") {
+    const title = "聯絡我們 | Xplore Kaleidoscope";
+    const description = "了解如何與 Xplore Kaleidoscope（XK）討論網站、Java 企業系統、系統整合與 AI 應用需求，查看已確認的聯絡資訊與合作準備事項。";
+    const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/)?.[1] ?? "";
+    assert.equal(head.match(/<title>([^<]*)<\/title>/)?.[1], title, "Contact title is incorrect.");
+    assert.equal(metadataAttribute(html, "name", "description", "content"), description, "Contact description is incorrect.");
+    assert.equal(metadataAttribute(html, "property", "og:title", "content"), title, "Contact Open Graph title is incorrect.");
+    assert.equal(metadataAttribute(html, "property", "og:description", "content"), description, "Contact Open Graph description is incorrect.");
+    assert.equal(metadataAttribute(html, "property", "og:locale", "content"), "zh_TW", "Contact Open Graph locale is incorrect.");
+    assert.equal(metadataAttribute(html, "property", "og:type", "content"), "website", "Contact Open Graph type is incorrect.");
+
+    const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? "";
+    const headings = [...main.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
+    assert.equal(headings.length, 1, "Contact must have exactly one H1.");
+    assert.equal(headings[0][1].replace(/<[^>]*>/g, "").trim(), "從理解需求，開始探索合作可能。", "Contact H1 is incorrect.");
+    assert.deepEqual(
+      [...main.matchAll(/<section\b[^>]*>/g)].map(([tag]) => tagAttribute(tag, "id")),
+      ["contact-hero", "contact-channels", "contact-preparation", "contact-process", "contact-data-note", "contact-next-step"],
+      "Contact must retain the six required sections in reading order.",
+    );
+
+    // The current milestone has no approved public channels or receiving service.
+    // A future channel publication must update these acceptance expectations too.
+    assert.ok(main.includes("正式聯絡管道確認中"), "Contact must show the honest unavailable state.");
+    assert.ok(main.includes("目前尚未提供可公開的正式聯絡管道；可先了解服務與品牌，後續依確認資訊更新。"), "Contact unavailable-state explanation is missing.");
+    const dataNote = main.match(/<section\b[^>]*\bid="contact-data-note"[^>]*>([\s\S]*?)<\/section>/)?.[1] ?? "";
+    assert.ok(dataNote.includes("本頁提供聯絡與合作準備資訊，目前沒有線上表單或需求提交功能。"), "Contact data note must describe the current no-form mode.");
+    assert.ok(dataNote.includes("網站託管服務可能依其服務設定保留存取紀錄；本頁沒有表單，不代表託管服務完全不處理資料。"), "Contact data note must distinguish the page from hosting-provider access records.");
+    assert.doesNotMatch(main, /<(?:form|input|textarea|select)\b/i, "Contact must not publish a form or input controls.");
+    assert.doesNotMatch(main, /<button\b[^>]*\btype="submit"/i, "Contact must not publish a submit button.");
+    assert.doesNotMatch(main, /\bhref="(?:mailto:|tel:)/i, "Contact must not publish an unconfirmed email or phone channel.");
+    assert.doesNotMatch(main, /\bhref="[^"]*\/privacy(?:\/|[?#"])/i, "Contact must not link to the unpublished Privacy route.");
   }
 }
 

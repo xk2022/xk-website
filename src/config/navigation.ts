@@ -8,7 +8,7 @@ export const primaryNavigation = [
 ] as const;
 
 export const contactNavigation = {
-  href: "/#contact",
+  href: "/contact",
   label: "聯絡我們",
 } as const;
 
@@ -24,6 +24,6 @@ export const plannedRoutes = [
   { path: "/services/maintenance", label: "系統維護", status: "planned" },
   { path: "/solutions", label: "解決方案", status: "implemented" },
   { path: "/portfolio", label: "技術作品集", status: "implemented" },
-  { path: "/contact", label: "聯絡我們", status: "planned" },
+  { path: "/contact", label: "聯絡我們", status: "implemented" },
   { path: "/privacy", label: "隱私權政策", status: "planned" },
 ] as const;

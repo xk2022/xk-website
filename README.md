@@ -2,7 +2,7 @@
 
 官方網站，獨立交給 Codex 開發。
 
-開發里程碑與完整規格請見 [Task 001–014 任務索引](docs/task/README.md)。Task 001–006 的技術基礎、Design System、首頁、About、Services 與 Solutions 已合併；Task 007 為 Portfolio 技術作品集。Contact、Privacy、SEO、Performance、Accessibility、Vercel 與 Domain 各自依後續獨立任務處理，不因相關區塊存在而視為完成。
+開發里程碑與完整規格請見 [Task 001–014 任務索引](docs/task/README.md)。Task 001–007 的技術基礎、Design System、首頁、About、Services、Solutions 與 Portfolio 已合併；Task 008 為 Contact 資訊頁。Privacy、SEO、Performance、Accessibility、Vercel 與 Domain 各自依後續獨立任務處理，不因相關區塊存在而視為完成。
 
 ## 部署方向
 
@@ -101,3 +101,15 @@ Header、Footer 與手機導覽共用「技術作品集」入口；相關服務�
 Task 007 品質指令為 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`。本輪須回歸包含 Solutions 的八個公開路由、五種寬度與全部既有導覽／錨點；分支為 `feature/website-portfolio-page`。規格見 [Task 007](docs/task/task007.md)，作品狀態、素材權利及可公開連結依該規格的證據 Gate 處理，不以測試 PASS 推升作品狀態。
 
 來源、完整檔案清單與本機驗收見 [Task 007 實作與驗證報告](docs/reports/task007-implementation.md)、[逐項證據摘要](docs/reports/task007-verification.json) 及 [原始 JSON 證據](docs/reports/task007-evidence.json.gz)。五個品質指令均 Exit 0，一般模式最終 23/23 PASS、Pages 最終 123 項＝121 PASS＋2 有據 N/A；七張實際截圖已完成。報告保留各階段時點，遠端 head／CI／合併／部署與公開網址須以同 PR 的最新實際紀錄確認。
+
+## Task 008 聯絡資訊頁
+
+`/contact` 提供六個區塊：合作起點、聯絡管道、三項需求準備、合作流程、資料注意與下一步導覽。`verifiedContactChannels` 仍為空，`ContactAvailability` 由實際清單派生為 `unavailable`，頁面誠實顯示「正式聯絡管道確認中」。目前不能透過網站收取需求；沒有表單、提交 API、未確認信箱、電話或社群入口。正式管道須先取得品牌擁有人核准與控制權／收件證據，任何收集服務另需授權及 Task 009 資料／法律核對。
+
+Header、Footer 與手機選單共用的聯絡入口指向 `/contact`；首頁原 `#contact` 與待確認內容保留，新增「查看聯絡資訊」。既有頁面的有效首頁聯絡錨點仍可使用，Privacy 尚未發布時維持無連結文字。
+
+本機網址為 `http://localhost:3000/contact`，Pages 路徑為 `/xk-website/contact/`。保留一般 Next.js build、獨立 Pages export、品牌 Canonical／Open Graph 與 `noindex, nofollow`。品質指令仍為 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`；本次一般 production 驗收使用 3050、Pages 靜態預覽使用 3051，兩種模式分開驗收。
+
+規格見 [Task 008](docs/task/task008.md)。本次來源、修改檔、資料流、逐項實測、七張真實截圖與限制見 [Task 008 實作與驗證](docs/reports/task008-implementation.md)。最後五個品質指令 Exit 0，一般模式 27/27 PASS、Pages 148 項＝141 PASS＋7 有據 N/A，45 個響應式案例與 48 次 axe 零違規。原始失敗與未完成試次均保留；遠端 CI、合併、部署與公開頁面只依實際發生後的證據回報。
+
+Task 008 的逐項證據與原始紀錄：[驗證摘要](docs/reports/task008-verification.json)、[壓縮證據](docs/reports/task008-evidence.json.gz)。
