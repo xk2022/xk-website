@@ -144,10 +144,10 @@ Task 001–005 既有獨立或歷史報告保留，不重新命名或覆寫：
 | Task | 現有紀錄 |
 | --- | --- |
 | 001 | [implementation notes](../implementation-notes.md) 的 Bootstrap 歷史；若重新執行，依 Task 001 的獨立報告要求 |
-| 002 | [品牌設計系統](../brand-design-system.md) |
-| 003 | [首頁實作](../homepage-implementation.md) |
-| 004 | [About 實作](../about-implementation.md) |
-| 005 | [Services 實作](../services-implementation.md) |
+| 002 | [品牌設計系統](../reports/brand-design-system.md) |
+| 003 | [首頁實作](../reports/homepage-implementation.md) |
+| 004 | [About 實作](../reports/about-implementation.md) |
+| 005 | [Services 實作](../reports/services-implementation.md) |
 
 本輪統一 Task 006–014 未來報告位置如下，**目前皆未建立**，故僅列 code path，不建立假連結或測試結果：
 
@@ -262,3 +262,9 @@ docs(task): add XK website task specifications 006-014
 2026-11-19 的 Task 011 以已合併 SEO 保護模式的 `main@633d135` 為基準。依可重現 baseline 處理 Noto 可變字重的重複 CSS，保留品牌、內容、功能與一般／Pages 兩種建置。實驗室 LCP／CLS、TBT、受控互動與 field CWV 分開判讀；缺少 field／真機證據不冒作通過。上方原規格撰寫紀錄保留原時點。
 
 來源、完整 runs、實際驗收及限制見 [Task 011 實作與驗證](../reports/task011-implementation.md)；後續重驗方式見 [效能量測指南](../performance-measurement.md)。CI、使用者授權合併、main CI／部署與公開網址結果各以同 PR 的實際事件確認。
+
+## Task 012 執行紀錄入口
+
+2026-11-19 的 Task 012 以 `main@8e42c647646d20873789c54367132901746a58bf` 為基準，在 `feature/website-accessibility` 稽核九個公開頁。工作涵蓋 WCAG 2.2 A／AA 完整適用性、原 2／2.1 回歸，以及實際桌面 Orca、鍵盤、對比、真 200% browser zoom、320 CSS px 與文字間距驗收；未測平台不冒作通過。
+
+來源、問題／修復／版本與實測見 [Task 012 實作與驗證](../reports/task012-implementation.md) 及 [證據操作說明](../reports/task012-artifacts/README.md)。上方原規格撰寫紀錄維持歷史時點；目前使用者已明確授權此次 Push／PR、CI 通過後合併與確認部署，不延伸為品牌更新、法律政策、索引或其他任務發布。

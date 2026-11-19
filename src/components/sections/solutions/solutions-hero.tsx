@@ -24,7 +24,7 @@ export function SolutionsHero() {
         <div className="min-w-0">
           <nav
             aria-label="麵包屑導覽"
-            className="type-body-sm mb-8 flex flex-wrap items-center gap-3 text-muted-foreground"
+            className="type-body-sm mb-8 flex flex-wrap items-center gap-3 text-foreground"
           >
             <Link href="/" className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">
               首頁
@@ -38,7 +38,7 @@ export function SolutionsHero() {
           <h1 id="solutions-page-title" className="type-h1 break-words text-primary">
             {hero.title}
           </h1>
-          <p className="type-body-lg mt-6 max-w-2xl text-muted-foreground">
+          <p className="type-body-lg mt-6 max-w-2xl text-foreground">
             {hero.description}
           </p>
           <p lang="en" className="type-body-sm mt-6 text-secondary">{siteConfig.tagline}</p>
@@ -62,7 +62,7 @@ export function SolutionsHero() {
             <p lang="en" className="type-body-lg break-words font-semibold text-primary">
               {siteConfig.name}
             </p>
-            <p lang="en" className="type-body-sm mt-4 max-w-64 text-muted-foreground">
+            <p lang="en" className="type-body-sm mt-4 max-w-64 text-foreground">
               {siteConfig.slogan}
             </p>
           </figcaption>

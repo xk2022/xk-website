@@ -53,7 +53,17 @@ export function MobileNavigation() {
   }, []);
 
   return (
-    <div ref={navigationRef} className="shrink-0 lg:hidden">
+    <div
+      ref={navigationRef}
+      className="shrink-0 lg:hidden"
+      onBlurCapture={(event) => {
+        const nextTarget = event.relatedTarget;
+        // Keep internal navigation open; outside focus must not stay under the panel.
+        if (!(nextTarget instanceof Node) || !event.currentTarget.contains(nextTarget)) {
+          setOpen(false);
+        }
+      }}
+    >
       <Button
         ref={triggerRef}
         variant="outline"

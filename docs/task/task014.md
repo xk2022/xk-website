@@ -36,7 +36,7 @@
 
 ### 3.1 Website 來源
 
-完整閱讀 [AGENTS](../../AGENTS.md)、[README](../../README.md)、[任務索引](README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)、[Task 006](task006.md)、[Task 010](task010.md)、[Task 013](task013.md)、[歷史紀錄](../implementation-notes.md)、[Design System](../brand-design-system.md)、[首頁](../homepage-implementation.md)、[About](../about-implementation.md)、[Services](../services-implementation.md) 與 [Pages 指南](../github-pages-deployment.md)。新規格連結不表示功能已執行；Task 013 報告必須於未來實際存在後再引用。
+完整閱讀 [AGENTS](../../AGENTS.md)、[README](../../README.md)、[任務索引](README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)、[Task 006](task006.md)、[Task 010](task010.md)、[Task 013](task013.md)、[歷史紀錄](../implementation-notes.md)、[Design System](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 指南](../reports/github-pages-deployment.md)。新規格連結不表示功能已執行；Task 013 報告必須於未來實際存在後再引用。
 
 下表 Website 來源 Branch 為 `main`，Commit 固定為上述研究基準，保留實際採用與歷史證據界線：
 

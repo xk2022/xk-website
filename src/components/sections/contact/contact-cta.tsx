@@ -16,7 +16,7 @@ export function ContactCta() {
       <Container className="relative min-w-0">
         <p lang="en" className="type-caption mb-4 font-semibold text-secondary">EXPLORE XK</p>
         <h2 id="contact-next-step-title" className="type-h2 text-primary">{cta.title}</h2>
-        <p className="type-body-lg mt-5 max-w-3xl text-muted-foreground">{cta.description}</p>
+        <p className="type-body-lg mt-5 max-w-3xl text-foreground">{cta.description}</p>
         <div className="mt-8 flex min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
           {cta.links.map((link, index) => (
             <Button key={link.href} asChild size="lg" variant={index === 0 ? "default" : index === 1 ? "outline" : "ghost"}>

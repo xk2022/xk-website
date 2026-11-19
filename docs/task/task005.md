@@ -15,7 +15,7 @@
 
 本規格要求功能執行時直接操作既有 Repository，完成實作、實際驗收與交付，不能只提供程式碼範例、開發計畫或文件草稿。**本輪文件骨架標準化不重新執行 Task 005 功能開發，也不產生新的功能測試結果。**
 
-本文的驗收狀態與 Checklist 一律初始化為 **PENDING**，不是對過往 Task 005 成果的否定，也不表示本輪已重新驗收。歷史實作與實際結果維持在獨立的 [Services 實作紀錄](../services-implementation.md)；不得把歷史 PASS 複製為新的驗收結果。
+本文的驗收狀態與 Checklist 一律初始化為 **PENDING**，不是對過往 Task 005 成果的否定，也不表示本輪已重新驗收。歷史實作與實際結果維持在獨立的 [Services 實作紀錄](../reports/services-implementation.md)；不得把歷史 PASS 複製為新的驗收結果。
 
 ## 2. Repository & Prerequisites
 
@@ -39,7 +39,7 @@
 
 - [重構前 Task 005 原稿快照](https://github.com/xk2022/xk-website/blob/a429fdc/docs/task/task005.md) 保留原始需求及後段執行文字的來源；本文整併重複指示，不新增功能範圍。
 - 原功能實作紀錄的 Base Commit 為 `7a8ea793608c7bec8fa212bfee4b2f24b5cf192e`，當時 Task 004 的 PR #4／merge commit `57ad0f2` 為其祖先。這是原始時間點的紀錄，**不是未來執行時固定的最新 Base**。
-- 原服務資料閱讀版本為文件 Repository 的 `95ef1275a46ace76e11f668178ca881087483398`；來源 SHA 與當時的部署證據見 [Services 實作紀錄](../services-implementation.md)。功能執行時仍須確認可取得的文件版本與當前狀態。
+- 原服務資料閱讀版本為文件 Repository 的 `95ef1275a46ace76e11f668178ca881087483398`；來源 SHA 與當時的部署證據見 [Services 實作紀錄](../reports/services-implementation.md)。功能執行時仍須確認可取得的文件版本與當前狀態。
 
 ## 3. Reference Documents
 
@@ -49,10 +49,10 @@
 
 - [README.md](../../README.md)、[AGENTS.md](../../AGENTS.md)。
 - [歷史 Implementation Notes](../implementation-notes.md)。
-- [品牌設計系統與元件 API](../brand-design-system.md)。
-- [首頁實作紀錄](../homepage-implementation.md)、[About 實作紀錄](../about-implementation.md)。
-- [GitHub Pages 部署指南](../github-pages-deployment.md)。
-- 本文及既有獨立的 [Services 實作紀錄](../services-implementation.md)。
+- [品牌設計系統與元件 API](../reports/brand-design-system.md)。
+- [首頁實作紀錄](../reports/homepage-implementation.md)、[About 實作紀錄](../reports/about-implementation.md)。
+- [GitHub Pages 部署指南](../reports/github-pages-deployment.md)。
+- 本文及既有獨立的 [Services 實作紀錄](../reports/services-implementation.md)。
 - Task 001–004 規格：[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)。Task 001 原始替代文件為 [英文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md) 與 [繁體中文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.zh-TW.md)；Task 002 另有 [繁體中文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)。上述三份替代原稿已從目前 main 刪除，連結固定為歷史 Commit `895b9878b6c6244cf225772f6c4f8d3e5d97affe` 的快照，僅供原稿查證，不復原刪檔；正式入口仍是 `task001.md` 與 `task002.md`。不將當時的空檔或缺檔描述改寫成目前狀態。
 
 ### Documentation Repository

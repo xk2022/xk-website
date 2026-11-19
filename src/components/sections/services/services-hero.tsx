@@ -17,7 +17,7 @@ export function ServicesHero() {
       <BrandPattern variant="gradient" />
       <Container className="relative grid items-center gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16">
         <div className="min-w-0">
-          <nav aria-label="麵包屑導覽" className="type-body-sm mb-8 flex items-center gap-3 text-muted-foreground">
+          <nav aria-label="麵包屑導覽" className="type-body-sm mb-8 flex items-center gap-3 text-foreground">
             <Link href="/" className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">首頁</Link>
             <span aria-hidden="true">/</span>
             <span aria-current="page">服務項目</span>
@@ -26,7 +26,7 @@ export function ServicesHero() {
           <h1 id="services-page-title" className="type-h1 text-primary">
             {hero.titleLines.map((line) => <span key={line} className="block">{line}</span>)}
           </h1>
-          <p className="type-body-lg mt-6 max-w-2xl text-muted-foreground">{hero.description}</p>
+          <p className="type-body-lg mt-6 max-w-2xl text-foreground">{hero.description}</p>
           <p lang="en" className="type-body-sm mt-6 text-secondary">{siteConfig.tagline}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button asChild size="lg">
@@ -42,7 +42,7 @@ export function ServicesHero() {
           <XkLogo size={192} showWordmark={false} className="relative" />
           <figcaption className="relative text-center">
             <p lang="en" className="type-h3 mt-5 text-primary">Web · Java · AI</p>
-            <p lang="en" className="type-body-sm mt-4 max-w-64 text-muted-foreground">{siteConfig.slogan}</p>
+            <p lang="en" className="type-body-sm mt-4 max-w-64 text-foreground">{siteConfig.slogan}</p>
           </figcaption>
         </figure>
       </Container>

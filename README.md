@@ -10,7 +10,7 @@
 
 使用者於 Task 003 選擇 **GitHub Actions → GitHub Pages 靜態網站**。正式模式仍保留一般 Next.js 建置，日後可使用 Vercel 的 Next.js preset、Repository 根目錄 `.`、production branch `main`；本次不需要 Vercel Secrets。
 
-Pages 建置使用 `npm run build:pages`，輸出 `out/`，預設路徑為 `/xk-website`。Pull Request 執行品質檢查與靜態建置，只有 `main` 推送或手動選擇 `main` 時才進入部署工作，不會自動合併 PR。Pages 設定與部署狀態詳見 [GitHub Pages 部署指南](docs/github-pages-deployment.md)。不變更 DNS 或品牌正式網域設定。
+Pages 建置使用 `npm run build:pages`，輸出 `out/`，預設路徑為 `/xk-website`。Pull Request 執行品質檢查與靜態建置，只有 `main` 推送或手動選擇 `main` 時才進入部署工作，不會自動合併 PR。Pages 設定與部署狀態詳見 [GitHub Pages 部署指南](docs/reports/github-pages-deployment.md)。不變更 DNS 或品牌正式網域設定。
 
 ## 本機開發與 Task 002 驗收
 
@@ -38,7 +38,7 @@ XK_DESIGN_SYSTEM_PREVIEW=1 npm run start
 
 此頁僅供開發驗收，未列入正式導覽，並設為 `noindex, nofollow`。Task 002 僅建立品牌設計系統，沿用已提供的暫定 Logo，沒有提前開發完整首頁或 Backend。
 
-規格：[Task 001](docs/task/task001.md)、[Task 002](docs/task/task002.md)。使用方式與設計決策：[品牌設計系統](docs/brand-design-system.md)；歷史紀錄：[implementation notes](docs/implementation-notes.md)。
+規格：[Task 001](docs/task/task001.md)、[Task 002](docs/task/task002.md)。使用方式與設計決策：[品牌設計系統](docs/reports/brand-design-system.md)；歷史紀錄：[implementation notes](docs/implementation-notes.md)。
 
 ## Task 003 企業首頁
 
@@ -52,7 +52,7 @@ npm run build:pages
 
 `out/` 是靜態 artifact，不能以 `npm run start` 當作 Pages 伺服器。靜態匯出排除 `/dev/design-system`，並保留建置階段的 `noindex, nofollow`；正式開放索引是後續獨立決策。
 
-本次規格：[Task 003](docs/task/task003.md)。實作、檔案異動與驗收紀錄：[首頁實作指南](docs/homepage-implementation.md)。Actions、Pages 來源設定與本機靜態預覽：[部署指南](docs/github-pages-deployment.md)。
+本次規格：[Task 003](docs/task/task003.md)。實作、檔案異動與驗收紀錄：[首頁實作指南](docs/reports/homepage-implementation.md)。Actions、Pages 來源設定與本機靜態預覽：[部署指南](docs/reports/github-pages-deployment.md)。
 
 ## Task 004 品牌介紹頁
 
@@ -62,7 +62,7 @@ npm run build:pages
 
 Task 004 指定的品質指令為 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`。Pages 部署流程延用 Task 003；本次 About 功能先以獨立 PR 供審核，不自動合併或宣稱已發布。
 
-規格：[Task 004](docs/task/task004.md)。實作、截圖與本次驗收結果：[About Us 實作紀錄](docs/about-implementation.md)。Task 002 正式規格見 [task002.md](docs/task/task002.md)；已刪除替代原稿的固定歷史連結保留於各 Task 規格。
+規格：[Task 004](docs/task/task004.md)。實作、截圖與本次驗收結果：[About Us 實作紀錄](docs/reports/about-implementation.md)。Task 002 正式規格見 [task002.md](docs/task/task002.md)；已刪除替代原稿的固定歷史連結保留於各 Task 規格。
 
 ## Task 005 服務介紹頁
 
@@ -80,7 +80,7 @@ npm run build
 npm run build:pages
 ```
 
-規格：[Task 005](docs/task/task005.md)。內容來源、實作分工、截圖與本次實際驗收結果：[Services 實作紀錄](docs/services-implementation.md)。Task 005 已完成本次五個品質指令、一般／靜態三頁回歸、五寬與觸控驗收、axe、鍵盤與資源檢查，七份指定截圖已產出；本次遠端 CI 結果見 PR Checks 與最終交付報告；本次使用 `feature/website-services-page` 建立 PR，等待審核，不自動合併或發布 main。
+規格：[Task 005](docs/task/task005.md)。內容來源、實作分工、截圖與本次實際驗收結果：[Services 實作紀錄](docs/reports/services-implementation.md)。Task 005 已完成本次五個品質指令、一般／靜態三頁回歸、五寬與觸控驗收、axe、鍵盤與資源檢查，七份指定截圖已產出；本次遠端 CI 結果見 PR Checks 與最終交付報告；本次使用 `feature/website-services-page` 建立 PR，等待審核，不自動合併或發布 main。
 
 ## Task 006 解決方案介紹頁
 
@@ -153,3 +153,11 @@ Pages 是主要受控量測模式；九個公開頁分別進行手機／桌面�
 重現條件、Cache 與驗收界線見 [效能量測指南](docs/performance-measurement.md)，實際基準／after、測試結果與限制見 [Task 011 實作與驗證](docs/reports/task011-implementation.md)。沿用五個品質指令及 GitHub Pages 工作流程；Metadata／noindex／nofollow、Privacy 草案保護與 Contact 無收件狀態不變。
 
 Task 011 另以明確的 Tailwind 掃描排除規則保護本次驗收資料／報告；CI artifact 曾揭露文件文字增加無用 utilities，已修正並以完整產物 bridge 與最終來源補驗確認受測 runtime 保持一致，詳細版本界線見實作報告。
+
+## Task 012 無障礙稽核與修正
+
+以當次九個公開頁及實際 disclosure 狀態稽核 WCAG 2.2 A／AA，保留 2／2.1 回歸。手機選單在焦點離開時關閉並保留原生焦點順序；Footer「網站目錄」涵蓋全部九個公開網址；Hero／CTA 的漸層小字使用既有較深文字 Token。About 品牌卡片改由內容決定高度，避免使用者覆寫文字間距時裁切連結。
+
+規格見 [Task 012](docs/task/task012.md)，完整來源、四類問題、55 項準則適用性、實際 axe／Orca／鍵盤／200% browser zoom／320 CSS px／文字間距驗收、五張截圖及版本界線見 [實作與驗證報告](docs/reports/task012-implementation.md)。[證據說明](docs/reports/task012-artifacts/README.md) 提供原始結果與重現方式；工具掃描不等於完整無障礙認證，未測的行動 AT／其他平台保持待辦。
+
+依賴、Logo 原檔、品牌色值、字體、Metadata／noindex／nofollow、Privacy 草案保護、Contact 未開放收件及 GitHub Pages 工作流程保持原有架構。文件 Repository 的最新品牌／經營模式決議與網站既有內容有差異，列於報告另行處理，本次不以無障礙修正代替品牌或法律核准。遠端 CI、授權合併、main 部署及公開網址驗證在同一 PR 記錄實際事件。

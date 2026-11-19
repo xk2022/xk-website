@@ -198,7 +198,7 @@ Task 001 prepares the foundation for design-system work and the later content pa
 
 ## Task 003 歷史更新 — 企業首頁與 Pages 部署準備
 
-Task 003 以 `main` 的 `6feb400996e45e0e9bc285425a99e014f5381057` 為基準建立 `feature/website-homepage`；已實際確認 Task 002 合併成果是該版本祖先。網站目前的 [task003.md](task/task003.md) 明確要求完整企業首頁，優先於 README 舊里程碑表把 Task 003 僅列為 Header／Footer 的描述。原 Task 001 文件已更名為 [task001-implementation-notes.md](task/task001-implementation-notes.md)，`task002.md` 是空檔，完整 Task 002 規格為 [task002.zh-TW.md](task/task002.zh-TW.md)；本次僅修正引用，不改寫任務原稿或先前驗收紀錄。
+Task 003 以 `main` 的 `6feb400996e45e0e9bc285425a99e014f5381057` 為基準建立 `feature/website-homepage`；已實際確認 Task 002 合併成果是該版本祖先。網站目前的 [task003.md](../task/task003.md) 明確要求完整企業首頁，優先於 README 舊里程碑表把 Task 003 僅列為 Header／Footer 的描述。原 Task 001 文件已更名為 [task001-implementation-notes.md](task/task001-implementation-notes.md)，`task002.md` 是空檔，完整 Task 002 規格為 [task002.zh-TW.md](task/task002.zh-TW.md)；本次僅修正引用，不改寫任務原稿或先前驗收紀錄。
 
 本次完成七個首頁區塊、正式 Header／Footer、桌面及可操作的手機導覽，延用 Task 002 元件 API、原始 Logo 路徑及暫定狀態。首頁內容與已確認的聯絡管道分開集中管理；目前沒有確認可公開的管道，聯絡區塊保持待確認，服務、品牌介紹與解決方案以真實首頁錨點導覽。未建立完整內頁、Backend、假表單、假案例或統計。
 
@@ -211,7 +211,7 @@ Task 003 以 `main` 的 `6feb400996e45e0e9bc285425a99e014f5381057` 為基準建�
 
 ## Task 004 歷史更新 — About Us 品牌介紹頁
 
-本次以最新 `main` 的 `833db52344b16a270ef0e9531f33ab1f09b58200` 建立 `feature/website-about-page`。Task 003 已由 PR #3 合併（`0ca0760`）；其 main Actions run `44257982809` 已成功發布，並實際確認公開首頁 HTTP 200 與企業首頁內容。此為前置狀態，不代表 Task 004 的 About 頁已合併或發布。本次依 [Task 004](task/task004.md) 實作，保留目前 GitHub Pages 架構，交付 PR 待審核，不自動合併。
+本次以最新 `main` 的 `833db52344b16a270ef0e9531f33ab1f09b58200` 建立 `feature/website-about-page`。Task 003 已由 PR #3 合併（`0ca0760`）；其 main Actions run `44257982809` 已成功發布，並實際確認公開首頁 HTTP 200 與企業首頁內容。此為前置狀態，不代表 Task 004 的 About 頁已合併或發布。本次依 [Task 004](../task/task004.md) 實作，保留目前 GitHub Pages 架構，交付 PR 待審核，不自動合併。
 
 新增 `/about` 與集中內容設定，呈現九個語意區塊：Hero、Who We Are、Mission、Vision、五類技術能力、五階段工作方式、匿名創辦人介紹、四項服務理念及 CTA。Task 004 明確允許描述創辦人一人全職經營；姓名與照片設定仍為 null，不新增未確認的身分、年資、證照、法人、辦公室或團隊。願景與 AI SaaS 仍以未來方向表達，CTA 回到真實首頁服務與聯絡錨點。
 
@@ -224,7 +224,7 @@ Header／Footer／手機導覽的 About 更新為 `/about`，原首頁 `#about` 
 
 ## Task 005 歷史更新 — Services 服務介紹頁
 
-本次以最新 `main` 的 `7a8ea793608c7bec8fa212bfee4b2f24b5cf192e`（加入 Task 005 原稿）建立 `feature/website-services-page`。Task 004 已由 PR #4 合併（`57ad0f2`），其 main Actions run `44264779442` 的 quality、Pages build 與 deploy 均成功，並確認公開 About HTTP 200。這些是本次前置狀態，不代替 Task 005 驗收。[Task 005](task/task005.md) 多處明確要求 `feature/website-services-page`，結尾 `feature/website-task005` 僅為建議，因此採前者。
+本次以最新 `main` 的 `7a8ea793608c7bec8fa212bfee4b2f24b5cf192e`（加入 Task 005 原稿）建立 `feature/website-services-page`。Task 004 已由 PR #4 合併（`57ad0f2`），其 main Actions run `44264779442` 的 quality、Pages build 與 deploy 均成功，並確認公開 About HTTP 200。這些是本次前置狀態，不代替 Task 005 驗收。[Task 005](../task/task005.md) 多處明確要求 `feature/website-services-page`，結尾 `feature/website-task005` 僅為建議，因此採前者。
 
 本次 Services 內容以五類服務與十個區塊組成：Hero、Overview、Website、Java、Integration & Database、AI & Automation、Cloud & Infrastructure、服務組合、五階段合作流程與 CTA。文案及明確 TypeScript 型別集中於 `src/config/services.ts`，各區塊重用既有 Design System，預設為 Server Components。共用導覽更新為 `/services`；首頁既有 `/#services`、`/#service-{anchor}` 與 Maintenance 分類保留，服務明細內頁仍未公開。
 
@@ -247,7 +247,7 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 
 原兩次Pages 工具 FAIL 保留：logical href Base Path 預期錯判，以及 HEAD 事件分類器的空URL解析。以原始Promise／CDP／Next source／後續 tree GET 交叉證明 165 個 HEAD 實際成功 200；僅符合精確條件才分類，其他錯誤仍 FAIL。修工具後全套重驗 Exit 0；app 程式碼指紋全程相同，沒有以改產品 prefetch、跳過測試或刪除錯誤換取通過。安裝時既有 ESLint deprecated 提示保留，未升降級套件。
 
-正式實作／驗證與失敗重驗證據見 [Task 006 報告](reports/task006-implementation.md) 及 [結構化驗證紀錄](reports/task006-verification.json)。此紀錄截止於建立 PR 前；真實 Commit／PR／CI 與後續 main 部署／公開站結果須在實際發生後補入報告與同PR交付紀錄，不能由本機結果或過去任務推定。
+正式實作／驗證與失敗重驗證據見 [Task 006 報告](../reports/task006-implementation.md) 及 [結構化驗證紀錄](../reports/task006-verification.json)。此紀錄截止於建立 PR 前；真實 Commit／PR／CI 與後續 main 部署／公開站結果須在實際發生後補入報告與同PR交付紀錄，不能由本機結果或過去任務推定。
 
 
 ## Task 007 歷史更新 — Portfolio 技術作品集
@@ -264,7 +264,7 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 
 初輪一般模式的工具 lang 誤判及 favicon GET 失敗、初輪 Pages 的 3 GET＋1 HEAD 分類失敗均保留原 FAIL。favicon 首輪缺少足夠資料追認原因；新增實際圖示 body／SHA 與等待後，完整一般重驗零資源失敗。Pages 工具的 resize 後立即導航造成 prefetch 競態，另有跨 document 借用 tree 的配對缺陷；修正等待與嚴格來源邊界後完整重驗，沒有新增 GET 忽略清單、停用產品 prefetch 或改產品碼換取 PASS。啟動與停止伺服器的環境限制及真實退出碼亦單獨記錄。
 
-七張指定 PNG 與 320／375px 補充圖已實際人工檢視，最終 35 候選圖與首輪完全同 SHA，正式七圖依原 bytes 複製。完整報告：[Task 007 實作與驗證](reports/task007-implementation.md)；逐項結果：[驗證摘要](reports/task007-verification.json)；100 份原始 JSON：[壓縮證據](reports/task007-evidence.json.gz)，還原 SHA 100/100。此紀錄截止於 PR 前本機交付；真實 Commit／PR／CI、授權合併、main 部署及公開網址結果分階段於報告與同 PR 最新交付紀錄確認，不預填識別碼或推定已部署。
+七張指定 PNG 與 320／375px 補充圖已實際人工檢視，最終 35 候選圖與首輪完全同 SHA，正式七圖依原 bytes 複製。完整報告：[Task 007 實作與驗證](../reports/task007-implementation.md)；逐項結果：[驗證摘要](../reports/task007-verification.json)；100 份原始 JSON：[壓縮證據](../reports/task007-evidence.json.gz)，還原 SHA 100/100。此紀錄截止於 PR 前本機交付；真實 Commit／PR／CI、授權合併、main 部署及公開網址結果分階段於報告與同 PR 最新交付紀錄確認，不預填識別碼或推定已部署。
 
 
 ## Task 008 歷史更新 — Contact 聯絡資訊頁
@@ -277,7 +277,7 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 
 最終程式碼指紋為 `42c8e5bf5b069f643981fdef2741cd530cd55809123c744c24ded3d2c2a4c62b`。初次 npm ci 因預設 cache 路徑無法建立而 FAIL／Exit 254，原始紀錄保留；改用 `/tmp` npm cache 後重驗 Exit 0，後續 TypeScript、零警告 ESLint、一般 Build、Pages Build 均 Exit 0。一般 production 九頁 fresh 驗收 27/27 PASS，39 unique 站內目的地／345 link occurrences、28 資源 GET 200，沒有提交、外部收件、Cookie／Storage 寫入或 raw browser failures；未知路由與 dev 頁 404。Pages validator 只追加 Contact，原八頁／資源／404／.nojekyll／dev payload 保護完整保留。
 
-最終 Pages 全套重驗 148 項＝141 PASS＋7 有據 N/A、實際 Exit 0；九頁五寬45case、48次axe零違規、39個站內目的地／345個連結、147 個資源 GET 200、506 個原始 HEAD 事件依同document與來源嚴格分類，非預期錯誤0。首輪Pages在touch尚PENDING即提早結束，缺completion code，原snapshot、kernel觀察0與實際工具exit未知分開保存，不追認PASS；獨立touch診斷及加入keepalive／有界trace後全套重驗均Exit0，未改產品碼。七指定PNG與窄版／fixture補圖已產生，Root 實看前一 epoch 22 張，最終七張重新拍攝並以實際 bytes／SHA 橋接相同畫面，另有獨立視覺覆核；沒有把合成管道當公開或收件證據。完整本次來源、資料流、檔案清單、失敗修正及驗收紀錄見 [Task 008 實作與驗證報告](reports/task008-implementation.md)。本機、PR CI、Review、授權 merge、main CI、部署與公開網址分階段記錄，不以資訊頁 HTTP 200 或本機建置成功當作已能收件或已正式部署。
+最終 Pages 全套重驗 148 項＝141 PASS＋7 有據 N/A、實際 Exit 0；九頁五寬45case、48次axe零違規、39個站內目的地／345個連結、147 個資源 GET 200、506 個原始 HEAD 事件依同document與來源嚴格分類，非預期錯誤0。首輪Pages在touch尚PENDING即提早結束，缺completion code，原snapshot、kernel觀察0與實際工具exit未知分開保存，不追認PASS；獨立touch診斷及加入keepalive／有界trace後全套重驗均Exit0，未改產品碼。七指定PNG與窄版／fixture補圖已產生，Root 實看前一 epoch 22 張，最終七張重新拍攝並以實際 bytes／SHA 橋接相同畫面，另有獨立視覺覆核；沒有把合成管道當公開或收件證據。完整本次來源、資料流、檔案清單、失敗修正及驗收紀錄見 [Task 008 實作與驗證報告](../reports/task008-implementation.md)。本機、PR CI、Review、授權 merge、main CI、部署與公開網址分階段記錄，不以資訊頁 HTTP 200 或本機建置成功當作已能收件或已正式部署。
 
 最後完整 staged Diff 發現一個新元件 EOF 多餘空行，僅移除一個 LF；保留原 5dfa8be441c40d2c447a25fd05bce494e4d8ba0290bd21fb3e22630960c8c964 與新 42c8e5bf5b069f643981fdef2741cd530cd55809123c744c24ded3d2c2a4c62b 兩 epoch，不將舊結果改標新版本。最終五品質與普通／Pages 重新完整驗收均實際 Exit 0；文件檢查同步覆蓋 staged／unstaged 及完整 main 比較。
 
@@ -285,9 +285,9 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 
 使用者於 2026-11-19 要求檢視前次作業習慣、留下可沿用的 subagent 紀錄並優化後續任務，指定 `feature/subagent` 及完成後合併 main。本次從乾淨的 `main@e77cd8110e110b6405e6bf3ce354ffb041b34c41` 建立分支；授權只適用本次流程改善，不延伸為後續任務的發布許可。
 
-新增 [Subagent 協作與驗證流程](subagent-workflow.md)，記錄 Task 008 的真實 cache／退出紀錄／格式檢查／重驗與交接問題。後續以當次規格為準、按需要分工、Root 一次編排 build／server／交付、freeze 前收斂完整 Diff，再依變更影響選擇重驗；不靠 fingerprint 變動自動決定整套重跑。AGENTS 加入必讀入口與執行規則，README 增加導覽，不改舊 Task 規格或歷史報告。
+新增 [Subagent 協作與驗證流程](../subagent-workflow.md)，記錄 Task 008 的真實 cache／退出紀錄／格式檢查／重驗與交接問題。後續以當次規格為準、按需要分工、Root 一次編排 build／server／交付、freeze 前收斂完整 Diff，再依變更影響選擇重驗；不靠 fingerprint 變動自動決定整套重跑。AGENTS 加入必讀入口與執行規則，README 增加導覽，不改舊 Task 規格或歷史報告。
 
-新增 [run-with-evidence.py](../scripts/run-with-evidence.py)，僅用 Python 標準函式庫，將真實 OS wait 結果、命令、時間及 stdout／stderr SHA 寫入原子回執與獨立 log；保留 child returnCode 與 wrapper exitCode 的差異。拒絕覆寫現有證據，逾時／信號只清理本次建立的 process group。receipt 的 PASS 僅表示程序成功退出，驗收仍須核對 Required 項目、結束標記、數量與版本。
+新增 [run-with-evidence.py](../../scripts/run-with-evidence.py)，僅用 Python 標準函式庫，將真實 OS wait 結果、命令、時間及 stdout／stderr SHA 寫入原子回執與獨立 log；保留 child returnCode 與 wrapper exitCode 的差異。拒絕覆寫現有證據，逾時／信號只清理本次建立的 process group。receipt 的 PASS 僅表示程序成功退出，驗收仍須核對 Required 項目、結束標記、數量與版本。
 
 已實際執行 14 項工具檢查，整體 Exit 0：成功 0、真失敗 7、timeout 124／無存活子程序、覆寫拒絕 2、缺少 executable 127、wrapper 受信號 143（即使 child 自行 Exit 0 仍 FAIL）、child signal 原 returnCode -15，以及非法 timeout 拒絕。預期的非零退出是測試輸入，未將其原始 FAIL 回執改為 PASS；工具契約符合預期的測試才判 PASS。完整原始結果暫存於 `/tmp/xk-subagent-workflow/`，PR 記錄最終檢查與遠端實際結果。
 

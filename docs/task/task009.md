@@ -34,7 +34,7 @@
 
 ### 3.1 網站規格與實際程式
 
-讀取 [任務索引](README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)，以及 [AGENTS](../../AGENTS.md)、[README](../../README.md)、[歷史紀錄](../implementation-notes.md)、[Design System／元件 API](../brand-design-system.md)、[首頁](../homepage-implementation.md)、[About](../about-implementation.md)、[Services](../services-implementation.md) 與 [Pages 指南](../github-pages-deployment.md)。後續 Contact 以 `docs/task/task008.md` 及實際已合併程式為準，不能只依規格假設表單已存在。
+讀取 [任務索引](README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)，以及 [AGENTS](../../AGENTS.md)、[README](../../README.md)、[歷史紀錄](../implementation-notes.md)、[Design System／元件 API](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 指南](../reports/github-pages-deployment.md)。後續 Contact 以 `docs/task/task008.md` 及實際已合併程式為準，不能只依規格假設表單已存在。
 
 以下為網站 `main` 研究快照的實際來源；執行時重新記錄 Base 與 Blob，不重用舊測試結果：
 

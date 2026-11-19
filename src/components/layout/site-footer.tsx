@@ -4,6 +4,7 @@ import { XkLogo } from "@/components/brand/xk-logo";
 import { Container } from "@/components/layout/container";
 import { services } from "@/config/homepage";
 import { contactNavigation, primaryNavigation } from "@/config/navigation";
+import { portfolioProjects } from "@/config/portfolio";
 import { siteConfig } from "@/config/site";
 import { isPrivacyPolicyPublished } from "@/lib/privacy-publication";
 
@@ -35,7 +36,7 @@ export function SiteFooter() {
           </div>
 
           <nav aria-label="頁尾導覽">
-            <h2 className="type-body mb-4 font-semibold">網站導覽</h2>
+            <h2 className="type-body mb-4 font-semibold">網站目錄</h2>
             <ul className="type-body-sm space-y-1">
               {primaryNavigation.map(({ href, label }) => (
                 <li key={href}>
@@ -47,6 +48,17 @@ export function SiteFooter() {
                   {contactNavigation.label}
                 </Link>
               </li>
+              {portfolioProjects.map((project) => (
+                <li key={project.slug}>
+                  <Link
+                    href={`/portfolio/${project.slug}`}
+                    lang="en"
+                    className={`${footerLinkStyles} max-w-full break-words`}
+                  >
+                    {project.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
 

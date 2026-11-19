@@ -40,7 +40,7 @@
 - [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)。
 - [Task 001 標準規格](task001.md)、[Task 001 英文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md) 與 [繁體中文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.zh-TW.md)。
 - [Task 002 繁體中文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)；本檔重構前英文原稿保留於 Git 歷史。
-- [歷史實作紀錄](../implementation-notes.md) 與 [品牌設計系統／API／Task 002 實作報告](../brand-design-system.md)。
+- [歷史實作紀錄](../implementation-notes.md) 與 [品牌設計系統／API／Task 002 實作報告](../reports/brand-design-system.md)。
 - [網站內保留素材的來源紀錄](../../public/brand/source/README.md)。
 - 文件 Repository `doc/01_business-plan/week-02/` 的 `01_brand-identity_品牌視覺識別規範.md`、`02_logo-guidelines_XK Logo 設計與使用規範.md`、`03_color-palette_品牌色彩系統規範.md`、`04_typography_品牌字體與排版規範.md` 及相關架構／MVP。正式執行須核對 Tree、Commit／Blob，不假設短檔名存在。
 
@@ -258,7 +258,7 @@ CSS Custom Properties 集中於 `src/app/globals.css`，品牌值、語意 alias
 | Backend／聯絡送出 | Not Applicable：明確排除 | 不建 API／假送出／AI Chatbot | PENDING |
 | 發布／網域 | Not Applicable：非設計系統範圍 | 不改 DNS／Domain、不宣稱未執行上線 | PENDING |
 
-先驗一般 build 的新 production server 並停止，再跑 Pages；共用.next 時不得用 npm start 提供 export，要重測一般模式先重建。適用 Pages 依 [既有操作指南](../github-pages-deployment.md) 掛載 `/xk-website` 或實際 Base Path，檢查 HTTP 與實體檔，不只看 href。
+先驗一般 build 的新 production server 並停止，再跑 Pages；共用.next 時不得用 npm start 提供 export，要重測一般模式先重建。適用 Pages 依 [既有操作指南](../reports/github-pages-deployment.md) 掛載 `/xk-website` 或實際 Base Path，檢查 HTTP 與實體檔，不只看 href。
 
 原稿未要求導入測試框架，可使用應用依賴外的暫存瀏覽器／axe 工具，不增加網站 npm 套件。axe 不等於完整無障礙認證，需列實測狀態及未覆蓋人工輔助科技檢查。
 
@@ -273,7 +273,7 @@ CSS Custom Properties 集中於 `src/app/globals.css`，品牌值、語意 alias
 
 ## 12. Test Report & Evidence
 
-獨立報告採既有 [docs/brand-design-system.md](../brand-design-system.md)，含 API、設計決策與原 Task 002 結果。再次正式執行時新增可辨識的新一輪紀錄，保留歷史快照，不將文件重構寫成新功能驗收。
+獨立報告採既有 [docs/brand-design-system.md](../reports/brand-design-system.md)，含 API、設計決策與原 Task 002 結果。再次正式執行時新增可辨識的新一輪紀錄，保留歷史快照，不將文件重構寫成新功能驗收。
 
 至少記錄新增／修改檔案、來源 Commit／Blob、色彩／語意、九 Typography 及其餘 Tokens、XkLogo 原稿／暫定說明、共用元件 API、幾何視覺、Server／Client 及依賴影響。
 
