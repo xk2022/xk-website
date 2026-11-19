@@ -280,3 +280,15 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 最終 Pages 全套重驗 148 項＝141 PASS＋7 有據 N/A、實際 Exit 0；九頁五寬45case、48次axe零違規、39個站內目的地／345個連結、147 個資源 GET 200、506 個原始 HEAD 事件依同document與來源嚴格分類，非預期錯誤0。首輪Pages在touch尚PENDING即提早結束，缺completion code，原snapshot、kernel觀察0與實際工具exit未知分開保存，不追認PASS；獨立touch診斷及加入keepalive／有界trace後全套重驗均Exit0，未改產品碼。七指定PNG與窄版／fixture補圖已產生，Root 實看前一 epoch 22 張，最終七張重新拍攝並以實際 bytes／SHA 橋接相同畫面，另有獨立視覺覆核；沒有把合成管道當公開或收件證據。完整本次來源、資料流、檔案清單、失敗修正及驗收紀錄見 [Task 008 實作與驗證報告](reports/task008-implementation.md)。本機、PR CI、Review、授權 merge、main CI、部署與公開網址分階段記錄，不以資訊頁 HTTP 200 或本機建置成功當作已能收件或已正式部署。
 
 最後完整 staged Diff 發現一個新元件 EOF 多餘空行，僅移除一個 LF；保留原 5dfa8be441c40d2c447a25fd05bce494e4d8ba0290bd21fb3e22630960c8c964 與新 42c8e5bf5b069f643981fdef2741cd530cd55809123c744c24ded3d2c2a4c62b 兩 epoch，不將舊結果改標新版本。最終五品質與普通／Pages 重新完整驗收均實際 Exit 0；文件檢查同步覆蓋 staged／unstaged 及完整 main 比較。
+
+## Subagent 執行流程優化
+
+使用者於 2026-11-19 要求檢視前次作業習慣、留下可沿用的 subagent 紀錄並優化後續任務，指定 `feature/subagent` 及完成後合併 main。本次從乾淨的 `main@e77cd8110e110b6405e6bf3ce354ffb041b34c41` 建立分支；授權只適用本次流程改善，不延伸為後續任務的發布許可。
+
+新增 [Subagent 協作與驗證流程](subagent-workflow.md)，記錄 Task 008 的真實 cache／退出紀錄／格式檢查／重驗與交接問題。後續以當次規格為準、按需要分工、Root 一次編排 build／server／交付、freeze 前收斂完整 Diff，再依變更影響選擇重驗；不靠 fingerprint 變動自動決定整套重跑。AGENTS 加入必讀入口與執行規則，README 增加導覽，不改舊 Task 規格或歷史報告。
+
+新增 [run-with-evidence.py](../scripts/run-with-evidence.py)，僅用 Python 標準函式庫，將真實 OS wait 結果、命令、時間及 stdout／stderr SHA 寫入原子回執與獨立 log；保留 child returnCode 與 wrapper exitCode 的差異。拒絕覆寫現有證據，逾時／信號只清理本次建立的 process group。receipt 的 PASS 僅表示程序成功退出，驗收仍須核對 Required 項目、結束標記、數量與版本。
+
+已實際執行 14 項工具檢查，整體 Exit 0：成功 0、真失敗 7、timeout 124／無存活子程序、覆寫拒絕 2、缺少 executable 127、wrapper 受信號 143（即使 child 自行 Exit 0 仍 FAIL）、child signal 原 returnCode -15，以及非法 timeout 拒絕。預期的非零退出是測試輸入，未將其原始 FAIL 回執改為 PASS；工具契約符合預期的測試才判 PASS。完整原始結果暫存於 `/tmp/xk-subagent-workflow/`，PR 記錄最終檢查與遠端實際結果。
+
+本次只有文件與開發工具，沒有變動 src、public、依賴／lockfile、Next／TypeScript 設定、Pages builder 或 workflow。本機驗證針對工具、Markdown／連結、完整 staged／unstaged Diff 與受保護檔案；既有 PR／main CI 仍照常執行，不重跑不受影響的九頁瀏覽器矩陣。CI、合併及部署以實際發生後的 PR 紀錄為準。

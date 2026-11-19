@@ -4,6 +4,8 @@
 
 開發里程碑與完整規格請見 [Task 001–014 任務索引](docs/task/README.md)。Task 001–007 的技術基礎、Design System、首頁、About、Services、Solutions 與 Portfolio 已合併；Task 008 為 Contact 資訊頁。Privacy、SEO、Performance、Accessibility、Vercel 與 Domain 各自依後續獨立任務處理，不因相關區塊存在而視為完成。
 
+開發協作與驗收請先讀 [Subagent 作業紀錄與執行流程](docs/subagent-workflow.md)，並依 [AGENTS.md](AGENTS.md) 與當次 Task 規格執行。流程包含分工責任、提早檢查完整 Diff、持久化退出碼及依變更影響決定重驗範圍。
+
 ## 部署方向
 
 使用者於 Task 003 選擇 **GitHub Actions → GitHub Pages 靜態網站**。正式模式仍保留一般 Next.js 建置，日後可使用 Vercel 的 Next.js preset、Repository 根目錄 `.`、production branch `main`；本次不需要 Vercel Secrets。
