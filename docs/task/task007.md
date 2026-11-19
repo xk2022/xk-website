@@ -32,7 +32,7 @@
 
 ## 3. Reference Documents
 
-先完整閱讀 [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)，以及 [歷史紀錄](../implementation-notes.md)、[Design System](../brand-design-system.md)、[首頁](../homepage-implementation.md)、[About](../about-implementation.md)、[Services](../services-implementation.md) 與 [Pages 指南](../github-pages-deployment.md)。歷史替代原稿已刪除時，只使用原有固定歷史快照，不復原刪檔。
+先完整閱讀 [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)，以及 [歷史紀錄](../implementation-notes.md)、[Design System](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 指南](../reports/github-pages-deployment.md)。歷史替代原稿已刪除時，只使用原有固定歷史快照，不復原刪檔。
 
 檢查 `src/config/navigation.ts`、`contact.ts`、`services.ts`、`site.ts`，Header／Footer／Mobile Navigation、現有路由、素材、`scripts/build-github-pages.mjs`、Next 設定與 workflow。研究快照的 `verifiedContactChannels` 為空，Footer 的作品案例仍為規劃文字，不能當作已實作連結。
 

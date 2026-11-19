@@ -11,7 +11,7 @@ Task 003 期間，使用者明確選擇 GitHub Actions 與 GitHub Pages。這項
 | `npm run start` | 執行已完成的一般 Next.js production build |
 | `npm run build:pages` | 靜態匯出與檢查，輸出 `out/`，供 Pages 使用 |
 
-建置工具為 [build-github-pages.mjs](../scripts/build-github-pages.mjs)，Next.js 對應設定在 [next.config.ts](../next.config.ts)。`build:pages` 在子程序設定 `XK_PAGES_EXPORT=1`，並使用 `output: "export"`、`trailingSlash: true`、不依賴伺服器的圖片模式。一般建置不啟用這些條件。
+建置工具為 [build-github-pages.mjs](../../scripts/build-github-pages.mjs)，Next.js 對應設定在 [next.config.ts](../../next.config.ts)。`build:pages` 在子程序設定 `XK_PAGES_EXPORT=1`，並使用 `output: "export"`、`trailingSlash: true`、不依賴伺服器的圖片模式。一般建置不啟用這些條件。
 
 `XK_PAGES_BASE_PATH` 預設為 `/xk-website`，對應專案網站 `https://xk2022.github.io/xk-website/`。若旗標明確設為空字串，代表根路徑；只有實際部署位置變更時才調整，不會因此自動更改 GitHub Pages Custom Domain 或 DNS。CI 從 GitHub Pages 設定取得實際 `base_path`。
 
@@ -27,7 +27,7 @@ Script 會在 Next.js 成功後：
 
 ## Actions 工作流程
 
-[ci.yml](../.github/workflows/ci.yml) 在 Pull Request、`main` 推送及手動執行時啟動：
+[ci.yml](../../.github/workflows/ci.yml) 在 Pull Request、`main` 推送及手動執行時啟動：
 
 | Job | 工作內容 | 權限與限制 |
 | --- | --- | --- |

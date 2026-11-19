@@ -17,7 +17,7 @@ export function PortfolioCta() {
         <div className="min-w-0">
           <p lang="en" className="type-caption mb-4 font-semibold text-secondary">EXPLORE THE NEXT STEP</p>
           <h2 id="portfolio-cta-title" className="type-h2 text-primary">{cta.title}</h2>
-          <p className="type-body-lg mt-5 max-w-2xl text-muted-foreground">{cta.description}</p>
+          <p className="type-body-lg mt-5 max-w-2xl text-foreground">{cta.description}</p>
         </div>
         <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
           <Button asChild size="lg"><Link href={cta.primaryCta.href}>{cta.primaryCta.label}<ArrowUpRight aria-hidden="true" /></Link></Button>

@@ -14,7 +14,7 @@ export function AboutCta() {
         <div>
           <p lang="en" className="type-caption mb-4 font-semibold text-secondary">EXPLORE WHAT COMES NEXT</p>
           <h2 id="about-cta-title" className="type-h2 text-primary">讓我們一起探索下一個數位可能。</h2>
-          <p className="type-body-lg mt-5 max-w-2xl text-muted-foreground">無論是企業網站、Java 系統、系統整合或 AI 應用，都可以從理解需求開始。</p>
+          <p className="type-body-lg mt-5 max-w-2xl text-foreground">無論是企業網站、Java 系統、系統整合或 AI 應用，都可以從理解需求開始。</p>
         </div>
         <div className="flex flex-wrap gap-3 lg:justify-end">
           <Button asChild size="lg"><Link href="/#services">了解服務 <ArrowUpRight aria-hidden="true" /></Link></Button>

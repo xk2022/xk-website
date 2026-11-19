@@ -1,6 +1,6 @@
 # Task 003 — Corporate Homepage Development（官方企業網站首頁開發）
 
-本文件為 **Task Specification**，說明執行 Task 003 時的需求與驗收標準。章節統一不代表重新執行首頁開發；本文的驗收狀態預設為 **PENDING**。已完成工作的實際結果、當時環境與歷史限制，請查閱 [首頁實作紀錄](../homepage-implementation.md) 與對應 GitHub 紀錄，不以本規格取代實作報告。
+本文件為 **Task Specification**，說明執行 Task 003 時的需求與驗收標準。章節統一不代表重新執行首頁開發；本文的驗收狀態預設為 **PENDING**。已完成工作的實際結果、當時環境與歷史限制，請查閱 [首頁實作紀錄](../reports/homepage-implementation.md) 與對應 GitHub 紀錄，不以本規格取代實作報告。
 
 ## 1. Task Overview
 
@@ -29,7 +29,7 @@ Task 001 建立 Next.js 基礎架構；Task 002 建立 Brand Tokens、Typography
 | Documentation Repository | `https://github.com/xk2022/xplore-kaleidoscope`，Business Plan、品牌、技術與產品規劃；僅允許讀取 |
 | Base Branch | 執行時實際確認的最新 `main`；不得覆蓋未提交修改 |
 | Feature Branch | `feature/website-homepage`；若已存在，先檢查分支與工作狀態，不重設或覆蓋既有成果 |
-| 原 Task 003 Base Commit | `6feb400996e45e0e9bc285425a99e014f5381057`，僅為 [原實作報告](../homepage-implementation.md) 記載的歷史基準，不預設為重跑時最新版本 |
+| 原 Task 003 Base Commit | `6feb400996e45e0e9bc285425a99e014f5381057`，僅為 [原實作報告](../reports/homepage-implementation.md) 記載的歷史基準，不預設為重跑時最新版本 |
 | 前置任務 | Task 001、Task 002；必須實際確認 Task 002 已合併至 `main`，不可僅憑檔案存在或口頭預期 |
 | 原文件讀取版本 | `3996730176e4ad7237c66f541d61405f2667934e`，為 Task 003 報告記錄的文件 Repository 歷史版本；重新執行時記錄實際讀取版本 |
 | 部署前置狀態 | 檢查既有 Pages Source、公開網址、Environment 與實際 workflow；網址回應 200 不足以證明目前程式碼已發布 |
@@ -45,10 +45,10 @@ Task 001 建立 Next.js 基礎架構；Task 002 建立 Brand Tokens、Typography
 開始實作前完整閱讀並確認實際檔名：
 
 - [README.md](../../README.md)、[AGENTS.md](../../AGENTS.md)。
-- [implementation notes](../implementation-notes.md)、[品牌設計系統](../brand-design-system.md)。
+- [implementation notes](../implementation-notes.md)、[品牌設計系統](../reports/brand-design-system.md)。
 - [Task 001 規格](task001.md)、[Task 002 規格](task002.md) 及必要的 [Task 002 繁體中文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)。
 - Task 001 的歷史替代來源 [task001-implementation-notes.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md)；不得假設所有原稿在當時或目前均存在。
-- [首頁實作紀錄](../homepage-implementation.md)、[GitHub Pages 部署指南](../github-pages-deployment.md)。
+- [首頁實作紀錄](../reports/homepage-implementation.md)、[GitHub Pages 部署指南](../reports/github-pages-deployment.md)。
 
 缺少文件時記錄缺漏與已確認來源，不自行補造規格、測試結果或發布狀態。既有報告是證據來源，不是將過去 PASS 複製為本次驗收結果的依據。
 
@@ -519,7 +519,7 @@ src/
 
 ## 12. Test Report & Evidence
 
-Task 003 的獨立實作與測試報告使用 [docs/homepage-implementation.md](../homepage-implementation.md)；部署操作與模式差異參閱 [docs/github-pages-deployment.md](../github-pages-deployment.md)。歷史總覽位於 [implementation notes](../implementation-notes.md)。
+Task 003 的獨立實作與測試報告使用 [docs/homepage-implementation.md](../reports/homepage-implementation.md)；部署操作與模式差異參閱 [docs/github-pages-deployment.md](../reports/github-pages-deployment.md)。歷史總覽位於 [implementation notes](../implementation-notes.md)。
 
 報告必須記錄：
 

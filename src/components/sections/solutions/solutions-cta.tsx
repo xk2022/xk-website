@@ -22,7 +22,7 @@ export function SolutionsCta() {
         <div className="min-w-0">
           <p lang="en" className="type-caption mb-4 font-semibold text-secondary">EXPLORE THE NEXT STEP</p>
           <h2 id="solutions-cta-title" className="type-h2 text-primary">{cta.title}</h2>
-          <p className="type-body-lg mt-5 max-w-2xl text-muted-foreground">{cta.description}</p>
+          <p className="type-body-lg mt-5 max-w-2xl text-foreground">{cta.description}</p>
           <Link
             href={cta.aboutLink.href}
             className="type-body-sm mt-4 inline-flex min-h-11 max-w-full items-center gap-2 rounded-sm font-medium text-secondary underline-offset-4 hover:underline"

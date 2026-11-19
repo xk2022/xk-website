@@ -39,7 +39,7 @@ export function ProjectDetail({ project }: { project: PortfolioProject }) {
       <Section id="project-overview" background="surface" aria-labelledby="project-title" className="relative overflow-hidden border-b">
         <BrandPattern variant="gradient" />
         <Container className="relative min-w-0">
-          <nav aria-label="麵包屑導覽" className="type-body-sm mb-8 flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 text-muted-foreground">
+          <nav aria-label="麵包屑導覽" className="type-body-sm mb-8 flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 text-foreground">
             <Link href="/" className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">首頁</Link>
             <span aria-hidden="true">/</span>
             <Link href={detail.backLink.href} className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">技術作品集</Link>
@@ -49,14 +49,14 @@ export function ProjectDetail({ project }: { project: PortfolioProject }) {
           <div className="max-w-4xl">
             <p lang="en" className="type-caption mb-4 break-words font-semibold text-secondary">{project.category}</p>
             <h1 id="project-title" lang="en" className="type-h1 break-words text-primary">{project.title}</h1>
-            <p className="type-body-lg mt-6 text-muted-foreground">{project.summary}</p>
-            <div className="mt-6 flex min-w-0 flex-wrap items-center gap-4">
+            <p className="type-body-lg mt-6 text-foreground">{project.summary}</p>
+            <div className="mt-6 flex min-w-0 flex-wrap items-center gap-4 [&>p]:text-foreground">
               <ProjectStatusLabel status={project.status} />
               <ProjectTypeLabel />
             </div>
           </div>
           <div className="mt-10 max-w-4xl border-t pt-8 sm:mt-12">
-            <SectionHeading id="project-overview-title" titleLang="zh-TW" {...detail.overview} className="mb-5 sm:mb-6" />
+            <SectionHeading id="project-overview-title" titleLang="zh-TW" {...detail.overview} className="mb-5 sm:mb-6 [&>p:last-child]:text-foreground" />
             <p className="type-body text-foreground">{project.businessContext}</p>
           </div>
         </Container>
@@ -193,7 +193,7 @@ export function ProjectDetail({ project }: { project: PortfolioProject }) {
       <Section id="project-next-step" aria-labelledby="project-next-step-title" className="relative overflow-hidden">
         <BrandPattern variant="gradient" />
         <Container className="relative min-w-0">
-          <SectionHeading id="project-next-step-title" eyebrow="CONTINUE EXPLORING" titleLang="zh-TW" {...detail.nextStep} />
+          <SectionHeading id="project-next-step-title" eyebrow="CONTINUE EXPLORING" titleLang="zh-TW" {...detail.nextStep} className="[&>p:last-child]:text-foreground" />
           <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button asChild size="lg"><Link href={contactNavigation.href}>{portfolioPage.cta.primaryCta.label}<ArrowUpRight aria-hidden="true" /></Link></Button>
             <Button asChild size="lg" variant="outline"><Link href="/services">了解服務<ArrowUpRight aria-hidden="true" /></Link></Button>

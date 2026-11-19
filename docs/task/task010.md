@@ -35,7 +35,7 @@
 
 ### 3.1 網站規格與實際來源
 
-讀取 [任務索引](README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)，以及 [AGENTS](../../AGENTS.md)、[README](../../README.md)、[歷史紀錄](../implementation-notes.md)、[Design System](../brand-design-system.md)、[首頁](../homepage-implementation.md)、[About](../about-implementation.md)、[Services](../services-implementation.md) 與 [Pages 部署指南](../github-pages-deployment.md)。原 Task 006 與後續頁面規格是需求來源，不能據此假設對應 route 已實作。
+讀取 [任務索引](README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)，以及 [AGENTS](../../AGENTS.md)、[README](../../README.md)、[歷史紀錄](../implementation-notes.md)、[Design System](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 部署指南](../reports/github-pages-deployment.md)。原 Task 006 與後續頁面規格是需求來源，不能據此假設對應 route 已實作。
 
 網站 Branch `main`、Commit `e2a8f5a33f24d1ea65a3afc3780014a33c204528` 的重要來源如下；固定版本 URL 與 Blob 用於重現本規格研究，不是未來遠端／公開驗收證據：
 

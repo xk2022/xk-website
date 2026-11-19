@@ -1,6 +1,6 @@
 # Task 004 — About Us 品牌介紹頁實作
 
-依 [Task 004](task/task004.md) 建立 `/about`，讓訪客了解 Xplore Kaleidoscope（XK）的品牌定位、使命、願景、技術能力與工作方式。延用已合併的 XK Design System 與 GitHub Actions → GitHub Pages 靜態部署，不新增 Backend 或相依套件。
+依 [Task 004](../task/task004.md) 建立 `/about`，讓訪客了解 Xplore Kaleidoscope（XK）的品牌定位、使命、願景、技術能力與工作方式。延用已合併的 XK Design System 與 GitHub Actions → GitHub Pages 靜態部署，不新增 Backend 或相依套件。
 
 ## Repository 與前置狀態
 
@@ -18,7 +18,7 @@
 
 已閱讀根目錄 README、AGENTS、Task 001／002／003 原稿與實作紀錄、[首頁實作紀錄](homepage-implementation.md)、[品牌設計系統](brand-design-system.md) 及 [歷史紀錄](implementation-notes.md)。Task 003 的既有合併與發布只證明 About 開發的前置條件成立，不代表本次 About 功能已通過驗收或已公開發布。
 
-`docs/task/task001.md` 仍不存在，Task 001 原稿位於 [task001-implementation-notes.md](task/task001-implementation-notes.md)，另有繁體中文版本。Task 002 英文原稿 [task002.md](task/task002.md) 已恢復為 4534 bytes 的完整規格，[繁體中文版本](task/task002.zh-TW.md) 仍保留；本次修正 AGENTS 目前狀態，先前實作文件的空檔描述維持歷史快照。
+`docs/task/task001.md` 仍不存在，Task 001 原稿位於 [task001-implementation-notes.md](task/task001-implementation-notes.md)，另有繁體中文版本。Task 002 英文原稿 [task002.md](../task/task002.md) 已恢復為 4534 bytes 的完整規格，[繁體中文版本](task/task002.zh-TW.md) 仍保留；本次修正 AGENTS 目前狀態，先前實作文件的空檔描述維持歷史快照。
 
 ## 文件檢查與規格優先順序
 
@@ -196,11 +196,11 @@ axe 結果限於本次實際開啟的 About、首頁、五種 Viewport 與手機
 
 | 內容 | 實際圖檔 | 尺寸 |
 | --- | --- | --- |
-| 桌面完整頁面 | [task004-about-desktop.png](screenshots/task004-about-desktop.png) | 1440 × 6211 |
-| 手機完整頁面 | [task004-about-mobile.png](screenshots/task004-about-mobile.png) | 375 × 10049 |
-| 核心能力 | [task004-about-capabilities.png](screenshots/task004-about-capabilities.png) | 1440 × 1154 |
-| 工作方式 | [task004-about-approach.png](screenshots/task004-about-approach.png) | 1440 × 560 |
-| 頁尾 | [task004-about-footer.png](screenshots/task004-about-footer.png) | 1440 × 541 |
+| 桌面完整頁面 | [task004-about-desktop.png](../screenshots/task004-about-desktop.png) | 1440 × 6211 |
+| 手機完整頁面 | [task004-about-mobile.png](../screenshots/task004-about-mobile.png) | 375 × 10049 |
+| 核心能力 | [task004-about-capabilities.png](../screenshots/task004-about-capabilities.png) | 1440 × 1154 |
+| 工作方式 | [task004-about-approach.png](../screenshots/task004-about-approach.png) | 1440 × 560 |
+| 頁尾 | [task004-about-footer.png](../screenshots/task004-about-footer.png) | 1440 × 541 |
 
 已人工檢視手機整頁、核心能力、工作方式、頁尾，以及 1440px／375px 的 Hero 與創辦人區塊，未發現內容重疊、Logo 失真或裁切。圖示載入及 Console 狀態已納入上述最終重驗。
 

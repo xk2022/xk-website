@@ -18,7 +18,7 @@ export function HomeContactCta() {
         <div>
           <p lang="en" className="type-caption mb-4 font-semibold text-secondary">LET&apos;S BUILD SOMETHING VALUABLE</p>
           <h2 id="contact-title" className="type-h2 text-primary">讓我們一起探索更多可能。</h2>
-          <p className="type-body-lg mt-5 max-w-2xl text-muted-foreground">
+          <p className="type-body-lg mt-5 max-w-2xl text-foreground">
             無論是企業網站、Java 系統開發、系統整合或 AI 應用，歡迎與我們討論您的需求。
           </p>
         </div>

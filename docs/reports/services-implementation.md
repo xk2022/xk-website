@@ -1,6 +1,6 @@
 # Task 005 — Services 服務介紹頁實作紀錄
 
-本文件記錄 [Task 005](task/task005.md) 的服務頁面結構、文案來源、共用元件與驗收範圍。本次品質、一般 Next.js 與 Pages 靜態瀏覽器驗收皆已實際完成，七份指定截圖已產出；以下記錄本次結果，不沿用 Task 001–004。遠端 CI、Commit 與 PR 識別碼以本次 PR Checks、提交紀錄及最終交付報告為準。
+本文件記錄 [Task 005](../task/task005.md) 的服務頁面結構、文案來源、共用元件與驗收範圍。本次品質、一般 Next.js 與 Pages 靜態瀏覽器驗收皆已實際完成，七份指定截圖已產出；以下記錄本次結果，不沿用 Task 001–004。遠端 CI、Commit 與 PR 識別碼以本次 PR Checks、提交紀錄及最終交付報告為準。
 
 ## Repository 與前置條件
 
@@ -214,13 +214,13 @@ axe 結果僅涵蓋上述三個頁面、五種 Viewport、三個展開的手機�
 
 | 內容 | 實際圖檔 | PNG 尺寸 |
 | --- | --- | --- |
-| 桌面完整頁面 | [task005-services-desktop.png](screenshots/task005-services-desktop.png) | 1440 × 7250 |
-| 手機完整頁面 | [task005-services-mobile.png](screenshots/task005-services-mobile.png) | 375 × 13585 |
-| Website Development | [task005-services-website.png](screenshots/task005-services-website.png) | 1440 × 658 |
-| Java Development | [task005-services-java.png](screenshots/task005-services-java.png) | 1440 × 614 |
-| Integration 與 AI | [task005-services-ai.png](screenshots/task005-services-ai.png) | 1440 × 1177 |
-| 合作流程 | [task005-services-process.png](screenshots/task005-services-process.png) | 1440 × 595 |
-| 頁尾 | [task005-services-footer.png](screenshots/task005-services-footer.png) | 1440 × 541 |
+| 桌面完整頁面 | [task005-services-desktop.png](../screenshots/task005-services-desktop.png) | 1440 × 7250 |
+| 手機完整頁面 | [task005-services-mobile.png](../screenshots/task005-services-mobile.png) | 375 × 13585 |
+| Website Development | [task005-services-website.png](../screenshots/task005-services-website.png) | 1440 × 658 |
+| Java Development | [task005-services-java.png](../screenshots/task005-services-java.png) | 1440 × 614 |
+| Integration 與 AI | [task005-services-ai.png](../screenshots/task005-services-ai.png) | 1440 × 1177 |
+| 合作流程 | [task005-services-process.png](../screenshots/task005-services-process.png) | 1440 × 595 |
+| 頁尾 | [task005-services-footer.png](../screenshots/task005-services-footer.png) | 1440 × 541 |
 
 上述尺寸已讀取實際 PNG header 核對，並由主代理獨立核對。已實際檢視修正後 320／375px Hero、375px 概覽與流程、指定 Integration＋AI 圖，以及 1440px Hero、Website、組合與流程，檢查內容完整、Logo 比例、CTA、間距與標籤溢出皆通過；不以產出截圖本身代替人工檢視。
 

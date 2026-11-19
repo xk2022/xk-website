@@ -17,7 +17,7 @@
 
 預期成果是具有專業企業形象、現代科技視覺、國際化品牌風格、清楚資訊架構、Responsive Design、SEO-friendly、Accessible UI 與 Maintainable Components 的品牌介紹頁。
 
-本文件是 Task 004 的需求與驗收規格，不是新的執行結果。既有實作與歷史測試另見 [About Us 實作紀錄](../about-implementation.md)；不能把歷史通過結果、合併或部署紀錄填入本文件的待執行驗收欄位。本次文件骨架整理不重新執行 Task 004 開發或測試。
+本文件是 Task 004 的需求與驗收規格，不是新的執行結果。既有實作與歷史測試另見 [About Us 實作紀錄](../reports/about-implementation.md)；不能把歷史通過結果、合併或部署紀錄填入本文件的待執行驗收欄位。本次文件骨架整理不重新執行 Task 004 開發或測試。
 
 ## 2. Repository & Prerequisites
 
@@ -36,7 +36,7 @@
 
 **不得假設 Task 003 已合併。** 如果 Task 003 尚未合併，停止實作並回報依賴問題，不可自行將未核准的分支內容合併進來。
 
-原 Task 004 實作報告記載的基準為 `833db52344b16a270ef0e9531f33ab1f09b58200`，文件 Repository 讀取版本為 `3996730176e4ad7237c66f541d61405f2667934e`。這些是該次實作的歷史快照，出處為 [About Us 實作紀錄](../about-implementation.md)，不是新執行工作的指定最新版本或新驗收結果。
+原 Task 004 實作報告記載的基準為 `833db52344b16a270ef0e9531f33ab1f09b58200`，文件 Repository 讀取版本為 `3996730176e4ad7237c66f541d61405f2667934e`。這些是該次實作的歷史快照，出處為 [About Us 實作紀錄](../reports/about-implementation.md)，不是新執行工作的指定最新版本或新驗收結果。
 
 只修改 `xk-website`；文件 Repository 不得修改。保留既有程式碼、Design System 與首頁行為，不直接 Push 至 `main`，不自動合併 Pull Request。
 
@@ -49,9 +49,9 @@
 - [README.md](../../README.md)、[AGENTS.md](../../AGENTS.md)。
 - [Task 001 統一規格](task001.md) 與原始需求／歷史替代文件 [task001-implementation-notes.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md)。
 - [Task 002](task002.md)、[Task 002 繁體中文版](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)、[Task 003](task003.md) 的實際規格、實作及紀錄。
-- [歷史實作紀錄](../implementation-notes.md)、[品牌設計系統](../brand-design-system.md)。
-- [首頁實作紀錄](../homepage-implementation.md)、[About Us 獨立實作與驗收報告](../about-implementation.md)。
-- [GitHub Pages 部署指南](../github-pages-deployment.md)。
+- [歷史實作紀錄](../implementation-notes.md)、[品牌設計系統](../reports/brand-design-system.md)。
+- [首頁實作紀錄](../reports/homepage-implementation.md)、[About Us 獨立實作與驗收報告](../reports/about-implementation.md)。
+- [GitHub Pages 部署指南](../reports/github-pages-deployment.md)。
 
 Task 001 原稿曾使用替代檔名、Task 002 英文原稿曾是空檔的敘述，只保留為對應實作時點的歷史資訊；執行時應核對實際檔名及內容，不得把缺少或空白的文件當成完整規格。
 
@@ -473,7 +473,7 @@ src/
 
 ## 12. Test Report & Evidence
 
-每次 Task 004 功能實作／重新驗收都必須在獨立報告 [docs/about-implementation.md](../about-implementation.md) 記錄實際結果。保留原有時間點與歷史快照，新增執行紀錄時註明基準與範圍，不把本規格表格或前置任務結果當成新一輪 PASS。
+每次 Task 004 功能實作／重新驗收都必須在獨立報告 [docs/about-implementation.md](../reports/about-implementation.md) 記錄實際結果。保留原有時間點與歷史快照，新增執行紀錄時註明基準與範圍，不把本規格表格或前置任務結果當成新一輪 PASS。
 
 報告至少包含：
 
@@ -566,7 +566,7 @@ PR Description 必須包含實作內容、新增及修改檔案、Design System 
 - 實際完成的 `/about` 九區塊、品牌內容、Mission／Vision、能力、流程、無未確認個資的創辦人介紹、Commitment 與真實 CTA。
 - 實際新增／修改檔案、共用 Design System 使用方式、Header／Footer／MobileNavigation 更新與首頁保護結果。
 - About 專屬 SEO Metadata、Responsive、Accessibility、一般 Build 與 GitHub Pages 相容性。
-- [docs/about-implementation.md](../about-implementation.md) 的獨立實作及測試報告，涵蓋第 11、12 節所有適用項目的實際結果、Exit Code、修正與重驗。
+- [docs/about-implementation.md](../reports/about-implementation.md) 的獨立實作及測試報告，涵蓋第 11、12 節所有適用項目的實際結果、Exit Code、修正與重驗。
 - 五份指定截圖清單與實際檔案位置。
 - 真實 Commit SHA、Pull Request URL、CI 結果，以及是否發布的證據或未發布說明。
 - 尚未完成、未確認的資訊、限制、需使用者決策事項與後續工作。

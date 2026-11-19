@@ -23,7 +23,7 @@ export function HomeHero() {
           <p lang="en" className="type-body-lg mt-6 max-w-xl font-medium text-primary">
             {siteConfig.tagline}
           </p>
-          <p className="type-body mt-5 max-w-xl text-muted-foreground">
+          <p className="type-body mt-5 max-w-xl text-foreground">
             Xplore Kaleidoscope 協助企業整合網站開發、企業系統、系統架構與 AI 應用，
             將技術轉化為實際商業價值。
           </p>

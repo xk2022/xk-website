@@ -1,6 +1,6 @@
 # Task 003 — XK 企業首頁實作
 
-本次依 [Task 003 規格](task/task003.md) 完成 Xplore Kaleidoscope 第一版企業首頁，延用已合併的 Next.js 架構與 XK Design System。品牌標語為 **Explore Possibilities. Create Digital Value.**，技術標語為 **Building Digital Solutions with Web, Java & AI.**。
+本次依 [Task 003 規格](../task/task003.md) 完成 Xplore Kaleidoscope 第一版企業首頁，延用已合併的 Next.js 架構與 XK Design System。品牌標語為 **Explore Possibilities. Create Digital Value.**，技術標語為 **Building Digital Solutions with Web, Java & AI.**。
 
 ## Repository 與前置檢查
 
@@ -166,6 +166,6 @@ Pages 實際來源設定與發布情況，以部署指南及最終 Actions 結�
 
 以下截圖直接由本次 GitHub Pages 靜態產物擷取，非示意圖。完整頁面與各區塊截圖另隨任務回報提供。
 
-![桌面首頁首屏](screenshots/task003-1440.png)
+![桌面首頁首屏](../screenshots/task003-1440.png)
 
-![手機首頁首屏](screenshots/task003-375.png)
+![手機首頁首屏](../screenshots/task003-375.png)

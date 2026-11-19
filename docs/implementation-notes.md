@@ -193,7 +193,7 @@ Task 001 prepares the foundation for design-system work and the later content pa
 
 設計系統頁在 `npm run dev` 可用；production 預設 404，僅在明確設定伺服器端 `XK_DESIGN_SYSTEM_PREVIEW=1` 時開放驗收，且保持 `noindex, nofollow`，不加入網站導覽。
 
-完整 API、來源說明與驗收紀錄見 [品牌設計系統](brand-design-system.md)。Task 002 最終 TypeScript、ESLint（零警告）與 Build 皆通過；五種寬度的首頁及展示頁皆無水平溢出或檢出的 axe WCAG A/AA 違規，鍵盤操作、真實連結、按鈕停用及 reduced-motion 皆通過。production 預設 404 與旗標啟用 200 均已實測；詳細結果與素材比對紀錄列於設計系統指南。
+完整 API、來源說明與驗收紀錄見 [品牌設計系統](reports/brand-design-system.md)。Task 002 最終 TypeScript、ESLint（零警告）與 Build 皆通過；五種寬度的首頁及展示頁皆無水平溢出或檢出的 axe WCAG A/AA 違規，鍵盤操作、真實連結、按鈕停用及 reduced-motion 皆通過。production 預設 404 與旗標啟用 200 均已實測；詳細結果與素材比對紀錄列於設計系統指南。
 
 
 ## Task 003 歷史更新 — 企業首頁與 Pages 部署準備
@@ -206,7 +206,7 @@ Task 003 以 `main` 的 `6feb400996e45e0e9bc285425a99e014f5381057` 為基準建�
 
 使用者另明確選擇 GitHub Pages 靜態部署，取代本次原先的 Vercel 部署方向。一般 `npm run build` 仍保留 Vercel 相容設定；新增 `build:pages` 輸出已驗證路徑的 `out/`、`.nojekyll`，排除開發驗收路由，並保留 `noindex, nofollow`。Actions 在 PR 執行品質與 Pages 建置，部署僅限 `main`。目前公開 Pages 曾使用舊 Jekyll 工作流程；新工作流程與來源設定是否已啟用，必須以本次最終部署紀錄為準，不能僅因已存在公開網址而宣稱 Next.js 已部署成功。
 
-完整實作紀錄：[首頁實作指南](homepage-implementation.md)；操作方式：[GitHub Pages 部署指南](github-pages-deployment.md)。**Task 003 最終品質、瀏覽器、無障礙、Actions 與部署結果待補**，不得沿用前兩個任務的通過紀錄。
+完整實作紀錄：[首頁實作指南](reports/homepage-implementation.md)；操作方式：[GitHub Pages 部署指南](reports/github-pages-deployment.md)。**Task 003 最終品質、瀏覽器、無障礙、Actions 與部署結果待補**，不得沿用前兩個任務的通過紀錄。
 
 
 ## Task 004 歷史更新 — About Us 品牌介紹頁
@@ -219,7 +219,7 @@ Header／Footer／手機導覽的 About 更新為 `/about`，原首頁 `#about` 
 
 文件 Repository 的最新 main 仍為 `3996730176e4ad7237c66f541d61405f2667934e`；Week 02 與 Logo Tree SHA 均未改變，且只讀不寫。網站 `docs/task/task002.md` 已恢復英文規格（4534 bytes），先前紀錄的空檔狀態僅描述當時版本；繁體中文規格仍保留，AGENTS 已更新目前狀態。Task 001 歷史檔名仍使用 `task001-implementation-notes.md`。
 
-完整內容、來源、檔案清單、截圖與本次品質檢查見 [About Us 實作紀錄](about-implementation.md)。本次 npm ci、TypeScript、ESLint、一般 Build 與 Pages Build 皆 exit 0；加入原稿 `src/app/icon.svg` 後已重跑最終品質與瀏覽器 Suite，About／首頁均 HTTP 200、圖示 200、一般 production 開發頁 404。五種寬度、全部站內連結與錨點、Base Path、Metadata、九個區塊、五類能力、五階段流程及 axe A／AA（含展開的手機選單）全部通過，無水平溢出、JavaScript／Console／Runtime 錯誤或資源失敗；Skip Link、CTA 焦點與 Reduced Motion 0s 亦通過。圖示與提供的 symbol SVG 完全相同，未改畫 Logo 或修改全域 Layout。五份指定截圖已重拍，手機、核心能力、流程與頁尾已人工檢視。axe 結果只涵蓋本次頁面、狀態與自動化規則，不宣稱完成所有輔助科技或完整人工無障礙驗證。Commit 與 PR 以提交紀錄及最終交付報告為準，不預填識別碼，也不自動合併。
+完整內容、來源、檔案清單、截圖與本次品質檢查見 [About Us 實作紀錄](reports/about-implementation.md)。本次 npm ci、TypeScript、ESLint、一般 Build 與 Pages Build 皆 exit 0；加入原稿 `src/app/icon.svg` 後已重跑最終品質與瀏覽器 Suite，About／首頁均 HTTP 200、圖示 200、一般 production 開發頁 404。五種寬度、全部站內連結與錨點、Base Path、Metadata、九個區塊、五類能力、五階段流程及 axe A／AA（含展開的手機選單）全部通過，無水平溢出、JavaScript／Console／Runtime 錯誤或資源失敗；Skip Link、CTA 焦點與 Reduced Motion 0s 亦通過。圖示與提供的 symbol SVG 完全相同，未改畫 Logo 或修改全域 Layout。五份指定截圖已重拍，手機、核心能力、流程與頁尾已人工檢視。axe 結果只涵蓋本次頁面、狀態與自動化規則，不宣稱完成所有輔助科技或完整人工無障礙驗證。Commit 與 PR 以提交紀錄及最終交付報告為準，不預填識別碼，也不自動合併。
 
 
 ## Task 005 歷史更新 — Services 服務介紹頁
@@ -232,7 +232,7 @@ Header／Footer／手機導覽的 About 更新為 `/about`，原首頁 `#about` 
 
 GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validator 以驗證 `out/services/index.html`、Base Path、Metadata、noindex／nofollow，同時保留首頁／About 及開發路由保護。正式聯絡方式仍待確認，不建立假表單、無效 mailto、服務價格或未確認的維運保證。
 
-完整來源、元件分工、檔案清單及驗收結果見 [Services 實作紀錄](services-implementation.md)。320px 人工檢查發現 Hero 固定方形裁切標語，改為 sm:aspect-square 後已完整重驗；npm ci、TypeScript、ESLint（零警告）、一般 Build 與 Pages Build 均 exit 0。本次一般 Next.js 的三頁、開發頁保護、Disabled 與鍵盤計數／重設均實測正常。Fresh 靜態 Suite 結果 PASS：五寬三頁共 15 個 Responsive Case、18 次 axe（含三個展開選單）零 A／AA 違規，21 個站內目標與實際跨頁點擊正常，23 個 CSS／JS／字體／圖示全 200。十區塊、五類完整技術清單、五組合、五流程、Metadata、noindex／nofollow、Base Path、404、`.nojekyll` 與開發頁排除均通過；Skip Link、可見 Focus、Reduced Motion 0s、選單 Escape／焦點／外部點擊／斷點關閉亦通過，無非預期 Console／Runtime／Network Error。375px 觸控與 2x 裝置模式也已檢查，七張指定 PNG 已產出。人工視覺通過：320／375px Hero 全標語未裁切、Logo 192 × 192、CTA 不重疊，375px 概覽五卡／垂直流程與 Integration＋AI 圖均清楚、間距一致且標籤無溢出，1440px Hero／Website／組合／流程與 Integration＋AI 亦正常；axe 範圍與人工視覺範圍詳列於報告，不宣稱完整無障礙認證。以上為 Task 005 本次驗收，不沿用先前任務結果；遠端 run、Commit 與 PR 以本次 PR Checks、提交紀錄及最終交付報告為準，不預填識別碼、不自動合併或發布 main。
+完整來源、元件分工、檔案清單及驗收結果見 [Services 實作紀錄](reports/services-implementation.md)。320px 人工檢查發現 Hero 固定方形裁切標語，改為 sm:aspect-square 後已完整重驗；npm ci、TypeScript、ESLint（零警告）、一般 Build 與 Pages Build 均 exit 0。本次一般 Next.js 的三頁、開發頁保護、Disabled 與鍵盤計數／重設均實測正常。Fresh 靜態 Suite 結果 PASS：五寬三頁共 15 個 Responsive Case、18 次 axe（含三個展開選單）零 A／AA 違規，21 個站內目標與實際跨頁點擊正常，23 個 CSS／JS／字體／圖示全 200。十區塊、五類完整技術清單、五組合、五流程、Metadata、noindex／nofollow、Base Path、404、`.nojekyll` 與開發頁排除均通過；Skip Link、可見 Focus、Reduced Motion 0s、選單 Escape／焦點／外部點擊／斷點關閉亦通過，無非預期 Console／Runtime／Network Error。375px 觸控與 2x 裝置模式也已檢查，七張指定 PNG 已產出。人工視覺通過：320／375px Hero 全標語未裁切、Logo 192 × 192、CTA 不重疊，375px 概覽五卡／垂直流程與 Integration＋AI 圖均清楚、間距一致且標籤無溢出，1440px Hero／Website／組合／流程與 Integration＋AI 亦正常；axe 範圍與人工視覺範圍詳列於報告，不宣稱完整無障礙認證。以上為 Task 005 本次驗收，不沿用先前任務結果；遠端 run、Commit 與 PR 以本次 PR Checks、提交紀錄及最終交付報告為準，不預填識別碼、不自動合併或發布 main。
 
 
 ## Task 006 歷史更新 — Solutions 解決方案介紹頁
@@ -336,3 +336,19 @@ robots 允許讀取 public HTML 的 noindex，依 Base Path 排除 dev 與 draft
 ### Task 011 CI artifact 來源修正
 
 初次 PR #16 head `180e4f8` 的 CI 已成功，但下載 artifact 後發現新驗收資料意外增加全域 utilities，CSS 多 1241 bytes；沒有先合併。於 globals.css 明確排除 Task 011 報告／原始證據掃描，三份 CSS 恢復原受測 bytes。最終 source fingerprint `3d00df42565635715b36078fb9a244bdac5fb001388dc26b0d40cef3989061eb` 與 font-only `cc60…` 分開記錄；runtime bridge 為 204 檔一致，142 raw 相同、62 只差經驗證的 Build ID。新增 source 規則後重跑品質與普通／Pages 針對性驗收，舊 156 樣本、圖片與來源紀錄不改稱新測量。實際補驗與後續新 head CI／merge／部署見同一報告與 PR。
+
+## Task 012 — Accessibility 稽核與修正
+
+本次從乾淨、fresh fetch 的 `main@8e42c647646d20873789c54367132901746a58bf` 建立 `feature/website-accessibility`；Task 011 已合併。使用者明確授權本次開發、驗證文件、Push、PR、CI 通過後合併及確認部署，不延伸至品牌重整、政策核准或索引放行。
+
+文件 Repository 只讀，當次最新 main 為 `9c735000cdcb979f4e63825e37162374475e5902`。六個指定來源及新增架構／決策文件已核對。2026-11-19 決議的中文品牌、Logo 03 核准與正職工作並行經營，和網站既有 Task 004 的全職文案／暫定 Logo 狀態存在差異；本次依 Task 012 保留內容及 Logo，明列後續同步，不偷偷改寫歷史或虛構資料。新 Week 03 架構不授權網站新增後端。
+
+先以當次 production 建立 baseline，沒有沿用 Task 011 的 axe PASS。實際發現四類問題：手機選單離開焦點被遮住、Portfolio 詳頁缺乏第二種定位方式、部分漸層小字低於 4.5:1，以及 320 CSS px 文字間距覆寫時 About 卡片裁切「認識我們」。最後一項來自 Root 人工審查原始候選，保留其版本、圖片及 FAIL，未把收集程序的成功當作驗收通過。
+
+最小修正為 MobileNavigation 的 wrapper focus-leave 關閉、Footer 九頁完整「網站目錄」、十二個 Hero／CTA 的既有 foreground Token，以及 About 品牌卡片移除比例高度限制、讓內容自然撐高。沒有更換色票／Logo／字體或增加依賴、表單、API、搜尋／Sitemap、追蹤及部署設定。
+
+九頁五寬、axe 2／2.1／實際 2.2 工具支援、所有 55 項 A／AA 適用性、真實 Orca／Chromium／Linux、原生 Chrome 200% 縮放、320 CSS px、文字間距、對比、指標取消與 Reduced Motion 各有當次證據。About 後續修正依明確影響重驗，原版本不改稱新版本；五個品質指令重新執行。完整數值、Exit Code、版本對應、最終結果、Known Issues 與五張真實截圖見 [Task 012 實作與驗證](reports/task012-implementation.md) 及 [證據說明](reports/task012-artifacts/README.md)，不宣稱完整無障礙認證。
+
+main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Markdown 的 118 個 href，保留正文／標題／舊驗收紀錄。已刪除的 alternate originals 仍有 14 個歷史連結缺口，保留固定版本參考並列限制，不復原使用者移除的檔案；`docs/reports/implementation-notes.md` 是舊前綴快照，沒有覆蓋根目錄完整歷史。
+
+報告與原始證據從 Tailwind 掃描明確排除。後續 exact-head PR CI／artifact、使用者授權合併、main CI／Pages 部署與公開網址驗證以同一 PR 的實際紀錄更新，不做記錄自身 SHA 的循環提交，也不把 PR CI 或 artifact 產生當成正式部署成功。
