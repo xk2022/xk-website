@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { siteConfig } from "@/config/site";
+import { createWebsiteJsonLd, serializeJsonLd } from "@/lib/seo";
 
 import "./globals.css";
 
@@ -48,6 +49,11 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           {children}
         </main>
         <SiteFooter />
+        <script
+          id="website-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(createWebsiteJsonLd(siteConfig)) }}
+        />
       </body>
     </html>
   );

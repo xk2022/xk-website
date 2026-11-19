@@ -2,7 +2,7 @@
 
 官方網站，獨立交給 Codex 開發。
 
-開發里程碑與完整規格請見 [Task 001–014 任務索引](docs/task/README.md)。Task 001–007 的技術基礎、Design System、首頁、About、Services、Solutions 與 Portfolio 已合併；Task 008 為 Contact 資訊頁。Privacy、SEO、Performance、Accessibility、Vercel 與 Domain 各自依後續獨立任務處理，不因相關區塊存在而視為完成。
+開發里程碑與完整規格請見 [Task 001–014 任務索引](docs/task/README.md)。Task 001–008 的技術基礎、Design System、首頁、About、Services、Solutions、Portfolio 與 Contact 已合併。Task 009 提供 Privacy 草案與發布保護；Task 010 提供 SEO 保護模式。正式法律政策、索引 release、GSC、Performance、Accessibility、Vercel 與 Domain 仍依各自前置及獨立驗收，不因技術區塊存在而視為完成。
 
 開發協作與驗收請先讀 [Subagent 作業紀錄與執行流程](docs/subagent-workflow.md)，並依 [AGENTS.md](AGENTS.md) 與當次 Task 規格執行。流程包含分工責任、提早檢查完整 Diff、持久化退出碼及依變更影響決定重驗範圍。
 
@@ -131,3 +131,15 @@ XK_PRIVACY_PREVIEW=1 npm run start -- --hostname 127.0.0.1 --port 3062
 開啟 `http://127.0.0.1:3062/privacy`。此旗標不是身分驗證，不能設定於公開 Preview 或正式服務；Pages 建置不接受它解鎖草案。所有模式仍保留 `noindex, nofollow`，不新增資料蒐集、Cookie 同意工具或追蹤。
 
 規格見 [Task 009](docs/task/task009.md)；資料流、待確認責任與期限、實測結果及三張草案截圖見 [Task 009 實作與驗證](docs/reports/task009-implementation.md)。正式政策與核准頁面的驗收在缺件期間維持 BLOCKED，不宣稱 Task 009 全部通過。
+
+## Task 010 SEO 保護模式
+
+九個公開路由與受控 Privacy 草案的既有 Title／Description 集中於 `src/config/seo.ts`；共用 Metadata 工具保留品牌 Canonical／Open Graph、加入無圖與無社群 handle 的 Twitter `summary`，全站維持 `noindex, nofollow`。Root Layout 只加入安全序列化的品牌 WebSite JSON-LD，不新增可見 UI、法定公司、產品或評價資料。
+
+一般模式提供 `/robots.txt`；Pages 提供 `/xk-website/robots.txt`。規則允許讀取公開 HTML 的 noindex，排除開發／草案路徑，沒有 Sitemap 宣告。Pages 專案檔不代表控制 `xk2022.github.io/robots.txt`；保護模式的 `/sitemap.xml` 維持 404，九個候選路由不等於已發布 Sitemap 或已獲准索引。
+
+品質指令沿用 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`。普通與 Pages 建置／驗收分開；沒有新的依賴、Backend、Analytics、GSC token 或索引環境開關。Privacy 的公開 404／Pages 排除及 Contact 無收件狀態保留。
+
+規格：[Task 010](docs/task/task010.md)。候選／排除清冊、robots 範圍、正式 Sitemap 生成規則、Owner 權責及後續 release／Search Console 待辦：[SEO 操作指南](docs/seo-operations.md)。合併技術保護模式不代表正式索引、GSC 提交或品牌網域設定已完成。
+
+本次來源、逐頁 exact Metadata、實測結果與階段界線見 [Task 010 實作與驗證](docs/reports/task010-implementation.md)。

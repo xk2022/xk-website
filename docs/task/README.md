@@ -250,3 +250,9 @@ docs(task): add XK website task specifications 006-014
 ## Task 009 執行紀錄入口
 
 2026-11-19 的 Task 009 以已合併 Task 008 的 `main@4c6646f` 為基準。上方第 9 節保留原規格撰寫時點；目前 Privacy 交付範圍為受控草案與發布保護，Owner 已回覆尚無正式核准資料。法律核准及核准正式頁仍為 BLOCKED，不以技術合併解鎖政策或新個資收件。實際來源、測試與階段結果見 [Task 009 實作與驗證](../reports/task009-implementation.md)。
+
+## Task 010 執行紀錄入口
+
+2026-11-19 的 Task 010 以已合併 Privacy 技術保護的 `main@b423b28` 為基準。工作範圍是 SEO 保護模式：九個公開頁與受控草案的 Metadata／Twitter、最小 WebSite、robots 及 Sitemap 不發布規則；保留全站 noindex／nofollow。上方歷史表格不回寫。正式索引、公開 Sitemap、GSC 與 DNS／Vercel 各依其獨立核准及驗收，不能因本次技術合併視為完成。操作規則見 [SEO 操作指南](../seo-operations.md)。
+
+來源、受測版本、逐頁清冊及實際結果：[Task 010 實作與驗證](../reports/task010-implementation.md)。

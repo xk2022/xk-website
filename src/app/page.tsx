@@ -7,25 +7,11 @@ import { HomeServices } from "@/components/sections/home-services";
 import { HomeSolutions } from "@/components/sections/home-solutions";
 import { HomeTechnologies } from "@/components/sections/home-technologies";
 import { HomeWhyXk } from "@/components/sections/home-why-xk";
+import { getSeoPage } from "@/config/seo";
 import { siteConfig } from "@/config/site";
+import { createPageMetadata } from "@/lib/seo";
 
-const title = "Xplore Kaleidoscope | Web, Java & AI Digital Solutions";
-const description = "Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。";
-
-export const metadata: Metadata = {
-  title: { absolute: title },
-  description,
-  alternates: { canonical: siteConfig.url },
-  robots: { index: false, follow: false },
-  openGraph: {
-    title,
-    description,
-    url: siteConfig.url,
-    siteName: siteConfig.name,
-    locale: "zh_TW",
-    type: "website",
-  },
-};
+export const metadata: Metadata = createPageMetadata(getSeoPage("/"), siteConfig);
 
 export default function HomePage() {
   return (
