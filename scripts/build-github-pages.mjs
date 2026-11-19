@@ -100,11 +100,39 @@ function verifyReferencedAssets(html, pagePath, label) {
   }
 }
 
+const portfolioPages = [
+  {
+    pagePath: "/portfolio",
+    label: "Portfolio",
+    title: "技術作品集 | Xplore Kaleidoscope",
+    description: "探索 XK 的網站、Java 企業系統與 API 整合展示規劃，了解各專案的背景、技術方向與實際開發狀態。",
+  },
+  {
+    pagePath: "/portfolio/corporate-website",
+    label: "Corporate Website portfolio detail",
+    title: "XK Corporate Website Showcase | XK 技術作品集",
+    description: "XK Corporate Website Showcase 自製展示規劃，目前為 Planned；探索企業網站的品牌資訊、響應式版面與可維護前端方向，尚未提供完整案例系統的實作與部署證據。",
+  },
+  {
+    pagePath: "/portfolio/enterprise-management",
+    label: "Enterprise Management portfolio detail",
+    title: "XK Enterprise Management System | XK 技術作品集",
+    description: "XK Enterprise Management System 自製展示規劃，目前為 Planned；了解 Java 管理系統的流程、資料與權限規劃，模組範圍仍待確認，尚未提供實作完成證據。",
+  },
+  {
+    pagePath: "/portfolio/integration-hub",
+    label: "Integration Hub portfolio detail",
+    title: "XK Enterprise Integration Hub | XK 技術作品集",
+    description: "XK Enterprise Integration Hub 自製展示規劃，目前為 Planned；探索模擬系統之間的 API 與資料交換方向，AI 與 n8n 屬後續規劃，尚未提供實作完成證據。",
+  },
+];
+
 for (const [relativePath, pagePath, label] of [
   ["index.html", "", "homepage"],
   ["about/index.html", "/about", "About Us"],
   ["services/index.html", "/services", "Services"],
   ["solutions/index.html", "/solutions", "Solutions"],
+  ...portfolioPages.map(({ pagePath, label }) => [`${pagePath.slice(1)}/index.html`, pagePath, label]),
 ]) {
   const html = verifyExportedPage(relativePath, `${label} page`);
   verifyBrandUrl(metadataAttribute(html, "rel", "canonical", "href"), pagePath, `${label} canonical URL`);
@@ -112,6 +140,7 @@ for (const [relativePath, pagePath, label] of [
   const robots = metadataAttribute(html, "name", "robots", "content") ?? "";
   assert.match(robots, /noindex/, `${label} must retain noindex metadata.`);
   assert.match(robots, /nofollow/, `${label} must retain nofollow metadata.`);
+  assert.equal(tagAttribute(html.match(/<html\b[^>]*>/)?.[0], "lang"), "zh-TW", `${label} HTML language is incorrect.`);
   verifyReferencedAssets(html, pagePath, label);
 
   if (pagePath === "/solutions") {
@@ -122,7 +151,39 @@ for (const [relativePath, pagePath, label] of [
     assert.equal(metadataAttribute(html, "property", "og:title", "content"), title, "Solutions Open Graph title is incorrect.");
     assert.equal(metadataAttribute(html, "property", "og:description", "content"), description, "Solutions Open Graph description is incorrect.");
   }
+
+  const portfolioPage = portfolioPages.find((page) => page.pagePath === pagePath);
+  if (portfolioPage) {
+    const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/)?.[1] ?? "";
+    assert.equal(head.match(/<title>([^<]*)<\/title>/)?.[1], portfolioPage.title, `${label} title is incorrect.`);
+    assert.equal(metadataAttribute(html, "name", "description", "content"), portfolioPage.description, `${label} description is incorrect.`);
+    assert.equal(metadataAttribute(html, "property", "og:title", "content"), portfolioPage.title, `${label} Open Graph title is incorrect.`);
+    assert.equal(metadataAttribute(html, "property", "og:description", "content"), portfolioPage.description, `${label} Open Graph description is incorrect.`);
+    assert.equal(metadataAttribute(html, "property", "og:locale", "content"), "zh_TW", `${label} Open Graph locale is incorrect.`);
+    assert.equal(metadataAttribute(html, "property", "og:type", "content"), "website", `${label} Open Graph type is incorrect.`);
+  }
 }
+
+function collectHtmlFiles(directory, prefix) {
+  const files = [];
+  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    if (entry.isDirectory()) files.push(...collectHtmlFiles(join(directory, entry.name), `${prefix}${entry.name}/`));
+    else if (entry.isFile() && entry.name.endsWith(".html")) files.push(`${prefix}${entry.name}`);
+  }
+  return files;
+}
+
+const portfolioRoot = join(output, "portfolio");
+const portfolioSlugs = portfolioPages.flatMap(({ pagePath }) => pagePath.split("/").slice(2));
+const exportedPortfolioSlugs = readdirSync(portfolioRoot, { withFileTypes: true })
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => entry.name);
+assert.deepEqual(exportedPortfolioSlugs.sort(), portfolioSlugs.sort(), "Portfolio must export only the three registered detail slugs, without unknown or fallback routes.");
+assert.deepEqual(
+  collectHtmlFiles(portfolioRoot, "portfolio/").sort(),
+  portfolioPages.map(({ pagePath }) => `${pagePath.slice(1)}/index.html`).sort(),
+  "Portfolio HTML must contain only the overview and its three registered details.",
+);
 
 function verifyStaticTree(directory) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {

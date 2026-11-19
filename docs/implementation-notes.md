@@ -248,3 +248,20 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 原兩次Pages 工具 FAIL 保留：logical href Base Path 預期錯判，以及 HEAD 事件分類器的空URL解析。以原始Promise／CDP／Next source／後續 tree GET 交叉證明 165 個 HEAD 實際成功 200；僅符合精確條件才分類，其他錯誤仍 FAIL。修工具後全套重驗 Exit 0；app 程式碼指紋全程相同，沒有以改產品 prefetch、跳過測試或刪除錯誤換取通過。安裝時既有 ESLint deprecated 提示保留，未升降級套件。
 
 正式實作／驗證與失敗重驗證據見 [Task 006 報告](reports/task006-implementation.md) 及 [結構化驗證紀錄](reports/task006-verification.json)。此紀錄截止於建立 PR 前；真實 Commit／PR／CI 與後續 main 部署／公開站結果須在實際發生後補入報告與同PR交付紀錄，不能由本機結果或過去任務推定。
+
+
+## Task 007 歷史更新 — Portfolio 技術作品集
+
+本次以最新 `main@43ddd7ed0e339d35ece949a656188defcaa5ac72` 建立 `feature/website-portfolio-page`；Task 001–006 的實際 Merge Commit 均是祖先，逐項 Git 檢查 Exit 0。初始工作目錄乾淨，使用者已明確授權正式開發、核對規格、產出驗證文件及 Push and merge。前述內容保留為歷史，不沿用過去測試或以 Task 006 公開上線代表 Task 007 已發布。
+
+重新唯讀核對文件 Repository `main@95ef1275a46ace76e11f668178ca881087483398`，P01–P10 全文與 10 個 Blob 均相符，完整快照 51 檔亦再次核對。三個展示計畫依規格保持 demonstration／PLANNED，implementedFeatures／implementedTechnologies／media 全空，sourceLink／liveDemo 為 null。官網實作不自動等於 Case 01 完成；Case 02 模組摘要與詳規分歧不相加成 ERP；Case 03 AI／n8n 是後續，沒有客戶、成效或 Live 宣稱。
+
+新增 `/portfolio` 六區塊與三個共用靜態詳頁，每詳頁八區塊，資料與來源集中於 `src/config/portfolio.ts`。Promise params／generateStaticParams／dynamicParams=false／notFound 依已安裝 Next.js 文件處理，只產生 corporate-website、enterprise-management、integration-hub，未知／wrong-case／舊 alias 均 404。新 TSX 全為 Server Components，沿用 Design System、Logo、Tokens 與既有 ServiceId／contactNavigation。共用導覽加入「技術作品集」，Footer 重複規劃中文字移除；保留 Home／About／Services／Solutions 及既有錨點。
+
+沒有合法且可驗證的案例系統素材，採文字空狀態，不新增 public 圖片或多餘 helper。七張文件 QA 圖是 Portfolio 介紹頁自身驗收，不加入案例 media。精確 Metadata／品牌 Canonical／OG／zh-TW／noindex／nofollow 及一般／Pages 雙 build 保留；Validator 追加四 Portfolio HTML、恰三 slug、語言與資源檢查，原四頁／404／.nojekyll／dev payload 保護不降低。套件、lockfile、Next／Tailwind 設定、workflow、品牌原稿與文件 Repository 均未修改，未引入 Backend、API、CMS 或 Analytics。
+
+最終五個 fresh 品質指令均 Exit 0。一般瀏覽器完整重驗 23/23 PASS，Pages 完整重驗 123 項＝121 PASS＋2 有據 N/A、Exit 0，涵蓋八頁、40 個響應式案例、43 次 axe 零違規、36 unique 站內目的地／304 link occurrences、鍵盤／Focus／375px 觸控／Reduced Motion／Metadata／靜態保護。最終 123 observed 資源獨立 GET 全 200，GET abort 與非預期錯誤為 0；451 個 HEAD 完成事件依真 document／Next-URL 來源及一對一成功 tree 嚴格佐證，raw 全保留。四輪 app 指紋始終為 `3e166b2e7502e4ac3b38b651960f4d11b2f310ffd37583c9bd1e920c2b0cfd13`。
+
+初輪一般模式的工具 lang 誤判及 favicon GET 失敗、初輪 Pages 的 3 GET＋1 HEAD 分類失敗均保留原 FAIL。favicon 首輪缺少足夠資料追認原因；新增實際圖示 body／SHA 與等待後，完整一般重驗零資源失敗。Pages 工具的 resize 後立即導航造成 prefetch 競態，另有跨 document 借用 tree 的配對缺陷；修正等待與嚴格來源邊界後完整重驗，沒有新增 GET 忽略清單、停用產品 prefetch 或改產品碼換取 PASS。啟動與停止伺服器的環境限制及真實退出碼亦單獨記錄。
+
+七張指定 PNG 與 320／375px 補充圖已實際人工檢視，最終 35 候選圖與首輪完全同 SHA，正式七圖依原 bytes 複製。完整報告：[Task 007 實作與驗證](reports/task007-implementation.md)；逐項結果：[驗證摘要](reports/task007-verification.json)；100 份原始 JSON：[壓縮證據](reports/task007-evidence.json.gz)，還原 SHA 100/100。此紀錄截止於 PR 前本機交付；真實 Commit／PR／CI、授權合併、main 部署及公開網址結果分階段於報告與同 PR 最新交付紀錄確認，不預填識別碼或推定已部署。

@@ -2,7 +2,7 @@
 
 官方網站，獨立交給 Codex 開發。
 
-開發里程碑與完整規格請見 [Task 001–014 任務索引](docs/task/README.md)。Task 001–005 的技術基礎、Design System、首頁、About 與 Services 已合併；Task 006 為 Solutions 解決方案介紹頁。Portfolio、Contact、Privacy、SEO、Performance、Accessibility、Vercel 與 Domain 各自依後續獨立任務處理，不因相關區塊存在而視為完成。
+開發里程碑與完整規格請見 [Task 001–014 任務索引](docs/task/README.md)。Task 001–006 的技術基礎、Design System、首頁、About、Services 與 Solutions 已合併；Task 007 為 Portfolio 技術作品集。Contact、Privacy、SEO、Performance、Accessibility、Vercel 與 Domain 各自依後續獨立任務處理，不因相關區塊存在而視為完成。
 
 ## 部署方向
 
@@ -89,3 +89,15 @@ Header、Footer 與手機導覽的「解決方案」指向 `/solutions`，首頁
 本機網址為 `http://localhost:3000/solutions`；Pages 靜態網址使用 `/xk-website/solutions/`。保留一般 `npm run build` 與獨立 `npm run build:pages`、品牌 Canonical、Open Graph 及 `noindex, nofollow`。以 `npm ci`、TypeScript、Lint、兩種 Build 及實際瀏覽器驗收確認成果；Pages 產物不能用 `npm run start` 取代靜態服務。
 
 規格：[Task 006](docs/task/task006.md)。來源對照、實作內容、驗收結果、修正與七份真實截圖見 [Task 006 實作及驗證報告](docs/reports/task006-implementation.md)。遠端 PR／CI／部署狀態依報告及實際 GitHub 紀錄確認，不以本機建置或舊任務結果代替。
+
+## Task 007 技術作品集
+
+`/portfolio` 提供三個自製展示規劃的背景、分類、技術方向與狀態；共用詳頁為 `/portfolio/corporate-website`、`/portfolio/enterprise-management`、`/portfolio/integration-hub`。目前三案均為 `PLANNED`，已實作功能／技術與媒體陣列為空，未確認的公開原始碼及 Live Demo 目標為 null。Portfolio 網頁完成不代表三個案例系統已完成，現有官網也不自動等於完整 Case 01 的完成證據。
+
+Header、Footer 與手機導覽共用「技術作品集」入口；相關服務連至現有 `/services#...`，聯絡沿用 `contactNavigation.href` 的首頁錨點。無合法且可驗證的案例素材時顯示文字空狀態，不建立假畫面或無效按鈕。未新增展示系統、Backend、API、依賴或全域樣式。
+
+本機使用 `http://localhost:3000/portfolio`；Pages 使用 `/xk-website/portfolio/` 及三個同前綴詳頁。三個 slug 由明確 static params 產生，未知 slug 回傳 404；四頁保留各自 Metadata、品牌 Canonical 及 `noindex, nofollow`。一般 production server 與 Pages 靜態產物分別驗收，不混用 `.next/` 模式。
+
+Task 007 品質指令為 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`。本輪須回歸包含 Solutions 的八個公開路由、五種寬度與全部既有導覽／錨點；分支為 `feature/website-portfolio-page`。規格見 [Task 007](docs/task/task007.md)，作品狀態、素材權利及可公開連結依該規格的證據 Gate 處理，不以測試 PASS 推升作品狀態。
+
+來源、完整檔案清單與本機驗收見 [Task 007 實作與驗證報告](docs/reports/task007-implementation.md)、[逐項證據摘要](docs/reports/task007-verification.json) 及 [原始 JSON 證據](docs/reports/task007-evidence.json.gz)。五個品質指令均 Exit 0，一般模式最終 23/23 PASS、Pages 最終 123 項＝121 PASS＋2 有據 N/A；七張實際截圖已完成。報告保留各階段時點，遠端 head／CI／合併／部署與公開網址須以同 PR 的最新實際紀錄確認。
