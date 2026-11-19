@@ -265,3 +265,18 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 初輪一般模式的工具 lang 誤判及 favicon GET 失敗、初輪 Pages 的 3 GET＋1 HEAD 分類失敗均保留原 FAIL。favicon 首輪缺少足夠資料追認原因；新增實際圖示 body／SHA 與等待後，完整一般重驗零資源失敗。Pages 工具的 resize 後立即導航造成 prefetch 競態，另有跨 document 借用 tree 的配對缺陷；修正等待與嚴格來源邊界後完整重驗，沒有新增 GET 忽略清單、停用產品 prefetch 或改產品碼換取 PASS。啟動與停止伺服器的環境限制及真實退出碼亦單獨記錄。
 
 七張指定 PNG 與 320／375px 補充圖已實際人工檢視，最終 35 候選圖與首輪完全同 SHA，正式七圖依原 bytes 複製。完整報告：[Task 007 實作與驗證](reports/task007-implementation.md)；逐項結果：[驗證摘要](reports/task007-verification.json)；100 份原始 JSON：[壓縮證據](reports/task007-evidence.json.gz)，還原 SHA 100/100。此紀錄截止於 PR 前本機交付；真實 Commit／PR／CI、授權合併、main 部署及公開網址結果分階段於報告與同 PR 最新交付紀錄確認，不預填識別碼或推定已部署。
+
+
+## Task 008 歷史更新 — Contact 聯絡資訊頁
+
+本次以最新 `main@99e375e6f9621862b0ab1a0db9351f4963f199fb` 建立 `feature/website-contact-page`；Task 001–007 的七個 Merge Commit 均經實際祖先檢查 Exit 0，Task 007 PR #11 已合併。初始工作目錄乾淨，使用者本次明確授權正式開發、規格／程式驗證、產出文件並 Push and merge；不將其擴大為新收件服務、法律政策或 DNS 授權。
+
+重新唯讀查詢文件 Repository main 仍為 `95ef1275a46ace76e11f668178ca881087483398`，完整 Tree 與 51 個 Blob bytes 均相符；六份 C01–C06 與品牌來源已讀取，沒有新的正式管道、帳號控制權或受控寄收證據。`verifiedContactChannels` 及既有 API 原封不動，Availability 由空陣列派生 `unavailable`；沒有虛構 Email、電話、社群、回覆時限、假表單或 Backend。資訊頁可以交付，但目前不能透過網站收取需求；管道公開、資料收集及 Task 009 法律 gate 仍待各自確認。
+
+新增 `/contact` 六個 Server Sections、typed `contact-page.ts`、指定 H1／Metadata／Canonical／OG／語言／noindex。頁面提供誠實空狀態、三項準備、三步合作說明、資料注意與真實 CTA，五個服務名稱及錨點由既有 ServiceId／serviceCategories 取得。Header／Footer／手機選單共用聯絡來源改為 `/contact`；首頁原 `#contact`、pending 內容與所有有效舊 CTA 保留，只加查看聯絡資訊。沿用 Design System、原稿暫定 Logo、八色 Tokens、Focus／Reduced Motion、既有套件與一般／Pages 雙模式；workflow、lockfile、Next／Tailwind 設定及文件 Repository 未修改。
+
+最終程式碼指紋為 `42c8e5bf5b069f643981fdef2741cd530cd55809123c744c24ded3d2c2a4c62b`。初次 npm ci 因預設 cache 路徑無法建立而 FAIL／Exit 254，原始紀錄保留；改用 `/tmp` npm cache 後重驗 Exit 0，後續 TypeScript、零警告 ESLint、一般 Build、Pages Build 均 Exit 0。一般 production 九頁 fresh 驗收 27/27 PASS，39 unique 站內目的地／345 link occurrences、28 資源 GET 200，沒有提交、外部收件、Cookie／Storage 寫入或 raw browser failures；未知路由與 dev 頁 404。Pages validator 只追加 Contact，原八頁／資源／404／.nojekyll／dev payload 保護完整保留。
+
+最終 Pages 全套重驗 148 項＝141 PASS＋7 有據 N/A、實際 Exit 0；九頁五寬45case、48次axe零違規、39個站內目的地／345個連結、147 個資源 GET 200、506 個原始 HEAD 事件依同document與來源嚴格分類，非預期錯誤0。首輪Pages在touch尚PENDING即提早結束，缺completion code，原snapshot、kernel觀察0與實際工具exit未知分開保存，不追認PASS；獨立touch診斷及加入keepalive／有界trace後全套重驗均Exit0，未改產品碼。七指定PNG與窄版／fixture補圖已產生，Root 實看前一 epoch 22 張，最終七張重新拍攝並以實際 bytes／SHA 橋接相同畫面，另有獨立視覺覆核；沒有把合成管道當公開或收件證據。完整本次來源、資料流、檔案清單、失敗修正及驗收紀錄見 [Task 008 實作與驗證報告](reports/task008-implementation.md)。本機、PR CI、Review、授權 merge、main CI、部署與公開網址分階段記錄，不以資訊頁 HTTP 200 或本機建置成功當作已能收件或已正式部署。
+
+最後完整 staged Diff 發現一個新元件 EOF 多餘空行，僅移除一個 LF；保留原 5dfa8be441c40d2c447a25fd05bce494e4d8ba0290bd21fb3e22630960c8c964 與新 42c8e5bf5b069f643981fdef2741cd530cd55809123c744c24ded3d2c2a4c62b 兩 epoch，不將舊結果改標新版本。最終五品質與普通／Pages 重新完整驗收均實際 Exit 0；文件檢查同步覆蓋 staged／unstaged 及完整 main 比較。

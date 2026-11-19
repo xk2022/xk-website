@@ -6,6 +6,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { verifiedContactChannels } from "@/config/contact";
+import { contactNavigation } from "@/config/navigation";
 
 export function HomeContactCta() {
   const hasContactChannel = verifiedContactChannels.length > 0;
@@ -43,6 +44,12 @@ export function HomeContactCta() {
               </Button>
             </>
           )}
+          <Link
+            href={contactNavigation.href}
+            className="type-body-sm mt-4 inline-flex min-h-11 items-center gap-2 rounded-sm font-medium text-secondary underline-offset-4 hover:underline"
+          >
+            查看聯絡資訊 <ArrowUpRight aria-hidden="true" className="size-4 shrink-0" />
+          </Link>
         </div>
       </Container>
     </Section>
