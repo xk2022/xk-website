@@ -1,0 +1,1113 @@
+{
+  "task": "Task 009 Privacy draft technical implementation",
+  "recordedAtUtc": "2026-11-19T06:11:56.735377+00:00",
+  "baseSHA": "4c6646fa7e54b1b1e2589615eee82926e9e54d7a",
+  "branch": "feature/website-privacy-policy",
+  "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6",
+  "sourceFiles": {
+    ".github/workflows/ci.yml": "e4ad4ba2582e38254da8f86bd61d7bbeb7da2ccb825b6b8cb5c2653a98bcaa8c",
+    "next.config.ts": "00abe2992e2a94a2e0f82c90f9677e7cf228dd626c6f63d2f808b57bb8f2c2a7",
+    "package-lock.json": "1e87be771a0f19262494fbe8cad8eaa4735f67100289f02b38b3a79c6da42187",
+    "package.json": "4f87f2688bd136273ab297e0fc3a78b03f8f4c9324e3524a6034316cbd100be4",
+    "public/brand/source/README.md": "f49c47ee4f239c87d3f9b0fee4e7fbce52adff119431b366843c8d505139678a",
+    "public/brand/source/xk-logo-horizontal.svg": "08b60bfba88d9598aaaf072bdb7b6e95658784598b8d132a4e3bcb2383446a5b",
+    "public/brand/source/xk-logo-primary.svg": "ef827ae4c8a6e06a4bc3522bc3fa6a0ea531f740bde4331811e126b50ca168db",
+    "public/brand/source/xk-logo-symbol.svg": "b61e1a188bd5d043692780e058e24ad83ba6347dea3bdf3619b334ffae246119",
+    "public/brand/source/xk-logo-white.svg": "3ef6fe4c3968992e1c18df2f05233f39ffebd9da26dd9be91e7be81c02087250",
+    "public/icons/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public/images/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/build-github-pages.mjs": "ec27e7894df1333962ca0da9b78c88b2f0a870f2314ae95fb5b557dcadd4cfbd",
+    "scripts/run-with-evidence.py": "def17e6bed06f7283e72f7a780a96d983a653754751600a17a7c0a3906f2dddc",
+    "src/app/about/page.tsx": "d8de485e998da93120ee9b5981cce6c8dc7571989c2d9ea8adee64bcb410aab0",
+    "src/app/contact/page.tsx": "f1b67f13d1d18357fd80db3a598405d7be26b2b540081995b881cb3515251bea",
+    "src/app/dev/design-system/page.tsx": "4524563debbc08a4455760d18a42d9a33b7a2a8f88196affa7021890b95a8037",
+    "src/app/globals.css": "8c916ffc1850ba5e895d1d9274b0a81c8980de5cf2a507f44aeaa48c3a7039d5",
+    "src/app/icon.svg": "b61e1a188bd5d043692780e058e24ad83ba6347dea3bdf3619b334ffae246119",
+    "src/app/layout.tsx": "052608f396b7280ea3d0e9b958ca3157d1163a626ca4b19b5b346bef98e63f04",
+    "src/app/page.tsx": "4f95e2de61499fb2e9cf39afb2fdc8b0579bedc9c67bc9a8bc468e278e2de72f",
+    "src/app/portfolio/[slug]/page.tsx": "110dcdc2a0ce352e6a3f7c46658a5e87c3c401d935de6a9ec78156d271dd013c",
+    "src/app/portfolio/page.tsx": "8d932508f899e6deafb7a35158088bf24f3ef8ec3888a35eff9e7c7b2305eef3",
+    "src/app/privacy/page.tsx": "354c5dfd8b43012da6dafc87941db2687f38f28391feb31e732c9625e5e9aa11",
+    "src/app/services/page.tsx": "99ab2851455d72d47e0f3568af29e3433fd8d02eabc5f8bed57e4232c737badb",
+    "src/app/solutions/page.tsx": "be1c713f0e4d318a0982549842247de6946a285ea8107a3847649dd2d5d45d1d",
+    "src/components/brand/brand-pattern.tsx": "240173588bfcadb6760e6ef19984e6c96e148613871e85eaf516854f18b8226e",
+    "src/components/brand/xk-logo-data.ts": "ca7520669c1fd128fae5f811ff768e7dd20970b8325b8de3f0f53bcd5db63e1c",
+    "src/components/brand/xk-logo.tsx": "f9cecdc00e3d2ab220ac2e54ee728d947edf02fbf93678d6bdf76a92f9063029",
+    "src/components/dev/button-demo.tsx": "6f58667b694acbbcf1cb4fe851400806c99598d4669018aff716959413bf65e8",
+    "src/components/layout/container.tsx": "9ce0e4e7aa911a82b5b37164a707dea687b989316c023d965c46fd42eee38bb1",
+    "src/components/layout/mobile-navigation.tsx": "b390026e0e5877269003ab1eec9572bae110184ea0c129d59c256ee90cf3085a",
+    "src/components/layout/section.tsx": "4b4b5bdb67808188eccb1a44dcdf3369c16b13e745cd127a2cb46da2031c7720",
+    "src/components/layout/site-footer.tsx": "b527ffe0aa3fdc93bca15598998a456589e3016c070c5d113a7660789c916682",
+    "src/components/layout/site-header.tsx": "8404f3a693b404199e06e63e34e5e092042b9a20a7f3d525d6bfd8bb3ddc7f0a",
+    "src/components/sections/about/about-approach.tsx": "dd9a21ba937dc1ecde92397b333e7cdc6e1697dd38e4a1ff68e0f3bc99eac166",
+    "src/components/sections/about/about-capabilities.tsx": "00110b011399d21ac05b2d2802f44e1e3ad4fde1b1b585e9ee043bdef5167e37",
+    "src/components/sections/about/about-commitment.tsx": "f662f91151f40f726801fd0789a84db51f9821d3fc176b2812d9f26cd5339a6f",
+    "src/components/sections/about/about-cta.tsx": "5a7e6a99d1ed9d72574decc7520670b554c19bcbd9dfa4144a6eb94f4ed4400a",
+    "src/components/sections/about/about-founder.tsx": "f4550f92215814f3501a2428b339518d549329829341271829f5c8c2526966e4",
+    "src/components/sections/about/about-hero.tsx": "cfcbfb4643abfac375de156e9cadda622ba6e532b091e3625ce6e6021add43d0",
+    "src/components/sections/about/about-mission-vision.tsx": "c9dbe269b2d10f6717e9ba05d97ecbfb7e450273323bdef4d2bad23945f67e6b",
+    "src/components/sections/about/about-who-we-are.tsx": "cc7987310caa5be1572e8f8c8786eb8ea7b342bb8d2c7d0c921ac17bb1f7a677",
+    "src/components/sections/contact/contact-channels.tsx": "e46446382b81280eba24ae97701b5ba44fc4687003c090369be5d01ad611118c",
+    "src/components/sections/contact/contact-cta.tsx": "df0794a0aacd827475b16f211c42a7f699d53019833ad39497fd0aae52fce5f4",
+    "src/components/sections/contact/contact-data-note.tsx": "1a04c1f9df5edae5e182d1dbc82d8f8f54864414397c0f1d9e2d7c23c3cfdca5",
+    "src/components/sections/contact/contact-hero.tsx": "637bf6af628fe362e35c70e8455cd1b4e032189ed6a56175d64c83f292d2b0f9",
+    "src/components/sections/contact/contact-preparation.tsx": "2652a188967a08f0940c385ec9b93db554397292709106ebdf7e47f420cd6787",
+    "src/components/sections/contact/contact-process.tsx": "1a69bf08ef1ad84fbf04725fe9db693f5dca91728165a3d19dcc7225dd2c8f63",
+    "src/components/sections/home-contact-cta.tsx": "6a369cccfabef310142b3a8ea9d6e3c6caf340cdd1f7827f034f174389a67a45",
+    "src/components/sections/home-hero.tsx": "36dc12ff2deb4943d32f63e987a33dd4b656a5bc4d9c2e31da0698ed994edaba",
+    "src/components/sections/home-intro.tsx": "007812c9e47258b5176d1b1743b651fcc615d64e04f2d184c92350ff569d3c0e",
+    "src/components/sections/home-introduction.tsx": "4c2f85cb242aed0fdeecacac9137127dead524986d1587fdcbea70e3bcf30a43",
+    "src/components/sections/home-services.tsx": "be5af362260bd76f4fe528087983cd9a9b2baf1e3f43d05a3437e76746da8102",
+    "src/components/sections/home-solutions.tsx": "48b3bb58c73bb6e7e11e3c71720d7b2143e91cba9e888c6046c003183cc3acc1",
+    "src/components/sections/home-technologies.tsx": "8fffe046affe4b6776013fd617efb2d49974eb891001d40e96b2f4751b2bc04a",
+    "src/components/sections/home-why-xk.tsx": "bd3a67a2bd62c95eb266b919c51c6bcc17ceee95d7b37f6064726ec67d010de7",
+    "src/components/sections/portfolio/portfolio-cta.tsx": "8e16a2c695b88a14b7a6adbe5bf834af0d2d675ca7e389a38fd7c6933bda65cf",
+    "src/components/sections/portfolio/portfolio-hero.tsx": "ab3fdbc75aef9491d48c5426aace10071e9fcbc720c5734124cb40abf8fbaeba",
+    "src/components/sections/portfolio/portfolio-introduction.tsx": "e91632cb775be76fb66203aefafc2b4c841394619803bc841c7d2b6c9b162308",
+    "src/components/sections/portfolio/portfolio-projects.tsx": "8aff430f7deae015f5fe37957fe25ebe8d42bf628ff898ac1711ab93378cd306",
+    "src/components/sections/portfolio/portfolio-technology.tsx": "d4174584f430c078d927048273feee7f04e4e961ebcffd3ec2f7a075f8b0e011",
+    "src/components/sections/portfolio/portfolio-transparency.tsx": "34acf84e32b6fc1f03b1b12ead37f62297dcab4c071cdc1be566f173ea33163c",
+    "src/components/sections/portfolio/project-card.tsx": "08b70690368cd015e00100f6c4459ab773e53963d33c7c52fdc9760d86f0414b",
+    "src/components/sections/portfolio/project-detail.tsx": "a04bcd6ab2ec9c5465b9282636f904ef9bdab79f5615035d3f089345012ad7c1",
+    "src/components/sections/portfolio/project-labels.tsx": "782ac79911444633912a21a4d7aa12fe3b77cf408ad256f7ce7dc6e6c8c2b0b6",
+    "src/components/sections/privacy/privacy-policy.tsx": "b5536dac0c948956e74e928ab9710034b9966876226393e036703d667a7b994a",
+    "src/components/sections/section-heading.tsx": "812ce03eb56d2662e6777559432452459742420878acfd0d30e5f69d41df3b0e",
+    "src/components/sections/services/service-ai.tsx": "079ad0d7f8133d2e5939c39955a4c2abdd7d32052ae99bea99f4ef1872e8978c",
+    "src/components/sections/services/service-cloud.tsx": "4cc032ebd6a9762101ee39a429c7cde8b4cf3b740e313c3b31108541cf24fe48",
+    "src/components/sections/services/service-detail.tsx": "e370f30f46de2a04b2b3a769a8cdb623e64ef55a95e6409a0f762f54ad2a9691",
+    "src/components/sections/services/service-integration.tsx": "f9fd89cb4da4d9f9fc98dac53bb7f2aee29d75644931b280e7be2a965af87ad4",
+    "src/components/sections/services/service-java.tsx": "9d3275c82e6aa53cb5f807730573b7a141857f4c6a610e31797bf30c3a4ba4aa",
+    "src/components/sections/services/service-website.tsx": "6ba7cf55b9925692ea098a2de2a08f6863569ec790a53ecfb206b52478138843",
+    "src/components/sections/services/services-cta.tsx": "eac0a39e49d4943432c3f7f7e408c4d020d2539313507b2a2928cf605039489e",
+    "src/components/sections/services/services-hero.tsx": "993f32776d238cbd740fe903fb57618bf3279f056467a92bc47f4a7b3ab288c5",
+    "src/components/sections/services/services-integration.tsx": "9d8bece93655eb2e4a54ca8ccbb829484bfd21453b1cb233ad0f0b3e9461c9b2",
+    "src/components/sections/services/services-overview.tsx": "829d3929a18ae63dcfdc094f722ec80c8fc8b69d80e1699a7e35e62f8f203ed3",
+    "src/components/sections/services/services-process.tsx": "7efd47cfcdd3893b32f7c4ffb4364a38be31a3e2ef5644016962db689ef5acce",
+    "src/components/sections/solutions/solution-detail.tsx": "c5f287de37877d4ab304642dba71a1d3ff3edcc6dfd2436908cdd0522ccbfb5a",
+    "src/components/sections/solutions/solution-service-links.tsx": "5e9b564ca05497168021bbc57ab47b0fc214e65098691198aa5dd0bc384cd491",
+    "src/components/sections/solutions/solutions-approach.tsx": "04b52078222da51c388b10b1216e7474562aff212b7dfd24f5079536b9e38553",
+    "src/components/sections/solutions/solutions-challenges.tsx": "94a0b989afb2e2e2c8283deb8ac15d1d85c6a59b40043aabf107a40b69fb3dcc",
+    "src/components/sections/solutions/solutions-combinations.tsx": "975066131688371f29498e1b78d42083afb6a4081d70daa2ea3ce22fb1b8da15",
+    "src/components/sections/solutions/solutions-cta.tsx": "ba27982f18239cff0860aed1c1c3425b6452f8055951cb7637efc6a386f6a68d",
+    "src/components/sections/solutions/solutions-details.tsx": "458c04dcd96c1ac66545b75d19df2575bfa0dc11941b4defb7e89c2ef2306b5e",
+    "src/components/sections/solutions/solutions-hero.tsx": "27d42d16c4ea745dd38230eba46668308f723979e893741d39eb26568794f495",
+    "src/components/sections/solutions/solutions-overview.tsx": "128821c13707410992f19341c049216991e9c2ce820928831083008edbe313fe",
+    "src/components/sections/solutions/solutions-technology.tsx": "fa01c25cc1be9455ea9cd59e79dcffd739bf995ff651be49fb5fd49702c97bf3",
+    "src/components/sections/solutions/solutions-value.tsx": "87954a80ed13124097cb3e7e2068c8f8f2814ba5e82394f2d8cad2100dfeb66b",
+    "src/components/ui/button.tsx": "289bb592fc7a8c4a71533e04466e436f892cb8e49dca87db0cf93c8fd9924991",
+    "src/components/ui/card.tsx": "406f83196e508dfd5a09178edd589e80d4bdbc7e8bfdb8e47e3b0d6e801b427b",
+    "src/config/about.ts": "643ed5b5245a2f47ce9257fbc87c4a4f8c9a3a5b94f358536ebd28b9d803efce",
+    "src/config/contact-page.ts": "8211ebb5052c6c0a3d8a1bf7f0c7c7c080da1d68f696b79c10f725a44b380771",
+    "src/config/contact.ts": "e4631f45c93f23906ea5e5084e90fc71726e162796dae50bf77c95c704df1254",
+    "src/config/homepage.ts": "499f50b59acfca06f23e758aef4645bb2cc31f544a920a55d7d5b4a9201cb883",
+    "src/config/navigation.ts": "0a8f97ae6f228a1a18fd70f1e72b2ce2dae7ed7011aaf3ae2512b2a82ffb2c79",
+    "src/config/portfolio.ts": "718505388bed4c6889e5fc983dea9ef253214f9b2aaf41bc142dc32124673adf",
+    "src/config/privacy.ts": "27bf02c80fe4d75401de3de6c7df7a853131481d8e63d999767abe97fc42ac80",
+    "src/config/services.ts": "b4f278860c51ec6c1f64a653862b08840662027d61b48db9e482013f253c089b",
+    "src/config/site.ts": "fb67e889a93db76139014c77acdfecf22095fa2b7479441c99f3704b1085597f",
+    "src/config/solutions.ts": "01bd058bdf294b3a5f7f20b508a0b923e4191851fcf8d02ef47e33c6bc5e0c07",
+    "src/lib/privacy-publication.ts": "d3081ecff328461cdba407165136ed9db512b8f704864bdfbeb09f69ad41b351",
+    "src/lib/utils.ts": "55bbdc94cef3e0c8a8bba386e94f97228dd2c967fe61466fc565378890550c08",
+    "tsconfig.json": "2c5a14cbc7c6252c2213f9ca6fffb3611097a8aa2a85f8363976830d4b6b5fe3"
+  },
+  "technicalStatus": "PASS",
+  "taskStatus": "BLOCKED",
+  "formalPolicyStatus": "BLOCKED",
+  "blockedSpecificationItems": [
+    "P09-D02",
+    "P09-D04",
+    "P09-D05",
+    "P09-F02",
+    "P09-F03"
+  ],
+  "optionalPendingAtPrCreation": [
+    "P09-F10",
+    "P09-A05"
+  ],
+  "quality": {
+    "pages-build-1": {
+      "status": "PASS",
+      "command": [
+        "npm",
+        "run",
+        "build:pages"
+      ],
+      "cwd": "/workspace/xk-website",
+      "startedAt": "2026-11-19T05:58:26.788870+00:00",
+      "finishedAt": "2026-11-19T05:58:33.740151+00:00",
+      "processId": 33103,
+      "returnCode": 0,
+      "exitCode": 0,
+      "timeoutSeconds": 600.0,
+      "logFile": "/tmp/xk-task009/checks/pages-build-1.log",
+      "logSha256": "35ae353977ce7d0675b54391cce9d79b1eff5fa8e3d58baf3ffa7a2b95c04d7b",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+      "terminationReason": "completed",
+      "signal": null
+    },
+    "npm-ci-1": {
+      "status": "PASS",
+      "command": [
+        "npm",
+        "ci"
+      ],
+      "cwd": "/workspace/xk-website",
+      "startedAt": "2026-11-19T05:45:40.034855+00:00",
+      "finishedAt": "2026-11-19T05:45:52.456658+00:00",
+      "processId": 28093,
+      "returnCode": 0,
+      "exitCode": 0,
+      "timeoutSeconds": 600.0,
+      "logFile": "/tmp/xk-task009/checks/npm-ci-1.log",
+      "logSha256": "935451eef6b9f7876ee3ce939397d6d3e7b46f7cc59806c0aa0fbe99e68509b7",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+      "terminationReason": "completed",
+      "signal": null
+    },
+    "lint-1": {
+      "status": "PASS",
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "cwd": "/workspace/xk-website",
+      "startedAt": "2026-11-19T05:46:22.887215+00:00",
+      "finishedAt": "2026-11-19T05:46:26.901179+00:00",
+      "processId": 28271,
+      "returnCode": 0,
+      "exitCode": 0,
+      "timeoutSeconds": 180.0,
+      "logFile": "/tmp/xk-task009/checks/lint-1.log",
+      "logSha256": "4832429d90701848a8b0024ae103a7c776fd85ae0c605d9f043272050dc34815",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+      "terminationReason": "completed",
+      "signal": null
+    },
+    "build-1": {
+      "status": "PASS",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/workspace/xk-website",
+      "startedAt": "2026-11-19T05:46:26.944845+00:00",
+      "finishedAt": "2026-11-19T05:46:36.204721+00:00",
+      "processId": 28313,
+      "returnCode": 0,
+      "exitCode": 0,
+      "timeoutSeconds": 600.0,
+      "logFile": "/tmp/xk-task009/checks/build-1.log",
+      "logSha256": "e1ecdc622985802c1c7ef44282c5806d3f694c4365d52293bc7799391a382719",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+      "terminationReason": "completed",
+      "signal": null
+    },
+    "design-preview-1": {
+      "status": "PASS",
+      "command": [
+        "python3",
+        "/tmp/xk-task009/verify-design-preview.py"
+      ],
+      "cwd": "/workspace/xk-website",
+      "startedAt": "2026-11-19T05:48:45.290421+00:00",
+      "finishedAt": "2026-11-19T05:48:46.431375+00:00",
+      "processId": 29673,
+      "returnCode": 0,
+      "exitCode": 0,
+      "timeoutSeconds": 45.0,
+      "logFile": "/tmp/xk-task009/checks/design-preview-1.log",
+      "logSha256": "d08e1c749a4f5c82bd09a2aef0f7c4e8fd9af40da5c4b7d537e54010ae1722a7",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+      "terminationReason": "completed",
+      "signal": null
+    },
+    "tsc-1": {
+      "status": "PASS",
+      "command": [
+        "npx",
+        "tsc",
+        "--noEmit"
+      ],
+      "cwd": "/workspace/xk-website",
+      "startedAt": "2026-11-19T05:46:19.808970+00:00",
+      "finishedAt": "2026-11-19T05:46:22.826000+00:00",
+      "processId": 28238,
+      "returnCode": 0,
+      "exitCode": 0,
+      "timeoutSeconds": 180.0,
+      "logFile": "/tmp/xk-task009/checks/tsc-1.log",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+      "terminationReason": "completed",
+      "signal": null
+    },
+    "build-storage-supplement": {
+      "status": "PASS",
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "cwd": "/workspace/xk-website",
+      "startedAt": "2026-11-19T06:07:10.884137+00:00",
+      "finishedAt": "2026-11-19T06:07:17.344720+00:00",
+      "processId": 39675,
+      "returnCode": 0,
+      "exitCode": 0,
+      "timeoutSeconds": 600.0,
+      "logFile": "/tmp/xk-task009/checks/build-storage-supplement.log",
+      "logSha256": "608a3c1bae79928a0931e2aa17a52fa9a6fde3d17d3dd7c95d309ff9ee314731",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+      "terminationReason": "completed",
+      "signal": null
+    },
+    "publication-1": {
+      "status": "PASS",
+      "command": [
+        "node",
+        "/tmp/xk-task009/verify-publication.cjs"
+      ],
+      "cwd": "/workspace/xk-website",
+      "startedAt": "2026-11-19T05:41:32.144432+00:00",
+      "finishedAt": "2026-11-19T05:41:32.713813+00:00",
+      "processId": 27323,
+      "returnCode": 0,
+      "exitCode": 0,
+      "timeoutSeconds": 30.0,
+      "logFile": "/tmp/xk-task009/checks/publication-1.log",
+      "logSha256": "f373b13c2b48a22a0c9e6a075010ba97de8cf329ad08562e04f480ff6fd4d8cc",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+      "terminationReason": "completed",
+      "signal": null
+    }
+  },
+  "modes": {
+    "general": {
+      "technicalStatus": "PASS",
+      "taskStatus": "BLOCKED",
+      "selectedTestCount": 26,
+      "counts": {
+        "PASS": 23,
+        "BLOCKED": 2,
+        "PENDING": 1
+      },
+      "networkExecutionHistory": [
+        {
+          "testId": "P09-F07-general-network",
+          "status": "PASS",
+          "resultFile": "/tmp/xk-task009/runs/general-formal-retest-2026-11-19T05-48-25-670Z/results.json",
+          "processReceipt": "/tmp/xk-task009/general-formal-retest-process.json",
+          "actualProcessExitCode": 1,
+          "actualResult": {
+            "assets": 28,
+            "rawRequestFailures": 0,
+            "expectedHeadCount": 0,
+            "unexpectedErrors": 0,
+            "evidenceFiles": {
+              "rawNetwork": "/tmp/xk-task009/runs/general-formal-retest-2026-11-19T05-48-25-670Z/network-raw.ndjson",
+              "classification": "/tmp/xk-task009/runs/general-formal-retest-2026-11-19T05-48-25-670Z/network-classification.json"
+            }
+          }
+        },
+        {
+          "testId": "P09-F07-general-network",
+          "status": "PASS",
+          "resultFile": "/tmp/xk-task009/runs/general-targeted-2026-11-19T05-51-53-871Z/results.json",
+          "processReceipt": "/tmp/xk-task009/general-targeted-process.json",
+          "actualProcessExitCode": 1,
+          "actualResult": {
+            "assets": 28,
+            "rawRequestFailures": 0,
+            "expectedHeadCount": 0,
+            "unexpectedErrors": 0,
+            "evidenceFiles": {
+              "rawNetwork": "/tmp/xk-task009/runs/general-targeted-2026-11-19T05-51-53-871Z/network-raw.ndjson",
+              "classification": "/tmp/xk-task009/runs/general-targeted-2026-11-19T05-51-53-871Z/network-classification.json"
+            }
+          }
+        },
+        {
+          "testId": "P09-F07-general-network",
+          "status": "PASS",
+          "resultFile": "/tmp/xk-task009/runs/general-home-url-2026-11-19T05-53-00-805Z/results.json",
+          "processReceipt": "/tmp/xk-task009/general-home-url-process.json",
+          "actualProcessExitCode": 0,
+          "actualResult": {
+            "assets": 22,
+            "rawRequestFailures": 0,
+            "expectedHeadCount": 0,
+            "unexpectedErrors": 0,
+            "evidenceFiles": {
+              "rawNetwork": "/tmp/xk-task009/runs/general-home-url-2026-11-19T05-53-00-805Z/network-raw.ndjson",
+              "classification": "/tmp/xk-task009/runs/general-home-url-2026-11-19T05-53-00-805Z/network-classification.json"
+            }
+          }
+        },
+        {
+          "testId": "P09-F07-general-network",
+          "status": "PASS",
+          "resultFile": "/tmp/xk-task009/runs/normal-storage-2026-11-19T06-08-58-961Z/results.json",
+          "processReceipt": "/tmp/xk-task009/normal-storage-process.json",
+          "actualProcessExitCode": 0,
+          "actualResult": {
+            "assets": 28,
+            "rawRequestFailures": 0,
+            "expectedHeadCount": 0,
+            "unexpectedErrors": 0,
+            "evidenceFiles": {
+              "rawNetwork": "/tmp/xk-task009/runs/normal-storage-2026-11-19T06-08-58-961Z/network-raw.ndjson",
+              "classification": "/tmp/xk-task009/runs/normal-storage-2026-11-19T06-08-58-961Z/network-classification.json"
+            }
+          }
+        }
+      ],
+      "coverageEvidence": [],
+      "allExecutions": [
+        {
+          "resultFile": "/tmp/xk-task009/runs/general-formal-2026-11-19T05-47-32-916Z/results.json",
+          "receipt": "/tmp/xk-task009/general-formal-process.json",
+          "exitCode": 1,
+          "complete": false
+        },
+        {
+          "resultFile": "/tmp/xk-task009/runs/general-formal-retest-2026-11-19T05-48-25-670Z/results.json",
+          "receipt": "/tmp/xk-task009/general-formal-retest-process.json",
+          "exitCode": 1,
+          "complete": true
+        },
+        {
+          "resultFile": "/tmp/xk-task009/runs/general-targeted-2026-11-19T05-51-53-871Z/results.json",
+          "receipt": "/tmp/xk-task009/general-targeted-process.json",
+          "exitCode": 1,
+          "complete": true
+        },
+        {
+          "resultFile": "/tmp/xk-task009/runs/general-home-url-2026-11-19T05-53-00-805Z/results.json",
+          "receipt": "/tmp/xk-task009/general-home-url-process.json",
+          "exitCode": 0,
+          "complete": true
+        },
+        {
+          "resultFile": "/tmp/xk-task009/runs/normal-storage-2026-11-19T06-08-58-961Z/results.json",
+          "receipt": "/tmp/xk-task009/normal-storage-process.json",
+          "exitCode": 0,
+          "complete": true
+        }
+      ]
+    },
+    "preview": {
+      "technicalStatus": "PASS",
+      "taskStatus": "BLOCKED",
+      "selectedTestCount": 26,
+      "counts": {
+        "PASS": 22,
+        "N/A": 1,
+        "BLOCKED": 2,
+        "PENDING": 1
+      },
+      "networkExecutionHistory": [
+        {
+          "testId": "P09-F07-preview-network",
+          "status": "PASS",
+          "resultFile": "/tmp/xk-task009/runs/preview-preflight-2026-11-19T05-51-54-460Z/results.json",
+          "processReceipt": "/tmp/xk-task009/preview-preflight-process.json",
+          "actualProcessExitCode": 0,
+          "actualResult": {
+            "assets": 26,
+            "rawRequestFailures": 0,
+            "expectedHeadCount": 0,
+            "unexpectedErrors": 0,
+            "evidenceFiles": {
+              "rawNetwork": "/tmp/xk-task009/runs/preview-preflight-2026-11-19T05-51-54-460Z/network-raw.ndjson",
+              "classification": "/tmp/xk-task009/runs/preview-preflight-2026-11-19T05-51-54-460Z/network-classification.json"
+            }
+          }
+        },
+        {
+          "testId": "P09-F07-preview-network",
+          "status": "FAIL",
+          "resultFile": "/tmp/xk-task009/runs/preview-complete-2026-11-19T05-52-59-994Z/results.json",
+          "processReceipt": "/tmp/xk-task009/preview-complete-process.json",
+          "actualProcessExitCode": 1,
+          "actualResult": {
+            "message": "No unexpected browser/network error\n\n5 !== 0\n",
+            "stack": "AssertionError [ERR_ASSERTION]: No unexpected browser/network error\n\n5 !== 0\n\n    at /tmp/xk-task009/browser.cjs:81:777\n    at async bounded (/tmp/xk-task009/browser.cjs:26:134)\n    at async execute (/tmp/xk-task009/browser.cjs:31:472)\n    at async main (/tmp/xk-task009/browser.cjs:81:1477)"
+          }
+        },
+        {
+          "testId": "P09-F07-preview-network",
+          "status": "PASS",
+          "resultFile": "/tmp/xk-task009/runs/preview-targeted-2026-11-19T05-55-47-041Z/results.json",
+          "processReceipt": "/tmp/xk-task009/preview-targeted-process.json",
+          "actualProcessExitCode": 1,
+          "actualResult": {
+            "assets": 26,
+            "rawRequestFailures": 0,
+            "expectedHeadCount": 0,
+            "unexpectedErrors": 0,
+            "evidenceFiles": {
+              "rawNetwork": "/tmp/xk-task009/runs/preview-targeted-2026-11-19T05-55-47-041Z/network-raw.ndjson",
+              "classification": "/tmp/xk-task009/runs/preview-targeted-2026-11-19T05-55-47-041Z/network-classification.json"
+            }
+          }
+        },
+        {
+          "testId": "P09-F07-preview-network",
+          "status": "PASS",
+          "resultFile": "/tmp/xk-task009/runs/preview-menu-2026-11-19T05-56-42-665Z/results.json",
+          "processReceipt": "/tmp/xk-task009/preview-menu-process.json",
+          "actualProcessExitCode": 0,
+          "actualResult": {
+            "assets": 26,
+            "rawRequestFailures": 0,
+            "expectedHeadCount": 0,
+            "unexpectedErrors": 0,
+            "evidenceFiles": {
+              "rawNetwork": "/tmp/xk-task009/runs/preview-menu-2026-11-19T05-56-42-665Z/network-raw.ndjson",
+              "classification": "/tmp/xk-task009/runs/preview-menu-2026-11-19T05-56-42-665Z/network-classification.json"
+            }
+          }
+        }
+      ],
+      "coverageEvidence": [
+        {
+          "resultFile": "/tmp/xk-task009/runs/preview-complete-2026-11-19T05-52-59-994Z/results.json",
+          "responsive": 5,
+          "axe": 8,
+          "processReceipt": "/tmp/xk-task009/preview-complete-process.json",
+          "actualProcessExitCode": 1
+        }
+      ],
+      "allExecutions": [
+        {
+          "resultFile": "/tmp/xk-task009/runs/preview-formal-2026-11-19T05-49-48-069Z/results.json",
+          "receipt": "/tmp/xk-task009/preview-formal-process.json",
+          "exitCode": 1,
+          "complete": false
+        },
+        {
+          "resultFile": "/tmp/xk-task009/runs/preview-preflight-2026-11-19T05-51-54-460Z/results.json",
+          "receipt": "/tmp/xk-task009/preview-preflight-process.json",
+          "exitCode": 0,
+          "complete": true
+        },
+        {
+          "resultFile": "/tmp/xk-task009/runs/preview-complete-2026-11-19T05-52-59-994Z/results.json",
+          "receipt": "/tmp/xk-task009/preview-complete-process.json",
+          "exitCode": 1,
+          "complete": true
+        },
+        {
+          "resultFile": "/tmp/xk-task009/runs/preview-targeted-2026-11-19T05-55-47-041Z/results.json",
+          "receipt": "/tmp/xk-task009/preview-targeted-process.json",
+          "exitCode": 1,
+          "complete": true
+        },
+        {
+          "resultFile": "/tmp/xk-task009/runs/preview-menu-2026-11-19T05-56-42-665Z/results.json",
+          "receipt": "/tmp/xk-task009/preview-menu-process.json",
+          "exitCode": 0,
+          "complete": true
+        }
+      ]
+    },
+    "pages": {
+      "technicalStatus": "PASS",
+      "taskStatus": "BLOCKED",
+      "selectedTestCount": 37,
+      "counts": {
+        "PASS": 33,
+        "N/A": 1,
+        "BLOCKED": 2,
+        "PENDING": 1
+      },
+      "networkExecutionHistory": [
+        {
+          "testId": "P09-F07-pages-network",
+          "status": "PASS",
+          "resultFile": "/tmp/xk-task009/runs/pages-formal-2026-11-19T06-00-05-503Z/results.json",
+          "processReceipt": "/tmp/xk-task009/pages-formal-process.json",
+          "actualProcessExitCode": 1,
+          "actualResult": {
+            "assets": 151,
+            "rawRequestFailures": 429,
+            "expectedHeadCount": 429,
+            "unexpectedErrors": 0,
+            "evidenceFiles": {
+              "rawNetwork": "/tmp/xk-task009/runs/pages-formal-2026-11-19T06-00-05-503Z/network-raw.ndjson",
+              "classification": "/tmp/xk-task009/runs/pages-formal-2026-11-19T06-00-05-503Z/network-classification.json"
+            }
+          }
+        },
+        {
+          "testId": "P09-F07-pages-network",
+          "status": "PASS",
+          "resultFile": "/tmp/xk-task009/runs/pages-metadata-2026-11-19T06-03-21-546Z/results.json",
+          "processReceipt": "/tmp/xk-task009/pages-metadata-process.json",
+          "actualProcessExitCode": 0,
+          "actualResult": {
+            "assets": 145,
+            "rawRequestFailures": 54,
+            "expectedHeadCount": 54,
+            "unexpectedErrors": 0,
+            "evidenceFiles": {
+              "rawNetwork": "/tmp/xk-task009/runs/pages-metadata-2026-11-19T06-03-21-546Z/network-raw.ndjson",
+              "classification": "/tmp/xk-task009/runs/pages-metadata-2026-11-19T06-03-21-546Z/network-classification.json"
+            }
+          }
+        }
+      ],
+      "coverageEvidence": [
+        {
+          "resultFile": "/tmp/xk-task009/runs/pages-formal-2026-11-19T06-00-05-503Z/results.json",
+          "responsive": 45,
+          "axe": 48,
+          "processReceipt": "/tmp/xk-task009/pages-formal-process.json",
+          "actualProcessExitCode": 1
+        }
+      ],
+      "allExecutions": [
+        {
+          "resultFile": "/tmp/xk-task009/runs/pages-formal-2026-11-19T06-00-05-503Z/results.json",
+          "receipt": "/tmp/xk-task009/pages-formal-process.json",
+          "exitCode": 1,
+          "complete": true
+        },
+        {
+          "resultFile": "/tmp/xk-task009/runs/pages-metadata-2026-11-19T06-03-21-546Z/results.json",
+          "receipt": "/tmp/xk-task009/pages-metadata-process.json",
+          "exitCode": 0,
+          "complete": true
+        }
+      ]
+    }
+  },
+  "browserExecutionIndex": [
+    {
+      "mode": "general",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=general",
+        "--base=http://127.0.0.1:3060/",
+        "--run=general-formal",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+      ],
+      "receipt": "/tmp/xk-task009/general-formal-process.json",
+      "resultFile": "/tmp/xk-task009/runs/general-formal-2026-11-19T05-47-32-916Z/results.json",
+      "actualProcessExitCode": 1,
+      "counts": null,
+      "sourceFingerprint": "057735c819c399b65d68085a76d1ac2ba3fa7323bb1780e931221f9757ceed77"
+    },
+    {
+      "mode": "general",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=general",
+        "--base=http://127.0.0.1:3060/",
+        "--run=general-formal-retest",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+      ],
+      "receipt": "/tmp/xk-task009/general-formal-retest-process.json",
+      "resultFile": "/tmp/xk-task009/runs/general-formal-retest-2026-11-19T05-48-25-670Z/results.json",
+      "actualProcessExitCode": 1,
+      "counts": {
+        "PASS": 17,
+        "FAIL": 5,
+        "BLOCKED": 2,
+        "N/A": 0,
+        "PENDING": 1
+      },
+      "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+    },
+    {
+      "mode": "general",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=general",
+        "--base=http://127.0.0.1:3060/",
+        "--run=general-home-url",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6",
+        "--only=P09-F06-general-home,P09-F07-general-network",
+        "--reason=Exact-source-OG-root-string-versus-DOM-URL-serialization"
+      ],
+      "receipt": "/tmp/xk-task009/general-home-url-process.json",
+      "resultFile": "/tmp/xk-task009/runs/general-home-url-2026-11-19T05-53-00-805Z/results.json",
+      "actualProcessExitCode": 0,
+      "counts": {
+        "PASS": 2,
+        "FAIL": 0,
+        "BLOCKED": 0,
+        "N/A": 0,
+        "PENDING": 0
+      },
+      "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+    },
+    {
+      "mode": "general",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=general",
+        "--base=http://127.0.0.1:3060/",
+        "--run=general-targeted",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6",
+        "--only=P09-F06-general-home,P09-F04-general-about,P09-F04-general-services,P09-F01-general,P09-F03-general-alllinks,P09-F07-general-network",
+        "--reason=Tool-contract-corrections-only"
+      ],
+      "receipt": "/tmp/xk-task009/general-targeted-process.json",
+      "resultFile": "/tmp/xk-task009/runs/general-targeted-2026-11-19T05-51-53-871Z/results.json",
+      "actualProcessExitCode": 1,
+      "counts": {
+        "PASS": 5,
+        "FAIL": 1,
+        "BLOCKED": 0,
+        "N/A": 0,
+        "PENDING": 0
+      },
+      "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+    },
+    {
+      "mode": "general",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=general",
+        "--base=http://127.0.0.1:3060/",
+        "--run=normal-storage",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6",
+        "--only=P09-D03-general-9routes,P09-F07-general-network",
+        "--reason=Required-ordinary-storage-after-snapshot-coverage-gap"
+      ],
+      "receipt": "/tmp/xk-task009/normal-storage-process.json",
+      "resultFile": "/tmp/xk-task009/runs/normal-storage-2026-11-19T06-08-58-961Z/results.json",
+      "actualProcessExitCode": 0,
+      "counts": {
+        "PASS": 2,
+        "FAIL": 0,
+        "BLOCKED": 0,
+        "N/A": 0,
+        "PENDING": 0
+      },
+      "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+    },
+    {
+      "mode": "pages",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=pages",
+        "--base=http://127.0.0.1:3061/xk-website/",
+        "--run=pages-formal",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+      ],
+      "receipt": "/tmp/xk-task009/pages-formal-process.json",
+      "resultFile": "/tmp/xk-task009/runs/pages-formal-2026-11-19T06-00-05-503Z/results.json",
+      "actualProcessExitCode": 1,
+      "counts": {
+        "PASS": 24,
+        "FAIL": 9,
+        "BLOCKED": 2,
+        "N/A": 1,
+        "PENDING": 1
+      },
+      "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+    },
+    {
+      "mode": "pages",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=pages",
+        "--base=http://127.0.0.1:3061/xk-website/",
+        "--run=pages-metadata",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6",
+        "--only=P09-F06-pages-home,P09-F06-pages-about,P09-F06-pages-services,P09-F06-pages-solutions,P09-F06-pages-portfolio,P09-F06-pages-corporate-website,P09-F06-pages-enterprise-management,P09-F06-pages-integration-hub,P09-F06-pages-contact,P09-F07-pages-network",
+        "--reason=Pages-trailingSlash-brand-metadata-contract"
+      ],
+      "receipt": "/tmp/xk-task009/pages-metadata-process.json",
+      "resultFile": "/tmp/xk-task009/runs/pages-metadata-2026-11-19T06-03-21-546Z/results.json",
+      "actualProcessExitCode": 0,
+      "counts": {
+        "PASS": 10,
+        "FAIL": 0,
+        "BLOCKED": 0,
+        "N/A": 0,
+        "PENDING": 0
+      },
+      "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+    },
+    {
+      "mode": "preview",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=preview",
+        "--base=http://127.0.0.1:3062/",
+        "--run=preview-complete",
+        "--screenshots=1",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6",
+        "--exclude=P09-F01-preview-body,P09-F06-preview-privacy"
+      ],
+      "receipt": "/tmp/xk-task009/preview-complete-process.json",
+      "resultFile": "/tmp/xk-task009/runs/preview-complete-2026-11-19T05-52-59-994Z/results.json",
+      "actualProcessExitCode": 1,
+      "counts": {
+        "PASS": 18,
+        "FAIL": 2,
+        "BLOCKED": 2,
+        "N/A": 1,
+        "PENDING": 1
+      },
+      "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+    },
+    {
+      "mode": "preview",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=preview",
+        "--base=http://127.0.0.1:3062/",
+        "--run=preview-formal",
+        "--screenshots=1",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+      ],
+      "receipt": "/tmp/xk-task009/preview-formal-process.json",
+      "resultFile": "/tmp/xk-task009/runs/preview-formal-2026-11-19T05-49-48-069Z/results.json",
+      "actualProcessExitCode": 1,
+      "counts": null,
+      "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+    },
+    {
+      "mode": "preview",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=preview",
+        "--base=http://127.0.0.1:3062/",
+        "--run=preview-menu",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6",
+        "--only=P09-F05-preview-menu,P09-F07-preview-network",
+        "--reason=Disclosure-panel-boundary-includes-parent-padding"
+      ],
+      "receipt": "/tmp/xk-task009/preview-menu-process.json",
+      "resultFile": "/tmp/xk-task009/runs/preview-menu-2026-11-19T05-56-42-665Z/results.json",
+      "actualProcessExitCode": 0,
+      "counts": {
+        "PASS": 2,
+        "FAIL": 0,
+        "BLOCKED": 0,
+        "N/A": 0,
+        "PENDING": 0
+      },
+      "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+    },
+    {
+      "mode": "preview",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=preview",
+        "--base=http://127.0.0.1:3062/",
+        "--run=preview-preflight",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6",
+        "--only=P09-F01-preview-body,P09-F06-preview-privacy,P09-F07-preview-network",
+        "--reason=Preview-constructor-and-one-page-preflight"
+      ],
+      "receipt": "/tmp/xk-task009/preview-preflight-process.json",
+      "resultFile": "/tmp/xk-task009/runs/preview-preflight-2026-11-19T05-51-54-460Z/results.json",
+      "actualProcessExitCode": 0,
+      "counts": {
+        "PASS": 3,
+        "FAIL": 0,
+        "BLOCKED": 0,
+        "N/A": 0,
+        "PENDING": 0
+      },
+      "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+    },
+    {
+      "mode": "preview",
+      "command": [
+        "node",
+        "/tmp/xk-task009/browser.cjs",
+        "--mode=preview",
+        "--base=http://127.0.0.1:3062/",
+        "--run=preview-targeted",
+        "--expected-fingerprint=c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6",
+        "--only=P09-F05-preview-menu,P09-R-long-url-320,P09-R-long-url-375,P09-R-long-url-768,P09-R-long-url-1440,P09-R-long-url-1920,P09-F07-preview-network",
+        "--reason=DOM-outside-target-and-fixture-declared-icon-corrections"
+      ],
+      "receipt": "/tmp/xk-task009/preview-targeted-process.json",
+      "resultFile": "/tmp/xk-task009/runs/preview-targeted-2026-11-19T05-55-47-041Z/results.json",
+      "actualProcessExitCode": 1,
+      "counts": {
+        "PASS": 6,
+        "FAIL": 1,
+        "BLOCKED": 0,
+        "N/A": 0,
+        "PENDING": 0
+      },
+      "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6"
+    }
+  ],
+  "sourceAudit": {
+    "documentation": {
+      "checkedAt": "2026-11-19T05:38:23.529Z",
+      "repository": "xk2022/xplore-kaleidoscope",
+      "branch": "main",
+      "commit": "95ef1275a46ace76e11f668178ca881087483398",
+      "tree": "8bba493a05911a11a7e29d7d01650e9d0e00f3e7",
+      "truncated": false
+    },
+    "privacySources": [
+      {
+        "id": "BUSINESS_EN",
+        "repository": "xk2022/xplore-kaleidoscope",
+        "branch": "main",
+        "commit": "95ef1275a46ace76e11f668178ca881087483398",
+        "path": "doc/01_business-plan/week-01/00_company-profile.md",
+        "gitBlobSha1": "249dda3bc464c7fae497e037d8a9916ed93893e7",
+        "sha256": "0116c0f8b5d7ec8bfcd6c010aa478feb39629fc5367691002c23016372a420ee",
+        "bytes": 6466,
+        "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/95ef1275a46ace76e11f668178ca881087483398/doc/01_business-plan/week-01/00_company-profile.md",
+        "sectionsReviewed": [
+          "§1 Company Overview",
+          "§2 Brand Identity",
+          "§12 First Proprietary Product"
+        ],
+        "approvalStatus": "planning/template/business reference; not approved legal text",
+        "actuallyAdopted": "品牌與一人全職技術服務背景；不是法定主體／登記或商用產品證據。",
+        "readMethod": "Prior complete same-commit source research retained at /tmp/xk-specifications-006-014/source-audit.md and source-manifest.json; current GitHub branch/tree and all51 bytes verified; privacy-relevant source text and code examples reread in this Task009 session. Not a new runtime test."
+      },
+      {
+        "id": "BUSINESS_ZH",
+        "repository": "xk2022/xplore-kaleidoscope",
+        "branch": "main",
+        "commit": "95ef1275a46ace76e11f668178ca881087483398",
+        "path": "doc/01_business-plan/week-01/00_公司介紹.md",
+        "gitBlobSha1": "d089b3baf8a7466716cfa13ff62bd959f812b108",
+        "sha256": "d39727bb8b554c0607941253f2999293629a31cd0318304c0cf6de7ebe6160ed",
+        "bytes": 3612,
+        "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/95ef1275a46ace76e11f668178ca881087483398/doc/01_business-plan/week-01/00_%E5%85%AC%E5%8F%B8%E4%BB%8B%E7%B4%B9.md",
+        "sectionsReviewed": [
+          "§1 公司概述",
+          "§2 品牌基本資料"
+        ],
+        "approvalStatus": "planning/template/business reference; not approved legal text",
+        "actuallyAdopted": "中文名稱尚待正式定案；不把英文profile的中文提案當法定名稱。",
+        "readMethod": "Prior complete same-commit source research retained at /tmp/xk-specifications-006-014/source-audit.md and source-manifest.json; current GitHub branch/tree and all51 bytes verified; privacy-relevant source text and code examples reread in this Task009 session. Not a new runtime test."
+      },
+      {
+        "id": "INIT",
+        "repository": "xk2022/xplore-kaleidoscope",
+        "branch": "main",
+        "commit": "95ef1275a46ace76e11f668178ca881087483398",
+        "path": "doc/00_initGPT/05_Xplore Kaleidoscope 正式建置技術決策如下.md",
+        "gitBlobSha1": "59f6c1151015bdec746229e78596e2311cdc2f6f",
+        "sha256": "be52224033d291e1811b76982597f7a89b8147118b429d23364d6f37a53c4ab1",
+        "bytes": 41795,
+        "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/95ef1275a46ace76e11f668178ca881087483398/doc/00_initGPT/05_Xplore%20Kaleidoscope%20%E6%AD%A3%E5%BC%8F%E5%BB%BA%E7%BD%AE%E6%8A%80%E8%A1%93%E6%B1%BA%E7%AD%96%E5%A6%82%E4%B8%8B.md",
+        "sectionsReviewed": [
+          "ASK 技術方向",
+          "ANS §5.8 官網首頁元件",
+          "ANS §5.10 執行官網",
+          "ANS §13 本次交付範圍與下一步"
+        ],
+        "approvalStatus": "planning/template/business reference; not approved legal text",
+        "actuallyAdopted": "ASK決策與ANS未編譯模板分開；hello mailto範例不是有效管道或已部署證據。",
+        "readMethod": "Prior complete same-commit source research retained at /tmp/xk-specifications-006-014/source-audit.md and source-manifest.json; current GitHub branch/tree and all51 bytes verified; privacy-relevant source text and code examples reread in this Task009 session. Not a new runtime test."
+      },
+      {
+        "id": "MVP",
+        "repository": "xk2022/xplore-kaleidoscope",
+        "branch": "main",
+        "commit": "95ef1275a46ace76e11f668178ca881087483398",
+        "path": "doc/01_business-plan/week-02/09_website-mvp_官方網站 MVP 開發規格.md",
+        "gitBlobSha1": "5bc98a653e0b92ceb3e4439ae1b15e26e6b8a71d",
+        "sha256": "b02434d1c4eac6c9717d713dd264a6045a0251ff6e673ff24ecf1cb346336095",
+        "bytes": 17516,
+        "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/95ef1275a46ace76e11f668178ca881087483398/doc/01_business-plan/week-02/09_website-mvp_%E5%AE%98%E6%96%B9%E7%B6%B2%E7%AB%99%20MVP%20%E9%96%8B%E7%99%BC%E8%A6%8F%E6%A0%BC.md",
+        "sectionsReviewed": [
+          "§8 Contact Form 規格",
+          "§12 Analytics 與成效追蹤"
+        ],
+        "approvalStatus": "planning/template/business reference; not approved legal text",
+        "actuallyAdopted": "候選表單schema/API與可選GA4是初版規劃，非當前處理或核准法律正文。",
+        "readMethod": "Prior complete same-commit source research retained at /tmp/xk-specifications-006-014/source-audit.md and source-manifest.json; current GitHub branch/tree and all51 bytes verified; privacy-relevant source text and code examples reread in this Task009 session. Not a new runtime test."
+      },
+      {
+        "id": "ARCH",
+        "repository": "xk2022/xplore-kaleidoscope",
+        "branch": "main",
+        "commit": "95ef1275a46ace76e11f668178ca881087483398",
+        "path": "doc/01_business-plan/week-02/08_website-architecture_官方網站 Next.js 技術架構設計.md",
+        "gitBlobSha1": "15c1483bf47be33bc29b755a220fb465b5dd8a1a",
+        "sha256": "9daf598ee1184c66ff2fac32d0b9d33996566088ac8b89e72f3ca9059d069680",
+        "bytes": 24740,
+        "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/95ef1275a46ace76e11f668178ca881087483398/doc/01_business-plan/week-02/08_website-architecture_%E5%AE%98%E6%96%B9%E7%B6%B2%E7%AB%99%20Next.js%20%E6%8A%80%E8%A1%93%E6%9E%B6%E6%A7%8B%E8%A8%AD%E8%A8%88.md",
+        "sectionsReviewed": [
+          "§10 設定檔與內容管理",
+          "§11 API Integration",
+          "§12 Contact Form"
+        ],
+        "approvalStatus": "planning/template/business reference; not approved legal text",
+        "actuallyAdopted": "集中設定與語意呈現；範例contact email／API不獲本任務採用。",
+        "readMethod": "Prior complete same-commit source research retained at /tmp/xk-specifications-006-014/source-audit.md and source-manifest.json; current GitHub branch/tree and all51 bytes verified; privacy-relevant source text and code examples reread in this Task009 session. Not a new runtime test."
+      },
+      {
+        "id": "SITEMAP",
+        "repository": "xk2022/xplore-kaleidoscope",
+        "branch": "main",
+        "commit": "95ef1275a46ace76e11f668178ca881087483398",
+        "path": "doc/01_business-plan/week-02/05_website-sitemap_ 官方網站資訊架構與網站地圖.md",
+        "gitBlobSha1": "1f1b4584bbe06f0079542eedffa52215024da0f7",
+        "sha256": "3f94f70273e9d6c4438ea43363567a857e2b39673b31f492c6e3b9f98fa45ff1",
+        "bytes": 20922,
+        "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/95ef1275a46ace76e11f668178ca881087483398/doc/01_business-plan/week-02/05_website-sitemap_%20%E5%AE%98%E6%96%B9%E7%B6%B2%E7%AB%99%E8%B3%87%E8%A8%8A%E6%9E%B6%E6%A7%8B%E8%88%87%E7%B6%B2%E7%AB%99%E5%9C%B0%E5%9C%96.md",
+        "sectionsReviewed": [
+          "§4.1 Phase 1 — MVP Pages",
+          "§12 Contact 頁面",
+          "§13.4 Legal",
+          "§16.4 Structured Data"
+        ],
+        "approvalStatus": "planning/template/business reference; not approved legal text",
+        "actuallyAdopted": "法律頁目的及不虛構公司資訊；舊/privacy-policy被canonical /privacy取代。",
+        "readMethod": "Prior complete same-commit source research retained at /tmp/xk-specifications-006-014/source-audit.md and source-manifest.json; current GitHub branch/tree and all51 bytes verified; privacy-relevant source text and code examples reread in this Task009 session. Not a new runtime test."
+      },
+      {
+        "id": "HOSTING",
+        "repository": "xk2022/xplore-kaleidoscope",
+        "branch": "main",
+        "commit": "95ef1275a46ace76e11f668178ca881087483398",
+        "path": "doc/01_business-plan/week-02/07_domain-hosting_網域、DNS、主機與部署架構規劃.md",
+        "gitBlobSha1": "9c1c5c8177c423bacaa97b5199a22430ddf6bc2c",
+        "sha256": "dbb03e9ed7d2d16c4f004bf8e735c8391b77257585184d6c34592d5a96f895ec",
+        "bytes": 22806,
+        "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/95ef1275a46ace76e11f668178ca881087483398/doc/01_business-plan/week-02/07_domain-hosting_%E7%B6%B2%E5%9F%9F%E3%80%81DNS%E3%80%81%E4%B8%BB%E6%A9%9F%E8%88%87%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%A7%8B%E8%A6%8F%E5%8A%83.md",
+        "sectionsReviewed": [
+          "§2 已確認技術決策",
+          "§12 Email 與品牌電子郵件",
+          "§12.1 建議電子郵件",
+          "§12.2 Email DNS 設定"
+        ],
+        "approvalStatus": "planning/template/business reference; not approved legal text",
+        "actuallyAdopted": "供應商與建議信箱屬規劃；不證明帳號控制、租戶設定、保存期或跨境地點。",
+        "readMethod": "Prior complete same-commit source research retained at /tmp/xk-specifications-006-014/source-audit.md and source-manifest.json; current GitHub branch/tree and all51 bytes verified; privacy-relevant source text and code examples reread in this Task009 session. Not a new runtime test."
+      },
+      {
+        "id": "CASE",
+        "repository": "xk2022/xplore-kaleidoscope",
+        "branch": "main",
+        "commit": "95ef1275a46ace76e11f668178ca881087483398",
+        "path": "doc/01_business-plan/week-03/02_case-01-corporate-website.md",
+        "gitBlobSha1": "c9b151d01a7616abb939dd9747d704428d0bdd8c",
+        "sha256": "d6e9349ee31115d768d222874715dac34fc55f9eb5783ebaf56eac59882a2e6d",
+        "bytes": 27919,
+        "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/95ef1275a46ace76e11f668178ca881087483398/doc/01_business-plan/week-03/02_case-01-corporate-website.md",
+        "sectionsReviewed": [
+          "§9 Contact Form Specification",
+          "§17 Security & Privacy"
+        ],
+        "approvalStatus": "planning/template/business reference; not approved legal text",
+        "actuallyAdopted": "自製Demo候選表單與法律審核提醒；不是已完成案例或已核准政策。",
+        "readMethod": "Prior complete same-commit source research retained at /tmp/xk-specifications-006-014/source-audit.md and source-manifest.json; current GitHub branch/tree and all51 bytes verified; privacy-relevant source text and code examples reread in this Task009 session. Not a new runtime test."
+      }
+    ],
+    "completeBlobVerificationCount": 51,
+    "approvalEvidenceAvailable": false
+  },
+  "evidence": {
+    "path": "task009-evidence.json.gz",
+    "sha256": "afbde85d3f93c703ea56cdc7e7871009aea6f6602df9ccf40077f514af53f05b",
+    "compressedBytes": 2373860,
+    "members": 202,
+    "uniqueTextBlobs": 179,
+    "restorationChecks": 202,
+    "status": "PASS"
+  },
+  "screenshots": {
+    "reviewer": "Root",
+    "observedAt": "2026-11-19T05:55:55.115608+00:00",
+    "method": "Actual view_image inspection of all six images in current turn",
+    "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6",
+    "status": "PASS",
+    "observations": "All five widths: no visible horizontal clipping/overlap; draft banner, nullable controller/effective date, TOC, nine sections, version and pending Footer readable; logo unchanged; no fake contact links. This does not approve legal content.",
+    "files": [
+      {
+        "path": "/tmp/xk-task009/runs/preview-complete-2026-11-19T05-52-59-994Z/task009-privacy-desktop.png",
+        "sha256": "488d658e309b5c3bcb1ea4c9a5b2633c11eb3de29eb49cee972169d205c6f47d"
+      },
+      {
+        "path": "/tmp/xk-task009/runs/preview-complete-2026-11-19T05-52-59-994Z/task009-privacy-mobile.png",
+        "sha256": "f4dec296e5c967b38b8c443aa8940dd111fd6d6e96ad49e43b2cb85e090ec832"
+      },
+      {
+        "path": "/tmp/xk-task009/runs/preview-complete-2026-11-19T05-52-59-994Z/task009-privacy-contact-footer.png",
+        "sha256": "87b907153f35e09aaf74497e646cd7687814777367f15943161899f7a841cfa7"
+      },
+      {
+        "path": "/tmp/xk-task009/runs/preview-complete-2026-11-19T05-52-59-994Z/privacy-supplement-320.png",
+        "sha256": "0f135460d1ad3058ea6d90fddcbe79cb107300c5b807c0aef4139864681d877b"
+      },
+      {
+        "path": "/tmp/xk-task009/runs/preview-complete-2026-11-19T05-52-59-994Z/privacy-supplement-768.png",
+        "sha256": "436fa4f5aeb65f184a11e98e68e6427a1a735c1a9c6ba0f897ee1daa489362ea"
+      },
+      {
+        "path": "/tmp/xk-task009/runs/preview-complete-2026-11-19T05-52-59-994Z/privacy-supplement-1920.png",
+        "sha256": "646b166a1143fe65333fcc32f21bd8adab852d66fd393fa9c91553d00ab38804"
+      }
+    ],
+    "supplementalSyntheticReview": {
+      "path": "/tmp/xk-task009/runs/preview-complete-2026-11-19T05-52-59-994Z/long-url-fixtures/privacy-long-url-320.png",
+      "sha256": "d80524583b979959b46570647cf86b5e5d6c8cc97061bbd575585e832b783416",
+      "status": "PASS",
+      "method": "Actual view_image inspection",
+      "scope": "320px actual PrivacyPolicy SSR with clearly labelled synthetic long URL/contact prop; wrapping intact, no horizontal clipping; not real policy/channel or receiving proof."
+    }
+  },
+  "normalStorageGap": {
+    "identifiedAt": "2026-11-19T06:09:30.779977+00:00",
+    "requirement": "P09-D03 ordinary production fresh-context Cookie/Storage before and after",
+    "status": "RESOLVED",
+    "kind": "QA coverage omission, not an observed application storage failure",
+    "originalResult": "/tmp/xk-task009/runs/general-formal-retest-2026-11-19T05-48-25-670Z/results.json",
+    "originalContexts": 19,
+    "originalAfterSnapshots": 0,
+    "finding": "Zero after snapshots cannot establish ordinary production storage before/after PASS. Existing general network observations remain usable but do not fill the missing storage evidence.",
+    "correction": "Explicit nine-route fresh-context before/after storage/API/document/IDB plus method/origin inventory; only this affected check and its new network traffic rerun",
+    "newReceipt": "/tmp/xk-task009/normal-storage-process.json",
+    "sourceUnchanged": true,
+    "sourceFingerprint": "c12b3733d743333b81470fbfeccfcdd2d43d644d6b4586b61d043c56d97a1cf6",
+    "supplementResult": "/tmp/xk-task009/runs/normal-storage-2026-11-19T06-08-58-961Z/results.json",
+    "actualProcessExitCode": 0,
+    "actualStartedAt": "2026-11-19T06:08:58.962Z",
+    "actualFinishedAt": "2026-11-19T06:09:11.869Z",
+    "actualNewContexts": 9,
+    "actualBeforeAfterPairs": 9,
+    "indexedDbAvailableForAll": true,
+    "requestInventory": {
+      "requests": 310,
+      "methods": [
+        "GET"
+      ],
+      "origins": [
+        "http://127.0.0.1:3060"
+      ],
+      "postCount": 0,
+      "externalCount": 0,
+      "evidence": "/tmp/xk-task009/runs/normal-storage-2026-11-19T06-08-58-961Z/network-raw.ndjson"
+    },
+    "note": "Only the missing ordinary-mode storage/method/origin evidence and its new network traffic were rerun; no layout,axe or screenshots repeated. Prior after=0 results remain non-evidence for storage before/after."
+  },
+  "boundaries": [
+    "Individual assertions completed in failed full processes retain their actual process Exit 1; corrected assertions have separately observed targeted retests. No original failure or missing snapshot changed to PASS.",
+    "Source and runtime prove only observed application behavior; owner/legal/controller/rights/retention/hosting approvals remain blocked.",
+    "Remote PR/CI/merge/deployment/public verification happens later and is recorded in the same PR description."
+  ]
+}

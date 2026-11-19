@@ -115,3 +115,19 @@ Header、Footer 與手機選單共用的聯絡入口指向 `/contact`；首頁�
 規格見 [Task 008](docs/task/task008.md)。本次來源、修改檔、資料流、逐項實測、七張真實截圖與限制見 [Task 008 實作與驗證](docs/reports/task008-implementation.md)。最後五個品質指令 Exit 0，一般模式 27/27 PASS、Pages 148 項＝141 PASS＋7 有據 N/A，45 個響應式案例與 48 次 axe 零違規。原始失敗與未完成試次均保留；遠端 CI、合併、部署與公開頁面只依實際發生後的證據回報。
 
 Task 008 的逐項證據與原始紀錄：[驗證摘要](docs/reports/task008-verification.json)、[壓縮證據](docs/reports/task008-evidence.json.gz)。
+
+## Task 009 隱私權政策草案與發布保護
+
+本次建立九個區塊的 `draft-1` 內部草案、頁內目錄及發布保護。品牌負責人目前尚無核准資料；資料處理主體、生效日、權利聯絡管道與同版本法律審閱仍待確認。技術成果、政策核准與公開發布分開記錄，合併程式碼不代表政策已核准或生效。
+
+一般開發可在 `/privacy` 預覽；一般公開 production 預設回傳 404，GitHub Pages 不輸出草案 HTML 或 payload。Footer 保持「隱私權政策（待確認）」純文字，既有 Contact 維持無表單、無收件管道模式。
+
+如需在本機審閱 production 草案，先執行 `npm run build`，再啟動只綁定 loopback 的隔離服務：
+
+```sh
+XK_PRIVACY_PREVIEW=1 npm run start -- --hostname 127.0.0.1 --port 3062
+```
+
+開啟 `http://127.0.0.1:3062/privacy`。此旗標不是身分驗證，不能設定於公開 Preview 或正式服務；Pages 建置不接受它解鎖草案。所有模式仍保留 `noindex, nofollow`，不新增資料蒐集、Cookie 同意工具或追蹤。
+
+規格見 [Task 009](docs/task/task009.md)；資料流、待確認責任與期限、實測結果及三張草案截圖見 [Task 009 實作與驗證](docs/reports/task009-implementation.md)。正式政策與核准頁面的驗收在缺件期間維持 BLOCKED，不宣稱 Task 009 全部通過。
