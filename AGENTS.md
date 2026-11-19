@@ -8,6 +8,14 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
+## Task execution protocol
+
+- Read [the subagent workflow](docs/subagent-workflow.md) before starting each task. Use the active task specification from `docs/task/README.md`; the milestone rules below preserve earlier decisions, not a requirement to reimplement or retest every earlier task. Explicit current-task requirements always take precedence over workflow defaults.
+- The root agent owns scope, integration, Git, builds, server lifecycle and delivery. Delegate independent work with named files and one owner per file; share source versions and contracts once. Add independent review where it resolves a concrete risk, and avoid repeated full reviews or nested delegation of the same question.
+- Before the final required checks, inspect tracked, staged and untracked files, resolve formatting, confirm the dependency/cache environment and prepare the acceptance matrix. Record commands through `scripts/run-with-evidence.py` from the first long-running check; keep receipts and logs outside the repository. A missing exit code or unfinished receipt is never PASS.
+- Run the active task's full required baseline once on the completed implementation, then choose retests from the actual change impact and record why. A fingerprint change alone does not determine retest scope. Documentation-only changes, final remote identifiers and identical screenshot bytes must not trigger unrelated website reruns unless the active task explicitly requires them. Preserve failures and version boundaries.
+- Keep one reviewable implementation/report change set where practical. Use the same PR description for later actual CI, merge and deployment evidence instead of making commits solely to record their own SHA or PR URL. Verify the exact final head, preserve the existing deployment workflow, and follow the user's authorization for the current task without asking for the same approval again; do not extend a task-specific merge permission to unrelated future tasks.
+
 
 ## XK repository rules
 
