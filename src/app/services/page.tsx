@@ -10,26 +10,11 @@ import { ServicesHero } from "@/components/sections/services/services-hero";
 import { ServicesIntegration } from "@/components/sections/services/services-integration";
 import { ServicesOverview } from "@/components/sections/services/services-overview";
 import { ServicesProcess } from "@/components/sections/services/services-process";
+import { getSeoPage } from "@/config/seo";
 import { siteConfig } from "@/config/site";
+import { createPageMetadata } from "@/lib/seo";
 
-const title = "服務項目 | Xplore Kaleidoscope";
-const description = "探索 Xplore Kaleidoscope 的網站開發、Java 企業系統、系統整合、AI 應用與雲端技術服務，打造符合企業需求的數位解決方案。";
-const url = new URL("/services", siteConfig.url).href;
-
-export const metadata: Metadata = {
-  title: { absolute: title },
-  description,
-  alternates: { canonical: url },
-  robots: { index: false, follow: false },
-  openGraph: {
-    title,
-    description,
-    url,
-    siteName: siteConfig.name,
-    locale: "zh_TW",
-    type: "website",
-  },
-};
+export const metadata: Metadata = createPageMetadata(getSeoPage("/services"), siteConfig);
 
 export default function ServicesPage() {
   return (

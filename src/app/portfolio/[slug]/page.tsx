@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 
 import { ProjectDetail } from "@/components/sections/portfolio/project-detail";
 import { portfolioProjects } from "@/config/portfolio";
+import { getSeoPage } from "@/config/seo";
 import { siteConfig } from "@/config/site";
+import { createPageMetadata } from "@/lib/seo";
 
 type ProjectPageProps = { params: Promise<{ slug: string }> };
 
@@ -22,17 +24,7 @@ function getProject(slug: string) {
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
-  const title = `${project.title} | XK 技術作品集`;
-  const description = project.metadataDescription;
-  const url = new URL(`/portfolio/${project.slug}`, siteConfig.url).href;
-
-  return {
-    title: { absolute: title },
-    description,
-    alternates: { canonical: url },
-    robots: { index: false, follow: false },
-    openGraph: { title, description, url, siteName: siteConfig.name, locale: "zh_TW", type: "website" },
-  };
+  return createPageMetadata(getSeoPage(`/portfolio/${project.slug}`), siteConfig);
 }
 
 export default async function PortfolioProjectPage({ params }: ProjectPageProps) {

@@ -304,3 +304,19 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 Pages builder 以既有 Node.js 24 原生讀取 typed data，強制停用預覽旗標、排除草案 HTML／payload，並掃描公開文字及 JS 的草案內容與轉義形式；保留全部九頁、資源、404、.nojekyll、noindex 與 dev 排除。核准狀態仍須同版本真實 Owner／法律審查；結構 guard 不能證明法律核准。package／lockfile、Next／Tailwind 設定、workflow、品牌素材及 DNS 未變。
 
 實際品質指令、一般／受控預覽／Pages 驗收、工具失敗與修正重驗、三張真實草案截圖、資料流清冊及 Owner／法律／Hosting 待確認責任見 [Task 009 實作與驗證](reports/task009-implementation.md)。測試使用本輪程式碼 map 指紋，沒有以舊任務結果代填；法律正式發布與核准正式頁持續 BLOCKED，不宣稱 Task 009 全部完成。PR CI、授權合併、main CI、部署與公開 URL 各階段實際結果於同 PR 紀錄補充，不增加只記錄自身 SHA 的循環提交。
+
+## Task 010 — SEO 保護模式
+
+本次由乾淨且 fresh fetch 的 `main@b423b28fc98d82fe2269c8e486c9da22a112602b` 建立 `feature/website-seo`，保留已合併 Task 001–009。使用者本輪明確授權開發、驗證文件、Push、PR、CI 成功後合併 main 及確認部署；不延伸為正式索引／GSC／法律核准或 DNS 變更授權。
+
+文件 Repository fresh main 仍為 `95ef1275a46ace76e11f668178ca881087483398`，51 個 Blob bytes 與七份指定來源核對相符，只讀不改。舊架構範例的 allow＋Sitemap、build 時 new Date、建議分享圖與信箱不當作已核准資料。沒有新分享圖、社群 handle、法定 Schema、GSC 權限或正式域名／索引放行證據。
+
+集中九個公開路由與 Privacy 草案的原 exact 文案，抽出小型純函式 Metadata／品牌 URL／robots／安全 WebSite 工具，加入逐頁 Twitter summary。Layout 保留原字體、可見 JSX 與 Design System，只增加非視覺 JSON-LD；沒有新增行銷 Section。Privacy guard、三個 Portfolio slug／PLANNED 狀態、Contact 無表單／管道與所有既有導航保留。
+
+robots 允許讀取 public HTML 的 noindex，依 Base Path 排除 dev 與 draft，沒有 Sitemap 宣告；Sitemap endpoint 保持未發布。Pages 專案 robots 不代表 origin 根控制權。必要 validator 擴充保留原九頁、資源、404／.nojekyll、dev 與 Privacy 防漏斷言；一般 Next.js 與 Pages 雙模式及 workflow 不變。
+
+審閱期間提早修正 robots helper 的 Base Path 相容性，保留既有 `. ~` unreserved 字元並拒絕純 dot segment，在正式 baseline 前完成。原文與可見渲染契約有獨立 source 比對；本輪十組 helper 測試實際 Exit 0，包含外站／Query／Fragment／traversal 拒絕、未知 route、不可覆蓋保護、robots 與 JSON-LD closing-script 安全。其餘實測依本次報告記錄，不沿用歷史 PASS。
+
+正式 Sitemap、index release 與 GSC 在前置不足時保持待辦／gate BLOCKED；這不阻擋規格指定的保護模式交付。Owner／期限／fallback、候選與排除、生成規則及操作界線見 [SEO 操作指南](seo-operations.md)。遠端 PR、CI、合併、main 部署與公開驗收只在實際發生後補同 PR，不做只記錄自身 SHA 的循環提交。
+
+本次五個品質指令、普通／隔離草案／Pages 網站驗收均首輪真 Exit 0；九頁五寬 45 case、48 次 axe、實際 HTTP／head／robots／Schema、完整 Context 前後快照與機器產物有本輪證據。沒有可見 UI 改動，不提交新正式截圖；Root 另實看本輪五寬代表頁 QA 圖。完整逐項結果、工具原始 EPERM 與修正、版本及限制見 [Task 010 實作與驗證](reports/task010-implementation.md)。

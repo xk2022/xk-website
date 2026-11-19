@@ -8,6 +8,13 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const basePath = (process.env.XK_PAGES_BASE_PATH ?? "/xk-website").replace(/\/+$/, "");
 assert.match(basePath, /^(\/[A-Za-z0-9._~-]+)*$/, "XK_PAGES_BASE_PATH must be empty or a URL path such as /xk-website.");
 const { privacyPolicy, privacyDraftMarker, privacyPageMetadata } = await import(new URL("../src/config/privacy.ts", import.meta.url));
+const [{ seoPages, getSeoPage, seoProtectionPolicy }, { siteConfig }, seo, navigation] = await Promise.all([
+  import(new URL("../src/config/seo.ts", import.meta.url)),
+  import(new URL("../src/config/site.ts", import.meta.url)),
+  import(new URL("../src/lib/seo.ts", import.meta.url)),
+  import(new URL("../src/config/navigation.ts", import.meta.url)),
+]);
+assert.deepEqual(seoProtectionPolicy, { mode: "protected", publishSitemap: false }, "SEO protection must remain enabled.");
 assert.ok(["draft", "approved"].includes(privacyPolicy.status), "Unknown Privacy policy status.");
 const privacyApproved = privacyPolicy.status === "approved";
 const privacySectionIds = ["policy-scope", "data-collection", "data-use", "retention", "third-parties", "cookies-tracking", "your-rights", "privacy-contact", "policy-updates"];
@@ -154,7 +161,7 @@ const portfolioPages = [
   },
 ];
 
-for (const [relativePath, pagePath, label] of [
+const exportedPages = [
   ["index.html", "", "homepage"],
   ["about/index.html", "/about", "About Us"],
   ["services/index.html", "/services", "Services"],
@@ -162,7 +169,9 @@ for (const [relativePath, pagePath, label] of [
   ["contact/index.html", "/contact", "Contact"],
   ...(privacyApproved ? [["privacy/index.html", "/privacy", "Privacy"]] : []),
   ...portfolioPages.map(({ pagePath, label }) => [`${pagePath.slice(1)}/index.html`, pagePath, label]),
-]) {
+];
+
+for (const [relativePath, pagePath, label] of exportedPages) {
   const html = verifyExportedPage(relativePath, `${label} page`);
   verifyBrandUrl(metadataAttribute(html, "rel", "canonical", "href"), pagePath, `${label} canonical URL`);
   verifyBrandUrl(metadataAttribute(html, "property", "og:url", "content"), pagePath, `${label} Open Graph URL`);
@@ -171,6 +180,7 @@ for (const [relativePath, pagePath, label] of [
   assert.match(robots, /nofollow/, `${label} must retain nofollow metadata.`);
   assert.equal(tagAttribute(html.match(/<html\b[^>]*>/)?.[0], "lang"), "zh-TW", `${label} HTML language is incorrect.`);
   verifyReferencedAssets(html, pagePath, label);
+  verifySeoMetadata(html, getSeoPage(pagePath || "/"), label);
 
   if (pagePath === "/solutions") {
     const title = "解決方案 | Xplore Kaleidoscope";
@@ -251,6 +261,53 @@ for (const [relativePath, pagePath, label] of [
   }
 }
 
+function verifySeoMetadata(html, page, label) {
+  assert.equal(page.availability, "public", `${label} must be public in the SEO registry.`);
+  const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/)?.[1] ?? "";
+  const titles = [...head.matchAll(/<title>([^<]*)<\/title>/g)];
+  assert.equal(titles.length, 1, `${label} must have one HTML title.`);
+  assert.equal(decodePublicText(titles[0][1]), page.title, `${label} exact SEO title is incorrect.`);
+  const tags = head.match(/<(?:meta|link)\b[^>]*>/g) ?? [];
+  function oneValue(attribute, value, target = "content") {
+    const matches = tags.filter((tag) => tagAttribute(tag, attribute) === value);
+    assert.equal(matches.length, 1, `${label} must have one ${value} metadata entry.`);
+    return decodePublicText(tagAttribute(matches[0], target) ?? "");
+  }
+  assert.equal(oneValue("name", "description"), page.description, `${label} exact SEO description is incorrect.`);
+  const canonical = oneValue("rel", "canonical", "href");
+  const openGraphUrl = oneValue("property", "og:url");
+  const expectedUrl = seo.getBrandUrl(page.path, siteConfig.url);
+  for (const url of [canonical, openGraphUrl]) {
+    verifyBrandUrl(url, page.path === "/" ? "" : page.path, `${label} SEO URL`);
+    assert.equal(url.replace(/\/$/, ""), expectedUrl.replace(/\/$/, ""), `${label} SEO URL differs from the registry.`);
+  }
+  for (const [name, value] of [
+    ["og:title", page.title], ["og:description", page.description],
+    ["og:site_name", siteConfig.name], ["og:locale", "zh_TW"], ["og:type", "website"],
+  ]) assert.equal(oneValue("property", name), value, `${label} ${name} is incorrect.`);
+  for (const [name, value] of [["twitter:card", "summary"], ["twitter:title", page.title], ["twitter:description", page.description]]) {
+    assert.equal(oneValue("name", name), value, `${label} ${name} is incorrect.`);
+  }
+  const robots = new Set(oneValue("name", "robots").toLowerCase().split(/[,\s]+/));
+  assert.ok(robots.has("noindex") && robots.has("nofollow"), `${label} must retain both index protections.`);
+  assert.ok(!robots.has("index") && !robots.has("follow"), `${label} must not contain contradictory index directives.`);
+  for (const tag of tags) {
+    const name = tagAttribute(tag, "name") ?? tagAttribute(tag, "property") ?? "";
+    assert.ok(!/^og:image(?::|$)|^twitter:(?:image|site|creator)(?::|$)/.test(name), `${label} contains an unapproved share image or social handle.`);
+    assert.equal(tagAttribute(tag, "hreflang"), undefined, `${label} must not invent language alternates.`);
+  }
+  const scripts = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/g)]
+    .filter((match) => tagAttribute(match[1], "type") === "application/ld+json");
+  assert.equal(scripts.length, 1, `${label} must contain exactly one WebSite JSON-LD script.`);
+  assert.ok(!scripts[0][2].includes("<"), `${label} JSON-LD must escape HTML-sensitive text.`);
+  const website = JSON.parse(scripts[0][2]);
+  assert.deepEqual(website, {
+    "@context": "https://schema.org", "@type": "WebSite", name: siteConfig.name,
+    url: new URL("/", siteConfig.url).href, inLanguage: "zh-TW",
+  }, `${label} JSON-LD must contain only the five true WebSite fields.`);
+  assert.deepEqual(website, seo.createWebsiteJsonLd(siteConfig), `${label} JSON-LD differs from the shared source.`);
+}
+
 function collectHtmlFiles(directory, prefix) {
   const files = [];
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
@@ -271,6 +328,45 @@ assert.deepEqual(
   portfolioPages.map(({ pagePath }) => `${pagePath.slice(1)}/index.html`).sort(),
   "Portfolio HTML must contain only the overview and its three registered details.",
 );
+
+const publicSeoPages = seoPages.filter(({ availability }) => availability === "public");
+const publicPaths = new Set(publicSeoPages.map(({ path }) => path));
+assert.equal(new Set(seoPages.map(({ path }) => path)).size, seoPages.length, "SEO registry paths must be unique.");
+assert.deepEqual([...publicPaths].sort(), exportedPages.map(([, path]) => path || "/").sort(), "SEO public paths must match every required exported page.");
+assert.equal(getSeoPage("/privacy").availability, privacyApproved ? "public" : "draft", "Privacy SEO availability must match its publication state.");
+const errorHtml = new Set(["404.html", "404/index.html", "_not-found/index.html"]);
+assert.deepEqual(
+  collectHtmlFiles(output, "").filter((path) => !errorHtml.has(path)).sort(),
+  exportedPages.map(([path]) => path).sort(),
+  "SEO registry must match all actual public HTML; unknown routes must not be silently excluded.",
+);
+for (const route of navigation.plannedRoutes) {
+  assert.equal(publicPaths.has(route.path), route.status === "implemented", `${route.path} navigation and SEO availability disagree.`);
+}
+for (const link of [...navigation.primaryNavigation, navigation.contactNavigation]) {
+  assert.ok(publicPaths.has(new URL(link.href, siteConfig.url).pathname), "Navigation must target a public SEO page.");
+}
+for (const page of portfolioPages) {
+  const seoPage = getSeoPage(page.pagePath);
+  assert.equal(seoPage.title, page.title, "Portfolio SEO title must retain its exact content.");
+  assert.equal(seoPage.description, page.description, "Portfolio SEO description must retain its exact content.");
+}
+
+const robotsPath = join(output, "robots.txt");
+assert.ok(existsSync(robotsPath), "Missing protected robots.txt export.");
+const expectedRobots = seo.createRobotsMetadata(basePath, seoPages);
+const rules = {
+  userAgent: "*", allow: `${basePath}/`,
+  disallow: [`${basePath}/dev/`, ...seoPages.filter(({ availability }) => availability === "draft").map(({ path }) => `${basePath}${path}`)],
+};
+assert.deepEqual(expectedRobots, { rules }, "Robots must allow public noindex reading and exclude only development/draft paths.");
+const robotLines = readFileSync(robotsPath, "utf8").split(/\r?\n/).map((line) => line.split("#")[0].trim()).filter(Boolean);
+assert.deepEqual(
+  robotLines.map((line) => line.replace(/^([^:]+):\s*/, (_, name) => `${name.toLowerCase()}: `)).sort(),
+  ["user-agent: *", `allow: ${rules.allow}`, ...rules.disallow.map((path) => `disallow: ${path}`)].sort(),
+  "Robots output must match its exact protected rules, without Sitemap or nonstandard Noindex directives.",
+);
+assert.ok(!readdirSync(output).some((name) => /^sitemap(?:\.|$)/i.test(name)), "Protected mode must not publish a sitemap document, route or payload.");
 
 function verifyStaticTree(directory) {
   for (const entry of readdirSync(directory, { withFileTypes: true })) {

@@ -6,19 +6,11 @@ import { ContactDataNote } from "@/components/sections/contact/contact-data-note
 import { ContactHero } from "@/components/sections/contact/contact-hero";
 import { ContactPreparation } from "@/components/sections/contact/contact-preparation";
 import { ContactProcess } from "@/components/sections/contact/contact-process";
-import { contactPage } from "@/config/contact-page";
+import { getSeoPage } from "@/config/seo";
 import { siteConfig } from "@/config/site";
+import { createPageMetadata } from "@/lib/seo";
 
-const { title, description, path } = contactPage.metadata;
-const url = new URL(path, siteConfig.url).href;
-
-export const metadata: Metadata = {
-  title: { absolute: title },
-  description,
-  alternates: { canonical: url },
-  robots: { index: false, follow: false },
-  openGraph: { title, description, url, siteName: siteConfig.name, locale: "zh_TW", type: "website" },
-};
+export const metadata: Metadata = createPageMetadata(getSeoPage("/contact"), siteConfig);
 
 export default function ContactPage() {
   return (
