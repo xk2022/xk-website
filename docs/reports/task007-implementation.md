@@ -1,6 +1,6 @@
 # Task 007 — Portfolio 實作與驗證報告
 
-本報告於建立功能 PR 前完成本機驗收內容。一般模式最終 **23/23 PASS、Exit 0**；Pages 最終 **123 項＝121 PASS＋2 有據 N/A、0 FAIL、Exit 0**。五個品質指令全部 Exit 0；所有原始失敗保留，沒有把預期結果或舊 Task 成果寫成本次成功。遠端 Commit／PR／CI／合併／部署的尚未發生階段，在第 10 節保持 PENDING。
+本報告於建立功能 PR 前完成本機驗收內容。一般模式最終 **23/23 PASS、Exit 0**；Pages 最終 **123 項＝121 PASS＋2 有據 N/A、0 FAIL、Exit 0**。五個品質指令全部 Exit 0；所有原始失敗保留，沒有把預期結果或舊 Task 成果寫成本次成功。本次純文件補正加入第 10 節實際第一輪 PR 證據；後續最終 head／合併／部署依同 PR 最新交付紀錄確認，未發生階段不預填成功。
 
 本次完成的是四個 Portfolio 網頁。三個展示計畫仍為 **PLANNED**，沒有任何案例系統完成、客戶成果或 Live Demo 的宣稱。
 
@@ -161,7 +161,7 @@ node /tmp/xk-task007/browser.cjs --mode=pages --base=http://127.0.0.1:3041/xk-we
 | P07-B02 | Required | 四輪及五品質指令受測app指紋一致，工具修正未改產品碼 | PASS |
 | P07-S01 | Required | 四新頁精確Title／Description／Canonical／OG及語言／robots／單一H1；所有既有頁Metadata回歸，無假OG／Schema | PASS |
 | P07-G01 | Required | 八公開HTML、404、.nojekyll、Base Path與實體資源；Portfolio恰四HTML／三slug，unknown／wrong-case／legacy／dev保護及payload排除 | PASS |
-| P07-CI01 | Required | 本快照尚未建立PR；需確認實際head CI／下載artifact，不能以本機結果代填 | PENDING |
+| P07-CI01 | Required | 第10節實作Commit A的PR CI成功、Deploy skipped，實際下載artifact91項通過；後續文件head必須另驗，不能沿用A | PASS |
 | P07-X01 | Not Applicable | 不建立三案Backend／DB／API或驗不存在的客戶成果，未有這些runtime功能 | N/A |
 | P07-E01–E07／V01 | Required | 七張真實Portfolio QA圖、320／375補充已人工閱讀，最終35候選圖與首輪全部同SHA，正式七圖按原bytes複製 | PASS |
 
@@ -206,10 +206,25 @@ node /tmp/xk-task007/browser.cjs --mode=pages --base=http://127.0.0.1:3041/xk-we
 - Owner Pending Confirmation：三案真實進度／完成範圍／Live授權、是否採用現有官網作Completed Demo、Case02模組定稿、合法案例素材／可公開原始碼、正式聯絡資料、最終Logo／OG／中文品牌等。維持PLANNED／空素材／null連結，不阻擋本次有來源的規劃介紹頁。
 - Task 008–014、案例系統、Backend／CMS／Analytics、Vercel／DNS／索引放行未實作，不以Portfolio完成當作其成果。
 
-## 10. Git、PR、CI與部署階段
+## 10. Git、PR、CI 與部署階段
 
-本機報告與七張實際圖在建立PR前完成，受測程式碼由上述指紋固定。Feature Commit／Push／PR／head CI／artifact／GitHub正式Review／Merge／main CI／Deploy／公開URL尚未發生者，均為 **PENDING**，不預填識別碼；獨立程式／來源覆核Blocking0不等同GitHub APPROVED review。
+本機報告、原始證據與七張實際圖已於建立 PR 前納入實作 Commit。此為 PR 建立後的一次純文件補正，原始 gzip、PNG 與受測 app 指紋均不變；本節保留第一輪 PR 的實際證據快照，不把它冒充後續文件 head 或 main 的結果。
 
-使用者已明確授權Push and merge。正式流程仍先Commit／Push功能分支、建立main為Base的PR，核對該head的quality／pages-build成功、deploy skipped及下載artifact包含八頁與資源。建立PR後至多一次純文件補正加入實際程式Commit／PR／首輪CI與artifact；受測app指紋需再次相同。其後最終head CI／artifact、合併、main工作流程、實際部署與公開URL證據記錄於同PR最新交付紀錄，不為文件自身SHA無限追加Commit。
+| 階段 | 實際結果與證據 |
+| --- | --- |
+| Feature Commit／Push | `3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27`，已推送 feature/website-portfolio-page |
+| Pull Request | [PR #11](https://github.com/xk2022/xk-website/pull/11)，Base main@43ddd7ed0e339d35ece949a656188defcaa5ac72 |
+| 第一輪 PR CI | [Run 44432489191](https://github.com/xk2022/xk-website/actions/runs/44432489191)，精確 head 為上述 A；2026-11-19 00:52:24–00:53:43 UTC，SUCCESS |
+| Quality | [Job 135253077967](https://github.com/xk2022/xk-website/actions/runs/44432489191/job/135253077967)，SUCCESS；00:52:26–00:53:01 UTC |
+| Pages build | [Job 135253356255](https://github.com/xk2022/xk-website/actions/runs/44432489191/job/135253356255)，SUCCESS；00:53:04–00:53:43 UTC |
+| PR Deploy | [Job 135253668053](https://github.com/xk2022/xk-website/actions/runs/44432489191/job/135253668053)，SKIPPED；未部署功能分支 |
+| 實際 artifact | github-pages 14487631243，91 項斷言 PASS；197 檔、八頁精確 Metadata／H1／robots／lang、Portfolio 恰三 slug／四 HTML、127 個自託管引用資源與 CSS 字體存在、56 份 payload 無 dev，404／icon／.nojekyll 正確 |
+| Review | 獨立程式／來源／文件／證據／PNG 覆核 Blocking 0；固定遠端 A 的 28 changed blobs 與全部 153 head blobs 均匹配本機 bytes，31 受保護 blobs 未改。這不是 GitHub 正式 APPROVED review；00:53:18.930–00:53:19.738 UTC 實際讀取 reviews／inline comments 均空 |
+| 使用者授權 | 本輪明確要求 Push and merge；仍須驗證最終 head 的實際 CI 與 artifact，才可合併 |
+| 後續階段 | 此快照時，純文件補正的新 head CI／artifact、Merge／main CI／Deploy／公開 URL 驗證均 PENDING，實際發生後記錄於下方同 PR |
 
-PR成功、artifact產生、合併與部署各階段分開查證；沒有實際main deploy與公開HTTP／Browser結果前，不宣稱上線。Task 007原始規格的初始PENDING／歷史研究敘述保持不改，本報告才是本次正式實作證據。
+實際 ZIP SHA256 `d02f9a9b819cb451585460acadd0bdcd230c2a91afe7da5ec863d23bbf84b3d6` 與 GitHub digest 相符；透過 connector 下載該 run 的實際 artifact，沒有沿用本機 out 或舊 Task 產物。完整 CI／jobs／artifact／下載與 checker 證據在摘要 remote 區塊；沒有提交下載產物或暫時 signed URL。127 是全部靜態引用，與 Browser 實際載入的 123 個資源（含 RSC）分開計算。
+
+後續最終文件 Commit 的 Checks／artifact、真實 Merge SHA、main CI／部署與公開 URL 的 HTTP／Browser 結果，將補在 [PR #11 最新交付紀錄](https://github.com/xk2022/xk-website/pull/11)。每階段採精確當次 head／Run，不引用 A 的結果代替新 head，也不為報告自身 SHA 無限追加 Commit。只有取得實際 main Deploy 與公開站證據後，才可宣稱上線。
+
+Task 007 原始規格的初始 PENDING／歷史研究敘述保持不改；本報告記錄正式實作與指定時點的真實驗收。

@@ -1,6 +1,6 @@
 {
   "task": "Task 007 Portfolio",
-  "asOf": "2026-11-19T00:39:46.754492+00:00",
+  "asOf": "2026-11-19T00:57:22.817982+00:00",
   "scope": "Local acceptance completed before PR; remote events remain separate until actually executed.",
   "localAcceptanceStatus": "PASS",
   "baseSha": "43ddd7ed0e339d35ece949a656188defcaa5ac72",
@@ -122345,8 +122345,3891 @@
     }
   },
   "remote": {
-    "status": "PENDING",
-    "note": "Pre-PR snapshot. Exact feature commit, PR, CI/artifact, authorized merge, main deployment and public verification are added only after actual events."
+    "status": "PASS",
+    "scope": "Commit A first PR head CI/artifact snapshot only; later stages PENDING as of snapshot",
+    "snapshotAt": "2026-11-19T00:57:22.817982+00:00",
+    "featureCommit": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27",
+    "pullRequest": {
+      "number": 11,
+      "url": "https://github.com/xk2022/xk-website/pull/11",
+      "baseSha": "43ddd7ed0e339d35ece949a656188defcaa5ac72",
+      "headSha": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27"
+    },
+    "firstHeadCI": {
+      "observedAt": "2026-11-19T00:54:23.210674+00:00",
+      "scope": "Task007 PR-A actual GitHub Actions run only; no deployment or mutation requested.",
+      "run": {
+        "id": 44432489191,
+        "name": "Website CI and GitHub Pages",
+        "node_id": "WFR_kwLOVymmos8AAAAKWGH65w",
+        "head_branch": "feature/website-portfolio-page",
+        "head_sha": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27",
+        "path": ".github/workflows/ci.yml",
+        "display_title": "feat(portfolio): implement Task 007 technical portfolio",
+        "run_number": 25,
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "workflow_id": 422294725,
+        "check_suite_id": 120278215899,
+        "check_suite_node_id": "CS_kwDOVymmos8AAAAcASPs2w",
+        "url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44432489191",
+        "html_url": "https://github.com/xk2022/xk-website/actions/runs/44432489191",
+        "pull_requests": [
+          {
+            "url": "https://api.github.com/repos/xk2022/xk-website/pulls/11",
+            "id": 5386734469,
+            "number": 11,
+            "head": {
+              "ref": "feature/website-portfolio-page",
+              "sha": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27",
+              "repo": {
+                "id": 1462347426,
+                "url": "https://api.github.com/repos/xk2022/xk-website",
+                "name": "xk-website"
+              }
+            },
+            "base": {
+              "ref": "main",
+              "sha": "43ddd7ed0e339d35ece949a656188defcaa5ac72",
+              "repo": {
+                "id": 1462347426,
+                "url": "https://api.github.com/repos/xk2022/xk-website",
+                "name": "xk-website"
+              }
+            }
+          }
+        ],
+        "created_at": "2026-11-19T00:52:24Z",
+        "updated_at": "2026-11-19T00:53:43Z",
+        "actor": {
+          "login": "xk2022",
+          "id": 90815560,
+          "node_id": "MDQ6VXNlcjkwODE1NTYw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/90815560?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/xk2022",
+          "html_url": "https://github.com/xk2022",
+          "followers_url": "https://api.github.com/users/xk2022/followers",
+          "following_url": "https://api.github.com/users/xk2022/following{/other_user}",
+          "gists_url": "https://api.github.com/users/xk2022/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/xk2022/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/xk2022/subscriptions",
+          "organizations_url": "https://api.github.com/users/xk2022/orgs",
+          "repos_url": "https://api.github.com/users/xk2022/repos",
+          "events_url": "https://api.github.com/users/xk2022/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/xk2022/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "run_attempt": 1,
+        "referenced_workflows": [],
+        "run_started_at": "2026-11-19T00:52:24Z",
+        "triggering_actor": {
+          "login": "xk2022",
+          "id": 90815560,
+          "node_id": "MDQ6VXNlcjkwODE1NTYw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/90815560?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/xk2022",
+          "html_url": "https://github.com/xk2022",
+          "followers_url": "https://api.github.com/users/xk2022/followers",
+          "following_url": "https://api.github.com/users/xk2022/following{/other_user}",
+          "gists_url": "https://api.github.com/users/xk2022/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/xk2022/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/xk2022/subscriptions",
+          "organizations_url": "https://api.github.com/users/xk2022/orgs",
+          "repos_url": "https://api.github.com/users/xk2022/repos",
+          "events_url": "https://api.github.com/users/xk2022/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/xk2022/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "jobs_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44432489191/jobs",
+        "logs_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44432489191/logs",
+        "check_suite_url": "https://api.github.com/repos/xk2022/xk-website/check-suites/120278215899",
+        "artifacts_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44432489191/artifacts",
+        "cancel_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44432489191/cancel",
+        "rerun_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44432489191/rerun",
+        "previous_attempt_url": null,
+        "workflow_url": "https://api.github.com/repos/xk2022/xk-website/actions/workflows/422294725",
+        "head_commit": {
+          "id": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27",
+          "tree_id": "d5329f1c94bc361940075f812f6e5f3835390644",
+          "message": "feat(portfolio): implement XK technical portfolio",
+          "timestamp": "2026-11-19T00:51:20Z",
+          "author": {
+            "name": "Louis Chen",
+            "email": "system.xk2022@gmail.com"
+          },
+          "committer": {
+            "name": "Louis Chen",
+            "email": "system.xk2022@gmail.com"
+          }
+        },
+        "repository": {
+          "id": 1462347426,
+          "node_id": "R_kgDOVymmog",
+          "name": "xk-website",
+          "full_name": "xk2022/xk-website",
+          "private": false,
+          "owner": {
+            "login": "xk2022",
+            "id": 90815560,
+            "node_id": "MDQ6VXNlcjkwODE1NTYw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/90815560?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/xk2022",
+            "html_url": "https://github.com/xk2022",
+            "followers_url": "https://api.github.com/users/xk2022/followers",
+            "following_url": "https://api.github.com/users/xk2022/following{/other_user}",
+            "gists_url": "https://api.github.com/users/xk2022/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/xk2022/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/xk2022/subscriptions",
+            "organizations_url": "https://api.github.com/users/xk2022/orgs",
+            "repos_url": "https://api.github.com/users/xk2022/repos",
+            "events_url": "https://api.github.com/users/xk2022/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/xk2022/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/xk2022/xk-website",
+          "description": "官方網站，獨立交給 Codex 開發。",
+          "fork": false,
+          "url": "https://api.github.com/repos/xk2022/xk-website",
+          "forks_url": "https://api.github.com/repos/xk2022/xk-website/forks",
+          "keys_url": "https://api.github.com/repos/xk2022/xk-website/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/xk2022/xk-website/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/xk2022/xk-website/teams",
+          "hooks_url": "https://api.github.com/repos/xk2022/xk-website/hooks",
+          "issue_events_url": "https://api.github.com/repos/xk2022/xk-website/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/xk2022/xk-website/events",
+          "assignees_url": "https://api.github.com/repos/xk2022/xk-website/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/xk2022/xk-website/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/xk2022/xk-website/tags",
+          "blobs_url": "https://api.github.com/repos/xk2022/xk-website/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/xk2022/xk-website/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/xk2022/xk-website/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/xk2022/xk-website/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/xk2022/xk-website/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/xk2022/xk-website/languages",
+          "stargazers_url": "https://api.github.com/repos/xk2022/xk-website/stargazers",
+          "contributors_url": "https://api.github.com/repos/xk2022/xk-website/contributors",
+          "subscribers_url": "https://api.github.com/repos/xk2022/xk-website/subscribers",
+          "subscription_url": "https://api.github.com/repos/xk2022/xk-website/subscription",
+          "commits_url": "https://api.github.com/repos/xk2022/xk-website/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/xk2022/xk-website/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/xk2022/xk-website/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/xk2022/xk-website/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/xk2022/xk-website/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/xk2022/xk-website/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/xk2022/xk-website/merges",
+          "archive_url": "https://api.github.com/repos/xk2022/xk-website/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/xk2022/xk-website/downloads",
+          "issues_url": "https://api.github.com/repos/xk2022/xk-website/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/xk2022/xk-website/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/xk2022/xk-website/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/xk2022/xk-website/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/xk2022/xk-website/labels{/name}",
+          "releases_url": "https://api.github.com/repos/xk2022/xk-website/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/xk2022/xk-website/deployments"
+        },
+        "head_repository": {
+          "id": 1462347426,
+          "node_id": "R_kgDOVymmog",
+          "name": "xk-website",
+          "full_name": "xk2022/xk-website",
+          "private": false,
+          "owner": {
+            "login": "xk2022",
+            "id": 90815560,
+            "node_id": "MDQ6VXNlcjkwODE1NTYw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/90815560?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/xk2022",
+            "html_url": "https://github.com/xk2022",
+            "followers_url": "https://api.github.com/users/xk2022/followers",
+            "following_url": "https://api.github.com/users/xk2022/following{/other_user}",
+            "gists_url": "https://api.github.com/users/xk2022/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/xk2022/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/xk2022/subscriptions",
+            "organizations_url": "https://api.github.com/users/xk2022/orgs",
+            "repos_url": "https://api.github.com/users/xk2022/repos",
+            "events_url": "https://api.github.com/users/xk2022/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/xk2022/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "html_url": "https://github.com/xk2022/xk-website",
+          "description": "官方網站，獨立交給 Codex 開發。",
+          "fork": false,
+          "url": "https://api.github.com/repos/xk2022/xk-website",
+          "forks_url": "https://api.github.com/repos/xk2022/xk-website/forks",
+          "keys_url": "https://api.github.com/repos/xk2022/xk-website/keys{/key_id}",
+          "collaborators_url": "https://api.github.com/repos/xk2022/xk-website/collaborators{/collaborator}",
+          "teams_url": "https://api.github.com/repos/xk2022/xk-website/teams",
+          "hooks_url": "https://api.github.com/repos/xk2022/xk-website/hooks",
+          "issue_events_url": "https://api.github.com/repos/xk2022/xk-website/issues/events{/number}",
+          "events_url": "https://api.github.com/repos/xk2022/xk-website/events",
+          "assignees_url": "https://api.github.com/repos/xk2022/xk-website/assignees{/user}",
+          "branches_url": "https://api.github.com/repos/xk2022/xk-website/branches{/branch}",
+          "tags_url": "https://api.github.com/repos/xk2022/xk-website/tags",
+          "blobs_url": "https://api.github.com/repos/xk2022/xk-website/git/blobs{/sha}",
+          "git_tags_url": "https://api.github.com/repos/xk2022/xk-website/git/tags{/sha}",
+          "git_refs_url": "https://api.github.com/repos/xk2022/xk-website/git/refs{/sha}",
+          "trees_url": "https://api.github.com/repos/xk2022/xk-website/git/trees{/sha}",
+          "statuses_url": "https://api.github.com/repos/xk2022/xk-website/statuses/{sha}",
+          "languages_url": "https://api.github.com/repos/xk2022/xk-website/languages",
+          "stargazers_url": "https://api.github.com/repos/xk2022/xk-website/stargazers",
+          "contributors_url": "https://api.github.com/repos/xk2022/xk-website/contributors",
+          "subscribers_url": "https://api.github.com/repos/xk2022/xk-website/subscribers",
+          "subscription_url": "https://api.github.com/repos/xk2022/xk-website/subscription",
+          "commits_url": "https://api.github.com/repos/xk2022/xk-website/commits{/sha}",
+          "git_commits_url": "https://api.github.com/repos/xk2022/xk-website/git/commits{/sha}",
+          "comments_url": "https://api.github.com/repos/xk2022/xk-website/comments{/number}",
+          "issue_comment_url": "https://api.github.com/repos/xk2022/xk-website/issues/comments{/number}",
+          "contents_url": "https://api.github.com/repos/xk2022/xk-website/contents/{+path}",
+          "compare_url": "https://api.github.com/repos/xk2022/xk-website/compare/{base}...{head}",
+          "merges_url": "https://api.github.com/repos/xk2022/xk-website/merges",
+          "archive_url": "https://api.github.com/repos/xk2022/xk-website/{archive_format}{/ref}",
+          "downloads_url": "https://api.github.com/repos/xk2022/xk-website/downloads",
+          "issues_url": "https://api.github.com/repos/xk2022/xk-website/issues{/number}",
+          "pulls_url": "https://api.github.com/repos/xk2022/xk-website/pulls{/number}",
+          "milestones_url": "https://api.github.com/repos/xk2022/xk-website/milestones{/number}",
+          "notifications_url": "https://api.github.com/repos/xk2022/xk-website/notifications{?since,all,participating}",
+          "labels_url": "https://api.github.com/repos/xk2022/xk-website/labels{/name}",
+          "releases_url": "https://api.github.com/repos/xk2022/xk-website/releases{/id}",
+          "deployments_url": "https://api.github.com/repos/xk2022/xk-website/deployments"
+        }
+      },
+      "jobs": {
+        "total_count": 3,
+        "jobs": [
+          {
+            "id": 135253077967,
+            "run_id": 44432489191,
+            "workflow_name": "Website CI and GitHub Pages",
+            "head_branch": "feature/website-portfolio-page",
+            "run_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44432489191",
+            "run_attempt": 1,
+            "node_id": "CR_kwDOVymmos8AAAAffbYvzw",
+            "head_sha": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27",
+            "url": "https://api.github.com/repos/xk2022/xk-website/actions/jobs/135253077967",
+            "html_url": "https://github.com/xk2022/xk-website/actions/runs/44432489191/job/135253077967",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-19T00:52:24Z",
+            "started_at": "2026-11-19T00:52:26Z",
+            "completed_at": "2026-11-19T00:53:01Z",
+            "name": "Typecheck, lint and production build",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-11-19T00:52:27Z",
+                "completed_at": "2026-11-19T00:52:28Z"
+              },
+              {
+                "name": "Check out source",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-11-19T00:52:28Z",
+                "completed_at": "2026-11-19T00:52:30Z"
+              },
+              {
+                "name": "Set up Node.js",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-11-19T00:52:30Z",
+                "completed_at": "2026-11-19T00:52:33Z"
+              },
+              {
+                "name": "Install locked dependencies",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-11-19T00:52:33Z",
+                "completed_at": "2026-11-19T00:52:42Z"
+              },
+              {
+                "name": "Check TypeScript",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-11-19T00:52:42Z",
+                "completed_at": "2026-11-19T00:52:45Z"
+              },
+              {
+                "name": "Check ESLint",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-11-19T00:52:45Z",
+                "completed_at": "2026-11-19T00:52:49Z"
+              },
+              {
+                "name": "Build production website",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-11-19T00:52:49Z",
+                "completed_at": "2026-11-19T00:52:56Z"
+              },
+              {
+                "name": "Upload Next.js build output",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8,
+                "started_at": "2026-11-19T00:52:56Z",
+                "completed_at": "2026-11-19T00:52:59Z"
+              },
+              {
+                "name": "Post Set up Node.js",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-11-19T00:52:59Z",
+                "completed_at": "2026-11-19T00:52:59Z"
+              },
+              {
+                "name": "Post Check out source",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 16,
+                "started_at": "2026-11-19T00:52:59Z",
+                "completed_at": "2026-11-19T00:52:59Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 17,
+                "started_at": "2026-11-19T00:52:59Z",
+                "completed_at": "2026-11-19T00:52:59Z"
+              }
+            ],
+            "check_run_url": "https://api.github.com/repos/xk2022/xk-website/check-runs/135253077967",
+            "labels": [
+              "ubuntu-24.04"
+            ],
+            "runner_id": 1000000315,
+            "runner_name": "GitHub Actions 1000000315",
+            "runner_group_id": 0,
+            "runner_group_name": "GitHub Actions"
+          },
+          {
+            "id": 135253356255,
+            "run_id": 44432489191,
+            "workflow_name": "Website CI and GitHub Pages",
+            "head_branch": "feature/website-portfolio-page",
+            "run_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44432489191",
+            "run_attempt": 1,
+            "node_id": "CR_kwDOVymmos8AAAAffbpu3w",
+            "head_sha": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27",
+            "url": "https://api.github.com/repos/xk2022/xk-website/actions/jobs/135253356255",
+            "html_url": "https://github.com/xk2022/xk-website/actions/runs/44432489191/job/135253356255",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-11-19T00:53:01Z",
+            "started_at": "2026-11-19T00:53:04Z",
+            "completed_at": "2026-11-19T00:53:43Z",
+            "name": "Build GitHub Pages artifact",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1,
+                "started_at": "2026-11-19T00:53:05Z",
+                "completed_at": "2026-11-19T00:53:06Z"
+              },
+              {
+                "name": "Check out source",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2,
+                "started_at": "2026-11-19T00:53:06Z",
+                "completed_at": "2026-11-19T00:53:08Z"
+              },
+              {
+                "name": "Set up Node.js",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3,
+                "started_at": "2026-11-19T00:53:08Z",
+                "completed_at": "2026-11-19T00:53:13Z"
+              },
+              {
+                "name": "Read GitHub Pages site configuration",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4,
+                "started_at": "2026-11-19T00:53:13Z",
+                "completed_at": "2026-11-19T00:53:14Z"
+              },
+              {
+                "name": "Install locked dependencies",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5,
+                "started_at": "2026-11-19T00:53:14Z",
+                "completed_at": "2026-11-19T00:53:27Z"
+              },
+              {
+                "name": "Build and verify static website",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6,
+                "started_at": "2026-11-19T00:53:27Z",
+                "completed_at": "2026-11-19T00:53:37Z"
+              },
+              {
+                "name": "Upload GitHub Pages artifact",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7,
+                "started_at": "2026-11-19T00:53:37Z",
+                "completed_at": "2026-11-19T00:53:39Z"
+              },
+              {
+                "name": "Post Set up Node.js",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13,
+                "started_at": "2026-11-19T00:53:39Z",
+                "completed_at": "2026-11-19T00:53:39Z"
+              },
+              {
+                "name": "Post Check out source",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 14,
+                "started_at": "2026-11-19T00:53:39Z",
+                "completed_at": "2026-11-19T00:53:40Z"
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 15,
+                "started_at": "2026-11-19T00:53:40Z",
+                "completed_at": "2026-11-19T00:53:40Z"
+              }
+            ],
+            "check_run_url": "https://api.github.com/repos/xk2022/xk-website/check-runs/135253356255",
+            "labels": [
+              "ubuntu-24.04"
+            ],
+            "runner_id": 1000000316,
+            "runner_name": "GitHub Actions 1000000316",
+            "runner_group_id": 0,
+            "runner_group_name": "GitHub Actions"
+          },
+          {
+            "id": 135253668053,
+            "run_id": 44432489191,
+            "workflow_name": "Website CI and GitHub Pages",
+            "head_branch": "feature/website-portfolio-page",
+            "run_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/44432489191",
+            "run_attempt": 1,
+            "node_id": "CR_kwDOVymmos8AAAAffb8w1Q",
+            "head_sha": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27",
+            "url": "https://api.github.com/repos/xk2022/xk-website/actions/jobs/135253668053",
+            "html_url": "https://github.com/xk2022/xk-website/actions/runs/44432489191/job/135253668053",
+            "status": "completed",
+            "conclusion": "skipped",
+            "created_at": "2026-11-19T00:53:43Z",
+            "started_at": "2026-11-19T00:53:43Z",
+            "completed_at": "2026-11-19T00:53:43Z",
+            "name": "Deploy GitHub Pages",
+            "steps": [],
+            "check_run_url": "https://api.github.com/repos/xk2022/xk-website/check-runs/135253668053",
+            "labels": [
+              "ubuntu-24.04"
+            ],
+            "runner_id": null,
+            "runner_name": null,
+            "runner_group_id": null,
+            "runner_group_name": null
+          }
+        ]
+      },
+      "artifacts": {
+        "total_count": 2,
+        "artifacts": [
+          {
+            "id": 14487631243,
+            "node_id": "MDg6QXJ0aWZhY3QxNDQ4NzYzMTI0Mw==",
+            "name": "github-pages",
+            "size_in_bytes": 5214632,
+            "url": "https://api.github.com/repos/xk2022/xk-website/actions/artifacts/14487631243",
+            "archive_download_url": "https://api.github.com/repos/xk2022/xk-website/actions/artifacts/14487631243/zip",
+            "expired": false,
+            "digest": "sha256:d02f9a9b819cb451585460acadd0bdcd230c2a91afe7da5ec863d23bbf84b3d6",
+            "created_at": "2026-11-19T00:53:39Z",
+            "updated_at": "2026-11-19T00:53:39Z",
+            "expires_at": "2026-11-26T00:53:37Z",
+            "workflow_run": {
+              "id": 44432489191,
+              "repository_id": 1462347426,
+              "head_repository_id": 1462347426,
+              "head_branch": "feature/website-portfolio-page",
+              "head_sha": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27"
+            }
+          },
+          {
+            "id": 14487232900,
+            "node_id": "MDg6QXJ0aWZhY3QxNDQ4NzIzMjkwMA==",
+            "name": "nextjs-build-output",
+            "size_in_bytes": 7377885,
+            "url": "https://api.github.com/repos/xk2022/xk-website/actions/artifacts/14487232900",
+            "archive_download_url": "https://api.github.com/repos/xk2022/xk-website/actions/artifacts/14487232900/zip",
+            "expired": false,
+            "digest": "sha256:589e28a16928dc048a30da73e448814b687ca91d6cc0d3ab18c6c4cb084c6d00",
+            "created_at": "2026-11-19T00:52:58Z",
+            "updated_at": "2026-11-19T00:52:58Z",
+            "expires_at": "2026-11-26T00:52:57Z",
+            "workflow_run": {
+              "id": 44432489191,
+              "repository_id": 1462347426,
+              "head_repository_id": 1462347426,
+              "head_branch": "feature/website-portfolio-page",
+              "head_sha": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27"
+            }
+          }
+        ]
+      }
+    },
+    "pagesArtifact": {
+      "observedAt": "2026-11-19T00:55:15.429189+00:00",
+      "repository": "xk2022/xk-website",
+      "runId": "44432489191",
+      "runUrl": "https://github.com/xk2022/xk-website/actions/runs/44432489191",
+      "head": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27",
+      "artifactId": "14487631243",
+      "archive": "/tmp/xk-task007/pr-a-artifact/github-pages.zip",
+      "destination": "/tmp/xk-task007/pr-a-artifact/site",
+      "command": "python3 /tmp/xk-task007/check-pages-artifact.py --archive /tmp/xk-task007/pr-a-artifact/github-pages.zip --destination /tmp/xk-task007/pr-a-artifact/site --report /tmp/xk-task007/pr-a-artifact-check.json --run-id 44432489191 --head 3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27 --artifact-id 14487631243",
+      "scope": "Actual downloaded Pages artifact only; no application build, browser, or deployment executed.",
+      "status": "PASS",
+      "checks": [
+        {
+          "item": "Downloaded ZIP exists",
+          "status": "PASS"
+        },
+        {
+          "item": "ZIP CRC is valid",
+          "status": "PASS"
+        },
+        {
+          "item": "ZIP contains only artifact.tar",
+          "status": "PASS"
+        },
+        {
+          "item": "Inspection destination starts empty",
+          "status": "PASS"
+        },
+        {
+          "item": "Archive size and member count are bounded",
+          "status": "PASS"
+        },
+        {
+          "item": "All tar members are ordinary files/directories within the destination",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: about/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: services/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: solutions/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: portfolio/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: portfolio/corporate-website/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: portfolio/enterprise-management/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: portfolio/integration-hub/index.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: icon.svg",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: 404.html",
+          "status": "PASS"
+        },
+        {
+          "item": "Required file exists: .nojekyll",
+          "status": "PASS"
+        },
+        {
+          "item": "No public dev route files",
+          "status": "PASS"
+        },
+        {
+          "item": "No /dev/design-system reference in any HTML/TXT/JSON payload",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "about/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "services/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "solutions/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions exact title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "Solutions nine main Sections and four Articles",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: correct Open Graph locale and type",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/index.html: required Portfolio section count",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: correct Open Graph locale and type",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/corporate-website/index.html: required Portfolio section count",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: correct Open Graph locale and type",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/enterprise-management/index.html: required Portfolio section count",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: zh-TW and one H1",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: exact HTML head title and OG title",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: exact description and OG description",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: correct canonical",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: correct og:url",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: noindex/nofollow",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: prefixed Next static paths",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: correct Open Graph locale and type",
+          "status": "PASS"
+        },
+        {
+          "item": "portfolio/integration-hub/index.html: required Portfolio section count",
+          "status": "PASS"
+        },
+        {
+          "item": "Only the three registered Portfolio detail directories exist",
+          "status": "PASS"
+        },
+        {
+          "item": "Only overview and three registered Portfolio HTML pages are exported; no unknown/legacy/fallback HTML",
+          "status": "PASS"
+        },
+        {
+          "item": "Referenced resources are self-hosted",
+          "status": "PASS"
+        },
+        {
+          "item": "All HTML resources and CSS URL resources exist with the correct base path",
+          "status": "PASS"
+        },
+        {
+          "item": "Downloaded ZIP SHA256 exactly matches the GitHub artifact digest for this run and head",
+          "status": "PASS"
+        }
+      ],
+      "archiveSha256": "d02f9a9b819cb451585460acadd0bdcd230c2a91afe7da5ec863d23bbf84b3d6",
+      "archiveBytes": 5214632,
+      "tarSha256": "94690c12f4874907ecedbaaf15085b37ff4e7ec28ed3cd54ecb3ad9632f3ad47",
+      "fileCount": 197,
+      "scannedPayloadCount": 56,
+      "pages": [
+        {
+          "path": "index.html",
+          "title": "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
+          "description": "Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。",
+          "canonical": "https://xplorekaleidoscope.com/",
+          "openGraph": {
+            "og:title": "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
+            "og:description": "Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。",
+            "og:url": "https://xplorekaleidoscope.com/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "about",
+            "services",
+            "technologies",
+            "why-xk",
+            "solutions",
+            "contact"
+          ],
+          "articles": []
+        },
+        {
+          "path": "about/index.html",
+          "title": "關於 XK | Xplore Kaleidoscope",
+          "description": "認識 Xplore Kaleidoscope（XK），了解我們的品牌理念、網站開發、Java 企業系統、系統整合與 AI 應用技術能力。",
+          "canonical": "https://xplorekaleidoscope.com/about/",
+          "openGraph": {
+            "og:title": "關於 XK | Xplore Kaleidoscope",
+            "og:description": "認識 Xplore Kaleidoscope（XK），了解我們的品牌理念、網站開發、Java 企業系統、系統整合與 AI 應用技術能力。",
+            "og:url": "https://xplorekaleidoscope.com/about/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "who-we-are",
+            "mission",
+            "vision",
+            "capabilities",
+            "approach",
+            "founder",
+            "commitment",
+            "about-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "services/index.html",
+          "title": "服務項目 | Xplore Kaleidoscope",
+          "description": "探索 Xplore Kaleidoscope 的網站開發、Java 企業系統、系統整合、AI 應用與雲端技術服務，打造符合企業需求的數位解決方案。",
+          "canonical": "https://xplorekaleidoscope.com/services/",
+          "openGraph": {
+            "og:title": "服務項目 | Xplore Kaleidoscope",
+            "og:description": "探索 Xplore Kaleidoscope 的網站開發、Java 企業系統、系統整合、AI 應用與雲端技術服務，打造符合企業需求的數位解決方案。",
+            "og:url": "https://xplorekaleidoscope.com/services/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            null,
+            "service-overview",
+            "website-development",
+            "java-enterprise",
+            "system-integration",
+            "ai-automation",
+            "cloud-infrastructure",
+            "service-combinations",
+            "services-process",
+            "services-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "solutions/index.html",
+          "title": "解決方案 | Xplore Kaleidoscope",
+          "description": "探索 XK 如何依企業需求組合網站開發、Java 企業系統、API 與資料整合、AI 應用及部署技術，規劃合適的數位解決方案。",
+          "canonical": "https://xplorekaleidoscope.com/solutions/",
+          "openGraph": {
+            "og:title": "解決方案 | Xplore Kaleidoscope",
+            "og:description": "探索 XK 如何依企業需求組合網站開發、Java 企業系統、API 與資料整合、AI 應用及部署技術，規劃合適的數位解決方案。",
+            "og:url": "https://xplorekaleidoscope.com/solutions/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "solutions-hero",
+            "business-challenges",
+            "solutions-overview",
+            "solution-details",
+            "solution-technology",
+            "solution-combinations",
+            "implementation-approach",
+            "why-xk-solutions",
+            "solutions-next-step"
+          ],
+          "articles": [
+            "solution-digital-presence",
+            "solution-enterprise-management",
+            "solution-system-integration",
+            "solution-ai-workflow"
+          ]
+        },
+        {
+          "path": "portfolio/index.html",
+          "title": "技術作品集 | Xplore Kaleidoscope",
+          "description": "探索 XK 的網站、Java 企業系統與 API 整合展示規劃，了解各專案的背景、技術方向與實際開發狀態。",
+          "canonical": "https://xplorekaleidoscope.com/portfolio/",
+          "openGraph": {
+            "og:title": "技術作品集 | Xplore Kaleidoscope",
+            "og:description": "探索 XK 的網站、Java 企業系統與 API 整合展示規劃，了解各專案的背景、技術方向與實際開發狀態。",
+            "og:url": "https://xplorekaleidoscope.com/portfolio/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "portfolio-hero",
+            "portfolio-introduction",
+            "portfolio-projects",
+            "portfolio-technology",
+            "portfolio-transparency",
+            "portfolio-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "portfolio/corporate-website/index.html",
+          "title": "XK Corporate Website Showcase | XK 技術作品集",
+          "description": "XK Corporate Website Showcase 自製展示規劃，目前為 Planned；探索企業網站的品牌資訊、響應式版面與可維護前端方向，尚未提供完整案例系統的實作與部署證據。",
+          "canonical": "https://xplorekaleidoscope.com/portfolio/corporate-website/",
+          "openGraph": {
+            "og:title": "XK Corporate Website Showcase | XK 技術作品集",
+            "og:description": "XK Corporate Website Showcase 自製展示規劃，目前為 Planned；探索企業網站的品牌資訊、響應式版面與可維護前端方向，尚未提供完整案例系統的實作與部署證據。",
+            "og:url": "https://xplorekaleidoscope.com/portfolio/corporate-website/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "project-overview",
+            "project-challenge",
+            "project-solution",
+            "project-technology",
+            "project-evidence",
+            "project-status",
+            "project-services",
+            "project-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "portfolio/enterprise-management/index.html",
+          "title": "XK Enterprise Management System | XK 技術作品集",
+          "description": "XK Enterprise Management System 自製展示規劃，目前為 Planned；了解 Java 管理系統的流程、資料與權限規劃，模組範圍仍待確認，尚未提供實作完成證據。",
+          "canonical": "https://xplorekaleidoscope.com/portfolio/enterprise-management/",
+          "openGraph": {
+            "og:title": "XK Enterprise Management System | XK 技術作品集",
+            "og:description": "XK Enterprise Management System 自製展示規劃，目前為 Planned；了解 Java 管理系統的流程、資料與權限規劃，模組範圍仍待確認，尚未提供實作完成證據。",
+            "og:url": "https://xplorekaleidoscope.com/portfolio/enterprise-management/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "project-overview",
+            "project-challenge",
+            "project-solution",
+            "project-technology",
+            "project-evidence",
+            "project-status",
+            "project-services",
+            "project-next-step"
+          ],
+          "articles": []
+        },
+        {
+          "path": "portfolio/integration-hub/index.html",
+          "title": "XK Enterprise Integration Hub | XK 技術作品集",
+          "description": "XK Enterprise Integration Hub 自製展示規劃，目前為 Planned；探索模擬系統之間的 API 與資料交換方向，AI 與 n8n 屬後續規劃，尚未提供實作完成證據。",
+          "canonical": "https://xplorekaleidoscope.com/portfolio/integration-hub/",
+          "openGraph": {
+            "og:title": "XK Enterprise Integration Hub | XK 技術作品集",
+            "og:description": "XK Enterprise Integration Hub 自製展示規劃，目前為 Planned；探索模擬系統之間的 API 與資料交換方向，AI 與 n8n 屬後續規劃，尚未提供實作完成證據。",
+            "og:url": "https://xplorekaleidoscope.com/portfolio/integration-hub/",
+            "og:site_name": "Xplore Kaleidoscope",
+            "og:locale": "zh_TW",
+            "og:type": "website"
+          },
+          "robots": "noindex, nofollow",
+          "sections": [
+            "project-overview",
+            "project-challenge",
+            "project-solution",
+            "project-technology",
+            "project-evidence",
+            "project-status",
+            "project-services",
+            "project-next-step"
+          ],
+          "articles": []
+        }
+      ],
+      "localAssets": [
+        "_next/static/chunks/0cz1d0mv5g_q7.js",
+        "_next/static/chunks/0jk4htvmmu57l.js",
+        "_next/static/chunks/0os0_ty8_mg-s.css",
+        "_next/static/chunks/1wnov70f88xjy.js",
+        "_next/static/chunks/2kctg0wbp1k3n.css",
+        "_next/static/chunks/305ar6vqb83id.css",
+        "_next/static/chunks/30sekecjjqkej.js",
+        "_next/static/chunks/310vm2bl3xxpt.js",
+        "_next/static/chunks/39_j1bdzreq0m.js",
+        "_next/static/chunks/3uxqst_n3bj9g.js",
+        "_next/static/chunks/turbopack-1mfkoo_4jufv0.js",
+        "_next/static/media/009085b2287d9f44-s.3932nd_ka6bx8.woff2",
+        "_next/static/media/0235299b0ca8d730-s.30y--sj0yvpb0.woff2",
+        "_next/static/media/03c952d1a96d28f2-s.2yaj-wy93r889.woff2",
+        "_next/static/media/04f55bbf832b6212-s.3a7s8298nvuyr.woff2",
+        "_next/static/media/05340e0910168ebe-s.0lrpox_ezuk1r.woff2",
+        "_next/static/media/0558be3d2352e7cf-s.3zphcfboleyly.woff2",
+        "_next/static/media/074b9a1c1687d902-s.1o56q5ow0cjyd.woff2",
+        "_next/static/media/0762262820666a7d-s.2y0jk_rb4j9j4.woff2",
+        "_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2",
+        "_next/static/media/0d52760bb4650200-s.1bjf8kaczl_p5.woff2",
+        "_next/static/media/0e92a0e3d2dd5b8c-s.40xiiskyz0u9x.woff2",
+        "_next/static/media/10e11208f914d3dd-s.3bg745t-qpt1o.woff2",
+        "_next/static/media/13693d164b9226e2-s.09xedatzsko5c.woff2",
+        "_next/static/media/143a763d17ee6eeb-s.2vdzkn0n3af0t.woff2",
+        "_next/static/media/16e2c3fb8919692b-s.2jmf7rg3bmuor.woff2",
+        "_next/static/media/19d6a36952c0081e-s.0so0lmt415myp.woff2",
+        "_next/static/media/1f6f8074def154cf-s.1un05mbu-o-uv.woff2",
+        "_next/static/media/220046453d91186d-s.1jfng0d2lhme1.woff2",
+        "_next/static/media/2426c9d738456e2d-s.3vsotytmjk-br.woff2",
+        "_next/static/media/2c51001db788c6b4-s.0kcb3-rjj1y2y.woff2",
+        "_next/static/media/2fb76073e23fd9e4-s.3lvt2whj97whp.woff2",
+        "_next/static/media/3267407a69ef379d-s.2pltpjtt_2tdv.woff2",
+        "_next/static/media/34231b91afb7c6c3-s.1zh_2w0p-2s4_.woff2",
+        "_next/static/media/379b8d63e23342d2-s.31x2d79zoz00h.woff2",
+        "_next/static/media/3942aedd309cd604-s.165lm4m9o3-vl.woff2",
+        "_next/static/media/3a2ef6438644f84d-s.0q83xe1cjenwx.woff2",
+        "_next/static/media/3fd3d1cbfe853b45-s.3xm499ayzrrwg.woff2",
+        "_next/static/media/4027d546954d2342-s.1e8hf5jmmq8_2.woff2",
+        "_next/static/media/41a8ea1171f650a9-s.0p83wts6nj9ce.woff2",
+        "_next/static/media/42a94e1c50501306-s.40lw093d4vcfv.woff2",
+        "_next/static/media/45462fd7b7c12654-s.0k62hbripvv8p.woff2",
+        "_next/static/media/464953112b745f1a-s.177rp2yb-7m_d.woff2",
+        "_next/static/media/46a9e2f250689b4a-s.0-dom-5bn10r2.woff2",
+        "_next/static/media/4838bb8b8a191319-s.0mwgq7b9cikvl.woff2",
+        "_next/static/media/4a0a25fecb7ea0a7-s.2ti7gy12g69qv.woff2",
+        "_next/static/media/4a8fa6abf555c69e-s.3zcx5e_xhjfm8.woff2",
+        "_next/static/media/4ba93be2ebd6d053-s.2pqlftuyd_wkv.woff2",
+        "_next/static/media/4f6d27b94ac7f0f8-s.3aqr1xxws37ij.woff2",
+        "_next/static/media/50ca53759033ef11-s.1x64mb7j_fgb-.woff2",
+        "_next/static/media/529ff7b702efc565-s.1uqvvaursggy8.woff2",
+        "_next/static/media/530c3ab6d0ef253d-s.3uekgxdm5c94d.woff2",
+        "_next/static/media/54afa5ace0feb00f-s.0ky-f48x7yw_1.woff2",
+        "_next/static/media/565e8a4bcc3b12bd-s.0n00dwiemrcd-.woff2",
+        "_next/static/media/588358693d6db01a-s.1obcxweugm4-2.woff2",
+        "_next/static/media/592bb1ea124eb038-s.33m2nuqipl96d.woff2",
+        "_next/static/media/60d9202d0746aed7-s.0naqgrmpp19d5.woff2",
+        "_next/static/media/6131cbbf5549afa2-s.2uwcyprjm3xu3.woff2",
+        "_next/static/media/6400b73950e3c08d-s.3g8ezz3m5s8sr.woff2",
+        "_next/static/media/6534cbac66dc8fc7-s.38o02d1puyheb.woff2",
+        "_next/static/media/669dd7ec0f5b5f99-s.28qf92o6_h2x-.woff2",
+        "_next/static/media/6795010584bd0f2d-s.3go89jj68y2at.woff2",
+        "_next/static/media/693938bbd3663eb3-s.0dl5hparsa5gp.woff2",
+        "_next/static/media/6a49bc1e49687a75-s.0w7cltym60w2y.woff2",
+        "_next/static/media/6ac2061f557cffa8-s.0jlzami42bvpi.woff2",
+        "_next/static/media/6e3b98f614f97ffd-s.3kbbd9d0mjbx3.woff2",
+        "_next/static/media/6e80c9dedb1a9667-s.3svaox0n-vn1-.woff2",
+        "_next/static/media/6ec9333c58391b8a-s.2d-ci18b945w0.woff2",
+        "_next/static/media/70f1a82a7c740de8-s.3ybirgydad70b.woff2",
+        "_next/static/media/72e4efd8c649e5bb-s.37d57jik208i-.woff2",
+        "_next/static/media/76b70a1dbe058eb5-s.1y4-pdgsjb-pw.woff2",
+        "_next/static/media/76c0bb6249477faa-s.1j3_-3dz1i_v9.woff2",
+        "_next/static/media/77b73bfff95f70b9-s.07_g1hm2pwfx4.woff2",
+        "_next/static/media/7990c0e730ae727d-s.24etvawtz5ncl.woff2",
+        "_next/static/media/7ca400ae5f553d70-s.03k08otc5i9_f.woff2",
+        "_next/static/media/7cf7854bd762ff7a-s.3t01akl_tjtdo.woff2",
+        "_next/static/media/7ee5cc72c720d0c4-s.401vnmqxpcziv.woff2",
+        "_next/static/media/7f5a8478c713badf-s.0xblw36w1rrth.woff2",
+        "_next/static/media/805c8713abeb51b4-s.3y-g80ptbkdjo.woff2",
+        "_next/static/media/87e80eb126f01747-s.1l74bfin_t-gv.woff2",
+        "_next/static/media/8968b2388617a94a-s.3pfphdkvcj5ct.woff2",
+        "_next/static/media/89a2932fec14ce13-s.15o4o47s-fxl_.woff2",
+        "_next/static/media/8a5ec7e3d06cab2e-s.2xkq43p6u6rwt.woff2",
+        "_next/static/media/8b814dcdad20f5d2-s.2jzjwdmojrhgq.woff2",
+        "_next/static/media/8de25bcedcbd9fed-s.3w-5uu82gf8ao.woff2",
+        "_next/static/media/8f086b5ad96b3bd0-s.2c7eup55pm-6s.woff2",
+        "_next/static/media/987e1f7f69dd96a8-s.0dzpayzoc2tvl.woff2",
+        "_next/static/media/99474880a8d2b222-s.2k7qjafjkwv39.woff2",
+        "_next/static/media/9c242f144e874e94-s.1ahzeq3l4rfic.woff2",
+        "_next/static/media/9fcf16c688c4cecd-s.3jr8k0jeny-hx.woff2",
+        "_next/static/media/a09ffcbc7874c787-s.0kuswl_c7nckw.woff2",
+        "_next/static/media/a13da1b57c824919-s.31fy7udo9nqkm.woff2",
+        "_next/static/media/a4b8c213392a80a7-s.1iwyv5h47dfr1.woff2",
+        "_next/static/media/aa4d3f7c2921b96c-s.2y9xkiwzli4tv.woff2",
+        "_next/static/media/ab3577faf83d98ce-s.1s-td1f3hl4bj.woff2",
+        "_next/static/media/aba5ee529cc6128c-s.19i6q21j4p76r.woff2",
+        "_next/static/media/af97e00fcff0c190-s.2ozbzj-16yw90.woff2",
+        "_next/static/media/b342a9a3a40f610e-s.3equgvo3mbqwd.woff2",
+        "_next/static/media/b4638920f9294ab7-s.3lilaah0kcajn.woff2",
+        "_next/static/media/b4b879b5fb1e21b8-s.3p_7i910djl3_.woff2",
+        "_next/static/media/b76465e8aca97151-s.36coyafufb8qt.woff2",
+        "_next/static/media/ba63f6a0e436df8e-s.3-6t-g6q0vh0a.woff2",
+        "_next/static/media/bd34ada311386ffe-s.2wgtfqr24r7r2.woff2",
+        "_next/static/media/bdc4716d0031b20f-s.22y4cyxvfzd0i.woff2",
+        "_next/static/media/c03d1c4eac9397b1-s.44yp4bz8qwx37.woff2",
+        "_next/static/media/c0c798803a3ec6ce-s.0w5a0wwgmp4jp.woff2",
+        "_next/static/media/c2a16ca6b9862d60-s.0_42yvgz5t97v.woff2",
+        "_next/static/media/c6b2f2cd10e7d7d9-s.42p834j-umttf.woff2",
+        "_next/static/media/c84d2b36fc95f0ef-s.0l1ol8s_tkcew.woff2",
+        "_next/static/media/cb81fe2c65a78575-s.1o-fmdbj7zsou.woff2",
+        "_next/static/media/cded105343fea566-s.2djrj_gqoem5s.woff2",
+        "_next/static/media/ce71624db24aa63d-s.3rbtd93kixhq0.woff2",
+        "_next/static/media/d2603e585543d43b-s.3jgbw7fjdxemy.woff2",
+        "_next/static/media/d2a29e096671156a-s.411tpdvuzg0en.woff2",
+        "_next/static/media/d5d2b5a00459deda-s.1zdjizd_p8a_y.woff2",
+        "_next/static/media/db4811590f7b4850-s.1if57_rchkmuw.woff2",
+        "_next/static/media/e37794ed4373ecc1-s.09jb1ctbp7s-1.woff2",
+        "_next/static/media/e531aa6ee3f1697a-s.09w4ef90p3c49.woff2",
+        "_next/static/media/e779dbe6bb6bb987-s.26_-c6zkjpq_8.woff2",
+        "_next/static/media/e7ef23271262418a-s.1iq4s9mj96jjd.woff2",
+        "_next/static/media/e80a216778e5679c-s.0vp95_qa4hxe5.woff2",
+        "_next/static/media/e908ed1a117c1344-s.1mq073yrijo36.woff2",
+        "_next/static/media/ea484250bbc77c6c-s.3g_rwevmlsqrl.woff2",
+        "_next/static/media/ef45ab08bd349ea7-s.0dp6wmpvpnroq.woff2",
+        "_next/static/media/f1b125fae38a4ff3-s.3ejb79dur_v1p.woff2",
+        "_next/static/media/fdc4a886fadb5436-s.0kgrai6t-ir1h.woff2",
+        "icon.svg"
+      ],
+      "localAssetCount": 127,
+      "assetTypes": {
+        ".woff2": 115,
+        ".css": 3,
+        ".js": 8,
+        ".svg": 1
+      },
+      "remoteAssets": [],
+      "finishedAt": "2026-11-19T00:55:33.987613+00:00",
+      "githubArtifact": {
+        "id": 14487631243,
+        "name": "github-pages",
+        "size_in_bytes": 5214632,
+        "digest": "sha256:d02f9a9b819cb451585460acadd0bdcd230c2a91afe7da5ec863d23bbf84b3d6",
+        "expired": false,
+        "created_at": "2026-11-19T00:53:39Z",
+        "updated_at": "2026-11-19T00:53:39Z",
+        "expires_at": "2026-11-26T00:53:37Z",
+        "workflow_run": {
+          "id": 44432489191,
+          "repository_id": 1462347426,
+          "head_repository_id": 1462347426,
+          "head_branch": "feature/website-portfolio-page",
+          "head_sha": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27"
+        }
+      },
+      "assertionCount": 91,
+      "checker": {
+        "path": "/tmp/xk-task007/check-pages-artifact.py",
+        "sha256": "5990c5022f911a0ba13ae8830c66f866adb108ae35a9e6522d971f14dcfd8857",
+        "actualProcessExitCode": 0
+      },
+      "sourceMetadataCrossCheck": {
+        "source": "/workspace/xk-website/src/config/portfolio.ts",
+        "result": "All three exact metadataDescription strings match the checker and downloaded detail HTML. Overview and original four page metadata are asserted exactly by the checker.",
+        "executedReadOnly": true
+      },
+      "downloadMethod": {
+        "method": "GitHub connector github_download_workflow_artifact; signed reusable download URL fetched with curl --fail --silent --show-error --location into /tmp only.",
+        "downloadExitCode": 0,
+        "signedUrlStoredInReport": false,
+        "ghDownloadRetryAttempted": false
+      }
+    },
+    "independentReview": {
+      "status": "PASS",
+      "blocking": 0,
+      "note": "Independent source/report/tree audit; not a submitted GitHub APPROVED review.",
+      "remoteDiff": {
+        "task": "Task 007 independent remote Commit A scope/blob audit",
+        "observedAt": "2026-11-19T00:53:52.048099+00:00",
+        "status": "PASS",
+        "sourceMetadataFile": "/tmp/xk-task007/remote-commit-a-source.json",
+        "base": {
+          "sha": "43ddd7ed0e339d35ece949a656188defcaa5ac72",
+          "tree": "5c90ccce62fee8ac57a5eeba97aee994affbd421"
+        },
+        "head": {
+          "sha": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27",
+          "tree": "d5329f1c94bc361940075f812f6e5f3835390644",
+          "parents": [
+            "43ddd7ed0e339d35ece949a656188defcaa5ac72"
+          ],
+          "message": "feat(portfolio): implement XK technical portfolio",
+          "date": "2026-11-19T00:51:20Z"
+        },
+        "pr": {
+          "url": "https://github.com/xk2022/xk-website/pull/11",
+          "number": 11,
+          "state": "open",
+          "head": "3ea24fb0af58b8f4ec0c1ff65910eb54f7eadd27",
+          "base": "43ddd7ed0e339d35ece949a656188defcaa5ac72",
+          "commits": 1,
+          "changedFiles": 28,
+          "merged": false,
+          "autoMerge": null
+        },
+        "method": "Read-only GitHub connector GET git commits and complete recursive trees. Independently compute Git blob SHA-1 as SHA1(blob + space + byteLength + NUL + local exact bytes), compare every head Blob and byte length to fixed remote tree. This covers binary gzip/PNG without text re-encoding. No checkout/ref/file mutation or GitHub review action.",
+        "treeTruncated": {
+          "base": false,
+          "head": false
+        },
+        "baseBlobCount": 131,
+        "headBlobCount": 153,
+        "changedBlobCount": 28,
+        "added": 22,
+        "modified": 6,
+        "deleted": 0,
+        "expectedInventoryMatches": true,
+        "changedBlobs": [
+          {
+            "path": "AGENTS.md",
+            "status": "modified",
+            "baseBlobSha": "59f926d0e49677298b4d3ba167cba6feeb23412c",
+            "remoteBlobSha": "7b60c44441345dd011ed09f98f89d7edce66fb6b",
+            "localGitBlobSha": "7b60c44441345dd011ed09f98f89d7edce66fb6b",
+            "localSha256": "120c1ad2b8b21ac9f89ecaa30e1faedf9f6a3e5259e267ab0baa64c8b5492fc2",
+            "bytes": 9215,
+            "remoteBytes": 9215,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "README.md",
+            "status": "modified",
+            "baseBlobSha": "280dbe190205af0870f0e48d93db5a0e1790157f",
+            "remoteBlobSha": "cd62744109d3672461c97dae3fa9d2d6c942f6a4",
+            "localGitBlobSha": "cd62744109d3672461c97dae3fa9d2d6c942f6a4",
+            "localSha256": "745a5bd50c845c9d60f783335be4c929c23e638394807e629fc20f23ed6de117",
+            "bytes": 8988,
+            "remoteBytes": 8988,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/implementation-notes.md",
+            "status": "modified",
+            "baseBlobSha": "82eb93c2129ef413cb56dea0cb2622139342625f",
+            "remoteBlobSha": "6892a10e59f41ed2aa13566a8dbb1da0dc79e2dd",
+            "localGitBlobSha": "6892a10e59f41ed2aa13566a8dbb1da0dc79e2dd",
+            "localSha256": "79cead0f33ad753400fb9a42c2a14c282203706f20d1a97ddeaaeb1c14d27bf9",
+            "bytes": 30622,
+            "remoteBytes": 30622,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/reports/task007-evidence.json.gz",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "6f4202bdcefb2b68fe0e5f3c905e1d5ac82f167b",
+            "localGitBlobSha": "6f4202bdcefb2b68fe0e5f3c905e1d5ac82f167b",
+            "localSha256": "d3763d1636028e08286725ea06fe77650de013ad8b680ab03908b6919e71aca2",
+            "bytes": 3159536,
+            "remoteBytes": 3159536,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/reports/task007-implementation.md",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "0ed59c249ceb5039f19ae7e46ef22420cf0d2308",
+            "localGitBlobSha": "0ed59c249ceb5039f19ae7e46ef22420cf0d2308",
+            "localSha256": "b6c91cc7b02c9d5ffd577a01dd5274bf4bdcfbf8ece14a31ae7a36dd1c552c15",
+            "bytes": 23648,
+            "remoteBytes": 23648,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/reports/task007-verification.json",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "7ac8c16c37d2adaa798d7a2603bfc61c86dfbc5b",
+            "localGitBlobSha": "7ac8c16c37d2adaa798d7a2603bfc61c86dfbc5b",
+            "localSha256": "8fa773a15dc5a8b7f9a285ebdd9f7e70530fbcdd0a595e2dced60a7717397c65",
+            "bytes": 5351810,
+            "remoteBytes": 5351810,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-corporate-website-detail.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "160719922a9f538c22cd01110a69a73aa8679b5b",
+            "localGitBlobSha": "160719922a9f538c22cd01110a69a73aa8679b5b",
+            "localSha256": "6d799caa5a9851a39dce222d99f53d31d7a60a695d9a6a72d8e964a7fba2ce26",
+            "bytes": 911590,
+            "remoteBytes": 911590,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-enterprise-management-detail.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "bb166559ef1c02e3a8768eed2c9f07b98073272f",
+            "localGitBlobSha": "bb166559ef1c02e3a8768eed2c9f07b98073272f",
+            "localSha256": "d9961c3e36e7086a660106daa1b01255419da5b19dbd29c2ef3f521c7ef9711d",
+            "bytes": 950651,
+            "remoteBytes": 950651,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-integration-hub-detail.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "6aa348164e094cb3079e6d638db4dcd21205cc22",
+            "localGitBlobSha": "6aa348164e094cb3079e6d638db4dcd21205cc22",
+            "localSha256": "a6cf133bf5d7bf99aad768e672e8fa4a5bfe3df5b44f5ef354b0268e20aa1f47",
+            "bytes": 931652,
+            "remoteBytes": 931652,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-portfolio-desktop.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "6cf2d86388402953897fc16f1ec44404eae895ad",
+            "localGitBlobSha": "6cf2d86388402953897fc16f1ec44404eae895ad",
+            "localSha256": "a129a847f965f79a12054e066c717a03a4cde2530815851b0b1a383d0f02c495",
+            "bytes": 857809,
+            "remoteBytes": 857809,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-portfolio-footer.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "bf975f61941c16bf1c8e66d9acced941c558cf09",
+            "localGitBlobSha": "bf975f61941c16bf1c8e66d9acced941c558cf09",
+            "localSha256": "cb59695f6ec2ed58c16a0b2912490691ad6b6593ba6bbea7ccbc7500d773c524",
+            "bytes": 56241,
+            "remoteBytes": 56241,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-portfolio-mobile.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "84c5f830e4b59af544840bff651936d466586e17",
+            "localGitBlobSha": "84c5f830e4b59af544840bff651936d466586e17",
+            "localSha256": "ebdb1c1a43e6525a943eea65ffa9c74d6c005511f3504066dd85b4c158eb4949",
+            "bytes": 718919,
+            "remoteBytes": 718919,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-portfolio-projects.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "ea278f60f9465f18de13233890357778cdf69399",
+            "localGitBlobSha": "ea278f60f9465f18de13233890357778cdf69399",
+            "localSha256": "00bdaffd222380144792b98731ace836ad08cea2d19752559ff46374108e1315",
+            "bytes": 170613,
+            "remoteBytes": 170613,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "scripts/build-github-pages.mjs",
+            "status": "modified",
+            "baseBlobSha": "5d9157f7fd10300bdcb3883aebf9481f9dc9a266",
+            "remoteBlobSha": "42796ebae438048edcc1b87b9e8107b3479e1f1e",
+            "localGitBlobSha": "42796ebae438048edcc1b87b9e8107b3479e1f1e",
+            "localSha256": "484e548d01153486ac4aae534d4c9bbc02de3517fb5440312dadc1800912a47e",
+            "bytes": 10677,
+            "remoteBytes": 10677,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/portfolio/[slug]/page.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "228903756ca2b234e1c4b2593c215b3d697975c4",
+            "localGitBlobSha": "228903756ca2b234e1c4b2593c215b3d697975c4",
+            "localSha256": "110dcdc2a0ce352e6a3f7c46658a5e87c3c401d935de6a9ec78156d271dd013c",
+            "bytes": 1395,
+            "remoteBytes": 1395,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/portfolio/page.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "df3be4247865b508fd1b09fe7f32a66a31abd958",
+            "localGitBlobSha": "df3be4247865b508fd1b09fe7f32a66a31abd958",
+            "localSha256": "8d932508f899e6deafb7a35158088bf24f3ef8ec3888a35eff9e7c7b2305eef3",
+            "bytes": 1390,
+            "remoteBytes": 1390,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/layout/site-footer.tsx",
+            "status": "modified",
+            "baseBlobSha": "a53331186e69d20f8d962b79fc02fd6db2d6f315",
+            "remoteBlobSha": "d59ebc677a368c68dd261daac99d9c6dd6362acb",
+            "localGitBlobSha": "d59ebc677a368c68dd261daac99d9c6dd6362acb",
+            "localSha256": "af61530b731d684824094deaab6fd1142ddd993c3fce1a6bd9c68ee8e72d256e",
+            "bytes": 3135,
+            "remoteBytes": 3135,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-cta.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "595d3ca1103b76390adac80bbac84f0cd513f8a8",
+            "localGitBlobSha": "595d3ca1103b76390adac80bbac84f0cd513f8a8",
+            "localSha256": "8e16a2c695b88a14b7a6adbe5bf834af0d2d675ca7e389a38fd7c6933bda65cf",
+            "bytes": 1518,
+            "remoteBytes": 1518,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-hero.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "3113eb2e53fedb4d304cdea5f75a866d3431bc75",
+            "localGitBlobSha": "3113eb2e53fedb4d304cdea5f75a866d3431bc75",
+            "localSha256": "ab3fdbc75aef9491d48c5426aace10071e9fcbc720c5734124cb40abf8fbaeba",
+            "bytes": 2852,
+            "remoteBytes": 2852,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-introduction.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "de9064cdea2060721507471d45ce2e300464e2ea",
+            "localGitBlobSha": "de9064cdea2060721507471d45ce2e300464e2ea",
+            "localSha256": "e91632cb775be76fb66203aefafc2b4c841394619803bc841c7d2b6c9b162308",
+            "bytes": 749,
+            "remoteBytes": 749,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-projects.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "8090cec691de13b60b49b4552830188618fff411",
+            "localGitBlobSha": "8090cec691de13b60b49b4552830188618fff411",
+            "localSha256": "8aff430f7deae015f5fe37957fe25ebe8d42bf628ff898ac1711ab93378cd306",
+            "bytes": 900,
+            "remoteBytes": 900,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-technology.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "1da1e53653fa6d13aec70b0756c8e29f38dc8d9f",
+            "localGitBlobSha": "1da1e53653fa6d13aec70b0756c8e29f38dc8d9f",
+            "localSha256": "d4174584f430c078d927048273feee7f04e4e961ebcffd3ec2f7a075f8b0e011",
+            "bytes": 2545,
+            "remoteBytes": 2545,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-transparency.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "8be44f71ebede3231817c1413c893b5ba3a6878b",
+            "localGitBlobSha": "8be44f71ebede3231817c1413c893b5ba3a6878b",
+            "localSha256": "34acf84e32b6fc1f03b1b12ead37f62297dcab4c071cdc1be566f173ea33163c",
+            "bytes": 1162,
+            "remoteBytes": 1162,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/project-card.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "c5e524374faf21f77a350c4796131738f5ea15a9",
+            "localGitBlobSha": "c5e524374faf21f77a350c4796131738f5ea15a9",
+            "localSha256": "08b70690368cd015e00100f6c4459ab773e53963d33c7c52fdc9760d86f0414b",
+            "bytes": 1919,
+            "remoteBytes": 1919,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/project-detail.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "1b04a85d7819775dacd65be5c95697b865446118",
+            "localGitBlobSha": "1b04a85d7819775dacd65be5c95697b865446118",
+            "localSha256": "a04bcd6ab2ec9c5465b9282636f904ef9bdab79f5615035d3f089345012ad7c1",
+            "bytes": 12016,
+            "remoteBytes": 12016,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/project-labels.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "8344adae82f8d82e7a8efcbf5dc6364c4675cc85",
+            "localGitBlobSha": "8344adae82f8d82e7a8efcbf5dc6364c4675cc85",
+            "localSha256": "782ac79911444633912a21a4d7aa12fe3b77cf408ad256f7ce7dc6e6c8c2b0b6",
+            "bytes": 1446,
+            "remoteBytes": 1446,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/config/navigation.ts",
+            "status": "modified",
+            "baseBlobSha": "e1c44e9857e858968077e513fa130e0db0cab77a",
+            "remoteBlobSha": "f3a1760f3ae86bf4bc07cd94bb3303660fe356cc",
+            "localGitBlobSha": "f3a1760f3ae86bf4bc07cd94bb3303660fe356cc",
+            "localSha256": "b79331d2ad402ce939c703bc73d78ed0096fdfe1c796873ee29c7a6080368cef",
+            "bytes": 1477,
+            "remoteBytes": 1477,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/config/portfolio.ts",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "2a7dbd38a27907d4881ec7b27755714245e63d5a",
+            "localGitBlobSha": "2a7dbd38a27907d4881ec7b27755714245e63d5a",
+            "localSha256": "718505388bed4c6889e5fc983dea9ef253214f9b2aaf41bc142dc32124673adf",
+            "bytes": 24639,
+            "remoteBytes": 24639,
+            "mode": "100644",
+            "matchesRemote": true
+          }
+        ],
+        "allHeadLocalBytesMatch": true,
+        "allHeadBlobComparisons": [
+          {
+            "path": ".editorconfig",
+            "status": "unchanged",
+            "baseBlobSha": "1014ba78880c899e842b397cb89a878be4671f7d",
+            "remoteBlobSha": "1014ba78880c899e842b397cb89a878be4671f7d",
+            "localGitBlobSha": "1014ba78880c899e842b397cb89a878be4671f7d",
+            "localSha256": "a6b98ea7cb6d61ed8d430dd0dffa46c87012b5cf859d4ce7207898954951fdcd",
+            "bytes": 188,
+            "remoteBytes": 188,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": ".github/workflows/ci.yml",
+            "status": "unchanged",
+            "baseBlobSha": "8cb71f8208e3ca55085230bd996fbf95aac8296c",
+            "remoteBlobSha": "8cb71f8208e3ca55085230bd996fbf95aac8296c",
+            "localGitBlobSha": "8cb71f8208e3ca55085230bd996fbf95aac8296c",
+            "localSha256": "e4ad4ba2582e38254da8f86bd61d7bbeb7da2ccb825b6b8cb5c2653a98bcaa8c",
+            "bytes": 3260,
+            "remoteBytes": 3260,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": ".gitignore",
+            "status": "unchanged",
+            "baseBlobSha": "5ef6a520780202a1d6addd833d800ccb1ecac0bb",
+            "remoteBlobSha": "5ef6a520780202a1d6addd833d800ccb1ecac0bb",
+            "localGitBlobSha": "5ef6a520780202a1d6addd833d800ccb1ecac0bb",
+            "localSha256": "207e265ff4901f9ad9f96d8ce08530e04f9fc600815472a66d0a446096d654cd",
+            "bytes": 480,
+            "remoteBytes": 480,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": ".nvmrc",
+            "status": "unchanged",
+            "baseBlobSha": "a45fd52cc5891570d6299fab38643103c3955474",
+            "remoteBlobSha": "a45fd52cc5891570d6299fab38643103c3955474",
+            "localGitBlobSha": "a45fd52cc5891570d6299fab38643103c3955474",
+            "localSha256": "68ca3fba3b7e864770cb61aeb306d4bd4354b68ab4dd38450860c5d823e42a53",
+            "bytes": 3,
+            "remoteBytes": 3,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "AGENTS.md",
+            "status": "modified",
+            "baseBlobSha": "59f926d0e49677298b4d3ba167cba6feeb23412c",
+            "remoteBlobSha": "7b60c44441345dd011ed09f98f89d7edce66fb6b",
+            "localGitBlobSha": "7b60c44441345dd011ed09f98f89d7edce66fb6b",
+            "localSha256": "120c1ad2b8b21ac9f89ecaa30e1faedf9f6a3e5259e267ab0baa64c8b5492fc2",
+            "bytes": 9215,
+            "remoteBytes": 9215,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "README.md",
+            "status": "modified",
+            "baseBlobSha": "280dbe190205af0870f0e48d93db5a0e1790157f",
+            "remoteBlobSha": "cd62744109d3672461c97dae3fa9d2d6c942f6a4",
+            "localGitBlobSha": "cd62744109d3672461c97dae3fa9d2d6c942f6a4",
+            "localSha256": "745a5bd50c845c9d60f783335be4c929c23e638394807e629fc20f23ed6de117",
+            "bytes": 8988,
+            "remoteBytes": 8988,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "components.json",
+            "status": "unchanged",
+            "baseBlobSha": "2a427859bad941eca428977a1f77c6df68f8e0ae",
+            "remoteBlobSha": "2a427859bad941eca428977a1f77c6df68f8e0ae",
+            "localGitBlobSha": "2a427859bad941eca428977a1f77c6df68f8e0ae",
+            "localSha256": "a7720c54d6a109d6063937fac1c7766c44a1020cdbe43eb489ca2cb126fbbaa9",
+            "bytes": 521,
+            "remoteBytes": 521,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/about-implementation.md",
+            "status": "unchanged",
+            "baseBlobSha": "420e067f162d9ce1d0fb0677481a90ef50180d4d",
+            "remoteBlobSha": "420e067f162d9ce1d0fb0677481a90ef50180d4d",
+            "localGitBlobSha": "420e067f162d9ce1d0fb0677481a90ef50180d4d",
+            "localSha256": "4b76a23a104c0b399e5b0e20d99fd22c3f8546e9f7878ae549001ed7aa9aed54",
+            "bytes": 17787,
+            "remoteBytes": 17787,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/brand-design-system.md",
+            "status": "unchanged",
+            "baseBlobSha": "8fe186d5494cbba3c2d45d973f7182254cf54f12",
+            "remoteBlobSha": "8fe186d5494cbba3c2d45d973f7182254cf54f12",
+            "localGitBlobSha": "8fe186d5494cbba3c2d45d973f7182254cf54f12",
+            "localSha256": "839aa5a739e50bfd87c4fddf9ef589e29cc657bc4e28c7292bca6fc3b6b32a8f",
+            "bytes": 15902,
+            "remoteBytes": 15902,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/github-pages-deployment.md",
+            "status": "unchanged",
+            "baseBlobSha": "8faae7d96f9ec0b560197b5ed51a2d2bc015f43f",
+            "remoteBlobSha": "8faae7d96f9ec0b560197b5ed51a2d2bc015f43f",
+            "localGitBlobSha": "8faae7d96f9ec0b560197b5ed51a2d2bc015f43f",
+            "localSha256": "0af583223c24c01716a344330952672e5c7467b35e7b9cd089125a61b0491cfe",
+            "bytes": 7729,
+            "remoteBytes": 7729,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/homepage-implementation.md",
+            "status": "unchanged",
+            "baseBlobSha": "08c5e403eed921577f13a3eb3a048643b8854a75",
+            "remoteBlobSha": "08c5e403eed921577f13a3eb3a048643b8854a75",
+            "localGitBlobSha": "08c5e403eed921577f13a3eb3a048643b8854a75",
+            "localSha256": "0b29ec815b753f3c17ed1b86e4fd24809706b3f6a159589bcf6362cc449bd0ed",
+            "bytes": 14826,
+            "remoteBytes": 14826,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/implementation-notes.md",
+            "status": "modified",
+            "baseBlobSha": "82eb93c2129ef413cb56dea0cb2622139342625f",
+            "remoteBlobSha": "6892a10e59f41ed2aa13566a8dbb1da0dc79e2dd",
+            "localGitBlobSha": "6892a10e59f41ed2aa13566a8dbb1da0dc79e2dd",
+            "localSha256": "79cead0f33ad753400fb9a42c2a14c282203706f20d1a97ddeaaeb1c14d27bf9",
+            "bytes": 30622,
+            "remoteBytes": 30622,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/reports/task006-implementation.md",
+            "status": "unchanged",
+            "baseBlobSha": "224e452cd60ed60a9a2904e78e014baadafc3dbc",
+            "remoteBlobSha": "224e452cd60ed60a9a2904e78e014baadafc3dbc",
+            "localGitBlobSha": "224e452cd60ed60a9a2904e78e014baadafc3dbc",
+            "localSha256": "6e8e28e29445cf4935fd1ff93c6cf31a94b617ea39fcfdb6cc813d0078ea7a6a",
+            "bytes": 19056,
+            "remoteBytes": 19056,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/reports/task006-verification.json",
+            "status": "unchanged",
+            "baseBlobSha": "dbfd89a7d4d62e77a076fbb62f48aa2369c80a35",
+            "remoteBlobSha": "dbfd89a7d4d62e77a076fbb62f48aa2369c80a35",
+            "localGitBlobSha": "dbfd89a7d4d62e77a076fbb62f48aa2369c80a35",
+            "localSha256": "8e210de9d7bc9bb7e6b0b473249771488a03a2242feeb3db58162321aeab8daa",
+            "bytes": 1362029,
+            "remoteBytes": 1362029,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/reports/task007-evidence.json.gz",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "6f4202bdcefb2b68fe0e5f3c905e1d5ac82f167b",
+            "localGitBlobSha": "6f4202bdcefb2b68fe0e5f3c905e1d5ac82f167b",
+            "localSha256": "d3763d1636028e08286725ea06fe77650de013ad8b680ab03908b6919e71aca2",
+            "bytes": 3159536,
+            "remoteBytes": 3159536,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/reports/task007-implementation.md",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "0ed59c249ceb5039f19ae7e46ef22420cf0d2308",
+            "localGitBlobSha": "0ed59c249ceb5039f19ae7e46ef22420cf0d2308",
+            "localSha256": "b6c91cc7b02c9d5ffd577a01dd5274bf4bdcfbf8ece14a31ae7a36dd1c552c15",
+            "bytes": 23648,
+            "remoteBytes": 23648,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/reports/task007-verification.json",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "7ac8c16c37d2adaa798d7a2603bfc61c86dfbc5b",
+            "localGitBlobSha": "7ac8c16c37d2adaa798d7a2603bfc61c86dfbc5b",
+            "localSha256": "8fa773a15dc5a8b7f9a285ebdd9f7e70530fbcdd0a595e2dced60a7717397c65",
+            "bytes": 5351810,
+            "remoteBytes": 5351810,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task003-1440.png",
+            "status": "unchanged",
+            "baseBlobSha": "10e008d8d6163d222297486b060af64c21d03cd1",
+            "remoteBlobSha": "10e008d8d6163d222297486b060af64c21d03cd1",
+            "localGitBlobSha": "10e008d8d6163d222297486b060af64c21d03cd1",
+            "localSha256": "2511e17abcd843825bfe07ca6aebf0b7c9b33b260af25a1266fe29bc23f023af",
+            "bytes": 342618,
+            "remoteBytes": 342618,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task003-375.png",
+            "status": "unchanged",
+            "baseBlobSha": "dd356899211160c407c8764b137cd4a2cd10c999",
+            "remoteBlobSha": "dd356899211160c407c8764b137cd4a2cd10c999",
+            "localGitBlobSha": "dd356899211160c407c8764b137cd4a2cd10c999",
+            "localSha256": "1c05457ee86232c699cdec264559089fa13ce171b8aa0e120abff597185fe061",
+            "bytes": 175297,
+            "remoteBytes": 175297,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task004-about-approach.png",
+            "status": "unchanged",
+            "baseBlobSha": "7d915668120645f2e7ac5c7634cbfef7487ecafb",
+            "remoteBlobSha": "7d915668120645f2e7ac5c7634cbfef7487ecafb",
+            "localGitBlobSha": "7d915668120645f2e7ac5c7634cbfef7487ecafb",
+            "localSha256": "8eeccf2132d038443ed654d7ae6d8910c580e343b906f62cc82cac348a7a94d2",
+            "bytes": 69874,
+            "remoteBytes": 69874,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task004-about-capabilities.png",
+            "status": "unchanged",
+            "baseBlobSha": "343fd078d8fccee1af588ed6aaff4fc388481f88",
+            "remoteBlobSha": "343fd078d8fccee1af588ed6aaff4fc388481f88",
+            "localGitBlobSha": "343fd078d8fccee1af588ed6aaff4fc388481f88",
+            "localSha256": "ddc7984a18916915369778fd93e88ad21cd36b92b96f4f128eeff58770eed8fd",
+            "bytes": 125403,
+            "remoteBytes": 125403,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task004-about-desktop.png",
+            "status": "unchanged",
+            "baseBlobSha": "26ff4a8f101316e8503cc8ee837ee7ec44444d25",
+            "remoteBlobSha": "26ff4a8f101316e8503cc8ee837ee7ec44444d25",
+            "localGitBlobSha": "26ff4a8f101316e8503cc8ee837ee7ec44444d25",
+            "localSha256": "0e87cb7012190597c2727c2df165f26778d4e89905d9877533982aec34814bad",
+            "bytes": 969012,
+            "remoteBytes": 969012,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task004-about-footer.png",
+            "status": "unchanged",
+            "baseBlobSha": "776ee56cef45772a070baa710f56d821875333f2",
+            "remoteBlobSha": "776ee56cef45772a070baa710f56d821875333f2",
+            "localGitBlobSha": "776ee56cef45772a070baa710f56d821875333f2",
+            "localSha256": "dd76638f400c70ee5abbfc9933db89b3864da94c8ed5612aa177bdc3e3a56b80",
+            "bytes": 56845,
+            "remoteBytes": 56845,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task004-about-mobile.png",
+            "status": "unchanged",
+            "baseBlobSha": "c5a65f144d0b81afb3e11121ad91dbf79e651be4",
+            "remoteBlobSha": "c5a65f144d0b81afb3e11121ad91dbf79e651be4",
+            "localGitBlobSha": "c5a65f144d0b81afb3e11121ad91dbf79e651be4",
+            "localSha256": "3d050ff8d7c2675a960d67c56184937409211b0bdb87ef955e7064a2a89d946b",
+            "bytes": 794705,
+            "remoteBytes": 794705,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task005-services-ai.png",
+            "status": "unchanged",
+            "baseBlobSha": "b82dffd339987bc55a96c07b4c9fc519e1c4f380",
+            "remoteBlobSha": "b82dffd339987bc55a96c07b4c9fc519e1c4f380",
+            "localGitBlobSha": "b82dffd339987bc55a96c07b4c9fc519e1c4f380",
+            "localSha256": "34a59119c78284592e358f09c814ca6d64fbce3a49e5091e188c9ca94effdf16",
+            "bytes": 169090,
+            "remoteBytes": 169090,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task005-services-desktop.png",
+            "status": "unchanged",
+            "baseBlobSha": "ca9ff91ba230e6dba06146f209fc7b3b26bd378b",
+            "remoteBlobSha": "ca9ff91ba230e6dba06146f209fc7b3b26bd378b",
+            "localGitBlobSha": "ca9ff91ba230e6dba06146f209fc7b3b26bd378b",
+            "localSha256": "8594780f4f3ad8eae7ce651115f6b0d40181660c06a463ca5a624819b8bc8977",
+            "bytes": 1129292,
+            "remoteBytes": 1129292,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task005-services-footer.png",
+            "status": "unchanged",
+            "baseBlobSha": "0fc1782e92795e5f216025f071c707aabc24aece",
+            "remoteBlobSha": "0fc1782e92795e5f216025f071c707aabc24aece",
+            "localGitBlobSha": "0fc1782e92795e5f216025f071c707aabc24aece",
+            "localSha256": "f8f7c7a42c71b54848e07714d56ca4c83dd8500f34801a9fdd34edb0a86bb596",
+            "bytes": 56804,
+            "remoteBytes": 56804,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task005-services-java.png",
+            "status": "unchanged",
+            "baseBlobSha": "01eedd036df95aed57f75e92b03575e830142dad",
+            "remoteBlobSha": "01eedd036df95aed57f75e92b03575e830142dad",
+            "localGitBlobSha": "01eedd036df95aed57f75e92b03575e830142dad",
+            "localSha256": "99792dce835313cc0c71695e141f275c09e18205543036942115071b85f6b251",
+            "bytes": 92567,
+            "remoteBytes": 92567,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task005-services-mobile.png",
+            "status": "unchanged",
+            "baseBlobSha": "8cd4bfa5bac537a94ebbb045e89a7a4ed9fe8860",
+            "remoteBlobSha": "8cd4bfa5bac537a94ebbb045e89a7a4ed9fe8860",
+            "localGitBlobSha": "8cd4bfa5bac537a94ebbb045e89a7a4ed9fe8860",
+            "localSha256": "bd47775fd716817d7dae84997815de4e602cd0d29c4cfb38e9acefb78458c936",
+            "bytes": 972003,
+            "remoteBytes": 972003,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task005-services-process.png",
+            "status": "unchanged",
+            "baseBlobSha": "715add437131a1e2c109bb3d251b81b01192fc8d",
+            "remoteBlobSha": "715add437131a1e2c109bb3d251b81b01192fc8d",
+            "localGitBlobSha": "715add437131a1e2c109bb3d251b81b01192fc8d",
+            "localSha256": "7a6740d328ec01afccc1153f2ad059328c0f276e213042175df5956748a68b85",
+            "bytes": 86714,
+            "remoteBytes": 86714,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task005-services-website.png",
+            "status": "unchanged",
+            "baseBlobSha": "5823ad3c638f5e3963ebeb49bba64da8793bcee3",
+            "remoteBlobSha": "5823ad3c638f5e3963ebeb49bba64da8793bcee3",
+            "localGitBlobSha": "5823ad3c638f5e3963ebeb49bba64da8793bcee3",
+            "localSha256": "ac4436bff70f68b8827f68045a2a07b5c62a47be7368c0e6591bc643e424d627",
+            "bytes": 94305,
+            "remoteBytes": 94305,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-desktop.png",
+            "status": "unchanged",
+            "baseBlobSha": "c1e31e9555aa16b6bd5e258594209619ba0753c5",
+            "remoteBlobSha": "c1e31e9555aa16b6bd5e258594209619ba0753c5",
+            "localGitBlobSha": "c1e31e9555aa16b6bd5e258594209619ba0753c5",
+            "localSha256": "2257480b12e2b35790497306fe24e06096f0cab1d74ff1590bd885b4d8585530",
+            "bytes": 2015251,
+            "remoteBytes": 2015251,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-details.png",
+            "status": "unchanged",
+            "baseBlobSha": "7bd87aafd443c819d8cc355239adf0b891cdc7a0",
+            "remoteBlobSha": "7bd87aafd443c819d8cc355239adf0b891cdc7a0",
+            "localGitBlobSha": "7bd87aafd443c819d8cc355239adf0b891cdc7a0",
+            "localSha256": "1cc1e24c1b554dff39d5235c65829f567ddd5abab2f22efaf4021054760d9bac",
+            "bytes": 705090,
+            "remoteBytes": 705090,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-footer.png",
+            "status": "unchanged",
+            "baseBlobSha": "776ee56cef45772a070baa710f56d821875333f2",
+            "remoteBlobSha": "776ee56cef45772a070baa710f56d821875333f2",
+            "localGitBlobSha": "776ee56cef45772a070baa710f56d821875333f2",
+            "localSha256": "dd76638f400c70ee5abbfc9933db89b3864da94c8ed5612aa177bdc3e3a56b80",
+            "bytes": 56845,
+            "remoteBytes": 56845,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-mobile.png",
+            "status": "unchanged",
+            "baseBlobSha": "9457ecbb621b19800cc296a3aaa63fc4579694b6",
+            "remoteBlobSha": "9457ecbb621b19800cc296a3aaa63fc4579694b6",
+            "localGitBlobSha": "9457ecbb621b19800cc296a3aaa63fc4579694b6",
+            "localSha256": "85a930aadd0e395125a39ec6c3ad7efa9423f2270f4cf35011a482fc4547c5f8",
+            "bytes": 1764401,
+            "remoteBytes": 1764401,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-overview.png",
+            "status": "unchanged",
+            "baseBlobSha": "9e98b17b0184b535d88c5840c73bd067f86d7d54",
+            "remoteBlobSha": "9e98b17b0184b535d88c5840c73bd067f86d7d54",
+            "localGitBlobSha": "9e98b17b0184b535d88c5840c73bd067f86d7d54",
+            "localSha256": "06cc5786ae2afdb97553e3f474ecac9eb0ddb53a9524192c2b493329ce4a9692",
+            "bytes": 119998,
+            "remoteBytes": 119998,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-process.png",
+            "status": "unchanged",
+            "baseBlobSha": "4b82573bc848ae851dc06b58a9e3b28f09bc7d01",
+            "remoteBlobSha": "4b82573bc848ae851dc06b58a9e3b28f09bc7d01",
+            "localGitBlobSha": "4b82573bc848ae851dc06b58a9e3b28f09bc7d01",
+            "localSha256": "18c5e514429ce54fd15120a001ee0716ecd85eb83b42f59717ab647318470291",
+            "bytes": 87464,
+            "remoteBytes": 87464,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task006-solutions-technology.png",
+            "status": "unchanged",
+            "baseBlobSha": "0ef6956a31d4fbf198b375d802a09fee63a83303",
+            "remoteBlobSha": "0ef6956a31d4fbf198b375d802a09fee63a83303",
+            "localGitBlobSha": "0ef6956a31d4fbf198b375d802a09fee63a83303",
+            "localSha256": "ccfd8f2a96c7a8e2e8ab4fd94c07de2f8888359c137fc754e33dbd8354915890",
+            "bytes": 215244,
+            "remoteBytes": 215244,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-corporate-website-detail.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "160719922a9f538c22cd01110a69a73aa8679b5b",
+            "localGitBlobSha": "160719922a9f538c22cd01110a69a73aa8679b5b",
+            "localSha256": "6d799caa5a9851a39dce222d99f53d31d7a60a695d9a6a72d8e964a7fba2ce26",
+            "bytes": 911590,
+            "remoteBytes": 911590,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-enterprise-management-detail.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "bb166559ef1c02e3a8768eed2c9f07b98073272f",
+            "localGitBlobSha": "bb166559ef1c02e3a8768eed2c9f07b98073272f",
+            "localSha256": "d9961c3e36e7086a660106daa1b01255419da5b19dbd29c2ef3f521c7ef9711d",
+            "bytes": 950651,
+            "remoteBytes": 950651,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-integration-hub-detail.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "6aa348164e094cb3079e6d638db4dcd21205cc22",
+            "localGitBlobSha": "6aa348164e094cb3079e6d638db4dcd21205cc22",
+            "localSha256": "a6cf133bf5d7bf99aad768e672e8fa4a5bfe3df5b44f5ef354b0268e20aa1f47",
+            "bytes": 931652,
+            "remoteBytes": 931652,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-portfolio-desktop.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "6cf2d86388402953897fc16f1ec44404eae895ad",
+            "localGitBlobSha": "6cf2d86388402953897fc16f1ec44404eae895ad",
+            "localSha256": "a129a847f965f79a12054e066c717a03a4cde2530815851b0b1a383d0f02c495",
+            "bytes": 857809,
+            "remoteBytes": 857809,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-portfolio-footer.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "bf975f61941c16bf1c8e66d9acced941c558cf09",
+            "localGitBlobSha": "bf975f61941c16bf1c8e66d9acced941c558cf09",
+            "localSha256": "cb59695f6ec2ed58c16a0b2912490691ad6b6593ba6bbea7ccbc7500d773c524",
+            "bytes": 56241,
+            "remoteBytes": 56241,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-portfolio-mobile.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "84c5f830e4b59af544840bff651936d466586e17",
+            "localGitBlobSha": "84c5f830e4b59af544840bff651936d466586e17",
+            "localSha256": "ebdb1c1a43e6525a943eea65ffa9c74d6c005511f3504066dd85b4c158eb4949",
+            "bytes": 718919,
+            "remoteBytes": 718919,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/screenshots/task007-portfolio-projects.png",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "ea278f60f9465f18de13233890357778cdf69399",
+            "localGitBlobSha": "ea278f60f9465f18de13233890357778cdf69399",
+            "localSha256": "00bdaffd222380144792b98731ace836ad08cea2d19752559ff46374108e1315",
+            "bytes": 170613,
+            "remoteBytes": 170613,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/services-implementation.md",
+            "status": "unchanged",
+            "baseBlobSha": "2458cab35efa367102b8961afc3daa3375da520b",
+            "remoteBlobSha": "2458cab35efa367102b8961afc3daa3375da520b",
+            "localGitBlobSha": "2458cab35efa367102b8961afc3daa3375da520b",
+            "localSha256": "851bc23b9b1ef8f2f251f4b24c1d4ce7a504dcca2751d8397475a3d2c026a384",
+            "bytes": 20267,
+            "remoteBytes": 20267,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/README.md",
+            "status": "unchanged",
+            "baseBlobSha": "051becf05e13b0ec36b00ca2ca6d4ed00bcce910",
+            "remoteBlobSha": "051becf05e13b0ec36b00ca2ca6d4ed00bcce910",
+            "localGitBlobSha": "051becf05e13b0ec36b00ca2ca6d4ed00bcce910",
+            "localSha256": "779c4eb292c37da1bb5326f1e6d24fe1d79cc811125eb6d49baa9051231a5f18",
+            "bytes": 20023,
+            "remoteBytes": 20023,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task001.md",
+            "status": "unchanged",
+            "baseBlobSha": "5031bf97a830991272aab9c7081afb75e9b777aa",
+            "remoteBlobSha": "5031bf97a830991272aab9c7081afb75e9b777aa",
+            "localGitBlobSha": "5031bf97a830991272aab9c7081afb75e9b777aa",
+            "localSha256": "6d8857670c53ad120a503d1a3620c3a24ab7cb665bf1acbf97390b2a0a6c17a4",
+            "bytes": 36681,
+            "remoteBytes": 36681,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task002.md",
+            "status": "unchanged",
+            "baseBlobSha": "0d926578ee593faf23bcbd02cc074b3982a9addb",
+            "remoteBlobSha": "0d926578ee593faf23bcbd02cc074b3982a9addb",
+            "localGitBlobSha": "0d926578ee593faf23bcbd02cc074b3982a9addb",
+            "localSha256": "9d640bd0320d19f7c944d4215861c8d1dd96313410fc6bef553a75093142e302",
+            "bytes": 34979,
+            "remoteBytes": 34979,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task003.md",
+            "status": "unchanged",
+            "baseBlobSha": "6f92af8cc6e46e12079be388ab80064b0f43a28f",
+            "remoteBlobSha": "6f92af8cc6e46e12079be388ab80064b0f43a28f",
+            "localGitBlobSha": "6f92af8cc6e46e12079be388ab80064b0f43a28f",
+            "localSha256": "f05ccbeaa6dbd79c307a24047df7d6c18a4523835a59fe7d334ed7c2bb40aca4",
+            "bytes": 52602,
+            "remoteBytes": 52602,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task004.md",
+            "status": "unchanged",
+            "baseBlobSha": "52808179ac2dabe6f4abb0567ee77cff9c60e0cb",
+            "remoteBlobSha": "52808179ac2dabe6f4abb0567ee77cff9c60e0cb",
+            "localGitBlobSha": "52808179ac2dabe6f4abb0567ee77cff9c60e0cb",
+            "localSha256": "1fc37126592cc2f9feb4837621a23e957ed53a6a59ad63b46806b6b95dcdca1c",
+            "bytes": 45380,
+            "remoteBytes": 45380,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task005.md",
+            "status": "unchanged",
+            "baseBlobSha": "385ed23dc1388a08046da668095f3e5b553cfd08",
+            "remoteBlobSha": "385ed23dc1388a08046da668095f3e5b553cfd08",
+            "localGitBlobSha": "385ed23dc1388a08046da668095f3e5b553cfd08",
+            "localSha256": "9fcfee957e02a41984d2d3fcf121a2cb73949831b0b59c6d1f1ed85e5cdaffcf",
+            "bytes": 44614,
+            "remoteBytes": 44614,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task006.md",
+            "status": "unchanged",
+            "baseBlobSha": "ba20423e9534b6985f796988bacb0787068110ba",
+            "remoteBlobSha": "ba20423e9534b6985f796988bacb0787068110ba",
+            "localGitBlobSha": "ba20423e9534b6985f796988bacb0787068110ba",
+            "localSha256": "db1faf396e12c49da105ba3802ce4b011c7c8d4af507fd5c41c55a9e57473859",
+            "bytes": 60237,
+            "remoteBytes": 60237,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task007.md",
+            "status": "unchanged",
+            "baseBlobSha": "49e9d5ea1260364bbc9649a8fd0476eb71852491",
+            "remoteBlobSha": "49e9d5ea1260364bbc9649a8fd0476eb71852491",
+            "localGitBlobSha": "49e9d5ea1260364bbc9649a8fd0476eb71852491",
+            "localSha256": "711fa62c0db4a14611f93ce4c3524c4af63cd215fcf3995edacc4baf77b0121c",
+            "bytes": 38584,
+            "remoteBytes": 38584,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task008.md",
+            "status": "unchanged",
+            "baseBlobSha": "a721bcb6761d047dc88ca659725d5765fb08f39b",
+            "remoteBlobSha": "a721bcb6761d047dc88ca659725d5765fb08f39b",
+            "localGitBlobSha": "a721bcb6761d047dc88ca659725d5765fb08f39b",
+            "localSha256": "aee191b78d26a7bc78c6dd4d5645ed2538411546f7f72c5231f8c612d208d9bf",
+            "bytes": 40564,
+            "remoteBytes": 40564,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task009.md",
+            "status": "unchanged",
+            "baseBlobSha": "3a2b68390fb97703d3bfa46b31decf6f536a4de0",
+            "remoteBlobSha": "3a2b68390fb97703d3bfa46b31decf6f536a4de0",
+            "localGitBlobSha": "3a2b68390fb97703d3bfa46b31decf6f536a4de0",
+            "localSha256": "73532d8a2a7e883451d9ac76a006cd5a38ec9d47b3a740ce97f32d197ba62fa7",
+            "bytes": 42773,
+            "remoteBytes": 42773,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task010.md",
+            "status": "unchanged",
+            "baseBlobSha": "b7b4519a53e561b57678251496a275d291af83f6",
+            "remoteBlobSha": "b7b4519a53e561b57678251496a275d291af83f6",
+            "localGitBlobSha": "b7b4519a53e561b57678251496a275d291af83f6",
+            "localSha256": "7bda8760f4b737e9b598d83ed2cb23364a3a725918eaef175a065cd5ed551911",
+            "bytes": 49663,
+            "remoteBytes": 49663,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task011.md",
+            "status": "unchanged",
+            "baseBlobSha": "58d85ebb00f7e6d89c3e3f2d3851f5876550f5cb",
+            "remoteBlobSha": "58d85ebb00f7e6d89c3e3f2d3851f5876550f5cb",
+            "localGitBlobSha": "58d85ebb00f7e6d89c3e3f2d3851f5876550f5cb",
+            "localSha256": "647affc37a60f3f779cb0def8a695ae1207f0f7be4f6e8c8535da0057e1018cb",
+            "bytes": 34292,
+            "remoteBytes": 34292,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task012.md",
+            "status": "unchanged",
+            "baseBlobSha": "e718d4b98f159f81537d75abf0ce2a59ecf61c3d",
+            "remoteBlobSha": "e718d4b98f159f81537d75abf0ce2a59ecf61c3d",
+            "localGitBlobSha": "e718d4b98f159f81537d75abf0ce2a59ecf61c3d",
+            "localSha256": "c44f3f643e602de85484821ac06d76fef961276183990719e5fea317ca9d5624",
+            "bytes": 34966,
+            "remoteBytes": 34966,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task013.md",
+            "status": "unchanged",
+            "baseBlobSha": "68ed9d600fe04f2b0e37360dba8967d66daced63",
+            "remoteBlobSha": "68ed9d600fe04f2b0e37360dba8967d66daced63",
+            "localGitBlobSha": "68ed9d600fe04f2b0e37360dba8967d66daced63",
+            "localSha256": "ce3b2968a59805d859e54bf53974db2d93e4d4f7c12d158b92f95e2faad5270c",
+            "bytes": 37159,
+            "remoteBytes": 37159,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/task014.md",
+            "status": "unchanged",
+            "baseBlobSha": "d28b0a3fa4d07d8df40a73217cf60873f3ce0ff0",
+            "remoteBlobSha": "d28b0a3fa4d07d8df40a73217cf60873f3ce0ff0",
+            "localGitBlobSha": "d28b0a3fa4d07d8df40a73217cf60873f3ce0ff0",
+            "localSha256": "aa6e1afb2ebd1f0a5bc1faf61c2590973984fe214bc8c924615042dda8c8c28b",
+            "bytes": 43351,
+            "remoteBytes": 43351,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "docs/task/temp.md",
+            "status": "unchanged",
+            "baseBlobSha": "46adeba2b7f39a16f1ac2ec964b2ed9cc434d1a2",
+            "remoteBlobSha": "46adeba2b7f39a16f1ac2ec964b2ed9cc434d1a2",
+            "localGitBlobSha": "46adeba2b7f39a16f1ac2ec964b2ed9cc434d1a2",
+            "localSha256": "e0cbaf99e1641c9d8b5a04191c34ae9ae8247e0666ee856317d84dcac3b12360",
+            "bytes": 14587,
+            "remoteBytes": 14587,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "eslint.config.mjs",
+            "status": "unchanged",
+            "baseBlobSha": "05e726d1b4201bc8c7716d2b058279676582e8c0",
+            "remoteBlobSha": "05e726d1b4201bc8c7716d2b058279676582e8c0",
+            "localGitBlobSha": "05e726d1b4201bc8c7716d2b058279676582e8c0",
+            "localSha256": "870f1adccecf3051cbcd9fd307cef51d7633cf510979c181a81f4b1797273493",
+            "bytes": 465,
+            "remoteBytes": 465,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "next.config.ts",
+            "status": "unchanged",
+            "baseBlobSha": "07606ad3f492dfb5b747e96ddb22144e54a45612",
+            "remoteBlobSha": "07606ad3f492dfb5b747e96ddb22144e54a45612",
+            "localGitBlobSha": "07606ad3f492dfb5b747e96ddb22144e54a45612",
+            "localSha256": "00abe2992e2a94a2e0f82c90f9677e7cf228dd626c6f63d2f808b57bb8f2c2a7",
+            "bytes": 514,
+            "remoteBytes": 514,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "package-lock.json",
+            "status": "unchanged",
+            "baseBlobSha": "984d16efadbf1eab160e324bca182b13ef17a9c4",
+            "remoteBlobSha": "984d16efadbf1eab160e324bca182b13ef17a9c4",
+            "localGitBlobSha": "984d16efadbf1eab160e324bca182b13ef17a9c4",
+            "localSha256": "1e87be771a0f19262494fbe8cad8eaa4735f67100289f02b38b3a79c6da42187",
+            "bytes": 383727,
+            "remoteBytes": 383727,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "package.json",
+            "status": "unchanged",
+            "baseBlobSha": "f72927013eabcd10c4a52fe99b8f77458b2f1568",
+            "remoteBlobSha": "f72927013eabcd10c4a52fe99b8f77458b2f1568",
+            "localGitBlobSha": "f72927013eabcd10c4a52fe99b8f77458b2f1568",
+            "localSha256": "4f87f2688bd136273ab297e0fc3a78b03f8f4c9324e3524a6034316cbd100be4",
+            "bytes": 875,
+            "remoteBytes": 875,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "public/brand/source/README.md",
+            "status": "unchanged",
+            "baseBlobSha": "f44788574325c90ea837a1202e905e934496c295",
+            "remoteBlobSha": "f44788574325c90ea837a1202e905e934496c295",
+            "localGitBlobSha": "f44788574325c90ea837a1202e905e934496c295",
+            "localSha256": "f49c47ee4f239c87d3f9b0fee4e7fbce52adff119431b366843c8d505139678a",
+            "bytes": 3148,
+            "remoteBytes": 3148,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "public/brand/source/xk-logo-horizontal.svg",
+            "status": "unchanged",
+            "baseBlobSha": "e1a52e7e30c943df03a5805d06754204fa4ce484",
+            "remoteBlobSha": "e1a52e7e30c943df03a5805d06754204fa4ce484",
+            "localGitBlobSha": "e1a52e7e30c943df03a5805d06754204fa4ce484",
+            "localSha256": "08b60bfba88d9598aaaf072bdb7b6e95658784598b8d132a4e3bcb2383446a5b",
+            "bytes": 5921,
+            "remoteBytes": 5921,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "public/brand/source/xk-logo-primary.svg",
+            "status": "unchanged",
+            "baseBlobSha": "bac5a304361d732222d0cee59e8e9d0a0ddf599d",
+            "remoteBlobSha": "bac5a304361d732222d0cee59e8e9d0a0ddf599d",
+            "localGitBlobSha": "bac5a304361d732222d0cee59e8e9d0a0ddf599d",
+            "localSha256": "ef827ae4c8a6e06a4bc3522bc3fa6a0ea531f740bde4331811e126b50ca168db",
+            "bytes": 5920,
+            "remoteBytes": 5920,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "public/brand/source/xk-logo-symbol.svg",
+            "status": "unchanged",
+            "baseBlobSha": "277fafce8fd03edcfc1bb9c34458318ddcd4ed22",
+            "remoteBlobSha": "277fafce8fd03edcfc1bb9c34458318ddcd4ed22",
+            "localGitBlobSha": "277fafce8fd03edcfc1bb9c34458318ddcd4ed22",
+            "localSha256": "b61e1a188bd5d043692780e058e24ad83ba6347dea3bdf3619b334ffae246119",
+            "bytes": 411,
+            "remoteBytes": 411,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "public/brand/source/xk-logo-white.svg",
+            "status": "unchanged",
+            "baseBlobSha": "5c633abff13f5c99e21d9d5b936b5205b36c7f24",
+            "remoteBlobSha": "5c633abff13f5c99e21d9d5b936b5205b36c7f24",
+            "localGitBlobSha": "5c633abff13f5c99e21d9d5b936b5205b36c7f24",
+            "localSha256": "3ef6fe4c3968992e1c18df2f05233f39ffebd9da26dd9be91e7be81c02087250",
+            "bytes": 5920,
+            "remoteBytes": 5920,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "public/icons/.gitkeep",
+            "status": "unchanged",
+            "baseBlobSha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+            "remoteBlobSha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+            "localGitBlobSha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+            "localSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0,
+            "remoteBytes": 0,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "public/images/.gitkeep",
+            "status": "unchanged",
+            "baseBlobSha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+            "remoteBlobSha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+            "localGitBlobSha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+            "localSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0,
+            "remoteBytes": 0,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "scripts/build-github-pages.mjs",
+            "status": "modified",
+            "baseBlobSha": "5d9157f7fd10300bdcb3883aebf9481f9dc9a266",
+            "remoteBlobSha": "42796ebae438048edcc1b87b9e8107b3479e1f1e",
+            "localGitBlobSha": "42796ebae438048edcc1b87b9e8107b3479e1f1e",
+            "localSha256": "484e548d01153486ac4aae534d4c9bbc02de3517fb5440312dadc1800912a47e",
+            "bytes": 10677,
+            "remoteBytes": 10677,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/about/page.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "5a2d789ba8fd678a971197dcca174e12502b6ed7",
+            "remoteBlobSha": "5a2d789ba8fd678a971197dcca174e12502b6ed7",
+            "localGitBlobSha": "5a2d789ba8fd678a971197dcca174e12502b6ed7",
+            "localSha256": "d8de485e998da93120ee9b5981cce6c8dc7571989c2d9ea8adee64bcb410aab0",
+            "bytes": 1521,
+            "remoteBytes": 1521,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/dev/design-system/page.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "476b8535744077be67f41ad0df8ef0401b87c915",
+            "remoteBlobSha": "476b8535744077be67f41ad0df8ef0401b87c915",
+            "localGitBlobSha": "476b8535744077be67f41ad0df8ef0401b87c915",
+            "localSha256": "4524563debbc08a4455760d18a42d9a33b7a2a8f88196affa7021890b95a8037",
+            "bytes": 16612,
+            "remoteBytes": 16612,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/globals.css",
+            "status": "unchanged",
+            "baseBlobSha": "b6aeee37d73b4766ca2e220c27a671903d7501ad",
+            "remoteBlobSha": "b6aeee37d73b4766ca2e220c27a671903d7501ad",
+            "localGitBlobSha": "b6aeee37d73b4766ca2e220c27a671903d7501ad",
+            "localSha256": "8c916ffc1850ba5e895d1d9274b0a81c8980de5cf2a507f44aeaa48c3a7039d5",
+            "bytes": 7612,
+            "remoteBytes": 7612,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/icon.svg",
+            "status": "unchanged",
+            "baseBlobSha": "277fafce8fd03edcfc1bb9c34458318ddcd4ed22",
+            "remoteBlobSha": "277fafce8fd03edcfc1bb9c34458318ddcd4ed22",
+            "localGitBlobSha": "277fafce8fd03edcfc1bb9c34458318ddcd4ed22",
+            "localSha256": "b61e1a188bd5d043692780e058e24ad83ba6347dea3bdf3619b334ffae246119",
+            "bytes": 411,
+            "remoteBytes": 411,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/layout.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "c97305e70015983ca3e41801b6bcb24ad222ec65",
+            "remoteBlobSha": "c97305e70015983ca3e41801b6bcb24ad222ec65",
+            "localGitBlobSha": "c97305e70015983ca3e41801b6bcb24ad222ec65",
+            "localSha256": "052608f396b7280ea3d0e9b958ca3157d1163a626ca4b19b5b346bef98e63f04",
+            "bytes": 1582,
+            "remoteBytes": 1582,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/page.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "37899949b823defe51390c4fa4d4a81e8d80fa32",
+            "remoteBlobSha": "37899949b823defe51390c4fa4d4a81e8d80fa32",
+            "localGitBlobSha": "37899949b823defe51390c4fa4d4a81e8d80fa32",
+            "localSha256": "4f95e2de61499fb2e9cf39afb2fdc8b0579bedc9c67bc9a8bc468e278e2de72f",
+            "bytes": 1367,
+            "remoteBytes": 1367,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/portfolio/[slug]/page.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "228903756ca2b234e1c4b2593c215b3d697975c4",
+            "localGitBlobSha": "228903756ca2b234e1c4b2593c215b3d697975c4",
+            "localSha256": "110dcdc2a0ce352e6a3f7c46658a5e87c3c401d935de6a9ec78156d271dd013c",
+            "bytes": 1395,
+            "remoteBytes": 1395,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/portfolio/page.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "df3be4247865b508fd1b09fe7f32a66a31abd958",
+            "localGitBlobSha": "df3be4247865b508fd1b09fe7f32a66a31abd958",
+            "localSha256": "8d932508f899e6deafb7a35158088bf24f3ef8ec3888a35eff9e7c7b2305eef3",
+            "bytes": 1390,
+            "remoteBytes": 1390,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/services/page.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "c1662b55ba8d37ce6196535578cbc24866cfe92b",
+            "remoteBlobSha": "c1662b55ba8d37ce6196535578cbc24866cfe92b",
+            "localGitBlobSha": "c1662b55ba8d37ce6196535578cbc24866cfe92b",
+            "localSha256": "99ab2851455d72d47e0f3568af29e3433fd8d02eabc5f8bed57e4232c737badb",
+            "bytes": 1794,
+            "remoteBytes": 1794,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/app/solutions/page.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "103efd1abb262bba9f454ae8216a49a2c1b2ef0f",
+            "remoteBlobSha": "103efd1abb262bba9f454ae8216a49a2c1b2ef0f",
+            "localGitBlobSha": "103efd1abb262bba9f454ae8216a49a2c1b2ef0f",
+            "localSha256": "be1c713f0e4d318a0982549842247de6946a285ea8107a3847649dd2d5d45d1d",
+            "bytes": 1770,
+            "remoteBytes": 1770,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/brand/brand-pattern.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "8610b44208b02f15eee40ee5e504165ac6220761",
+            "remoteBlobSha": "8610b44208b02f15eee40ee5e504165ac6220761",
+            "localGitBlobSha": "8610b44208b02f15eee40ee5e504165ac6220761",
+            "localSha256": "240173588bfcadb6760e6ef19984e6c96e148613871e85eaf516854f18b8226e",
+            "bytes": 641,
+            "remoteBytes": 641,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/brand/xk-logo-data.ts",
+            "status": "unchanged",
+            "baseBlobSha": "2742725beeeefdccd0a5ac0ea14cb3b18b793b8d",
+            "remoteBlobSha": "2742725beeeefdccd0a5ac0ea14cb3b18b793b8d",
+            "localGitBlobSha": "2742725beeeefdccd0a5ac0ea14cb3b18b793b8d",
+            "localSha256": "ca7520669c1fd128fae5f811ff768e7dd20970b8325b8de3f0f53bcd5db63e1c",
+            "bytes": 6280,
+            "remoteBytes": 6280,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/brand/xk-logo.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "c020b5d25f3b8d327939b1d5fcc253f391c745e7",
+            "remoteBlobSha": "c020b5d25f3b8d327939b1d5fcc253f391c745e7",
+            "localGitBlobSha": "c020b5d25f3b8d327939b1d5fcc253f391c745e7",
+            "localSha256": "f9cecdc00e3d2ab220ac2e54ee728d947edf02fbf93678d6bdf76a92f9063029",
+            "bytes": 2023,
+            "remoteBytes": 2023,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/dev/button-demo.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "1c338877c1d91d1e911646b260f6e7eb34df7503",
+            "remoteBlobSha": "1c338877c1d91d1e911646b260f6e7eb34df7503",
+            "localGitBlobSha": "1c338877c1d91d1e911646b260f6e7eb34df7503",
+            "localSha256": "6f58667b694acbbcf1cb4fe851400806c99598d4669018aff716959413bf65e8",
+            "bytes": 2919,
+            "remoteBytes": 2919,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/layout/container.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "5f2b5be4ba14eef2e84a083b16c0427b802aeb1b",
+            "remoteBlobSha": "5f2b5be4ba14eef2e84a083b16c0427b802aeb1b",
+            "localGitBlobSha": "5f2b5be4ba14eef2e84a083b16c0427b802aeb1b",
+            "localSha256": "9ce0e4e7aa911a82b5b37164a707dea687b989316c023d965c46fd42eee38bb1",
+            "bytes": 230,
+            "remoteBytes": 230,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/layout/mobile-navigation.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "9d30b1f190e072f96c0eddf29ab660d00fa76c0f",
+            "remoteBlobSha": "9d30b1f190e072f96c0eddf29ab660d00fa76c0f",
+            "localGitBlobSha": "9d30b1f190e072f96c0eddf29ab660d00fa76c0f",
+            "localSha256": "b390026e0e5877269003ab1eec9572bae110184ea0c129d59c256ee90cf3085a",
+            "bytes": 3169,
+            "remoteBytes": 3169,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/layout/section.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "d0c8b1cca839c6f86cf4f13c4d0df2f2d648a557",
+            "remoteBlobSha": "d0c8b1cca839c6f86cf4f13c4d0df2f2d648a557",
+            "localGitBlobSha": "d0c8b1cca839c6f86cf4f13c4d0df2f2d648a557",
+            "localSha256": "4b4b5bdb67808188eccb1a44dcdf3369c16b13e745cd127a2cb46da2031c7720",
+            "bytes": 735,
+            "remoteBytes": 735,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/layout/site-footer.tsx",
+            "status": "modified",
+            "baseBlobSha": "a53331186e69d20f8d962b79fc02fd6db2d6f315",
+            "remoteBlobSha": "d59ebc677a368c68dd261daac99d9c6dd6362acb",
+            "localGitBlobSha": "d59ebc677a368c68dd261daac99d9c6dd6362acb",
+            "localSha256": "af61530b731d684824094deaab6fd1142ddd993c3fce1a6bd9c68ee8e72d256e",
+            "bytes": 3135,
+            "remoteBytes": 3135,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/layout/site-header.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "df5add8951a14de0ffad4d3eac36db4d986e82c8",
+            "remoteBlobSha": "df5add8951a14de0ffad4d3eac36db4d986e82c8",
+            "localGitBlobSha": "df5add8951a14de0ffad4d3eac36db4d986e82c8",
+            "localSha256": "8404f3a693b404199e06e63e34e5e092042b9a20a7f3d525d6bfd8bb3ddc7f0a",
+            "bytes": 2011,
+            "remoteBytes": 2011,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/about/about-approach.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "216af81194bbd0dab7d15bab5c765a5414a9e49e",
+            "remoteBlobSha": "216af81194bbd0dab7d15bab5c765a5414a9e49e",
+            "localGitBlobSha": "216af81194bbd0dab7d15bab5c765a5414a9e49e",
+            "localSha256": "dd9a21ba937dc1ecde92397b333e7cdc6e1697dd38e4a1ff68e0f3bc99eac166",
+            "bytes": 1560,
+            "remoteBytes": 1560,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/about/about-capabilities.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "75e8724ed0a6107d1810e41454a8370c7026d1da",
+            "remoteBlobSha": "75e8724ed0a6107d1810e41454a8370c7026d1da",
+            "localGitBlobSha": "75e8724ed0a6107d1810e41454a8370c7026d1da",
+            "localSha256": "00110b011399d21ac05b2d2802f44e1e3ad4fde1b1b585e9ee043bdef5167e37",
+            "bytes": 2039,
+            "remoteBytes": 2039,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/about/about-commitment.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "b7c43080a1d16d35e28560e81e3ba73961ac9361",
+            "remoteBlobSha": "b7c43080a1d16d35e28560e81e3ba73961ac9361",
+            "localGitBlobSha": "b7c43080a1d16d35e28560e81e3ba73961ac9361",
+            "localSha256": "f662f91151f40f726801fd0789a84db51f9821d3fc176b2812d9f26cd5339a6f",
+            "bytes": 1526,
+            "remoteBytes": 1526,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/about/about-cta.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "74d8a4b0e932863786b036ce693c50d291ee86a7",
+            "remoteBlobSha": "74d8a4b0e932863786b036ce693c50d291ee86a7",
+            "localGitBlobSha": "74d8a4b0e932863786b036ce693c50d291ee86a7",
+            "localSha256": "5a7e6a99d1ed9d72574decc7520670b554c19bcbd9dfa4144a6eb94f4ed4400a",
+            "bytes": 1440,
+            "remoteBytes": 1440,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/about/about-founder.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "ec18b5427f2238d8a52c64451c8925bb2ef0e952",
+            "remoteBlobSha": "ec18b5427f2238d8a52c64451c8925bb2ef0e952",
+            "localGitBlobSha": "ec18b5427f2238d8a52c64451c8925bb2ef0e952",
+            "localSha256": "f4550f92215814f3501a2428b339518d549329829341271829f5c8c2526966e4",
+            "bytes": 2045,
+            "remoteBytes": 2045,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/about/about-hero.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "f13d31fc49f73c8e32dfa62f1f5099c9857f2fd0",
+            "remoteBlobSha": "f13d31fc49f73c8e32dfa62f1f5099c9857f2fd0",
+            "localGitBlobSha": "f13d31fc49f73c8e32dfa62f1f5099c9857f2fd0",
+            "localSha256": "cfcbfb4643abfac375de156e9cadda622ba6e532b091e3625ce6e6021add43d0",
+            "bytes": 2590,
+            "remoteBytes": 2590,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/about/about-mission-vision.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "032594e84ae466dbec63ee91e11cd71dd95a08e0",
+            "remoteBlobSha": "032594e84ae466dbec63ee91e11cd71dd95a08e0",
+            "localGitBlobSha": "032594e84ae466dbec63ee91e11cd71dd95a08e0",
+            "localSha256": "c9dbe269b2d10f6717e9ba05d97ecbfb7e450273323bdef4d2bad23945f67e6b",
+            "bytes": 2609,
+            "remoteBytes": 2609,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/about/about-who-we-are.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "ce964a1b17571c8f0c4ca57415bd9e7a61b93045",
+            "remoteBlobSha": "ce964a1b17571c8f0c4ca57415bd9e7a61b93045",
+            "localGitBlobSha": "ce964a1b17571c8f0c4ca57415bd9e7a61b93045",
+            "localSha256": "cc7987310caa5be1572e8f8c8786eb8ea7b342bb8d2c7d0c921ac17bb1f7a677",
+            "bytes": 1601,
+            "remoteBytes": 1601,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/home-contact-cta.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "b89a097bc8e24f09356a7db7faa7793c6491c416",
+            "remoteBlobSha": "b89a097bc8e24f09356a7db7faa7793c6491c416",
+            "localGitBlobSha": "b89a097bc8e24f09356a7db7faa7793c6491c416",
+            "localSha256": "0ddf542fb24791f774fad0b26cea824dbca021de503da6a215fc7ed709250a0d",
+            "bytes": 2412,
+            "remoteBytes": 2412,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/home-hero.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "3a4dabe94a6f274e0bd3ec0bf6b6b9115251d505",
+            "remoteBlobSha": "3a4dabe94a6f274e0bd3ec0bf6b6b9115251d505",
+            "localGitBlobSha": "3a4dabe94a6f274e0bd3ec0bf6b6b9115251d505",
+            "localSha256": "36dc12ff2deb4943d32f63e987a33dd4b656a5bc4d9c2e31da0698ed994edaba",
+            "bytes": 3543,
+            "remoteBytes": 3543,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/home-intro.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "44e822e26af9e256d00b846507f8dd27e4f6e161",
+            "remoteBlobSha": "44e822e26af9e256d00b846507f8dd27e4f6e161",
+            "localGitBlobSha": "44e822e26af9e256d00b846507f8dd27e4f6e161",
+            "localSha256": "007812c9e47258b5176d1b1743b651fcc615d64e04f2d184c92350ff569d3c0e",
+            "bytes": 172,
+            "remoteBytes": 172,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/home-introduction.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "f563bdef9290f79535ce16c6830504eae964ef06",
+            "remoteBlobSha": "f563bdef9290f79535ce16c6830504eae964ef06",
+            "localGitBlobSha": "f563bdef9290f79535ce16c6830504eae964ef06",
+            "localSha256": "4c2f85cb242aed0fdeecacac9137127dead524986d1587fdcbea70e3bcf30a43",
+            "bytes": 1187,
+            "remoteBytes": 1187,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/home-services.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "91020af9f9247791770c8613db9d27031237b304",
+            "remoteBlobSha": "91020af9f9247791770c8613db9d27031237b304",
+            "localGitBlobSha": "91020af9f9247791770c8613db9d27031237b304",
+            "localSha256": "be5af362260bd76f4fe528087983cd9a9b2baf1e3f43d05a3437e76746da8102",
+            "bytes": 2739,
+            "remoteBytes": 2739,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/home-solutions.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "4a12302e57800d5faad6648aa8a96b93b5a87c3b",
+            "remoteBlobSha": "4a12302e57800d5faad6648aa8a96b93b5a87c3b",
+            "localGitBlobSha": "4a12302e57800d5faad6648aa8a96b93b5a87c3b",
+            "localSha256": "48b3bb58c73bb6e7e11e3c71720d7b2143e91cba9e888c6046c003183cc3acc1",
+            "bytes": 2404,
+            "remoteBytes": 2404,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/home-technologies.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "bcd3051948b17f35405aaf8366c6ca0914ec2873",
+            "remoteBlobSha": "bcd3051948b17f35405aaf8366c6ca0914ec2873",
+            "localGitBlobSha": "bcd3051948b17f35405aaf8366c6ca0914ec2873",
+            "localSha256": "8fffe046affe4b6776013fd617efb2d49974eb891001d40e96b2f4751b2bc04a",
+            "bytes": 1815,
+            "remoteBytes": 1815,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/home-why-xk.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "dd145e3c5e9d7563731b63cf9cc3c6b581aff5f3",
+            "remoteBlobSha": "dd145e3c5e9d7563731b63cf9cc3c6b581aff5f3",
+            "localGitBlobSha": "dd145e3c5e9d7563731b63cf9cc3c6b581aff5f3",
+            "localSha256": "bd3a67a2bd62c95eb266b919c51c6bcc17ceee95d7b37f6064726ec67d010de7",
+            "bytes": 1529,
+            "remoteBytes": 1529,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-cta.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "595d3ca1103b76390adac80bbac84f0cd513f8a8",
+            "localGitBlobSha": "595d3ca1103b76390adac80bbac84f0cd513f8a8",
+            "localSha256": "8e16a2c695b88a14b7a6adbe5bf834af0d2d675ca7e389a38fd7c6933bda65cf",
+            "bytes": 1518,
+            "remoteBytes": 1518,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-hero.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "3113eb2e53fedb4d304cdea5f75a866d3431bc75",
+            "localGitBlobSha": "3113eb2e53fedb4d304cdea5f75a866d3431bc75",
+            "localSha256": "ab3fdbc75aef9491d48c5426aace10071e9fcbc720c5734124cb40abf8fbaeba",
+            "bytes": 2852,
+            "remoteBytes": 2852,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-introduction.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "de9064cdea2060721507471d45ce2e300464e2ea",
+            "localGitBlobSha": "de9064cdea2060721507471d45ce2e300464e2ea",
+            "localSha256": "e91632cb775be76fb66203aefafc2b4c841394619803bc841c7d2b6c9b162308",
+            "bytes": 749,
+            "remoteBytes": 749,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-projects.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "8090cec691de13b60b49b4552830188618fff411",
+            "localGitBlobSha": "8090cec691de13b60b49b4552830188618fff411",
+            "localSha256": "8aff430f7deae015f5fe37957fe25ebe8d42bf628ff898ac1711ab93378cd306",
+            "bytes": 900,
+            "remoteBytes": 900,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-technology.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "1da1e53653fa6d13aec70b0756c8e29f38dc8d9f",
+            "localGitBlobSha": "1da1e53653fa6d13aec70b0756c8e29f38dc8d9f",
+            "localSha256": "d4174584f430c078d927048273feee7f04e4e961ebcffd3ec2f7a075f8b0e011",
+            "bytes": 2545,
+            "remoteBytes": 2545,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/portfolio-transparency.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "8be44f71ebede3231817c1413c893b5ba3a6878b",
+            "localGitBlobSha": "8be44f71ebede3231817c1413c893b5ba3a6878b",
+            "localSha256": "34acf84e32b6fc1f03b1b12ead37f62297dcab4c071cdc1be566f173ea33163c",
+            "bytes": 1162,
+            "remoteBytes": 1162,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/project-card.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "c5e524374faf21f77a350c4796131738f5ea15a9",
+            "localGitBlobSha": "c5e524374faf21f77a350c4796131738f5ea15a9",
+            "localSha256": "08b70690368cd015e00100f6c4459ab773e53963d33c7c52fdc9760d86f0414b",
+            "bytes": 1919,
+            "remoteBytes": 1919,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/project-detail.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "1b04a85d7819775dacd65be5c95697b865446118",
+            "localGitBlobSha": "1b04a85d7819775dacd65be5c95697b865446118",
+            "localSha256": "a04bcd6ab2ec9c5465b9282636f904ef9bdab79f5615035d3f089345012ad7c1",
+            "bytes": 12016,
+            "remoteBytes": 12016,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/portfolio/project-labels.tsx",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "8344adae82f8d82e7a8efcbf5dc6364c4675cc85",
+            "localGitBlobSha": "8344adae82f8d82e7a8efcbf5dc6364c4675cc85",
+            "localSha256": "782ac79911444633912a21a4d7aa12fe3b77cf408ad256f7ce7dc6e6c8c2b0b6",
+            "bytes": 1446,
+            "remoteBytes": 1446,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/section-heading.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "fa4d19ad7f241a5b86490ceece57c1182c0f34e0",
+            "remoteBlobSha": "fa4d19ad7f241a5b86490ceece57c1182c0f34e0",
+            "localGitBlobSha": "fa4d19ad7f241a5b86490ceece57c1182c0f34e0",
+            "localSha256": "812ce03eb56d2662e6777559432452459742420878acfd0d30e5f69d41df3b0e",
+            "bytes": 743,
+            "remoteBytes": 743,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/services/service-ai.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "3f60003e82d089a8880e9f33dd0de2b05bb7d19b",
+            "remoteBlobSha": "3f60003e82d089a8880e9f33dd0de2b05bb7d19b",
+            "localGitBlobSha": "3f60003e82d089a8880e9f33dd0de2b05bb7d19b",
+            "localSha256": "079ad0d7f8133d2e5939c39955a4c2abdd7d32052ae99bea99f4ef1872e8978c",
+            "bytes": 247,
+            "remoteBytes": 247,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/services/service-cloud.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "434c0299f3a9d6606eb332f49c1767018717b571",
+            "remoteBlobSha": "434c0299f3a9d6606eb332f49c1767018717b571",
+            "localGitBlobSha": "434c0299f3a9d6606eb332f49c1767018717b571",
+            "localSha256": "4cc032ebd6a9762101ee39a429c7cde8b4cf3b740e313c3b31108541cf24fe48",
+            "bytes": 229,
+            "remoteBytes": 229,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/services/service-detail.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "6a05d66051ddc6d719ef5210fc11a1f3451a8283",
+            "remoteBlobSha": "6a05d66051ddc6d719ef5210fc11a1f3451a8283",
+            "localGitBlobSha": "6a05d66051ddc6d719ef5210fc11a1f3451a8283",
+            "localSha256": "e370f30f46de2a04b2b3a769a8cdb623e64ef55a95e6409a0f762f54ad2a9691",
+            "bytes": 3172,
+            "remoteBytes": 3172,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/services/service-integration.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "dfcb82ec89e9133244e824ed14a13d0d2b2b1718",
+            "remoteBlobSha": "dfcb82ec89e9133244e824ed14a13d0d2b2b1718",
+            "localGitBlobSha": "dfcb82ec89e9133244e824ed14a13d0d2b2b1718",
+            "localSha256": "f9fd89cb4da4d9f9fc98dac53bb7f2aee29d75644931b280e7be2a965af87ad4",
+            "bytes": 235,
+            "remoteBytes": 235,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/services/service-java.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "98e97f9e5786d888bc58ea2e100cbd9039db6ce4",
+            "remoteBlobSha": "98e97f9e5786d888bc58ea2e100cbd9039db6ce4",
+            "localGitBlobSha": "98e97f9e5786d888bc58ea2e100cbd9039db6ce4",
+            "localSha256": "9d3275c82e6aa53cb5f807730573b7a141857f4c6a610e31797bf30c3a4ba4aa",
+            "bytes": 249,
+            "remoteBytes": 249,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/services/service-website.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "f84eb57432382075e1aa20cec331ae5e991fed15",
+            "remoteBlobSha": "f84eb57432382075e1aa20cec331ae5e991fed15",
+            "localGitBlobSha": "f84eb57432382075e1aa20cec331ae5e991fed15",
+            "localSha256": "6ba7cf55b9925692ea098a2de2a08f6863569ec790a53ecfb206b52478138843",
+            "bytes": 231,
+            "remoteBytes": 231,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/services/services-cta.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "2327a25426ad7f4669db89e212abb976b83923f6",
+            "remoteBlobSha": "2327a25426ad7f4669db89e212abb976b83923f6",
+            "localGitBlobSha": "2327a25426ad7f4669db89e212abb976b83923f6",
+            "localSha256": "eac0a39e49d4943432c3f7f7e408c4d020d2539313507b2a2928cf605039489e",
+            "bytes": 1417,
+            "remoteBytes": 1417,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/services/services-hero.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "f3b11bbfc4dcc65f8cc6579af6edc1dddf54381d",
+            "remoteBlobSha": "f3b11bbfc4dcc65f8cc6579af6edc1dddf54381d",
+            "localGitBlobSha": "f3b11bbfc4dcc65f8cc6579af6edc1dddf54381d",
+            "localSha256": "993f32776d238cbd740fe903fb57618bf3279f056467a92bc47f4a7b3ab288c5",
+            "bytes": 2796,
+            "remoteBytes": 2796,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/services/services-integration.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "7f44392a3c277ac45ac796a9f17ecdeac666d28b",
+            "remoteBlobSha": "7f44392a3c277ac45ac796a9f17ecdeac666d28b",
+            "localGitBlobSha": "7f44392a3c277ac45ac796a9f17ecdeac666d28b",
+            "localSha256": "9d8bece93655eb2e4a54ca8ccbb829484bfd21453b1cb233ad0f0b3e9461c9b2",
+            "bytes": 2339,
+            "remoteBytes": 2339,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/services/services-overview.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "1952cbbdb2cae40d8c6844e123761c97b10081e0",
+            "remoteBlobSha": "1952cbbdb2cae40d8c6844e123761c97b10081e0",
+            "localGitBlobSha": "1952cbbdb2cae40d8c6844e123761c97b10081e0",
+            "localSha256": "829d3929a18ae63dcfdc094f722ec80c8fc8b69d80e1699a7e35e62f8f203ed3",
+            "bytes": 1814,
+            "remoteBytes": 1814,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/services/services-process.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "b8e97a210cb9cba038853691290588401f7fa526",
+            "remoteBlobSha": "b8e97a210cb9cba038853691290588401f7fa526",
+            "localGitBlobSha": "b8e97a210cb9cba038853691290588401f7fa526",
+            "localSha256": "7efd47cfcdd3893b32f7c4ffb4364a38be31a3e2ef5644016962db689ef5acce",
+            "bytes": 1413,
+            "remoteBytes": 1413,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/solutions/solution-detail.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "4b789e8a761bb5696c4c519887216969f7bd71d8",
+            "remoteBlobSha": "4b789e8a761bb5696c4c519887216969f7bd71d8",
+            "localGitBlobSha": "4b789e8a761bb5696c4c519887216969f7bd71d8",
+            "localSha256": "c5f287de37877d4ab304642dba71a1d3ff3edcc6dfd2436908cdd0522ccbfb5a",
+            "bytes": 4949,
+            "remoteBytes": 4949,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/solutions/solution-service-links.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "12ed3531f98a1a8b6fff6663913d14f5b06fc922",
+            "remoteBlobSha": "12ed3531f98a1a8b6fff6663913d14f5b06fc922",
+            "localGitBlobSha": "12ed3531f98a1a8b6fff6663913d14f5b06fc922",
+            "localSha256": "5e9b564ca05497168021bbc57ab47b0fc214e65098691198aa5dd0bc384cd491",
+            "bytes": 1349,
+            "remoteBytes": 1349,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-approach.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "fad89d5766d209b336dff6ccb0a2a5aba1fc12c8",
+            "remoteBlobSha": "fad89d5766d209b336dff6ccb0a2a5aba1fc12c8",
+            "localGitBlobSha": "fad89d5766d209b336dff6ccb0a2a5aba1fc12c8",
+            "localSha256": "04b52078222da51c388b10b1216e7474562aff212b7dfd24f5079536b9e38553",
+            "bytes": 1612,
+            "remoteBytes": 1612,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-challenges.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "f681fef595da6ce6c6ffda03c8132bfdaeed707f",
+            "remoteBlobSha": "f681fef595da6ce6c6ffda03c8132bfdaeed707f",
+            "localGitBlobSha": "f681fef595da6ce6c6ffda03c8132bfdaeed707f",
+            "localSha256": "94a0b989afb2e2e2c8283deb8ac15d1d85c6a59b40043aabf107a40b69fb3dcc",
+            "bytes": 2139,
+            "remoteBytes": 2139,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-combinations.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "d4e71af241ff3909e27181a782647f24ddad17dd",
+            "remoteBlobSha": "d4e71af241ff3909e27181a782647f24ddad17dd",
+            "localGitBlobSha": "d4e71af241ff3909e27181a782647f24ddad17dd",
+            "localSha256": "975066131688371f29498e1b78d42083afb6a4081d70daa2ea3ce22fb1b8da15",
+            "bytes": 3018,
+            "remoteBytes": 3018,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-cta.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "756152f43a0fc34d550db6cc2a1b0c9d756f6844",
+            "remoteBlobSha": "756152f43a0fc34d550db6cc2a1b0c9d756f6844",
+            "localGitBlobSha": "756152f43a0fc34d550db6cc2a1b0c9d756f6844",
+            "localSha256": "ba27982f18239cff0860aed1c1c3425b6452f8055951cb7637efc6a386f6a68d",
+            "bytes": 2028,
+            "remoteBytes": 2028,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-details.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "c4340cf42c22493bb571e753b784630929bf7e96",
+            "remoteBlobSha": "c4340cf42c22493bb571e753b784630929bf7e96",
+            "localGitBlobSha": "c4340cf42c22493bb571e753b784630929bf7e96",
+            "localSha256": "458c04dcd96c1ac66545b75d19df2575bfa0dc11941b4defb7e89c2ef2306b5e",
+            "bytes": 886,
+            "remoteBytes": 886,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-hero.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "be66e0b7b98feb77d06d83485b4da03f9395eff2",
+            "remoteBlobSha": "be66e0b7b98feb77d06d83485b4da03f9395eff2",
+            "localGitBlobSha": "be66e0b7b98feb77d06d83485b4da03f9395eff2",
+            "localSha256": "27d42d16c4ea745dd38230eba46668308f723979e893741d39eb26568794f495",
+            "bytes": 3133,
+            "remoteBytes": 3133,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-overview.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "5ace45ef2fdb3600fb5a874fa5352b485be466f6",
+            "remoteBlobSha": "5ace45ef2fdb3600fb5a874fa5352b485be466f6",
+            "localGitBlobSha": "5ace45ef2fdb3600fb5a874fa5352b485be466f6",
+            "localSha256": "128821c13707410992f19341c049216991e9c2ce820928831083008edbe313fe",
+            "bytes": 1920,
+            "remoteBytes": 1920,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-technology.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "43770c1b2ea8df88206838349ef2e862c688fc00",
+            "remoteBlobSha": "43770c1b2ea8df88206838349ef2e862c688fc00",
+            "localGitBlobSha": "43770c1b2ea8df88206838349ef2e862c688fc00",
+            "localSha256": "fa01c25cc1be9455ea9cd59e79dcffd739bf995ff651be49fb5fd49702c97bf3",
+            "bytes": 3656,
+            "remoteBytes": 3656,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/sections/solutions/solutions-value.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "a30adf0c9a25d74c60ae52acef00ef29a7326495",
+            "remoteBlobSha": "a30adf0c9a25d74c60ae52acef00ef29a7326495",
+            "localGitBlobSha": "a30adf0c9a25d74c60ae52acef00ef29a7326495",
+            "localSha256": "87954a80ed13124097cb3e7e2068c8f8f2814ba5e82394f2d8cad2100dfeb66b",
+            "bytes": 1806,
+            "remoteBytes": 1806,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/ui/button.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "bfa51b83f3a32d1406a57ee86f202c31d4b30af9",
+            "remoteBlobSha": "bfa51b83f3a32d1406a57ee86f202c31d4b30af9",
+            "localGitBlobSha": "bfa51b83f3a32d1406a57ee86f202c31d4b30af9",
+            "localSha256": "289bb592fc7a8c4a71533e04466e436f892cb8e49dca87db0cf93c8fd9924991",
+            "bytes": 2693,
+            "remoteBytes": 2693,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/components/ui/card.tsx",
+            "status": "unchanged",
+            "baseBlobSha": "0e159e0cba3c871bd0efc0c620eb5117f485d939",
+            "remoteBlobSha": "0e159e0cba3c871bd0efc0c620eb5117f485d939",
+            "localGitBlobSha": "0e159e0cba3c871bd0efc0c620eb5117f485d939",
+            "localSha256": "406f83196e508dfd5a09178edd589e80d4bdbc7e8bfdb8e47e3b0d6e801b427b",
+            "bytes": 2850,
+            "remoteBytes": 2850,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/config/about.ts",
+            "status": "unchanged",
+            "baseBlobSha": "ddfeb61b9e2684b7136df1240bea9bf4c82d46b8",
+            "remoteBlobSha": "ddfeb61b9e2684b7136df1240bea9bf4c82d46b8",
+            "localGitBlobSha": "ddfeb61b9e2684b7136df1240bea9bf4c82d46b8",
+            "localSha256": "643ed5b5245a2f47ce9257fbc87c4a4f8c9a3a5b94f358536ebd28b9d803efce",
+            "bytes": 5156,
+            "remoteBytes": 5156,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/config/contact.ts",
+            "status": "unchanged",
+            "baseBlobSha": "121ba6506ba5420c6d699e6ef8e67725f7188f92",
+            "remoteBlobSha": "121ba6506ba5420c6d699e6ef8e67725f7188f92",
+            "localGitBlobSha": "121ba6506ba5420c6d699e6ef8e67725f7188f92",
+            "localSha256": "e4631f45c93f23906ea5e5084e90fc71726e162796dae50bf77c95c704df1254",
+            "bytes": 253,
+            "remoteBytes": 253,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/config/homepage.ts",
+            "status": "unchanged",
+            "baseBlobSha": "636f1908e683a897b393482eef484832a5240a01",
+            "remoteBlobSha": "636f1908e683a897b393482eef484832a5240a01",
+            "localGitBlobSha": "636f1908e683a897b393482eef484832a5240a01",
+            "localSha256": "499f50b59acfca06f23e758aef4645bb2cc31f544a920a55d7d5b4a9201cb883",
+            "bytes": 4651,
+            "remoteBytes": 4651,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/config/navigation.ts",
+            "status": "modified",
+            "baseBlobSha": "e1c44e9857e858968077e513fa130e0db0cab77a",
+            "remoteBlobSha": "f3a1760f3ae86bf4bc07cd94bb3303660fe356cc",
+            "localGitBlobSha": "f3a1760f3ae86bf4bc07cd94bb3303660fe356cc",
+            "localSha256": "b79331d2ad402ce939c703bc73d78ed0096fdfe1c796873ee29c7a6080368cef",
+            "bytes": 1477,
+            "remoteBytes": 1477,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/config/portfolio.ts",
+            "status": "added",
+            "baseBlobSha": null,
+            "remoteBlobSha": "2a7dbd38a27907d4881ec7b27755714245e63d5a",
+            "localGitBlobSha": "2a7dbd38a27907d4881ec7b27755714245e63d5a",
+            "localSha256": "718505388bed4c6889e5fc983dea9ef253214f9b2aaf41bc142dc32124673adf",
+            "bytes": 24639,
+            "remoteBytes": 24639,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/config/services.ts",
+            "status": "unchanged",
+            "baseBlobSha": "a38450ed4d1112c81ca383f1dc4dade1d368c7f1",
+            "remoteBlobSha": "a38450ed4d1112c81ca383f1dc4dade1d368c7f1",
+            "localGitBlobSha": "a38450ed4d1112c81ca383f1dc4dade1d368c7f1",
+            "localSha256": "b4f278860c51ec6c1f64a653862b08840662027d61b48db9e482013f253c089b",
+            "bytes": 8132,
+            "remoteBytes": 8132,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/config/site.ts",
+            "status": "unchanged",
+            "baseBlobSha": "6653507e18de1d78f8e4c1aca058d666d654f704",
+            "remoteBlobSha": "6653507e18de1d78f8e4c1aca058d666d654f704",
+            "localGitBlobSha": "6653507e18de1d78f8e4c1aca058d666d654f704",
+            "localSha256": "fb67e889a93db76139014c77acdfecf22095fa2b7479441c99f3704b1085597f",
+            "bytes": 448,
+            "remoteBytes": 448,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/config/solutions.ts",
+            "status": "unchanged",
+            "baseBlobSha": "09262325298e294064b7434030cfb169e76963ff",
+            "remoteBlobSha": "09262325298e294064b7434030cfb169e76963ff",
+            "localGitBlobSha": "09262325298e294064b7434030cfb169e76963ff",
+            "localSha256": "01bd058bdf294b3a5f7f20b508a0b923e4191851fcf8d02ef47e33c6bc5e0c07",
+            "bytes": 28969,
+            "remoteBytes": 28969,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "src/lib/utils.ts",
+            "status": "unchanged",
+            "baseBlobSha": "fe0d16987935134462183adc79bc673e421b8df4",
+            "remoteBlobSha": "fe0d16987935134462183adc79bc673e421b8df4",
+            "localGitBlobSha": "fe0d16987935134462183adc79bc673e421b8df4",
+            "localSha256": "55bbdc94cef3e0c8a8bba386e94f97228dd2c967fe61466fc565378890550c08",
+            "bytes": 25,
+            "remoteBytes": 25,
+            "mode": "100644",
+            "matchesRemote": true
+          },
+          {
+            "path": "tsconfig.json",
+            "status": "unchanged",
+            "baseBlobSha": "ab660ca45552c25ad6be4ed9535f1930da8eab56",
+            "remoteBlobSha": "ab660ca45552c25ad6be4ed9535f1930da8eab56",
+            "localGitBlobSha": "ab660ca45552c25ad6be4ed9535f1930da8eab56",
+            "localSha256": "2c5a14cbc7c6252c2213f9ca6fffb3611097a8aa2a85f8363976830d4b6b5fe3",
+            "bytes": 755,
+            "remoteBytes": 755,
+            "mode": "100644",
+            "matchesRemote": true
+          }
+        ],
+        "protectedBlobCount": 31,
+        "protectedChangedPaths": [],
+        "protectedPaths": [
+          ".github/workflows/ci.yml",
+          "components.json",
+          "docs/task/README.md",
+          "docs/task/task001.md",
+          "docs/task/task002.md",
+          "docs/task/task003.md",
+          "docs/task/task004.md",
+          "docs/task/task005.md",
+          "docs/task/task006.md",
+          "docs/task/task007.md",
+          "docs/task/task008.md",
+          "docs/task/task009.md",
+          "docs/task/task010.md",
+          "docs/task/task011.md",
+          "docs/task/task012.md",
+          "docs/task/task013.md",
+          "docs/task/task014.md",
+          "docs/task/temp.md",
+          "eslint.config.mjs",
+          "next.config.ts",
+          "package-lock.json",
+          "package.json",
+          "public/brand/source/README.md",
+          "public/brand/source/xk-logo-horizontal.svg",
+          "public/brand/source/xk-logo-primary.svg",
+          "public/brand/source/xk-logo-symbol.svg",
+          "public/brand/source/xk-logo-white.svg",
+          "src/app/globals.css",
+          "src/app/icon.svg",
+          "src/app/layout.tsx",
+          "tsconfig.json"
+        ],
+        "forbiddenChangedPaths": [],
+        "secretPatternHits": [],
+        "secretScanScope": "All28 changed file bytes; gzip fully decompressed before pattern scan; only pattern names/paths recorded, no matching values. Pattern scan supplements full prior independent source/report review.",
+        "githubFormalReview": "Not submitted; independent audit is not APPROVED",
+        "limitations": [
+          "Cryptographic remote Blob identity checked through GitHub tree; binary content was not redundantly downloaded.",
+          "No application tests rerun; same exact audited/tested bytes fixed by remote tree identity.",
+          "A conventional secret-pattern scan cannot prove absence of every possible secret; no suspicious credentials or unrelated files were found in the complete prior review."
+        ]
+      },
+      "reportAudit": {
+        "task": "Task 007 Portfolio final report independent audit",
+        "auditedAt": "2026-11-19T00:50:51.814886+00:00",
+        "reviewer": "docs_review with independent artifact/link cross-check by early_sources",
+        "status": "PASS",
+        "blockingFindings": [],
+        "requiredChanges": [],
+        "testedCodeFingerprint": "3e166b2e7502e4ac3b38b651960f4d11b2f310ffd37583c9bd1e920c2b0cfd13",
+        "scope": [
+          "Full task007-implementation.md",
+          "README.md and AGENTS.md current changes",
+          "Appended Task 007 implementation notes",
+          "task007-verification.json",
+          "task007-evidence.json.gz",
+          "Seven repository PNGs and22 actual-review image references"
+        ],
+        "verified": {
+          "qualityActualExitCodes": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "formalActualExitCodes": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "finalGeneral": {
+            "PASS": 23,
+            "FAIL": 0,
+            "tests": 23
+          },
+          "finalPages": {
+            "PASS": 121,
+            "N/A": 2,
+            "FAIL": 0,
+            "tests": 123,
+            "responsiveCases": 40,
+            "axeCases": 43,
+            "violations": 0,
+            "observedAssetsIndependentGet200": 123,
+            "unexpectedErrors": 0
+          },
+          "headProofSummary": {
+            "count": 451,
+            "sameWatchAndDocumentLoader": 451,
+            "uniqueTreePairings": 451,
+            "fulfilledHead200": 451,
+            "cdp200": 451,
+            "treeGet200": 451,
+            "independentHeadAndGet200": 451
+          },
+          "preservedFailureBoundary": "Original general favicon GET failure remains FAIL with cause unconfirmed. Original Pages3GET+1HEAD failure remains FAIL; canceledGET completion is not claimed and first cross-document greedy HEAD pairing is not reused as valid evidence.",
+          "stateAndRights": "All3projects remain demonstration/PLANNED with empty implementedFeatures,implementedTechnologies,media and null source/Live links; website test success does not upgrade project status.",
+          "notApplicable": [
+            "A04 actual four-route DOM has no disabled/form controls",
+            "M02 no Completed/Live adopted",
+            "X01 no project backend/system implementation within scope"
+          ],
+          "optional": "O01/O02 remain PENDING with actual not-run scope/limitations.",
+          "remote": "PENDING pre-PR snapshot; no invented new commit/PR/CI/merge/deployment claims and no formal GitHub approval claim.",
+          "reportInventory": {
+            "uniqueExistingPaths": 28,
+            "matchesRootCurrentChangeInventory": true
+          },
+          "relativeLinks": {
+            "exists": 29,
+            "broken": 0
+          },
+          "archive": {
+            "sha256": "d3763d1636028e08286725ea06fe77650de013ad8b680ab03908b6919e71aca2",
+            "rawFileHashesVerified": 100,
+            "rawFileOriginalBytesMatched": 100,
+            "fullAxeJSONs": 86
+          },
+          "screenshots": {
+            "rootAndIndependentActualReviewReferencesFinalBytesMatch": 22,
+            "publishedSevenFinalBytesMatch": 7,
+            "publishedPNGSizesAndSHAReportMatch": true
+          },
+          "qualityLogsMatchOriginalFiles": true,
+          "formalExecutionRecordMatchesOriginal": true,
+          "currentAppFingerprintMatches": true
+        },
+        "limitations": [
+          "No application checks/build/server/Git/network mutations performed by reviewer.",
+          "The28file inventory was compared with root supplied document-checks.json and actual files; reviewer did not independently perform Git tree diff in this read-only no-Git assignment.",
+          "Browser executions are authors actual fresh evidence; audit checks their records and image bytes rather than rerunning the application suite.",
+          "Human-like image views and automated axe do not constitute full screen-reader or all-platform WCAG certification."
+        ],
+        "reviewedFileHashes": {
+          "docs/reports/task007-implementation.md": "b6c91cc7b02c9d5ffd577a01dd5274bf4bdcfbf8ece14a31ae7a36dd1c552c15",
+          "docs/reports/task007-verification.json": "8fa773a15dc5a8b7f9a285ebdd9f7e70530fbcdd0a595e2dced60a7717397c65",
+          "docs/reports/task007-evidence.json.gz": "d3763d1636028e08286725ea06fe77650de013ad8b680ab03908b6919e71aca2",
+          "README.md": "745a5bd50c845c9d60f783335be4c929c23e638394807e629fc20f23ed6de117",
+          "AGENTS.md": "120c1ad2b8b21ac9f89ecaa30e1faedf9f6a3e5259e267ab0baa64c8b5492fc2",
+          "docs/implementation-notes.md": "79cead0f33ad753400fb9a42c2a14c282203706f20d1a97ddeaaeb1c14d27bf9"
+        }
+      }
+    },
+    "githubFormalReviews": {
+      "startedAt": "2026-11-19T00:53:18.930369+00:00",
+      "reviews": [],
+      "inlineComments": [],
+      "finishedAt": "2026-11-19T00:53:19.737797+00:00"
+    },
+    "documentChecks": {
+      "checkedAt": "2026-11-19T00:48:56.661426+00:00",
+      "relativeLinks": 29,
+      "linkTargets": [
+        {
+          "from": "README.md",
+          "target": "docs/task/README.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/github-pages-deployment.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/task/task001.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/task/task002.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/brand-design-system.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/implementation-notes.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/task/task003.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/homepage-implementation.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/github-pages-deployment.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/task/task004.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/about-implementation.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/task/task002.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/task/task005.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/services-implementation.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/task/task006.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/reports/task006-implementation.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/task/task007.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/reports/task007-implementation.md"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/reports/task007-verification.json"
+        },
+        {
+          "from": "README.md",
+          "target": "docs/reports/task007-evidence.json.gz"
+        },
+        {
+          "from": "docs/reports/task007-implementation.md",
+          "target": "../screenshots/task007-portfolio-desktop.png"
+        },
+        {
+          "from": "docs/reports/task007-implementation.md",
+          "target": "../screenshots/task007-portfolio-mobile.png"
+        },
+        {
+          "from": "docs/reports/task007-implementation.md",
+          "target": "../screenshots/task007-portfolio-projects.png"
+        },
+        {
+          "from": "docs/reports/task007-implementation.md",
+          "target": "../screenshots/task007-corporate-website-detail.png"
+        },
+        {
+          "from": "docs/reports/task007-implementation.md",
+          "target": "../screenshots/task007-enterprise-management-detail.png"
+        },
+        {
+          "from": "docs/reports/task007-implementation.md",
+          "target": "../screenshots/task007-integration-hub-detail.png"
+        },
+        {
+          "from": "docs/reports/task007-implementation.md",
+          "target": "../screenshots/task007-portfolio-footer.png"
+        },
+        {
+          "from": "docs/reports/task007-implementation.md",
+          "target": "task007-verification.json"
+        },
+        {
+          "from": "docs/reports/task007-implementation.md",
+          "target": "task007-evidence.json.gz"
+        }
+      ],
+      "historicalNotesPrefixUnchanged": true,
+      "generatedNextRulesUnchanged": true,
+      "testedCodeUnchanged": true,
+      "actualChangedFiles": [
+        "AGENTS.md",
+        "README.md",
+        "docs/implementation-notes.md",
+        "docs/reports/task007-evidence.json.gz",
+        "docs/reports/task007-implementation.md",
+        "docs/reports/task007-verification.json",
+        "docs/screenshots/task007-corporate-website-detail.png",
+        "docs/screenshots/task007-enterprise-management-detail.png",
+        "docs/screenshots/task007-integration-hub-detail.png",
+        "docs/screenshots/task007-portfolio-desktop.png",
+        "docs/screenshots/task007-portfolio-footer.png",
+        "docs/screenshots/task007-portfolio-mobile.png",
+        "docs/screenshots/task007-portfolio-projects.png",
+        "scripts/build-github-pages.mjs",
+        "src/app/portfolio/[slug]/page.tsx",
+        "src/app/portfolio/page.tsx",
+        "src/components/layout/site-footer.tsx",
+        "src/components/sections/portfolio/portfolio-cta.tsx",
+        "src/components/sections/portfolio/portfolio-hero.tsx",
+        "src/components/sections/portfolio/portfolio-introduction.tsx",
+        "src/components/sections/portfolio/portfolio-projects.tsx",
+        "src/components/sections/portfolio/portfolio-technology.tsx",
+        "src/components/sections/portfolio/portfolio-transparency.tsx",
+        "src/components/sections/portfolio/project-card.tsx",
+        "src/components/sections/portfolio/project-detail.tsx",
+        "src/components/sections/portfolio/project-labels.tsx",
+        "src/config/navigation.ts",
+        "src/config/portfolio.ts"
+      ],
+      "reportFileInventoryMatches": true
+    },
+    "secretScan": {
+      "checkedAt": "2026-11-19T00:48:57.136318+00:00",
+      "status": "PASS",
+      "scope": "New config/report/summary and full decompressed original JSON archive",
+      "result": "No credential/private-key/signed-URL patterns matched; no sensitive values printed."
+    },
+    "authorization": "Current user explicitly authorized Task 007 execution, verification, push and merge.",
+    "codeFingerprintRechecked": "3e166b2e7502e4ac3b38b651960f4d11b2f310ffd37583c9bd1e920c2b0cfd13",
+    "subsequentStages": {
+      "documentationHeadCI": "PENDING",
+      "finalHeadArtifact": "PENDING",
+      "merge": "PENDING",
+      "mainCI": "PENDING",
+      "deployment": "PENDING",
+      "publicURLVerification": "PENDING"
+    },
+    "latestDeliveryRecord": "https://github.com/xk2022/xk-website/pull/11",
+    "note": "One docs-only supplement records actual A Commit/PR/CI/artifact after events. No application or original evidence archive change. Later exact final head/main/merge/deployment/live events are recorded in the linked PR after actual execution."
   },
   "optionalChecks": [
     {
