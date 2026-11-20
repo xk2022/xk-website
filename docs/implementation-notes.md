@@ -352,3 +352,13 @@ robots 允許讀取 public HTML 的 noindex，依 Base Path 排除 dev 與 draft
 main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Markdown 的 118 個 href，保留正文／標題／舊驗收紀錄。已刪除的 alternate originals 仍有 14 個歷史連結缺口，保留固定版本參考並列限制，不復原使用者移除的檔案；`docs/reports/implementation-notes.md` 是舊前綴快照，沒有覆蓋根目錄完整歷史。
 
 報告與原始證據從 Tailwind 掃描明確排除。後續 exact-head PR CI／artifact、使用者授權合併、main CI／Pages 部署與公開網址驗證以同一 PR 的實際紀錄更新，不做記錄自身 SHA 的循環提交，也不把 PR CI 或 artifact 產生當成正式部署成功。
+
+## 品牌文案調整 — 2026-11-20
+
+品牌負責人要求移除或優化容易造成「只有一人團隊負責」印象的公開文案。本次由乾淨的 `main@97886abba03d358fef7853eb85360f4a84c5d751` 建立 `feature/brand-copy-refinement`，以本次指示取代 Task 004 舊有的人數／任職狀態公開表述；原始規格與歷史報告保持原時點。
+
+About 的經營模式改述需求釐清、技術溝通與實作交付；原「創辦人／THE PERSON BEHIND XK」區塊改為「技術專業／TECHNICAL EXPERTISE」，移除個人角色與創立者描述。Solutions 的合作原則改為清楚的技術說明及依專案目標確認範圍。沒有改稱多人團隊、虛構人數、履歷、職稱、照片或交付承諾。
+
+保留既有資料契約、元件名稱與 `#founder` 錨點相容性；它們不是公開的人數文案。Solutions 來源摘要同步改為中立表述，固定來源章節名稱保持可追溯。AGENTS 更新公開文案規則，避免後續任務依舊規格重新加入人數敘述。
+
+文件 Repository 只讀核對最新 `main@9d0ed1282a6cf07bbaccdbf47f0220c37038080e`；相較前次來源，變更集中於 Week 03 架構／規劃與索引，Week 02 品牌／能力來源未變，本次不實作新的架構或後端。實際驗證、文案對照與交付狀態見 [品牌文案調整報告](reports/brand-copy-refinement.md)。

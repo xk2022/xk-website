@@ -16,8 +16,8 @@ export function AboutFounder() {
           </div>
         </div>
         <div className="min-w-0">
-          <p lang="en" className="type-caption mb-4 text-primary-foreground/75">THE PERSON BEHIND XK</p>
-          <h2 id="founder-title" className="type-h2">創辦人</h2>
+          <p lang="en" className="type-caption mb-4 text-primary-foreground/75">TECHNICAL EXPERTISE</p>
+          <h2 id="founder-title" className="type-h2">技術專業</h2>
           {founderProfile.name && <p className="type-h3 mt-5">{founderProfile.name}</p>}
           <p lang="en" className="type-body-lg mt-4 font-medium text-primary-foreground/90">{founderProfile.role}</p>
           <p className="type-body mt-6 text-primary-foreground/85">{founderProfile.introduction}</p>

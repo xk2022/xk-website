@@ -92,7 +92,7 @@ export const solutionSources = [
     path: "doc/01_business-plan/week-01/00_company-profile.md",
     commit: documentationCommit, blobSha: "249dda3bc464c7fae497e037d8a9916ed93893e7",
     sections: ["§1 Company Overview", "§2 Brand Identity", "§6 Core Values", "§8 Target Markets", "§10 Technology Stack"],
-    supports: "一人全職品牌、企業客群與 Web／Java／AI 整合方向；產品願景與營收目標不作已實現成果。",
+    supports: "技術服務品牌、企業客群與 Web／Java／AI 整合方向；產品願景與營收目標不作已實現成果。",
   },
   {
     id: "S02", repository: documentationRepository,
@@ -120,7 +120,7 @@ export const solutionSources = [
     path: "doc/01_business-plan/week-01/04_revenue-modelg.md",
     commit: documentationCommit, blobSha: "2c538f06602a382770843abc85bbfd1322204552",
     sections: ["§1 Business Revenue Strategy", "§11 Founder Capacity Management", "§16 Strategic Principles"],
-    supports: "服務先行、保護一人交付範圍及可重用元件；營收、工時、產品與客戶數均是規劃，不作成果或時程保證。",
+    supports: "服務先行、依專案範圍規劃交付及可重用元件；營收、工時、產品與客戶數均是規劃，不作成果或時程保證。",
   },
   {
     id: "S06", repository: documentationRepository,
@@ -360,9 +360,9 @@ export const solutionsValuePrinciples = [
     sourceRefs: [{ sourceId: "S06", sections: ["§1.5", "§8.2"], supports: "可維護架構及元件重用原則。" }, { sourceId: "S16", sections: ["§7.1–7.2"], supports: "模組化、責任分工及避免過度設計。" }],
   },
   {
-    title: "直接技術溝通",
-    description: "由一人全職技術品牌直接討論需求、選擇與限制，依個別專案確認範圍與合作方式。",
-    sourceRefs: [{ sourceId: "S01", sections: ["§1 Company Overview", "§2 Brand Identity"], supports: "一人全職品牌定位。" }, { sourceId: "S05", sections: ["§11", "§16"], supports: "依可承擔範圍確認合作，不做固定產能與交付保證。" }],
+    title: "清楚的技術溝通",
+    description: "以清楚的技術說明討論需求、方案選擇與實作限制，依專案目標確認合作範圍與交付方式。",
+    sourceRefs: [{ sourceId: "S01", sections: ["§1 Company Overview", "§2 Brand Identity"], supports: "技術品牌定位；公開文案依品牌負責人 2026-11-20 指示，不強調人數或任職狀態。" }, { sourceId: "S05", sections: ["§11", "§16"], supports: "依專案範圍確認合作，不做固定產能與交付保證。" }],
   },
 ] as const satisfies readonly {
   title: string;

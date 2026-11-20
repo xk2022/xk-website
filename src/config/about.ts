@@ -1,13 +1,13 @@
 import { Code2, Handshake, Layers3, Target, Workflow, Wrench } from "lucide-react";
 
-/** About-page copy is based on the confirmed Task 004 brief, not biographies. */
+/** Task 004 capabilities with the owner's 2026-11-20 staffing-neutral copy direction. */
 export const aboutPage = {
   titleLines: ["探索可能性，", "創造數位價值。"],
   description: "Xplore Kaleidoscope（XK）整合網站開發、Java 企業系統、系統架構與 AI 應用技術，協助企業將商業需求轉化為可靠、可擴充且具實際價值的數位解決方案。",
   whoWeAre: {
     introduction: "XK 是以軟體工程、系統整合與人工智慧應用為核心的數位技術品牌。",
     description: "我們關注企業在數位轉型過程中面臨的實際問題，從網站建置、企業後端系統、API 整合到 AI 應用，提供符合業務需求的技術服務。",
-    operatingModel: "XK 目前由創辦人一人全職經營，以直接的技術溝通，理解需求並推進實作。",
+    operatingModel: "我們重視清楚的技術溝通，從需求釐清、方案規劃到實作交付，讓專案目標與執行方向保持一致。",
     priorities: ["技術品質", "商業需求理解", "系統可維護性", "架構擴充能力", "長期合作價值"],
   },
   mission: {
@@ -52,11 +52,12 @@ export type FounderProfile = {
   focusAreas: readonly string[];
 };
 
+/** Legacy data contract; public content describes expertise rather than staffing. */
 export const founderProfile: FounderProfile = {
   name: null,
   photo: null,
-  role: "Founder & Software Engineer",
-  introduction: "XK 由具備網站開發、Java 企業系統、系統架構及 AI 應用整合經驗的軟體工程師創立。",
+  role: "Web · Java · AI Engineering",
+  introduction: "XK 整合網站開發、Java 企業系統、系統架構與 AI 應用能力，從實際業務需求出發，規劃合適的技術方案。",
   description: "從網站應用到企業後端系統，從系統架構到人工智慧整合，致力於以軟體工程解決實際商業問題。",
   focusAreas: ["Website Development", "Java Enterprise Development", "Spring Boot", "System Architecture", "API Integration", "AI Application Integration"],
 };

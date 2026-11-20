@@ -1,0 +1,269 @@
+{
+  "task": "Brand copy refinement2026-11-20",
+  "sourceFingerprint": "d524a1f2599d1bdeb33ed27accf4d1aa836dc3ac4950e4690c276edb9bed401c",
+  "base": "97886abba03d358fef7853eb85360f4a84c5d751",
+  "checkedAt": "2026-11-20T01:28:44.697163+00:00",
+  "quality": {
+    "npm-ci": {
+      "command": [
+        "npm",
+        "ci"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-20T01:21:11.058341+00:00",
+      "finishedAt": "2026-11-20T01:21:21.522184+00:00",
+      "logSha256": "2a9652daf27ed042d018a045723ae9a8c68415b3b32ae58335f114834d34dda0"
+    },
+    "tsc": {
+      "command": [
+        "npx",
+        "tsc",
+        "--noEmit"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-20T01:22:17.183282+00:00",
+      "finishedAt": "2026-11-20T01:22:20.272940+00:00",
+      "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "lint": {
+      "command": [
+        "npm",
+        "run",
+        "lint"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-20T01:22:17.206679+00:00",
+      "finishedAt": "2026-11-20T01:22:21.294704+00:00",
+      "logSha256": "4696703654c92426c8748b7837936df0036098577fdcb7af6f2ee9d9db2e79e6"
+    },
+    "build": {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-20T01:22:33.550001+00:00",
+      "finishedAt": "2026-11-20T01:22:40.572044+00:00",
+      "logSha256": "440997cc61d1e40fa6852bc9ecb4e95182efd08575c7524108497f78961bc7d8"
+    },
+    "pages-build": {
+      "command": [
+        "npm",
+        "run",
+        "build:pages"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-11-20T01:25:19.779389+00:00",
+      "finishedAt": "2026-11-20T01:25:26.232548+00:00",
+      "logSha256": "1e7c41ef9a9a3029a34ecf4b71cfb92107282cbd09200230524b29779e99caf4"
+    }
+  },
+  "normal": {
+    "status": "PASS",
+    "rows": [
+      {
+        "route": "about",
+        "width": 375,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3100/about",
+        "title": "關於 XK | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "solutions",
+        "width": 375,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3100/solutions",
+        "title": "解決方案 | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "about",
+        "width": 1440,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3100/about",
+        "title": "關於 XK | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "solutions",
+        "width": 1440,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3100/solutions",
+        "title": "解決方案 | Xplore Kaleidoscope",
+        "candidateCount": 0
+      }
+    ],
+    "processExitCode": 0
+  },
+  "pages": {
+    "status": "PASS",
+    "rows": [
+      {
+        "route": "about",
+        "width": 320,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3101/xk-website/about/",
+        "title": "關於 XK | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "solutions",
+        "width": 320,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3101/xk-website/solutions/",
+        "title": "解決方案 | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "about",
+        "width": 375,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3101/xk-website/about/",
+        "title": "關於 XK | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "solutions",
+        "width": 375,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3101/xk-website/solutions/",
+        "title": "解決方案 | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "about",
+        "width": 768,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3101/xk-website/about/",
+        "title": "關於 XK | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "solutions",
+        "width": 768,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3101/xk-website/solutions/",
+        "title": "解決方案 | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "about",
+        "width": 1440,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3101/xk-website/about/",
+        "title": "關於 XK | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "solutions",
+        "width": 1440,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3101/xk-website/solutions/",
+        "title": "解決方案 | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "about",
+        "width": 1920,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3101/xk-website/about/",
+        "title": "關於 XK | Xplore Kaleidoscope",
+        "candidateCount": 0
+      },
+      {
+        "route": "solutions",
+        "width": 1920,
+        "status": "PASS",
+        "url": "http://127.0.0.1:3101/xk-website/solutions/",
+        "title": "解決方案 | Xplore Kaleidoscope",
+        "candidateCount": 0
+      }
+    ],
+    "processExitCode": 0,
+    "axe": [
+      {
+        "route": "about",
+        "width": 375,
+        "violations": 0,
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 13
+          }
+        ],
+        "raw": "/tmp/xk-copy-20261120/axe-about-375.json"
+      },
+      {
+        "route": "solutions",
+        "width": 375,
+        "violations": 0,
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 12
+          }
+        ],
+        "raw": "/tmp/xk-copy-20261120/axe-solutions-375.json"
+      },
+      {
+        "route": "about",
+        "width": 1440,
+        "violations": 0,
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 13
+          }
+        ],
+        "raw": "/tmp/xk-copy-20261120/axe-about-1440.json"
+      },
+      {
+        "route": "solutions",
+        "width": 1440,
+        "violations": 0,
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 12
+          }
+        ],
+        "raw": "/tmp/xk-copy-20261120/axe-solutions-1440.json"
+      }
+    ],
+    "layoutCandidates": 0,
+    "getFailures": 0,
+    "runtimeErrors": [],
+    "consoleErrors": [],
+    "consoleWarnings": 0,
+    "headCancellationsObserved": 40
+  },
+  "outputAudit": {
+    "status": "PASS",
+    "publishedOutputTextFilesScanned": 76,
+    "unwantedCopyHits": [],
+    "sameThreeCssAsBase": true,
+    "currentCssCount": 3
+  },
+  "screenshots": [
+    {
+      "path": "docs/screenshots/brand-copy-about-375.png",
+      "sha256": "945c71e1c3b0f6fdd44444259bd62e392a01d2e62cfc978329d1471a9afa4595"
+    },
+    {
+      "path": "docs/screenshots/brand-copy-technical-expertise-1440.png",
+      "sha256": "c8468d2f3890b345b5093391b7c8c321cbfdf7c590cde8ab6c4029e533be1066"
+    },
+    {
+      "path": "docs/screenshots/brand-copy-solutions-375.png",
+      "sha256": "6a86dbf40be5162c8a0fc1a8f18268eac6d4f3f4d91c47897b2847187ca2d11c"
+    }
+  ],
+  "limitations": [
+    "Axe incomplete raw observations retained in /tmp/xk-copy-20261120/axe-*.json; this copy change is not a fresh fullWCAGaudit.",
+    "Raw HEAD cancellations recorded without claiming a complete prefetch causality audit; acceptance checks actual GET assets/HTTP errors and uncaught runtime/console errors.",
+    "Historical source chapter names/legacy component identifiers/anchor remain; they are not rendered staffing claims.",
+    "PR/CI/deployment are separate. Previous Task012 merge authorization not reused."
+  ]
+}
