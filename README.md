@@ -8,7 +8,7 @@
 
 ## 部署方向
 
-使用者於 Task 003 選擇 **GitHub Actions → GitHub Pages 靜態網站**。正式模式仍保留一般 Next.js 建置，日後可使用 Vercel 的 Next.js preset、Repository 根目錄 `.`、production branch `main`；本次不需要 Vercel Secrets。
+使用者於 Task 003 選擇 **GitHub Actions → GitHub Pages 靜態網站**。正式模式仍保留一般 Next.js 建置，Vercel 相容設定使用 Next.js preset、Repository 根目錄 `.`、production branch `main`；實際連結及發布狀態以 Task 013 報告與當次部署證據為準，不需要在 Repository 新增 Vercel Secrets。
 
 Pages 建置使用 `npm run build:pages`，輸出 `out/`，預設路徑為 `/xk-website`。Pull Request 執行品質檢查與靜態建置，只有 `main` 推送或手動選擇 `main` 時才進入部署工作，不會自動合併 PR。Pages 設定與部署狀態詳見 [GitHub Pages 部署指南](docs/reports/github-pages-deployment.md)。不變更 DNS 或品牌正式網域設定。
 
@@ -161,3 +161,9 @@ Task 011 另以明確的 Tailwind 掃描排除規則保護本次驗收資料／�
 規格見 [Task 012](docs/task/task012.md)，完整來源、四類問題、55 項準則適用性、實際 axe／Orca／鍵盤／200% browser zoom／320 CSS px／文字間距驗收、五張截圖及版本界線見 [實作與驗證報告](docs/reports/task012-implementation.md)。[證據說明](docs/reports/task012-artifacts/README.md) 提供原始結果與重現方式；工具掃描不等於完整無障礙認證，未測的行動 AT／其他平台保持待辦。
 
 依賴、Logo 原檔、品牌色值、字體、Metadata／noindex／nofollow、Privacy 草案保護、Contact 未開放收件及 GitHub Pages 工作流程保持原有架構。文件 Repository 的最新品牌／經營模式決議與網站既有內容有差異，列於報告另行處理，本次不以無障礙修正代替品牌或法律核准。遠端 CI、授權合併、main 部署及公開網址驗證在同一 PR 記錄實際事件。
+
+## Task 013 Vercel 部署準備
+
+一般 Next.js 模式與 GitHub Pages 分開驗收，沿用鎖定套件、Node.js 24.x、`npm ci`、`npm run build` 及 Next.js preset 預設 output，不使用 Pages 靜態產物作為 Vercel prebuilt。設定契約、環境保護、首次 import 影響、回復程序、本機驗收及外部待確認事項見 [Task 013 實作與驗證報告](docs/reports/task013-implementation.md)。
+
+Vercel Team／Account／Project 尚未指定，本次不猜測帳戶或建立同名專案。Preview／Production 實際部署及截圖在取得正確對象後驗收；本機或 Pages 成功不能替代 Vercel 上線證據。保留 noindex／nofollow、Privacy 草案與開發路由保護；兩個 Vercel 環境均不得啟用 `XK_PRIVACY_PREVIEW` 或 `XK_DESIGN_SYSTEM_PREVIEW`。不修改 DNS、Custom Domain、Pages Source 或現有 Actions 工作流程。

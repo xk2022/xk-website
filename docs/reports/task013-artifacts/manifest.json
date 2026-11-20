@@ -1,0 +1,3670 @@
+{
+  "at": "2026-11-20T02:02:54.061204+00:00",
+  "boundary": "LOCAL preparation only, Vercel deployment pending",
+  "sourceFingerprint": "645f3c9bba97c1011cc35a773f6ffffaa1e1edac31768b1c43204ed8cb00f4b4",
+  "archive": {
+    "path": "local-evidence.tar.xz",
+    "bytes": 1945588,
+    "sha256": "a8051291f0c9e2cec643959fbaa9aadf412531b4df13cf074f8c4d5640518380"
+  },
+  "members": [
+    {
+      "path": "a11y-observations.cjs",
+      "bytes": 17500,
+      "sha256": "940fd70fccfa5c9e0fa80fcc9c8d00356037418acbfc4c1e0e881ab54b4ea609"
+    },
+    {
+      "path": "adjudicate-raw-html-failed.py",
+      "bytes": 6583,
+      "sha256": "2516171d6a1e29776c5e27659220199cc591acee2485c1713e38502e18dc6f20"
+    },
+    {
+      "path": "adjudicate-syntax-failed.py",
+      "bytes": 6578,
+      "sha256": "752df7256017e90321f1e3331cc255ac0862c839b9833772a4f00974e9e0f898"
+    },
+    {
+      "path": "adjudicate-truncated-class-failed.py",
+      "bytes": 6818,
+      "sha256": "2448d6459a5d00da9c0fe180c732502ce469338d8c3155b0d645c5b4db307791"
+    },
+    {
+      "path": "adjudicate.py",
+      "bytes": 7618,
+      "sha256": "0b09c9e8973e79655b1c7faead78f3f58dfb1491928c06f3efede07226377110"
+    },
+    {
+      "path": "adjudicator-syntax-failure-observation.json",
+      "bytes": 357,
+      "sha256": "ae44c962a4bf53ef618e451e8134b644d4f9dca5accad06e34c8109c49c46c9e"
+    },
+    {
+      "path": "checks/build-pages.json",
+      "bytes": 579,
+      "sha256": "be1056b065ab2f7fa4d584c414f08ab7f85e5c6bd8cd78486e3c0890fdc8fb01"
+    },
+    {
+      "path": "checks/build-pages.log",
+      "bytes": 1597,
+      "sha256": "6f51d3699f98b650ee97b2df855ab4bde4c22924664e5a8d5d008e313af32b99"
+    },
+    {
+      "path": "checks/build.json",
+      "bytes": 567,
+      "sha256": "c7dbb79dec2fb874006842e1b2f900400801df8bc4d69141b3b6d9171eca6da0"
+    },
+    {
+      "path": "checks/build.log",
+      "bytes": 1114,
+      "sha256": "0437634b6960cb548a167bb912eff407e3866a9aa7c279b11f1d70d5e8574412"
+    },
+    {
+      "path": "checks/contrast-nodes.json",
+      "bytes": 732,
+      "sha256": "3bfe9bda2a84a5a5d30c6d994599f2b58d8c77e19e84212f46fcc3b146c033fe"
+    },
+    {
+      "path": "checks/contrast-nodes.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "checks/focus-visual.json",
+      "bytes": 591,
+      "sha256": "5762dfab322d1a80a56fec97d34cea6115425773c2d91f1a1221837e63c4681f"
+    },
+    {
+      "path": "checks/focus-visual.log",
+      "bytes": 47,
+      "sha256": "16840f0d0f24d61d0e38e2f0a35f1f1add73db051baa07f97ecabec686a1b36b"
+    },
+    {
+      "path": "checks/lint.json",
+      "bytes": 565,
+      "sha256": "e36bcba48b22342afe7d3cc7108d6d844f916b136bdb142cc1fff53109db4c0b"
+    },
+    {
+      "path": "checks/lint.log",
+      "bytes": 54,
+      "sha256": "4696703654c92426c8748b7837936df0036098577fdcb7af6f2ee9d9db2e79e6"
+    },
+    {
+      "path": "checks/manual-adjudication-final.json",
+      "bytes": 604,
+      "sha256": "7e5b35307999b7d8adb433410b91f4198bf1dc9bf157129aee39e5e1866ac111"
+    },
+    {
+      "path": "checks/manual-adjudication-final.log",
+      "bytes": 155,
+      "sha256": "c4652fd9791ad0ce8d04232cfda6570189fa2220fdacd2be2eb80d7a9e4dc0cb"
+    },
+    {
+      "path": "checks/manual-adjudication-retest.json",
+      "bytes": 605,
+      "sha256": "8060908c88de86df148e1b1d6815513f0958228fc692216d59ff887aaac27e54"
+    },
+    {
+      "path": "checks/manual-adjudication-retest.log",
+      "bytes": 1243,
+      "sha256": "689e323da2bf51385f62e52e1741abb55ebfebc0d50f6d05931e6d4eb56e03f0"
+    },
+    {
+      "path": "checks/manual-adjudication.json",
+      "bytes": 598,
+      "sha256": "98a6e8614a2047c4fb0e713249af2431be430ca04b16dba7a63bcd9bebce67d0"
+    },
+    {
+      "path": "checks/manual-adjudication.log",
+      "bytes": 908,
+      "sha256": "419a61cedbfe827f860f4f3ccde611aff50741ea0b2ea16581a89ccc7b46f957"
+    },
+    {
+      "path": "checks/normal-browser-retest.json",
+      "bytes": 735,
+      "sha256": "41ddb95d60c6ee1be195d487086675981e472f6c1f91c73a5f68199cb106d9bd"
+    },
+    {
+      "path": "checks/normal-browser-retest.log",
+      "bytes": 4749,
+      "sha256": "fe7d2d1ec4f94c202def4ccb29732642cb8fa9097cb76fed4b6a6c03af1f5b18"
+    },
+    {
+      "path": "checks/normal-browser.json",
+      "bytes": 729,
+      "sha256": "4e4495b15a21570e0c5c4a162d3225fabff43354ce45289aefc9af71ef9080da"
+    },
+    {
+      "path": "checks/normal-browser.log",
+      "bytes": 4689,
+      "sha256": "91ea0be1f2c96b2072d31a8616f8630d68feed1b14e704789dede670ed605cb3"
+    },
+    {
+      "path": "checks/normal-server-network.json",
+      "bytes": 657,
+      "sha256": "052a9a26169d2ee3423fffcc3d2d1f9d9683f37e0054d13759b5f89a61619a33"
+    },
+    {
+      "path": "checks/normal-server-network.log",
+      "bytes": 226,
+      "sha256": "6d28822c9b73283bc5a95c921b969f5303f6ad0337a8081cfbb8e36ed85112a4"
+    },
+    {
+      "path": "checks/normal-server.json",
+      "bytes": 645,
+      "sha256": "085834373ca59bf9f8ec68316fdcf51d63333a31540ec9cdf69e7f4caaeaa887"
+    },
+    {
+      "path": "checks/normal-server.log",
+      "bytes": 280,
+      "sha256": "1a2cc4559d81384c153eccd8f2ef91304de67a8b08dca804927e6f08918b40d8"
+    },
+    {
+      "path": "checks/npm-ci.json",
+      "bytes": 554,
+      "sha256": "d56dec000fb647f8634c18d852257fbdd1c218b44828acd6883542a33732c3fc"
+    },
+    {
+      "path": "checks/npm-ci.log",
+      "bytes": 164,
+      "sha256": "935451eef6b9f7876ee3ce939397d6d3e7b46f7cc59806c0aa0fbe99e68509b7"
+    },
+    {
+      "path": "checks/pages-browser.json",
+      "bytes": 727,
+      "sha256": "aebc2120cbe67c3b42cac30a7c1180d228a7ed00615b12a2eb3c19edb8be5cc9"
+    },
+    {
+      "path": "checks/pages-browser.log",
+      "bytes": 2658,
+      "sha256": "908093629a833322e75178807c95f45251fc179520c54449be3fcae3cf9e6bbb"
+    },
+    {
+      "path": "checks/pages-server.json",
+      "bytes": 669,
+      "sha256": "8a6a72d73e580385d092b417bab5049b5c7b09f6a864e738e727bbc02db52e36"
+    },
+    {
+      "path": "checks/pages-server.log",
+      "bytes": 280995,
+      "sha256": "656d7c453118c51aeded35734a65e504eb200980e25c88f0776148b4a10d4921"
+    },
+    {
+      "path": "checks/tool-seven.json",
+      "bytes": 588,
+      "sha256": "2c7049a2afb28ae0daa341c9a492eddfee4cb7226ca585c84ca8245ab053608b"
+    },
+    {
+      "path": "checks/tool-seven.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "checks/tool-timeout.json",
+      "bytes": 599,
+      "sha256": "bf172076cfa8842eca766bd7489e4c7b5961d84331aed440f93b08b5dc2a729d"
+    },
+    {
+      "path": "checks/tool-timeout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "checks/tool-zero.json",
+      "bytes": 587,
+      "sha256": "f155480a1b115f93cdb4881f6e5abae21a0b2b3683d755640f0aa2e12ea5a648"
+    },
+    {
+      "path": "checks/tool-zero.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "checks/tsc.json",
+      "bytes": 568,
+      "sha256": "6417613f4eefa024f6bd955f95506573a101a49203773a9b5a508dab18cd21bf"
+    },
+    {
+      "path": "checks/tsc.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "contrast-review.json",
+      "bytes": 781642,
+      "sha256": "9e863b4f27a40597d05fb064de25d756374a2a06885642db8fb432561170fcfb"
+    },
+    {
+      "path": "css-baseline-comparison.json",
+      "bytes": 813,
+      "sha256": "a02a832b03538d202d669bf12ccdffe5b2ced5db3905128f9541a6cfffd66f8e"
+    },
+    {
+      "path": "css-modes-comparison.json",
+      "bytes": 522,
+      "sha256": "c9bbe7b38122db8b40de9f579525aad98838ddf193b4973820c59ba322b09942"
+    },
+    {
+      "path": "docs-review.json",
+      "bytes": 4859,
+      "sha256": "65a7bc52f78978a7d0317f88d55b094a378cb15b4bee27cfc7a0d7e4cf7b0cf0"
+    },
+    {
+      "path": "environment.json",
+      "bytes": 358,
+      "sha256": "e960e6e5135dc5adb8cc056953b7ee2b203ec7a2e592aea78299e8bcdb199914"
+    },
+    {
+      "path": "export-metadata.mjs",
+      "bytes": 994,
+      "sha256": "dd3def66bfece9059137a22a84847a8de713454f5ebc36ef3248909332591f5f"
+    },
+    {
+      "path": "fetch-documentation.py",
+      "bytes": 1792,
+      "sha256": "47d65dff781aac7022a59cc59db497eb19a43b01b93d0157e42d3a80a53e9668"
+    },
+    {
+      "path": "fetch-official.py",
+      "bytes": 2576,
+      "sha256": "2f668df5bfa3407fa3b8d38a4e6968c734c61e9b08b1ad4165b1dc4c32885759"
+    },
+    {
+      "path": "focus-review.cjs",
+      "bytes": 1715,
+      "sha256": "dec3a7eb0cd6e9bc0879d78071ce19348874e088c9ff29046b380f1513639349"
+    },
+    {
+      "path": "focus-visual/main-link-focus.png",
+      "bytes": 163765,
+      "sha256": "ec21df721ee37897e0e989115a1a9f6b98e17f02d72e41e20fe537a5b3c5de5b"
+    },
+    {
+      "path": "focus-visual/menu-focus.png",
+      "bytes": 98202,
+      "sha256": "513fe999a52816e1f3ade70fa8f229a04bb81ab19b33fe6f9840e24bb4578736"
+    },
+    {
+      "path": "focus-visual/observations.json",
+      "bytes": 34262,
+      "sha256": "99c20e9f2252e30219d3ce048ab414728e646e2344dac9d29217040ba49c3d44"
+    },
+    {
+      "path": "focus-visual/skip-focus.png",
+      "bytes": 156728,
+      "sha256": "38d46aa969c4283a6b6bf56ca280b541c1c20191d465ab2a510a2bce254dc5f6"
+    },
+    {
+      "path": "fresh-contrast-nodes-pages.json",
+      "bytes": 7879974,
+      "sha256": "e30e58a1704430b2f28929fbeca06e41dd9ed2325f370488d90ed1024feea4dd"
+    },
+    {
+      "path": "fresh-node-styles.cjs",
+      "bytes": 9319,
+      "sha256": "ba978fcce230c43099bfe2e7002cca43e9da00ee7afc085e4c5f910bd95f0735"
+    },
+    {
+      "path": "local-check.cjs",
+      "bytes": 38095,
+      "sha256": "1a077276345eedd8be53641f13f2ec13255536ed8f47bbad31e929418971ada1"
+    },
+    {
+      "path": "local-required-manifest.json",
+      "bytes": 14975,
+      "sha256": "ee136756ef139a10fbe43c4ea3f62229bfa18744e2c55479d01bcd62d0a61cf3"
+    },
+    {
+      "path": "manual-adjudication.json",
+      "bytes": 284740,
+      "sha256": "eb89a83f55a6a93738854e27e5f532b583da1cf80efa57ca7c3fd8e06cf90956"
+    },
+    {
+      "path": "markdown-retest.json",
+      "bytes": 379,
+      "sha256": "7455fd45a67e4f53dfbc716351a07236299a9492e3c8b4ca26c499e6897b84fc"
+    },
+    {
+      "path": "markdown.json",
+      "bytes": 905,
+      "sha256": "358c9342ab75c0bdbb18c6661de469a7f5f1273791134a28b0e45aa41820adec"
+    },
+    {
+      "path": "network.cjs",
+      "bytes": 23900,
+      "sha256": "df3c29b1ad8369007960de5df4e720e795f2799efe4a55b9c4dffd3193dbe9ab"
+    },
+    {
+      "path": "normal/initial/a11y-observations.cjs",
+      "bytes": 17500,
+      "sha256": "940fd70fccfa5c9e0fa80fcc9c8d00356037418acbfc4c1e0e881ab54b4ea609"
+    },
+    {
+      "path": "normal/initial/axe/about-1440-closed.json",
+      "bytes": 467941,
+      "sha256": "fe2472b7ce0b389cf1041a92e676448bf63a4fe4ee50ba79dacc29117c6dc5f2"
+    },
+    {
+      "path": "normal/initial/axe/about-375-closed.json",
+      "bytes": 454047,
+      "sha256": "a926dfb96caa24dc31a56774619f04d0197ac61097a8d1f1c8db80636c541700"
+    },
+    {
+      "path": "normal/initial/axe/about-375-expanded.json",
+      "bytes": 470597,
+      "sha256": "d6b68ee5eb7ae767565488dcab1b3ad0ac147772fc6588237ff3d091662b23dd"
+    },
+    {
+      "path": "normal/initial/axe/contact-1440-closed.json",
+      "bytes": 302985,
+      "sha256": "4382a4da5d229e2918a01db484e8d6658e61cf3a31e1ca5d83bdc0c3ea2d2825"
+    },
+    {
+      "path": "normal/initial/axe/contact-375-closed.json",
+      "bytes": 289094,
+      "sha256": "4979989371bec2d50375136ea95f978d1b78691449e091f7189df2f800437a55"
+    },
+    {
+      "path": "normal/initial/axe/contact-375-expanded.json",
+      "bytes": 306066,
+      "sha256": "b442acb949982b2f5a464a36fd3535e06668264dce78632dd045a79d9802cf66"
+    },
+    {
+      "path": "normal/initial/axe/home-375-closed.json",
+      "bytes": 477033,
+      "sha256": "562a38a3a84d5fb6b7f4949d1f84be5787d7a5363be852a77b429db4b868b699"
+    },
+    {
+      "path": "normal/initial/axe/home-375-expanded.json",
+      "bytes": 494477,
+      "sha256": "7006c835a2a0a2a0b68a1e44f42898320fc90c75a41c2dc0fec930020e278e54"
+    },
+    {
+      "path": "normal/initial/axe/portfolio--corporate-website-1440-closed.json",
+      "bytes": 338597,
+      "sha256": "18f6e9d033f2eae3edd149b40a8abfa9552ca1454222c1232e8ea94be5ab154e"
+    },
+    {
+      "path": "normal/initial/axe/portfolio--corporate-website-375-closed.json",
+      "bytes": 324636,
+      "sha256": "0fb06d6b5f57235b28a637ec18dae60e7302306e516f0afe9c5cf65c23203574"
+    },
+    {
+      "path": "normal/initial/axe/portfolio--corporate-website-375-expanded.json",
+      "bytes": 341232,
+      "sha256": "8237c89a5dacaa568ef96bf3b2e624f6a2b3ea8b46eace5ad7cd0eb854494281"
+    },
+    {
+      "path": "normal/initial/axe/portfolio--enterprise-management-1440-closed.json",
+      "bytes": 346100,
+      "sha256": "fc3ac6b0691e877621279ad2ba3fb56f6385fc2bca8556de62cfc68805e7a2ed"
+    },
+    {
+      "path": "normal/initial/axe/portfolio--enterprise-management-375-closed.json",
+      "bytes": 332069,
+      "sha256": "c73f6c101d268996d2a70cc2c78e17f9c00e24764896f2e8836be37c60ddd8c8"
+    },
+    {
+      "path": "normal/initial/axe/portfolio--enterprise-management-375-expanded.json",
+      "bytes": 348965,
+      "sha256": "8fa40d934cbb13a0f8b36a0c4c8ba50c360bd651358661458c26abc716b0f5ee"
+    },
+    {
+      "path": "normal/initial/axe/portfolio--integration-hub-1440-closed.json",
+      "bytes": 346147,
+      "sha256": "a622b1baafe76718942066d50abd810ea2e76bdb8adf05792df0c054e7a06802"
+    },
+    {
+      "path": "normal/initial/axe/portfolio--integration-hub-375-closed.json",
+      "bytes": 332116,
+      "sha256": "570fd57cdb595fe510413014d0d10047f8cab659240e71800a5d80bcf5610133"
+    },
+    {
+      "path": "normal/initial/axe/portfolio--integration-hub-375-expanded.json",
+      "bytes": 348712,
+      "sha256": "227a2cd0d8204339cea1b1eef7f17829764dd82d18bff4dde2efc03c3bb32094"
+    },
+    {
+      "path": "normal/initial/axe/portfolio-1440-closed.json",
+      "bytes": 442728,
+      "sha256": "39ce95f3171d8812d32f46c687012e5f003507aeea6813c79c8889d8c25ce36d"
+    },
+    {
+      "path": "normal/initial/axe/portfolio-375-closed.json",
+      "bytes": 428697,
+      "sha256": "6301d2890e3bac6e90693e066b70bac42c9e12bee9c983bd77545837b85c1c9b"
+    },
+    {
+      "path": "normal/initial/axe/portfolio-375-expanded.json",
+      "bytes": 445867,
+      "sha256": "cb40cedaa094b16f1b507785075abb9c1eabdef5eddbaba09aeb65b59d383de3"
+    },
+    {
+      "path": "normal/initial/axe/services-1440-closed.json",
+      "bytes": 652422,
+      "sha256": "fc9471666bdfbd8ac3d065c92130046c36217127e5ea97537916711c974f1fa0"
+    },
+    {
+      "path": "normal/initial/axe/services-375-closed.json",
+      "bytes": 638528,
+      "sha256": "ad82fcc5959d670e52e7c8f89d8c41cea84de6d060306b162d037d6b7981b857"
+    },
+    {
+      "path": "normal/initial/axe/services-375-expanded.json",
+      "bytes": 655524,
+      "sha256": "862ede23d144d6e657a26d36724b4a0e61b69bdeb97a498af9071f4f491aade3"
+    },
+    {
+      "path": "normal/initial/axe/solutions-1440-closed.json",
+      "bytes": 996949,
+      "sha256": "82d39decad2885c5c063da61b1d2a51d648ef2bba426e467b23603f9cb58f3bf"
+    },
+    {
+      "path": "normal/initial/axe/solutions-375-closed.json",
+      "bytes": 982918,
+      "sha256": "11c86ceaccf24bc17db1dc77b709beb85b50a35b5066d4d86bee7db0c98dfe37"
+    },
+    {
+      "path": "normal/initial/axe/solutions-375-expanded.json",
+      "bytes": 1000386,
+      "sha256": "4c18d7be0d024c3d85afdcce67eaf0d7b8294c14b2eb81ca6b15540727fe19c7"
+    },
+    {
+      "path": "normal/initial/contrast/about.json",
+      "bytes": 1162076,
+      "sha256": "5ec5ee7590bffd7fc4527a33e4563ed898f54184fe8ad46b540383bcd4993ae3"
+    },
+    {
+      "path": "normal/initial/contrast/contact.json",
+      "bytes": 600779,
+      "sha256": "454537d638897e08c7d84508aeb722c8dd9808797f2f3199f64b0655f0573de0"
+    },
+    {
+      "path": "normal/initial/contrast/portfolio--corporate-website.json",
+      "bytes": 642816,
+      "sha256": "e108599a13e160251009e2fbcb073fda86280bef5e5b259cfdaeb161130d218b"
+    },
+    {
+      "path": "normal/initial/contrast/portfolio--enterprise-management.json",
+      "bytes": 674025,
+      "sha256": "bab541feb302f4e16369d149b85bfd908fbb442054d25272e46cad336c31d570"
+    },
+    {
+      "path": "normal/initial/contrast/portfolio--integration-hub.json",
+      "bytes": 675958,
+      "sha256": "7061e8c805c3c7e574093d68814acc6bbabf3988438ad92475ca5e3cd997f6e9"
+    },
+    {
+      "path": "normal/initial/contrast/portfolio.json",
+      "bytes": 1072466,
+      "sha256": "31acf4f10bbce43fb900923e0c5b4f7f5fe1c904221a2f6e60fb4b7bc33760fe"
+    },
+    {
+      "path": "normal/initial/contrast/services.json",
+      "bytes": 1557298,
+      "sha256": "bd6de345f3b5ff6fbfc66aa885caed28ae16444d98068efb3fb2152e63ef0a25"
+    },
+    {
+      "path": "normal/initial/contrast/solutions.json",
+      "bytes": 2860116,
+      "sha256": "58957b9d3ecd58dd583a2ccce9b570d3fc08dd2e0d4c667bec6e52108db7a21a"
+    },
+    {
+      "path": "normal/initial/expected-metadata.json",
+      "bytes": 4016,
+      "sha256": "472020847a73b7c84ae623c24af43b24900e74e917b0a046cf300f970a2b6977"
+    },
+    {
+      "path": "normal/initial/export-metadata.mjs",
+      "bytes": 994,
+      "sha256": "dd3def66bfece9059137a22a84847a8de713454f5ebc36ef3248909332591f5f"
+    },
+    {
+      "path": "normal/initial/focus/about-1440-footer.json",
+      "bytes": 7611,
+      "sha256": "abe6ebb6f141f99624d4efc89f0f165daf06820b165b3c3eb2cf012c5ef25319"
+    },
+    {
+      "path": "normal/initial/focus/about-1440-main.json",
+      "bytes": 7489,
+      "sha256": "3383857cec32e870f7c51ddf528b6829c2ac2a5b57b0dddf47c3cf3c80f7068d"
+    },
+    {
+      "path": "normal/initial/focus/about-1440-skip.json",
+      "bytes": 7813,
+      "sha256": "3ad9ccffca12a76d723eaaa0a17492608bdd8a8c032adb93b447876f5d8165c7"
+    },
+    {
+      "path": "normal/initial/focus/about-375-footer.json",
+      "bytes": 7509,
+      "sha256": "a143808948f6eda8eb9bde72b886fc8ac709d550c440d88ef20985fe991f36a6"
+    },
+    {
+      "path": "normal/initial/focus/about-375-main.json",
+      "bytes": 7437,
+      "sha256": "8c8425029fcba6b01f64a31bd840242ad94d91ba5a412d647e45bd5c6642e6b7"
+    },
+    {
+      "path": "normal/initial/focus/about-375-skip.json",
+      "bytes": 7820,
+      "sha256": "7ddaf99c9e2a37804a11c950058452ac9874370d2af03315105f719d9f1c48f0"
+    },
+    {
+      "path": "normal/initial/focus/about-mobile-journey.json",
+      "bytes": 68741,
+      "sha256": "d472ce78e7d01386f0fcee84bdde147a59115c32e0a82375dc644db611a37244"
+    },
+    {
+      "path": "normal/initial/focus/contact-1440-footer.json",
+      "bytes": 7613,
+      "sha256": "6e2fd43a4a9c58ee6ea4bfdaf9768ad502cc7b0a234e1d7895be24b0690cac6a"
+    },
+    {
+      "path": "normal/initial/focus/contact-1440-main.json",
+      "bytes": 7491,
+      "sha256": "75693b8e21b078c7a910fe4b80253ce74c7d7e74448e687380c1411edc0dfc63"
+    },
+    {
+      "path": "normal/initial/focus/contact-1440-skip.json",
+      "bytes": 7815,
+      "sha256": "cd938fb7164185107a5f4bed97b2460f5332c22a9a8d4c731e22b79f7028cc2f"
+    },
+    {
+      "path": "normal/initial/focus/contact-375-footer.json",
+      "bytes": 7581,
+      "sha256": "bc64236d95cc8bd108cd4bcb703af19f7b4949fe843e2fd3fc49429ddb7f19b3"
+    },
+    {
+      "path": "normal/initial/focus/contact-375-main.json",
+      "bytes": 7439,
+      "sha256": "6adb1c7ec646f6a32ebad6d77f8c201a323f161ab2e50ae1cb1c5b729dd10b39"
+    },
+    {
+      "path": "normal/initial/focus/contact-375-skip.json",
+      "bytes": 7822,
+      "sha256": "0fa504473a58943d3460775cb53904a497c3268b8bee30c437df5f2ed8368bbf"
+    },
+    {
+      "path": "normal/initial/focus/contact-mobile-journey.json",
+      "bytes": 68789,
+      "sha256": "d39a571588ed3305072818565f17b34e171dd493844cd61d9d1c897640fbaef9"
+    },
+    {
+      "path": "normal/initial/focus/home-375-footer.json",
+      "bytes": 7588,
+      "sha256": "d705965c7b8999566241e2a146ce02cce8b743cf4d2fa9611d191286736ffae3"
+    },
+    {
+      "path": "normal/initial/focus/home-375-main.json",
+      "bytes": 12764,
+      "sha256": "e7018e58758c45a1f1ba34f3aa98ba65d53d7f50a81ece47a87bf01af72562cb"
+    },
+    {
+      "path": "normal/initial/focus/home-375-skip.json",
+      "bytes": 7815,
+      "sha256": "14af876be29a87e8267d1541f271d116c6732c0297fa0204b1e3c8382fd003ef"
+    },
+    {
+      "path": "normal/initial/focus/home-mobile-journey.json",
+      "bytes": 74029,
+      "sha256": "3f09d2bf030d87c8b2a9387842d7ff58cf9d11ec7d5a243bb62b781e22544059"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--corporate-website-1440-footer.json",
+      "bytes": 7563,
+      "sha256": "44445b638a24bc51d0f2e1cf4c3fa49a00e90dfcf302e3059cbabf5f158c76c7"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--corporate-website-1440-main.json",
+      "bytes": 7511,
+      "sha256": "d096198bcaf57173887c4c58d817b6f2f2964da66f5502fb316c66df82ed1944"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--corporate-website-1440-skip.json",
+      "bytes": 7835,
+      "sha256": "b1dc466650dabae3a3b8621e3c14359f677a7a92cabce08c5c89381517433d0f"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--corporate-website-375-footer.json",
+      "bytes": 7629,
+      "sha256": "f4dd25327670d603bd331fc672f9411e200ce4607ab570efc3ad0a382ef01492"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--corporate-website-375-main.json",
+      "bytes": 7459,
+      "sha256": "215adf2cc63fecf90e5c7148e5548fcefeefb22170985a7347c39c30ba319877"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--corporate-website-375-skip.json",
+      "bytes": 7842,
+      "sha256": "6572cbd32860ab4bbd37f16d84288ffe42162023d4f554888b62b14ef03fb094"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--corporate-website-mobile-journey.json",
+      "bytes": 68865,
+      "sha256": "b4d19ba96442a03574097110a6fc3c38526be7b542d50f0cfc0728047b41d1e8"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--enterprise-management-1440-footer.json",
+      "bytes": 7623,
+      "sha256": "b8979f2f18d5d669af02718f29e39d6722c825321ad3cad93829c6ec7aba1db5"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--enterprise-management-1440-main.json",
+      "bytes": 7515,
+      "sha256": "090becd6a8e601fafe9b89a10861f59d6a1a120faf835b706e7ed1b0fb1dee9d"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--enterprise-management-1440-skip.json",
+      "bytes": 7839,
+      "sha256": "f8b6cb7f7cee8f48382089102a3a77395926eacefe7279cf80de0d039de2fb25"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--enterprise-management-375-footer.json",
+      "bytes": 7619,
+      "sha256": "3a63f1d79b8b8e2a286689c4eccaf558709824037ba5f89dfedc33bb224903f9"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--enterprise-management-375-main.json",
+      "bytes": 7463,
+      "sha256": "32a357d6731981e94a0640d4e63a8173d0d75363048bca374cb4b0c509a082a2"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--enterprise-management-375-skip.json",
+      "bytes": 7846,
+      "sha256": "ee5cb6627c92e3638636d0269e252e61977179c7e209542ef697d0ef6c01bc26"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--enterprise-management-mobile-journey.json",
+      "bytes": 68897,
+      "sha256": "f034f5e80fe892d48b0befd90ad8d827b0f6f8ef7153595b8cb69f841358c2a7"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--integration-hub-1440-footer.json",
+      "bytes": 7603,
+      "sha256": "c66bcc490de13cb7f6e9efd558f96dd92547a6f8487e0e3c8c648e3c9db82e70"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--integration-hub-1440-main.json",
+      "bytes": 7509,
+      "sha256": "84a5b91063cbe5162a37b5f6c47275040b9a8bf39200fdddd3baacd7cc0a5e13"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--integration-hub-1440-skip.json",
+      "bytes": 7833,
+      "sha256": "f2030a004fa2c8a026442ca8ec25300bbab02902bca4399fdfbc37a4d6257423"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--integration-hub-375-footer.json",
+      "bytes": 7627,
+      "sha256": "657339940005474a5c70b825819d9fbc21865a6b0e825480fdd9334b8b4c29ed"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--integration-hub-375-main.json",
+      "bytes": 7457,
+      "sha256": "a5aba55def2adaf545defdfcebed06b1f4d7e03bc22a998d2a360bb336aa9ea8"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--integration-hub-375-skip.json",
+      "bytes": 7840,
+      "sha256": "fb6ef587ff53a64d0b5b78c5d93583ecf1d602c432cff03c6e7a71a59549f34a"
+    },
+    {
+      "path": "normal/initial/focus/portfolio--integration-hub-mobile-journey.json",
+      "bytes": 68849,
+      "sha256": "2647bd07eb25e1239ab989f6c68f1d458b42c1f19f83b3b250cd740a041e8e7d"
+    },
+    {
+      "path": "normal/initial/focus/portfolio-1440-footer.json",
+      "bytes": 7615,
+      "sha256": "1522e4276457c437b2b499c2e89ef60dd1ea2f4bfc5c5538a42a5633a071f545"
+    },
+    {
+      "path": "normal/initial/focus/portfolio-1440-main.json",
+      "bytes": 7493,
+      "sha256": "037499b63715b9985a84d6013fb7e0afc481051b75b896fc71eed46549882625"
+    },
+    {
+      "path": "normal/initial/focus/portfolio-1440-skip.json",
+      "bytes": 7817,
+      "sha256": "74f678ddd769bb1b094712e70faf34fcbe17d90734277ed74afc300ce1fcf84d"
+    },
+    {
+      "path": "normal/initial/focus/portfolio-375-footer.json",
+      "bytes": 7611,
+      "sha256": "796f5bc0101118e9085133166284aa22edab19f96c325eb8d0d5902fd5649fd5"
+    },
+    {
+      "path": "normal/initial/focus/portfolio-375-main.json",
+      "bytes": 7441,
+      "sha256": "55d5a748ae05441867ff0791f8264e1128723bbc86dc59efb49edf91f643b20c"
+    },
+    {
+      "path": "normal/initial/focus/portfolio-375-skip.json",
+      "bytes": 7824,
+      "sha256": "7380e42bf564d47201123fdc7e9cf303793fdc1050b7de45d0d607f87f5e0db0"
+    },
+    {
+      "path": "normal/initial/focus/portfolio-mobile-journey.json",
+      "bytes": 68805,
+      "sha256": "838f9e6c31a0faeea502b3ecb412ae4d9d4a61bd175f0f6b8277f105462506eb"
+    },
+    {
+      "path": "normal/initial/focus/services-1440-footer.json",
+      "bytes": 7600,
+      "sha256": "64468d08ddd2702d0c2c10afbac6b7b8c57d11119391ad850e0154b3321820ba"
+    },
+    {
+      "path": "normal/initial/focus/services-1440-main.json",
+      "bytes": 7492,
+      "sha256": "55b4f3e8a8e6dd988ddd0444d7d00bf4b53cd1166a94735dab13e20be00613ed"
+    },
+    {
+      "path": "normal/initial/focus/services-1440-skip.json",
+      "bytes": 7816,
+      "sha256": "e3f377fac93203d0bc4ec2d584152d8e36b17612205f08296c8b8d92ff57aa19"
+    },
+    {
+      "path": "normal/initial/focus/services-375-footer.json",
+      "bytes": 7611,
+      "sha256": "4e8bc73fd87e4b26c2d3b64fad921294833e152faed4a46729b618505a62b20f"
+    },
+    {
+      "path": "normal/initial/focus/services-375-main.json",
+      "bytes": 7440,
+      "sha256": "c66ab7c9f1446a989d77b984dfe3bd3f27af044ab632e1f66307026def279383"
+    },
+    {
+      "path": "normal/initial/focus/services-375-skip.json",
+      "bytes": 7823,
+      "sha256": "f603c146204d6c30d08c6d045cb40780f5039c4f1ad6e1ac6942a3a843c7d1cb"
+    },
+    {
+      "path": "normal/initial/focus/services-mobile-journey.json",
+      "bytes": 68769,
+      "sha256": "30444b2c1a9a58a6c89286b829dff42fc17965ff6fb3d4edfbfa7305ffcd1d42"
+    },
+    {
+      "path": "normal/initial/focus/solutions-1440-footer.json",
+      "bytes": 7616,
+      "sha256": "975d929fc7a1f214ed6b2f06eb2d85c39b46ae4fd27751a88591cd14fd5d5b60"
+    },
+    {
+      "path": "normal/initial/focus/solutions-1440-main.json",
+      "bytes": 7493,
+      "sha256": "d10f09dc49dabd06977dfbd811a744d28da17f5722024811e17d1a17d57a7c07"
+    },
+    {
+      "path": "normal/initial/focus/solutions-1440-skip.json",
+      "bytes": 7817,
+      "sha256": "93be93587ae00e259580a64e0782988abaab7d4f1193e1d893acc1e2c83a334b"
+    },
+    {
+      "path": "normal/initial/focus/solutions-375-footer.json",
+      "bytes": 7612,
+      "sha256": "5ab6df1bd069335619f3d788fa6082f54aa8580c81a04444e34c85688f0fab80"
+    },
+    {
+      "path": "normal/initial/focus/solutions-375-main.json",
+      "bytes": 7441,
+      "sha256": "28c21983372591c5be1a225ec32948110274eab02b98bf1676de3e038021c102"
+    },
+    {
+      "path": "normal/initial/focus/solutions-375-skip.json",
+      "bytes": 7824,
+      "sha256": "0e1fc11b95a6f222151a2292911db7a8f505a42b03c0cd1d1f1dd65f0bf78e83"
+    },
+    {
+      "path": "normal/initial/focus/solutions-mobile-journey.json",
+      "bytes": 68805,
+      "sha256": "dc0aa6401f3fce29a3273971a42ca0f1c5e39af114e2b64a943639286372ef88"
+    },
+    {
+      "path": "normal/initial/home-service-anchor.json",
+      "bytes": 471,
+      "sha256": "ee15b0bee39f46399f1b5b8561c6fe58650ee3991c43080128a5833e42c4b779"
+    },
+    {
+      "path": "normal/initial/http/0d62da8444ddb206.body",
+      "bytes": 99144,
+      "sha256": "3b56f318559cb87cbeb9adc9dd31eb6ff049d450a81c84debbc09f8a70bfe78e"
+    },
+    {
+      "path": "normal/initial/http/0d62da8444ddb206.json",
+      "bytes": 842,
+      "sha256": "9abff2e89acf10f0d4aacabd858da7f2ec8adacae9d7dc4423f52f4120f4a10d"
+    },
+    {
+      "path": "normal/initial/http/3600c556e64eec72.body",
+      "bytes": 107927,
+      "sha256": "d20b186f619ac7efbad06f1bf6c1fcfb7787b9235f1b3eca22830630a2b606b5"
+    },
+    {
+      "path": "normal/initial/http/3600c556e64eec72.json",
+      "bytes": 834,
+      "sha256": "b71ea84fc7e94581dc4410d82dc6ae352ed7f8f0dcdc700864854e3caec9a5e2"
+    },
+    {
+      "path": "normal/initial/http/3e7d4532d3986979.body",
+      "bytes": 83311,
+      "sha256": "0ad24befd2c6b5df18453927b692ec2638f469fa3d206b56364565557a270d34"
+    },
+    {
+      "path": "normal/initial/http/3e7d4532d3986979.json",
+      "bytes": 838,
+      "sha256": "7378470cc1563279ea774de2afd707bbde2b51b0f5df64e41b1ecca2a907b3b3"
+    },
+    {
+      "path": "normal/initial/http/404-dev--design-system.body",
+      "bytes": 20648,
+      "sha256": "9b6ea272620cdebe834e4395da56a03d9f4534a23935cdccea4937c402e025d3"
+    },
+    {
+      "path": "normal/initial/http/404-dev--design-system.json",
+      "bytes": 1120,
+      "sha256": "1a13f33af1ebc9a51e9a96f62996d22a3918f51806464bdc6c52661df93f0b80"
+    },
+    {
+      "path": "normal/initial/http/404-portfolio--unknown-task013-project.body",
+      "bytes": 34015,
+      "sha256": "32dbb75fa2eeecf9d9d04359d81c04bda546ac15fb16755418b42cedb86dac97"
+    },
+    {
+      "path": "normal/initial/http/404-portfolio--unknown-task013-project.json",
+      "bytes": 948,
+      "sha256": "0260cd28f02080e94095dc8008a007356e29bf1ff036a3a83d6a8376b64ffe58"
+    },
+    {
+      "path": "normal/initial/http/404-privacy.body",
+      "bytes": 19948,
+      "sha256": "a373664e566c27102a58938c0d315b061e46049773adb611fb956d3e24c21569"
+    },
+    {
+      "path": "normal/initial/http/404-privacy.json",
+      "bytes": 1089,
+      "sha256": "7587e126fe87f0ca8039423059bb7c228c80b28797e4175f002a28fdbd38543d"
+    },
+    {
+      "path": "normal/initial/http/404-sitemap.xml.body",
+      "bytes": 34015,
+      "sha256": "32dbb75fa2eeecf9d9d04359d81c04bda546ac15fb16755418b42cedb86dac97"
+    },
+    {
+      "path": "normal/initial/http/404-sitemap.xml.json",
+      "bytes": 881,
+      "sha256": "2e7201aac16561975e7bfd5a00942d49e10fa5e447dc4177fe5caf15415417aa"
+    },
+    {
+      "path": "normal/initial/http/404-unknown-task013-route.body",
+      "bytes": 34015,
+      "sha256": "32dbb75fa2eeecf9d9d04359d81c04bda546ac15fb16755418b42cedb86dac97"
+    },
+    {
+      "path": "normal/initial/http/404-unknown-task013-route.json",
+      "bytes": 911,
+      "sha256": "c3d45ec34414f3eb2d830143f71c3cbfc776b3864adf46b32cd2e647e824affa"
+    },
+    {
+      "path": "normal/initial/http/454a32858ec91b3e.body",
+      "bytes": 120340,
+      "sha256": "f3e387e3fd0a88084d8e84a09d2e345c2af08d89c4c9194d072125321cfc7b9c"
+    },
+    {
+      "path": "normal/initial/http/454a32858ec91b3e.json",
+      "bytes": 824,
+      "sha256": "17dcb684d29a0a87deb365053a3e18180eb6945ec0c9b92b3db360b99f794b46"
+    },
+    {
+      "path": "normal/initial/http/51582aaafec45cb6.body",
+      "bytes": 84395,
+      "sha256": "a234926bd9770bc859eb243d9c2737403eb8922aeb24864772a89d7ab46a90f0"
+    },
+    {
+      "path": "normal/initial/http/51582aaafec45cb6.json",
+      "bytes": 873,
+      "sha256": "807c66457d58f09dce6aeae236f9be980228952266b08050b5ad35fdfd4c2e46"
+    },
+    {
+      "path": "normal/initial/http/7219593ca83f06fc.body",
+      "bytes": 81779,
+      "sha256": "1e8eb515adba9ea9ddcef187759cca6c98cd51ee9eea58d3a0df5db1d810c084"
+    },
+    {
+      "path": "normal/initial/http/7219593ca83f06fc.json",
+      "bytes": 877,
+      "sha256": "295c5e28b0b977f56e20697f427087a2a320376e469c09dc46ccba37bab9c03e"
+    },
+    {
+      "path": "normal/initial/http/a28395ae9c87f35e.body",
+      "bytes": 152657,
+      "sha256": "d0be0210c4a51e8f8465239937794ecebcc9140cae97960b944d9ca4039c01b0"
+    },
+    {
+      "path": "normal/initial/http/a28395ae9c87f35e.json",
+      "bytes": 840,
+      "sha256": "969a175486acc290a1974dcfba63eb45f62f9422317a26b4a95db4ae3b8b1713"
+    },
+    {
+      "path": "normal/initial/http/about.body",
+      "bytes": 107927,
+      "sha256": "d20b186f619ac7efbad06f1bf6c1fcfb7787b9235f1b3eca22830630a2b606b5"
+    },
+    {
+      "path": "normal/initial/http/about.json",
+      "bytes": 823,
+      "sha256": "b5eedc668af731cb516b82d832551c8d031289ab59118e9a4aa8be47c31c4dc2"
+    },
+    {
+      "path": "normal/initial/http/ad1d38f041639a26.body",
+      "bytes": 84767,
+      "sha256": "fcc3023b4dd8c5c81e95e61823854d541edf13015c0eb391f99c8edc76f1a9fa"
+    },
+    {
+      "path": "normal/initial/http/ad1d38f041639a26.json",
+      "bytes": 885,
+      "sha256": "9b17e827593e569b64056c311ae02304df9a87d3a46dd66572563a0d9d33a343"
+    },
+    {
+      "path": "normal/initial/http/contact.body",
+      "bytes": 83311,
+      "sha256": "0ad24befd2c6b5df18453927b692ec2638f469fa3d206b56364565557a270d34"
+    },
+    {
+      "path": "normal/initial/http/contact.json",
+      "bytes": 829,
+      "sha256": "712cb2600cb15825e3f209cc16cfce2cf3cd30aa106a142c67df8154b408fdcf"
+    },
+    {
+      "path": "normal/initial/http/f4fbafe9fa296c42.body",
+      "bytes": 226104,
+      "sha256": "8e344cfd2942a8b35b204e866c058d2b5cb677c6283e90b3c09f9184489f3426"
+    },
+    {
+      "path": "normal/initial/http/f4fbafe9fa296c42.json",
+      "bytes": 842,
+      "sha256": "ae9dacca56911b35ba3fc66aefd75243c889a73b81aff1b292a24837229c3b4c"
+    },
+    {
+      "path": "normal/initial/http/home.body",
+      "bytes": 120340,
+      "sha256": "f3e387e3fd0a88084d8e84a09d2e345c2af08d89c4c9194d072125321cfc7b9c"
+    },
+    {
+      "path": "normal/initial/http/home.json",
+      "bytes": 812,
+      "sha256": "1878eb8e09ebf44c727aafc6afc275dfb4a43b4499e04b2d92c7dae33202a382"
+    },
+    {
+      "path": "normal/initial/http/portfolio--corporate-website.body",
+      "bytes": 81779,
+      "sha256": "1e8eb515adba9ea9ddcef187759cca6c98cd51ee9eea58d3a0df5db1d810c084"
+    },
+    {
+      "path": "normal/initial/http/portfolio--corporate-website.json",
+      "bytes": 889,
+      "sha256": "79d56e38f280e64525ef1c42e5c3eaf10e3b03cccd82603513ed8a7c531004bc"
+    },
+    {
+      "path": "normal/initial/http/portfolio--enterprise-management.body",
+      "bytes": 84767,
+      "sha256": "fcc3023b4dd8c5c81e95e61823854d541edf13015c0eb391f99c8edc76f1a9fa"
+    },
+    {
+      "path": "normal/initial/http/portfolio--enterprise-management.json",
+      "bytes": 901,
+      "sha256": "dd8428329011261393e56bede8ae9d34fd3ac4bcd034694e921507dfea553d60"
+    },
+    {
+      "path": "normal/initial/http/portfolio--integration-hub.body",
+      "bytes": 84395,
+      "sha256": "a234926bd9770bc859eb243d9c2737403eb8922aeb24864772a89d7ab46a90f0"
+    },
+    {
+      "path": "normal/initial/http/portfolio--integration-hub.json",
+      "bytes": 883,
+      "sha256": "8c47ddf687e8bb59f00e18411aea770f4947cbcb97148e6e5b9707a45357be8c"
+    },
+    {
+      "path": "normal/initial/http/portfolio.body",
+      "bytes": 99144,
+      "sha256": "3b56f318559cb87cbeb9adc9dd31eb6ff049d450a81c84debbc09f8a70bfe78e"
+    },
+    {
+      "path": "normal/initial/http/portfolio.json",
+      "bytes": 835,
+      "sha256": "4bd880c17542bb4221d4ad6db6a5b047a3ff5a5967b78dd2e152f1848e2330d9"
+    },
+    {
+      "path": "normal/initial/http/robots.body",
+      "bytes": 59,
+      "sha256": "f0c79b7c19d143d61fa6f287e11868a686996d8ba6662fabd771a73e78984737"
+    },
+    {
+      "path": "normal/initial/http/robots.json",
+      "bytes": 700,
+      "sha256": "bb68804f4c0c2c78856b95488fe829a59bb5ebc6e0b0dbb35f17b4125db3f4e3"
+    },
+    {
+      "path": "normal/initial/http/services.body",
+      "bytes": 152657,
+      "sha256": "d0be0210c4a51e8f8465239937794ecebcc9140cae97960b944d9ca4039c01b0"
+    },
+    {
+      "path": "normal/initial/http/services.json",
+      "bytes": 832,
+      "sha256": "9599f3226a0c12ee577ba0ebe68e742976d11e06452589ee9e0871f07bb4c1b0"
+    },
+    {
+      "path": "normal/initial/http/solutions.body",
+      "bytes": 226104,
+      "sha256": "8e344cfd2942a8b35b204e866c058d2b5cb677c6283e90b3c09f9184489f3426"
+    },
+    {
+      "path": "normal/initial/http/solutions.json",
+      "bytes": 835,
+      "sha256": "d5a6cb8b14404a1575a26d6399b4b1ade98569d17cd0e9afd9a12f49d1e95e80"
+    },
+    {
+      "path": "normal/initial/layout/about-1440.json",
+      "bytes": 567,
+      "sha256": "acdce456698f1e8aac9bc2d04957da819c7848bf6e3ebd8860fabd4ed973254c"
+    },
+    {
+      "path": "normal/initial/layout/about-1920.json",
+      "bytes": 567,
+      "sha256": "111b403bfe1376bf276637a57e5821e71ae361350adb6de5970b001e7ac25709"
+    },
+    {
+      "path": "normal/initial/layout/about-320.json",
+      "bytes": 563,
+      "sha256": "14cb2c92978ac2f0109401becd325119290299a828a7aaa8fca805b689534db8"
+    },
+    {
+      "path": "normal/initial/layout/about-375.json",
+      "bytes": 563,
+      "sha256": "f54a621aea17301fe58f1dfe0c5cff86529fd39dceeb9b75f337a343d94f76de"
+    },
+    {
+      "path": "normal/initial/layout/about-768.json",
+      "bytes": 563,
+      "sha256": "9115e915bc9c5221654d21e5c7f7c38b4b5f691905363c9f6c17b4ee3ba3d304"
+    },
+    {
+      "path": "normal/initial/layout/contact-1440.json",
+      "bytes": 569,
+      "sha256": "164de692abec9801b92a71786b6378986f63586170461fcfb2d18b0bd04bafb2"
+    },
+    {
+      "path": "normal/initial/layout/contact-1920.json",
+      "bytes": 569,
+      "sha256": "b2db16fd1ef398869eb7a49f754e49a70afd8b275fa28a5405710f8353e74d47"
+    },
+    {
+      "path": "normal/initial/layout/contact-320.json",
+      "bytes": 565,
+      "sha256": "556ab6cc32ad06633dc4413bf713be037acdce4f7432a84c00504d72f525bd8a"
+    },
+    {
+      "path": "normal/initial/layout/contact-375.json",
+      "bytes": 565,
+      "sha256": "265f396603f5821ef90851af94f207eb2de818b6a03048cd50ac6843cd73db0b"
+    },
+    {
+      "path": "normal/initial/layout/contact-768.json",
+      "bytes": 565,
+      "sha256": "da2d0531cf1d1605eb0c5e49bd077f16f3896688b5f643e4862ce61e79245260"
+    },
+    {
+      "path": "normal/initial/layout/home-1440.json",
+      "bytes": 562,
+      "sha256": "4b643850acd857cd2da5f5001211651994dd82a8a7361766ba7df15a9ffa5167"
+    },
+    {
+      "path": "normal/initial/layout/home-1920.json",
+      "bytes": 562,
+      "sha256": "3f8d87f1b4b0eb29070a5566912b4827a7af37f508f75cc33eac7a9fb1e0919f"
+    },
+    {
+      "path": "normal/initial/layout/home-320.json",
+      "bytes": 558,
+      "sha256": "409e9513824fe48fa4dacf2610b649cc9bc6d4e5371e7a998cbefd7e00ddc0a7"
+    },
+    {
+      "path": "normal/initial/layout/home-375.json",
+      "bytes": 558,
+      "sha256": "484e4aa9d507b5844004de893c46d0245b89405069bc8437f47171cd9f083d69"
+    },
+    {
+      "path": "normal/initial/layout/home-768.json",
+      "bytes": 558,
+      "sha256": "cee1224153782cd2a81fc5ab907481972440c74ec29a30dc2abdedbf9656698e"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--corporate-website-1440.json",
+      "bytes": 589,
+      "sha256": "592e9bd3f86c297d96aa034b689fdb31fb17999e70da6aa8f02fdb7e0935b24f"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--corporate-website-1920.json",
+      "bytes": 589,
+      "sha256": "a1b183120c7a0f4959e1661a59ebd3bbad935c2392b61b528fc5f3f46c1b9e7c"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--corporate-website-320.json",
+      "bytes": 585,
+      "sha256": "7c845c427bb335c8cdc484bb24df98edd1cd365153c3e10fae5909e1ce14f519"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--corporate-website-375.json",
+      "bytes": 585,
+      "sha256": "d021f1cd28d8b50a57224119f521b8d752b928ada5beaec5ad198da54579b526"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--corporate-website-768.json",
+      "bytes": 585,
+      "sha256": "4828b1ae70d2e002c79735dd8fdea1a835d13df1a91f18c83084201e4f8cf97f"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--enterprise-management-1440.json",
+      "bytes": 593,
+      "sha256": "1573e86fb1fd15ed8de83301ee3827bf1d2aea74a2baf3d9d8e3de66e554b84b"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--enterprise-management-1920.json",
+      "bytes": 593,
+      "sha256": "937d932f7179dbd58f899643372f4be6b362bb8329a05b90bcd388c8df9e175a"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--enterprise-management-320.json",
+      "bytes": 589,
+      "sha256": "66e593221221815dce5695efeb06e8773bb7da938c1b5d8b4415f853ac57e47f"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--enterprise-management-375.json",
+      "bytes": 589,
+      "sha256": "7fd18ffc608049aa97f686c44c05668e4f4616b8b6605f448ed8327442a6227e"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--enterprise-management-768.json",
+      "bytes": 589,
+      "sha256": "dd73197f228bf66424777d26ffcc836cc06ec86028cb2e37fce782544bec4d11"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--integration-hub-1440.json",
+      "bytes": 587,
+      "sha256": "30e5c267384a485c5d5a2f9828fb02dba6dfbd77dbdb4f2aefc16b7d55d941ac"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--integration-hub-1920.json",
+      "bytes": 587,
+      "sha256": "8c9ffabcbaecc3a8c7e22b82678ac6233482b0aa807f70a877561132a0cef2e2"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--integration-hub-320.json",
+      "bytes": 583,
+      "sha256": "ef3d901ccff694419989671ea4c1b8236bc59d3e4c5bce4bee1fb42b8db7d2b3"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--integration-hub-375.json",
+      "bytes": 583,
+      "sha256": "d975a1d3b672565957092a94d0786936f2bd7013b96164dec7386710b89ba46a"
+    },
+    {
+      "path": "normal/initial/layout/portfolio--integration-hub-768.json",
+      "bytes": 583,
+      "sha256": "997a1964b99f64db6f3479559dcb3b8adc11aed3fe4e1db61e8ed8c3e31e5f81"
+    },
+    {
+      "path": "normal/initial/layout/portfolio-1440.json",
+      "bytes": 571,
+      "sha256": "0e0bb342a4d751e65f183414a6eef848c2f8b214e41d963f723a02245def0f9b"
+    },
+    {
+      "path": "normal/initial/layout/portfolio-1920.json",
+      "bytes": 571,
+      "sha256": "6c763335c8489056ff10698106e2596a0b383c55662fc0ebe2d3c38e51062ac0"
+    },
+    {
+      "path": "normal/initial/layout/portfolio-320.json",
+      "bytes": 567,
+      "sha256": "0fae6a3c764a57a5b552236322c82294c9fe84924bb8a82790c1e31ed0322ee3"
+    },
+    {
+      "path": "normal/initial/layout/portfolio-375.json",
+      "bytes": 567,
+      "sha256": "740c609c27c255f16496c0b2f85d0bc078cfc94c5b5dc2be8fde4e860389222d"
+    },
+    {
+      "path": "normal/initial/layout/portfolio-768.json",
+      "bytes": 567,
+      "sha256": "c7948045630799268e4bb7a3a25cfd7de4685e925d3f424c72c7358afd90eee9"
+    },
+    {
+      "path": "normal/initial/layout/services-1440.json",
+      "bytes": 570,
+      "sha256": "ade45ee95924ec2f2fb278cf6bdc94338edae3bad6f4bb352e98908a6d82cac5"
+    },
+    {
+      "path": "normal/initial/layout/services-1920.json",
+      "bytes": 570,
+      "sha256": "a5aae7ae9b9eb3b022dcb9b4e7f4362707f23a79cf51d4a176f5495c9e95bb52"
+    },
+    {
+      "path": "normal/initial/layout/services-320.json",
+      "bytes": 566,
+      "sha256": "49c77b630d0e27413585756cc90880a5245fcf58b40992c6d996b21ca9b99290"
+    },
+    {
+      "path": "normal/initial/layout/services-375.json",
+      "bytes": 566,
+      "sha256": "d6ad9a005231718224197e201cbaa1c6e2ca5e65f2b9dce75b8bcb999148fc1f"
+    },
+    {
+      "path": "normal/initial/layout/services-768.json",
+      "bytes": 566,
+      "sha256": "e2676ef1ed7ae35db95b4f9d0ce16c61de99de70684c14554688de472c2334bf"
+    },
+    {
+      "path": "normal/initial/layout/solutions-1440.json",
+      "bytes": 571,
+      "sha256": "d6ffa166ce9da40154dac3bc5e9b8865a8737b05bfc0116b25d8830dcf85e624"
+    },
+    {
+      "path": "normal/initial/layout/solutions-1920.json",
+      "bytes": 571,
+      "sha256": "6308633c98559cd9b9955beb87852a40bbb904c7db98405d794826476d44d687"
+    },
+    {
+      "path": "normal/initial/layout/solutions-320.json",
+      "bytes": 567,
+      "sha256": "4da438bae9d9dcb2b7516271b1073f9819f187944e9ac573656fa06b022aa5df"
+    },
+    {
+      "path": "normal/initial/layout/solutions-375.json",
+      "bytes": 567,
+      "sha256": "ad493a2bf2ac91550b120b01a78462fb9bc6f4da5381a3c17f913ad07a1ba5f4"
+    },
+    {
+      "path": "normal/initial/layout/solutions-768.json",
+      "bytes": 567,
+      "sha256": "84b1f198fa38ff0156d8f9f6a1acfdbbb359af5eb731c5584faf5e26d9bad3b0"
+    },
+    {
+      "path": "normal/initial/links.json",
+      "bytes": 50054,
+      "sha256": "1e0bd84b13d67be92511001f0332e01c05a2b7160cd5bc6e46b550b148d4155b"
+    },
+    {
+      "path": "normal/initial/local-check.cjs",
+      "bytes": 38008,
+      "sha256": "ca87e5c0b3be98c3b44d1208068bb663ff8fd51691fb84e94f350fe9184fa763"
+    },
+    {
+      "path": "normal/initial/manual-review.json",
+      "bytes": 23738,
+      "sha256": "24d1e33c8dd3728077eaf27983427328159897128746404798c9deb99ef8f58f"
+    },
+    {
+      "path": "normal/initial/metadata/about.head.html",
+      "bytes": 2335,
+      "sha256": "a1cbd35f8526f803e4287c955c72b4bf39e68efa8d8bb032e25e574e22755f0c"
+    },
+    {
+      "path": "normal/initial/metadata/contact.head.html",
+      "bytes": 2420,
+      "sha256": "4160630c6bce7c0e2a091988ddabeda5e9bf3a3d1b505f345e99eef7cba99e18"
+    },
+    {
+      "path": "normal/initial/metadata/portfolio--corporate-website.head.html",
+      "bytes": 2628,
+      "sha256": "e2f9748ad9c0bcad3a8dcd4ec00bda419b7ac3b8045c2625963f8a72a2f500c3"
+    },
+    {
+      "path": "normal/initial/metadata/portfolio--enterprise-management.head.html",
+      "bytes": 2603,
+      "sha256": "33bb3ecf43b496d5631da38d6455133b0650f665fdd217aa803f53a24ca10083"
+    },
+    {
+      "path": "normal/initial/metadata/portfolio--integration-hub.head.html",
+      "bytes": 2573,
+      "sha256": "f5c873106be8977df40cb54779d46c2af0d4d884c917a27ac2947125b3d60c73"
+    },
+    {
+      "path": "normal/initial/metadata/portfolio.head.html",
+      "bytes": 2328,
+      "sha256": "13629d23bdae1bd6f1cc1b38c6f430f892d41bce521437984158c6910c41de79"
+    },
+    {
+      "path": "normal/initial/metadata/services.head.html",
+      "bytes": 2407,
+      "sha256": "4e66b06cc8158bec66b8ebd5571267ba3acec7a078b02a55c3187dd9cfbb59d1"
+    },
+    {
+      "path": "normal/initial/metadata/solutions.head.html",
+      "bytes": 2397,
+      "sha256": "618f2fbc77576dd2e8648f03bf2765fda5bc7046c6f7fac55c1327553cb6bd8b"
+    },
+    {
+      "path": "normal/initial/metadata-export-process.json",
+      "bytes": 694,
+      "sha256": "f6a987e054b9d4f1987599d91207ce5646c1104d36d23704bf58c5f40be5f651"
+    },
+    {
+      "path": "normal/initial/motion/about.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/initial/motion/contact.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/initial/motion/home.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/initial/motion/portfolio--corporate-website.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/initial/motion/portfolio--enterprise-management.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/initial/motion/portfolio--integration-hub.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/initial/motion/portfolio.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/initial/motion/services.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/initial/motion/solutions.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/initial/network-classification.json",
+      "bytes": 33100,
+      "sha256": "a4bdf3ec3107dfe1fe4b29df198da3dad4822f08a5b2d6eefb65f87376f4b5cd"
+    },
+    {
+      "path": "normal/initial/network-raw.ndjson",
+      "bytes": 3987946,
+      "sha256": "685b715e9fafdb4b78bd4bd2f799050ffdabc07ada02f35cf31e4d8dcfa3e6db"
+    },
+    {
+      "path": "normal/initial/network.cjs",
+      "bytes": 23900,
+      "sha256": "df3c29b1ad8369007960de5df4e720e795f2799efe4a55b9c4dffd3193dbe9ab"
+    },
+    {
+      "path": "normal/initial/results.json",
+      "bytes": 251961,
+      "sha256": "18000fc780689201a3e9b3fd444c6a76d8a67cdf06ffda9b66a47ea9936fd970"
+    },
+    {
+      "path": "normal/initial/semantics/about.json",
+      "bytes": 98401,
+      "sha256": "e2d7cbcf739911a3eb75524101a50c95354fcca1a3cbd0cc4115b61315b42dad"
+    },
+    {
+      "path": "normal/initial/semantics/contact.json",
+      "bytes": 106220,
+      "sha256": "b69bf1bb77cd6a189a0684f04f9c1e94c5b2ca35f315152c28dc61bb95848bc0"
+    },
+    {
+      "path": "normal/initial/semantics/portfolio--corporate-website.json",
+      "bytes": 88332,
+      "sha256": "21563978c120adb14754613dd2e6766b070f2738a03d6df8b01b330188375142"
+    },
+    {
+      "path": "normal/initial/semantics/portfolio--enterprise-management.json",
+      "bytes": 91252,
+      "sha256": "824d7463aecf5f8173dfbf54d093de52d57f505633941358cf2cc812f8bff799"
+    },
+    {
+      "path": "normal/initial/semantics/portfolio--integration-hub.json",
+      "bytes": 91150,
+      "sha256": "42ae1450e8ffe2f6616bfa042f9711cda550f8d03b5a465f0eadf4933b4b008c"
+    },
+    {
+      "path": "normal/initial/semantics/portfolio.json",
+      "bytes": 93773,
+      "sha256": "3a548370a647c2d32ea8e30f41d40640a38d58d509c84e47f043fe706faffd84"
+    },
+    {
+      "path": "normal/initial/semantics/services.json",
+      "bytes": 127020,
+      "sha256": "4074d2d45c9874942657fb5f8f42ee65b8a16939401ab9b5f1e690e7d7c5bca3"
+    },
+    {
+      "path": "normal/initial/semantics/solutions.json",
+      "bytes": 196883,
+      "sha256": "0fbd26a3681fefa5ef567e78c8a4af258f3f1e7c2ab5a7fa46cb9c24a2f97c21"
+    },
+    {
+      "path": "normal/initial/source-after.json",
+      "bytes": 28717,
+      "sha256": "dadd68a0a9cc7ce8ac5666ffb4f0338ce8311154c321f727b2986f1cf0f23108"
+    },
+    {
+      "path": "normal/initial/source-before.json",
+      "bytes": 28717,
+      "sha256": "dadd68a0a9cc7ce8ac5666ffb4f0338ce8311154c321f727b2986f1cf0f23108"
+    },
+    {
+      "path": "normal/initial/source.json",
+      "bytes": 12780,
+      "sha256": "aa16bb4156457dfa3401d368d12cf7c644393f7fa9342ad0a77ec6f7d673333b"
+    },
+    {
+      "path": "normal/retest/a11y-observations.cjs",
+      "bytes": 17500,
+      "sha256": "940fd70fccfa5c9e0fa80fcc9c8d00356037418acbfc4c1e0e881ab54b4ea609"
+    },
+    {
+      "path": "normal/retest/axe/about-1440-closed.json",
+      "bytes": 467941,
+      "sha256": "ed91a2656308d9289f367a7b52f9fb377268d07e68cc05c9005a27fddbdb3606"
+    },
+    {
+      "path": "normal/retest/axe/about-375-closed.json",
+      "bytes": 454047,
+      "sha256": "e23dbb6c6a8ba7307666b9d2ce8e4f1a00f30ac27c36571b1232817a07d66d19"
+    },
+    {
+      "path": "normal/retest/axe/about-375-expanded.json",
+      "bytes": 470597,
+      "sha256": "de2b679c2daef17e783d1343158b1d9e9f9806402bb8f70acc9ab317ea9c6c71"
+    },
+    {
+      "path": "normal/retest/axe/contact-1440-closed.json",
+      "bytes": 302985,
+      "sha256": "73596e65e66cbd720d469f527dfa2ec4622205f56d73963947e0a6bab360b5ad"
+    },
+    {
+      "path": "normal/retest/axe/contact-375-closed.json",
+      "bytes": 289094,
+      "sha256": "ad559becc4f214b9fd846fc608bef9d8b701006c31c0dd01aececdb85a6d971e"
+    },
+    {
+      "path": "normal/retest/axe/contact-375-expanded.json",
+      "bytes": 306066,
+      "sha256": "3cea9417df546fba389892e2dab9dd4d3075afa2e079c55f906d5e036d05be90"
+    },
+    {
+      "path": "normal/retest/axe/home-1440-closed.json",
+      "bytes": 490924,
+      "sha256": "06a8b8f322f6d612b792ac1d096c2ac8a26c97e20f32ada3168d2fe5ea5cb8ef"
+    },
+    {
+      "path": "normal/retest/axe/home-375-closed.json",
+      "bytes": 477033,
+      "sha256": "3a4b6ac8089673ffca6cc1dceb0d162ae91ca4b3755e61e6d513acfb445dd4fb"
+    },
+    {
+      "path": "normal/retest/axe/home-375-expanded.json",
+      "bytes": 494477,
+      "sha256": "48fac6481dcc51f7eadd9d944924c723f47faebf9cd50ed8b1e16020dfcf991c"
+    },
+    {
+      "path": "normal/retest/axe/portfolio--corporate-website-1440-closed.json",
+      "bytes": 338597,
+      "sha256": "1aabe83703d864e98aaf020d09e12f3bd40a71ac3907cb4bf298a9976c33eb14"
+    },
+    {
+      "path": "normal/retest/axe/portfolio--corporate-website-375-closed.json",
+      "bytes": 324636,
+      "sha256": "42bfbde2f13eb7456d9ed7a2aadbdde1a35afb33a63cd41a89148bd4c8ca0c08"
+    },
+    {
+      "path": "normal/retest/axe/portfolio--corporate-website-375-expanded.json",
+      "bytes": 341232,
+      "sha256": "281db28d0a32cbf77ea1aea889f530becf3c814c15675be21cacc7febd2e6937"
+    },
+    {
+      "path": "normal/retest/axe/portfolio--enterprise-management-1440-closed.json",
+      "bytes": 346100,
+      "sha256": "7b7d21c856ff6243052ffb5defc804c90fb1103160240e5de2ffd38bf0e0b08e"
+    },
+    {
+      "path": "normal/retest/axe/portfolio--enterprise-management-375-closed.json",
+      "bytes": 332069,
+      "sha256": "b7d47564138a57d24571b1a1f0d50e9e9d8886355cfbb0c4969101157ac40c68"
+    },
+    {
+      "path": "normal/retest/axe/portfolio--enterprise-management-375-expanded.json",
+      "bytes": 348965,
+      "sha256": "b8021e0707ba195a02f779f14a6ca5d666a0b266cde4beb4a23c3b01a2fc07b4"
+    },
+    {
+      "path": "normal/retest/axe/portfolio--integration-hub-1440-closed.json",
+      "bytes": 346147,
+      "sha256": "70d34112448c11a101c3c9656bea67c7ba4742ee3b3abbb45e206797ab8c38c3"
+    },
+    {
+      "path": "normal/retest/axe/portfolio--integration-hub-375-closed.json",
+      "bytes": 332116,
+      "sha256": "8607df1e9d37844a29fe38bfd11f77588312838b98b4b449aef441f738c1e520"
+    },
+    {
+      "path": "normal/retest/axe/portfolio--integration-hub-375-expanded.json",
+      "bytes": 348712,
+      "sha256": "92af374d469a2a965ac7f7c19f26a01af77da00e80d57bfa555e67053a459598"
+    },
+    {
+      "path": "normal/retest/axe/portfolio-1440-closed.json",
+      "bytes": 442728,
+      "sha256": "0fdcb7c81f85cb136e08d4191a132c4d3815f91e0a62f49670fd04e1861f9033"
+    },
+    {
+      "path": "normal/retest/axe/portfolio-375-closed.json",
+      "bytes": 428697,
+      "sha256": "8016b1d048380ff9b254c4110df71ab55542357565883c1192b022e8e3759ce6"
+    },
+    {
+      "path": "normal/retest/axe/portfolio-375-expanded.json",
+      "bytes": 445867,
+      "sha256": "298110a860ad0956941c4a6ac856b3dd85d273b27ac2e64d382b0479cf657148"
+    },
+    {
+      "path": "normal/retest/axe/services-1440-closed.json",
+      "bytes": 652422,
+      "sha256": "094cc09f33d9543a44f082d28355b5609b0d0d28c8418b5e14a30cd8486f6093"
+    },
+    {
+      "path": "normal/retest/axe/services-375-closed.json",
+      "bytes": 638528,
+      "sha256": "9a200fa9611fbd9b8fb87d255a4047f44ac38198b004ddfa2c5bb6ea2c1fcd6a"
+    },
+    {
+      "path": "normal/retest/axe/services-375-expanded.json",
+      "bytes": 655524,
+      "sha256": "a8150a45a90b6755f4cf6f3bb5ab4d076a3ab220c4d324e53606ab004999f610"
+    },
+    {
+      "path": "normal/retest/axe/solutions-1440-closed.json",
+      "bytes": 996949,
+      "sha256": "f671e3d38d7dc070f30292f5e489d1b4a6d18b2b51be77a73090daacddb40389"
+    },
+    {
+      "path": "normal/retest/axe/solutions-375-closed.json",
+      "bytes": 982918,
+      "sha256": "de847880b74ff4610ee1d2c0f54f827f507d7c67483a08a7dc776be50ea0c5a0"
+    },
+    {
+      "path": "normal/retest/axe/solutions-375-expanded.json",
+      "bytes": 1000386,
+      "sha256": "6b112a1444a91f745868b2993478791efc9d4e724c11121a24228b9f3d7f0846"
+    },
+    {
+      "path": "normal/retest/contrast/about.json",
+      "bytes": 1162076,
+      "sha256": "fcf4f9e316d96b354e2fa294af56a58bd451f8533ee0dcf6895909e6b457a6e7"
+    },
+    {
+      "path": "normal/retest/contrast/contact.json",
+      "bytes": 600779,
+      "sha256": "4436bfccabe3019ab358a594d1856d16fc53d6a0ed248fdb5059b52aebb1a36c"
+    },
+    {
+      "path": "normal/retest/contrast/home.json",
+      "bytes": 1114597,
+      "sha256": "ad37f8adf7c7a7513810bf3b48656097f2f498a0f47c403131321463645ae430"
+    },
+    {
+      "path": "normal/retest/contrast/portfolio--corporate-website.json",
+      "bytes": 642816,
+      "sha256": "ca9453c0672641b57d7fe71ad2ea2300dd2f3973eac19e95e7f24ac21570daee"
+    },
+    {
+      "path": "normal/retest/contrast/portfolio--enterprise-management.json",
+      "bytes": 674025,
+      "sha256": "549068b9a4c48312af7d6cb01c843b43d5db4972cbeae8bead0086b08a3f0c71"
+    },
+    {
+      "path": "normal/retest/contrast/portfolio--integration-hub.json",
+      "bytes": 675958,
+      "sha256": "186c325656e4a11f26ef9dba0a49f30ecbf00f6ae710f15491b17be0f354fd1b"
+    },
+    {
+      "path": "normal/retest/contrast/portfolio.json",
+      "bytes": 1072466,
+      "sha256": "2ca915bc17590facdca2ee3adce289ee6d37fc8869f1577b42c8d0ecfcc1ec13"
+    },
+    {
+      "path": "normal/retest/contrast/services.json",
+      "bytes": 1557298,
+      "sha256": "a609a680622fef26fd641fc7417265f9b99c8dd26515d620e2eca608b8f0a948"
+    },
+    {
+      "path": "normal/retest/contrast/solutions.json",
+      "bytes": 2860116,
+      "sha256": "e2addb162fcdbca71a49b59f43c822dc4bf2c2a2469fcaca63e24cd3a255f3c3"
+    },
+    {
+      "path": "normal/retest/expected-metadata.json",
+      "bytes": 4016,
+      "sha256": "ad27e9b20b253dc54b2542b03e782907a9c7280baf57c44bd105a3ad75abb136"
+    },
+    {
+      "path": "normal/retest/export-metadata.mjs",
+      "bytes": 994,
+      "sha256": "dd3def66bfece9059137a22a84847a8de713454f5ebc36ef3248909332591f5f"
+    },
+    {
+      "path": "normal/retest/focus/about-1440-footer.json",
+      "bytes": 7611,
+      "sha256": "5e78c15f8aaf30ffead3ed5bd56fffb0ecd1a0563b090ed4d4f056586b6ac3bb"
+    },
+    {
+      "path": "normal/retest/focus/about-1440-main.json",
+      "bytes": 7489,
+      "sha256": "5cb8e65fdf911c957c7f1172de3812a3fe9bebb4052a1239456b5a2c5ddbd10e"
+    },
+    {
+      "path": "normal/retest/focus/about-1440-skip.json",
+      "bytes": 7813,
+      "sha256": "dad010cc2e15ad380072218516acc2168a02fc73de0cb2add08324571d9f50de"
+    },
+    {
+      "path": "normal/retest/focus/about-375-footer.json",
+      "bytes": 7509,
+      "sha256": "34ed7a14fb6f5ec65460ae8dff6d8c3ea2759b5afdd4c9d52e90b7652468bdc8"
+    },
+    {
+      "path": "normal/retest/focus/about-375-main.json",
+      "bytes": 7437,
+      "sha256": "e56734e6c52eebf14ab73f7b986731b5073d7dd17f9b075a5009cf39798685a7"
+    },
+    {
+      "path": "normal/retest/focus/about-375-skip.json",
+      "bytes": 7820,
+      "sha256": "61954c4835efc0c7e19963c4e220aeb9c7dab1abad0b032e6aaff0469a10edd8"
+    },
+    {
+      "path": "normal/retest/focus/about-mobile-journey.json",
+      "bytes": 68741,
+      "sha256": "336db895c6069ff794eb7b0d2e8337b61fa6429c9974a86737d8b59de36cb199"
+    },
+    {
+      "path": "normal/retest/focus/contact-1440-footer.json",
+      "bytes": 7613,
+      "sha256": "340e2a1f493faa3e0d5c7909db8d605d06748ee4c350cf590141e4b626e354c2"
+    },
+    {
+      "path": "normal/retest/focus/contact-1440-main.json",
+      "bytes": 7491,
+      "sha256": "b76f2c7a774034d1d744220faf0ebe8cb7f411ec69d465824a0f2cae8af8f1e8"
+    },
+    {
+      "path": "normal/retest/focus/contact-1440-skip.json",
+      "bytes": 7815,
+      "sha256": "19cc166ec38593180e969554732cfd2c77b1d3ef8e8ce536eacfd64101355d1e"
+    },
+    {
+      "path": "normal/retest/focus/contact-375-footer.json",
+      "bytes": 7581,
+      "sha256": "249cde72a4636d9bbf944ef32ec224f9e399def1880c3d2705755dbbd048489e"
+    },
+    {
+      "path": "normal/retest/focus/contact-375-main.json",
+      "bytes": 7439,
+      "sha256": "d519d2cc60d6514ffe02f7d529cd6aaad29818facf9d29774a4781e84451eb58"
+    },
+    {
+      "path": "normal/retest/focus/contact-375-skip.json",
+      "bytes": 7822,
+      "sha256": "85cc3dca109f6e90e02ff3f226a1557c534b92a0edef7b7a3c62dcc603217870"
+    },
+    {
+      "path": "normal/retest/focus/contact-mobile-journey.json",
+      "bytes": 68789,
+      "sha256": "ab18837d6e3df10e4255f7ff82e205806dcb938c42bddf39026dde2b80ab6a1e"
+    },
+    {
+      "path": "normal/retest/focus/home-1440-footer.json",
+      "bytes": 7606,
+      "sha256": "2c25c3b3c86289eb2b6c7276cd9f7e143f4f6d4341eba38bad644bc4b4de6bc8"
+    },
+    {
+      "path": "normal/retest/focus/home-1440-main.json",
+      "bytes": 12776,
+      "sha256": "8049bd387c4997326c6b1123a31345aef8e4530acc3fe18a4ec714c30b1c82c1"
+    },
+    {
+      "path": "normal/retest/focus/home-1440-skip.json",
+      "bytes": 7808,
+      "sha256": "fd3488f175d3aa7703ca74764f32f435171f50b2de1b1ddba2ebc323213429c2"
+    },
+    {
+      "path": "normal/retest/focus/home-375-footer.json",
+      "bytes": 7588,
+      "sha256": "d3b91dc2b6fcc39ed3baee90a3ad9a36968f3154c439c7c20a365025e49c90b4"
+    },
+    {
+      "path": "normal/retest/focus/home-375-main.json",
+      "bytes": 12764,
+      "sha256": "353705b53c399c29421134a369a9ef570cf64190f546ce681ad4ddaa89d7fe9d"
+    },
+    {
+      "path": "normal/retest/focus/home-375-skip.json",
+      "bytes": 7815,
+      "sha256": "53c9786b308307b19ae188af873e89659e3258a51be43446613a28a256879c5f"
+    },
+    {
+      "path": "normal/retest/focus/home-mobile-journey.json",
+      "bytes": 74029,
+      "sha256": "92e41364c4d076f7b0e34e599fa3cacae3894dd6a10ef859218939417085585e"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--corporate-website-1440-footer.json",
+      "bytes": 7563,
+      "sha256": "092c0e285ab4b1f5c1c2c0c9eb9e947346c7c84cd690c9e68c86c69f2e65be33"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--corporate-website-1440-main.json",
+      "bytes": 7511,
+      "sha256": "23ca42ee348272cfcc7e4b9a0d1ec6fd7111357d211bb2e4dcdf1efcf0439e97"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--corporate-website-1440-skip.json",
+      "bytes": 7835,
+      "sha256": "eacc5a490e35da86ad64276bceb9988d5ea151c97cc5010d640ad691e16c1c4f"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--corporate-website-375-footer.json",
+      "bytes": 7629,
+      "sha256": "ec1dcf0a828f333d558ebefee5f792333fb50102bea2e01a85af5cd83c5ddc81"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--corporate-website-375-main.json",
+      "bytes": 7459,
+      "sha256": "446d9d6a78eb799b0b5525c62b0d22f5a82a56986dbb5f1dfba54526e70d4e0b"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--corporate-website-375-skip.json",
+      "bytes": 7842,
+      "sha256": "b0c4eb30d74cc140c5f794ae4949531a26d075ea4c956ccc24a435ccebb65783"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--corporate-website-mobile-journey.json",
+      "bytes": 68865,
+      "sha256": "3eeb852917c011ceb57db28b20dd7b4911c3cfafe7fb840757969ffab3de032f"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--enterprise-management-1440-footer.json",
+      "bytes": 7623,
+      "sha256": "4259adea06a5b4e05cf7af998aa499f96ebf866f8788281f4af0e0dfcd3d09ca"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--enterprise-management-1440-main.json",
+      "bytes": 7515,
+      "sha256": "0f2a82da01afc695bb23f4d1bced907882e4378ffe3c40a08d2aef7e67b86001"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--enterprise-management-1440-skip.json",
+      "bytes": 7839,
+      "sha256": "de759a04a495be9977ae48d7a109ad9e8d7284b0e922c5f7f923928ccb69f836"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--enterprise-management-375-footer.json",
+      "bytes": 7619,
+      "sha256": "17e3e15d2070818d8906ee81b6af95be95d292dd458c18cd01883eec77a8be09"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--enterprise-management-375-main.json",
+      "bytes": 7463,
+      "sha256": "b84b06bd30da3083ed7ff9ec05a38303fda00868832ba275539190dc8e645cdb"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--enterprise-management-375-skip.json",
+      "bytes": 7846,
+      "sha256": "4cb9ae758588378c445d99142ebdc3b466fa1be14129736cf7a99b66a9ab16a0"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--enterprise-management-mobile-journey.json",
+      "bytes": 68897,
+      "sha256": "a10d9f0a354523d147b1cc1fa2cc8236557ff0e60f3d69813793d49f7ce7744e"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--integration-hub-1440-footer.json",
+      "bytes": 7603,
+      "sha256": "b61865dbcf7efe9ccdf93dd3576d76d15a7eff6ff5b0b93e787dd06d3a4cc2cc"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--integration-hub-1440-main.json",
+      "bytes": 7509,
+      "sha256": "e288af9c0c1865d897044c4205bd8f42811e0aa1743d363f3e3ecbad1a61a491"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--integration-hub-1440-skip.json",
+      "bytes": 7833,
+      "sha256": "ee8ff7508763aa45ff954b7d280ba42949a8c8dfdbcc3b1780caf18ee4b4162f"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--integration-hub-375-footer.json",
+      "bytes": 7627,
+      "sha256": "307126d40c5f47edaced41eb9ca7f5e579f8711f4f9b7b462c4b802f8f729953"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--integration-hub-375-main.json",
+      "bytes": 7457,
+      "sha256": "770a6baf5dd43aa27a40840685c2e5934c963ecdefe504f7c4c52093e332cee2"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--integration-hub-375-skip.json",
+      "bytes": 7840,
+      "sha256": "e4fdaa35067953b88b04a7450ffbeae9e710a94e255d50cf70305cc89062e7c5"
+    },
+    {
+      "path": "normal/retest/focus/portfolio--integration-hub-mobile-journey.json",
+      "bytes": 68849,
+      "sha256": "732972e83f368bafc460f3696c94afc809c5a683ad4b80c7ab4467b301ef75b4"
+    },
+    {
+      "path": "normal/retest/focus/portfolio-1440-footer.json",
+      "bytes": 7615,
+      "sha256": "6c4d668a22b2a5804577fb0cafcafcacc0434b646784901c78db33bd1c579c12"
+    },
+    {
+      "path": "normal/retest/focus/portfolio-1440-main.json",
+      "bytes": 7493,
+      "sha256": "922f9b5ea0c1ca603ef3b7753aee7b6e658ee00d1d4e79dc8976e84bc6f721c0"
+    },
+    {
+      "path": "normal/retest/focus/portfolio-1440-skip.json",
+      "bytes": 7817,
+      "sha256": "fbdadf979633d96d256ee31cc69243f50847098200396107de01ec798f75bc80"
+    },
+    {
+      "path": "normal/retest/focus/portfolio-375-footer.json",
+      "bytes": 7611,
+      "sha256": "512d92a77ee7527814e040e1d9cd2f498f57d202c1f1c79dee0ca63f16a8cfb5"
+    },
+    {
+      "path": "normal/retest/focus/portfolio-375-main.json",
+      "bytes": 7441,
+      "sha256": "12590c562b7dce2c53c7e3f93eccab398a682f27e0a1626acc7077b601ab84e9"
+    },
+    {
+      "path": "normal/retest/focus/portfolio-375-skip.json",
+      "bytes": 7824,
+      "sha256": "ffc52ae48d076b4660d1bb44d22a42c440a7f3c2559256bda9aa0dc6a307cd89"
+    },
+    {
+      "path": "normal/retest/focus/portfolio-mobile-journey.json",
+      "bytes": 68805,
+      "sha256": "990b1d047f2a0fab1a7eb3a032ac734b2704c4f5b3dc3bf40aa5def94ff16a55"
+    },
+    {
+      "path": "normal/retest/focus/services-1440-footer.json",
+      "bytes": 7600,
+      "sha256": "9e76bcc9c9caba33072432522b6efc31e616fc975788edb8483a5e765b467d85"
+    },
+    {
+      "path": "normal/retest/focus/services-1440-main.json",
+      "bytes": 7492,
+      "sha256": "dc881779c8a4dcf14aa89cc9735bfb38a59cadb20a72bada41aaff2d058f860d"
+    },
+    {
+      "path": "normal/retest/focus/services-1440-skip.json",
+      "bytes": 7816,
+      "sha256": "8b7f86609ea0c90086b73673b1d087b92826af2fd767354a8318ed0e631b4ed4"
+    },
+    {
+      "path": "normal/retest/focus/services-375-footer.json",
+      "bytes": 7611,
+      "sha256": "37dba5a50aa27ff178cf038aeaa10963408454446062bea3aad9f2bc756b8d80"
+    },
+    {
+      "path": "normal/retest/focus/services-375-main.json",
+      "bytes": 7440,
+      "sha256": "aa3b3b21d69ee61f43324d90cb94fc9f5993b1a830209327fc9131640e2161ea"
+    },
+    {
+      "path": "normal/retest/focus/services-375-skip.json",
+      "bytes": 7823,
+      "sha256": "d24dbb6ea9f0e65a0c721ba7c1a5ec8af3e124e6ce04ca364a0cbbe662b69f0f"
+    },
+    {
+      "path": "normal/retest/focus/services-mobile-journey.json",
+      "bytes": 68769,
+      "sha256": "9f21fbe80704991b9b71a7fc17e3d1c28a83ab9423618878fc6508be07d5f5a1"
+    },
+    {
+      "path": "normal/retest/focus/solutions-1440-footer.json",
+      "bytes": 7616,
+      "sha256": "73e34a49024bed813fd36e5980ae2f5bb9edca972ce67ceb4406eceb93e6127b"
+    },
+    {
+      "path": "normal/retest/focus/solutions-1440-main.json",
+      "bytes": 7493,
+      "sha256": "130036b686abf6ac03811451dffca21f1b4f2630ea2b51b2be2ff03e4f9181d9"
+    },
+    {
+      "path": "normal/retest/focus/solutions-1440-skip.json",
+      "bytes": 7817,
+      "sha256": "0921516081b2eaa7f2c4b90c07d7bfcc7b2cacd6e2a973a1dba43c24c93197bf"
+    },
+    {
+      "path": "normal/retest/focus/solutions-375-footer.json",
+      "bytes": 7612,
+      "sha256": "736f41a9115f034b4b3c6af22a74fdf31d095931dd3e95e01db19d58dbbbc04d"
+    },
+    {
+      "path": "normal/retest/focus/solutions-375-main.json",
+      "bytes": 7441,
+      "sha256": "9d90206210a234f47756c2cd995b77bcd58745097a90d1319f2f8dabdff90eec"
+    },
+    {
+      "path": "normal/retest/focus/solutions-375-skip.json",
+      "bytes": 7824,
+      "sha256": "b59fae05e20e6fb19d3647757fe3276ad7bfe547a45d69862af9b673b0a83905"
+    },
+    {
+      "path": "normal/retest/focus/solutions-mobile-journey.json",
+      "bytes": 68805,
+      "sha256": "e9c3ae8df3a2c102d3b0e59e7eb92ee3f684ef7d6493d0968a9a82871135951c"
+    },
+    {
+      "path": "normal/retest/home-service-anchor.json",
+      "bytes": 471,
+      "sha256": "ee15b0bee39f46399f1b5b8561c6fe58650ee3991c43080128a5833e42c4b779"
+    },
+    {
+      "path": "normal/retest/http/0d62da8444ddb206.body",
+      "bytes": 99144,
+      "sha256": "3b56f318559cb87cbeb9adc9dd31eb6ff049d450a81c84debbc09f8a70bfe78e"
+    },
+    {
+      "path": "normal/retest/http/0d62da8444ddb206.json",
+      "bytes": 841,
+      "sha256": "973b52ed498e7bc62c95056b9d5b595a7f27b32c24ff66f85d3d5041944ed91a"
+    },
+    {
+      "path": "normal/retest/http/3600c556e64eec72.body",
+      "bytes": 107927,
+      "sha256": "d20b186f619ac7efbad06f1bf6c1fcfb7787b9235f1b3eca22830630a2b606b5"
+    },
+    {
+      "path": "normal/retest/http/3600c556e64eec72.json",
+      "bytes": 833,
+      "sha256": "6b79d77a2d4dc90da7932de6e4deaa021a33d9b230cafa9bc14242101e58d290"
+    },
+    {
+      "path": "normal/retest/http/3e7d4532d3986979.body",
+      "bytes": 83311,
+      "sha256": "0ad24befd2c6b5df18453927b692ec2638f469fa3d206b56364565557a270d34"
+    },
+    {
+      "path": "normal/retest/http/3e7d4532d3986979.json",
+      "bytes": 837,
+      "sha256": "0ac0a6a11a1ed494d0d6e0da4c884fc1ee38197b7177a978031bc67b40a0d69d"
+    },
+    {
+      "path": "normal/retest/http/404-dev--design-system.body",
+      "bytes": 20648,
+      "sha256": "9b6ea272620cdebe834e4395da56a03d9f4534a23935cdccea4937c402e025d3"
+    },
+    {
+      "path": "normal/retest/http/404-dev--design-system.json",
+      "bytes": 1119,
+      "sha256": "ad911c5617651074a9b7d6359e61f152ec036b8cecaa1fb40a10f0cf5c5e8be5"
+    },
+    {
+      "path": "normal/retest/http/404-portfolio--unknown-task013-project.body",
+      "bytes": 34015,
+      "sha256": "32dbb75fa2eeecf9d9d04359d81c04bda546ac15fb16755418b42cedb86dac97"
+    },
+    {
+      "path": "normal/retest/http/404-portfolio--unknown-task013-project.json",
+      "bytes": 947,
+      "sha256": "86476cd9d2d61a7ba89d436411dcf965dd0824f4f699499c4d4003bf63e830d0"
+    },
+    {
+      "path": "normal/retest/http/404-privacy.body",
+      "bytes": 19948,
+      "sha256": "a373664e566c27102a58938c0d315b061e46049773adb611fb956d3e24c21569"
+    },
+    {
+      "path": "normal/retest/http/404-privacy.json",
+      "bytes": 1088,
+      "sha256": "99a903c6208e65513f7adc27d0418cfbb7a6684f57f9f8a1c85dfb9e55bf1046"
+    },
+    {
+      "path": "normal/retest/http/404-sitemap.xml.body",
+      "bytes": 34015,
+      "sha256": "32dbb75fa2eeecf9d9d04359d81c04bda546ac15fb16755418b42cedb86dac97"
+    },
+    {
+      "path": "normal/retest/http/404-sitemap.xml.json",
+      "bytes": 880,
+      "sha256": "5ed4127c8ea7b149f7bb6a5d9c0f25600088d9778361de2c01baea0846d72016"
+    },
+    {
+      "path": "normal/retest/http/404-unknown-task013-route.body",
+      "bytes": 34015,
+      "sha256": "32dbb75fa2eeecf9d9d04359d81c04bda546ac15fb16755418b42cedb86dac97"
+    },
+    {
+      "path": "normal/retest/http/404-unknown-task013-route.json",
+      "bytes": 910,
+      "sha256": "d2242be5bc40275fc2aa22845f85114b4c99d4aec983cf30b6c156ae80f112c8"
+    },
+    {
+      "path": "normal/retest/http/454a32858ec91b3e.body",
+      "bytes": 120340,
+      "sha256": "f3e387e3fd0a88084d8e84a09d2e345c2af08d89c4c9194d072125321cfc7b9c"
+    },
+    {
+      "path": "normal/retest/http/454a32858ec91b3e.json",
+      "bytes": 823,
+      "sha256": "6cda4976ff8239544ac7437da10817e43ccac579d836d1087276589505447bdb"
+    },
+    {
+      "path": "normal/retest/http/51582aaafec45cb6.body",
+      "bytes": 84395,
+      "sha256": "a234926bd9770bc859eb243d9c2737403eb8922aeb24864772a89d7ab46a90f0"
+    },
+    {
+      "path": "normal/retest/http/51582aaafec45cb6.json",
+      "bytes": 872,
+      "sha256": "5f10fbb0bc1cb43ae5c3944bcb6d257b66e296e6943f042dcfd43078f3e1aad7"
+    },
+    {
+      "path": "normal/retest/http/7219593ca83f06fc.body",
+      "bytes": 81779,
+      "sha256": "1e8eb515adba9ea9ddcef187759cca6c98cd51ee9eea58d3a0df5db1d810c084"
+    },
+    {
+      "path": "normal/retest/http/7219593ca83f06fc.json",
+      "bytes": 876,
+      "sha256": "680dc7318e60c8267a4a232032d5890afbd1cca28e50109c74ff731f8f86706b"
+    },
+    {
+      "path": "normal/retest/http/a28395ae9c87f35e.body",
+      "bytes": 152657,
+      "sha256": "d0be0210c4a51e8f8465239937794ecebcc9140cae97960b944d9ca4039c01b0"
+    },
+    {
+      "path": "normal/retest/http/a28395ae9c87f35e.json",
+      "bytes": 839,
+      "sha256": "73c339b663831bc28e5bc4ee296e7608167aee3ed9075eb5a2979875b54cd041"
+    },
+    {
+      "path": "normal/retest/http/about.body",
+      "bytes": 107927,
+      "sha256": "d20b186f619ac7efbad06f1bf6c1fcfb7787b9235f1b3eca22830630a2b606b5"
+    },
+    {
+      "path": "normal/retest/http/about.json",
+      "bytes": 822,
+      "sha256": "33ab17fed51efe83b12f6e1350ac21044bab7ad88e92f82ba017167c16060a99"
+    },
+    {
+      "path": "normal/retest/http/ad1d38f041639a26.body",
+      "bytes": 84767,
+      "sha256": "fcc3023b4dd8c5c81e95e61823854d541edf13015c0eb391f99c8edc76f1a9fa"
+    },
+    {
+      "path": "normal/retest/http/ad1d38f041639a26.json",
+      "bytes": 884,
+      "sha256": "9b59f150f2b25611304eb550afba06e84fa302c366780a5df6ba4a78e4fce7c7"
+    },
+    {
+      "path": "normal/retest/http/contact.body",
+      "bytes": 83311,
+      "sha256": "0ad24befd2c6b5df18453927b692ec2638f469fa3d206b56364565557a270d34"
+    },
+    {
+      "path": "normal/retest/http/contact.json",
+      "bytes": 828,
+      "sha256": "b3d4424001e57fff34f785608fc4e956def3090c39be3e9376ff571f99118ec2"
+    },
+    {
+      "path": "normal/retest/http/f4fbafe9fa296c42.body",
+      "bytes": 226104,
+      "sha256": "8e344cfd2942a8b35b204e866c058d2b5cb677c6283e90b3c09f9184489f3426"
+    },
+    {
+      "path": "normal/retest/http/f4fbafe9fa296c42.json",
+      "bytes": 841,
+      "sha256": "2d3fa80bfd97351149bec1a38a1be748f91f592b0f5eb00f755e29857869d37b"
+    },
+    {
+      "path": "normal/retest/http/home.body",
+      "bytes": 120340,
+      "sha256": "f3e387e3fd0a88084d8e84a09d2e345c2af08d89c4c9194d072125321cfc7b9c"
+    },
+    {
+      "path": "normal/retest/http/home.json",
+      "bytes": 811,
+      "sha256": "dd9b335c935e1a74f2c18b95ea53ad426072d0ffc94f260956de231a0890d52b"
+    },
+    {
+      "path": "normal/retest/http/portfolio--corporate-website.body",
+      "bytes": 81779,
+      "sha256": "1e8eb515adba9ea9ddcef187759cca6c98cd51ee9eea58d3a0df5db1d810c084"
+    },
+    {
+      "path": "normal/retest/http/portfolio--corporate-website.json",
+      "bytes": 888,
+      "sha256": "0665ef77c0991ea4f6a810791c9f92b51190892c24ee1299f2280d872e84cd5a"
+    },
+    {
+      "path": "normal/retest/http/portfolio--enterprise-management.body",
+      "bytes": 84767,
+      "sha256": "fcc3023b4dd8c5c81e95e61823854d541edf13015c0eb391f99c8edc76f1a9fa"
+    },
+    {
+      "path": "normal/retest/http/portfolio--enterprise-management.json",
+      "bytes": 900,
+      "sha256": "2b7730ab5e36a1a1dcd13ea90dc8b107a3b1302c2e1edfc9ba0c182d7d259368"
+    },
+    {
+      "path": "normal/retest/http/portfolio--integration-hub.body",
+      "bytes": 84395,
+      "sha256": "a234926bd9770bc859eb243d9c2737403eb8922aeb24864772a89d7ab46a90f0"
+    },
+    {
+      "path": "normal/retest/http/portfolio--integration-hub.json",
+      "bytes": 882,
+      "sha256": "1e35e26b08b10df97d72728398c1f98ebc3719c7352f4c2adc846b5470c86e52"
+    },
+    {
+      "path": "normal/retest/http/portfolio.body",
+      "bytes": 99144,
+      "sha256": "3b56f318559cb87cbeb9adc9dd31eb6ff049d450a81c84debbc09f8a70bfe78e"
+    },
+    {
+      "path": "normal/retest/http/portfolio.json",
+      "bytes": 834,
+      "sha256": "abe8540fc7c058524fe9f8ba5bc4f0c1059eab6dd1676dce34531efd013bb782"
+    },
+    {
+      "path": "normal/retest/http/robots.body",
+      "bytes": 59,
+      "sha256": "f0c79b7c19d143d61fa6f287e11868a686996d8ba6662fabd771a73e78984737"
+    },
+    {
+      "path": "normal/retest/http/robots.json",
+      "bytes": 699,
+      "sha256": "99d2fa5d7e856b56efa9cef8d9e907a6657cc767a0c026e922f3eaf96aa0fc5d"
+    },
+    {
+      "path": "normal/retest/http/services.body",
+      "bytes": 152657,
+      "sha256": "d0be0210c4a51e8f8465239937794ecebcc9140cae97960b944d9ca4039c01b0"
+    },
+    {
+      "path": "normal/retest/http/services.json",
+      "bytes": 831,
+      "sha256": "6f9b215d76c08f59bbd6d70d9aee9149aba359f1a489070532fc0679a43626bd"
+    },
+    {
+      "path": "normal/retest/http/solutions.body",
+      "bytes": 226104,
+      "sha256": "8e344cfd2942a8b35b204e866c058d2b5cb677c6283e90b3c09f9184489f3426"
+    },
+    {
+      "path": "normal/retest/http/solutions.json",
+      "bytes": 834,
+      "sha256": "ae8c8a61c6e648cab6902d89fa28d86aeb27269fae6687bf3adb22ec5da2d71d"
+    },
+    {
+      "path": "normal/retest/layout/about-1440.json",
+      "bytes": 567,
+      "sha256": "5b919f96750f30468ab3094bc48ca54f41a2730b1789a97582be77b6e2bfa159"
+    },
+    {
+      "path": "normal/retest/layout/about-1920.json",
+      "bytes": 567,
+      "sha256": "fdfb94e33cee6e5825df5c81f8ad93d144c8751da1f5af74076d390308142bf8"
+    },
+    {
+      "path": "normal/retest/layout/about-320.json",
+      "bytes": 563,
+      "sha256": "3d4f006c2add382d6384294e12826c734725ab678ea4a69979c8711eb04d7a73"
+    },
+    {
+      "path": "normal/retest/layout/about-375.json",
+      "bytes": 563,
+      "sha256": "deaa8f6081c20ac09e91da8218c1d8e4cde31153099189c1b810d82ca8bbba0d"
+    },
+    {
+      "path": "normal/retest/layout/about-768.json",
+      "bytes": 563,
+      "sha256": "68a7fd3c9b844ca72221c21b5253b6eaeb2308c2e3c1dfa2b0493af6c3800448"
+    },
+    {
+      "path": "normal/retest/layout/contact-1440.json",
+      "bytes": 569,
+      "sha256": "40b16844cd10f840cfbc2bd6310ae1e462f163c68238e323c9634f3bb8af3421"
+    },
+    {
+      "path": "normal/retest/layout/contact-1920.json",
+      "bytes": 569,
+      "sha256": "c1204371c90ba611687d274585a1ba6a5f8156e78014cc49fb6a37de67bfad5b"
+    },
+    {
+      "path": "normal/retest/layout/contact-320.json",
+      "bytes": 565,
+      "sha256": "a35632f7afaf7fab3a3006d503b14845d9c86ec19f58bbe4e97d30e71aaa6fcb"
+    },
+    {
+      "path": "normal/retest/layout/contact-375.json",
+      "bytes": 565,
+      "sha256": "7b41477d158786714a3cb9c3b1637ae967b81a674114f27aa9e2326a44c18721"
+    },
+    {
+      "path": "normal/retest/layout/contact-768.json",
+      "bytes": 565,
+      "sha256": "db3f2e887f18ec95f0822d00415e9704d897eba465f57fb42613e20ef40ca7fc"
+    },
+    {
+      "path": "normal/retest/layout/home-1440.json",
+      "bytes": 562,
+      "sha256": "6bb79dcfa167768769b07c19b0358c96188323bb15e67b96ae241588b73189c3"
+    },
+    {
+      "path": "normal/retest/layout/home-1920.json",
+      "bytes": 562,
+      "sha256": "7d4f1e65cc389788570aba58ea4b79b0cace4b52104e708f577b3c622c900968"
+    },
+    {
+      "path": "normal/retest/layout/home-320.json",
+      "bytes": 558,
+      "sha256": "06d3857032ec13fa596ab77e693bc6451a614620223315f5ad32260e3b7fbd47"
+    },
+    {
+      "path": "normal/retest/layout/home-375.json",
+      "bytes": 558,
+      "sha256": "926b820bb449407bae32ca5601c238f11c08a104db8fe9d324916d2ee299749c"
+    },
+    {
+      "path": "normal/retest/layout/home-768.json",
+      "bytes": 558,
+      "sha256": "6f7199ba40ff279e45c89f6fc7297b5bb803a7d736011f5f3120e7a9f3bb1ae9"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--corporate-website-1440.json",
+      "bytes": 589,
+      "sha256": "c52618fc39b07044aede5d564144c7c7871eff2d6b2ea685e5e0c4d9f7b9b534"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--corporate-website-1920.json",
+      "bytes": 589,
+      "sha256": "fe83da5568af3bf2c826f09d6e0ddfa62c02b1772d7d0c963a07b4d3cd49c801"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--corporate-website-320.json",
+      "bytes": 585,
+      "sha256": "036a4389cb6f498bac10fc7ccf15759d943900025450a41fc86508921238b522"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--corporate-website-375.json",
+      "bytes": 585,
+      "sha256": "847377859759476e96a1a19e594317f051bd526e043943c8f3816fc6c403b2c6"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--corporate-website-768.json",
+      "bytes": 585,
+      "sha256": "fc94c4ccfea3e929f8fa8139587421c1d854d4275220d3ab72ead88efb9adb17"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--enterprise-management-1440.json",
+      "bytes": 593,
+      "sha256": "4a84ed8da60e57e306bd466a3c04e266314a909f3e8f7c2e250138c9b1b9c818"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--enterprise-management-1920.json",
+      "bytes": 593,
+      "sha256": "b111f30f9828ed7ea7ed9236742b216750d83fab3de30960aa2b8281965df2f5"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--enterprise-management-320.json",
+      "bytes": 589,
+      "sha256": "b276b2d9a9bf85d76810c4d0d800942b7686e70a4f317f1ecfbe1b1583f617d0"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--enterprise-management-375.json",
+      "bytes": 589,
+      "sha256": "e20cc745e7b0799e063851bccf648b537426e60aad0b6360ef85893aebfbcae7"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--enterprise-management-768.json",
+      "bytes": 589,
+      "sha256": "eb8d548fd46c26fea366e6345854e0381b312da2f93290ff4ccd9379eaf14fc1"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--integration-hub-1440.json",
+      "bytes": 587,
+      "sha256": "c40ec37dc8c32199919834f832e02b2ad649fd462906bda4f5637101d5a9cb6f"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--integration-hub-1920.json",
+      "bytes": 587,
+      "sha256": "bafe6d3631d9a63f75855f1df50a625903e514132b030432c84b55068b9f2b17"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--integration-hub-320.json",
+      "bytes": 583,
+      "sha256": "f40e01403c3465d78169c5424c05802c6dcb6936d5a9c594069df9ebb3efa27d"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--integration-hub-375.json",
+      "bytes": 583,
+      "sha256": "caa90fc858d7321a3dfa635efbb2da04ca11ba7dc497dab3fe04968ef218c2e3"
+    },
+    {
+      "path": "normal/retest/layout/portfolio--integration-hub-768.json",
+      "bytes": 583,
+      "sha256": "4a9c1d6cba7ca0447f07e142d05f59deb0e6729293c50bed1681886e3184275d"
+    },
+    {
+      "path": "normal/retest/layout/portfolio-1440.json",
+      "bytes": 571,
+      "sha256": "35b0f93452f9ec318d8c7db3a5ad1a42dcc925ce7ef081473b1fe0031ea7941d"
+    },
+    {
+      "path": "normal/retest/layout/portfolio-1920.json",
+      "bytes": 571,
+      "sha256": "6ec0939fa4ec959f37244bf1661bc6f79ffb06ed6e6135f66742b1109430973d"
+    },
+    {
+      "path": "normal/retest/layout/portfolio-320.json",
+      "bytes": 567,
+      "sha256": "4afd514c1d634052ae3bd94ae411e4d2e5f00fd195dfc2dac02a90e39e71fba0"
+    },
+    {
+      "path": "normal/retest/layout/portfolio-375.json",
+      "bytes": 567,
+      "sha256": "b12d58e9cf11fe0928cd541d40e086fb4dae939330b7261b524945090bb37f63"
+    },
+    {
+      "path": "normal/retest/layout/portfolio-768.json",
+      "bytes": 567,
+      "sha256": "cda309c4057350a86c9f1ff83b5416d740dee24b91d6a5e7cf3bfc9070eaf90e"
+    },
+    {
+      "path": "normal/retest/layout/services-1440.json",
+      "bytes": 570,
+      "sha256": "9d5d3fe787a2e7c3774b96d2b5174f89df58f050e1ce351e78a680fe07327af5"
+    },
+    {
+      "path": "normal/retest/layout/services-1920.json",
+      "bytes": 570,
+      "sha256": "fd557943f30bfdd5dcb9cac82832bd5afb0a1a305e0796ec47f82bc1db903104"
+    },
+    {
+      "path": "normal/retest/layout/services-320.json",
+      "bytes": 566,
+      "sha256": "e8e2b086dd9860115b8971d8a17b9fc91e7f45b3f109344d1b39e5020b4ea7ab"
+    },
+    {
+      "path": "normal/retest/layout/services-375.json",
+      "bytes": 566,
+      "sha256": "1bf995b64fc735de107fff7840a16d89d7b31046fb946042885db56162fce06c"
+    },
+    {
+      "path": "normal/retest/layout/services-768.json",
+      "bytes": 566,
+      "sha256": "92d0e16be189ef02fb0271da0d13f4d29338a408edb2c172fd436235c7c9019d"
+    },
+    {
+      "path": "normal/retest/layout/solutions-1440.json",
+      "bytes": 571,
+      "sha256": "31614d4b503f339c6839b829d58f6eace17cb9fa93f37afe5ae40bfefe437de6"
+    },
+    {
+      "path": "normal/retest/layout/solutions-1920.json",
+      "bytes": 571,
+      "sha256": "f2a4147437e49097c94c0f3bd9147d6d199795ef1701c0557eb7c54e54756ee8"
+    },
+    {
+      "path": "normal/retest/layout/solutions-320.json",
+      "bytes": 567,
+      "sha256": "89bba1a8c8a28223333b320f732c466bd59851b2106149347499047bde099dfa"
+    },
+    {
+      "path": "normal/retest/layout/solutions-375.json",
+      "bytes": 567,
+      "sha256": "d0ff22e66cc0c9c175bd3182f84a840b326a6e7e1049fa80d129c5c004034524"
+    },
+    {
+      "path": "normal/retest/layout/solutions-768.json",
+      "bytes": 567,
+      "sha256": "9d93c5773822d45a9dbf38aee343847f906e3b232c43316edcdc8b1612418867"
+    },
+    {
+      "path": "normal/retest/links.json",
+      "bytes": 50054,
+      "sha256": "1e0bd84b13d67be92511001f0332e01c05a2b7160cd5bc6e46b550b148d4155b"
+    },
+    {
+      "path": "normal/retest/local-check.cjs",
+      "bytes": 38095,
+      "sha256": "1a077276345eedd8be53641f13f2ec13255536ed8f47bbad31e929418971ada1"
+    },
+    {
+      "path": "normal/retest/manual-review.json",
+      "bytes": 25412,
+      "sha256": "45ad48cca0afecbb1c79ef7458da73c8e07ad1ab173abd79e4a5e53ce484a3f3"
+    },
+    {
+      "path": "normal/retest/metadata/about.head.html",
+      "bytes": 2335,
+      "sha256": "a1cbd35f8526f803e4287c955c72b4bf39e68efa8d8bb032e25e574e22755f0c"
+    },
+    {
+      "path": "normal/retest/metadata/contact.head.html",
+      "bytes": 2420,
+      "sha256": "4160630c6bce7c0e2a091988ddabeda5e9bf3a3d1b505f345e99eef7cba99e18"
+    },
+    {
+      "path": "normal/retest/metadata/home.head.html",
+      "bytes": 2416,
+      "sha256": "36fef897c5765cd136fb12e21b7bb8892a469ed554aa60c503bf5e9cdfcad772"
+    },
+    {
+      "path": "normal/retest/metadata/portfolio--corporate-website.head.html",
+      "bytes": 2628,
+      "sha256": "e2f9748ad9c0bcad3a8dcd4ec00bda419b7ac3b8045c2625963f8a72a2f500c3"
+    },
+    {
+      "path": "normal/retest/metadata/portfolio--enterprise-management.head.html",
+      "bytes": 2603,
+      "sha256": "33bb3ecf43b496d5631da38d6455133b0650f665fdd217aa803f53a24ca10083"
+    },
+    {
+      "path": "normal/retest/metadata/portfolio--integration-hub.head.html",
+      "bytes": 2573,
+      "sha256": "f5c873106be8977df40cb54779d46c2af0d4d884c917a27ac2947125b3d60c73"
+    },
+    {
+      "path": "normal/retest/metadata/portfolio.head.html",
+      "bytes": 2328,
+      "sha256": "13629d23bdae1bd6f1cc1b38c6f430f892d41bce521437984158c6910c41de79"
+    },
+    {
+      "path": "normal/retest/metadata/services.head.html",
+      "bytes": 2407,
+      "sha256": "4e66b06cc8158bec66b8ebd5571267ba3acec7a078b02a55c3187dd9cfbb59d1"
+    },
+    {
+      "path": "normal/retest/metadata/solutions.head.html",
+      "bytes": 2397,
+      "sha256": "618f2fbc77576dd2e8648f03bf2765fda5bc7046c6f7fac55c1327553cb6bd8b"
+    },
+    {
+      "path": "normal/retest/metadata-export-process.json",
+      "bytes": 693,
+      "sha256": "c572f108e0dbcd7bce3c00ed248b8035d285d2a0f16026b7f85294c2548e1fa9"
+    },
+    {
+      "path": "normal/retest/motion/about.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/retest/motion/contact.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/retest/motion/home.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/retest/motion/portfolio--corporate-website.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/retest/motion/portfolio--enterprise-management.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/retest/motion/portfolio--integration-hub.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/retest/motion/portfolio.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/retest/motion/services.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/retest/motion/solutions.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "normal/retest/network-classification.json",
+      "bytes": 33119,
+      "sha256": "23165d55f2e6f8fd23515f14115e58096b518d499c9272c6391838976853c594"
+    },
+    {
+      "path": "normal/retest/network-raw.ndjson",
+      "bytes": 4001250,
+      "sha256": "0c537f5da38c398f09f0d7c0286fe7c4d1aa7d57e42e279b60b82fce449bb826"
+    },
+    {
+      "path": "normal/retest/network.cjs",
+      "bytes": 23900,
+      "sha256": "df3c29b1ad8369007960de5df4e720e795f2799efe4a55b9c4dffd3193dbe9ab"
+    },
+    {
+      "path": "normal/retest/results.json",
+      "bytes": 257221,
+      "sha256": "12e648b9a2dd632c17b4d88bc2e7c3ac5c5551aa0a0e8364df67feb0e831055b"
+    },
+    {
+      "path": "normal/retest/semantics/about.json",
+      "bytes": 98401,
+      "sha256": "de1a95dea0095e707871818be82c96a69306d7d2b2383e70a05f8b027a08a44d"
+    },
+    {
+      "path": "normal/retest/semantics/contact.json",
+      "bytes": 106220,
+      "sha256": "bff9599988434b4c50f70f0c2f8369f02f4d690b6801797e5f2716773d672405"
+    },
+    {
+      "path": "normal/retest/semantics/home.json",
+      "bytes": 102062,
+      "sha256": "6bbd31690aaaba2c14c44ef41b5d796a3d65d6494af6f26bbf5e98ce1818ff8d"
+    },
+    {
+      "path": "normal/retest/semantics/portfolio--corporate-website.json",
+      "bytes": 88332,
+      "sha256": "c224329bee5ee52f71cf1d278798fa67ac2ac14d1f6c2a996d1ec842fc0b8d6f"
+    },
+    {
+      "path": "normal/retest/semantics/portfolio--enterprise-management.json",
+      "bytes": 91252,
+      "sha256": "cf53bd11f29fecacee9e57240e750b556d5b3c726004b2ca20aef2b43806f5dd"
+    },
+    {
+      "path": "normal/retest/semantics/portfolio--integration-hub.json",
+      "bytes": 91150,
+      "sha256": "a002bb98b4c6465ab9a94ce3e2833dca1cff4e02682a8c18b63d5db6d481f581"
+    },
+    {
+      "path": "normal/retest/semantics/portfolio.json",
+      "bytes": 93773,
+      "sha256": "b65169951cea128ad556a56a277f0db503361276be303ed759de9a8002ec4e0c"
+    },
+    {
+      "path": "normal/retest/semantics/services.json",
+      "bytes": 127020,
+      "sha256": "ed9ab79ba409e5d43232993ec6b8a3ee4d020fa3fe1eb0ff0a3c4d88ca6281c6"
+    },
+    {
+      "path": "normal/retest/semantics/solutions.json",
+      "bytes": 196883,
+      "sha256": "eb489a97d10f71c9d0adbde5a6722783affc9a98a9250495be27b2b257e5f145"
+    },
+    {
+      "path": "normal/retest/source-after.json",
+      "bytes": 28717,
+      "sha256": "dadd68a0a9cc7ce8ac5666ffb4f0338ce8311154c321f727b2986f1cf0f23108"
+    },
+    {
+      "path": "normal/retest/source-before.json",
+      "bytes": 28717,
+      "sha256": "dadd68a0a9cc7ce8ac5666ffb4f0338ce8311154c321f727b2986f1cf0f23108"
+    },
+    {
+      "path": "normal/retest/source.json",
+      "bytes": 12780,
+      "sha256": "aa16bb4156457dfa3401d368d12cf7c644393f7fa9342ad0a77ec6f7d673333b"
+    },
+    {
+      "path": "normal-build.json",
+      "bytes": 16634,
+      "sha256": "00e8269ada256ab2ca92351c909f07972715977ae5e8ec783ee243f2b938b271"
+    },
+    {
+      "path": "normal-home-headers.txt",
+      "bytes": 445,
+      "sha256": "e92e32da79c2c482992f97d65b44f123add0147b1e3ad0ea178397f7dc1b3291"
+    },
+    {
+      "path": "normal-home.html",
+      "bytes": 120340,
+      "sha256": "f3e387e3fd0a88084d8e84a09d2e345c2af08d89c4c9194d072125321cfc7b9c"
+    },
+    {
+      "path": "operational-manifest.json",
+      "bytes": 4044,
+      "sha256": "65b1e7b3f18e642c0748436b94e49c1aee6fb7a79efb5f0a8ae685809c68677a"
+    },
+    {
+      "path": "pages/initial/a11y-observations.cjs",
+      "bytes": 17500,
+      "sha256": "940fd70fccfa5c9e0fa80fcc9c8d00356037418acbfc4c1e0e881ab54b4ea609"
+    },
+    {
+      "path": "pages/initial/contrast/about.json",
+      "bytes": 1162088,
+      "sha256": "00400e546fc20b8a16ad977c4b4624a557af5ce56ad1ecb72cc1378510ba8a93"
+    },
+    {
+      "path": "pages/initial/contrast/contact.json",
+      "bytes": 600791,
+      "sha256": "52428dff2d10c1786fecff530a9011742fd602224e2f2978bfd88098b3d22467"
+    },
+    {
+      "path": "pages/initial/contrast/home.json",
+      "bytes": 1114608,
+      "sha256": "3a912eec08d894780db5b5812f5e6aa74ab2eafe0606db7a3a941bc2512a3ce5"
+    },
+    {
+      "path": "pages/initial/contrast/portfolio--corporate-website.json",
+      "bytes": 642828,
+      "sha256": "8c434280f191ba4c9a428f5f536bafa65e6ed274b6993200d2b6c4c4f9071859"
+    },
+    {
+      "path": "pages/initial/contrast/portfolio--enterprise-management.json",
+      "bytes": 674037,
+      "sha256": "12d602624beb70b1868f7c5b0c2cdc457a4d04953fe11e39b7d2cd7adbadc210"
+    },
+    {
+      "path": "pages/initial/contrast/portfolio--integration-hub.json",
+      "bytes": 675970,
+      "sha256": "4e3dd8dc7d93a4444991e9fc995d5fa5d0654c52b9bc6a318a8263ce6c6cf5b7"
+    },
+    {
+      "path": "pages/initial/contrast/portfolio.json",
+      "bytes": 1072478,
+      "sha256": "a9e8f3c30b16561c93fc4304f7ea00b0bcfc4935c0b3722757da9334777a6e96"
+    },
+    {
+      "path": "pages/initial/contrast/services.json",
+      "bytes": 1557310,
+      "sha256": "6a2d0b22a4f8a36b665a02585ff543eda6c0df6f851702cca42cf67b9f05f079"
+    },
+    {
+      "path": "pages/initial/contrast/solutions.json",
+      "bytes": 2860128,
+      "sha256": "2f6fa582e26fcb5eae72b9a4cb69d6df2b62e0b67885304cd0fa2a1d7bef8abe"
+    },
+    {
+      "path": "pages/initial/expected-metadata.json",
+      "bytes": 4016,
+      "sha256": "c60dd1682f3dc6518cfef0a9a8b29b6829adc364867991c1631486c84771920a"
+    },
+    {
+      "path": "pages/initial/export-metadata.mjs",
+      "bytes": 994,
+      "sha256": "dd3def66bfece9059137a22a84847a8de713454f5ebc36ef3248909332591f5f"
+    },
+    {
+      "path": "pages/initial/export-protection.json",
+      "bytes": 153,
+      "sha256": "ead9e6e3e7b4925b252ccc1448ef04692ece8ede63fc55b817e299c741770c3d"
+    },
+    {
+      "path": "pages/initial/focus/about-1440-footer.json",
+      "bytes": 7623,
+      "sha256": "a6e1bcdd126370c705bda4d7ec06a78226edbd48a63fc3ad17bcc0c4f8681c3d"
+    },
+    {
+      "path": "pages/initial/focus/about-1440-main.json",
+      "bytes": 7501,
+      "sha256": "d179cf08879b752fe38dec3b7d7168032c265442a3d12442e39405391e0940a4"
+    },
+    {
+      "path": "pages/initial/focus/about-1440-skip.json",
+      "bytes": 7825,
+      "sha256": "1834d2c8a83b86e8d9c1d587fafcbf6b2ce112964ea6352ac6124cd25d9cd38f"
+    },
+    {
+      "path": "pages/initial/focus/about-375-footer.json",
+      "bytes": 7521,
+      "sha256": "336a0bd28da8dc3f570a20cd6567ac6e0042f6a72e87e1491c999b78d6c99675"
+    },
+    {
+      "path": "pages/initial/focus/about-375-main.json",
+      "bytes": 7449,
+      "sha256": "18b25ce6a664078d471e33be51ea96fdeaa5974ad0985da8e70ca56b123e8745"
+    },
+    {
+      "path": "pages/initial/focus/about-375-skip.json",
+      "bytes": 7832,
+      "sha256": "953e4630305152453daaa07d23e2a6338ff2909c4118116dd5daff74d3833d66"
+    },
+    {
+      "path": "pages/initial/focus/about-mobile-journey.json",
+      "bytes": 68825,
+      "sha256": "2492f3a2c8cdf7b619e27a84d812ae296216e3d6d5e900f9a5cc830779e518a1"
+    },
+    {
+      "path": "pages/initial/focus/contact-1440-footer.json",
+      "bytes": 7625,
+      "sha256": "41c7668bd45aeab3dd13e851eb2a9b0bc24e48286c099f821d623f2dc01a2e0c"
+    },
+    {
+      "path": "pages/initial/focus/contact-1440-main.json",
+      "bytes": 7503,
+      "sha256": "a490a0e57fce050f9a77af712b047bcf016f8745a3ac9bcb7e124052cc670668"
+    },
+    {
+      "path": "pages/initial/focus/contact-1440-skip.json",
+      "bytes": 7827,
+      "sha256": "8954dd3e8ff4929707e257fb8d4b55434fd7375ebab5fe1b2fbf653188d9bd70"
+    },
+    {
+      "path": "pages/initial/focus/contact-375-footer.json",
+      "bytes": 7593,
+      "sha256": "271e5b4904b46b87de604406fcd00a89ed11cb36629ca0b733565bdcc0e6da29"
+    },
+    {
+      "path": "pages/initial/focus/contact-375-main.json",
+      "bytes": 7451,
+      "sha256": "cd1e41c5c7860fc1f62326b6fbb156e63452bbe6ba659378fb3f97066ac93f2a"
+    },
+    {
+      "path": "pages/initial/focus/contact-375-skip.json",
+      "bytes": 7834,
+      "sha256": "269bdf16d5f1bea3b4786532e7999a1cb7817be5a0c138a23025a11dc88ca9c9"
+    },
+    {
+      "path": "pages/initial/focus/contact-mobile-journey.json",
+      "bytes": 68873,
+      "sha256": "db846c46f96813c7746b0a6be09dceb69884a553a65a2e6bdc755f9faad872a9"
+    },
+    {
+      "path": "pages/initial/focus/home-1440-footer.json",
+      "bytes": 7617,
+      "sha256": "293b6c34556a2ac13195c9f078101244129b39dcafb1e933917d53160a27fcbd"
+    },
+    {
+      "path": "pages/initial/focus/home-1440-main.json",
+      "bytes": 12787,
+      "sha256": "e53c67fd81eca6a2bc32218b9b45c32d6fc4fd219dd59f2fc6a86dc44f1131e6"
+    },
+    {
+      "path": "pages/initial/focus/home-1440-skip.json",
+      "bytes": 7819,
+      "sha256": "aa926d6e923c9a61d382edb0a6118c068113ca981db7810d7d17072be0b1bc67"
+    },
+    {
+      "path": "pages/initial/focus/home-375-footer.json",
+      "bytes": 7599,
+      "sha256": "aa5c00d62e3a05cbdd4e392f0f7295ad445311e66b74bec3e3ac8c0bb03388b5"
+    },
+    {
+      "path": "pages/initial/focus/home-375-main.json",
+      "bytes": 12775,
+      "sha256": "9c82238368765757a9c077456dc8bb94845f09fdf17e036b044e57bbe269934d"
+    },
+    {
+      "path": "pages/initial/focus/home-375-skip.json",
+      "bytes": 7826,
+      "sha256": "a86e807848f642578cb617e769c0dc4e330250f9fb4ae6c323a7089b17e97482"
+    },
+    {
+      "path": "pages/initial/focus/home-mobile-journey.json",
+      "bytes": 74106,
+      "sha256": "bb89face0a859771fd2843dec25f3f47267de4a005fee94fe5795923677707e1"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--corporate-website-1440-footer.json",
+      "bytes": 7575,
+      "sha256": "2218f62aad45fff44d7d72f9ed3038f3eeeed8f342dffceaf879c446b3746d3b"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--corporate-website-1440-main.json",
+      "bytes": 7523,
+      "sha256": "f93381e1d3dc3a9739fc35f566ffe3da871989f78ad15287847af8e52a1ee2db"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--corporate-website-1440-skip.json",
+      "bytes": 7847,
+      "sha256": "b323d1c4593b707e96ce75d718b85e597d967841e4a147a7d4f4772f45759b23"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--corporate-website-375-footer.json",
+      "bytes": 7641,
+      "sha256": "5c3ce6c037d6328ac8698438b8837e46c0b378653ae17ac3365ea2ea5d5c0380"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--corporate-website-375-main.json",
+      "bytes": 7471,
+      "sha256": "fb550d7dee0a1570a41e6b332602361aa1be768f9eca302ed3c7f34b4f08f1a9"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--corporate-website-375-skip.json",
+      "bytes": 7854,
+      "sha256": "a0fa3b8413ce1490ff25ac264d59da14256b7cc4116b787b0d62216264641d98"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--corporate-website-mobile-journey.json",
+      "bytes": 68949,
+      "sha256": "bb2b979572a4f1c2817ca467af0fac2f7e9313b9e2b717419f05b4a1667f7d37"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--enterprise-management-1440-footer.json",
+      "bytes": 7635,
+      "sha256": "9d1b99c8a4f330365c6c3570455edc12bf7b00098d32f367068ea0813f582ee7"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--enterprise-management-1440-main.json",
+      "bytes": 7527,
+      "sha256": "f7ad7e66208078f24fe5f30638958af0b5619658c9996ff8c42e21bc28c74313"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--enterprise-management-1440-skip.json",
+      "bytes": 7851,
+      "sha256": "471eb199476b47cab1c3ba73d55a6725740acae1712fcf2859a0fa85fb554a04"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--enterprise-management-375-footer.json",
+      "bytes": 7631,
+      "sha256": "14b6348de3f54a32f5a51542000f7f9d976c942df41f3c059b824ea427333ba0"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--enterprise-management-375-main.json",
+      "bytes": 7475,
+      "sha256": "a213714243a114e7b852290cc5bcd40a106a8892daba0d74186682b4aaba5e4c"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--enterprise-management-375-skip.json",
+      "bytes": 7858,
+      "sha256": "200ff23bd5c45924de19c48b969f938aedb7b70725e26594c273d0e73e168862"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--enterprise-management-mobile-journey.json",
+      "bytes": 68981,
+      "sha256": "254e2828672346a0c8750c42e01a961010cb3ff9731ba42e0b63f15cc3999411"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--integration-hub-1440-footer.json",
+      "bytes": 7615,
+      "sha256": "8a319c514f0f5778c55545df0510de45fc2ea9af47c4957fe21c1386914d4e53"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--integration-hub-1440-main.json",
+      "bytes": 7521,
+      "sha256": "c2a78ec1fcd314663fded2807b81400f5f66f8d807e19ab51743435e9e274483"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--integration-hub-1440-skip.json",
+      "bytes": 7845,
+      "sha256": "c68a07bc062851ab20e796b47e1b5e7e6042b0793d45d3fe92976542cef31dee"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--integration-hub-375-footer.json",
+      "bytes": 7639,
+      "sha256": "17040516eb10970429bcecf62863cb406fbb8df4dbdf4a69a4a7c473f9099299"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--integration-hub-375-main.json",
+      "bytes": 7469,
+      "sha256": "9d9f029bc90b39b51648c0a697cad6a48caa170df9c09e92931114c6c2793763"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--integration-hub-375-skip.json",
+      "bytes": 7852,
+      "sha256": "95660f2981b2be2274037fb72dccd0d87e52dcb745745405c8f4b4f2276ca105"
+    },
+    {
+      "path": "pages/initial/focus/portfolio--integration-hub-mobile-journey.json",
+      "bytes": 68933,
+      "sha256": "5c8c4b5e5abe65050bd411d7d5171a39873b4e519bb8465c4b9caf766d4b5ae2"
+    },
+    {
+      "path": "pages/initial/focus/portfolio-1440-footer.json",
+      "bytes": 7627,
+      "sha256": "278ef39a552980668089495a7a6a373a5c8857d1de035169917d5eaa9a929b4e"
+    },
+    {
+      "path": "pages/initial/focus/portfolio-1440-main.json",
+      "bytes": 7505,
+      "sha256": "cfd2761818339c088074ca1a25bc036bfb5854f8413356ba1546d27c606bceab"
+    },
+    {
+      "path": "pages/initial/focus/portfolio-1440-skip.json",
+      "bytes": 7829,
+      "sha256": "be8741f0951ee7f9e0d7fcba6e4e12bc84e5859090a54c7d0fda11a1a0f6fe4b"
+    },
+    {
+      "path": "pages/initial/focus/portfolio-375-footer.json",
+      "bytes": 7623,
+      "sha256": "3468e48694bc89274feab716e8247040e67e7ccaf75909492f612c1307a5edd3"
+    },
+    {
+      "path": "pages/initial/focus/portfolio-375-main.json",
+      "bytes": 7453,
+      "sha256": "81f30f20401353c74fdaefe10de95dcbc6dad3764883cf6a14b42e4f5e9e6509"
+    },
+    {
+      "path": "pages/initial/focus/portfolio-375-skip.json",
+      "bytes": 7836,
+      "sha256": "31131bec4dba6337f0b29041277512635ee14ef3f2f06e0c71bf45b498991d9d"
+    },
+    {
+      "path": "pages/initial/focus/portfolio-mobile-journey.json",
+      "bytes": 68889,
+      "sha256": "3449bc16af00c59d8a30515dfe3f3c81dbe7a9300ef0a2b6719b417ed624a87c"
+    },
+    {
+      "path": "pages/initial/focus/services-1440-footer.json",
+      "bytes": 7612,
+      "sha256": "6da55096caf3f98046046411fe3ad2ec80b8ac241f7e5ba11d3ee4df70f658df"
+    },
+    {
+      "path": "pages/initial/focus/services-1440-main.json",
+      "bytes": 7504,
+      "sha256": "2cb86c40d376fa0d83c23bbab9ff4f2b2afe3ec34e6de026a80dfb6f2fc28e36"
+    },
+    {
+      "path": "pages/initial/focus/services-1440-skip.json",
+      "bytes": 7828,
+      "sha256": "129e25fcc20b6d70c5dcd68285414f97607feb4032d52f148f42374e1d62bd4d"
+    },
+    {
+      "path": "pages/initial/focus/services-375-footer.json",
+      "bytes": 7623,
+      "sha256": "7d36219980250d0b593cc655d544715e0de8b9cac5457cbbd54b032f900dff95"
+    },
+    {
+      "path": "pages/initial/focus/services-375-main.json",
+      "bytes": 7452,
+      "sha256": "14d7ff9f8c8d7444c8188c048f1c8bf1a21da9b7805d2b260bdbc260dc52c542"
+    },
+    {
+      "path": "pages/initial/focus/services-375-skip.json",
+      "bytes": 7835,
+      "sha256": "2367617942237d02a2cdcd54bdcc75c7ababa7510833e1151a5eba558119e78d"
+    },
+    {
+      "path": "pages/initial/focus/services-mobile-journey.json",
+      "bytes": 68853,
+      "sha256": "d250282fed0c9b8abb7359056c5675ff08ec670e4136e499289b416afdf9e718"
+    },
+    {
+      "path": "pages/initial/focus/solutions-1440-footer.json",
+      "bytes": 7628,
+      "sha256": "0a8609babcca3a2c0cff4e252ee572dd059166acd4d431dc48d7f5cf99c91dea"
+    },
+    {
+      "path": "pages/initial/focus/solutions-1440-main.json",
+      "bytes": 7505,
+      "sha256": "167d2f6da84e7bbe283ab3a3bcd9a9e211fdfaff16a8c8e71d72cfcdea53f4a1"
+    },
+    {
+      "path": "pages/initial/focus/solutions-1440-skip.json",
+      "bytes": 7829,
+      "sha256": "0f1830235b70fa058acb27c4f605a2be9afe58b1d87dc0df8f1269a77a740d1a"
+    },
+    {
+      "path": "pages/initial/focus/solutions-375-footer.json",
+      "bytes": 7624,
+      "sha256": "009b4afdd24d67eb4a5510379fc8f324b0cde9701e3e044467a45f98532951ba"
+    },
+    {
+      "path": "pages/initial/focus/solutions-375-main.json",
+      "bytes": 7453,
+      "sha256": "8a27ef70d7e9f6af032e067a2d31611f6e6bd506ad6fd94b707e81f426eaa02f"
+    },
+    {
+      "path": "pages/initial/focus/solutions-375-skip.json",
+      "bytes": 7836,
+      "sha256": "e1e0bd76946d98276ed123df4445b2536a445795ff2ec7daf38c403e74bd4a55"
+    },
+    {
+      "path": "pages/initial/focus/solutions-mobile-journey.json",
+      "bytes": 68889,
+      "sha256": "16c4deab9cacbe73c05814679da89ff20a1482c8f41c1b4276bd282c08a58f2a"
+    },
+    {
+      "path": "pages/initial/home-service-anchor.json",
+      "bytes": 493,
+      "sha256": "94c91392819620ae049d69fc0a41970b370ae1154748978e343de4e8eb722f0c"
+    },
+    {
+      "path": "pages/initial/http/0c725ea3456ecc17.body",
+      "bytes": 85132,
+      "sha256": "3bcc59fe6be5823c71899db1c59746e4e9a182357f9662dfff5eacb290ce2c1d"
+    },
+    {
+      "path": "pages/initial/http/0c725ea3456ecc17.json",
+      "bytes": 744,
+      "sha256": "8693bcd6f4cc3aa250f20a4f8d3c53ab6e6bcdd4bcbf92b44c1320a98bdff6ff"
+    },
+    {
+      "path": "pages/initial/http/386edc40f33b29d6.body",
+      "bytes": 153367,
+      "sha256": "da6d984ed8e76d4941d5135b415b6ca18271b5cb150987b822154b287d3bdf97"
+    },
+    {
+      "path": "pages/initial/http/386edc40f33b29d6.json",
+      "bytes": 711,
+      "sha256": "28ad7e219116a7b312a3c5a39c60ec6b0d9132298a24ccacd76416d9fd5b16c8"
+    },
+    {
+      "path": "pages/initial/http/404-dev--design-system.body",
+      "bytes": 34643,
+      "sha256": "cf4c6209caf1e4d6dacef194f5b9fdec6271c34fa337e9a995550c42100dbf6d"
+    },
+    {
+      "path": "pages/initial/http/404-dev--design-system.json",
+      "bytes": 733,
+      "sha256": "7dacd43a821a3a2b2091a240655832d028d3f9570db7585d31c1a908f9cf1696"
+    },
+    {
+      "path": "pages/initial/http/404-document.body",
+      "bytes": 34643,
+      "sha256": "cf4c6209caf1e4d6dacef194f5b9fdec6271c34fa337e9a995550c42100dbf6d"
+    },
+    {
+      "path": "pages/initial/http/404-document.json",
+      "bytes": 703,
+      "sha256": "b5227195fbf7a2e7e67d0edd098d0192e41952a963c795a0c7937fc271e520c8"
+    },
+    {
+      "path": "pages/initial/http/404-portfolio--unknown-task013-project.body",
+      "bytes": 34643,
+      "sha256": "cf4c6209caf1e4d6dacef194f5b9fdec6271c34fa337e9a995550c42100dbf6d"
+    },
+    {
+      "path": "pages/initial/http/404-portfolio--unknown-task013-project.json",
+      "bytes": 781,
+      "sha256": "198f5d3fceebd952cef69e12a1a5c8e89d484a9ea5f0a4f39ac6463afa489692"
+    },
+    {
+      "path": "pages/initial/http/404-privacy.body",
+      "bytes": 34643,
+      "sha256": "cf4c6209caf1e4d6dacef194f5b9fdec6271c34fa337e9a995550c42100dbf6d"
+    },
+    {
+      "path": "pages/initial/http/404-privacy.json",
+      "bytes": 702,
+      "sha256": "5340c08a4d386f2f460ab09d69c1351b8ad5e1e0ef78f7e5ec077502e38b2b93"
+    },
+    {
+      "path": "pages/initial/http/404-sitemap.xml.body",
+      "bytes": 34643,
+      "sha256": "cf4c6209caf1e4d6dacef194f5b9fdec6271c34fa337e9a995550c42100dbf6d"
+    },
+    {
+      "path": "pages/initial/http/404-sitemap.xml.json",
+      "bytes": 712,
+      "sha256": "f75f41f7adc37ba4a00c2a17a68eb637832d1b6dbb992890d97288276b0ec4c3"
+    },
+    {
+      "path": "pages/initial/http/404-unknown-task013-route.body",
+      "bytes": 34643,
+      "sha256": "cf4c6209caf1e4d6dacef194f5b9fdec6271c34fa337e9a995550c42100dbf6d"
+    },
+    {
+      "path": "pages/initial/http/404-unknown-task013-route.json",
+      "bytes": 744,
+      "sha256": "2fe5d0ce3711491aec83587a13ff830ea47a8efea5f4f039a5f32bc31da9d03d"
+    },
+    {
+      "path": "pages/initial/http/40679774b0bc3e70.body",
+      "bytes": 85504,
+      "sha256": "76aab89ef8db64370df2e09442cfc17fa3cf29292538531e82c2e418125cc6b9"
+    },
+    {
+      "path": "pages/initial/http/40679774b0bc3e70.json",
+      "bytes": 756,
+      "sha256": "6bae29873fa0fd2fb838bcf86740f8781d47f675b62d10d6eaceb06e205535aa"
+    },
+    {
+      "path": "pages/initial/http/6472ec95ae2571b6.body",
+      "bytes": 108614,
+      "sha256": "b445dd3317010fe2cace5582d5591431e092219f76ce55a998af32034df30275"
+    },
+    {
+      "path": "pages/initial/http/6472ec95ae2571b6.json",
+      "bytes": 705,
+      "sha256": "263ddc3094ac6619cb4234d2d9666fdd78b70cf328655ce7fe69a8efb13cd032"
+    },
+    {
+      "path": "pages/initial/http/6a390fd8ebd4bc67.body",
+      "bytes": 227124,
+      "sha256": "60eda133a236bf975550314926e9a00b146a721a6e67a7db2cfc3ba90e80eda0"
+    },
+    {
+      "path": "pages/initial/http/6a390fd8ebd4bc67.json",
+      "bytes": 713,
+      "sha256": "6f608a891414cb70ea49fede170cb4ad347cafc95906a9e2af42c449e32b2e58"
+    },
+    {
+      "path": "pages/initial/http/9391693c0597c72c.body",
+      "bytes": 121091,
+      "sha256": "e202db2d8a29455847a3cf15c1db648d03d61b5ad6b154abc0dc172f823cc52d"
+    },
+    {
+      "path": "pages/initial/http/9391693c0597c72c.json",
+      "bytes": 693,
+      "sha256": "c3bd2f9a7180c7eecb8f18e2fd142a09f998a4f274b2567cfb8e0b3f7bec910c"
+    },
+    {
+      "path": "pages/initial/http/about.body",
+      "bytes": 108614,
+      "sha256": "b445dd3317010fe2cace5582d5591431e092219f76ce55a998af32034df30275"
+    },
+    {
+      "path": "pages/initial/http/about.json",
+      "bytes": 694,
+      "sha256": "1149cb2866a33da63696b2610e23253213100e3855b714d4eb673e5843281613"
+    },
+    {
+      "path": "pages/initial/http/b88f5806f547fb11.body",
+      "bytes": 99881,
+      "sha256": "a4abe5383586117678aba066db145e00e3cc4713dee10f26c5b09f67a007ddb5"
+    },
+    {
+      "path": "pages/initial/http/b88f5806f547fb11.json",
+      "bytes": 712,
+      "sha256": "1ac3ae2c93fdff687e50b2247526bd86ef368d2037a82891cb117619ecaef9eb"
+    },
+    {
+      "path": "pages/initial/http/babb7d9d4bd0f0ea.body",
+      "bytes": 82504,
+      "sha256": "6e07ebc5ea97f8da819ccfd5fd6f969dd3955371af80bb3a43316979b2fb4141"
+    },
+    {
+      "path": "pages/initial/http/babb7d9d4bd0f0ea.json",
+      "bytes": 748,
+      "sha256": "6d9cc6faccbd6634f7ed2c6f4b5aa6ce7b2d4d89184796701166b2cc67c772c7"
+    },
+    {
+      "path": "pages/initial/http/c86ab8a0efc0f256.body",
+      "bytes": 84118,
+      "sha256": "4236681afe066abb4fd0fd56bb6d1128fe66e872a7a9a77729d9a6e3b5269ead"
+    },
+    {
+      "path": "pages/initial/http/c86ab8a0efc0f256.json",
+      "bytes": 708,
+      "sha256": "db2d70dd50af75f06a81ae04bc34f753d947a438f687abd5d1797c412f561719"
+    },
+    {
+      "path": "pages/initial/http/contact.body",
+      "bytes": 84118,
+      "sha256": "4236681afe066abb4fd0fd56bb6d1128fe66e872a7a9a77729d9a6e3b5269ead"
+    },
+    {
+      "path": "pages/initial/http/contact.json",
+      "bytes": 699,
+      "sha256": "097180fe43b82dceb9df55f70b5289fc8dffc364d1fc204c44f5807a54163c24"
+    },
+    {
+      "path": "pages/initial/http/home.body",
+      "bytes": 121091,
+      "sha256": "e202db2d8a29455847a3cf15c1db648d03d61b5ad6b154abc0dc172f823cc52d"
+    },
+    {
+      "path": "pages/initial/http/home.json",
+      "bytes": 681,
+      "sha256": "2808ee98122a2b63d81e51ff145c2914ddedb8109efd56982d1d75625373600a"
+    },
+    {
+      "path": "pages/initial/http/nojekyll.body",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "pages/initial/http/nojekyll.json",
+      "bytes": 677,
+      "sha256": "e2b21e5de9f81173873a925b3f1d680d84c6dd8023b3abc4b606639971a04935"
+    },
+    {
+      "path": "pages/initial/http/portfolio--corporate-website.body",
+      "bytes": 82504,
+      "sha256": "6e07ebc5ea97f8da819ccfd5fd6f969dd3955371af80bb3a43316979b2fb4141"
+    },
+    {
+      "path": "pages/initial/http/portfolio--corporate-website.json",
+      "bytes": 760,
+      "sha256": "3d9a76be727f5f4e728bc248312ebeff3c3d0327e24b75c625266cff68254c46"
+    },
+    {
+      "path": "pages/initial/http/portfolio--enterprise-management.body",
+      "bytes": 85504,
+      "sha256": "76aab89ef8db64370df2e09442cfc17fa3cf29292538531e82c2e418125cc6b9"
+    },
+    {
+      "path": "pages/initial/http/portfolio--enterprise-management.json",
+      "bytes": 772,
+      "sha256": "efd5b717acb38b7a26c370c768a3027a029a4271dd2818d0b748ac6758afb764"
+    },
+    {
+      "path": "pages/initial/http/portfolio--integration-hub.body",
+      "bytes": 85132,
+      "sha256": "3bcc59fe6be5823c71899db1c59746e4e9a182357f9662dfff5eacb290ce2c1d"
+    },
+    {
+      "path": "pages/initial/http/portfolio--integration-hub.json",
+      "bytes": 754,
+      "sha256": "1b244fdebe1437383aef8b6a13f49cb42d7f0c8cff77da24c63fedec78ba3001"
+    },
+    {
+      "path": "pages/initial/http/portfolio.body",
+      "bytes": 99881,
+      "sha256": "a4abe5383586117678aba066db145e00e3cc4713dee10f26c5b09f67a007ddb5"
+    },
+    {
+      "path": "pages/initial/http/portfolio.json",
+      "bytes": 705,
+      "sha256": "5f17e862a0bb41c13adcc0326566ce0b94bcc48378d5bfbee14a6ac6d1513342"
+    },
+    {
+      "path": "pages/initial/http/robots.body",
+      "bytes": 92,
+      "sha256": "4efb40913d6e78accceaef86f3aaa37d00ee6c28da83aac7a6b4881773d3b1c4"
+    },
+    {
+      "path": "pages/initial/http/robots.json",
+      "bytes": 697,
+      "sha256": "aca83560253855bdab0cd4e152c108f3da1f5a14d1ce1ff6eb6e86c8b5e4e6fc"
+    },
+    {
+      "path": "pages/initial/http/services.body",
+      "bytes": 153367,
+      "sha256": "da6d984ed8e76d4941d5135b415b6ca18271b5cb150987b822154b287d3bdf97"
+    },
+    {
+      "path": "pages/initial/http/services.json",
+      "bytes": 703,
+      "sha256": "7b7405bbcb6681bd68c1b5ca0ca822ccf3e4501e87df4533cfe4b4600ff1cb0f"
+    },
+    {
+      "path": "pages/initial/http/solutions.body",
+      "bytes": 227124,
+      "sha256": "60eda133a236bf975550314926e9a00b146a721a6e67a7db2cfc3ba90e80eda0"
+    },
+    {
+      "path": "pages/initial/http/solutions.json",
+      "bytes": 706,
+      "sha256": "6c81ed228810b4d215309ddde6f878eee66d7316dd54490a854b9f993a83a16a"
+    },
+    {
+      "path": "pages/initial/layout/about-1440.json",
+      "bytes": 579,
+      "sha256": "3b562b25675c3e4a20b89c1d59cc713511397e881f7ab25eb12807e07d1038b6"
+    },
+    {
+      "path": "pages/initial/layout/about-375.json",
+      "bytes": 575,
+      "sha256": "dfafbfa0399f7bc47cc1b48b015225210b8c822fcdf5450e1b368558a88bfdb3"
+    },
+    {
+      "path": "pages/initial/layout/contact-1440.json",
+      "bytes": 581,
+      "sha256": "ae0bb888ee3000005f6e68c0b2364a2e637ee1f169a9f97089521071f818566a"
+    },
+    {
+      "path": "pages/initial/layout/contact-375.json",
+      "bytes": 577,
+      "sha256": "93b142f5804f8bf140d0a6d1a856935beb9546a58c0766b41bcab09b80529d66"
+    },
+    {
+      "path": "pages/initial/layout/home-1440.json",
+      "bytes": 573,
+      "sha256": "3b6a4fec1caed50d684a2273599e2f2d8c0a2943532b053df4d29509ac379e35"
+    },
+    {
+      "path": "pages/initial/layout/home-375.json",
+      "bytes": 569,
+      "sha256": "5752c3ccd6310b946e93f2a9b444164c6639e48cfab060b6467fb6a4e9ee47ee"
+    },
+    {
+      "path": "pages/initial/layout/portfolio--corporate-website-1440.json",
+      "bytes": 601,
+      "sha256": "7ce0d37c8b3ff6c4c76164b842603cbab675c0881cf49b8af1c4c98e8d891246"
+    },
+    {
+      "path": "pages/initial/layout/portfolio--corporate-website-375.json",
+      "bytes": 597,
+      "sha256": "b44b8d10a9f130722338ad19de6ed06e8c0137f445cbdf24e55e01191fe475b7"
+    },
+    {
+      "path": "pages/initial/layout/portfolio--enterprise-management-1440.json",
+      "bytes": 605,
+      "sha256": "0765e933e09864f62dcbe7a636869c210187ea50389df7556d17f3048ef39487"
+    },
+    {
+      "path": "pages/initial/layout/portfolio--enterprise-management-375.json",
+      "bytes": 601,
+      "sha256": "33cb4fc581761ab46b7e7feaf9cb24aabde46b59648255524b43d56d0ac616e9"
+    },
+    {
+      "path": "pages/initial/layout/portfolio--integration-hub-1440.json",
+      "bytes": 599,
+      "sha256": "2d8f14d5b168412a40776b3d21912cff1bd762174ec5e84481f71c22ab2c9d8f"
+    },
+    {
+      "path": "pages/initial/layout/portfolio--integration-hub-375.json",
+      "bytes": 595,
+      "sha256": "0d504d285c8a462e3aee403beb28b8edc744d6c441525490738a7cb52d77fed4"
+    },
+    {
+      "path": "pages/initial/layout/portfolio-1440.json",
+      "bytes": 583,
+      "sha256": "21286910e825b8b2742577f8fc940d6aaf0bbd94aa371a92e0a6adaa19d8701a"
+    },
+    {
+      "path": "pages/initial/layout/portfolio-375.json",
+      "bytes": 579,
+      "sha256": "0ceb2466ebbd7a8d5aeb5d5a4e439224836c4ed520b8594c83cdfe20ef48e0fa"
+    },
+    {
+      "path": "pages/initial/layout/services-1440.json",
+      "bytes": 582,
+      "sha256": "fbddf63890ef05d85026458c3241e8cbb5406a59c6d283b2ac5dbe85fb0f5633"
+    },
+    {
+      "path": "pages/initial/layout/services-375.json",
+      "bytes": 578,
+      "sha256": "c5d47426dbe842767ca7f41388d000c48cca5320524e47d0c23b78d72885c5fa"
+    },
+    {
+      "path": "pages/initial/layout/solutions-1440.json",
+      "bytes": 583,
+      "sha256": "ac8592933c81f044ba5528133feb4ca0dbc97b8bbda3208d10694fa2ebe2d6eb"
+    },
+    {
+      "path": "pages/initial/layout/solutions-375.json",
+      "bytes": 579,
+      "sha256": "ac7570f73452374f33a8dcadbd1d275b1d33c0e3d302b6f79a5e483e3198eca7"
+    },
+    {
+      "path": "pages/initial/links.json",
+      "bytes": 55760,
+      "sha256": "f994275e959e0eba6e1c49c902a9f45758aa736314c5933978f850c4b8f4ccab"
+    },
+    {
+      "path": "pages/initial/local-check.cjs",
+      "bytes": 38095,
+      "sha256": "1a077276345eedd8be53641f13f2ec13255536ed8f47bbad31e929418971ada1"
+    },
+    {
+      "path": "pages/initial/manual-review.json",
+      "bytes": 10483,
+      "sha256": "f931363d52c697ce7c2c0d5ee58bbdc5ee01cd063450b25050e2933c5715978c"
+    },
+    {
+      "path": "pages/initial/metadata/about.head.html",
+      "bytes": 2480,
+      "sha256": "27be954a256cd1d3d139be296ca0cbc53ecbc6c88d14346ea0e7b3f724984e75"
+    },
+    {
+      "path": "pages/initial/metadata/contact.head.html",
+      "bytes": 2565,
+      "sha256": "0742d0b739ab142b299f15cfecae7870c415835907335390d6f8ae8a66760bdf"
+    },
+    {
+      "path": "pages/initial/metadata/home.head.html",
+      "bytes": 2561,
+      "sha256": "c0def95347ea99b329decfcbf3e6850cba98986eb067c09e3e6e3e293909765a"
+    },
+    {
+      "path": "pages/initial/metadata/portfolio--corporate-website.head.html",
+      "bytes": 2773,
+      "sha256": "2dfe67eee226dc1cd7136038da1dcfa160b5a57a492f7d17e60cef69bf7d87f0"
+    },
+    {
+      "path": "pages/initial/metadata/portfolio--enterprise-management.head.html",
+      "bytes": 2748,
+      "sha256": "e050996f0fca2f2b051ae3079d13dcbd603cef225a085816e123f49be8d0778c"
+    },
+    {
+      "path": "pages/initial/metadata/portfolio--integration-hub.head.html",
+      "bytes": 2718,
+      "sha256": "4546980ad9092e5626355cd3d261d39d18ebcdeaea2a4858741523ecc4cafaba"
+    },
+    {
+      "path": "pages/initial/metadata/portfolio.head.html",
+      "bytes": 2473,
+      "sha256": "838fcdbb481f4fb4cb0ec9efaec871b670ce1f030e63c60eb4e8c75024aa62d1"
+    },
+    {
+      "path": "pages/initial/metadata/services.head.html",
+      "bytes": 2552,
+      "sha256": "33e6c474c5294dec1324b94c1448aba5cf776a7ad082d661b7782fa3cb66b2e8"
+    },
+    {
+      "path": "pages/initial/metadata/solutions.head.html",
+      "bytes": 2542,
+      "sha256": "9712a49fd498caf1abf195004a607aff32d6e843a9dd21a39fff42a373dad5dc"
+    },
+    {
+      "path": "pages/initial/metadata-export-process.json",
+      "bytes": 693,
+      "sha256": "f8d372481e1c2a1e41715598fd41dcbd056da2505afd0ba19444bdce671cbf83"
+    },
+    {
+      "path": "pages/initial/motion/about.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "pages/initial/motion/contact.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "pages/initial/motion/home.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "pages/initial/motion/portfolio--corporate-website.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "pages/initial/motion/portfolio--enterprise-management.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "pages/initial/motion/portfolio--integration-hub.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "pages/initial/motion/portfolio.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "pages/initial/motion/services.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "pages/initial/motion/solutions.json",
+      "bytes": 61,
+      "sha256": "e103e08775e0ea72a0e962317edf525e229a3c69d588a6697c80b2677da107da"
+    },
+    {
+      "path": "pages/initial/network-classification.json",
+      "bytes": 147578,
+      "sha256": "36c522f551516105a562a73a416b3c851faaae15eb64a2f8db8b4cc905358d29"
+    },
+    {
+      "path": "pages/initial/network-raw.ndjson",
+      "bytes": 3673202,
+      "sha256": "d7f19b1925ee5abbdb226a0073982217e5b65e50ef6fa446e521a152ae09d12a"
+    },
+    {
+      "path": "pages/initial/network.cjs",
+      "bytes": 23900,
+      "sha256": "df3c29b1ad8369007960de5df4e720e795f2799efe4a55b9c4dffd3193dbe9ab"
+    },
+    {
+      "path": "pages/initial/results.json",
+      "bytes": 174126,
+      "sha256": "8199dc7b497036ae748c5cb2224d408ac16a375e0510b5275212c881985878d6"
+    },
+    {
+      "path": "pages/initial/semantics/about.json",
+      "bytes": 99075,
+      "sha256": "13828dc26e54d6b075f5ad5031a3949cc4314d395c6861aa3e506146caa65563"
+    },
+    {
+      "path": "pages/initial/semantics/contact.json",
+      "bytes": 107074,
+      "sha256": "7452513fc06807fc018887848ef4daaff5e0c52509de26b76ca676e9f004e58b"
+    },
+    {
+      "path": "pages/initial/semantics/home.json",
+      "bytes": 102793,
+      "sha256": "47c0d2b39362c6ac5222564900e3bfafe8d06ee037ccdec8fbee5e5022cee767"
+    },
+    {
+      "path": "pages/initial/semantics/portfolio--corporate-website.json",
+      "bytes": 89056,
+      "sha256": "d8d61b4a44b651b4c8bb4911f1478619c8d88e4589fada4ea26852cd8c8aa804"
+    },
+    {
+      "path": "pages/initial/semantics/portfolio--enterprise-management.json",
+      "bytes": 91988,
+      "sha256": "82b80f0d48614e55f454a6964add9ba339cbb1896ba7b25747699909ab68956f"
+    },
+    {
+      "path": "pages/initial/semantics/portfolio--integration-hub.json",
+      "bytes": 91886,
+      "sha256": "8d22938cf9bad314cd16abd80092da58f520f9e2de5781882623b09e28bb29c0"
+    },
+    {
+      "path": "pages/initial/semantics/portfolio.json",
+      "bytes": 94497,
+      "sha256": "c1bc185eba13769f277f552284a09c5c427784f7a2db2c19691a58e802d686ac"
+    },
+    {
+      "path": "pages/initial/semantics/services.json",
+      "bytes": 127717,
+      "sha256": "5e7fb9b25b5e0afa19e3abe3b8ef43bcf3131a3148278e8eee5f53293caf5639"
+    },
+    {
+      "path": "pages/initial/semantics/solutions.json",
+      "bytes": 197890,
+      "sha256": "0bd22de67ce5a8dec2c706bd58734de8a35c888408e1e60b44c5a2f394dc6434"
+    },
+    {
+      "path": "pages/initial/source-after.json",
+      "bytes": 28717,
+      "sha256": "dadd68a0a9cc7ce8ac5666ffb4f0338ce8311154c321f727b2986f1cf0f23108"
+    },
+    {
+      "path": "pages/initial/source-before.json",
+      "bytes": 28717,
+      "sha256": "dadd68a0a9cc7ce8ac5666ffb4f0338ce8311154c321f727b2986f1cf0f23108"
+    },
+    {
+      "path": "pages/initial/source.json",
+      "bytes": 12780,
+      "sha256": "aa16bb4156457dfa3401d368d12cf7c644393f7fa9342ad0a77ec6f7d673333b"
+    },
+    {
+      "path": "pages-build.json",
+      "bytes": 24864,
+      "sha256": "b319a7051abf384674784ef1828956b2c3e9fcbe16c052d684cac2d327000d9f"
+    },
+    {
+      "path": "preflight.json",
+      "bytes": 482,
+      "sha256": "d982bf95d003f2fd954873ce3d26cea5dc74ea5cf7bb4a4fecaa27cc36941f63"
+    },
+    {
+      "path": "public-smoke.py",
+      "bytes": 5070,
+      "sha256": "838a41db1f0cdb9632144b145097f4669e2a58e2dff0a87b1b443b269ad2900a"
+    },
+    {
+      "path": "screenshots-bridge.json",
+      "bytes": 1346,
+      "sha256": "045c126f7cd3c23799f88404943196a5cd830d78abe940bb675d35581af0a2fc"
+    },
+    {
+      "path": "seo.json",
+      "bytes": 2782,
+      "sha256": "b29f78389db12f746c87d5c290a96ed45b448a42235c946a5f051a2febb25db0"
+    },
+    {
+      "path": "serve-pages.py",
+      "bytes": 2537,
+      "sha256": "015a54f36bd2ed4526b932c64d3604790d02396d68b7415a8595abb0be8e9464"
+    },
+    {
+      "path": "source-audit.json",
+      "bytes": 61794,
+      "sha256": "a2bed3079ca8d85948e6f895328d8c326628a525f4e417d3dae14e8da3d98cd6"
+    },
+    {
+      "path": "source.json",
+      "bytes": 12780,
+      "sha256": "aa16bb4156457dfa3401d368d12cf7c644393f7fa9342ad0a77ec6f7d673333b"
+    },
+    {
+      "path": "spec-audit.json",
+      "bytes": 48703,
+      "sha256": "d1e919f40f4fbded72a7a5d40bca5a02abd3e78564c74e406c6b9260a93716ff"
+    },
+    {
+      "path": "write-contrast-review.py",
+      "bytes": 11012,
+      "sha256": "73db1be83170df6362059cceaf42eb8bf78bbe0d085adfcaa3c38626b803d232"
+    },
+    {
+      "path": "write-source-audit.py",
+      "bytes": 20642,
+      "sha256": "c0c537fcfd995d747e4d7e91ecbfaf7333835ab5aed06d5034d37195d7ff2b8c"
+    },
+    {
+      "path": "write-spec-audit.py",
+      "bytes": 25052,
+      "sha256": "2bbcca1571f48a1ff277bf1a13408a18e13a1cc762c7e2e4e94631b4b8a7525d"
+    }
+  ],
+  "screenshotStorage": "Raw full-page PNG copies omitted from archive; byte-identical images stored once under docs/screenshots/task013-local, bridge and SHA saved. Three focused state PNG retained inside focus-visual.",
+  "screenshots": [
+    {
+      "path": "docs/screenshots/task013-local/LOCAL-normal-about-1440.png",
+      "sha256": "8f9d92e5fb72456218ccd2e351a71646e34d0f9887bcd561ec6dd1436cb0a6e3",
+      "bytes": 980636
+    },
+    {
+      "path": "docs/screenshots/task013-local/LOCAL-normal-about-375.png",
+      "sha256": "6a9db23ff1d3dc31eba30fb8d6cc4ed634f1e89a6c2ea69e8707ca5711b56bdf",
+      "bytes": 809076
+    },
+    {
+      "path": "docs/screenshots/task013-local/LOCAL-normal-home-1440.png",
+      "sha256": "8e12acce3647c20ea115c0ba2631e6a10b5d45e1d89e8cccadd322aa5214362e",
+      "bytes": 1057162
+    },
+    {
+      "path": "docs/screenshots/task013-local/LOCAL-normal-home-375.png",
+      "sha256": "486fc9b3cc8501e62e786aacd94af6f0cd16010fe74f938e75ab6d397fd11901",
+      "bytes": 863020
+    }
+  ]
+}

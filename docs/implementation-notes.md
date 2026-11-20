@@ -352,3 +352,13 @@ robots 允許讀取 public HTML 的 noindex，依 Base Path 排除 dev 與 draft
 main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Markdown 的 118 個 href，保留正文／標題／舊驗收紀錄。已刪除的 alternate originals 仍有 14 個歷史連結缺口，保留固定版本參考並列限制，不復原使用者移除的檔案；`docs/reports/implementation-notes.md` 是舊前綴快照，沒有覆蓋根目錄完整歷史。
 
 報告與原始證據從 Tailwind 掃描明確排除。後續 exact-head PR CI／artifact、使用者授權合併、main CI／Pages 部署與公開網址驗證以同一 PR 的實際紀錄更新，不做記錄自身 SHA 的循環提交，也不把 PR CI 或 artifact 產生當成正式部署成功。
+
+## Task 013 — Vercel 部署準備
+
+從 fresh fetch、乾淨的 `main@97886abba03d358fef7853eb85360f4a84c5d751` 建立 `feature/website-vercel-deployment`，Task 012 已合併。使用者本次授權開發、驗證、Push、PR、CI 通過後合併及確認部署；尚未指定 Vercel Team／Account／Project，因此依 Task 013 第 2、6 節完成本機相容性與可審閱設定，外部階段保留 PENDING，沒有探測管理員 session 或憑證。文案 PR #18 尚未合併，保持獨立，未把未核准變更當成 main。
+
+文件 Repository 最新 main 為 `9d0ed1282a6cf07bbaccdbf47f0220c37038080e`，僅唯讀。新 Week 03 文件區分官網現有 Pages 與 AI 產品前端的 Vercel 候選方向；本次明確 Task 013 指示可繼續官網 Vercel 相容性與設定準備，但不撤銷 Pages，也不建立 AI 產品或 Backend。來源版本及差異詳見 [Task 013 報告](reports/task013-implementation.md)。
+
+既有普通 build 預設無 export／Base Path，Node 24.x、Next.js preset、root `.`、npm ci／一般 build／預設 output 已符合設定契約；沒有證據需要額外 vercel.json、新 dependencies、CLI 發布管線或套件／lockfile 變更。Env 審查補上 Task 009 後新增的 `XK_PRIVACY_PREVIEW`：Vercel Preview 與 Production 均不得啟用，預覽名稱不代表可公開法律草案。
+
+本次報告明確分開本機、PR、main Pages 與實際 Vercel Preview／Production，後續真實 Git／CI／部署識別碼依協作流程更新同一 PR。尚無指定 Project、平台設定／plan／rollback 前版及實際 Vercel URL 時，不宣稱 Task 013 全部完成或 Vercel 已部署；不新增虛構截圖或部署識別碼。
