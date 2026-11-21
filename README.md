@@ -1,5 +1,7 @@
 # xk-website
 
+網站：[https://xk2022.github.io/xk-website/](https://xk2022.github.io/xk-website/)
+
 官方網站，獨立交給 Codex 開發。
 
 開發里程碑與完整規格請見 [Task 001–014 任務索引](docs/task/README.md)。Task 001–008 的技術基礎、Design System、首頁、About、Services、Solutions、Portfolio 與 Contact 已合併。Task 009 提供 Privacy 草案與發布保護；Task 010 提供 SEO 保護模式；Task 011 提供受控效能量測與字體 CSS 最佳化。正式法律政策、索引 release、GSC、field CWV、Accessibility、Vercel 與 Domain 仍依各自前置及獨立驗收，不因技術區塊存在而視為完成。
