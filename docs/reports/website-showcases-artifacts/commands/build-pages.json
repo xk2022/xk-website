@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "run",
+    "build:pages"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-21T16:03:11.512469+00:00",
+  "finishedAt": "2026-11-21T16:03:19.107222+00:00",
+  "processId": 3915,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-showcase-gallery/build-pages.log",
+  "logSha256": "785504bd3625d4aecb27fb85b4a0891bcb2fab739614a2f455f4f3d861308f90",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,14 @@
+{
+  "status": "FAIL",
+  "nodes": 302,
+  "minimumRatio": 3.507002340954954,
+  "method": "Fresh computed styles from current Pages acceptance. CSS conservative maximum overlays (grid twice9%, kaleidoscope7%, accent12%, shape5%); layer permutations and channel bounds, alpha compositing, WCAG luminance. Applies only to the recorded gradient-incomplete text nodes, not full WCAG certification. Oklab near-white 80% source treated as sRGB white with source alpha.",
+  "rawEvidence": {
+    "file": "manual-contrast-overbroad-diagnostic.json.gz",
+    "sha256": "afc337f56c27b32865657552c0083e6760e676f9a5790e74f56612cce7417355",
+    "compressedSha256": "98f6d8f275a48ad710d65f850c69a71e30ae34036a6c568c23878dd7138f5d42",
+    "format": "gzip original JSON, lossless"
+  },
+  "rowsCount": 302,
+  "allDetailsInRawEvidence": true
+}

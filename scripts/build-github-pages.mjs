@@ -8,6 +8,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const basePath = (process.env.XK_PAGES_BASE_PATH ?? "/xk-website").replace(/\/+$/, "");
 assert.match(basePath, /^(\/[A-Za-z0-9._~-]+)*$/, "XK_PAGES_BASE_PATH must be empty or a URL path such as /xk-website.");
 const { privacyPolicy, privacyDraftMarker, privacyPageMetadata } = await import(new URL("../src/config/privacy.ts", import.meta.url));
+const { websiteShowcases } = await import(new URL("../src/config/website-showcases.ts", import.meta.url));
 const [{ seoPages, getSeoPage, seoProtectionPolicy }, { siteConfig }, seo, navigation] = await Promise.all([
   import(new URL("../src/config/seo.ts", import.meta.url)),
   import(new URL("../src/config/site.ts", import.meta.url)),
@@ -138,8 +139,8 @@ const portfolioPages = [
   {
     pagePath: "/portfolio",
     label: "Portfolio",
-    title: "技術作品集 | Xplore Kaleidoscope",
-    description: "探索 XK 的網站、Java 企業系統與 API 整合展示規劃，了解各專案的背景、技術方向與實際開發狀態。",
+    title: "作品展示 | Xplore Kaleidoscope",
+    description: "瀏覽 XK 的品牌網站展示、一頁式網站範例與技術展示規劃，探索餐飲、禮贈及工業情境的網站內容與介面風格。",
   },
   {
     pagePath: "/portfolio/corporate-website",
@@ -192,6 +193,23 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   }
 
   const portfolioPage = portfolioPages.find((page) => page.pagePath === pagePath);
+  if (pagePath === "/portfolio") {
+    const visibleHtml = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
+    assert.equal(websiteShowcases.length, 8, "Portfolio must include all eight approved website links.");
+    assert.equal(new Set(websiteShowcases.map(({ id }) => id)).size, 8, "Website showcase IDs must be unique.");
+    assert.equal(websiteShowcases.filter(({ kind }) => kind === "brand-demo").length, 4, "Keep four brand demonstrations separate from templates.");
+    for (const id of ["website-cases", "website-samples", "portfolio-projects"]) {
+      assert.ok(visibleHtml.includes(`id="${id}"`), `Missing Portfolio category anchor: ${id}.`);
+    }
+    for (const showcase of websiteShowcases) {
+      assert.ok(visibleHtml.includes(`href="${showcase.href}"`), `Missing public showcase link: ${showcase.id}.`);
+      assert.ok(visibleHtml.includes(`src="${basePath}${showcase.image.src}"`), `Incorrect showcase preview base path: ${showcase.id}.`);
+      assert.ok(existsSync(join(output, showcase.image.src)), `Missing local preview: ${showcase.id}.`);
+      if (showcase.kind === "template") {
+        assert.ok(showcase.attribution?.href && visibleHtml.includes(`href="${showcase.attribution.href}"`), `Missing template attribution: ${showcase.id}.`);
+      }
+    }
+  }
   if (portfolioPage) {
     const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/)?.[1] ?? "";
     assert.equal(head.match(/<title>([^<]*)<\/title>/)?.[1], portfolioPage.title, `${label} title is incorrect.`);

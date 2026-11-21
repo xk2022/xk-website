@@ -1,0 +1,5 @@
+{
+  "status": "PASS",
+  "comparison": "Byte-for-byte original src/config/portfolio.ts prefix before portfolioPage is unchanged from base614fb6d; includes all three project records, source references, media and status.",
+  "plannedProjects": 3
+}

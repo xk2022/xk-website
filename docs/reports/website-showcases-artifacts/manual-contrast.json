@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "nodes": 302,
+  "minimumRatio": 5.1333065802155575,
+  "method": "Fresh current Pages styles and axe related decorative element. Per-node actual gradient maximum alpha12% or kaleidoscope7%, masks can only reduce it. Channel bounds and WCAG luminance with exact Oklab-to-sRGB conversion. Not all-section overlay stacking, glyph pixel certification, or a full WCAG audit.",
+  "rawEvidence": {
+    "file": "manual-contrast.json.gz",
+    "sha256": "b5277d14224772396256635009934150c08cf3d3b556b81520235a19d5906145",
+    "compressedSha256": "cd8f503140615ce8984586b4a07bce80bb7a085dbe926560c8b89e500e697086",
+    "format": "gzip original JSON, lossless"
+  },
+  "rowsCount": 302,
+  "allDetailsInRawEvidence": true
+}

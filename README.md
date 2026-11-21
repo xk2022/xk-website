@@ -8,6 +8,10 @@
 
 開發協作與驗收請先讀 [Subagent 作業紀錄與執行流程](docs/subagent-workflow.md)，並依 [AGENTS.md](AGENTS.md) 與當次 Task 規格執行。流程包含分工責任、提早檢查完整 Diff、持久化退出碼及依變更影響決定重驗範圍。
 
+## 作品展示
+
+[作品展示頁](https://xk2022.github.io/xk-website/portfolio/) 收錄品牌網站展示、第三方模板範例及獨立的技術規劃。資料集中於 `src/config/website-showcases.ts`，預覽圖為來源網站的實際首屏；新增作品時應同步確認來源、展示性質、素材與外部連結。實作與驗收見 [網站展示整合報告](docs/reports/website-showcases-implementation.md)。
+
 ## 部署方向
 
 使用者於 Task 003 選擇 **GitHub Actions → GitHub Pages 靜態網站**。正式模式仍保留一般 Next.js 建置，Vercel 相容設定使用 Next.js preset、Repository 根目錄 `.`、production branch `main`；實際連結及發布狀態以 Task 013 報告與當次部署證據為準，不需要在 Repository 新增 Vercel Secrets。

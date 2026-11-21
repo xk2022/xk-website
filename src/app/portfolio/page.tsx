@@ -6,6 +6,7 @@ import { PortfolioIntroduction } from "@/components/sections/portfolio/portfolio
 import { PortfolioProjects } from "@/components/sections/portfolio/portfolio-projects";
 import { PortfolioTechnology } from "@/components/sections/portfolio/portfolio-technology";
 import { PortfolioTransparency } from "@/components/sections/portfolio/portfolio-transparency";
+import { WebsiteShowcaseGallery } from "@/components/sections/portfolio/website-showcase-gallery";
 import { getSeoPage } from "@/config/seo";
 import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/seo";
@@ -17,6 +18,7 @@ export default function PortfolioPage() {
     <>
       <PortfolioHero />
       <PortfolioIntroduction />
+      <WebsiteShowcaseGallery />
       <PortfolioProjects />
       <PortfolioTechnology />
       <PortfolioTransparency />

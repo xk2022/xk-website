@@ -1,0 +1,249 @@
+{
+  "mode": "normal",
+  "base": "http://127.0.0.1:3120/",
+  "startedAt": "2026-11-21T16:00:13.081Z",
+  "finishedAt": "2026-11-21T16:00:33.787Z",
+  "status": "FAIL",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "arch": "x64",
+    "browser": "156.0.8078.79",
+    "viewportHeights": 1000
+  },
+  "browser": "156.0.8078.79",
+  "rawEvidence": {
+    "file": "normal-network-enabled-result.json.gz",
+    "sha256": "ebb36a53b142958ed96787074df47c42bdfb9f9ba10651066a4ae0b86f9a6daf",
+    "compressedSha256": "817b9c44b657d04436463505edd01e68ccceaad94152a29d5b93011c8a268ac1",
+    "format": "gzip original JSON, lossless"
+  },
+  "tests": [
+    {
+      "testId": "PAGE-home",
+      "status": "FAIL",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'https://xplorekaleidoscope.com'\n- 'https://xplorekaleidoscope.com/'\n                                 ^\n\n    at /tmp/xk-showcase-gallery/acceptance.cjs:30:89\n    at async test (/tmp/xk-showcase-gallery/acceptance.cjs:16:146)\n    at async /tmp/xk-showcase-gallery/acceptance.cjs:25:27",
+      "completeErrorInRawEvidence": true
+    },
+    {
+      "testId": "PAGE-about",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "關於 XK | Xplore Kaleidoscope",
+        "canonical": "https://xplorekaleidoscope.com/about",
+        "links": 33,
+        "ids": 21,
+        "widths": [
+          375,
+          1440
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-services",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "服務項目 | Xplore Kaleidoscope",
+        "canonical": "https://xplorekaleidoscope.com/services",
+        "links": 42,
+        "ids": 24,
+        "widths": [
+          375,
+          1440
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-solutions",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "解決方案 | Xplore Kaleidoscope",
+        "canonical": "https://xplorekaleidoscope.com/solutions",
+        "links": 80,
+        "ids": 30,
+        "widths": [
+          375,
+          1440
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-portfolio",
+      "status": "FAIL",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "error": "AssertionError [ERR_ASSERTION]: [{\"id\":\"label-content-name-mismatch\",\"impact\":\"serious\",\"tags\":[\"cat.semantics\",\"wcag21a\",\"wcag253\",\"EN-301-549\",\"EN-9.2.5.3\",\"RGAAv4\",\"RGAA-6.1.5\"],\"description\":\"Ensure that elements labelled through their content must have their visible text as part of their accessible name\",\"help\":\"Elements must have their visible text as part of their accessible name\",\"helpUrl\":\"https://dequeuniversity.com/rules/axe/4.14/label-content-name-mismatch?application=playwright\",\"no",
+      "completeErrorInRawEvidence": true
+    },
+    {
+      "testId": "PAGE-portfolio-corporate-website",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "XK Corporate Website Showcase | XK 技術作品集",
+        "canonical": "https://xplorekaleidoscope.com/portfolio/corporate-website",
+        "links": 35,
+        "ids": 21,
+        "widths": [
+          375,
+          1440
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-portfolio-enterprise-management",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "XK Enterprise Management System | XK 技術作品集",
+        "canonical": "https://xplorekaleidoscope.com/portfolio/enterprise-management",
+        "links": 36,
+        "ids": 21,
+        "widths": [
+          375,
+          1440
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-portfolio-integration-hub",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "XK Enterprise Integration Hub | XK 技術作品集",
+        "canonical": "https://xplorekaleidoscope.com/portfolio/integration-hub",
+        "links": 36,
+        "ids": 21,
+        "widths": [
+          375,
+          1440
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-contact",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "聯絡我們 | Xplore Kaleidoscope",
+        "canonical": "https://xplorekaleidoscope.com/contact",
+        "links": 43,
+        "ids": 16,
+        "widths": [
+          375,
+          1440
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "LINKS-ALL-ANCHORS",
+      "status": "FAIL",
+      "procedure": "async()=>{let checked=0;for(const[from,items]of links){for(const link of items){const u=new URL(link.href,from);if(u.origin!==new URL(base).origin)continue;if(!",
+      "error": "AssertionError [ERR_ASSERTION]: Unpublished internal route http://127.0.0.1:3120/\n    at /tmp/xk-showcase-gallery/acceptance.cjs:42:280\n    at test (/tmp/xk-showcase-gallery/acceptance.cjs:16:152)\n    at /tmp/xk-showcase-gallery/acceptance.cjs:42:8",
+      "completeErrorInRawEvidence": true
+    },
+    {
+      "testId": "PORTFOLIO-EIGHT-SHOWCASES",
+      "status": "PASS",
+      "procedure": "async()=>{await page.goto(new URL('portfolio/',base).href,{waitUntil:'networkidle'});for(const [id,count]of[['website-cases',4],['website-samples',4]]){const re",
+      "actual": {
+        "brands": 4,
+        "samples": 4,
+        "localImages": 8,
+        "plannedProjects": 3,
+        "attributions": 4
+      }
+    },
+    {
+      "testId": "FEATURED-AND-CROSS-PAGE-LINKS",
+      "status": "PASS",
+      "procedure": "async()=>{await page.goto(base,{waitUntil:'networkidle'});assert.equal(await page.locator('#featured-websites article').count(),3);const order=await page.locato",
+      "actual": {
+        "home": 3,
+        "serviceEntrances": 2,
+        "solutionEntrances": 2
+      }
+    },
+    {
+      "testId": "FOCUS-AND-REDUCED-MOTION",
+      "status": "PASS",
+      "procedure": "async()=>{await page.goto(new URL('portfolio/',base).href,{waitUntil:'networkidle'});assert(await page.evaluate(()=>matchMedia('(prefers-reduced-motion: reduce)",
+      "actual": {
+        "outline": "solid",
+        "width": "2px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 2px, rgb(49, 87, 213) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "testId": "RUNTIME-CONSOLE-NETWORK",
+      "status": "PASS",
+      "procedure": "async()=>{assert.deepEqual(out.runtimeErrors,[]);assert.deepEqual(out.consoleErrors,[]);assert.deepEqual(out.network,[]);return{runtimeErrors:0,consoleErrors:0,",
+      "actual": {
+        "runtimeErrors": 0,
+        "consoleErrors": 0,
+        "failedResources": 0
+      }
+    },
+    {
+      "testId": "PROTECTED-404",
+      "status": "PASS",
+      "procedure": "async()=>{const c=await browser.newContext({ignoreHTTPSErrors:mode==='live'});for(const suffix of ['privacy/','dev/design-system/','portfolio/unknown-showcase/'",
+      "actual": {
+        "count": 5
+      }
+    }
+  ],
+  "responsiveCount": 15,
+  "axeCount": 1,
+  "incompleteCount": 1,
+  "networkCount": 0,
+  "consoleErrorsCount": 0,
+  "runtimeErrorsCount": 0,
+  "screenshotsCount": 0,
+  "allDetailsInRawEvidence": true
+}

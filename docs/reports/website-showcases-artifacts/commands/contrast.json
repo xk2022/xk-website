@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python",
+    "/tmp/xk-showcase-gallery/adjudicate-contrast.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-21T16:06:34.685462+00:00",
+  "finishedAt": "2026-11-21T16:06:34.752467+00:00",
+  "processId": 5844,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-showcase-gallery/contrast.log",
+  "logSha256": "e05fe8a5716b8dacb1802958ba7b409164647dfe5e1f94336e480f609d808355",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

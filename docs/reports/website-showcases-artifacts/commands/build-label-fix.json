@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "run",
+    "build"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-21T16:01:30.553045+00:00",
+  "finishedAt": "2026-11-21T16:01:36.811522+00:00",
+  "processId": 3468,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-showcase-gallery/build-label-fix.log",
+  "logSha256": "8f21dfd8cadec05baa3af378a2156cb33a8985692d83552a35c9549da8ca2448",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,2425 @@
+{
+  "schemaVersion": 1,
+  "task": "website-showcase-gallery",
+  "startedAt": "2026-11-21T15:54:52.301Z",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "deviceScaleFactor": 1,
+  "tool": {
+    "automation": "playwright-core",
+    "automationVersion": "1.65.1",
+    "browser": "Chromium",
+    "browserVersion": "156.0.8078.79",
+    "executable": "/usr/bin/chromium"
+  },
+  "method": "Public page desktop first viewport. No authentication, forms, submissions, cookie decisions or page content modifications. Waited for fonts and first-viewport image decode. Raw PNG preserved separately; production asset converted with Pillow.",
+  "assets": [
+    {
+      "id": "demo-001",
+      "url": "https://xk2022.github.io/single-demo001/",
+      "finalUrl": "https://xk2022.github.io/single-demo001/",
+      "capturedAt": "2026-11-21T15:54:55.949Z",
+      "httpStatus": 200,
+      "template": {
+        "name": "Agency",
+        "provider": "Start Bootstrap",
+        "provenance": "Root instruction; cross-checked against rendered public source where attribution is present."
+      },
+      "title": "(SingleDemo001)Agency - Start Bootstrap Theme",
+      "headings": [
+        {
+          "level": "H2",
+          "text": "Services"
+        },
+        {
+          "level": "H2",
+          "text": "Portfolio"
+        },
+        {
+          "level": "H2",
+          "text": "About"
+        },
+        {
+          "level": "H2",
+          "text": "Our Amazing Team"
+        },
+        {
+          "level": "H2",
+          "text": "Contact Us"
+        },
+        {
+          "level": "H2",
+          "text": "Project Name"
+        },
+        {
+          "level": "H2",
+          "text": "Project Name"
+        },
+        {
+          "level": "H2",
+          "text": "Project Name"
+        },
+        {
+          "level": "H2",
+          "text": "Project Name"
+        },
+        {
+          "level": "H2",
+          "text": "Project Name"
+        },
+        {
+          "level": "H2",
+          "text": "Project Name"
+        }
+      ],
+      "footerText": [
+        "Copyright © Your Website 2021\nPrivacy PolicyTerms of Use"
+      ],
+      "sourceLinks": [
+        {
+          "text": "https://startbootstrap.com/solution/contact-forms",
+          "href": "https://startbootstrap.com/solution/contact-forms"
+        }
+      ],
+      "declarationLines": [
+        "Copyright © Your Website 2021"
+      ],
+      "bodyText": "SERVICES\nPORTFOLIO\nABOUT\nTEAM\nCONTACT\nWelcome To Our Studio!\nIT'S NICE TO MEET YOU\nTELL ME MORE\nSERVICES\nLorem ipsum dolor sit amet consectetur.\nE-Commerce\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.\n\nResponsive Design\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.\n\nWeb Security\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.\n\nPORTFOLIO\nLorem ipsum dolor sit amet consectetur.\nThreads\nIllustration\nExplore\nGraphic Design\nFinish\nIdentity\nLines\nBranding\nSouthwest\nWebsite Design\nWindow\nPhotography\nABOUT\nLorem ipsum dolor sit amet consectetur.\n2009-2011\nOur Humble Beginnings\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!\n\nMarch 2011\nAn Agency is Born\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!\n\nDecember 2015\nTransition to Full Service\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!\n\nJuly 2020\nPhase Two Expansion\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!\n\nBe Part\nOf Our\nStory!\nOUR AMAZING TEAM\nLorem ipsum dolor sit amet consectetur.\nParveen Anand\n\nLead Designer\n\nDiana Petersen\n\nLead Marketer\n\nLarry Parker\n\nLead Developer\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.\n\nCONTACT US\nLorem ipsum dolor sit amet consectetur.\nSEND MESSAGE\nCopyright © Your Website 2021\nPrivacy PolicyTerms of Use",
+      "fontStatus": "loaded",
+      "fontFaces": [
+        {
+          "family": "Montserrat",
+          "status": "unloaded"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded"
+        },
+        {
+          "family": "Montserrat",
+          "status": "loaded"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded"
+        },
+        {
+          "family": "Montserrat",
+          "status": "unloaded"
+        },
+        {
+          "family": "Montserrat",
+          "status": "loaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "loaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        },
+        {
+          "family": "Roboto Slab",
+          "status": "unloaded"
+        }
+      ],
+      "visibleImages": [
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/navbar-logo.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 51,
+          "alt": "...",
+          "inViewport": true
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/1.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/2.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/3.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/4.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/5.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/6.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/about/1.jpg",
+          "complete": true,
+          "naturalWidth": 200,
+          "naturalHeight": 200,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/about/2.jpg",
+          "complete": true,
+          "naturalWidth": 200,
+          "naturalHeight": 200,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/about/3.jpg",
+          "complete": true,
+          "naturalWidth": 200,
+          "naturalHeight": 200,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/about/4.jpg",
+          "complete": true,
+          "naturalWidth": 200,
+          "naturalHeight": 200,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/team/1.jpg",
+          "complete": true,
+          "naturalWidth": 500,
+          "naturalHeight": 500,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/team/2.jpg",
+          "complete": true,
+          "naturalWidth": 500,
+          "naturalHeight": 500,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/team/3.jpg",
+          "complete": true,
+          "naturalWidth": 500,
+          "naturalHeight": 500,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/logos/microsoft.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 64,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/logos/google.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 111,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/logos/facebook.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 81,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/logos/ibm.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 120,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/close-icon.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150,
+          "alt": "Close modal",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/1.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/close-icon.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150,
+          "alt": "Close modal",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/2.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/close-icon.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150,
+          "alt": "Close modal",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/3.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/close-icon.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150,
+          "alt": "Close modal",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/4.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/close-icon.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150,
+          "alt": "Close modal",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/5.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/close-icon.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150,
+          "alt": "Close modal",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo001/assets/img/portfolio/6.jpg",
+          "complete": true,
+          "naturalWidth": 600,
+          "naturalHeight": 450,
+          "alt": "...",
+          "inViewport": false
+        }
+      ],
+      "documentDimensions": {
+        "width": 1280,
+        "height": 6274
+      },
+      "cookieControls": [],
+      "rawScreenshot": {
+        "path": "/tmp/xk-showcase-gallery/demo-001.png",
+        "format": "png",
+        "width": 1280,
+        "height": 800,
+        "bytes": 810245,
+        "sha256": "0dd9905d1caea4b7d2e97eec6f90a39f0aa2ce98ca6427ee28cfc6ae70e57e2f"
+      },
+      "rendering": {
+        "navigationError": null,
+        "pageErrors": [
+          "Failed to load resource: the server responded with a status of 404 ()"
+        ],
+        "failedRequests": [],
+        "badResponses": [
+          {
+            "url": "https://xk2022.github.io/single-demo001/assets/assets/img/map-image.png",
+            "status": 404
+          }
+        ],
+        "brokenInViewportImages": [],
+        "limitations": [
+          "Public source returns HTTP 404 for assets/assets/img/map-image.png; not visible in the captured first viewport."
+        ],
+        "fontNote": "document.fonts.ready resolved and document.fonts.status was loaded. Unloaded FontFace entries are unused declared unicode subsets/weights, not observed font failures."
+      },
+      "visualReview": {
+        "status": "REVIEWED",
+        "method": "Human visual inspection of all eight rendered PNG previews in the initial contact sheet, then all eight compressed WebP previews in the final contact sheet.",
+        "note": "Loaded dark desk hero, Start Bootstrap logo, navigation and readable English headline. No broken image in the first viewport. Source 404 affects map image in lower contact section only."
+      },
+      "asset": {
+        "path": "/workspace/xk-website/public/images/showcases/demo-001.webp",
+        "repoPath": "public/images/showcases/demo-001.webp",
+        "format": "webp",
+        "width": 1280,
+        "height": 800,
+        "bytes": 51488,
+        "sha256": "ab90bf193c9b3e2b10daa3c2b8a1c8789130a7b7bbfbcc6770e017f0f7d3c841",
+        "quality": 84,
+        "compressionMethod": 6,
+        "convertedAt": "2026-11-21T15:56:13.989794+00:00"
+      },
+      "h1": [],
+      "formInteraction": "No form fields filled, no submit buttons activated, and no login or authentication used."
+    },
+    {
+      "id": "demo-002",
+      "url": "https://xk2022.github.io/single-demo002/",
+      "finalUrl": "https://xk2022.github.io/single-demo002/",
+      "capturedAt": "2026-11-21T15:54:58.710Z",
+      "httpStatus": 200,
+      "template": {
+        "name": "Creative",
+        "provider": "Start Bootstrap",
+        "provenance": "Root instruction; cross-checked against rendered public source where attribution is present."
+      },
+      "title": "(SingleDemo002)Creative - Start Bootstrap Theme",
+      "headings": [
+        {
+          "level": "H1",
+          "text": "Your Favorite Place for Free Bootstrap Themes"
+        },
+        {
+          "level": "H2",
+          "text": "We've got what you need!"
+        },
+        {
+          "level": "H2",
+          "text": "At Your Service"
+        },
+        {
+          "level": "H2",
+          "text": "Free Download at Start Bootstrap!"
+        },
+        {
+          "level": "H2",
+          "text": "Let's Get In Touch!"
+        }
+      ],
+      "footerText": [
+        "Copyright © 2021 - Company Name"
+      ],
+      "sourceLinks": [
+        {
+          "text": "Download Now!",
+          "href": "https://startbootstrap.com/theme/creative/"
+        },
+        {
+          "text": "https://startbootstrap.com/solution/contact-forms",
+          "href": "https://startbootstrap.com/solution/contact-forms"
+        }
+      ],
+      "declarationLines": [
+        "Start Bootstrap",
+        "Your Favorite Place for Free Bootstrap Themes",
+        "Start Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!",
+        "Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!",
+        "Free Download at Start Bootstrap!",
+        "Copyright © 2021 - Company Name"
+      ],
+      "bodyText": "Start Bootstrap\nAbout\nServices\nPortfolio\nContact\nYour Favorite Place for Free Bootstrap Themes\n\nStart Bootstrap can help you build better websites using the Bootstrap framework! Just download a theme and start customizing, no strings attached!\n\nFIND OUT MORE\nWe've got what you need!\n\nStart Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!\n\nGET STARTED!\nAt Your Service\nSturdy Themes\n\nOur themes are updated regularly to keep them bug free!\n\nUp to Date\n\nAll dependencies are kept current to keep things fresh.\n\nReady to Publish\n\nYou can use this design as is, or you can make changes!\n\nMade with Love\n\nIs it really open source if it's not made with love?\n\nCATEGORY\nProject Name\nCATEGORY\nProject Name\nCATEGORY\nProject Name\nCATEGORY\nProject Name\nCATEGORY\nProject Name\nCATEGORY\nProject Name\nFree Download at Start Bootstrap!\nDOWNLOAD NOW!\nLet's Get In Touch!\n\nReady to start your next project with us? Send us a messages and we will get back to you as soon as possible!\n\nFull name\nEmail address\nPhone number\nMessage\nSUBMIT\n+1 (555) 123-4567\nCopyright © 2021 - Company Name",
+      "fontStatus": "loaded",
+      "fontFaces": [
+        {
+          "family": "bootstrap-icons",
+          "status": "loaded"
+        },
+        {
+          "family": "Merriweather Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather Sans",
+          "status": "loaded"
+        },
+        {
+          "family": "Merriweather Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather Sans",
+          "status": "loaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "loaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "loaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "unloaded"
+        },
+        {
+          "family": "Merriweather",
+          "status": "loaded"
+        }
+      ],
+      "visibleImages": [
+        {
+          "src": "https://xk2022.github.io/single-demo002/assets/img/portfolio/thumbnails/1.jpg",
+          "complete": true,
+          "naturalWidth": 650,
+          "naturalHeight": 350,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo002/assets/img/portfolio/thumbnails/2.jpg",
+          "complete": true,
+          "naturalWidth": 650,
+          "naturalHeight": 350,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo002/assets/img/portfolio/thumbnails/3.jpg",
+          "complete": true,
+          "naturalWidth": 650,
+          "naturalHeight": 350,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo002/assets/img/portfolio/thumbnails/4.jpg",
+          "complete": true,
+          "naturalWidth": 650,
+          "naturalHeight": 350,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo002/assets/img/portfolio/thumbnails/5.jpg",
+          "complete": true,
+          "naturalWidth": 650,
+          "naturalHeight": 350,
+          "alt": "...",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo002/assets/img/portfolio/thumbnails/6.jpg",
+          "complete": true,
+          "naturalWidth": 650,
+          "naturalHeight": 350,
+          "alt": "...",
+          "inViewport": false
+        }
+      ],
+      "documentDimensions": {
+        "width": 1280,
+        "height": 3848
+      },
+      "cookieControls": [],
+      "rawScreenshot": {
+        "path": "/tmp/xk-showcase-gallery/demo-002.png",
+        "format": "png",
+        "width": 1280,
+        "height": 800,
+        "bytes": 76820,
+        "sha256": "ca57d7a3f61d43f73390df243544713843557ae30351338c5ded3eb928429388"
+      },
+      "rendering": {
+        "navigationError": null,
+        "pageErrors": [
+          "Failed to load resource: the server responded with a status of 404 ()"
+        ],
+        "failedRequests": [],
+        "badResponses": [
+          {
+            "url": "https://xk2022.github.io/single-demo002/assets/assets/img/bg-masthead.jpg",
+            "status": 404
+          }
+        ],
+        "brokenInViewportImages": [],
+        "limitations": [
+          "Public source returns HTTP 404 for hero background assets/assets/img/bg-masthead.jpg. First viewport photograph is absent in the source itself; screenshot is not repaired."
+        ],
+        "fontNote": "document.fonts.ready resolved and document.fonts.status was loaded. Unloaded FontFace entries are unused declared unicode subsets/weights, not observed font failures."
+      },
+      "visualReview": {
+        "status": "REVIEWED_WITH_SOURCE_LIMITATIONS",
+        "method": "Human visual inspection of all eight rendered PNG previews in the initial contact sheet, then all eight compressed WebP previews in the final contact sheet.",
+        "note": "Readable navigation/headline/CTA on flat taupe hero. Source hero background URL returns 404, so photograph is absent in the actual public page. Screenshot preserves this existing source limitation."
+      },
+      "asset": {
+        "path": "/workspace/xk-website/public/images/showcases/demo-002.webp",
+        "repoPath": "public/images/showcases/demo-002.webp",
+        "format": "webp",
+        "width": 1280,
+        "height": 800,
+        "bytes": 21216,
+        "sha256": "9ecb635b6e992c909eb8493688e4e04d67becfec26810ec9e6b47ff9d5b42255",
+        "quality": 84,
+        "compressionMethod": 6,
+        "convertedAt": "2026-11-21T15:56:14.123055+00:00"
+      },
+      "h1": [
+        "Your Favorite Place for Free Bootstrap Themes"
+      ],
+      "formInteraction": "No form fields filled, no submit buttons activated, and no login or authentication used."
+    },
+    {
+      "id": "demo-003",
+      "url": "https://xk2022.github.io/single-demo003/",
+      "finalUrl": "https://xk2022.github.io/single-demo003/",
+      "capturedAt": "2026-11-21T15:55:01.824Z",
+      "httpStatus": 200,
+      "template": {
+        "name": "Gadget Landing",
+        "provider": "TemplateMag",
+        "provenance": "Root instruction; cross-checked against rendered public source where attribution is present."
+      },
+      "title": "(SingleDemo003)Gadgetlanding Bootstrap Landing Template",
+      "headings": [
+        {
+          "level": "H1",
+          "text": "YOUR WATCH, OUR APP."
+        },
+        {
+          "level": "H2",
+          "text": "It's time to take your watch to the next level."
+        },
+        {
+          "level": "H1",
+          "text": "Useful Information When You Need It"
+        },
+        {
+          "level": "H2",
+          "text": "World Class Design"
+        },
+        {
+          "level": "H2",
+          "text": "Learn From Experience"
+        },
+        {
+          "level": "H2",
+          "text": "Fit Your Needs"
+        },
+        {
+          "level": "H1",
+          "text": "Notable Features"
+        },
+        {
+          "level": "H1",
+          "text": "One App To Rule Them All"
+        },
+        {
+          "level": "H1",
+          "text": "Incredible & Affordable"
+        },
+        {
+          "level": "H1",
+          "text": "Grab It Now!"
+        },
+        {
+          "level": "H1",
+          "text": "Want To Try Us?"
+        },
+        {
+          "level": "H2",
+          "text": "Just put your email below and you'll receive your download link."
+        },
+        {
+          "level": "H2",
+          "text": "Contact Us"
+        }
+      ],
+      "footerText": [],
+      "sourceLinks": [
+        {
+          "text": "TemplateMag",
+          "href": "https://templatemag.com/"
+        }
+      ],
+      "declarationLines": [
+        "© Copyrights GadgetLanding. All Rights Reserved",
+        "Created with GadgetLanding template by TemplateMag"
+      ],
+      "bodyText": "HOME\nABOUT\nFEATURES\nCONTACT\nYOUR WATCH, OUR APP.\nIt's time to take your watch to the next level.\nUseful Information When You Need It\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nWorld Class Design\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.\nLearn From Experience\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.\nFit Your Needs\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.\nNotable Features\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s.\nACCURATE ANALYTICS\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nSOCIAL INTERACTION\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nWORLD-WIDE SUPPORT\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nMULTIPLE GAMES\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nACCURATE ANALYTICS\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nSOCIAL INTERACTION\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nWORLD-WIDE SUPPORT\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nMULTIPLE GAMES\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nOne App To Rule Them All\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.\n\nIf you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.\n\nAll the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.\n\nIncredible & Affordable\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.\n\nIf you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.\n\nAll the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.\n\nGrab It Now!\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.\n\nIf you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.\n\nAll the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.\n\nWant To Try Us?\nJust put your email below\nand you'll receive your download link.\nYes, Please\nContact Us\nSend Message\n\n© Copyrights GadgetLanding. All Rights Reserved\n\nCreated with GadgetLanding template by TemplateMag",
+      "fontStatus": "loaded",
+      "fontFaces": [
+        {
+          "family": "Lato",
+          "status": "unloaded"
+        },
+        {
+          "family": "Lato",
+          "status": "loaded"
+        },
+        {
+          "family": "Lato",
+          "status": "unloaded"
+        },
+        {
+          "family": "Lato",
+          "status": "loaded"
+        },
+        {
+          "family": "Lato",
+          "status": "unloaded"
+        },
+        {
+          "family": "Lato",
+          "status": "loaded"
+        },
+        {
+          "family": "Lato",
+          "status": "unloaded"
+        },
+        {
+          "family": "Lato",
+          "status": "loaded"
+        },
+        {
+          "family": "Lato",
+          "status": "unloaded"
+        },
+        {
+          "family": "Lato",
+          "status": "unloaded"
+        },
+        {
+          "family": "Glyphicons Halflings",
+          "status": "unloaded"
+        },
+        {
+          "family": "Ionicons",
+          "status": "loaded"
+        }
+      ],
+      "visibleImages": [
+        {
+          "src": "https://xk2022.github.io/single-demo003/img/logo.png",
+          "complete": true,
+          "naturalWidth": 0,
+          "naturalHeight": 0,
+          "alt": "",
+          "inViewport": true
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/ls-watch.png",
+          "complete": true,
+          "naturalWidth": 709,
+          "naturalHeight": 857,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/front.png",
+          "complete": true,
+          "naturalWidth": 381,
+          "naturalHeight": 451,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/front02.png",
+          "complete": true,
+          "naturalWidth": 381,
+          "naturalHeight": 451,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/front07.png",
+          "complete": true,
+          "naturalWidth": 381,
+          "naturalHeight": 451,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f01.png",
+          "complete": true,
+          "naturalWidth": 800,
+          "naturalHeight": 600,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f02.png",
+          "complete": true,
+          "naturalWidth": 800,
+          "naturalHeight": 600,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f03.png",
+          "complete": true,
+          "naturalWidth": 800,
+          "naturalHeight": 600,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f04.png",
+          "complete": true,
+          "naturalWidth": 800,
+          "naturalHeight": 600,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f05.png",
+          "complete": true,
+          "naturalWidth": 800,
+          "naturalHeight": 600,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f06.png",
+          "complete": true,
+          "naturalWidth": 800,
+          "naturalHeight": 600,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f07.png",
+          "complete": true,
+          "naturalWidth": 800,
+          "naturalHeight": 600,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f08.png",
+          "complete": true,
+          "naturalWidth": 800,
+          "naturalHeight": 600,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/watch01.jpg",
+          "complete": true,
+          "naturalWidth": 764,
+          "naturalHeight": 868,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/watch02.jpg",
+          "complete": true,
+          "naturalWidth": 764,
+          "naturalHeight": 868,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo003/assets/img/watch03.jpg",
+          "complete": true,
+          "naturalWidth": 764,
+          "naturalHeight": 868,
+          "alt": "",
+          "inViewport": false
+        }
+      ],
+      "documentDimensions": {
+        "width": 1280,
+        "height": 10203
+      },
+      "cookieControls": [],
+      "rawScreenshot": {
+        "path": "/tmp/xk-showcase-gallery/demo-003.png",
+        "format": "png",
+        "width": 1280,
+        "height": 800,
+        "bytes": 496837,
+        "sha256": "9a1844dce3c3435cc918d614c7226aed5b7a96b2aed54c6002657291b308d63d"
+      },
+      "rendering": {
+        "navigationError": null,
+        "pageErrors": [
+          "Failed to load resource: the server responded with a status of 404 ()"
+        ],
+        "failedRequests": [],
+        "badResponses": [
+          {
+            "url": "https://xk2022.github.io/single-demo003/img/logo.png",
+            "status": 404
+          }
+        ],
+        "brokenInViewportImages": [
+          {
+            "src": "https://xk2022.github.io/single-demo003/img/logo.png",
+            "complete": true,
+            "naturalWidth": 0,
+            "naturalHeight": 0,
+            "alt": "",
+            "inViewport": true
+          }
+        ],
+        "limitations": [
+          "Public source returns HTTP 404 for img/logo.png; small broken-image marker remains in top-left navigation in authentic screenshot."
+        ],
+        "fontNote": "document.fonts.ready resolved and document.fonts.status was loaded. Unloaded FontFace entries are unused declared unicode subsets/weights, not observed font failures."
+      },
+      "visualReview": {
+        "status": "REVIEWED_WITH_SOURCE_LIMITATIONS",
+        "method": "Human visual inspection of all eight rendered PNG previews in the initial contact sheet, then all eight compressed WebP previews in the final contact sheet.",
+        "note": "Loaded watch photograph, navigation, hero headline and subheading. Source logo returns 404 and a small broken-image marker is visible at top left. Screenshot preserves this existing source limitation."
+      },
+      "asset": {
+        "path": "/workspace/xk-website/public/images/showcases/demo-003.webp",
+        "repoPath": "public/images/showcases/demo-003.webp",
+        "format": "webp",
+        "width": 1280,
+        "height": 800,
+        "bytes": 23948,
+        "sha256": "2d77617f64bebb04044d8af7cdc876792561dbba42b4b00975c35ac98b48ce8b",
+        "quality": 84,
+        "compressionMethod": 6,
+        "convertedAt": "2026-11-21T15:56:14.239128+00:00"
+      },
+      "h1": [
+        "YOUR WATCH, OUR APP.",
+        "Useful Information When You Need It",
+        "Notable Features",
+        "One App To Rule Them All",
+        "Incredible & Affordable",
+        "Grab It Now!",
+        "Want To Try Us?"
+      ],
+      "formInteraction": "No form fields filled, no submit buttons activated, and no login or authentication used."
+    },
+    {
+      "id": "demo-004",
+      "url": "https://xk2022.github.io/single-demo004/",
+      "finalUrl": "https://xk2022.github.io/single-demo004/",
+      "capturedAt": "2026-11-21T15:55:05.215Z",
+      "httpStatus": 200,
+      "template": {
+        "name": "Food Landing",
+        "provider": "TemplateMag",
+        "provenance": "Root instruction; cross-checked against rendered public source where attribution is present."
+      },
+      "title": "(SingleDemo004)Foodlanding - Bootstrap Landing Template",
+      "headings": [
+        {
+          "level": "H1",
+          "text": "A LANDING PAGEFOR YOUR RESTAURANT"
+        }
+      ],
+      "footerText": [],
+      "sourceLinks": [
+        {
+          "text": "TemplateMag",
+          "href": "https://templatemag.com/"
+        }
+      ],
+      "declarationLines": [
+        "© Copyrights FoodLanding. All Rights Reserved",
+        "Created with FoodLanding template by TemplateMag"
+      ],
+      "bodyText": "Home\nChefs\nDishes\nContact\nA LANDING PAGE\nFOR YOUR RESTAURANT\n\nEnjoy the experience of our restaurant.\nRegister to know our latest news.\n\nSubscribe\nHANDSOME LANDING. AWESOME EXPERIENCES.\nTRULY TASTEFUL\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\n8 CITIES\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\nAFFORDABLE PRICES\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\nWE DELIVER\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\nMEET OUR AWESOME CHEFS\nDavid Harrison\nPatrick Dawson\nDavid Harrison\nTOP CHEF\n\n\n\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nEXCLUSIVE MENU\n\nEnjoy our meals. You can click each menu to display more information.\n\nSalmon\nSeafood Platter\nCrawfish\nBouillabaisse\nSteak\nRibs & Bread\nPork\nLasagna\nBanana Pudding\nBlack Bottom Pie\nBlack Forest\nSEAFOODMEATDESSERTS\nRESERVE VIA YOUR PHONE\n\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.\n\nRichard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.\n\nLorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC.\n\nSUBSCRIBE TO OUR NEWSLETTER\n\nWe will let you know all our awesome offers.\n\nSubscribe\nCONTACT US\nYour Name\nYour Email\nSubject\nYour Message\nSend Message\n\n© Copyrights FoodLanding. All Rights Reserved\n\nCreated with FoodLanding template by TemplateMag",
+      "fontStatus": "loaded",
+      "fontFaces": [
+        {
+          "family": "Libre Baskerville",
+          "status": "unloaded"
+        },
+        {
+          "family": "Libre Baskerville",
+          "status": "loaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "loaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "loaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "unloaded"
+        },
+        {
+          "family": "Open Sans",
+          "status": "loaded"
+        },
+        {
+          "family": "Glyphicons Halflings",
+          "status": "unloaded"
+        },
+        {
+          "family": "Ionicons",
+          "status": "loaded"
+        }
+      ],
+      "visibleImages": [
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/logo.png",
+          "complete": true,
+          "naturalWidth": 200,
+          "naturalHeight": 200,
+          "alt": "",
+          "inViewport": true
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/chef01.png",
+          "complete": true,
+          "naturalWidth": 755,
+          "naturalHeight": 887,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/chef02.png",
+          "complete": true,
+          "naturalWidth": 755,
+          "naturalHeight": 887,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/food/1.png",
+          "complete": true,
+          "naturalWidth": 360,
+          "naturalHeight": 360,
+          "alt": "img01",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/food/2.png",
+          "complete": true,
+          "naturalWidth": 360,
+          "naturalHeight": 360,
+          "alt": "img02",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/food/3.png",
+          "complete": true,
+          "naturalWidth": 360,
+          "naturalHeight": 360,
+          "alt": "img03",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/food/4.png",
+          "complete": true,
+          "naturalWidth": 360,
+          "naturalHeight": 360,
+          "alt": "img04",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/food/5.png",
+          "complete": true,
+          "naturalWidth": 360,
+          "naturalHeight": 360,
+          "alt": "img05",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/food/6.png",
+          "complete": true,
+          "naturalWidth": 360,
+          "naturalHeight": 360,
+          "alt": "img06",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/food/7.png",
+          "complete": true,
+          "naturalWidth": 360,
+          "naturalHeight": 360,
+          "alt": "img07",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/food/8.png",
+          "complete": true,
+          "naturalWidth": 360,
+          "naturalHeight": 360,
+          "alt": "img08",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/food/9.png",
+          "complete": true,
+          "naturalWidth": 360,
+          "naturalHeight": 360,
+          "alt": "img09",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/food/10.png",
+          "complete": true,
+          "naturalWidth": 360,
+          "naturalHeight": 360,
+          "alt": "img10",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/food/11.png",
+          "complete": true,
+          "naturalWidth": 360,
+          "naturalHeight": 360,
+          "alt": "img11",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/modalbg.jpg",
+          "complete": true,
+          "naturalWidth": 800,
+          "naturalHeight": 350,
+          "alt": "",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/single-demo004/assets/img/phone.png",
+          "complete": true,
+          "naturalWidth": 512,
+          "naturalHeight": 1039,
+          "alt": "",
+          "inViewport": false
+        }
+      ],
+      "documentDimensions": {
+        "width": 1280,
+        "height": 5423
+      },
+      "cookieControls": [],
+      "rawScreenshot": {
+        "path": "/tmp/xk-showcase-gallery/demo-004.png",
+        "format": "png",
+        "width": 1280,
+        "height": 800,
+        "bytes": 1192889,
+        "sha256": "af8d82eed5845d31bbead08fae286e15c10a9fe6ebf79ed39486af0bf461a8a2"
+      },
+      "rendering": {
+        "navigationError": null,
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": [],
+        "brokenInViewportImages": [],
+        "limitations": [],
+        "fontNote": "document.fonts.ready resolved and document.fonts.status was loaded. Unloaded FontFace entries are unused declared unicode subsets/weights, not observed font failures."
+      },
+      "visualReview": {
+        "status": "REVIEWED",
+        "method": "Human visual inspection of all eight rendered PNG previews in the initial contact sheet, then all eight compressed WebP previews in the final contact sheet.",
+        "note": "Loaded full-width food photograph, cutlery mark, navigation, translucent text panel and subscription mockup. Text and main image are visible; no submission was attempted."
+      },
+      "asset": {
+        "path": "/workspace/xk-website/public/images/showcases/demo-004.webp",
+        "repoPath": "public/images/showcases/demo-004.webp",
+        "format": "webp",
+        "width": 1280,
+        "height": 800,
+        "bytes": 119462,
+        "sha256": "4a5dfc570913c99bcf41683d25a72628682171ce49fe765f12cc9130d2510c89",
+        "quality": 84,
+        "compressionMethod": 6,
+        "convertedAt": "2026-11-21T15:56:14.441101+00:00"
+      },
+      "h1": [
+        "A LANDING PAGEFOR YOUR RESTAURANT"
+      ],
+      "formInteraction": "No form fields filled, no submit buttons activated, and no login or authentication used."
+    },
+    {
+      "id": "march-tangbao",
+      "url": "https://xk2022.github.io/xk-showcase-march-tangbao/",
+      "finalUrl": "https://xk2022.github.io/xk-showcase-march-tangbao/",
+      "capturedAt": "2026-11-21T15:55:08.336Z",
+      "httpStatus": 200,
+      "template": null,
+      "title": "三月手工湯包｜中壢新明市場湯包與私房冷滷味",
+      "headings": [
+        {
+          "level": "H1",
+          "text": "早上來一籠湯包，滷味帶回家加菜。"
+        },
+        {
+          "level": "H2",
+          "text": "菜單"
+        },
+        {
+          "level": "H2",
+          "text": "預留滷味"
+        },
+        {
+          "level": "H2",
+          "text": "門市資訊"
+        }
+      ],
+      "footerText": [
+        "三月手工湯包\nXK SYSTEM 作品集展示"
+      ],
+      "sourceLinks": [],
+      "declarationLines": [
+        "帶入示範資料",
+        "XK SYSTEM 作品集展示"
+      ],
+      "bodyText": "三月手工湯包\n菜單\n預留滷味\n門市資訊\n\n中壢新明市場附近\n\n早上來一籠湯包，\n滷味帶回家加菜。\n導航到店\n預留滷味\n餐點示意\n菜單\n\n品項以門市公告為準\n\n手工湯包\n餐點示意\n私房冷滷味\n餐點示意\n冰鎮鴨翅\n餐點示意\n香滷豆干\n預留滷味\n選品項與份數\n整理詢問訊息\n店家回覆後取餐\n選擇滷味\n\n可填寫想詢問的份數，供應情況以店家回覆為準。\n\n冰鎮鴨翅\n冰鎮鴨翅\n份數\n香滷豆干\n香滷豆干\n份數\n希望取餐日期\n希望取餐時間\n產生預留訊息\n帶入示範資料\n\n門市資訊\n\n桃園市中壢區民權路 66 號\n\n以前在長沙路吃過三月手工湯包嗎？現在可以到民權路 66 號。\n\n導航到店\n營業時間\n週一\n公休\n週二至週五\n07:00–13:00\n17:30–20:00\n週六、週日\n07:00–14:00\n\n營業異動請看店家最新公告\n\n看店家最新公告\n三月手工湯包\nXK SYSTEM 作品集展示",
+      "fontStatus": "loaded",
+      "fontFaces": [],
+      "visibleImages": [
+        {
+          "src": "https://xk2022.github.io/xk-showcase-march-tangbao/food/dumplings.webp",
+          "complete": true,
+          "naturalWidth": 724,
+          "naturalHeight": 724,
+          "alt": "竹蒸籠中冒著熱氣的手工湯包插圖",
+          "inViewport": true
+        },
+        {
+          "src": "https://xk2022.github.io/xk-showcase-march-tangbao/food/dumplings.webp",
+          "complete": true,
+          "naturalWidth": 724,
+          "naturalHeight": 724,
+          "alt": "竹蒸籠中冒著熱氣的手工湯包插圖",
+          "inViewport": true
+        },
+        {
+          "src": "https://xk2022.github.io/xk-showcase-march-tangbao/food/duck.webp",
+          "complete": true,
+          "naturalWidth": 724,
+          "naturalHeight": 724,
+          "alt": "陶盤盛裝的冰鎮鴨翅插圖",
+          "inViewport": true
+        },
+        {
+          "src": "https://xk2022.github.io/xk-showcase-march-tangbao/food/tofu.webp",
+          "complete": true,
+          "naturalWidth": 724,
+          "naturalHeight": 724,
+          "alt": "切塊疊放的香滷豆干插圖",
+          "inViewport": true
+        }
+      ],
+      "documentDimensions": {
+        "width": 1280,
+        "height": 2208
+      },
+      "cookieControls": [],
+      "rawScreenshot": {
+        "path": "/tmp/xk-showcase-gallery/march-tangbao.png",
+        "format": "png",
+        "width": 1280,
+        "height": 800,
+        "bytes": 469587,
+        "sha256": "3494241fbb46bb284863ac631382955d2d7c97d1feaf0d820f9a2ced2e92cfdc"
+      },
+      "rendering": {
+        "navigationError": null,
+        "pageErrors": [
+          "Failed to load resource: the server responded with a status of 404 ()"
+        ],
+        "failedRequests": [],
+        "badResponses": [],
+        "brokenInViewportImages": [],
+        "limitations": [
+          "Browser console emitted one resource HTTP 404 message without a matching >=400 response event; no broken first-viewport image was detected."
+        ],
+        "fontNote": "document.fonts.ready resolved and document.fonts.status was loaded. Unloaded FontFace entries are unused declared unicode subsets/weights, not observed font failures."
+      },
+      "visualReview": {
+        "status": "REVIEWED",
+        "method": "Human visual inspection of all eight rendered PNG previews in the initial contact sheet, then all eight compressed WebP previews in the final contact sheet.",
+        "note": "Loaded dumpling photograph, Chinese brand/navigation, headline and menu start. Chinese text is readable and no first-viewport image is broken."
+      },
+      "asset": {
+        "path": "/workspace/xk-website/public/images/showcases/march-tangbao.webp",
+        "repoPath": "public/images/showcases/march-tangbao.webp",
+        "format": "webp",
+        "width": 1280,
+        "height": 800,
+        "bytes": 58872,
+        "sha256": "35e208c44a01509a3b5ac1c3790c674768d22e11cfc0a9acccafe8a1a5edd95a",
+        "quality": 84,
+        "compressionMethod": 6,
+        "convertedAt": "2026-11-21T15:56:14.567910+00:00"
+      },
+      "h1": [
+        "早上來一籠湯包，滷味帶回家加菜。"
+      ],
+      "formInteraction": "No form fields filled, no submit buttons activated, and no login or authentication used."
+    },
+    {
+      "id": "hongjia-birdnest",
+      "url": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/",
+      "finalUrl": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/",
+      "capturedAt": "2026-11-21T15:55:11.039Z",
+      "httpStatus": 200,
+      "template": null,
+      "title": "宏家燕窩｜親友送禮與企業贈禮｜XK 展示案例",
+      "headings": [
+        {
+          "level": "H1",
+          "text": "這份燕窩，想送給誰？"
+        },
+        {
+          "level": "H2",
+          "text": "先想想，這份禮要送給誰"
+        },
+        {
+          "level": "H2",
+          "text": "送禮洽詢表單"
+        }
+      ],
+      "footerText": [
+        "宏家燕窩\n\nR01 網站建置｜食品品牌送禮展示案例\n\nXK SYSTEM 自製展示案例"
+      ],
+      "sourceLinks": [],
+      "declarationLines": [
+        "本頁為送禮情境展示，實際品項、售價與配送方式待品牌確認。",
+        "帶入示範資料",
+        "產生模擬洽詢摘要",
+        "R01 網站建置｜食品品牌送禮展示案例",
+        "XK SYSTEM 自製展示案例"
+      ],
+      "bodyText": "宏家燕窩\n送禮情境\n洽詢表單\n\n燕窩送禮洽詢\n\n這份燕窩，\n想送給誰？\n\n無論是送給親友，或為企業準備心意，都可以從已知的份數或日期開始。\n\n送給親友\n企業贈禮\n情境示意\n\n送禮情境\n\n先想想，這份禮要送給誰\n親友送禮\n\n想想收禮的人、預計送幾份，以及想在哪一天送到對方手上。\n\n收禮對象\n預計份數\n送禮日期\n\n如果只確定送禮日，可寫在其他需求；希望到貨日可稍後再決定。\n\n填寫個人送禮需求\n企業贈禮\n\n先整理預估總份數與希望到貨日，再記下想詢問的包裝或配送安排。\n\n預估總份數\n希望到貨日\n包裝與配送問題\n填寫企業贈禮需求\n送禮洽詢表單\n\n本頁為送禮情境展示，實際品項、售價與配送方式待品牌確認。\n\n填寫後會產生需求摘要，資料僅留在本頁。\n\n送禮類型\n個人送禮\n企業贈禮\n聯絡信箱\n預計份數\n希望到貨日\n\n預計份數或希望到貨日，至少填寫一項。\n\n其他需求 選填\n帶入示範資料\n產生模擬洽詢摘要\n\n宏家燕窩\n\nR01 網站建置｜食品品牌送禮展示案例\n\nXK SYSTEM 自製展示案例",
+      "fontStatus": "loaded",
+      "fontFaces": [
+        {
+          "family": "Showcase Serif TC",
+          "status": "loaded"
+        }
+      ],
+      "visibleImages": [
+        {
+          "src": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/_next/static/media/birdnest-still-life.2we0fwq2ynuy-.webp",
+          "complete": true,
+          "naturalWidth": 1448,
+          "naturalHeight": 1086,
+          "alt": "自然光下，三盞乾燕窩放在白色陶盤上，旁邊有棕色緞帶和素面禮盒",
+          "inViewport": true
+        }
+      ],
+      "documentDimensions": {
+        "width": 1280,
+        "height": 2163
+      },
+      "cookieControls": [],
+      "rawScreenshot": {
+        "path": "/tmp/xk-showcase-gallery/hongjia-birdnest.png",
+        "format": "png",
+        "width": 1280,
+        "height": 800,
+        "bytes": 539315,
+        "sha256": "a2ca2991487afcf5f2df110e932cee13e686a3030353263ff1999700d8049f76"
+      },
+      "rendering": {
+        "navigationError": null,
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": [],
+        "brokenInViewportImages": [],
+        "limitations": [],
+        "fontNote": "document.fonts.ready resolved and document.fonts.status was loaded. Unloaded FontFace entries are unused declared unicode subsets/weights, not observed font failures."
+      },
+      "visualReview": {
+        "status": "REVIEWED",
+        "method": "Human visual inspection of all eight rendered PNG previews in the initial contact sheet, then all eight compressed WebP previews in the final contact sheet.",
+        "note": "Loaded birdnest gift photograph, Chinese brand/navigation, headline and two enquiry links. Chinese text is readable and no first-viewport image is broken."
+      },
+      "asset": {
+        "path": "/workspace/xk-website/public/images/showcases/hongjia-birdnest.webp",
+        "repoPath": "public/images/showcases/hongjia-birdnest.webp",
+        "format": "webp",
+        "width": 1280,
+        "height": 800,
+        "bytes": 56598,
+        "sha256": "d0fb9954b370e56198c968f1588bfa8735b004cddbad32efd5e9d6c4af53972b",
+        "quality": 84,
+        "compressionMethod": 6,
+        "convertedAt": "2026-11-21T15:56:14.701141+00:00"
+      },
+      "h1": [
+        "這份燕窩，想送給誰？"
+      ],
+      "formInteraction": "No form fields filled, no submit buttons activated, and no login or authentication used."
+    },
+    {
+      "id": "honest-diecut",
+      "url": "https://xk2022.github.io/xk-showcase-honest-diecut/",
+      "finalUrl": "https://xk2022.github.io/xk-showcase-honest-diecut/",
+      "capturedAt": "2026-11-21T15:55:13.761Z",
+      "httpStatus": 200,
+      "template": null,
+      "title": "宏能興業｜模切沖型、保護膜與工業標籤｜XK 展示案例",
+      "headings": [
+        {
+          "level": "H1",
+          "text": "模切沖型、保護膜與工業標籤"
+        },
+        {
+          "level": "H2",
+          "text": "加工樣本"
+        },
+        {
+          "level": "H2",
+          "text": "洽詢流程"
+        },
+        {
+          "level": "H2",
+          "text": "詢價表單"
+        }
+      ],
+      "footerText": [
+        "XK SYSTEM 自製展示案例\n\nXplore Kaleidoscope · R01 網站建置\n\n資料來源\n宏能興業網站\n宏能興業有限公司簡介"
+      ],
+      "sourceLinks": [],
+      "declarationLines": [
+        "本頁可模擬整理需求摘要。材料、打樣與報價需另行洽談。",
+        "整理使用位置、尺寸與單位、預估件數。可先用本頁產生模擬摘要。",
+        "此為 XK 展示表單。資料僅在本頁產生摘要，不會寄送給宏能興業。",
+        "帶入示範資料",
+        "產生模擬詢價摘要",
+        "XK SYSTEM 自製展示案例"
+      ],
+      "bodyText": "宏能興業有限公司\n加工樣本\n洽詢流程\n詢價表單\n\nXK SHOWCASE / R01\n\n模切沖型、保護膜與工業標籤\n\n先從零件的黏貼位置、保護需求或識別用途找樣本，再整理尺寸與預估用量。\n\n提出加工需求\n看加工樣本\n加工樣本示意\n\nAPPLICATION SAMPLES\n\n加工樣本\n\n宏能興業提供模切沖型、保護膜材料與標籤印刷加工。可依零件用途選擇對應的樣本。\n\n全部\n黏貼與緩衝\n面板表面保護\n條碼與識別\n\n顯示 3 個加工樣本\n\n示意\n\n黏貼與緩衝\n\n背膠沖型件\n\n在外殼與零件接觸處黏貼泡棉墊片，作為緩衝。\n\n可容納的墊片厚度\n\n以此樣本詢價\n示意\n\n面板表面保護\n\nPET 保護膜\n\n組裝或搬運時保護面板表面。\n\n需要覆蓋的長 × 寬（mm）\n\n以此樣本詢價\n示意\n\n條碼與識別\n\n工業標籤\n\n在零件或包裝貼上條碼，方便識別。\n\n可貼標區域的長 × 寬（mm）\n\n以此樣本詢價\n\nINQUIRY PROCESS\n\n洽詢流程\n\n本頁可模擬整理需求摘要。材料、打樣與報價需另行洽談。\n\n01\n提供用途與規格\n\n整理使用位置、尺寸與單位、預估件數。可先用本頁產生模擬摘要。\n\n02\n討論材料與打樣\n\n實際洽談時，可依黏貼面、使用環境等條件討論材料及打樣需求。\n\n03\n依條件評估報價\n\n可製作性、價格與交期，需依實際需求與洽談結果確認。\n\nQUOTE SIMULATION\n\n詢價表單\n\n整理加工需求與預估用量。材料尚未確定時，可選擇「請協助選材」。\n\n此為 XK 展示表單。資料僅在本頁產生摘要，不會寄送給宏能興業。\n\n所有欄位皆為必填。\n\n帶入示範資料\n公司或單位\n加工用途與規格\n\n請提供使用位置、尺寸與單位，可用自然語言描述。\n\n材料或加工類別\n請選擇類別\n背膠沖型件\nPET 保護膜\n工業標籤\n請協助選材\n預估件數\n聯絡信箱\n產生模擬詢價摘要\nXK SYSTEM 自製展示案例\n\nXplore Kaleidoscope · R01 網站建置\n\n資料來源\n宏能興業網站\n宏能興業有限公司簡介",
+      "fontStatus": "loaded",
+      "fontFaces": [],
+      "visibleImages": [
+        {
+          "src": "https://xk2022.github.io/xk-showcase-honest-diecut/images/hero.webp",
+          "complete": true,
+          "naturalWidth": 1440,
+          "naturalHeight": 720,
+          "alt": "深藍工作檯上的泡棉沖型件、掀起透明膜的面板與條碼零件",
+          "inViewport": true
+        },
+        {
+          "src": "https://xk2022.github.io/xk-showcase-honest-diecut/images/foam.webp",
+          "complete": true,
+          "naturalWidth": 720,
+          "naturalHeight": 648,
+          "alt": "有明顯厚度與中空輪廓的深灰泡棉墊片",
+          "inViewport": true
+        },
+        {
+          "src": "https://xk2022.github.io/xk-showcase-honest-diecut/images/film.webp",
+          "complete": true,
+          "naturalWidth": 720,
+          "naturalHeight": 648,
+          "alt": "透明薄膜從銀色面板的一角掀起",
+          "inViewport": true
+        },
+        {
+          "src": "https://xk2022.github.io/xk-showcase-honest-diecut/images/label.webp",
+          "complete": true,
+          "naturalWidth": 720,
+          "naturalHeight": 648,
+          "alt": "銀色工業零件表面貼有白底條碼標籤",
+          "inViewport": true
+        }
+      ],
+      "documentDimensions": {
+        "width": 1280,
+        "height": 2766
+      },
+      "cookieControls": [],
+      "rawScreenshot": {
+        "path": "/tmp/xk-showcase-gallery/honest-diecut.png",
+        "format": "png",
+        "width": 1280,
+        "height": 800,
+        "bytes": 440274,
+        "sha256": "4d187db7705d3b01ec47434f0c6cde6f93e6514b0c684cd84c3b9b62bb84ac0d"
+      },
+      "rendering": {
+        "navigationError": null,
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": [],
+        "brokenInViewportImages": [],
+        "limitations": [],
+        "fontNote": "document.fonts.ready resolved and document.fonts.status was loaded. Unloaded FontFace entries are unused declared unicode subsets/weights, not observed font failures."
+      },
+      "visualReview": {
+        "status": "REVIEWED",
+        "method": "Human visual inspection of all eight rendered PNG previews in the initial contact sheet, then all eight compressed WebP previews in the final contact sheet.",
+        "note": "Loaded industrial materials photograph, Chinese brand/navigation, heading and sample section. Chinese text is readable and no first-viewport image is broken."
+      },
+      "asset": {
+        "path": "/workspace/xk-website/public/images/showcases/honest-diecut.webp",
+        "repoPath": "public/images/showcases/honest-diecut.webp",
+        "format": "webp",
+        "width": 1280,
+        "height": 800,
+        "bytes": 57514,
+        "sha256": "d8faae99080de0e96b328ac25a912aca905b3c98ba6530d1247a52399dd6599d",
+        "quality": 84,
+        "compressionMethod": 6,
+        "convertedAt": "2026-11-21T15:56:14.830914+00:00"
+      },
+      "h1": [
+        "模切沖型、保護膜與工業標籤"
+      ],
+      "formInteraction": "No form fields filled, no submit buttons activated, and no login or authentication used."
+    },
+    {
+      "id": "yupinyuan-bento",
+      "url": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+      "finalUrl": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+      "capturedAt": "2026-11-21T15:55:17.648Z",
+      "httpStatus": 200,
+      "template": null,
+      "title": "御品園港式燒臘｜羅東南門路餐點與團體訂餐詢問｜XK 展示案例",
+      "headings": [
+        {
+          "level": "H1",
+          "text": "羅東南門路，今天吃港式燒臘。"
+        },
+        {
+          "level": "H2",
+          "text": "餐點一覽"
+        },
+        {
+          "level": "H2",
+          "text": "公司午餐、會議、活動便當，歡迎詢問團體訂餐。"
+        },
+        {
+          "level": "H2",
+          "text": "門市與外送"
+        }
+      ],
+      "footerText": [
+        "XK SYSTEM 作品集展示\n\nXplore Kaleidoscope · R01 網站建置｜在地餐飲 × 團體訂餐"
+      ],
+      "sourceLinks": [],
+      "declarationLines": [
+        "展示版僅整理詢問內容，不會代為聯絡店家。",
+        "帶入示範資料",
+        "示範資料可修改，日期為台灣明日。",
+        "XK SYSTEM 作品集展示"
+      ],
+      "bodyText": "跳至主要內容\n御\n御品園港式燒臘\n餐點\n團體訂餐\n門市\n\n御品園港式燒臘\n\n羅東南門路，\n今天吃港式燒臘。\n\n自己吃一盒，或替公司、會議、活動訂便當，先看看今天想吃什麼。\n\n看菜單\n詢問團體訂餐\n餐點示意\n餐點一覽\n\n實際供應品項與門市售價以店家公告為準\n\n三寶飯\n餐點示意\n燒鴨飯\n餐點示意\n叉燒飯\n餐點示意\n油雞飯\n餐點示意\n脆皮燒肉飯\n餐點示意\n公司午餐、會議、活動便當，歡迎詢問團體訂餐。\n\n先提供用餐日期、希望取餐時間與預估份數。實際品項、價格、接單及配送，以店家回覆為準。\n\n展示版僅整理詢問內容，不會代為聯絡店家。\n\n整理詢問內容\n帶入示範資料\n\n示範資料可修改，日期為台灣明日。\n\n用餐日期\n希望取餐時間\n預估份數\n取餐需求\n請選擇\n預計自取\n想詢問是否可配送\n尚未確定\n活動或訂餐用途 選填\n備註 選填\n詢問內容預覽\n\n複製詢問內容\n門市與外送\n羅東南門路門市\n宜蘭縣羅東鎮南門路 107 號\n導航到門市\n外送平台\n\n將離開本站，前往外送平台\n\n前往 Uber Eats\n前往 foodpanda\n關於門市\n\n御品園港式燒臘位於羅東南門路，由陳柏伸主理，門市可接受團體訂餐詢問。\n\nXK SYSTEM 作品集展示\n\nXplore Kaleidoscope · R01 網站建置｜在地餐飲 × 團體訂餐",
+      "fontStatus": "loaded",
+      "fontFaces": [
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "loaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "loaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "loaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "loaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "loaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "loaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "loaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "loaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "loaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "loaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        },
+        {
+          "family": "Noto Serif TC Variable",
+          "status": "unloaded"
+        }
+      ],
+      "visibleImages": [
+        {
+          "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/roast-bento.webp",
+          "complete": true,
+          "naturalWidth": 1536,
+          "naturalHeight": 1024,
+          "alt": "深紅桌巾上，一盒有燒鴨、叉燒、油雞、白飯與配菜的燒臘便當",
+          "inViewport": true
+        },
+        {
+          "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/three-treasures.webp",
+          "complete": true,
+          "naturalWidth": 510,
+          "naturalHeight": 510,
+          "alt": "燒鴨、叉燒和油雞搭配白飯與蔬菜的便當",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/roast-duck.webp",
+          "complete": true,
+          "naturalWidth": 510,
+          "naturalHeight": 510,
+          "alt": "帶皮切片燒鴨搭配白飯與蔬菜的便當",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/char-siu.webp",
+          "complete": true,
+          "naturalWidth": 510,
+          "naturalHeight": 510,
+          "alt": "紅褐色叉燒切片搭配白飯與蔬菜的便當",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/soy-chicken.webp",
+          "complete": true,
+          "naturalWidth": 510,
+          "naturalHeight": 510,
+          "alt": "金黃色油雞切片搭配白飯與蔬菜的便當",
+          "inViewport": false
+        },
+        {
+          "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/crispy-pork.webp",
+          "complete": true,
+          "naturalWidth": 510,
+          "naturalHeight": 510,
+          "alt": "帶金黃脆皮的燒肉切片搭配白飯與蔬菜的便當",
+          "inViewport": false
+        }
+      ],
+      "documentDimensions": {
+        "width": 1280,
+        "height": 2818
+      },
+      "cookieControls": [],
+      "rawScreenshot": {
+        "path": "/tmp/xk-showcase-gallery/yupinyuan-bento.png",
+        "format": "png",
+        "width": 1280,
+        "height": 800,
+        "bytes": 612670,
+        "sha256": "fac6e9ffe364b2e4a1e49d1c34d13630308e666c41f97deed937301af5156fac"
+      },
+      "rendering": {
+        "navigationError": null,
+        "pageErrors": [],
+        "failedRequests": [
+          {
+            "url": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+            "failure": {
+              "errorText": "net::ERR_ABORTED"
+            }
+          }
+        ],
+        "badResponses": [],
+        "brokenInViewportImages": [],
+        "limitations": [
+          "One same-document navigation request emitted net::ERR_ABORTED; final document HTTP 200, all visible images decoded, screenshot and content were complete."
+        ],
+        "fontNote": "document.fonts.ready resolved and document.fonts.status was loaded. Unloaded FontFace entries are unused declared unicode subsets/weights, not observed font failures."
+      },
+      "visualReview": {
+        "status": "REVIEWED",
+        "method": "Human visual inspection of all eight rendered PNG previews in the initial contact sheet, then all eight compressed WebP previews in the final contact sheet.",
+        "note": "Loaded roast-meat bento photograph, Chinese brand/navigation, heading and meal section start. Chinese text is readable and no first-viewport image is broken."
+      },
+      "asset": {
+        "path": "/workspace/xk-website/public/images/showcases/yupinyuan-bento.webp",
+        "repoPath": "public/images/showcases/yupinyuan-bento.webp",
+        "format": "webp",
+        "width": 1280,
+        "height": 800,
+        "bytes": 85430,
+        "sha256": "a2d14149618b6bba1357ab6eaf8e2b79fb4e89b2fcfa3476abc56e6ac6ee1efb",
+        "quality": 84,
+        "compressionMethod": 6,
+        "convertedAt": "2026-11-21T15:56:14.994885+00:00"
+      },
+      "h1": [
+        "羅東南門路，今天吃港式燒臘。"
+      ],
+      "formInteraction": "No form fields filled, no submit buttons activated, and no login or authentication used."
+    }
+  ],
+  "environmentLimitations": [
+    "The environment initially returned net::ERR_CERT_AUTHORITY_INVALID for the public GitHub Pages origin. Capture retry uses ignoreHTTPSErrors to render public content; these captures do not verify certificate trust. Original failed capture-receipt.json and capture.log are retained."
+  ],
+  "claimsBoundary": "External previews are demonstration/reference sites, not proof of original design, client delivery, or formal contact/data collection. Template 001 Agency and 002 Creative originate from Start Bootstrap; 003 Gadget Landing and 004 Food Landing originate from TemplateMag.",
+  "finishedAt": "2026-11-21T15:55:17.664Z",
+  "compressionTool": {
+    "name": "Pillow",
+    "version": "13.0.0",
+    "format": "WebP",
+    "method": 6,
+    "qualityPolicy": "84, reducing only if over 150000 bytes; no resize or content changes"
+  },
+  "assetCount": 8,
+  "visualReviewAt": "2026-11-21T15:56:14.994951+00:00",
+  "evidence": {
+    "initialFailureReceipt": "/tmp/xk-showcase-gallery/capture-receipt.json",
+    "initialFailureLog": "/tmp/xk-showcase-gallery/capture.log",
+    "successfulCaptureReceipt": "/tmp/xk-showcase-gallery/capture-retry1-receipt.json",
+    "successfulCaptureLog": "/tmp/xk-showcase-gallery/capture-retry1.log",
+    "captureScript": "/tmp/xk-showcase-gallery/capture.cjs",
+    "compressionScript": "/tmp/xk-showcase-gallery/compress.py",
+    "contactSheet": "/tmp/xk-showcase-gallery/contact-sheet.jpg",
+    "validationReceipt": "/tmp/xk-showcase-gallery/validate-assets-receipt.json",
+    "validationLog": "/tmp/xk-showcase-gallery/validate-assets.log"
+  },
+  "assetsValidatedAt": "2026-11-21T15:56:53.098559+00:00"
+}

@@ -290,31 +290,31 @@ export const portfolioPage = {
     COMPLETED: "Completed／已完成",
   } satisfies Record<PortfolioProjectStatus, string>,
   hero: {
-    title: "技術作品與展示規劃",
-    englishTitle: "Technical Portfolio",
-    description: "從企業網站、Java 管理應用到跨系統資料交換，了解三個自製展示的背景、技術規劃與實際狀態。",
-    primaryCta: { label: "探索展示規劃", href: "#portfolio-projects" },
+    title: "從不同情境，看見網站的可能。",
+    englishTitle: "Explore Our Work",
+    description: "瀏覽品牌網站展示與一頁式網站範例，探索不同產業的內容安排與介面風格；也能進一步了解企業系統與整合技術的展示規劃。",
+    primaryCta: { label: "瀏覽品牌展示", href: "#website-cases" },
     secondaryCta: { label: "了解技術服務", href: "/services" },
   },
   introduction: {
-    title: "先看情境，再理解技術規劃。",
-    description: "以下為 XK 自製技術展示與規劃，非客戶委託案例；各項以標示狀態與實際證據為準。",
+    title: "找到與需求相近的展示方向。",
+    description: "從品牌情境、網站風格到技術規劃，依需求選擇瀏覽。每項作品皆標示展示性質，幫助您理解目前可瀏覽的內容與範圍。",
   },
   projects: {
-    title: "三個方向，探索不同的企業需求。",
-    description: "目前三案均為 Planned。每個介紹頁分開呈現規劃與已實作內容，沒有實作證據時不宣稱完成。",
+    title: "技術展示規劃",
+    description: "以下三個自製技術專案目前皆為 Planned／規劃中，與上方可瀏覽的網站展示分開呈現。各介紹頁說明規劃方向與目前進度。",
   },
   technology: {
     title: "技術依情境規劃，進度依證據標示。",
-    description: "以下技術來自各案例的規劃範圍，不代表已使用或已整合。實際使用的技術與未來方向分開標示。",
+    description: "以下技術對應三個規劃中的技術專案，不代表上方網站展示使用的技術。各專案分開標示已實作內容與未來方向。",
   },
   transparency: {
     title: "讓展示的範圍與狀態保持清楚。",
-    description: "作品介紹可以說明規劃，完成與上線則需要不同的證據。網站本身通過驗收，不代表這三個案例系統已完成。",
+    description: "品牌展示、模板範例與技術規劃各有不同用途。瀏覽時可依作品標示，了解設計情境、來源與功能範圍。",
     principles: [
-      { title: "自製展示，清楚標示", description: "三案皆為 Self-Initiated Demonstration Project，不是客戶委託或正式商用產品。" },
-      { title: "狀態依實際證據", description: "進度升級須有擁有人確認、相符程式碼與測試；Live 另需真實部署與操作證據，目前均未提供。" },
-      { title: "素材與連結可追溯", description: "目前尚未提供可核對來源與使用權的系統畫面，亦未確認可公開的原始碼或 Live Demo。" },
+      { title: "品牌情境展示", description: "品牌網站案例用於呈現內容與互動情境，並非客戶委託交付紀錄。示意素材、模擬詢問與實際營業資訊，請依各展示頁的說明辨識。" },
+      { title: "範例保留來源", description: "網站範例提供版型與風格參考，各卡片註明原始模板來源；範例內容不代表 XK 的團隊、價格或正式服務承諾。" },
+      { title: "規劃與實作分開", description: "三個技術專案維持規劃中狀態。網站展示可公開瀏覽，不代表企業系統、API 或 AI 規劃已經完成。" },
     ],
   },
   cta: {
@@ -337,6 +337,6 @@ export const portfolioPage = {
     planningLabel: "規劃中的功能與架構",
     futureLabel: "後續方向，尚未納入已實作範圍",
     businessValueLabel: "希望探索的改善方向，非已驗證成果",
-    backLink: { label: "返回技術作品集", href: "/portfolio" },
+    backLink: { label: "返回作品展示", href: "/portfolio" },
   },
 } as const;
