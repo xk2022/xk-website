@@ -19,13 +19,13 @@ export function HomeSolutions() {
           id="solutions-title"
           eyebrow="SOLUTIONS / FROM NEED TO DIRECTION"
           title="Digital Solutions for Business"
-          description="依照企業需求，選擇適合的數位轉型方向。"
+          description="依照企業需求探索方案方向；實作範圍與交付內容依個別專案確認。"
         />
         <div className="divide-y border-y">
-          {solutionDirections.map(({ title, englishName, description, serviceAnchor }, index) => (
+          {solutionDirections.map(({ title, englishName, description, href }, index) => (
             <Link
               key={englishName}
-              href={`/#service-${serviceAnchor}`}
+              href={href}
               className="group grid min-w-0 gap-5 rounded-sm py-8 transition-colors duration-brand ease-brand hover:bg-surface focus-visible:bg-surface motion-reduce:transition-none md:grid-cols-[3rem_1fr_1fr_auto] md:items-center md:gap-8"
             >
               <span aria-hidden="true" className="type-caption font-semibold text-secondary">
@@ -37,7 +37,7 @@ export function HomeSolutions() {
               </div>
               <p className="type-body max-w-lg text-muted-foreground">{description}</p>
               <span className="type-body-sm inline-flex min-h-11 items-center gap-2 font-semibold text-secondary">
-                了解相關服務
+                了解方案方向
                 <ArrowUpRight aria-hidden="true" className="size-4 shrink-0" />
               </span>
             </Link>

@@ -62,6 +62,7 @@ export type SolutionDefinition = {
     SolutionImplementationStep,
   ];
   readonly improvementGoals: TwoOrThree<string>;
+  readonly deliverables: TwoOrThree<string>;
   readonly serviceIds: readonly ServiceId[];
   readonly sourceRefs: readonly SolutionSourceReference[];
   readonly status: "proposed-direction";
@@ -229,6 +230,7 @@ export const solutionDefinitions = [
       { title: "分階段實作與驗證", description: "依確認範圍建置頁面，檢查不同裝置的閱讀、導覽與後續維護方式。" },
     ],
     improvementGoals: ["讓訪客更容易理解品牌與服務資訊。", "改善不同裝置的閱讀與導覽體驗。", "建立較清楚的內容維護與擴充基礎。"],
+    deliverables: ["資訊架構與頁面範圍規劃", "約定範圍內的響應式網站與前端元件", "建置、驗收與內容維護說明"],
     serviceIds: ["website-development"],
     sourceRefs: [
       { sourceId: "S02", sections: ["§4–5"], supports: "舊企業網站與企業對外資訊需求。" },
@@ -256,6 +258,7 @@ export const solutionDefinitions = [
       { title: "逐步實作與流程驗證", description: "按約定範圍開發或調整，驗證資料、權限與業務流程，再討論後續擴充。" },
     ],
     improvementGoals: ["讓業務流程與資料責任更清楚。", "減少需要反覆人工核對的環節。", "為既有系統維護與後續擴充建立基礎。"],
+    deliverables: ["業務流程、資料與介面範圍規劃", "約定範圍內的 Java 應用、功能調整或 API", "測試紀錄與技術維護文件"],
     serviceIds: ["java-enterprise", "system-integration"],
     sourceRefs: [
       { sourceId: "S02", sections: ["§4–5"], supports: "傳統企業 Java 舊系統與人工、分散應用需求。" },
@@ -283,6 +286,7 @@ export const solutionDefinitions = [
       { title: "分段串接與情境驗證", description: "以約定情境逐步驗證資料交換、錯誤回應與人工處理方式。" },
     ],
     improvementGoals: ["減少跨系統重複輸入的需求。", "讓資料交換規則與處理狀態更容易理解。", "建立可維護的介面與流程邊界。"],
+    deliverables: ["系統介接、資料欄位與交換流程規劃", "約定範圍內的 API 串接、資料轉換與驗證", "整合測試紀錄與操作文件"],
     serviceIds: ["system-integration", "java-enterprise"],
     sourceRefs: [
       { sourceId: "S03", sections: ["§5–6"], supports: "系統架構、API、資料整合與工作流程能力。" },
@@ -309,6 +313,7 @@ export const solutionDefinitions = [
       { title: "小範圍實作與人工驗證", description: "依確認的情境驗證檢索與回答依據，保留人工確認並評估是否擴充。" },
     ],
     improvementGoals: ["讓分散知識更容易查詢與追溯來源。", "減少重複搜尋及資訊整理的步驟。", "評估 AI 能力如何融入既有流程並保留人工確認。"],
+    deliverables: ["使用情境、資料來源與人工確認邊界規劃", "約定範圍內的 AI 輔助流程或概念驗證", "情境評估紀錄與使用說明"],
     serviceIds: ["ai-automation", "system-integration"],
     sourceRefs: [
       { sourceId: "S03", sections: ["§6 AI Business Solutions"], supports: "RAG、知識庫、AI API 與流程能力。" },

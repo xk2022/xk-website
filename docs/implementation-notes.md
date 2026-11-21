@@ -362,3 +362,13 @@ main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Mark
 既有普通 build 預設無 export／Base Path，Node 24.x、Next.js preset、root `.`、npm ci／一般 build／預設 output 已符合設定契約；沒有證據需要額外 vercel.json、新 dependencies、CLI 發布管線或套件／lockfile 變更。Env 審查補上 Task 009 後新增的 `XK_PRIVACY_PREVIEW`：Vercel Preview 與 Production 均不得啟用，預覽名稱不代表可公開法律草案。
 
 本次報告明確分開本機、PR、main Pages 與實際 Vercel Preview／Production，後續真實 Git／CI／部署識別碼依協作流程更新同一 PR。尚無指定 Project、平台設定／plan／rollback 前版及實際 Vercel URL 時，不宣稱 Task 013 全部完成或 Vercel 已部署；不新增虛構截圖或部署識別碼。
+
+## Bugfix 001–008 — 首頁與方案內容優化
+
+以 fresh main `e0ab48c50273b2dbcf8454ae97d7c2f468da8689` 建立 `feature/bugfix001-008`，初始工作樹乾淨；使用者本次明確授權自主選擇改善方案、Push／PR、CI 通過後合併與確認部署。指定的合併式 URL 沒有單一檔案，實際為新 main 的 bugfix001.md 至 bugfix008.md，八份全文已讀並去重；不改原始輸入。
+
+文件 Repository 僅唯讀，最新 main `dca3329c556bdd88113181384543b5923e25618b`，讀取六個與本次相關的最新來源並驗 Blob。新來源的正式 Logo03／中文品牌與 bugfix008 仍稱暫定有差異，依當次輸入保留共用 provisional Logo；現有 Header／Footer／icon 已同源，不為換檔破壞比例。六類商業範圍已確認，與既有 Services 五類的對應仍待辦；獨立方案頁及網站品牌同步也需後續處理，沒有擅自改既有五項首頁服務或開放索引。
+
+本次改善首頁 Hero 的企業價值、技術作品入口、五服務卡的需求／方案／可規劃交付與真實服務連結、技術分類卡及 Why 整合價值。首頁三個方案連至現有 Solutions registry 的四篇詳解之一，詳解新增條件式交付方向與相關自製展示計畫；狀態讀 Portfolio registry，AI/n8n 後續方向明示尚未實作。沒有新增路由、Backend、依賴或假聯絡管道，也未整合獨立文案 PR #18。
+
+驗收與真實七張截圖見 [Bugfix 001–008 報告](reports/bugfix001-008-implementation.md)。Root 管 build／server／Git，首頁實作、來源audit與驗收工具分開 ownership，正式指令依序執行，失敗與人工候選不由 collector exit0 代填通過。PR／main CI／Pages 部署及公開 HTTP 的後續真實事件更新同一 PR，不用新提交記錄自身 SHA。
