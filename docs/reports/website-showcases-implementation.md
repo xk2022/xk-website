@@ -28,13 +28,13 @@
 | --- | --- | --- | --- |
 | SC-01 | npm ci --cache /tmp/xk-npm-cache | PASS，Exit 0；開發準備時執行 | [回執](website-showcases-artifacts/commands/npm-ci.json) |
 | SC-02 | npx tsc --noEmit | PASS，Exit 0；修正後重驗 | [回執](website-showcases-artifacts/commands/tsc-label-fix.json) |
-| SC-03 | npm run lint | PASS，Exit 0；修正後重驗 | [回執](website-showcases-artifacts/commands/lint-label-fix.json) |
+| SC-03 | npm run lint | PASS，Exit 0；修正後重驗 | [回執](website-showcases-artifacts/commands/lint-final-package.json) |
 | SC-04 | npm run build | PASS，Exit 0；修正後重驗 | [回執](website-showcases-artifacts/commands/build-label-fix.json) |
 | SC-05 | 一般 production 瀏覽器回歸 | PASS，Exit 0；9 頁、18 組寬度、4 次 axe、389 筆站內連結／錨點 | [結果](website-showcases-artifacts/normal-label-fix-result.json)、[回執](website-showcases-artifacts/commands/normal-label-fix.json) |
 | SC-06 | npm run build:pages | PASS，Exit 0；含新增展示連結／圖片／來源守門檢查 | [回執](website-showcases-artifacts/commands/build-pages.json) |
 | SC-07 | Pages 五寬、連結、圖片、Metadata、axe | PASS，Exit 0；9 頁 × 5 寬、25 次 axe，0 violations，389 筆站內連結／錨點 | [結果](website-showcases-artifacts/pages-initial-result.json)、[回執](website-showcases-artifacts/commands/pages-initial.json) |
 | SC-08 | 七張實際截圖與人工視覺覆核 | PASS；7 張長圖及 17 張細部／裁切，0 阻擋問題 | [覆核紀錄](website-showcases-artifacts/visual-review.json) |
-| SC-09 | PR CI／最終 artifact | PENDING | 完成後更新同一 PR |
+| SC-09 | PR CI／最終 artifact | 首輪 FAIL；附件包裝已修正，最終 head CI／artifact PENDING | [首輪紀錄](website-showcases-artifacts/remote-first-ci.json)，後續更新同一 PR |
 | SC-10 | 授權合併／main CI／Pages／公開網址 | PENDING | 完成後更新同一 PR |
 
 一般模式於 `127.0.0.1:3120` 驗收後停止，再執行 Pages build；靜態預覽於 `127.0.0.1:3121/xk-website/`。五寬為 320／375／768／1440／1920 px。各頁均驗證真實 HTTP 200、唯一 H1、標題／Description／Canonical／Open Graph、noindex/nofollow、唯一 ID、Mobile Navigation 開關／Escape／返回焦點及鍵盤 Skip Link。展示按鈕另驗外連名稱、rel、目標分頁、八張圖片實際尺寸與 HTTP 200；Privacy／Dev／未知專案／未知路由／Sitemap 共五項預期 404。Console、Runtime 與官網資源錯誤均為 0。新展示無 Disabled 控制項，Disabled 驗收為 N/A；未另增加控制項。
@@ -43,6 +43,7 @@ axe 的 25 組 incomplete 共 302 個節點均為既有背景裝飾的文字對�
 
 ### 失敗與修正
 
+- PR 首輪 CI `44923244433` 在 ESLint 發現封存的暫存 CommonJS 驗證工具快照（5 errors／3 warnings）。這是本機檢查後才納入的附件包裝問題。改以可還原且 byte-identical 的 `acceptance.cjs.gz` 保留原工具，沒有新增 ESLint 忽略或降低規則；對最終交付包重跑完整 lint 並重跑 PR CI。網站程式碼、八張預覽與受測指紋未變，既有瀏覽器結果仍對應同一 runtime；最終 CI artifact 另與本機產物比對。
 - 首次無本機網路權限的瀏覽器程序 Exit 1；保留 [失敗回執](website-showcases-artifacts/commands/normal-initial.json)。環境允許本機網路後才正式啟動預覽。
 - 首輪可執行掃描發現新外連按鈕的 aria-label 插入站名，導致可見文字不完整包含在名稱中（WCAG 2.5.3）。改為「開啟展示網站：站名（另開分頁）」後，重跑 TypeScript／lint／production build、一般與 Pages 驗收；原 [失敗結果](website-showcases-artifacts/normal-network-enabled-result.json) 保留。
 - 同輪工具預期首頁 Canonical 必須帶尾斜線，與 Next 輸出等價網址不符；改為只正規化根目錄尾斜線，未放寬網域、其他路徑或 OG 一致性。因首頁當時未納入連結 inventory 而衍生的工具錯誤，一併重跑整套驗證。
