@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import { SolutionServiceLinks } from "@/components/sections/solutions/solution-service-links";
+import { SolutionShowcase } from "@/components/sections/solutions/solution-showcase";
 import { Button } from "@/components/ui/button";
 import { solutionsPage, type SolutionDefinition } from "@/config/solutions";
 
@@ -72,6 +73,18 @@ export function SolutionDetail({
             </ol>
           </div>
           <div>
+            <h4 className="type-body font-semibold text-primary">可規劃的交付</h4>
+            <p className="type-body-sm mt-3 text-muted-foreground">實際內容依需求、可用資料與約定範圍確認。</p>
+            <ul className="type-body mt-3 space-y-3 text-muted-foreground">
+              {solution.deliverables.map((deliverable) => (
+                <li key={deliverable} className="flex min-w-0 items-start gap-3">
+                  <span aria-hidden="true" className="mt-2.5 size-1.5 shrink-0 rounded-full bg-secondary" />
+                  <span className="min-w-0 break-words">{deliverable}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
             <h4 className="type-body font-semibold text-primary">希望改善的面向</h4>
             <ul className="type-body mt-3 space-y-3 text-muted-foreground">
               {solution.improvementGoals.map((goal) => (
@@ -86,6 +99,7 @@ export function SolutionDetail({
             <h4 className="type-body mb-2 font-semibold text-primary">相關技術服務</h4>
             <SolutionServiceLinks serviceIds={solution.serviceIds} label={`${solution.title}相關服務`} />
           </div>
+          <SolutionShowcase solutionId={solution.id} />
         </div>
       </div>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

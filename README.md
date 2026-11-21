@@ -167,3 +167,9 @@ Task 011 另以明確的 Tailwind 掃描排除規則保護本次驗收資料／�
 一般 Next.js 模式與 GitHub Pages 分開驗收，沿用鎖定套件、Node.js 24.x、`npm ci`、`npm run build` 及 Next.js preset 預設 output，不使用 Pages 靜態產物作為 Vercel prebuilt。設定契約、環境保護、首次 import 影響、回復程序、本機驗收及外部待確認事項見 [Task 013 實作與驗證報告](docs/reports/task013-implementation.md)。
 
 Vercel Team／Account／Project 尚未指定，本次不猜測帳戶或建立同名專案。Preview／Production 實際部署及截圖在取得正確對象後驗收；本機或 Pages 成功不能替代 Vercel 上線證據。保留 noindex／nofollow、Privacy 草案與開發路由保護；兩個 Vercel 環境均不得啟用 `XK_PRIVACY_PREVIEW` 或 `XK_DESIGN_SYSTEM_PREVIEW`。不修改 DNS、Custom Domain、Pages Source 或現有 Actions 工作流程。
+
+## Bugfix 001–008 首頁與方案內容優化
+
+首頁以企業需求介紹網站、Java 系統與 AI 整合，提供服務及技術作品入口。五項服務補上常見需求、方案與可規劃交付，並連至真實服務錨點；五個技術分類改為卡片，讓服務用途與技術選擇更容易區分。首頁三個方案入口連至 Solutions 既有詳解，四個方案補上交付方向及規劃中的相關展示作品，沒有將計畫寫成完成案例。
+
+原始 [Bugfix 001–008 文件](docs/task/README.md#bugfix-001008-優化文件) 有重複建議，本次採用與後續項目、來源衝突、實際驗收及七張截圖見 [實作與驗證報告](docs/reports/bugfix001-008-implementation.md)。沿用既有暫定 Logo 共用元件、九個公開路由、noindex／nofollow 及普通／Pages 建置；獨立方案路由、社群分享圖片與正式索引仍依個別內容／素材核准處理。不改依賴、Backend、DNS 或 Vercel 設定。

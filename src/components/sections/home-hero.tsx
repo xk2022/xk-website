@@ -6,6 +6,7 @@ import { XkLogo } from "@/components/brand/xk-logo";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
+import { homepageHero } from "@/config/homepage";
 import { siteConfig } from "@/config/site";
 
 export function HomeHero() {
@@ -14,27 +15,39 @@ export function HomeHero() {
       <BrandPattern variant="gradient" />
       <Container className="relative grid items-center gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
         <div className="min-w-0">
-          <p lang="en" className="type-body-sm mb-6 font-semibold text-secondary">
+          <p lang="en" className="type-caption mb-3 font-semibold tracking-widest text-secondary">
+            {homepageHero.eyebrow}
+          </p>
+          <p lang="en" className="type-body-sm mb-6 font-semibold text-primary">
             {siteConfig.slogan}
           </p>
           <h1 id="home-title" className="type-h1 max-w-3xl text-primary">
-            整合 Web、Java 與 AI 技術，打造企業數位價值。
+            {homepageHero.title}
           </h1>
           <p lang="en" className="type-body-lg mt-6 max-w-xl font-medium text-primary">
             {siteConfig.tagline}
           </p>
           <p className="type-body mt-5 max-w-xl text-foreground">
-            Xplore Kaleidoscope 協助企業整合網站開發、企業系統、系統架構與 AI 應用，
-            將技術轉化為實際商業價值。
+            {homepageHero.description}
           </p>
+          <ul aria-label="核心服務方向" className="mt-6 flex min-w-0 flex-wrap gap-2">
+            {homepageHero.serviceLabels.map((label) => (
+              <li key={label} lang="en" className="type-caption min-w-0 break-words rounded-full border bg-background px-3 py-2 font-medium text-primary">
+                {label}
+              </li>
+            ))}
+          </ul>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
               <Link href="/#services">探索我們的服務 <ArrowDown aria-hidden="true" /></Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/#contact">聯絡我們 <ArrowUpRight aria-hidden="true" /></Link>
+              <Link href="/portfolio" aria-describedby="home-portfolio-note">查看技術作品 <ArrowUpRight aria-hidden="true" /></Link>
             </Button>
           </div>
+          <p id="home-portfolio-note" className="type-caption mt-4 max-w-xl text-foreground">
+            {homepageHero.portfolioNote}
+          </p>
         </div>
 
         <figure className="relative mx-auto flex w-full max-w-lg flex-col overflow-hidden rounded-2xl bg-primary p-6 text-primary-foreground shadow-elevated sm:p-8">

@@ -268,3 +268,7 @@ docs(task): add XK website task specifications 006-014
 2026-11-19 的 Task 012 以 `main@8e42c647646d20873789c54367132901746a58bf` 為基準，在 `feature/website-accessibility` 稽核九個公開頁。工作涵蓋 WCAG 2.2 A／AA 完整適用性、原 2／2.1 回歸，以及實際桌面 Orca、鍵盤、對比、真 200% browser zoom、320 CSS px 與文字間距驗收；未測平台不冒作通過。
 
 來源、問題／修復／版本與實測見 [Task 012 實作與驗證](../reports/task012-implementation.md) 及 [證據操作說明](../reports/task012-artifacts/README.md)。上方原規格撰寫紀錄維持歷史時點；目前使用者已明確授權此次 Push／PR、CI 通過後合併與確認部署，不延伸為品牌更新、法律政策、索引或其他任務發布。
+
+## Bugfix 001–008 優化文件
+
+[bugfix001](bugfix001.md)、[bugfix002](bugfix002.md)、[bugfix003](bugfix003.md)、[bugfix004](bugfix004.md)、[bugfix005](bugfix005.md)、[bugfix006](bugfix006.md)、[bugfix007](bugfix007.md)、[bugfix008](bugfix008.md) 是本次使用者指定的八份改善輸入；原始內容保留，不把重複文字當成八套獨立功能。首頁價值主張／服務卡／技術分類／方案導覽與 Logo 建議的採用及後續界線見 [實作報告](../reports/bugfix001-008-implementation.md)。
