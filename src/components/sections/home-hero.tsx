@@ -42,7 +42,7 @@ export function HomeHero() {
               <Link href="/#services">探索我們的服務 <ArrowDown aria-hidden="true" /></Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/portfolio" aria-describedby="home-portfolio-note">查看技術作品 <ArrowUpRight aria-hidden="true" /></Link>
+              <Link href="/portfolio" aria-describedby="home-portfolio-note">查看作品展示 <ArrowUpRight aria-hidden="true" /></Link>
             </Button>
           </div>
           <p id="home-portfolio-note" className="type-caption mt-4 max-w-xl text-foreground">

@@ -20,7 +20,7 @@ export function PortfolioHero() {
           <nav aria-label="麵包屑導覽" className="type-body-sm mb-8 flex flex-wrap items-center gap-3 text-foreground">
             <Link href="/" className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">首頁</Link>
             <span aria-hidden="true">/</span>
-            <span aria-current="page">技術作品集</span>
+            <span aria-current="page">作品展示</span>
           </nav>
           <p lang="en" className="type-caption mb-4 font-semibold text-secondary">{hero.englishTitle}</p>
           <h1 id="portfolio-page-title" className="type-h1 break-words text-primary">{hero.title}</h1>

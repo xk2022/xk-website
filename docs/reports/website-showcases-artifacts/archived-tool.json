@@ -1,0 +1,7 @@
+{
+  "path": "acceptance.cjs.gz",
+  "format": "gzip original tool snapshot, lossless",
+  "rawSha256": "773365b87ae63a6165a4b0411b7fdbc91701c6260542ff56f88f3eea0d5f61c6",
+  "compressedSha256": "bbef28eead80c73dfd39184161078bea75fb5b540412c4c22a13732190b76381",
+  "reason": "Temporary external-tool snapshot is archived as evidence; project eslint policy remains unchanged."
+}

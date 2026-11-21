@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "/tmp/xk-showcase-gallery/acceptance.cjs",
+    "normal",
+    "initial"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-21T15:59:51.601725+00:00",
+  "finishedAt": "2026-11-21T15:59:52.274405+00:00",
+  "processId": 3112,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-showcase-gallery/normal-initial.log",
+  "logSha256": "c85eadd69a1e3863d6297f2172c07e8b728fe0c0c589da6c9a135cd7e7971d8b",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -42,7 +42,7 @@ export function ProjectDetail({ project }: { project: PortfolioProject }) {
           <nav aria-label="麵包屑導覽" className="type-body-sm mb-8 flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 text-foreground">
             <Link href="/" className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">首頁</Link>
             <span aria-hidden="true">/</span>
-            <Link href={detail.backLink.href} className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">技術作品集</Link>
+            <Link href={detail.backLink.href} className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">作品展示</Link>
             <span aria-hidden="true">/</span>
             <span lang="en" aria-current="page" className="min-w-0 break-words">{project.title}</span>
           </nav>

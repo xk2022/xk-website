@@ -8,7 +8,7 @@ export const homepageHero = {
   title: "整合網站、企業系統與 AI，打造真正有價值的數位解決方案。",
   description: "從企業網站、Java 系統開發到 AI 應用整合，協助企業建立穩定、可擴充且符合實際營運需求的數位服務。",
   serviceLabels: ["Website Development", "Java Enterprise", "AI Solutions"],
-  portfolioNote: "技術作品頁呈現自製展示方向與目前狀態，非客戶交付案例。",
+  portfolioNote: "探索品牌網站展示、網站範例與技術規劃，了解不同情境的網站呈現方式。",
 } as const;
 
 type HomepageService = {

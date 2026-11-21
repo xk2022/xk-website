@@ -1,0 +1,13 @@
+{
+  "runId": 44923244433,
+  "url": "https://github.com/xk2022/xk-website/actions/runs/44923244433",
+  "head": "03236be5ece7ad562a910fbd9e6af16cf1b9a94d",
+  "conclusion": "failure",
+  "failedJob": 136903621657,
+  "step": "Check ESLint",
+  "errors": 5,
+  "warnings": 3,
+  "reason": "Archived temporary CommonJS acceptance snapshot was copied after original local lint and scanned as project code.",
+  "fix": "Archive byte-identical tool in .cjs.gz, retain SHA256, keep ESLint configuration unchanged. Full final-package lint rerun Exit 0.",
+  "finalCi": "PENDING"
+}

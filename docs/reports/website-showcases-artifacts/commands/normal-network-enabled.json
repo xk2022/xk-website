@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "/tmp/xk-showcase-gallery/acceptance.cjs",
+    "normal",
+    "network-enabled"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-21T16:00:12.519989+00:00",
+  "finishedAt": "2026-11-21T16:00:33.807320+00:00",
+  "processId": 3218,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-showcase-gallery/normal-network-enabled.log",
+  "logSha256": "54d4a386eb526c54187db2b938cde4199391fa8e9fa5f5e44611bf3b60230b83",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

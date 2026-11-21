@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-showcase-gallery/acceptance.cjs",
+    "normal",
+    "label-fix"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-21T16:01:57.568419+00:00",
+  "finishedAt": "2026-11-21T16:02:24.579690+00:00",
+  "processId": 3641,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-showcase-gallery/normal-label-fix.log",
+  "logSha256": "629159f67fb5e06e15098caefef8c0788acbe7138d3d6dfce2c03e3c64a691e5",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { HomeContactCta } from "@/components/sections/home-contact-cta";
+import { HomeFeaturedShowcases } from "@/components/sections/home-featured-showcases";
 import { HomeHero } from "@/components/sections/home-hero";
 import { HomeIntroduction } from "@/components/sections/home-introduction";
 import { HomeServices } from "@/components/sections/home-services";
@@ -19,6 +20,7 @@ export default function HomePage() {
       <HomeHero />
       <HomeIntroduction />
       <HomeServices />
+      <HomeFeaturedShowcases />
       <HomeTechnologies />
       <HomeWhyXk />
       <HomeSolutions />

@@ -1,0 +1,741 @@
+{
+  "schemaVersion": 1,
+  "task": "website-showcase-gallery",
+  "reviewedAt": "2026-11-21T16:09:28.271320+00:00",
+  "reviewer": "showcase_assets subagent",
+  "mode": "Read-only review of already captured screenshots; no browser interactions, repository edits, builds, Git commands or new full QA suite.",
+  "status": "PASS_WITH_NON_BLOCKING_OBSERVATION",
+  "blockingFindings": 0,
+  "actuallyViewed": {
+    "originalFullScreenshots": [
+      {
+        "path": "/tmp/xk-showcase-gallery/pages-initial/home-1440.png",
+        "width": 1440,
+        "height": 7474,
+        "sha256": "3fc3a33fc39f462e34dd4b37d74a636029f1cad86f251b09a02f65ea4fd75b48",
+        "actuallyViewed": true,
+        "reviewMode": "Full screenshot viewed for section order, continuous layout, gross clipping and blank bands. Long-image tool display resized to a maximum height of 6000px; not a claim of word-by-word reading."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/pages-initial/home-375.png",
+        "width": 375,
+        "height": 13929,
+        "sha256": "9d7c1dbf1344739a6c5d4990de18659e8654da68716939d3191a6e72642a5c4a",
+        "actuallyViewed": true,
+        "reviewMode": "Full screenshot viewed for section order, continuous layout, gross clipping and blank bands. Long-image tool display resized to a maximum height of 6000px; not a claim of word-by-word reading."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/pages-initial/portfolio-1440.png",
+        "width": 1440,
+        "height": 9032,
+        "sha256": "112c7f3797e8c9bfc209888bc86ee4127b4c77fbf3e4e388c58d8d9130a558f1",
+        "actuallyViewed": true,
+        "reviewMode": "Full screenshot viewed for section order, continuous layout, gross clipping and blank bands. Long-image tool display resized to a maximum height of 6000px; not a claim of word-by-word reading."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/pages-initial/portfolio-375.png",
+        "width": 375,
+        "height": 15611,
+        "sha256": "cf0fb09fb84a3c4b99e9084c7b6148a312bf157e0a6fe125a54b790dd2462622",
+        "actuallyViewed": true,
+        "reviewMode": "Full screenshot viewed for section order, continuous layout, gross clipping and blank bands. Long-image tool display resized to a maximum height of 6000px; not a claim of word-by-word reading."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/pages-initial/portfolio-320.png",
+        "width": 320,
+        "height": 16494,
+        "sha256": "78bd505569f94fbcb71a94de86f9c5d1bcf0a6c60ab8bfdfd6c003aafec1b5e0",
+        "actuallyViewed": true,
+        "reviewMode": "Full screenshot viewed for section order, continuous layout, gross clipping and blank bands. Long-image tool display resized to a maximum height of 6000px; not a claim of word-by-word reading."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/pages-initial/services-375.png",
+        "width": 375,
+        "height": 14018,
+        "sha256": "9d2a3461eb1e3a99f607ca459bd8f6ae166870848b940762d9e5be5cc20a1cc0",
+        "actuallyViewed": true,
+        "reviewMode": "Full screenshot viewed for section order, continuous layout, gross clipping and blank bands. Long-image tool display resized to a maximum height of 6000px; not a claim of word-by-word reading."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/pages-initial/solutions-1440.png",
+        "width": 1440,
+        "height": 13822,
+        "sha256": "5e5e5941f5d83722aaff9752c08836b862136610cda245b54beb0417040f22d8",
+        "actuallyViewed": true,
+        "reviewMode": "Full screenshot viewed for section order, continuous layout, gross clipping and blank bands. Long-image tool display resized to a maximum height of 6000px; not a claim of word-by-word reading."
+      }
+    ],
+    "existingDetailScreenshots": [
+      {
+        "path": "/tmp/xk-showcase-gallery/visual/home-featured.png",
+        "width": 1440,
+        "height": 1156,
+        "sha256": "bce44c2cb3aab808c440ca19b06a96bc6105073af34d03bf4792b0e8a2e433e1",
+        "actuallyViewed": true,
+        "reviewMode": "Viewed at original image size; inspected headings, category, card copy, source/limitation notes, spacing and controls where present."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual/brand-cases.png",
+        "width": 1440,
+        "height": 1937,
+        "sha256": "3517342c7d6951dc57ac0feadbf2945f1e0e4e1ee015426f29760d4d3d3bd8cf",
+        "actuallyViewed": true,
+        "reviewMode": "Viewed at original image size; inspected headings, category, card copy, source/limitation notes, spacing and controls where present."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual/samples.png",
+        "width": 1440,
+        "height": 2099,
+        "sha256": "113738d35afd70f03116a64d8b8e50f10ab6f5c704935e91fbbf423c995d5be7",
+        "actuallyViewed": true,
+        "reviewMode": "Viewed at original image size; inspected headings, category, card copy, source/limitation notes, spacing and controls where present."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual/mobile-case.png",
+        "width": 272,
+        "height": 659,
+        "sha256": "6e4e9164282dca7974d7cbe162435e6faec08730f7aa1a8c2034ac04079dd374",
+        "actuallyViewed": true,
+        "reviewMode": "Viewed at original image size; inspected headings, category, card copy, source/limitation notes, spacing and controls where present."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual/service-entry.png",
+        "width": 327,
+        "height": 197,
+        "sha256": "f58a6115c5a2df10d49d3453e23b780c57ef07c5b0f561618d5b32eab68a2c12",
+        "actuallyViewed": true,
+        "reviewMode": "Viewed at original image size; inspected headings, category, card copy, source/limitation notes, spacing and controls where present."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual/solution-entry.png",
+        "width": 672,
+        "height": 169,
+        "sha256": "185c60900ae33eb4e5b7fd5637c094659fd7a211401a94c7551caf605dba5a95",
+        "actuallyViewed": true,
+        "reviewMode": "Viewed at original image size; inspected headings, category, card copy, source/limitation notes, spacing and controls where present."
+      }
+    ],
+    "generatedNativeSizeCrops": [
+      {
+        "path": "/tmp/xk-showcase-gallery/visual-review-crops/home-375-native-tiles.png",
+        "width": 1125,
+        "height": 5696,
+        "sha256": "6c9c60394116b45d9458215199d9080e9f6abd6f866c7448ee623e81986d54c6",
+        "actuallyViewed": true,
+        "source": "/tmp/xk-showcase-gallery/pages-initial/home-375.png",
+        "tiles": [
+          {
+            "number": 1,
+            "sourceBox": [
+              0,
+              0,
+              375,
+              1400
+            ]
+          },
+          {
+            "number": 2,
+            "sourceBox": [
+              0,
+              1400,
+              375,
+              2800
+            ]
+          },
+          {
+            "number": 3,
+            "sourceBox": [
+              0,
+              2800,
+              375,
+              4200
+            ]
+          },
+          {
+            "number": 4,
+            "sourceBox": [
+              0,
+              4200,
+              375,
+              5600
+            ]
+          },
+          {
+            "number": 5,
+            "sourceBox": [
+              0,
+              5600,
+              375,
+              7000
+            ]
+          },
+          {
+            "number": 6,
+            "sourceBox": [
+              0,
+              7000,
+              375,
+              8400
+            ]
+          },
+          {
+            "number": 7,
+            "sourceBox": [
+              0,
+              8400,
+              375,
+              9800
+            ]
+          },
+          {
+            "number": 8,
+            "sourceBox": [
+              0,
+              9800,
+              375,
+              11200
+            ]
+          },
+          {
+            "number": 9,
+            "sourceBox": [
+              0,
+              11200,
+              375,
+              12600
+            ]
+          },
+          {
+            "number": 10,
+            "sourceBox": [
+              0,
+              12600,
+              375,
+              13929
+            ]
+          }
+        ],
+        "reviewMode": "All source vertical bands pasted without resizing into a three-column reading sheet. Read each band in numbered order. Hard edges at tile boundaries and unused gray cells are review-sheet artifacts."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual-review-crops/portfolio-375-native-tiles.png",
+        "width": 1125,
+        "height": 5696,
+        "sha256": "b8508124d351f98b0c6a83c6f9d369960fa412cb1695bf4994b00496ef2ff1f5",
+        "actuallyViewed": true,
+        "source": "/tmp/xk-showcase-gallery/pages-initial/portfolio-375.png",
+        "tiles": [
+          {
+            "number": 1,
+            "sourceBox": [
+              0,
+              0,
+              375,
+              1400
+            ]
+          },
+          {
+            "number": 2,
+            "sourceBox": [
+              0,
+              1400,
+              375,
+              2800
+            ]
+          },
+          {
+            "number": 3,
+            "sourceBox": [
+              0,
+              2800,
+              375,
+              4200
+            ]
+          },
+          {
+            "number": 4,
+            "sourceBox": [
+              0,
+              4200,
+              375,
+              5600
+            ]
+          },
+          {
+            "number": 5,
+            "sourceBox": [
+              0,
+              5600,
+              375,
+              7000
+            ]
+          },
+          {
+            "number": 6,
+            "sourceBox": [
+              0,
+              7000,
+              375,
+              8400
+            ]
+          },
+          {
+            "number": 7,
+            "sourceBox": [
+              0,
+              8400,
+              375,
+              9800
+            ]
+          },
+          {
+            "number": 8,
+            "sourceBox": [
+              0,
+              9800,
+              375,
+              11200
+            ]
+          },
+          {
+            "number": 9,
+            "sourceBox": [
+              0,
+              11200,
+              375,
+              12600
+            ]
+          },
+          {
+            "number": 10,
+            "sourceBox": [
+              0,
+              12600,
+              375,
+              14000
+            ]
+          },
+          {
+            "number": 11,
+            "sourceBox": [
+              0,
+              14000,
+              375,
+              15400
+            ]
+          },
+          {
+            "number": 12,
+            "sourceBox": [
+              0,
+              15400,
+              375,
+              15611
+            ]
+          }
+        ],
+        "reviewMode": "All source vertical bands pasted without resizing into a three-column reading sheet. Read each band in numbered order. Hard edges at tile boundaries and unused gray cells are review-sheet artifacts."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual-review-crops/portfolio-320-native-tiles.png",
+        "width": 960,
+        "height": 5696,
+        "sha256": "61aefb629d1f1f35a32f16ee7adebf49aed541d97b92039bad0ad0caa7b91e8f",
+        "actuallyViewed": true,
+        "source": "/tmp/xk-showcase-gallery/pages-initial/portfolio-320.png",
+        "tiles": [
+          {
+            "number": 1,
+            "sourceBox": [
+              0,
+              0,
+              320,
+              1400
+            ]
+          },
+          {
+            "number": 2,
+            "sourceBox": [
+              0,
+              1400,
+              320,
+              2800
+            ]
+          },
+          {
+            "number": 3,
+            "sourceBox": [
+              0,
+              2800,
+              320,
+              4200
+            ]
+          },
+          {
+            "number": 4,
+            "sourceBox": [
+              0,
+              4200,
+              320,
+              5600
+            ]
+          },
+          {
+            "number": 5,
+            "sourceBox": [
+              0,
+              5600,
+              320,
+              7000
+            ]
+          },
+          {
+            "number": 6,
+            "sourceBox": [
+              0,
+              7000,
+              320,
+              8400
+            ]
+          },
+          {
+            "number": 7,
+            "sourceBox": [
+              0,
+              8400,
+              320,
+              9800
+            ]
+          },
+          {
+            "number": 8,
+            "sourceBox": [
+              0,
+              9800,
+              320,
+              11200
+            ]
+          },
+          {
+            "number": 9,
+            "sourceBox": [
+              0,
+              11200,
+              320,
+              12600
+            ]
+          },
+          {
+            "number": 10,
+            "sourceBox": [
+              0,
+              12600,
+              320,
+              14000
+            ]
+          },
+          {
+            "number": 11,
+            "sourceBox": [
+              0,
+              14000,
+              320,
+              15400
+            ]
+          },
+          {
+            "number": 12,
+            "sourceBox": [
+              0,
+              15400,
+              320,
+              16494
+            ]
+          }
+        ],
+        "reviewMode": "All source vertical bands pasted without resizing into a three-column reading sheet. Read each band in numbered order. Hard edges at tile boundaries and unused gray cells are review-sheet artifacts."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual-review-crops/services-375-native-tiles.png",
+        "width": 1125,
+        "height": 5696,
+        "sha256": "6835d8ec3383c2c7defae968480f5e6194e34e0ce434860b328b04cc4c52dc56",
+        "actuallyViewed": true,
+        "source": "/tmp/xk-showcase-gallery/pages-initial/services-375.png",
+        "tiles": [
+          {
+            "number": 1,
+            "sourceBox": [
+              0,
+              0,
+              375,
+              1400
+            ]
+          },
+          {
+            "number": 2,
+            "sourceBox": [
+              0,
+              1400,
+              375,
+              2800
+            ]
+          },
+          {
+            "number": 3,
+            "sourceBox": [
+              0,
+              2800,
+              375,
+              4200
+            ]
+          },
+          {
+            "number": 4,
+            "sourceBox": [
+              0,
+              4200,
+              375,
+              5600
+            ]
+          },
+          {
+            "number": 5,
+            "sourceBox": [
+              0,
+              5600,
+              375,
+              7000
+            ]
+          },
+          {
+            "number": 6,
+            "sourceBox": [
+              0,
+              7000,
+              375,
+              8400
+            ]
+          },
+          {
+            "number": 7,
+            "sourceBox": [
+              0,
+              8400,
+              375,
+              9800
+            ]
+          },
+          {
+            "number": 8,
+            "sourceBox": [
+              0,
+              9800,
+              375,
+              11200
+            ]
+          },
+          {
+            "number": 9,
+            "sourceBox": [
+              0,
+              11200,
+              375,
+              12600
+            ]
+          },
+          {
+            "number": 10,
+            "sourceBox": [
+              0,
+              12600,
+              375,
+              14000
+            ]
+          },
+          {
+            "number": 11,
+            "sourceBox": [
+              0,
+              14000,
+              375,
+              14018
+            ]
+          }
+        ],
+        "reviewMode": "All source vertical bands pasted without resizing into a three-column reading sheet. Read each band in numbered order. Hard edges at tile boundaries and unused gray cells are review-sheet artifacts."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual-review-crops/home-1440-y0-1250.png",
+        "width": 1440,
+        "height": 1250,
+        "sha256": "5974299bb5e7e61e8034bda73abb1e1de3a7f601bb51cc2a4fb41c4da5979d0b",
+        "actuallyViewed": true,
+        "source": "/tmp/xk-showcase-gallery/pages-initial/home-1440.png",
+        "sourceBox": [
+          0,
+          0,
+          1440,
+          1250
+        ],
+        "reviewMode": "Native-size rectangular crop inspected; sourceBox boundaries may cut surrounding context by design."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual-review-crops/home-1440-y6500-7474.png",
+        "width": 1440,
+        "height": 974,
+        "sha256": "eacfe4adc88dc147f2f84bc5d40eb9f05c5472d0a7bd4179456edc0ccf2d8305",
+        "actuallyViewed": true,
+        "source": "/tmp/xk-showcase-gallery/pages-initial/home-1440.png",
+        "sourceBox": [
+          0,
+          6500,
+          1440,
+          7474
+        ],
+        "reviewMode": "Native-size rectangular crop inspected; sourceBox boundaries may cut surrounding context by design."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual-review-crops/portfolio-1440-y0-1450.png",
+        "width": 1440,
+        "height": 1450,
+        "sha256": "03190e5fa3f4e137f314a93148eac17eebbb2d94d982745b8174e93146a5a813",
+        "actuallyViewed": true,
+        "source": "/tmp/xk-showcase-gallery/pages-initial/portfolio-1440.png",
+        "sourceBox": [
+          0,
+          0,
+          1440,
+          1450
+        ],
+        "reviewMode": "Native-size rectangular crop inspected; sourceBox boundaries may cut surrounding context by design."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual-review-crops/portfolio-1440-y7000-9032.png",
+        "width": 1440,
+        "height": 2032,
+        "sha256": "418e0e08949a0d6e90f8d7e5605a2db009f656c02ec330884c02dbd05cc0f97e",
+        "actuallyViewed": true,
+        "source": "/tmp/xk-showcase-gallery/pages-initial/portfolio-1440.png",
+        "sourceBox": [
+          0,
+          7000,
+          1440,
+          9032
+        ],
+        "reviewMode": "Native-size rectangular crop inspected; sourceBox boundaries may cut surrounding context by design."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual-review-crops/solutions-1440-y0-1500.png",
+        "width": 1440,
+        "height": 1500,
+        "sha256": "4385adf72c986f3f6b822c7f35abe154bab1a30b17db353773f505ee0580dbbe",
+        "actuallyViewed": true,
+        "source": "/tmp/xk-showcase-gallery/pages-initial/solutions-1440.png",
+        "sourceBox": [
+          0,
+          0,
+          1440,
+          1500
+        ],
+        "reviewMode": "Native-size rectangular crop inspected; sourceBox boundaries may cut surrounding context by design."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual-review-crops/solutions-1440-y2800-4800.png",
+        "width": 1440,
+        "height": 2000,
+        "sha256": "6317143fcc86f85f545a52da4d22d0e785ed3a9e0078207d083549335ba8e58b",
+        "actuallyViewed": true,
+        "source": "/tmp/xk-showcase-gallery/pages-initial/solutions-1440.png",
+        "sourceBox": [
+          0,
+          2800,
+          1440,
+          4800
+        ],
+        "reviewMode": "Native-size rectangular crop inspected; sourceBox boundaries may cut surrounding context by design."
+      },
+      {
+        "path": "/tmp/xk-showcase-gallery/visual-review-crops/solutions-1440-y11600-13822.png",
+        "width": 1440,
+        "height": 2222,
+        "sha256": "617638992b074aefb9988f30d1a7ece8a97e8be1936551f196cae929d31f4978",
+        "actuallyViewed": true,
+        "source": "/tmp/xk-showcase-gallery/pages-initial/solutions-1440.png",
+        "sourceBox": [
+          0,
+          11600,
+          1440,
+          13822
+        ],
+        "reviewMode": "Native-size rectangular crop inspected; sourceBox boundaries may cut surrounding context by design."
+      }
+    ],
+    "counts": {
+      "fullScreenshots": 7,
+      "existingDetails": 6,
+      "generatedCropFiles": 11,
+      "totalViewedImages": 24
+    }
+  },
+  "checks": [
+    {
+      "id": "VISUAL-CLIPPING-OVERLAP",
+      "result": "PASS",
+      "note": "No visible horizontal page clipping, text overlap, overlay collision, detached card content or controls outside cards in the reviewed widths. Mobile 320 and 375 screenshots were additionally inspected through unscaled vertical tiles."
+    },
+    {
+      "id": "VISUAL-GRID-ALIGNMENT",
+      "result": "PASS",
+      "note": "Home has three equal-width featured cards; Portfolio desktop has two-column brand and template grids. Preview aspect ratios, card borders, content padding and footer buttons align consistently. Mobile cards stack with consistent side gutters."
+    },
+    {
+      "id": "VISUAL-READABILITY",
+      "result": "PASS_WITH_SCOPE_LIMIT",
+      "note": "Native-size reviewed card titles, descriptions, bullets, limitation notes, source links and action labels are readable. Small category/eyebrow text remains subordinate and visible. Embedded screenshot text is intentionally scaled as a preview, and was not treated as readable page body or exhaustively transcribed."
+    },
+    {
+      "id": "VISUAL-CARD-CONSISTENCY",
+      "result": "PASS",
+      "note": "Featured 三月手工湯包 / 宏家燕窩 / 宏能興業 titles, imagery, categories and limitation wording agree with the corresponding Portfolio cards. Portfolio additionally shows 御品園港式燒臘. Brand demonstrations remain separate from the four attributed template examples and three Planned technical projects."
+    },
+    {
+      "id": "VISUAL-ATTRIBUTION-LIMITATIONS",
+      "result": "PASS",
+      "note": "Agency and Creative credit Start Bootstrap; GadgetLanding and FoodLanding credit TemplateMag. Demo002 and Demo003 include source-material limitation notes. Public source image defects are preserved in preview images and are not treated as rendering defects in the official gallery."
+    },
+    {
+      "id": "VISUAL-MOBILE-LONG-LINKS",
+      "result": "PASS",
+      "note": "Start Bootstrap and TemplateMag source labels wrap onto two lines when necessary at 320/375px; external-link icons and actions stay within the card. Long technical labels wrap inside pills and cards without visible horizontal escape."
+    },
+    {
+      "id": "VISUAL-CROSS-PAGE-ENTRIES",
+      "result": "PASS",
+      "note": "Services 375px one-page website aside has readable heading, paragraph and two separate controls. Solutions 1440px brand-showcase entry aligns with the right detail column; its text and both links are readable and do not collide with adjacent sections."
+    },
+    {
+      "id": "VISUAL-WHITESPACE",
+      "result": "PASS_WITH_NON_BLOCKING_OBSERVATION",
+      "note": "No unexplained full-width blank bands, collapsed image frames or empty content cards were observed. Solutions first detailed direction has a long left-column gap explained by unequal column content lengths; recorded separately for optional design review."
+    }
+  ],
+  "observations": [
+    {
+      "id": "OBS-SOLUTIONS-COLUMN-GAP",
+      "severity": "minor",
+      "blocking": false,
+      "source": "/tmp/xk-showcase-gallery/pages-initial/solutions-1440.png",
+      "evidence": "/tmp/xk-showcase-gallery/visual-review-crops/solutions-1440-y2800-4800.png",
+      "note": "In the first detailed solution, the left positioning paragraph ends near source y3580 while its bottom CTA appears near y4390, leaving roughly 800px of left-column whitespace as the right column continues. The brand-showcase entry itself is aligned and readable. This is a two-column balance observation, with no clipping or functional obstruction. No before screenshot was compared, so introduction by this change is not asserted.",
+      "recommendation": "Optional future layout refinement; no gallery-delivery blocker identified."
+    }
+  ],
+  "limitations": [
+    "Original long screenshots were actually opened, but their auto-resized overviews were used for composition rather than a claim of exhaustive character-by-character reading.",
+    "Mobile pages were reviewed through native-size tiles covering their full height. Desktop text inspection concentrated on the new gallery sections, hero/header, footer, attribution/limitation copy and Services/Solutions entries; other desktop sections received overview layout inspection.",
+    "Screenshot review does not verify link destinations, keyboard behavior, accessibility contrast ratios or runtime/network behavior; those belong to Root acceptance evidence.",
+    "No CSS font-size measurement or browser zoom experiment was run; readability conclusions are visual judgments from the supplied image pixels."
+  ],
+  "conclusion": "The supplied screenshots show a coherent, readable gallery without observed blocking cropping, overlap, alignment or card-information inconsistency. One optional Solutions column-balance observation is recorded. No repository change was made."
+}

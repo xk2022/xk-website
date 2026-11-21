@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "ci",
+    "--cache",
+    "/tmp/xk-npm-cache"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-21T15:53:45.461929+00:00",
+  "finishedAt": "2026-11-21T15:53:54.596708+00:00",
+  "processId": 1447,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-showcase-gallery/npm-ci.log",
+  "logSha256": "f37e790096070567a5dbc8064bb2d0ebe88713756c581c38990e4c72fe03ab58",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

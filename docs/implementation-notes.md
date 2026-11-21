@@ -185,7 +185,7 @@ Task 001 prepares the foundation for design-system work and the later content pa
 
 ## Task 002 歷史更新 — 品牌設計系統
 
-以上 Task 001 內容保留為當時的檢查與驗收紀錄。Task 002 從網站 `main` 的 `699a0cd3918203e502fe3bf1f970f2cdd819123b` 建立 `feature/website-brand-design-system`，以 [docs/task/task002.zh-TW.md](task/task002.zh-TW.md) 為本次規格，不重新初始化專案。README 已由使用者更新為里程碑規劃，因此 Task 001 原始規格現在以 [docs/task/task001-implementation-notes.md](task/task001-implementation-notes.md) 為準。
+以上 Task 001 內容保留為當時的檢查與驗收紀錄。Task 002 從網站 `main` 的 `699a0cd3918203e502fe3bf1f970f2cdd819123b` 建立 `feature/website-brand-design-system`，以 [docs/task/task002.zh-TW.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md) 為本次規格，不重新初始化專案。README 已由使用者更新為里程碑規劃，因此 Task 001 原始規格現在以 [docs/task/task001-implementation-notes.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md) 為準。
 
 本次新增集中管理的 Typography、Spacing、Radius、Shadow、Container、Section 與 Motion Tokens，完善共用 Button、Card、Container、Section、XkLogo 與裝飾性 BrandPattern，並建立 `/dev/design-system` 開發驗收頁。既有首頁僅改用共用元件與排版角色，沒有擴充完整首頁內容；套件依賴維持不變。
 
@@ -198,7 +198,7 @@ Task 001 prepares the foundation for design-system work and the later content pa
 
 ## Task 003 歷史更新 — 企業首頁與 Pages 部署準備
 
-Task 003 以 `main` 的 `6feb400996e45e0e9bc285425a99e014f5381057` 為基準建立 `feature/website-homepage`；已實際確認 Task 002 合併成果是該版本祖先。網站目前的 [task003.md](task/task003.md) 明確要求完整企業首頁，優先於 README 舊里程碑表把 Task 003 僅列為 Header／Footer 的描述。原 Task 001 文件已更名為 [task001-implementation-notes.md](task/task001-implementation-notes.md)，`task002.md` 是空檔，完整 Task 002 規格為 [task002.zh-TW.md](task/task002.zh-TW.md)；本次僅修正引用，不改寫任務原稿或先前驗收紀錄。
+Task 003 以 `main` 的 `6feb400996e45e0e9bc285425a99e014f5381057` 為基準建立 `feature/website-homepage`；已實際確認 Task 002 合併成果是該版本祖先。網站目前的 [task003.md](task/task003.md) 明確要求完整企業首頁，優先於 README 舊里程碑表把 Task 003 僅列為 Header／Footer 的描述。原 Task 001 文件已更名為 [task001-implementation-notes.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md)，`task002.md` 是空檔，完整 Task 002 規格為 [task002.zh-TW.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)；本次僅修正引用，不改寫任務原稿或先前驗收紀錄。
 
 本次完成七個首頁區塊、正式 Header／Footer、桌面及可操作的手機導覽，延用 Task 002 元件 API、原始 Logo 路徑及暫定狀態。首頁內容與已確認的聯絡管道分開集中管理；目前沒有確認可公開的管道，聯絡區塊保持待確認，服務、品牌介紹與解決方案以真實首頁錨點導覽。未建立完整內頁、Backend、假表單、假案例或統計。
 
@@ -372,3 +372,9 @@ main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Mark
 本次改善首頁 Hero 的企業價值、技術作品入口、五服務卡的需求／方案／可規劃交付與真實服務連結、技術分類卡及 Why 整合價值。首頁三個方案連至現有 Solutions registry 的四篇詳解之一，詳解新增條件式交付方向與相關自製展示計畫；狀態讀 Portfolio registry，AI/n8n 後續方向明示尚未實作。沒有新增路由、Backend、依賴或假聯絡管道，也未整合獨立文案 PR #18。
 
 驗收與真實七張截圖見 [Bugfix 001–008 報告](reports/bugfix001-008-implementation.md)。Root 管 build／server／Git，首頁實作、來源audit與驗收工具分開 ownership，正式指令依序執行，失敗與人工候選不由 collector exit0 代填通過。PR／main CI／Pages 部署及公開 HTTP 的後續真實事件更新同一 PR，不用新提交記錄自身 SHA。
+
+## 網站展示與範例整合
+
+以 main `614fb6dac0b170efd28f7441a6cf097a560d8f24` 建立 `feature/website-showcase-gallery`。依使用者提供八個網站與本次確認的資訊架構，擴充現有 Portfolio，新增四個品牌情境展示、四個第三方模板範例與八張實際 WebP 預覽；首頁精選三個產業案例，Services 與數位品牌 Solutions 導向兩個作品分類。既有九個公開路由、三個 Planned 技術專案、noindex/nofollow、Privacy/Contact 保護、套件與部署流程保持既有契約。
+
+來源頁面標示自製展示／模擬，不能因使用者口語稱「實際案例」就轉為客戶交付或成效宣稱。Demo002 背景與 Demo003 Logo 的上游缺圖於卡片提醒；Demo001 聯絡區背景缺圖記於報告。未修改其他 Repository；模板署名與真實截圖來源保留。完整驗收、限制與截圖見 [網站展示整合報告](reports/website-showcases-implementation.md)。

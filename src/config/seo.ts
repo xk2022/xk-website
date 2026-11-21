@@ -17,7 +17,7 @@ export const seoProtectionPolicy: SeoProtectionPolicy = {
   publishSitemap: false,
 };
 
-/** Exact existing page copy. Planned, development and error routes are deliberately absent. */
+/** Current approved page copy. Planned, development and error routes are deliberately absent. */
 export const seoPages = [
   {
     path: "/",
@@ -45,8 +45,8 @@ export const seoPages = [
   },
   {
     path: "/portfolio",
-    title: "技術作品集 | Xplore Kaleidoscope",
-    description: "探索 XK 的網站、Java 企業系統與 API 整合展示規劃，了解各專案的背景、技術方向與實際開發狀態。",
+    title: "作品展示 | Xplore Kaleidoscope",
+    description: "瀏覽 XK 的品牌網站展示、一頁式網站範例與技術展示規劃，探索餐飲、禮贈及工業情境的網站內容與介面風格。",
     availability: "public",
   },
   {
