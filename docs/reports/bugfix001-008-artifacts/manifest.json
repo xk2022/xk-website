@@ -735,9 +735,9 @@
     },
     {
       "path": "docs/screenshots/bugfix001-008/LOCAL-pages-solutions-375.png",
-      "width": 808984802,
-      "height": 2157191401,
-      "sha256": "01e99e652be4f0b905efa3df6f3b2aad58ca875829d5be91bfc13283ad78dae2"
+      "width": 375,
+      "height": 22937,
+      "sha256": "6d14e530afe4bbb0edeeaa56753c241e6735db7d43e219df21a79bd3c93e58b4"
     }
   ],
   "scope": "Local baseline, real semantic failure, targeted final retest and actual visual review; remote CI/merge/public evidence updated in PR."

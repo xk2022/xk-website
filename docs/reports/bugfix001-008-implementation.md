@@ -60,21 +60,25 @@ Root 管理單一正式 build／server 序列；首頁、來源及工具各有�
 
 本次不重做 Task 011 效能／field CWV 或 Task 012 完整 55 準則、AT、原生縮放稽核，不宣稱認證。真機／其他平台屬 Optional PENDING；新增基本可及回歸與七張真實截圖必須完成。axe incomplete、layout 候選、焦點外觀及人工截圖判定獨立保存，collector exit0 不能直接升為完整 PASS。
 
+環境：Linux x86_64、Node v24.22.1、npm 11.9.0、Next 16.4.6、React 19.3.1、TypeScript 5.9.3、Tailwind CSS 4.3.3、Chromium 156.0.8078.79。Playwright／axe 是既有外部暫存工具，沒有新增網站依賴。完整環境與 UTC 起訖隨證據保存。
+
+初次 source fingerprint `4876af2688b98fecc7f1f62983e29d902d20300a6778ed1ead83f9a778838e83`；最後為 `89cd35f0c24f792ecaa839df686ca86215393cf39956145f97ac63190a311f40`，皆包括新增未追蹤 source 檔的 110 個 runtime／config／public／build bytes。變更界線不是僅由 hash 判定：最後只加 Home 五卡的 article role，來源原文及精確差異另存。
+
 ## 5. 實際測試矩陣
 
 所有尚未執行項目為 PENDING，未啟動命令的 exit 不適用。Required 結果必須對應最後提交的程式碼；後續只變更報告或遠端識別碼，不重跑無關網站 suite。
 
 | Test ID | 適用性／預期與程序 | Actual | Exit | Status |
 | --- | --- | --- | --- | --- |
-| BF01 | Required：npm ci locked install | 待實測 | 未啟動 | PENDING |
-| BF02 | Required：npx tsc --noEmit／npm run lint | 待實測 | 未啟動 | PENDING |
-| BF03 | Required：npm run build／普通3110 | 待實測 | 未啟動 | PENDING |
-| BF04 | Required：停止普通server後 npm run build:pages／靜態3111 | 待實測 | 未啟動 | PENDING |
-| BF05 | Required：18／45 responsive、全部links／anchors、新內容及CTA | 待實測 | 未啟動 | PENDING |
-| BF06 | Required：27 axe、keyboard／focus／mobile／motion＋人工判定 | 待實測 | 未啟動 | PENDING |
-| BF07 | Required：Metadata／noindex／404／robots／Base Path／assets／Runtime／Network／storage | 待實測 | 未啟動 | PENDING |
-| BF08 | Required：七張實際截圖及人工視覺檢視 | 待實測 | 未啟動 | PENDING |
-| BF09 | Required：Markdown／local links／diff／secret／產物／版本對應 | 待實測 | 未啟動 | PENDING |
+| BF01 | Required：npm ci locked install | npm ci 完成、鎖定套件與 lock 未變；後續只有 role 屬性變更，未重裝依賴 | 0 | PASS |
+| BF02 | Required：npx tsc --noEmit／npm run lint | 初次及最後修正後 TypeScript／Lint 各完成；不忽略警告或型別錯誤 | 0／0 | PASS |
+| BF03 | Required：npm run build／普通3110 | 初次及最終普通 build 完成，3110 Ready；最終 Home375／1440 重驗 15 子項通過 | build 0；browser 0 | PASS |
+| BF04 | Required：停止普通server後 npm run build:pages／靜態3111 | 普通 server 停止後各建 Pages；204 檔、Base Path／.nojekyll／draft-dev 排除與最後 Home 五寬通過 | build 0；browser 0 | PASS |
+| BF05 | Required：18／45 responsive、全部links／anchors、新內容及CTA | 初次18／45版面、每模式177筆source/href／96錨點關係；最後Home額外2／5重驗，包含新CTA與五個具名稱article | 66／126及15／24子項各Exit0 | PASS |
+| BF06 | Required：27 axe、keyboard／focus／mobile／motion＋人工判定 | 初次27 axe零violations但15個ARIA未決項經人工判FAIL；已修role，Home三次axe及鍵盤／motion補驗通過；最終342對比未決逐項判定 | 最終axe suite及人工helper 0 | PASS |
+| BF07 | Required：Metadata／noindex／404／robots／Base Path／assets／Runtime／Network／storage | 九頁精確head、HTTP、五個預期404與63組storage實際前後；最後build再驗全部route，Home範圍補驗，零非預期Console／Runtime／Network | 各suite0 | PASS |
+| BF08 | Required：七張實際截圖及人工視覺檢視 | 七張實際Pages圖已視覺檢視；最後五Home PNG bytes相同保留檢視bridge，Solutions兩圖由未改HTML/CSS佐證；三張focus圖實際檢視 | PNG與人工判定完成 | PASS |
+| BF09 | Required：Markdown／local links／diff／secret／產物／版本對應 | 格式、local links、完整diff、機密與產物檢查於commit前收斂；110 source map及各版本界線可追溯 | 檢查0 | PASS |
 | BF10 | Required：exact-head PR CI／artifact／review | PR 前快照；遠端更新同一 PR | 未啟動 | PENDING |
 | BF11 | Required：授權merge後main CI／Pages／公開URL | PR 前快照；遠端更新同一 PR | 未啟動 | PENDING |
 | BF12 | Optional：真機／額外效能／AT範圍 | 本次未執行，不以其他工具替代 | 未啟動 | PENDING |
@@ -82,9 +86,33 @@ Root 管理單一正式 build／server 序列；首頁、來源及工具各有�
 
 每項證據保存實際 Command/Procedure、Expected/Actual、Environment、真實 Exit、Status、Evidence 與 Notes。FAIL 不改 PASS；先修正再重驗，保留原失敗。外部實際拒絕才記 BLOCKED，未執行不冒作 N/A。
 
+### 真正問題、工具失敗及重驗
+
+| 原始結果 | 原因／修正 | 最後驗收與界線 |
+| --- | --- | --- |
+| 人工ARIA判定 FAIL，原axe自動suite雖Exit0仍不算整體通過 | 五服務卡的一般div帶aria-labelledby；改為具名稱article role，其他內容／樣式／href／handler沒有改動 | Home normal2／Pages5、3次axe、五個實際article名稱／鍵盤／mobile／motion補驗通過，ARIA未決已消除 |
+| 第一個最終靜態預覽與Home補驗 FAIL | Root 的bridge工具誤將非Home HTML數量設9，實際為8公開頁＋3種404共11；目錄未準備完成仍啟動預覽，造成空目錄404 | 停止錯誤預覽，依實際12份HTML inventory校正工具、驗142個產物後才掛載204檔，再重驗24項Exit0；原錯誤server／HTTP／suite保留，不歸咎產品 |
+| 人工helper對Axe截短href比對FAIL | Pages較長href在axe摘要出現ellipsis；以實際唯一selector、完整DOM opening attrs及精確prefix核對截短屬性 | 不降低4.5:1門檻或忽略節點，最後342項完整判定Exit0；原FAIL留存 |
+
+最後role變更不影響其他八頁：已逐檔證明142個產物（含11份非Home/error HTML、3 CSS、fonts／JS）保持相同，HTML只替換真正Next BuildID，未任意正規化RSC。原24組非Home axe／其餘瀏覽器資料保留原版本，沒有冒作新掃描。最後Home三份新axe與實際computed styles另存；全範圍27份的342個對比未決項分成296 gradient、41完全遮住狀態、5部分遮住，最差保守比例5.1333:1。完全遮住的僅該狀態N/A，可見部分仍需判定；不是整個測試N/A或完整認證。
+
+Pages基線有284筆、最後Home有35筆Next prefetch HEAD cancellation，原始事件皆保留；逐筆以同loader／fulfilled HEAD200／同文件tree GET200／Next callsite及獨立HEAD-GET200嚴格分類，零非預期錯誤。未忽略GET、資源、Console或Runtime失敗。server驗收後主動TERM的143是生命週期結束，不把原始receipt改寫PASS；Ready／HTTP另有證據。
+
+所有長命令及完整Test ID／Expected／Actual／Exit／Environment見 [證據說明](bugfix001-008-artifacts/README.md) 與壓縮原始資料；source、contract、版本影響判定、人工結果、舊失敗及最後補驗均保存一次。
+
 ## 6. 檔案、截圖與剩餘事項
 
 程式修改集中在 homepage config 與五個首頁元件、Solutions typed delivery／showcase registry 與詳解元件。文件更新 README、AGENTS、task index、implementation-notes；新增本報告、當次原始證據與七張截圖。最終實際檔案清單以 Feature Commit diff 為準，沒有提交 .next／out／node_modules／env／私鑰。
+
+| 真實圖檔 | Viewport | 檢視 |
+| --- | --- | --- |
+| [LOCAL-pages-home-1440.png](../screenshots/bugfix001-008/LOCAL-pages-home-1440.png) | 1440 × 1000 | PASS，實際本機Pages；非Vercel |
+| [LOCAL-pages-home-1920.png](../screenshots/bugfix001-008/LOCAL-pages-home-1920.png) | 1920 × 1000 | PASS，實際本機Pages；非Vercel |
+| [LOCAL-pages-home-320.png](../screenshots/bugfix001-008/LOCAL-pages-home-320.png) | 320 × 1000 | PASS，實際本機Pages；非Vercel |
+| [LOCAL-pages-home-375.png](../screenshots/bugfix001-008/LOCAL-pages-home-375.png) | 375 × 1000 | PASS，實際本機Pages；非Vercel |
+| [LOCAL-pages-home-768.png](../screenshots/bugfix001-008/LOCAL-pages-home-768.png) | 768 × 1000 | PASS，實際本機Pages；非Vercel |
+| [LOCAL-pages-solutions-1440.png](../screenshots/bugfix001-008/LOCAL-pages-solutions-1440.png) | 1440 × 1000 | PASS，實際本機Pages；非Vercel |
+| [LOCAL-pages-solutions-375.png](../screenshots/bugfix001-008/LOCAL-pages-solutions-375.png) | 375 × 1000 | PASS，實際本機Pages；非Vercel |
 
 尚待獨立處理：有內容規格的獨立方案頁、核准分享圖、正式品牌／中文名同步、Privacy／聯絡管道及索引開放。這些不是本次 UI FAIL，不以本次 CI／合併授權當作已完成或額外業務核准。
 
