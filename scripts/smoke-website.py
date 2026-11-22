@@ -1,0 +1,482 @@
+#!/usr/bin/env python3
+"""HTTP/HTML smoke for the existing production build; Python 3 standard library only."""
+
+import argparse
+from collections import Counter
+from datetime import datetime, timezone
+import hashlib
+from html.parser import HTMLParser
+import json
+from pathlib import Path
+import platform
+import re
+import struct
+import subprocess
+import sys
+from urllib.error import HTTPError, URLError
+from urllib.parse import unquote, urljoin, urlsplit, urlunsplit
+from urllib.request import Request, urlopen
+import xml.etree.ElementTree as ET
+
+
+ROOT = Path(__file__).resolve().parent.parent
+CONTRACT_PATH = ROOT / "scripts/fixtures/showcase-contract.json"
+VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def normalized_absolute_http_url(reference):
+    """Match explicit HTTP(S) destinations, never a root/protocol-relative link."""
+    url = urlsplit(reference)
+    if url.scheme.lower() not in {"http", "https"} or not url.netloc or not url.hostname or url.username or url.password:
+        return None
+    try:
+        port = url.port
+    except ValueError:
+        return None
+    scheme, host = url.scheme.lower(), url.hostname.lower()
+    if ":" in host:
+        host = "[" + host + "]"
+    if port is not None and (scheme, port) not in {("http", 80), ("https", 443)}:
+        host += ":" + str(port)
+    return urlunsplit((scheme, host, url.path.removesuffix("/") or "/", url.query, url.fragment))
+
+
+class Element:
+    def __init__(self, tag, attrs=()):
+        self.tag, self.attrs, self.children = tag, dict(attrs), []
+
+    def all(self, tag=None):
+        result = []
+        for child in self.children:
+            if isinstance(child, Element):
+                if tag is None or child.tag == tag:
+                    result.append(child)
+                result.extend(child.all(tag))
+        return result
+
+    def text(self):
+        if self.tag in {"script", "style"}:
+            return ""
+        return "".join(child.text() if isinstance(child, Element) else child for child in self.children)
+
+    def raw_text(self):
+        return "".join(child.raw_text() if isinstance(child, Element) else child for child in self.children)
+
+
+class Document(HTMLParser):
+    def __init__(self, html):
+        super().__init__(convert_charrefs=True)
+        self.root = Element("document")
+        self.stack = [self.root]
+        self.feed(html)
+        self.close()
+
+    def handle_starttag(self, tag, attrs):
+        element = Element(tag, attrs)
+        self.stack[-1].children.append(element)
+        if tag not in VOID_TAGS:
+            self.stack.append(element)
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        if tag not in VOID_TAGS:
+            self.handle_endtag(tag)
+
+    def handle_endtag(self, tag):
+        for index in range(len(self.stack) - 1, 0, -1):
+            if self.stack[index].tag == tag:
+                self.stack = self.stack[:index]
+                return
+
+    def handle_data(self, data):
+        self.stack[-1].children.append(data)
+
+
+def image_dimensions(data):
+    """Read real image headers, without a Pillow dependency or a full browser decoder."""
+    if data.startswith(b"\x89PNG\r\n\x1a\n") and len(data) >= 24:
+        return "PNG", *struct.unpack(">II", data[16:24])
+    if data[:6] in {b"GIF87a", b"GIF89a"} and len(data) >= 10:
+        return "GIF", *struct.unpack("<HH", data[6:10])
+    if data.startswith(b"\xff\xd8"):
+        offset = 2
+        while offset + 9 < len(data):
+            if data[offset] != 255:
+                offset += 1
+                continue
+            while offset < len(data) and data[offset] == 255:
+                offset += 1
+            if offset >= len(data):
+                break
+            marker = data[offset]
+            offset += 1
+            if marker in {0x01, 0xD8, 0xD9} or 0xD0 <= marker <= 0xD7:
+                continue
+            length = int.from_bytes(data[offset:offset + 2], "big")
+            if marker in {0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF}:
+                height, width = struct.unpack(">HH", data[offset + 3:offset + 7])
+                return "JPEG", width, height
+            if length < 2:
+                break
+            offset += length
+    if data[:4] == b"RIFF" and data[8:12] == b"WEBP" and len(data) >= 30:
+        kind = data[12:16]
+        if kind == b"VP8X":
+            return "WEBP", 1 + int.from_bytes(data[24:27], "little"), 1 + int.from_bytes(data[27:30], "little")
+        if kind == b"VP8 " and data[23:26] == b"\x9d\x01\x2a":
+            return "WEBP", int.from_bytes(data[26:28], "little") & 0x3FFF, int.from_bytes(data[28:30], "little") & 0x3FFF
+        if kind == b"VP8L" and data[20] == 0x2F:
+            bits = int.from_bytes(data[21:25], "little")
+            return "WEBP", (bits & 0x3FFF) + 1, ((bits >> 14) & 0x3FFF) + 1
+    if b"<svg" in data[:1024]:
+        svg = ET.fromstring(data)
+        if svg.tag.split("}")[-1] == "svg":
+            view_box = re.split(r"[\s,]+", svg.attrib.get("viewBox", "").strip())
+            if len(view_box) == 4:
+                return "SVG", float(view_box[2]), float(view_box[3])
+            return "SVG", float(svg.attrib["width"].removesuffix("px")), float(svg.attrib["height"].removesuffix("px"))
+    return None
+
+
+class Smoke:
+    def __init__(self, args):
+        self.args = args
+        self.started = now()
+        self.completed = False
+        self.results, self.cache, self.documents, self.image_observations = [], {}, {}, {}
+        self.base = args.base_url.rstrip("/") + "/"
+        parsed = urlsplit(self.base)
+        if parsed.scheme not in {"http", "https"} or not parsed.netloc or parsed.query or parsed.fragment or parsed.username:
+            raise ValueError("--base-url must be a plain HTTP(S) URL, optionally with a deployment base path")
+        self.origin = (parsed.scheme, parsed.netloc)
+        self.base_path = parsed.path.rstrip("/")
+        self.environment = {"python": platform.python_version(), "platform": platform.platform(), "baseUrl": self.base,
+                            "basePath": self.base_path, "transport": "urllib.request (environment proxies honored)",
+                            "externalSitesRequested": args.check_external, "sourceAssetsRequested": args.check_source_assets}
+        self.contract = json.loads(CONTRACT_PATH.read_text())
+        self.data = None
+        self.external_destinations, self.unavailable_source_destinations = set(), set()
+
+    def check(self, item, expected, actual, notes="", required=True):
+        self.results.append({"testId": f"SMOKE-{len(self.results) + 1:04d}", "item": item, "testedAt": now(),
+                             "environment": self.base, "expected": expected, "actual": actual,
+                             "status": "PASS" if actual == expected else "FAIL", "required": required, "notes": notes})
+
+    def fetch(self, url):
+        if url not in self.cache:
+            try:
+                with urlopen(Request(url, headers={"User-Agent": "XK-Website-Smoke/1.0"}), timeout=self.args.timeout) as response:
+                    self.cache[url] = {"status": response.status, "headers": dict(response.headers), "body": response.read(8 * 1024 * 1024), "finalUrl": response.url}
+            except HTTPError as error:
+                self.cache[url] = {"status": error.code, "headers": dict(error.headers), "body": error.read(8 * 1024 * 1024), "finalUrl": error.url}
+            except (URLError, OSError, ValueError) as error:
+                self.cache[url] = {"status": None, "headers": {}, "body": b"", "finalUrl": url, "error": str(error)}
+        return self.cache[url]
+
+    def route_url(self, path):
+        return self.base + path.lstrip("/") + ("/" if path != "/" and not path.endswith("/") else "")
+
+    def source_contract(self):
+        script = """
+import * as showcases from './src/config/website-showcases.ts';
+import {seoPages,seoProtectionPolicy} from './src/config/seo.ts';
+import {siteConfig} from './src/config/site.ts';
+import {privacyPolicy,privacyDraftMarker} from './src/config/privacy.ts';
+console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,privacyPolicy,privacyDraftMarker}));
+"""
+        result = subprocess.run(["node", "--input-type=module", "-e", script], cwd=ROOT, capture_output=True, text=True)
+        self.check("Native Node.js source import exits successfully", 0, result.returncode, result.stderr.strip())
+        if result.returncode:
+            return False
+        self.data = json.loads(result.stdout)
+        self.environment["node"] = subprocess.run(["node", "--version"], capture_output=True, text=True, check=True).stdout.strip()
+        sources = ["scripts/smoke-website.py", "scripts/fixtures/showcase-contract.json", "src/config/website-showcases.ts", "src/config/seo.ts", "src/config/site.ts", "src/config/privacy.ts"]
+        self.environment["sourceSha256"] = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in sources}
+        config = self.data["showcases"]
+        entries = config["websiteShowcases"]
+        # GitHub Pages projects can share the deployment origin. Only explicit,
+        # reviewed absolute destinations may bypass this website's base path.
+        self.external_destinations = {
+            normalized_absolute_http_url(href)
+            for entry in entries
+            for href in [entry.get("href") if entry.get("availability", "available") == "available" else None,
+                         entry.get("attribution", {}).get("href")]
+            if href
+        } - {None}
+        self.unavailable_source_destinations = {
+            normalized_absolute_http_url(entry["sourceHref"])
+            for entry in entries
+            if entry.get("availability", "available") != "available" and entry.get("sourceHref")
+        } - {None}
+        expected_ids = self.contract["brandOrder"] + self.contract["templateIds"]
+        self.check("Independent approved showcase inventory and order", expected_ids, [entry["id"] for entry in entries])
+        self.check("Unique showcase IDs", len(entries), len({entry["id"] for entry in entries}))
+        self.check("Independent featured selection", self.contract["featuredIds"], config["showcaseSettings"]["featuredIds"])
+        self.check("Independent brand order setting", self.contract["brandOrder"], config["showcaseSettings"]["brandOrder"])
+        self.check("Independent presentation classification", self.contract["presentationById"], {entry["id"]: entry["presentation"] for entry in entries})
+        self.check("Independent unavailable source inventory", self.contract["referenceOnlyIds"], [entry["id"] for entry in entries if entry.get("availability") == "reference-only"])
+        self.check("All reviewed brand entries remain available", self.contract["brandOrder"], [entry["id"] for entry in entries if entry["kind"] == "brand-demo" and entry.get("availability", "available") == "available"])
+        for entry in entries:
+            state = entry.get("availability", "available")
+            self.check(f"{entry['id']} state is supported", True, state in {"available", "preparing", "reference-only"})
+            self.check(f"{entry['id']} href/image availability gate", state == "available", bool(entry.get("href")) and bool(entry.get("image")))
+            if state != "available":
+                self.check(f"{entry['id']} unavailable fields remain null", [None, None], [entry.get("href"), entry.get("image")])
+            if state == "reference-only":
+                self.check(f"{entry['id']} keeps source attribution for review", True, bool(entry.get("sourceHref")) and bool(entry.get("attribution")))
+        self.check("Protected SEO policy remains explicit", {"mode": "protected", "publishSitemap": False}, self.data["seoProtectionPolicy"])
+        self.check("Privacy remains an unpublished draft", "draft", self.data["privacyPolicy"]["status"])
+        self.public_pages = [page for page in self.data["seoPages"] if page["availability"] == "public"]
+        expected_paths = self.contract["existingPublicPaths"] + ["/portfolio/showcases/" + item for item in self.contract["brandOrder"]]
+        self.check("Independent public route inventory", sorted(expected_paths), sorted(page["path"] for page in self.public_pages))
+        self.check("SEO route paths are unique", len(self.data["seoPages"]), len({page["path"] for page in self.data["seoPages"]}))
+        return True
+
+    def metadata(self, path, doc):
+        page = next(page for page in self.public_pages if page["path"] == path)
+        heads = doc.all("head")
+        self.check(f"{path} has exactly one head", 1, len(heads))
+        if not heads:
+            return
+        head = heads[0]
+        self.check(f"{path} exact decoded head title", [page["title"]], [element.text() for element in head.all("title")])
+        def metadata(key, value, target="content"):
+            return [element.attrs.get(target) for element in head.all() if element.tag in {"meta", "link"} and element.attrs.get(key) == value]
+        canonical = self.data["siteConfig"]["url"].rstrip("/") + ("/" if path == "/" else path)
+        expected = [("name", "description", page["description"]), ("property", "og:title", page["title"]),
+                    ("property", "og:description", page["description"]), ("property", "og:url", canonical),
+                    ("property", "og:site_name", self.data["siteConfig"]["name"]), ("property", "og:locale", "zh_TW"),
+                    ("property", "og:type", "website"), ("name", "twitter:card", "summary"),
+                    ("name", "twitter:title", page["title"]), ("name", "twitter:description", page["description"])]
+        for key, name, value in expected:
+            actual = metadata(key, name)
+            raw_actual = actual
+            if name == "og:url":
+                equivalent = {canonical, canonical[:-1] if canonical.endswith("/") else canonical + "/"}
+                actual = [canonical if item in equivalent else item for item in actual]
+            self.check(f"{path} exact {name}", [value], actual,
+                       notes=f"Next.js root/trailingSlash URL serialization; raw values: {raw_actual!r}" if actual != raw_actual else "")
+        actual_canonical = metadata("rel", "canonical", "href")
+        raw_canonical = actual_canonical
+        equivalent = {canonical, canonical[:-1] if canonical.endswith("/") else canonical + "/"}
+        actual_canonical = [canonical if item in equivalent else item for item in actual_canonical]
+        self.check(f"{path} exact canonical", [canonical], actual_canonical,
+                   notes=f"Next.js root/trailingSlash URL serialization; raw values: {raw_canonical!r}" if actual_canonical != raw_canonical else "")
+        directives = metadata("name", "robots")
+        self.check(f"{path} one robots metadata entry", 1, len(directives))
+        self.check(f"{path} protected robots directives", ["nofollow", "noindex"], sorted(re.split(r"[,\s]+", directives[0].lower().strip())) if directives else [])
+        forbidden = [element.attrs for element in head.all() if "hreflang" in element.attrs or re.match(r"^(?:og:image|twitter:(?:image|site|creator))(?::|$)", element.attrs.get("name", element.attrs.get("property", "")))]
+        self.check(f"{path} no unapproved metadata fields", [], forbidden)
+        scripts = [element.raw_text() for element in doc.all("script") if element.attrs.get("type") == "application/ld+json"]
+        self.check(f"{path} one minimal JSON-LD script", 1, len(scripts))
+        if len(scripts) == 1:
+            expected_ld = {"@context": "https://schema.org", "@type": "WebSite", "name": self.data["siteConfig"]["name"], "url": self.data["siteConfig"]["url"].rstrip("/") + "/", "inLanguage": "zh-TW"}
+            try:
+                actual_ld = json.loads(scripts[0])
+            except ValueError:
+                actual_ld = scripts[0]
+            self.check(f"{path} truthful minimal WebSite JSON-LD", expected_ld, actual_ld)
+            self.check(f"{path} JSON-LD HTML escaping", False, "<" in scripts[0])
+        self.check(f"{path} HTML language", ["zh-TW"], [element.attrs.get("lang") for element in doc.all("html")])
+
+    def cards(self, path, doc):
+        config = self.data["showcases"]
+        articles = [element for element in doc.all("article") if "data-showcase-id" in element.attrs]
+        expected_ids = self.contract["featuredIds"] if path == "/" else self.contract["brandOrder"] + self.contract["templateIds"]
+        # Featured cards retain the approved brand order, independently of the selection-list order.
+        if path == "/":
+            expected_ids = [item for item in self.contract["brandOrder"] if item in expected_ids]
+        self.check(f"{path} rendered card inventory/order", expected_ids, [element.attrs["data-showcase-id"] for element in articles])
+        for card in articles:
+            item_id = card.attrs["data-showcase-id"]
+            entry = next((entry for entry in config["websiteShowcases"] if entry["id"] == item_id), None)
+            if entry is None:
+                continue
+            state = entry.get("availability", "available")
+            self.check(f"{path} {item_id} card state", state, card.attrs.get("data-showcase-state"))
+            self.check(f"{path} {item_id} presentation data", entry["presentation"], card.attrs.get("data-showcase-presentation"))
+            self.check(f"{path} {item_id} visible presentation label", True, config["presentationLabels"][entry["presentation"]] in card.text())
+            self.check(f"{path} {item_id} visible availability label", True, config["showcaseStateLabels"][state] in card.text())
+            hrefs = [element.attrs.get("href") for element in card.all("a")]
+            images = card.all("img")
+            if state == "available":
+                self.check(f"{path} {item_id} public showcase link", True, entry["href"] in hrefs)
+                self.check(f"{path} {item_id} preview URL", [self.base_path + entry["image"]["src"]], [element.attrs.get("src") for element in images])
+                self.check(f"{path} {item_id} honest preview alternative", [entry["image"]["alt"]], [element.attrs.get("alt") for element in images])
+            else:
+                self.check(f"{path} {item_id} no fabricated preview", 0, len(images))
+                allowed = {entry.get("attribution", {}).get("href"), self.base_path + "/portfolio/showcases/" + item_id, self.base_path + "/portfolio/showcases/" + item_id + "/"}
+                self.check(f"{path} {item_id} no unavailable external button", [], [href for href in hrefs if href not in allowed])
+            if entry["kind"] == "template":
+                self.check(f"{path} {item_id} publisher attribution link", True, entry["attribution"]["href"] in hrefs)
+                self.check(f"{path} {item_id} publisher attribution text", True, entry["attribution"]["label"] in card.text())
+            else:
+                detail = self.base_path + "/portfolio/showcases/" + item_id
+                self.check(f"{path} {item_id} internal detail link", True, detail in hrefs or detail + "/" in hrefs)
+
+    def links_and_resources(self, path, doc):
+        page_url = self.route_url(path)
+        public_paths = {page["path"] for page in self.public_pages}
+        invalid = []
+        for anchor in doc.all("a"):
+            reference = anchor.attrs.get("href", "")
+            if not reference:
+                invalid.append({"href": reference, "reason": "empty href"})
+                continue
+            explicit_destination = normalized_absolute_http_url(reference)
+            if explicit_destination in self.unavailable_source_destinations:
+                invalid.append({"href": reference, "reason": "unavailable showcase source must not be linked"})
+                continue
+            if explicit_destination in self.external_destinations:
+                continue
+            url = urlsplit(urljoin(page_url, reference))
+            if (url.scheme, url.netloc) != self.origin:
+                continue
+            if self.base_path and not url.path.startswith(self.base_path + "/") and url.path != self.base_path:
+                invalid.append({"href": reference, "reason": "missing deployment base path"})
+                continue
+            route = unquote(url.path[len(self.base_path):]).rstrip("/") or "/"
+            if route not in public_paths:
+                invalid.append({"href": reference, "reason": "not a registered public route"})
+                continue
+            target = self.documents.get(route)
+            if target is None:
+                invalid.append({"href": reference, "reason": "target did not return HTTP 200 HTML"})
+            elif url.fragment and unquote(url.fragment) not in {element.attrs["id"] for element in target.all() if "id" in element.attrs}:
+                invalid.append({"href": reference, "reason": "missing target anchor"})
+        self.check(f"{path} all site links and anchors resolve", [], invalid)
+        bad_assets, images = [], []
+        for element in doc.all():
+            references = []
+            if element.tag in {"script", "img", "source", "video", "audio"}:
+                references.extend(filter(None, [element.attrs.get("src"), element.attrs.get("poster")]))
+                srcset = element.attrs.get("srcset", "")
+                if srcset and not srcset.startswith("data:"):
+                    references.extend(candidate.strip().split()[0] for candidate in srcset.split(","))
+            if element.tag == "link" and set(element.attrs.get("rel", "").split()) & {"stylesheet", "preload", "modulepreload", "icon", "apple-touch-icon", "mask-icon"}:
+                references.extend(filter(None, [element.attrs.get("href")]))
+            for reference in references:
+                url = urlsplit(urljoin(page_url, reference))
+                if (url.scheme, url.netloc) != self.origin:
+                    continue
+                resolved = urlunsplit((url.scheme, url.netloc, url.path, url.query, ""))
+                result = self.fetch(resolved)
+                if not url.path.startswith(self.base_path + "/") or result["status"] != 200:
+                    bad_assets.append({"url": resolved, "status": result["status"], "error": result.get("error")})
+                if element.tag == "img" and reference == element.attrs.get("src"):
+                    try:
+                        dimensions = image_dimensions(result["body"])
+                    except (ValueError, KeyError, ET.ParseError, struct.error, IndexError):
+                        dimensions = None
+                    content_type = next((value for key, value in result["headers"].items() if key.lower() == "content-type"), "")
+                    valid = bool(dimensions and dimensions[1] > 0 and dimensions[2] > 0 and content_type.startswith("image/"))
+                    observation = {"url": resolved, "valid": valid, "formatAndDimensions": dimensions, "bytes": len(result["body"]), "contentType": content_type}
+                    images.append(observation)
+                    self.image_observations[resolved] = observation
+        self.check(f"{path} referenced local assets use base path and HTTP 200", [], bad_assets)
+        self.check(f"{path} real image bytes and natural header dimensions", [], [item for item in images if not item["valid"]], "Header inspection is not a full browser image-decoding check.")
+
+    def run(self):
+        if not self.source_contract():
+            return
+        for page in self.public_pages:
+            path = page["path"]
+            response = self.fetch(self.route_url(path))
+            self.check(f"{path} public route HTTP status", 200, response["status"], response.get("error", ""))
+            content_type = next((value for key, value in response["headers"].items() if key.lower() == "content-type"), "")
+            self.check(f"{path} public route HTML response", True, "text/html" in content_type)
+            if response["status"] == 200 and "text/html" in content_type:
+                self.documents[path] = Document(response["body"].decode("utf-8")).root
+        for path, doc in self.documents.items():
+            self.metadata(path, doc)
+            self.links_and_resources(path, doc)
+            if path in {"/", "/portfolio"}:
+                self.cards(path, doc)
+            if path == "/portfolio":
+                ids = {element.attrs["id"] for element in doc.all() if "id" in element.attrs}
+                self.check("Portfolio retains all existing category anchors", [], [item for item in self.contract["portfolioAnchors"] if item not in ids])
+            if path in {"/portfolio/" + slug for slug in self.contract["technicalPlanSlugs"]}:
+                main = doc.all("main")
+                text = main[0].text() if main else ""
+                self.check(f"{path} technical plan remains Planned", True, "Planned／規劃中" in text)
+                self.check(f"{path} technical plan retains empty implementation/media", True, "尚無可驗證的系統畫面" in text and "尚未提供可核對的實作與測試證據。" in text)
+                self.check(f"{path} technical plan has no fabricated screenshot", 0, len(main[0].all("img")) if main else -1)
+            if path in {"/about", "/solutions"}:
+                self.check(f"{path} revised visible operating-model copy", [], re.findall(r"一人全職|由一人|創辦人一人", doc.text()))
+            if path == "/contact":
+                main = doc.all("main")
+                controls = [element.tag for element in main[0].all() if element.tag in {"form", "input", "textarea", "select"} or element.attrs.get("type") == "submit"] if main else ["missing main"]
+                self.check("Contact retains no receiving form", [], controls)
+                self.check("Contact retains honest unconfirmed-channel state", True, bool(main) and "正式聯絡管道確認中" in main[0].text())
+            draft_markers = [self.data["privacyDraftMarker"]] + [text for section in self.data["privacyPolicy"]["sections"] for text in section["paragraphs"]]
+            self.check(f"{path} contains no unpublished Privacy draft text", [], [marker for marker in draft_markers if marker and marker in doc.text()])
+        negative = ["/privacy", "/dev/design-system", "/sitemap.xml", "/portfolio/unknown-smoke-route", "/portfolio/showcases/unknown-smoke-route", "/unknown-smoke-route"]
+        for path in negative:
+            url = self.base + path.lstrip("/")
+            self.check(f"{path} unpublished/unknown route returns real HTTP 404", 404, self.fetch(url)["status"], "A soft 404 or redirect to Home is a failure.")
+        robots = self.fetch(self.base + "robots.txt")
+        self.check("Protected robots HTTP status", 200, robots["status"])
+        lines = [re.sub(r"^([^:]+):\s*", lambda match: match[1].lower() + ": ", line.split("#")[0].strip()) for line in robots["body"].decode("utf-8").splitlines() if line.split("#")[0].strip()]
+        expected = ["user-agent: *", "allow: " + self.base_path + "/", "disallow: " + self.base_path + "/dev/"]
+        expected.extend("disallow: " + self.base_path + page["path"] for page in self.data["seoPages"] if page["availability"] == "draft")
+        self.check("Protected robots exact rules without Sitemap", sorted(expected), sorted(lines))
+        if self.args.check_external:
+            for entry in self.data["showcases"]["websiteShowcases"]:
+                if entry.get("availability", "available") == "available":
+                    response = self.fetch(entry["href"])
+                    self.check(f"External {entry['id']} available source HTTP status", 200, response["status"], response.get("error", ""))
+        if self.args.check_source_assets:
+            for source in self.contract["sourceAssetChecks"]:
+                response = self.fetch(source["url"])
+                self.check(f"External {source['id']} known source-asset limitation", source["expectedStatus"], response["status"], "Expected 404 records the current limitation; it never means the source asset was repaired. " + response.get("error", ""))
+        self.completed = True
+
+    def report(self):
+        counts = Counter(item["status"] for item in self.results)
+        report = {"suite": "XK website HTTP smoke", "startedAt": self.started, "finishedAt": now(),
+                  "environment": self.environment, "command": [sys.executable, *sys.argv],
+                  "result": "FAIL" if counts["FAIL"] else "PASS", "exitCode": 1 if counts["FAIL"] else 0,
+                  "counts": dict(counts), "complete": self.completed, "checks": self.results,
+                  "httpObservations": [{"url": url, "status": item["status"], "finalUrl": item["finalUrl"], "bytes": len(item["body"]), "error": item.get("error")} for url, item in self.cache.items()],
+                  "imageObservations": list(self.image_observations.values()),
+                  "scopeNotes": ["No browser rendering, keyboard, screen reader, responsive, axe or complete WCAG audit is performed.",
+                                 "External source checks run only when requested; source-asset expected 404 is evidence of a limitation.",
+                                 "Image headers/bytes are inspected; full browser decoding is a separate check."]}
+        output = Path(self.args.output).expanduser()
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
+        for item in self.results:
+            if item["status"] == "FAIL":
+                print(f"{item['testId']} FAIL {item['item']}: expected {item['expected']!r}; actual {item['actual']!r}", file=sys.stderr)
+        print(f"{report['result']}: {counts['PASS']} passed, {counts['FAIL']} failed. JSON: {output}")
+        return report["exitCode"]
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--base-url", required=True, help="Existing normal or Pages server URL, including /xk-website/ when applicable")
+    parser.add_argument("--output", default="/tmp/xk-website-smoke-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ") + ".json", help="JSON evidence path (default: unique timestamped /tmp file)")
+    parser.add_argument("--timeout", type=float, default=20, help="Per-request timeout in seconds")
+    parser.add_argument("--check-external", action="store_true", help="Also require available external showcase homepages to return HTTP 200")
+    parser.add_argument("--check-source-assets", action="store_true", help="Also reproduce the independent fixture's known external source-asset HTTP statuses")
+    args = parser.parse_args()
+    if args.timeout <= 0:
+        parser.error("--timeout must be positive")
+    suite = None
+    try:
+        suite = Smoke(args)
+        suite.run()
+    except Exception as error:
+        if suite is None:
+            parser.error(str(error))
+        suite.check("Smoke execution completes without a tool/configuration error", "complete", str(error))
+    suite.check("All smoke phases reached their completion marker", True, suite.completed)
+    return suite.report()
+
+
+if __name__ == "__main__":
+    sys.exit(main())

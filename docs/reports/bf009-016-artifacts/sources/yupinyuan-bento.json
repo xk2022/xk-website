@@ -1,0 +1,332 @@
+{
+  "id": "yupinyuan-bento",
+  "url": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+  "finalUrl": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+  "status": 200,
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "age": "0",
+    "cache-control": "max-age=600",
+    "content-encoding": "gzip",
+    "content-length": "8178",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sun, 22 Nov 2026 11:23:20 GMT",
+    "etag": "W/\"6b02be58-9e38\"",
+    "expires": "Sun, 22 Nov 2026 11:33:20 GMT",
+    "last-modified": "Sun, 22 Nov 2026 10:05:12 GMT",
+    "server": "envoy",
+    "strict-transport-security": "max-age=31556952",
+    "vary": "Accept-Encoding",
+    "via": "1.1 varnish",
+    "x-cache": "MISS",
+    "x-cache-hits": "0",
+    "x-envoy-upstream-service-time": "108",
+    "x-fastly-request-id": "c79b63c49cb9606c2d1851263727c73d521723ff",
+    "x-github-edge-region": "iad",
+    "x-github-request-id": "151C:1D0E:1F1D8:2859E:6B02D0A8",
+    "x-proxy-cache": "MISS",
+    "x-served-by": "cache-chi-klot8100122-CHI",
+    "x-timer": "S1795346600.390132,VS0,VE68"
+  },
+  "checkedAt": "2026-11-22T11:23:21.639Z",
+  "title": "御品園港式燒臘｜羅東南門路餐點與團體訂餐詢問｜XK 展示案例",
+  "bodyText": "跳至主要內容\n御\n御品園港式燒臘\n餐點\n團體訂餐\n門市\n\n御品園港式燒臘\n\n羅東南門路，\n今天吃港式燒臘。\n\n自己吃一盒，或替公司、會議、活動訂便當，先看看今天想吃什麼。\n\n看菜單\n整理團訂詢問\n餐點示意\n餐點一覽\n\n實際供應品項與門市售價以店家公告為準\n\n三寶飯\n餐點示意\n燒鴨飯\n餐點示意\n叉燒飯\n餐點示意\n油雞飯\n餐點示意\n脆皮燒肉飯\n餐點示意\n門市與外送\n公司午餐、會議、活動便當，歡迎詢問團體訂餐。\n\n先提供用餐日期、希望取餐時間與預估份數。實際品項、價格、接單及配送，以店家回覆為準。\n\n展示版僅整理詢問內容，不會代為聯絡店家。草稿在重新整理後清空。\n\n整理詢問內容\n帶入示範資料\n\n示範資料可修改，日期為台灣明日。\n\n用餐日期\n希望取餐時間\n預估份數\n取餐需求\n請選擇\n預計自取\n想詢問是否可配送\n尚未確定\n活動或訂餐用途 選填\n備註 選填\n詢問內容預覽\n複製詢問內容\n\n門市與外送\n羅東南門路門市\n宜蘭縣羅東鎮南門路 107 號\n導航到門市\n外送平台\n\n將離開本站，前往外送平台\n\n前往 Uber Eats\n前往 foodpanda\n關於門市\n\n御品園港式燒臘位於羅東南門路，由陳柏伸主理，門市可接受團體訂餐詢問。\n\nXK SYSTEM 作品集展示\n\nXplore Kaleidoscope 自主展示專案 · R01 網站建置 · W01 一頁式網站",
+  "headings": [
+    {
+      "level": "H1",
+      "text": "羅東南門路，\n今天吃港式燒臘。"
+    },
+    {
+      "level": "H2",
+      "text": "餐點一覽"
+    },
+    {
+      "level": "H3",
+      "text": "三寶飯"
+    },
+    {
+      "level": "H3",
+      "text": "燒鴨飯"
+    },
+    {
+      "level": "H3",
+      "text": "叉燒飯"
+    },
+    {
+      "level": "H3",
+      "text": "油雞飯"
+    },
+    {
+      "level": "H3",
+      "text": "脆皮燒肉飯"
+    },
+    {
+      "level": "H2",
+      "text": "公司午餐、會議、活動便當，歡迎詢問團體訂餐。"
+    },
+    {
+      "level": "H3",
+      "text": "整理詢問內容"
+    },
+    {
+      "level": "H3",
+      "text": "詢問內容預覽"
+    },
+    {
+      "level": "H2",
+      "text": "門市與外送"
+    },
+    {
+      "level": "H3",
+      "text": "羅東南門路門市"
+    },
+    {
+      "level": "H3",
+      "text": "外送平台"
+    },
+    {
+      "level": "H3",
+      "text": "關於門市"
+    }
+  ],
+  "links": [
+    {
+      "text": "跳至主要內容",
+      "href": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/#main"
+    },
+    {
+      "text": "御\n御品園港式燒臘",
+      "href": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/"
+    },
+    {
+      "text": "餐點",
+      "href": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/#menu"
+    },
+    {
+      "text": "團體訂餐",
+      "href": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/#group-order"
+    },
+    {
+      "text": "門市",
+      "href": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/#visit"
+    },
+    {
+      "text": "看菜單",
+      "href": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/#menu"
+    },
+    {
+      "text": "整理團訂詢問",
+      "href": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/#group-order"
+    },
+    {
+      "text": "門市與外送",
+      "href": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/#visit"
+    },
+    {
+      "text": "導航到門市",
+      "href": "https://www.google.com/maps/dir/?api=1&destination=%E5%AE%9C%E8%98%AD%E7%B8%A3%E7%BE%85%E6%9D%B1%E9%8E%AE%E5%8D%97%E9%96%80%E8%B7%AF%20107%20%E8%99%9F"
+    },
+    {
+      "text": "前往 Uber Eats",
+      "href": "https://www.ubereats.com/tw-en/store/%E5%BE%A1%E5%93%81%E5%9C%92%E6%B8%AF%E5%BC%8F%E7%87%92%E8%87%98-%E7%BE%85%E6%9D%B1%E5%BA%97/sZHcr0WvWW-_eZ8hVi6RgA"
+    },
+    {
+      "text": "前往 foodpanda",
+      "href": "https://www.foodpanda.com.tw/restaurant/qrdc/yu-pin-yuan-gang-shi-shao-la"
+    }
+  ],
+  "forms": [
+    {
+      "action": null,
+      "method": "get",
+      "text": "整理詢問內容\n帶入示範資料\n\n示範資料可修改，日期為台灣明日。\n\n用餐日期\n希望取餐時間\n預估份數\n取餐需求\n請選擇\n預計自取\n想詢問是否可配送\n尚未確定\n活動或訂餐用途 選填\n備註 選填\n詢問內容預覽\n複製詢問內容",
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "id": "",
+          "name": "",
+          "label": []
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "id": "order-date",
+          "name": "",
+          "required": true,
+          "label": [
+            "用餐日期"
+          ],
+          "placeholder": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "time",
+          "id": "order-time",
+          "name": "",
+          "required": true,
+          "label": [
+            "希望取餐時間"
+          ],
+          "placeholder": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "id": "order-quantity",
+          "name": "",
+          "required": true,
+          "label": [
+            "預估份數"
+          ],
+          "placeholder": "例如 20"
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "id": "order-pickup",
+          "name": "",
+          "required": true,
+          "options": [
+            {
+              "value": "",
+              "text": "請選擇"
+            },
+            {
+              "value": "self-pickup",
+              "text": "預計自取"
+            },
+            {
+              "value": "delivery",
+              "text": "想詢問是否可配送"
+            },
+            {
+              "value": "undecided",
+              "text": "尚未確定"
+            }
+          ],
+          "label": [
+            "取餐需求"
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "id": "order-purpose",
+          "name": "",
+          "required": false,
+          "label": [
+            "活動或訂餐用途 選填"
+          ],
+          "placeholder": "例如公司午餐、社團例會"
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "id": "order-notes",
+          "name": "",
+          "required": false,
+          "label": [
+            "備註 選填"
+          ],
+          "placeholder": ""
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "id": "",
+          "name": "",
+          "label": []
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "id": "order-message",
+          "name": "",
+          "required": false,
+          "label": [],
+          "placeholder": ""
+        }
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "text": "帶入示範資料",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "複製詢問內容",
+      "type": "submit",
+      "disabled": false
+    }
+  ],
+  "images": [
+    {
+      "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/roast-bento-768.webp",
+      "alt": "深紅桌巾上，一盒有燒鴨、叉燒、油雞、白飯與配菜的燒臘便當",
+      "complete": true,
+      "width": 605,
+      "height": 403,
+      "inViewport": true
+    },
+    {
+      "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/three-treasures-352.webp",
+      "alt": "燒鴨、叉燒和油雞搭配白飯與蔬菜的便當",
+      "complete": true,
+      "width": 219,
+      "height": 219,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/roast-duck-352.webp",
+      "alt": "帶皮切片燒鴨搭配白飯與蔬菜的便當",
+      "complete": true,
+      "width": 219,
+      "height": 219,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/char-siu-352.webp",
+      "alt": "紅褐色叉燒切片搭配白飯與蔬菜的便當",
+      "complete": true,
+      "width": 219,
+      "height": 219,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/soy-chicken-352.webp",
+      "alt": "金黃色油雞切片搭配白飯與蔬菜的便當",
+      "complete": true,
+      "width": 219,
+      "height": 219,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/images/crispy-pork-352.webp",
+      "alt": "帶金黃脆皮的燒肉切片搭配白飯與蔬菜的便當",
+      "complete": true,
+      "width": 219,
+      "height": 219,
+      "inViewport": false
+    }
+  ],
+  "backgrounds": [],
+  "fontStatus": "loaded",
+  "dimensions": {
+    "width": 1280,
+    "height": 2885
+  },
+  "errors": {
+    "pageErrors": [],
+    "requestFailures": [],
+    "httpErrors": []
+  },
+  "screenshot": {
+    "path": "/tmp/xk-bf009-016/sources/yupinyuan-bento.png",
+    "bytes": 594111,
+    "sha256": "902dede1027acbc1236b34849c1cee716ba1243eff0b568bbc4d07ae82936b82"
+  }
+}

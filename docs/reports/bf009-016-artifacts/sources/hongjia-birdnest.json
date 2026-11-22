@@ -1,0 +1,249 @@
+{
+  "id": "hongjia-birdnest",
+  "url": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/",
+  "finalUrl": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/",
+  "status": 200,
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "age": "0",
+    "cache-control": "max-age=600",
+    "content-encoding": "gzip",
+    "content-length": "7041",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sun, 22 Nov 2026 11:23:20 GMT",
+    "etag": "W/\"6b02be17-80fe\"",
+    "expires": "Sun, 22 Nov 2026 11:33:20 GMT",
+    "last-modified": "Sun, 22 Nov 2026 10:04:07 GMT",
+    "server": "envoy",
+    "strict-transport-security": "max-age=31556952",
+    "vary": "Accept-Encoding",
+    "via": "1.1 varnish",
+    "x-cache": "MISS",
+    "x-cache-hits": "0",
+    "x-envoy-upstream-service-time": "97",
+    "x-fastly-request-id": "b8ccad02c499ba64d5b608240da63a0895292101",
+    "x-github-edge-region": "iad",
+    "x-github-request-id": "51DA:3B7CD9:19DEAE3:1C7E28B:6B02D0A7",
+    "x-proxy-cache": "MISS",
+    "x-served-by": "cache-chi-klot8100122-CHI",
+    "x-timer": "S1795346600.390132,VS0,VE57"
+  },
+  "checkedAt": "2026-11-22T11:23:21.793Z",
+  "title": "宏家燕窩｜親友送禮與企業贈禮｜XK 展示案例",
+  "bodyText": "宏家燕窩\n送禮情境\n洽詢表單\n\n燕窩送禮洽詢\n\n這份燕窩，\n想送給誰？\n\n這是送禮情境展示。選擇對象，填入已知的份數或日期，就能預覽模擬需求摘要。\n\n送給親友\n企業贈禮\n情境示意\n\n送禮情境\n\n先想想，這份禮要送給誰\n親友送禮\n\n想想收禮的人、預計送幾份，以及想在哪一天送到對方手上。\n\n收禮對象\n預計份數\n送禮日期\n\n如果只確定送禮日，可寫在其他需求；希望到貨日可稍後再決定。\n\n填寫個人送禮需求\n企業贈禮\n\n先整理預估總份數與希望到貨日，再記下想詢問的包裝或配送安排。\n\n預估總份數\n希望到貨日\n包裝與配送問題\n填寫企業贈禮需求\n送禮洽詢表單\n\n本頁為送禮情境展示，實際品項、售價與配送方式待品牌確認。\n\n填寫後會產生需求摘要，資料僅留在本頁。重新整理後即清除。\n\n送禮類型\n個人送禮\n企業贈禮\n聯絡信箱 必填\n\n可以使用示範信箱 gift@example.com。\n\n預計份數或希望到貨日，至少填寫一項。\n\n預計份數\n希望到貨日\n其他需求 選填\n帶入示範資料\n產生模擬洽詢摘要\n\n宏家燕窩\n\nR01 網站建置｜食品品牌送禮展示案例\n\nXK SYSTEM 自製展示案例\n\nXplore Kaleidoscope 自主規劃與開發的展示案例",
+  "headings": [
+    {
+      "level": "H1",
+      "text": "這份燕窩，\n想送給誰？"
+    },
+    {
+      "level": "H2",
+      "text": "先想想，這份禮要送給誰"
+    },
+    {
+      "level": "H3",
+      "text": "親友送禮"
+    },
+    {
+      "level": "H3",
+      "text": "企業贈禮"
+    },
+    {
+      "level": "H2",
+      "text": "送禮洽詢表單"
+    },
+    {
+      "level": "H3",
+      "text": "帶入示範資料？"
+    }
+  ],
+  "links": [
+    {
+      "text": "宏家燕窩",
+      "href": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/"
+    },
+    {
+      "text": "送禮情境",
+      "href": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/#gifting-scenarios"
+    },
+    {
+      "text": "洽詢表單",
+      "href": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/#gift-form"
+    },
+    {
+      "text": "送給親友",
+      "href": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/#gift-form"
+    },
+    {
+      "text": "企業贈禮",
+      "href": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/#gift-form"
+    },
+    {
+      "text": "填寫個人送禮需求",
+      "href": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/#gift-form"
+    },
+    {
+      "text": "填寫企業贈禮需求",
+      "href": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/#gift-form"
+    }
+  ],
+  "forms": [
+    {
+      "action": null,
+      "method": "get",
+      "text": "送禮類型\n個人送禮\n企業贈禮\n聯絡信箱 必填\n\n可以使用示範信箱 gift@example.com。\n\n預計份數或希望到貨日，至少填寫一項。\n\n預計份數\n希望到貨日\n其他需求 選填\n帶入示範資料\n產生模擬洽詢摘要",
+      "controls": [
+        {
+          "tag": "FIELDSET",
+          "type": "fieldset",
+          "id": "",
+          "name": "",
+          "label": []
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "id": "gift-scenario-personal",
+          "name": "gifting-scenario",
+          "required": true,
+          "label": [
+            "個人送禮"
+          ],
+          "placeholder": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "radio",
+          "id": "gift-scenario-corporate",
+          "name": "gifting-scenario",
+          "required": true,
+          "label": [
+            "企業贈禮"
+          ],
+          "placeholder": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "id": "gift-email",
+          "name": "",
+          "required": true,
+          "label": [
+            "聯絡信箱 必填"
+          ],
+          "placeholder": ""
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "id": "gift-quantity",
+          "name": "",
+          "required": false,
+          "label": [
+            "預計份數"
+          ],
+          "placeholder": "例如 12"
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "id": "gift-date",
+          "name": "",
+          "required": false,
+          "label": [
+            "希望到貨日"
+          ],
+          "placeholder": ""
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "id": "gift-notes",
+          "name": "",
+          "required": false,
+          "label": [
+            "其他需求 選填"
+          ],
+          "placeholder": "可以記下收禮對象、送禮日期或想詢問的事項。"
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "id": "",
+          "name": "",
+          "label": []
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "id": "",
+          "name": "",
+          "label": []
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "id": "",
+          "name": "",
+          "label": []
+        },
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "id": "",
+          "name": "",
+          "label": []
+        }
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "text": "帶入示範資料",
+      "type": "button",
+      "disabled": true
+    },
+    {
+      "text": "產生模擬洽詢摘要",
+      "type": "submit",
+      "disabled": false
+    },
+    {
+      "text": "保留原輸入",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "確認帶入示範資料",
+      "type": "button",
+      "disabled": false
+    }
+  ],
+  "images": [
+    {
+      "src": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/_next/static/media/birdnest-still-life-720.05vlmsxtlzkw4.webp",
+      "alt": "自然光下，三盞乾燕窩放在白色陶盤上，旁邊有棕色緞帶和素面禮盒",
+      "complete": true,
+      "width": 644,
+      "height": 483,
+      "inViewport": true
+    }
+  ],
+  "backgrounds": [],
+  "fontStatus": "loaded",
+  "dimensions": {
+    "width": 1280,
+    "height": 2191
+  },
+  "errors": {
+    "pageErrors": [],
+    "requestFailures": [],
+    "httpErrors": []
+  },
+  "screenshot": {
+    "path": "/tmp/xk-bf009-016/sources/hongjia-birdnest.png",
+    "bytes": 498220,
+    "sha256": "a0785ffac4f43463e747aa37a4bf87d82265fd07141279659a2a986c1412f751"
+  }
+}

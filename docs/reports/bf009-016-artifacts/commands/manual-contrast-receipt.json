@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python",
+    "/tmp/xk-bf009-016/adjudicate-contrast.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T11:43:24.736200+00:00",
+  "finishedAt": "2026-11-22T11:43:24.857647+00:00",
+  "processId": 10306,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-bf009-016/manual-contrast.log",
+  "logSha256": "f62dd9193da7af780d169342af185035e5482883d8563534fdcdd17fc4daf662",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

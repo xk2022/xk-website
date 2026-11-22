@@ -1,0 +1,205 @@
+{
+  "capturedAt": "2026-11-22T11:56:45.065895+00:00",
+  "base": "f2c8091c75980f240427066e368c41fc3d932efc",
+  "headAtCapture": "83ebb1526ca2d175a79e25a28869886412801c90",
+  "scope": "Implementation/documentation snapshot excluding generated evidence directories. Root owns subsequent stage/commit/remote identifiers.",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "e31ba9dba8eef331d4bef5e557e55d676598159ead87cad4881f6a0116d485a6",
+      "bytes": 23985
+    },
+    {
+      "path": "README.md",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "dc327ba5068fb96bc812ae3caf2289d774222fb9c743d8d42355e10d3f4436c3",
+      "bytes": 20146
+    },
+    {
+      "path": "docs/implementation-notes.md",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "975283c6e42e700a5611fada0af05980639f394ce6fa1faf022b3ffe31656086",
+      "bytes": 54148
+    },
+    {
+      "path": "docs/task/README.md",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "90f9e3e46c0504072fb00bd3fc67c51eb21fbbc89df3f2dc94deebc6efb10adc",
+      "bytes": 23785
+    },
+    {
+      "path": "docs/task/bugfix-backlog-2026-11-22.md",
+      "status": "A",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "7af53304bb2ff4711bdad614a1f06a44d1b53a781e660954d3cd09197d3eb1d2",
+      "bytes": 16470
+    },
+    {
+      "path": "package.json",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "5d42e75c1a404a94efc3fcdd4011b1beb5820d0cfa70148a65e4efd21adc96f8",
+      "bytes": 929
+    },
+    {
+      "path": "scripts/build-github-pages.mjs",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "27a443b439a8cc07b0013614eef696b7e42bad77e5f8cc7f0eff8355545f321a",
+      "bytes": 33424
+    },
+    {
+      "path": "src/app/globals.css",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "e00174bf08c9460c94fc91e9e0c5d4a4c73fdb7fa0b43378a7f57e24c2478da3",
+      "bytes": 8304
+    },
+    {
+      "path": "src/components/layout/site-footer.tsx",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "58b411d50a57dae3ab71b5c2117afac913dde670e51355a75c5cded7e271a654",
+      "bytes": 4299
+    },
+    {
+      "path": "src/components/sections/about/about-founder.tsx",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "2af298d6d4a05b3f720fc338bcbd8cf47c8b67971333a7060793f6f41f06d7ab",
+      "bytes": 1926
+    },
+    {
+      "path": "src/components/sections/home-contact-cta.tsx",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "bf550f6ef2168baea6f6ea362ca192fb616a3be7162e1f523c9d1a522c9d7343",
+      "bytes": 2804
+    },
+    {
+      "path": "src/components/sections/portfolio/portfolio-introduction.tsx",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "8a05f3215f02196dd7465c6448490355425578cb409bf765a0f129184a1f2a21",
+      "bytes": 1365
+    },
+    {
+      "path": "src/components/sections/portfolio/portfolio-projects.tsx",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "84b311593955ad4c73697aa3e385f9e739dc5d71422cd56761607fbcc19015fe",
+      "bytes": 1193
+    },
+    {
+      "path": "src/components/sections/portfolio/website-showcase-card.tsx",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "3913bb5ce06787c8194c1ceadbf2e88d3ec54e95a0eaf011dd452e3b5fcc2594",
+      "bytes": 4792
+    },
+    {
+      "path": "src/components/sections/portfolio/website-showcase-gallery.tsx",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "96e0585262df2a24acd2bb8572c32c536d583dd8721e445a63e1be52125d10b8",
+      "bytes": 2302
+    },
+    {
+      "path": "src/config/about.ts",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "137ea99420f9d1224e67cc32168b9819457b3177fbf122898a90d6c572b576a7",
+      "bytes": 5543
+    },
+    {
+      "path": "src/config/seo.ts",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "92542e35778c74ea4483fa9420244923be31e0c7bac147d59a916fccaceb56ab",
+      "bytes": 3945
+    },
+    {
+      "path": "src/config/solutions.ts",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "ac5c04ea486fe2559fee84fbeb588bac727c4c220096ea3aa02b1cf644ca734a",
+      "bytes": 29667
+    },
+    {
+      "path": "src/config/website-showcases.ts",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "5a70b94bebb6cabc7034d7140c7f95c48db8c654afcc2e0ea62c147e715bfce9",
+      "bytes": 18874
+    },
+    {
+      "path": "tsconfig.json",
+      "status": "M",
+      "source": "git diff --name-status f2c8091c75980f240427066e368c41fc3d932efc",
+      "sha256": "a4de2968dfc1d932f2abee0f49c9c5cafe883d20dea4ffb3b4729d5cd745df14",
+      "bytes": 795
+    },
+    {
+      "path": "docs/publication-readiness.md",
+      "status": "UNTRACKED",
+      "source": "git ls-files --others --exclude-standard",
+      "sha256": "dbb37a751ba59cc93c46469a32261dad47431a091b582cefd5a1a78e0ac2fefc",
+      "bytes": 3283
+    },
+    {
+      "path": "docs/reports/bf009-016-implementation.md",
+      "status": "UNTRACKED",
+      "source": "git ls-files --others --exclude-standard",
+      "sha256": "c892f0b9062d6378f1f069b6c4ec5715af96da280f7abdb8c010869d892b7041",
+      "bytes": 10384
+    },
+    {
+      "path": "docs/website-smoke.md",
+      "status": "UNTRACKED",
+      "source": "git ls-files --others --exclude-standard",
+      "sha256": "7302e5eb016c059a7413356cb40da400f1989c88eaa9954c3b240ab105e12eae",
+      "bytes": 6781
+    },
+    {
+      "path": "public/images/showcases/qiangang-windows.webp",
+      "status": "UNTRACKED",
+      "source": "git ls-files --others --exclude-standard",
+      "sha256": "b4dc1b5a6d8e29298a918c7b298facd46cc80b5ec2c16deb020a63c4f4279b58",
+      "bytes": 51612
+    },
+    {
+      "path": "scripts/fixtures/showcase-contract.json",
+      "status": "UNTRACKED",
+      "source": "git ls-files --others --exclude-standard",
+      "sha256": "6a0e85f08bce359733a8c1fbe3a084ab04c93299e803ec51e1dab2709f82577d",
+      "bytes": 1527
+    },
+    {
+      "path": "scripts/smoke-website.py",
+      "status": "UNTRACKED",
+      "source": "git ls-files --others --exclude-standard",
+      "sha256": "7a58b4d278b24d43eca390bacb1c851e42cb370ea73f953ddc58f37c82b66c2a",
+      "bytes": 31349
+    },
+    {
+      "path": "src/app/portfolio/showcases/[slug]/page.tsx",
+      "status": "UNTRACKED",
+      "source": "git ls-files --others --exclude-standard",
+      "sha256": "cf7b76e31a718dcc6d4cc73634d4d923817d645329d24af3e3f176d2aa1cbf15",
+      "bytes": 1251
+    },
+    {
+      "path": "src/components/sections/portfolio/website-showcase-detail.tsx",
+      "status": "UNTRACKED",
+      "source": "git ls-files --others --exclude-standard",
+      "sha256": "95f82dd0100f86eb801082f558480eb60dcf70b4393e95218d10841489945602",
+      "bytes": 7898
+    }
+  ],
+  "refreshedAt": "2026-11-22T11:58:30.890198+00:00"
+}

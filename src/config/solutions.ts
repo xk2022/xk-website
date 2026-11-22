@@ -366,7 +366,7 @@ export const solutionsValuePrinciples = [
   },
   {
     title: "直接技術溝通",
-    description: "由一人全職技術品牌直接討論需求、選擇與限制，依個別專案確認範圍與合作方式。",
+    description: "透過直接的技術溝通，釐清需求、技術選擇與限制，依個別專案確認範圍與合作方式。",
     sourceRefs: [{ sourceId: "S01", sections: ["§1 Company Overview", "§2 Brand Identity"], supports: "一人全職品牌定位。" }, { sourceId: "S05", sections: ["§11", "§16"], supports: "依可承擔範圍確認合作，不做固定產能與交付保證。" }],
   },
 ] as const satisfies readonly {
@@ -420,8 +420,8 @@ export const solutionsPage = {
   },
   cta: {
     title: "從理解需求，開始規劃下一步。",
-    description: "可以先整理目前問題與希望改善的流程，再依需求確認範圍與合作方式。正式聯絡管道以首頁已確認的資訊為準。",
-    primaryCta: { label: "前往聯絡資訊", href: "/#contact" },
+    description: "可以先整理目前問題與希望改善的流程，再依需求確認範圍與合作方式。正式聯絡資訊與合作準備事項，請查看聯絡頁。",
+    primaryCta: { label: "前往聯絡資訊", href: "/contact" },
     secondaryCta: { label: "了解服務", href: "/services" },
     aboutLink: { label: "認識 XK", href: "/about" },
   },

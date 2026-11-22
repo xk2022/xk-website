@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python",
+    "/tmp/xk-bf009-016/check-smoke-metadata.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T11:46:30.722297+00:00",
+  "finishedAt": "2026-11-22T11:46:30.825520+00:00",
+  "processId": 10749,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-bf009-016/smoke-metadata-negative.log",
+  "logSha256": "fd9bf11dc4970d9a4a7a0812d5f6345331e946dc97a5e99792d53e47fd4a4418",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

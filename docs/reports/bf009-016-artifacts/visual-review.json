@@ -1,0 +1,641 @@
+{
+  "testId": "BF013-BF014-PAGES-MANUAL-VISUAL",
+  "reviewedAtUtc": "2026-11-22T11:48:15.020195+00:00",
+  "reviewer": "bf_showcase_ui",
+  "status": "PASS_WITH_SCOPE_LIMITATIONS",
+  "target": "Root-provided Pages final artifact screenshots; this review did not run a build, browser, server or network request and did not modify the repository.",
+  "method": [
+    "Viewed the supplied full-page screenshots for layout context. Very tall overview images were rendered smaller by the image viewer and were not treated as word-by-word inspection.",
+    "Created and actually viewed 19 derivative images without scaling: 12 sheets of consecutive 375-pixel-wide vertical slices covering the complete About, Portfolio, Qiangang-detail and March-detail mobile sources, and seven full-width desktop crops covering service/showcase cards and disclosure sections. White padding below a short last sheet is added by the inspection sheet, not page whitespace.",
+    "Directly viewed the 1440-pixel Qiangang detail full-page image for desktop context, content, preview, source URL, lists and CTA layout.",
+    "Viewed the original tightly cropped focus control, identified its missing surrounding area, then directly viewed the additional 375x1000 keyboard-focus context screenshot to inspect the complete outline."
+  ],
+  "sourceScreenshots": [
+    {
+      "path": "/tmp/xk-bf009-016/pages-final/home-1440.png",
+      "sha256": "9938b27c62387d3b0572a2617a143f817e2d9b75facf171152ba89e8b97df909",
+      "dimensions": [
+        1440,
+        7872
+      ],
+      "reviewedVia": [
+        "/tmp/xk-bf009-016/visual-crops/home-1440-crop-1.png",
+        "/tmp/xk-bf009-016/visual-crops/home-1440-crop-2.png",
+        "/tmp/xk-bf009-016/visual-crops/home-1440-crop-3.png"
+      ],
+      "overviewDirectlyViewed": true
+    },
+    {
+      "path": "/tmp/xk-bf009-016/pages-final/about-375.png",
+      "sha256": "eb4c4ccf575e751288c175074f5b2ccc84769f987ffaf066f8798e6ee832eeaa",
+      "dimensions": [
+        375,
+        10495
+      ],
+      "reviewedVia": [
+        "/tmp/xk-bf009-016/visual-crops/about-375-sheet-1.png",
+        "/tmp/xk-bf009-016/visual-crops/about-375-sheet-2.png",
+        "/tmp/xk-bf009-016/visual-crops/about-375-sheet-3.png",
+        "/tmp/xk-bf009-016/visual-crops/about-375-sheet-4.png"
+      ],
+      "overviewDirectlyViewed": true
+    },
+    {
+      "path": "/tmp/xk-bf009-016/pages-final/portfolio-1440.png",
+      "sha256": "497e85ffe4ce46c3404439dedc97afe34f1ad457f03b6589f5069ff7c546dd0c",
+      "dimensions": [
+        1440,
+        8272
+      ],
+      "reviewedVia": [
+        "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-1.png",
+        "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-2.png",
+        "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-3.png",
+        "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-4.png"
+      ],
+      "overviewDirectlyViewed": true
+    },
+    {
+      "path": "/tmp/xk-bf009-016/pages-final/portfolio-375.png",
+      "sha256": "d46d5315a7780baa88a92d2dbb0e28d261c7398eb47043530a49b0e7c2166f64",
+      "dimensions": [
+        375,
+        12982
+      ],
+      "reviewedVia": [
+        "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-1.png",
+        "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-2.png",
+        "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-3.png",
+        "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-4.png"
+      ],
+      "overviewDirectlyViewed": true
+    },
+    {
+      "path": "/tmp/xk-bf009-016/pages-final/qi-detail-1440.png",
+      "sha256": "5fa232fd67d2437eae23dd911162d49712c2fca15624c92e9505f975ebd85cc4",
+      "dimensions": [
+        1440,
+        4849
+      ],
+      "reviewedVia": [
+        "direct image view"
+      ],
+      "overviewDirectlyViewed": true
+    },
+    {
+      "path": "/tmp/xk-bf009-016/pages-final/qi-detail-375.png",
+      "sha256": "d9b8f831cddd7fde38f442b8e64cf1aefbb21a922250668e1e9a4fdadbdbb78a",
+      "dimensions": [
+        375,
+        5237
+      ],
+      "reviewedVia": [
+        "/tmp/xk-bf009-016/visual-crops/qi-detail-375-sheet-1.png",
+        "/tmp/xk-bf009-016/visual-crops/qi-detail-375-sheet-2.png"
+      ],
+      "overviewDirectlyViewed": false
+    },
+    {
+      "path": "/tmp/xk-bf009-016/pages-final/march-detail-375.png",
+      "sha256": "9265d4614be470aeb9d5d147684c77f54e5099d5188aff11194a9bfc690e1222",
+      "dimensions": [
+        375,
+        5210
+      ],
+      "reviewedVia": [
+        "/tmp/xk-bf009-016/visual-crops/march-detail-375-sheet-1.png",
+        "/tmp/xk-bf009-016/visual-crops/march-detail-375-sheet-2.png"
+      ],
+      "overviewDirectlyViewed": false
+    },
+    {
+      "path": "/tmp/xk-bf009-016/pages-final/focus-brand-link.png",
+      "sha256": "d940594777151c884a69ddee3062ad56f47348f0f0e934c69d79c737d15b4be3",
+      "dimensions": [
+        277,
+        49
+      ],
+      "reviewedVia": [
+        "direct image view"
+      ],
+      "overviewDirectlyViewed": true
+    },
+    {
+      "path": "/tmp/xk-bf009-016/focus-with-context.png",
+      "sha256": "ed5e1b4e3bc6924985411a97883fe87ee9bfc9ef4c6b0d509d5a1425c4d7d77e",
+      "dimensions": [
+        375,
+        1000
+      ],
+      "reviewedVia": [
+        "direct image view"
+      ],
+      "overviewDirectlyViewed": true
+    }
+  ],
+  "derivedImages": [
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/about-375-sheet-1.png",
+      "source": "/tmp/xk-bf009-016/pages-final/about-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          0,
+          375,
+          1100
+        ],
+        [
+          0,
+          1100,
+          375,
+          2200
+        ],
+        [
+          0,
+          2200,
+          375,
+          3300
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "20f4666f0b0d7448449be21d72ca574232e0c43ca697df5081fcf8f32e744f0d",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/about-375-sheet-2.png",
+      "source": "/tmp/xk-bf009-016/pages-final/about-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          3300,
+          375,
+          4400
+        ],
+        [
+          0,
+          4400,
+          375,
+          5500
+        ],
+        [
+          0,
+          5500,
+          375,
+          6600
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "ba7c0ea75527b914a1af3dfdb4d434a8d2dffcb141ad4a49b564f3f74e49fd56",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/about-375-sheet-3.png",
+      "source": "/tmp/xk-bf009-016/pages-final/about-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          6600,
+          375,
+          7700
+        ],
+        [
+          0,
+          7700,
+          375,
+          8800
+        ],
+        [
+          0,
+          8800,
+          375,
+          9900
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "352a9f81b72ad6042aa451e022e12a4c19a70bf4cffcd5770a01d0e49a0a5c59",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/about-375-sheet-4.png",
+      "source": "/tmp/xk-bf009-016/pages-final/about-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          9900,
+          375,
+          10495
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "3519dfed5150f5b378d2c3a8cc1a8b278c70a84b4681d04947b6038285d6613f",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-1.png",
+      "source": "/tmp/xk-bf009-016/pages-final/portfolio-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          0,
+          375,
+          1100
+        ],
+        [
+          0,
+          1100,
+          375,
+          2200
+        ],
+        [
+          0,
+          2200,
+          375,
+          3300
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "e4dbfe95deb46b65066ee2acd940a70b19adff844b75cad1d6347063459e1993",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-2.png",
+      "source": "/tmp/xk-bf009-016/pages-final/portfolio-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          3300,
+          375,
+          4400
+        ],
+        [
+          0,
+          4400,
+          375,
+          5500
+        ],
+        [
+          0,
+          5500,
+          375,
+          6600
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "7f9234f3f80de53859db8edb982409e829dd36e997e5e4c96c2ae45efc662081",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-3.png",
+      "source": "/tmp/xk-bf009-016/pages-final/portfolio-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          6600,
+          375,
+          7700
+        ],
+        [
+          0,
+          7700,
+          375,
+          8800
+        ],
+        [
+          0,
+          8800,
+          375,
+          9900
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "1fd3bb768a1c047008a8d4b892e2733211aa12e6927fe319caf62c66cb014169",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-4.png",
+      "source": "/tmp/xk-bf009-016/pages-final/portfolio-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          9900,
+          375,
+          11000
+        ],
+        [
+          0,
+          11000,
+          375,
+          12100
+        ],
+        [
+          0,
+          12100,
+          375,
+          12982
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "c72203a19c06779b10216c4ea412055886c16987f99ea5c35114534ba33f5e43",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/qi-detail-375-sheet-1.png",
+      "source": "/tmp/xk-bf009-016/pages-final/qi-detail-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          0,
+          375,
+          1100
+        ],
+        [
+          0,
+          1100,
+          375,
+          2200
+        ],
+        [
+          0,
+          2200,
+          375,
+          3300
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "fabf5ae6779fc5943cb64c66352707bac795c5f04c27d537726644e5cca7e39c",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/qi-detail-375-sheet-2.png",
+      "source": "/tmp/xk-bf009-016/pages-final/qi-detail-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          3300,
+          375,
+          4400
+        ],
+        [
+          0,
+          4400,
+          375,
+          5237
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "efcf7f15e362eb785aca4b061474806b1cef4e0084762ea2d6afd03aba833747",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/march-detail-375-sheet-1.png",
+      "source": "/tmp/xk-bf009-016/pages-final/march-detail-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          0,
+          375,
+          1100
+        ],
+        [
+          0,
+          1100,
+          375,
+          2200
+        ],
+        [
+          0,
+          2200,
+          375,
+          3300
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "e92d52423804757794d3c4aed5401980d5b9dcdaec797745ebe97cf11ec9101c",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/march-detail-375-sheet-2.png",
+      "source": "/tmp/xk-bf009-016/pages-final/march-detail-375.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          3300,
+          375,
+          4400
+        ],
+        [
+          0,
+          4400,
+          375,
+          5210
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "12ad0688374213ecb86150d23e034e25530b3a95476240b5d64d957787849dfc",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/home-1440-crop-1.png",
+      "source": "/tmp/xk-bf009-016/pages-final/home-1440.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          1400,
+          1440,
+          2600
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "3f178da62c3b9327a75a4d5d6db7cd572c9933e1c490fa94ae5d97208ab72ba9",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/home-1440-crop-2.png",
+      "source": "/tmp/xk-bf009-016/pages-final/home-1440.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          2600,
+          1440,
+          3800
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "fad7d54719b91753424ee7c1ae17744e85dc488a755aa2d8e15b1abbac83ac1f",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/home-1440-crop-3.png",
+      "source": "/tmp/xk-bf009-016/pages-final/home-1440.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          3800,
+          1440,
+          4600
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "6b41adba5d4c74589813d868b4ca3b08a5d120d8f744dd91b5e324c5f6dba7ae",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-1.png",
+      "source": "/tmp/xk-bf009-016/pages-final/portfolio-1440.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          1400,
+          1440,
+          2550
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "08adcaf8657f5ecbe639effe991ec588edfa45f616444dbb48b8f0a81413e996",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-2.png",
+      "source": "/tmp/xk-bf009-016/pages-final/portfolio-1440.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          2550,
+          1440,
+          3700
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "2d2ced6236725078f3632f01549e29b510f8b55552bad2a1f569948be395df88",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-3.png",
+      "source": "/tmp/xk-bf009-016/pages-final/portfolio-1440.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          3700,
+          1440,
+          4850
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "907256123a38328a0348661edbe97557eefb50b35326edfd437b24300042aa43",
+      "viewed": true
+    },
+    {
+      "file": "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-4.png",
+      "source": "/tmp/xk-bf009-016/pages-final/portfolio-1440.png",
+      "source_crop_boxes_left_to_right": [
+        [
+          0,
+          4850,
+          1440,
+          5650
+        ]
+      ],
+      "rescaled": false,
+      "sha256": "d20ad18e024a7e7dec191b91f9ff3fd3a56333ca9820c8d3846b49415f276d62",
+      "viewed": true
+    }
+  ],
+  "checks": [
+    {
+      "id": "VISUAL-CARD-CLASSIFICATION",
+      "status": "PASS",
+      "evidence": [
+        "portfolio-1440.png",
+        "portfolio-375.png",
+        "home-1440.png"
+      ],
+      "observation": "All six brand cards appear in the approved visible order. Self-made brand showcases, the own-service promotion preview and Qiangang brand proposal use distinct readable nature labels; available state is visible. Homepage featured cards show the new introduction and external-preview links."
+    },
+    {
+      "id": "VISUAL-CARD-CTA-ALIGNMENT",
+      "status": "PASS",
+      "evidence": [
+        "home-1440-crop-2.png",
+        "portfolio-1440-crop-1.png",
+        "portfolio-1440-crop-2.png",
+        "portfolio-1440-crop-3.png",
+        "portfolio-375-sheet-1.png",
+        "portfolio-375-sheet-2.png"
+      ],
+      "observation": "Introduction/external-preview actions align at card bottoms across desktop rows. Mobile actions stack consistently within card borders with legible labels and no overlapping content."
+    },
+    {
+      "id": "VISUAL-DISCLOSURES",
+      "status": "PASS",
+      "evidence": [
+        "portfolio-1440-crop-3.png",
+        "portfolio-1440-crop-4.png",
+        "portfolio-375-sheet-3.png"
+      ],
+      "observation": "Template and Planned sections remain visibly headed and are collapsed by default. Summaries visibly show four template samples and three Planned projects; the longer mobile Planned label wraps inside its summary without clipping."
+    },
+    {
+      "id": "VISUAL-DETAIL-REPRESENTATIVES",
+      "status": "PASS",
+      "evidence": [
+        "qi-detail-1440.png",
+        "qi-detail-375-sheet-1.png",
+        "qi-detail-375-sheet-2.png",
+        "march-detail-375-sheet-1.png",
+        "march-detail-375-sheet-2.png"
+      ],
+      "observation": "Qiangang proposal and March self-made showcase examples expose H1, visible nature/state, contextual content, real previews, external source URL, design/implementation/limitation lists and service/contact-information/return links. Qiangang preview and proposal scope remain explicit."
+    },
+    {
+      "id": "VISUAL-MOBILE-REFLOW",
+      "status": "PASS",
+      "evidence": [
+        "about-375-sheet-1.png",
+        "about-375-sheet-2.png",
+        "about-375-sheet-3.png",
+        "about-375-sheet-4.png",
+        "portfolio-375-sheet-1.png",
+        "portfolio-375-sheet-2.png",
+        "portfolio-375-sheet-3.png",
+        "portfolio-375-sheet-4.png",
+        "qi-detail-375-sheet-1.png",
+        "qi-detail-375-sheet-2.png",
+        "march-detail-375-sheet-1.png",
+        "march-detail-375-sheet-2.png"
+      ],
+      "observation": "At the supplied 375px viewports, no visible horizontal overflow, clipped characters, overlapping text or unexplained large blank regions were observed. Long source URLs wrap within the content column. Long footer navigation and technology labels remain readable."
+    },
+    {
+      "id": "VISUAL-ABOUT-COPY",
+      "status": "PASS",
+      "evidence": [
+        "about-375-sheet-1.png"
+      ],
+      "observation": "The edited operating-model paragraph visibly describes direct technical communication and delivery quality; it contains no visible one-person emphasis or fabricated team-size wording."
+    },
+    {
+      "id": "VISUAL-KEYBOARD-FOCUS",
+      "status": "PASS",
+      "evidence": [
+        "/tmp/xk-bf009-016/focus-with-context.png"
+      ],
+      "observation": "The March introduction link has a complete, clear blue focus perimeter with a light separation from its dark fill; it is visible against the card background and is not clipped by the card. The surrounding viewport makes the full outline assessable."
+    }
+  ],
+  "blockingFindings": [],
+  "blockingCount": 0,
+  "nonBlockingFindings": [],
+  "resolvedEvidenceLimitations": [
+    {
+      "source": "/tmp/xk-bf009-016/pages-final/focus-brand-link.png",
+      "limitation": "The 277x49 control-only crop excludes the surrounding area in which the global focus outline is painted and cannot independently establish visual focus visibility.",
+      "resolution": "The separately provided /tmp/xk-bf009-016/focus-with-context.png supplies the full surrounding viewport and was actually viewed; visual focus check passes on that image."
+    }
+  ],
+  "limitations": [
+    "This manual visual review covers the seven supplied full-page viewport examples and the two focus images, rather than every route/width in the separate automated acceptance matrix.",
+    "The six new detail routes are represented manually by Qiangang at 1440/375 and March at 375; the remaining four detail pages were not individually screenshot-reviewed in this task.",
+    "Default-closed disclosure rendering was reviewed. Expanded template/reference-only and Planned content, menu behavior, links, keyboard operation beyond the shown focus state, and runtime/HTTP assertions remain covered only by the separate collector/Root evidence, not by this screenshot review.",
+    "No pixel contrast-ratio calculation or WCAG certification is asserted by this visual inspection. Gradient/opaque-panel axe candidates are being adjudicated separately by Root."
+  ]
+}

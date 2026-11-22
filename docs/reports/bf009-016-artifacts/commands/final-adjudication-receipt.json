@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python",
+    "/tmp/xk-bf009-016/final-adjudication.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T11:49:45.867261+00:00",
+  "finishedAt": "2026-11-22T11:49:46.271149+00:00",
+  "processId": 10927,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-bf009-016/final-adjudication.log",
+  "logSha256": "a9f0e318df29dae873ea2f0257f43d1e0ed637663097f4fd72ae56b8ee95f179",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

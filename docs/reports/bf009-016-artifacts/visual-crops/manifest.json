@@ -1,0 +1,369 @@
+[
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/about-375-sheet-1.png",
+    "source": "/tmp/xk-bf009-016/pages-final/about-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        0,
+        375,
+        1100
+      ],
+      [
+        0,
+        1100,
+        375,
+        2200
+      ],
+      [
+        0,
+        2200,
+        375,
+        3300
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/about-375-sheet-2.png",
+    "source": "/tmp/xk-bf009-016/pages-final/about-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        3300,
+        375,
+        4400
+      ],
+      [
+        0,
+        4400,
+        375,
+        5500
+      ],
+      [
+        0,
+        5500,
+        375,
+        6600
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/about-375-sheet-3.png",
+    "source": "/tmp/xk-bf009-016/pages-final/about-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        6600,
+        375,
+        7700
+      ],
+      [
+        0,
+        7700,
+        375,
+        8800
+      ],
+      [
+        0,
+        8800,
+        375,
+        9900
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/about-375-sheet-4.png",
+    "source": "/tmp/xk-bf009-016/pages-final/about-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        9900,
+        375,
+        10495
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-1.png",
+    "source": "/tmp/xk-bf009-016/pages-final/portfolio-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        0,
+        375,
+        1100
+      ],
+      [
+        0,
+        1100,
+        375,
+        2200
+      ],
+      [
+        0,
+        2200,
+        375,
+        3300
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-2.png",
+    "source": "/tmp/xk-bf009-016/pages-final/portfolio-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        3300,
+        375,
+        4400
+      ],
+      [
+        0,
+        4400,
+        375,
+        5500
+      ],
+      [
+        0,
+        5500,
+        375,
+        6600
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-3.png",
+    "source": "/tmp/xk-bf009-016/pages-final/portfolio-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        6600,
+        375,
+        7700
+      ],
+      [
+        0,
+        7700,
+        375,
+        8800
+      ],
+      [
+        0,
+        8800,
+        375,
+        9900
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/portfolio-375-sheet-4.png",
+    "source": "/tmp/xk-bf009-016/pages-final/portfolio-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        9900,
+        375,
+        11000
+      ],
+      [
+        0,
+        11000,
+        375,
+        12100
+      ],
+      [
+        0,
+        12100,
+        375,
+        12982
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/qi-detail-375-sheet-1.png",
+    "source": "/tmp/xk-bf009-016/pages-final/qi-detail-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        0,
+        375,
+        1100
+      ],
+      [
+        0,
+        1100,
+        375,
+        2200
+      ],
+      [
+        0,
+        2200,
+        375,
+        3300
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/qi-detail-375-sheet-2.png",
+    "source": "/tmp/xk-bf009-016/pages-final/qi-detail-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        3300,
+        375,
+        4400
+      ],
+      [
+        0,
+        4400,
+        375,
+        5237
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/march-detail-375-sheet-1.png",
+    "source": "/tmp/xk-bf009-016/pages-final/march-detail-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        0,
+        375,
+        1100
+      ],
+      [
+        0,
+        1100,
+        375,
+        2200
+      ],
+      [
+        0,
+        2200,
+        375,
+        3300
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/march-detail-375-sheet-2.png",
+    "source": "/tmp/xk-bf009-016/pages-final/march-detail-375.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        3300,
+        375,
+        4400
+      ],
+      [
+        0,
+        4400,
+        375,
+        5210
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/home-1440-crop-1.png",
+    "source": "/tmp/xk-bf009-016/pages-final/home-1440.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        1400,
+        1440,
+        2600
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/home-1440-crop-2.png",
+    "source": "/tmp/xk-bf009-016/pages-final/home-1440.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        2600,
+        1440,
+        3800
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/home-1440-crop-3.png",
+    "source": "/tmp/xk-bf009-016/pages-final/home-1440.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        3800,
+        1440,
+        4600
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-1.png",
+    "source": "/tmp/xk-bf009-016/pages-final/portfolio-1440.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        1400,
+        1440,
+        2550
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-2.png",
+    "source": "/tmp/xk-bf009-016/pages-final/portfolio-1440.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        2550,
+        1440,
+        3700
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-3.png",
+    "source": "/tmp/xk-bf009-016/pages-final/portfolio-1440.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        3700,
+        1440,
+        4850
+      ]
+    ],
+    "rescaled": false
+  },
+  {
+    "file": "/tmp/xk-bf009-016/visual-crops/portfolio-1440-crop-4.png",
+    "source": "/tmp/xk-bf009-016/pages-final/portfolio-1440.png",
+    "source_crop_boxes_left_to_right": [
+      [
+        0,
+        4850,
+        1440,
+        5650
+      ]
+    ],
+    "rescaled": false
+  }
+]

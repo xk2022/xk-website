@@ -1,0 +1,329 @@
+{
+  "id": "honest-diecut",
+  "url": "https://xk2022.github.io/xk-showcase-honest-diecut/",
+  "finalUrl": "https://xk2022.github.io/xk-showcase-honest-diecut/",
+  "status": 200,
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "age": "0",
+    "cache-control": "max-age=600",
+    "content-encoding": "gzip",
+    "content-length": "7039",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sun, 22 Nov 2026 11:23:22 GMT",
+    "etag": "W/\"6b02bc5a-75da\"",
+    "expires": "Sun, 22 Nov 2026 11:33:22 GMT",
+    "last-modified": "Sun, 22 Nov 2026 09:56:42 GMT",
+    "server": "envoy",
+    "strict-transport-security": "max-age=31556952",
+    "vary": "Accept-Encoding",
+    "via": "1.1 varnish",
+    "x-cache": "MISS",
+    "x-cache-hits": "0",
+    "x-envoy-upstream-service-time": "85",
+    "x-fastly-request-id": "074aaa254029598701731023cc7cf96e9b21791a",
+    "x-github-edge-region": "iad",
+    "x-github-request-id": "7A20:173351:26709B7:2B545CA:6B02D0A7",
+    "x-proxy-cache": "MISS",
+    "x-served-by": "cache-chi-klot8100122-CHI",
+    "x-timer": "S1795346602.086095,VS0,VE79"
+  },
+  "checkedAt": "2026-11-22T11:23:23.549Z",
+  "title": "宏能興業｜模切沖型、保護膜與工業標籤｜XK 展示案例",
+  "bodyText": "宏能興業有限公司\n加工樣本\n洽詢流程\n詢價表單\n\nXK 自製展示案例 / R01\n\n模切沖型、保護膜與工業標籤\n\n先從零件的黏貼位置、保護需求或識別用途找樣本，再整理尺寸與預估用量。\n\n提出加工需求\n看加工樣本\n加工樣本示意\n\nAPPLICATION SAMPLES\n\n加工樣本\n\n宏能興業提供模切沖型、保護膜材料與標籤印刷加工。可依零件用途選擇對應的樣本。\n\n全部\n黏貼與緩衝\n面板表面保護\n條碼與識別\n\n顯示 3 個加工樣本\n\n示意\n\n黏貼與緩衝\n\n背膠沖型件\n\n在外殼與零件接觸處黏貼泡棉墊片，作為緩衝。\n\n可容納的墊片厚度\n\n以此樣本詢價\n示意\n\n面板表面保護\n\nPET 保護膜\n\n組裝或搬運時保護面板表面。\n\n需要覆蓋的長 × 寬（mm）\n\n以此樣本詢價\n示意\n\n條碼與識別\n\n工業標籤\n\n在零件或包裝貼上條碼，方便識別。\n\n可貼標區域的長 × 寬（mm）\n\n以此樣本詢價\n\nINQUIRY PROCESS\n\n洽詢流程\n\n本頁可模擬整理需求摘要。材料、打樣與報價需另行洽談。\n\n01\n提供用途與規格\n\n整理使用位置、尺寸與單位、預估件數。可先用本頁產生模擬摘要。\n\n02\n討論材料與打樣\n\n實際洽談時，可依黏貼面、使用環境等條件討論材料及打樣需求。\n\n03\n依條件評估報價\n\n可製作性、價格與交期，需依實際需求與洽談結果確認。\n\nQUOTE SIMULATION\n\n詢價表單\n\n整理加工需求與預估用量。材料尚未確定時，可選擇「請協助選材」。\n\n此為 XK 展示表單。資料僅在本頁產生摘要，不會寄送給宏能興業。\n\n所有欄位皆為必填。\n\n帶入示範資料\n公司或單位\n加工用途與規格\n\n請提供使用位置、尺寸與單位，可用自然語言描述。\n\n材料或加工類別\n請選擇類別\n背膠沖型件\nPET 保護膜\n工業標籤\n請協助選材\n預估件數\n聯絡信箱\n產生模擬詢價摘要\nXplore Kaleidoscope 自製展示案例\n\nR01 網站建置 · W01 一頁式網站\n\n資料來源\n宏能興業網站\n宏能興業有限公司簡介",
+  "headings": [
+    {
+      "level": "H1",
+      "text": "模切沖型、保護膜與工業標籤"
+    },
+    {
+      "level": "H2",
+      "text": "加工樣本"
+    },
+    {
+      "level": "H3",
+      "text": "背膠沖型件"
+    },
+    {
+      "level": "H3",
+      "text": "PET 保護膜"
+    },
+    {
+      "level": "H3",
+      "text": "工業標籤"
+    },
+    {
+      "level": "H2",
+      "text": "洽詢流程"
+    },
+    {
+      "level": "H3",
+      "text": "提供用途與規格"
+    },
+    {
+      "level": "H3",
+      "text": "討論材料與打樣"
+    },
+    {
+      "level": "H3",
+      "text": "依條件評估報價"
+    },
+    {
+      "level": "H2",
+      "text": "詢價表單"
+    },
+    {
+      "level": "H3",
+      "text": "載入示範資料？"
+    }
+  ],
+  "links": [
+    {
+      "text": "宏能興業有限公司",
+      "href": "https://xk2022.github.io/xk-showcase-honest-diecut/#top"
+    },
+    {
+      "text": "加工樣本",
+      "href": "https://xk2022.github.io/xk-showcase-honest-diecut/#samples"
+    },
+    {
+      "text": "洽詢流程",
+      "href": "https://xk2022.github.io/xk-showcase-honest-diecut/#process"
+    },
+    {
+      "text": "詢價表單",
+      "href": "https://xk2022.github.io/xk-showcase-honest-diecut/#industrial-form"
+    },
+    {
+      "text": "提出加工需求",
+      "href": "https://xk2022.github.io/xk-showcase-honest-diecut/#industrial-form"
+    },
+    {
+      "text": "看加工樣本",
+      "href": "https://xk2022.github.io/xk-showcase-honest-diecut/#samples"
+    },
+    {
+      "text": "宏能興業網站",
+      "href": "https://honest-com-tw6.webnode.tw/"
+    },
+    {
+      "text": "宏能興業有限公司簡介",
+      "href": "https://cae7252452.cbaul-cdnwnd.com/2631411350df0463c4c8e818df559028/200000134-a4170a4172/-8.pdf?ph=cae7252452"
+    }
+  ],
+  "forms": [
+    {
+      "action": null,
+      "method": "get",
+      "text": "所有欄位皆為必填。\n\n帶入示範資料\n公司或單位\n加工用途與規格\n\n請提供使用位置、尺寸與單位，可用自然語言描述。\n\n材料或加工類別\n請選擇類別\n背膠沖型件\nPET 保護膜\n工業標籤\n請協助選材\n預估件數\n聯絡信箱\n產生模擬詢價摘要",
+      "controls": [
+        {
+          "tag": "BUTTON",
+          "type": "button",
+          "id": "",
+          "name": "",
+          "label": []
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "id": "company",
+          "name": "",
+          "required": true,
+          "label": [
+            "公司或單位"
+          ],
+          "placeholder": "例如：示範研發單位"
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "id": "requirements",
+          "name": "",
+          "required": true,
+          "label": [
+            "加工用途與規格"
+          ],
+          "placeholder": ""
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "id": "category",
+          "name": "",
+          "required": true,
+          "options": [
+            {
+              "value": "",
+              "text": "請選擇類別"
+            },
+            {
+              "value": "die-cut",
+              "text": "背膠沖型件"
+            },
+            {
+              "value": "pet-film",
+              "text": "PET 保護膜"
+            },
+            {
+              "value": "barcode-label",
+              "text": "工業標籤"
+            },
+            {
+              "value": "material-help",
+              "text": "請協助選材"
+            }
+          ],
+          "label": [
+            "材料或加工類別"
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "id": "quantity",
+          "name": "",
+          "required": true,
+          "label": [
+            "預估件數"
+          ],
+          "placeholder": "例如：200"
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "id": "email",
+          "name": "",
+          "required": true,
+          "label": [
+            "聯絡信箱"
+          ],
+          "placeholder": "buyer@example.com"
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "id": "",
+          "name": "",
+          "label": []
+        }
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "text": "全部",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "黏貼與緩衝",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "面板表面保護",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "條碼與識別",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "以此樣本詢價",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "以此樣本詢價",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "以此樣本詢價",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "帶入示範資料",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "產生模擬詢價摘要",
+      "type": "submit",
+      "disabled": false
+    },
+    {
+      "text": "保留草稿",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "載入示範",
+      "type": "button",
+      "disabled": false
+    }
+  ],
+  "images": [
+    {
+      "src": "https://xk2022.github.io/xk-showcase-honest-diecut/images/hero.webp",
+      "alt": "深藍工作檯上的泡棉沖型件、掀起透明膜的面板與條碼零件",
+      "complete": true,
+      "width": 1440,
+      "height": 720,
+      "inViewport": true
+    },
+    {
+      "src": "https://xk2022.github.io/xk-showcase-honest-diecut/images/foam.webp",
+      "alt": "有明顯厚度與中空輪廓的深灰泡棉墊片",
+      "complete": true,
+      "width": 720,
+      "height": 648,
+      "inViewport": true
+    },
+    {
+      "src": "https://xk2022.github.io/xk-showcase-honest-diecut/images/film.webp",
+      "alt": "透明薄膜從銀色面板的一角掀起",
+      "complete": true,
+      "width": 720,
+      "height": 648,
+      "inViewport": true
+    },
+    {
+      "src": "https://xk2022.github.io/xk-showcase-honest-diecut/images/label.webp",
+      "alt": "銀色工業零件表面貼有白底條碼標籤",
+      "complete": true,
+      "width": 720,
+      "height": 648,
+      "inViewport": true
+    },
+    {
+      "src": "https://xk2022.github.io/xk-showcase-honest-diecut/icon.svg",
+      "alt": "",
+      "complete": false,
+      "width": 0,
+      "height": 0,
+      "inViewport": false
+    }
+  ],
+  "backgrounds": [],
+  "fontStatus": "loaded",
+  "dimensions": {
+    "width": 1280,
+    "height": 2766
+  },
+  "errors": {
+    "pageErrors": [],
+    "requestFailures": [],
+    "httpErrors": []
+  },
+  "screenshot": {
+    "path": "/tmp/xk-bf009-016/sources/honest-diecut.png",
+    "bytes": 440465,
+    "sha256": "1fbb149f6586d3b26acb2ea6014655e74571d80d1703efe2de627b29f27267cd"
+  }
+}

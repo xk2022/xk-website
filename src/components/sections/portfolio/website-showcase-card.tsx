@@ -1,9 +1,10 @@
 import { ArrowUpRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import type { WebsiteShowcase } from "@/config/website-showcases";
+import { presentationLabels, showcaseDetailPath, showcaseStateLabels, type WebsiteShowcase } from "@/config/website-showcases";
 
 type WebsiteShowcaseCardProps = {
   showcase: WebsiteShowcase;
@@ -14,9 +15,11 @@ export function WebsiteShowcaseCard({ showcase, headingLevel = "h3" }: WebsiteSh
   const basePath = process.env.XK_PAGES_EXPORT === "1"
     ? (process.env.XK_PAGES_BASE_PATH ?? "/xk-website")
     : "";
+  const state = showcase.availability ?? "available";
+  const hasDetail = showcase.kind === "brand-demo" && state === "available" && showcase.detail;
 
   return (
-    <article className="min-w-0" data-showcase-id={showcase.id} data-showcase-state={showcase.availability ?? "available"}>
+    <article className="min-w-0" data-showcase-id={showcase.id} data-showcase-state={state} data-showcase-presentation={showcase.presentation}>
       <Card className="h-full gap-0 overflow-hidden p-0">
         {showcase.image ? <Image
           src={`${basePath}${showcase.image.src}`}
@@ -29,14 +32,18 @@ export function WebsiteShowcaseCard({ showcase, headingLevel = "h3" }: WebsiteSh
           className="aspect-[8/5] h-auto w-full border-b bg-surface object-cover"
         /> : (
           <div className="flex aspect-[8/5] flex-col items-center justify-center gap-3 border-b bg-surface px-6 text-center">
-            <p className="type-h3 font-semibold text-primary">準備中</p>
-            <p className="type-body-sm text-muted-foreground">公開後提供網站預覽</p>
+            <p className="type-h3 font-semibold text-primary">{showcaseStateLabels[state]}</p>
+            <p className="type-body-sm text-muted-foreground">{state === "reference-only" ? "素材待整理，暫停外連" : "公開後提供網站預覽"}</p>
           </div>
         )}
         <CardHeader className="p-6">
-          <p className="type-caption break-words font-semibold text-secondary">
-            {showcase.category} · {showcase.kind === "brand-demo" ? "品牌網站展示" : "模板範例"}
-          </p>
+          <p className="type-caption break-words font-semibold text-secondary">{showcase.category}</p>
+          <div className="flex min-w-0 flex-wrap items-center gap-3">
+            <span className="type-body-sm max-w-full break-words rounded-full border bg-surface px-3 py-1.5 font-medium text-secondary">
+              {presentationLabels[showcase.presentation]}
+            </span>
+            {state === "available" && <span className="type-body-sm text-muted-foreground">{showcaseStateLabels[state]}</span>}
+          </div>
           <CardTitle as={headingLevel} className="break-words">{showcase.title}</CardTitle>
           <CardDescription className="type-body">{showcase.summary}</CardDescription>
         </CardHeader>
@@ -59,6 +66,11 @@ export function WebsiteShowcaseCard({ showcase, headingLevel = "h3" }: WebsiteSh
               <ExternalLink aria-hidden="true" className="size-4 shrink-0" />
             </a>
           )}
+          {hasDetail && <Button asChild className="w-full">
+            <Link href={showcaseDetailPath(showcase.id)} aria-label={`查看作品介紹：${showcase.title}`}>
+              查看作品介紹<ArrowUpRight aria-hidden="true" />
+            </Link>
+          </Button>}
           {showcase.href ? <Button asChild variant="outline" className="w-full">
             <a
               href={showcase.href}
@@ -69,7 +81,7 @@ export function WebsiteShowcaseCard({ showcase, headingLevel = "h3" }: WebsiteSh
               開啟展示網站<ArrowUpRight aria-hidden="true" />
             </a>
           </Button> : (
-            <p className="type-body-sm flex min-h-11 items-center justify-center rounded-md border border-dashed px-4 py-2 font-medium text-muted-foreground">展示網站準備中</p>
+            <p className="type-body-sm text-center font-medium text-muted-foreground">{state === "reference-only" ? "素材待整理，暫停外連" : "展示網站準備中"}</p>
           )}
         </CardFooter>
       </Card>

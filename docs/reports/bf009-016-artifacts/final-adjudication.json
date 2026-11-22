@@ -1,0 +1,299 @@
+{
+  "status": "PASS",
+  "reviewedAt": "2026-11-22T11:50:12.815087+00:00",
+  "scope": "BF009–016 local Pages UI/keyboard/responsive/axe/manual scope; not a full WCAG, real-device or AT certification.",
+  "browserCollectorExitCode": 2,
+  "browserCollectorStatus": "MANUAL_PENDING",
+  "browserRequiredFailures": 0,
+  "baseResponsive": 75,
+  "additionalResponsive": 5,
+  "axeScans": 37,
+  "axeViolations": 0,
+  "manualCandidates": 389,
+  "gradientCandidates": 370,
+  "minimumConservativeContrast": 5.1333065802155575,
+  "overlapCandidates": 19,
+  "visualScreenshots": 7,
+  "focusContext": "Actual screenshot with blue 2px outline and 4px offset reviewed, not inferred from tight crop.",
+  "visualReviewStatus": "PASS_WITH_SCOPE_LIMITATIONS",
+  "remainingScopeLimits": [
+    "This manual visual review covers the seven supplied full-page viewport examples and the two focus images, rather than every route/width in the separate automated acceptance matrix.",
+    "The six new detail routes are represented manually by Qiangang at 1440/375 and March at 375; the remaining four detail pages were not individually screenshot-reviewed in this task.",
+    "Default-closed disclosure rendering was reviewed. Expanded template/reference-only and Planned content, menu behavior, links, keyboard operation beyond the shown focus state, and runtime/HTTP assertions remain covered only by the separate collector/Root evidence, not by this screenshot review.",
+    "No pixel contrast-ratio calculation or WCAG certification is asserted by this visual inspection. Gradient/opaque-panel axe candidates are being adjudicated separately by Root."
+  ],
+  "evidence": {
+    "pages-final/result.json": "dec81e95e6fc3edf2b203d914cd372d5a87b71d75bcc11871d6ac71a82c85023",
+    "manual-contrast.json": "4c00e679ff77e2a490a3bab936a74434cfb70e44cdcbfd778dd84a0ab589ab38",
+    "overlap-review.json": "28230b3eb8bdda78d6d75bb85cdd8f795799b43199dfe7faf3af0a48060d8adf",
+    "visual-review.json": "18ffb60890510d0b20092d0c8d62635639d400fdd9931b29779eee492380e576"
+  },
+  "overlapDecisions": [
+    {
+      "path": "/portfolio",
+      "target": [
+        ".mb-8 > .hover\\:text-secondary.rounded-sm[href$=\"xk-website/\"]"
+      ],
+      "text": "首頁",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 13.73833424257036,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio",
+      "target": [
+        "span[aria-current=\"page\"]"
+      ],
+      "text": "作品展示",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 13.73833424257036,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio",
+      "target": [
+        ".gap-12 > div > .mb-4.type-caption[lang=\"en\"]"
+      ],
+      "text": "Explore Our Work",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 5.1333065802155575,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio",
+      "target": [
+        "#portfolio-page-title"
+      ],
+      "text": "從不同情境，看見網站的可能。",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 14.564792077370413,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio",
+      "target": [
+        ".mt-6.max-w-2xl.type-body-lg"
+      ],
+      "text": "瀏覽品牌網站展示與一頁式網站範例，探索不同產業的內容安排與介面風格；也能進一步了解企業系統與整合技術的展示規劃。",
+      "coverage": "PARTIAL_RECT_OVERLAP",
+      "coverageFraction": 0.6450333513610961,
+      "menuTopHitTests": 6,
+      "sampleCount": 9,
+      "defaultContrastRatio": 13.73833424257036,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/about",
+      "target": [
+        ".mb-8 > .hover\\:text-secondary.rounded-sm[href$=\"xk-website/\"]"
+      ],
+      "text": "首頁",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 13.73833424257036,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/about",
+      "target": [
+        "span[aria-current=\"page\"]"
+      ],
+      "text": "關於 XK",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 13.73833424257036,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/about",
+      "target": [
+        ".lg\\:grid-cols-\\[1\\.3fr_1fr\\].lg\\:gap-16.gap-10 > div > .mb-4.font-semibold.type-caption"
+      ],
+      "text": "ABOUT XPLORE KALEIDOSCOPE",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 5.1333065802155575,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/about",
+      "target": [
+        ".block:nth-child(1)"
+      ],
+      "text": "探索可能性，",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 14.564792077370413,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/about",
+      "target": [
+        ".block:nth-child(2)"
+      ],
+      "text": "創造數位價值。",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 14.564792077370413,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/about",
+      "target": [
+        ".mt-6.type-body-lg.font-medium"
+      ],
+      "text": "Explore Possibilities. Create Digital Value.",
+      "coverage": "PARTIAL_RECT_OVERLAP",
+      "coverageFraction": 0.9675500270416442,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 14.564792077370413,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "target": [
+        ".mb-8 > .hover\\:text-secondary.rounded-sm[href$=\"xk-website/\"]"
+      ],
+      "text": "首頁",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 13.73833424257036,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "target": [
+        ".hover\\:text-secondary.rounded-sm.min-h-11:nth-child(3)"
+      ],
+      "text": "作品展示",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 13.73833424257036,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "target": [
+        "span[aria-current=\"page\"]"
+      ],
+      "text": "千剛實業",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 13.73833424257036,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "target": [
+        ".mb-4.type-caption.text-secondary"
+      ],
+      "text": "門窗網站",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 5.1333065802155575,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "target": [
+        "#showcase-title"
+      ],
+      "text": "千剛實業",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 14.564792077370413,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "target": [
+        ".mt-6.type-body-lg"
+      ],
+      "text": "以桃園住宅換窗與大園看樣為情境，展示窗型介紹、拍攝指南與門窗需求整理。",
+      "coverage": "FULL_RECT_OVERLAP",
+      "coverageFraction": 1,
+      "menuTopHitTests": 9,
+      "sampleCount": 9,
+      "defaultContrastRatio": 13.73833424257036,
+      "method": "Same exact text/target has current default-state conservative gradient PASS.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "target": [
+        ".rounded-full.py-1\\.5.text-secondary"
+      ],
+      "text": "品牌提案展示",
+      "coverage": "PARTIAL_RECT_OVERLAP",
+      "coverageFraction": 0.5072343943778421,
+      "menuTopHitTests": 6,
+      "sampleCount": 9,
+      "defaultContrastRatio": 6.078691572956118,
+      "method": "Opaque white badge isolates background; actual solid-color contrast >=4.5.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "target": [
+        ".rounded-full.py-1\\.5.border:nth-child(2)"
+      ],
+      "text": "可瀏覽",
+      "coverage": "PARTIAL_RECT_OVERLAP",
+      "coverageFraction": 0.5072343943778421,
+      "menuTopHitTests": 6,
+      "sampleCount": 9,
+      "defaultContrastRatio": 16.268480224545662,
+      "method": "Opaque white badge isolates background; actual solid-color contrast >=4.5.",
+      "decision": "PASS: covered area is not visible; exposed text retains verified default contrast. No waiver for new unreviewed colors."
+    }
+  ]
+}

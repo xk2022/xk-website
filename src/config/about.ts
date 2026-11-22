@@ -7,8 +7,14 @@ export const aboutPage = {
   whoWeAre: {
     introduction: "XK 是以軟體工程、系統整合與人工智慧應用為核心的數位技術品牌。",
     description: "我們關注企業在數位轉型過程中面臨的實際問題，從網站建置、企業後端系統、API 整合到 AI 應用，提供符合業務需求的技術服務。",
-    operatingModel: "XK 目前由創辦人一人全職經營，以直接的技術溝通，理解需求並推進實作。",
+    operatingModel: "XK 透過直接的技術溝通，釐清需求、規劃方案並推進實作，重視每個階段的品質與合作體驗。",
     priorities: ["技術品質", "商業需求理解", "系統可維護性", "架構擴充能力", "長期合作價值"],
+  },
+  engineeringApproach: {
+    eyebrow: "ENGINEERING APPROACH",
+    title: "技術理念與實作方向",
+    introduction: "以軟體工程整合網站、企業系統與 AI 應用，讓技術選擇回應實際商業需求。",
+    description: "從需求釐清、架構規劃到實作與持續改善，重視清楚溝通、可維護性與可擴充設計。",
   },
   mission: {
     statement: "讓技術成為企業創造價值的工具。",

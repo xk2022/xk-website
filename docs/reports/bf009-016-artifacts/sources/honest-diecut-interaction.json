@@ -1,0 +1,15 @@
+{
+  "id": "honest-diecut",
+  "startedAt": "2026-11-22T11:26:02.011Z",
+  "steps": [
+    "Clicked native sample-data button",
+    "Clicked 產生模擬詢價摘要"
+  ],
+  "nonGetRequests": [],
+  "limitation": "Only the public demo flow and synthetic sample data were exercised; no business order, booking or enquiry was sent.",
+  "afterActionText": "宏能興業有限公司\n加工樣本\n洽詢流程\n詢價表單\n\nXK 自製展示案例 / R01\n\n模切沖型、保護膜與工業標籤\n\n先從零件的黏貼位置、保護需求或識別用途找樣本，再整理尺寸與預估用量。\n\n提出加工需求\n看加工樣本\n加工樣本示意\n\nAPPLICATION SAMPLES\n\n加工樣本\n\n宏能興業提供模切沖型、保護膜材料與標籤印刷加工。可依零件用途選擇對應的樣本。\n\n全部\n黏貼與緩衝\n面板表面保護\n條碼與識別\n\n顯示 3 個加工樣本\n\n示意\n\n黏貼與緩衝\n\n背膠沖型件\n\n在外殼與零件接觸處黏貼泡棉墊片，作為緩衝。\n\n可容納的墊片厚度\n\n以此樣本詢價\n示意\n\n面板表面保護\n\nPET 保護膜\n\n組裝或搬運時保護面板表面。\n\n需要覆蓋的長 × 寬（mm）\n\n以此樣本詢價\n示意\n\n條碼與識別\n\n工業標籤\n\n在零件或包裝貼上條碼，方便識別。\n\n可貼標區域的長 × 寬（mm）\n\n以此樣本詢價\n\nINQUIRY PROCESS\n\n洽詢流程\n\n本頁可模擬整理需求摘要。材料、打樣與報價需另行洽談。\n\n01\n提供用途與規格\n\n整理使用位置、尺寸與單位、預估件數。可先用本頁產生模擬摘要。\n\n02\n討論材料與打樣\n\n實際洽談時，可依黏貼面、使用環境等條件討論材料及打樣需求。\n\n03\n依條件評估報價\n\n可製作性、價格與交期，需依實際需求與洽談結果確認。\n\nQUOTE SIMULATION\n\n詢價表單\n\n整理加工需求與預估用量。材料尚未確定時，可選擇「請協助選材」。\n\n此為 XK 展示表單。資料僅在本頁產生摘要，不會寄送給宏能興業。\n\n模擬詢價已完成\n\n資料尚未寄送給宏能興業。\n\n公司或單位\n示範研發單位\n加工用途與規格\n面板組裝期間保護表面，覆蓋尺寸 60 × 40 mm\n材料或加工類別\nPET 保護膜\n預估件數\n200 件\n聯絡信箱\nbuyer@example.com\n複製需求摘要\n前往宏能官網查詢聯絡方式\n返回修改\n重新填寫\n\nXplore Kaleidoscope 自製展示案例\n\nR01 網站建置 · W01 一頁式網站\n\n資料來源\n宏能興業網站\n宏能興業有限公司簡介",
+  "outcome": "FAILED",
+  "error": "locator.evaluate: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('form')\u001b[22m\n",
+  "currentText": "宏能興業有限公司\n加工樣本\n洽詢流程\n詢價表單\n\nXK 自製展示案例 / R01\n\n模切沖型、保護膜與工業標籤\n\n先從零件的黏貼位置、保護需求或識別用途找樣本，再整理尺寸與預估用量。\n\n提出加工需求\n看加工樣本\n加工樣本示意\n\nAPPLICATION SAMPLES\n\n加工樣本\n\n宏能興業提供模切沖型、保護膜材料與標籤印刷加工。可依零件用途選擇對應的樣本。\n\n全部\n黏貼與緩衝\n面板表面保護\n條碼與識別\n\n顯示 3 個加工樣本\n\n示意\n\n黏貼與緩衝\n\n背膠沖型件\n\n在外殼與零件接觸處黏貼泡棉墊片，作為緩衝。\n\n可容納的墊片厚度\n\n以此樣本詢價\n示意\n\n面板表面保護\n\nPET 保護膜\n\n組裝或搬運時保護面板表面。\n\n需要覆蓋的長 × 寬（mm）\n\n以此樣本詢價\n示意\n\n條碼與識別\n\n工業標籤\n\n在零件或包裝貼上條碼，方便識別。\n\n可貼標區域的長 × 寬（mm）\n\n以此樣本詢價\n\nINQUIRY PROCESS\n\n洽詢流程\n\n本頁可模擬整理需求摘要。材料、打樣與報價需另行洽談。\n\n01\n提供用途與規格\n\n整理使用位置、尺寸與單位、預估件數。可先用本頁產生模擬摘要。\n\n02\n討論材料與打樣\n\n實際洽談時，可依黏貼面、使用環境等條件討論材料及打樣需求。\n\n03\n依條件評估報價\n\n可製作性、價格與交期，需依實際需求與洽談結果確認。\n\nQUOTE SIMULATION\n\n詢價表單\n\n整理加工需求與預估用量。材料尚未確定時，可選擇「請協助選材」。\n\n此為 XK 展示表單。資料僅在本頁產生摘要，不會寄送給宏能興業。\n\n模擬詢價已完成\n\n資料尚未寄送給宏能興業。\n\n公司或單位\n示範研發單位\n加工用途與規格\n面板組裝期間保護表面，覆蓋尺寸 60 × 40 mm\n材料或加工類別\nPET 保護膜\n預估件數\n200 件\n聯絡信箱\nbuyer@example.com\n複製需求摘要\n前往宏能官網查詢聯絡方式\n返回修改\n重新填寫\n\nXplore Kaleidoscope 自製展示案例\n\nR01 網站建置 · W01 一頁式網站\n\n資料來源\n宏能興業網站\n宏能興業有限公司簡介",
+  "finishedAt": "2026-11-22T11:26:33.027Z"
+}

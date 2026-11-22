@@ -12,7 +12,11 @@
 
 [作品展示頁](https://xk2022.github.io/xk-website/portfolio/) 收錄品牌網站展示、第三方模板範例及獨立的技術規劃。資料集中於 `src/config/website-showcases.ts`，預覽圖為來源網站的實際首屏；新增作品時應同步確認來源、展示性質、素材與外部連結。實作與驗收見 [網站展示整合報告](docs/reports/website-showcases-implementation.md)。
 
-品牌展示目前依序為三月手工湯包、宏家燕窩、御品園港式燒臘、XK 一頁式網站建置、宏能興業及準備中的門窗網站展示。準備中項目不提供失效連結或未核對圖片；本輪驗證見 [品牌展示排序與新增紀錄](docs/reports/brand-showcase-order-implementation.md)。
+品牌展示維持三月手工湯包、宏家燕窩、御品園港式燒臘、XK 一頁式網站建置、宏能興業及千剛實業順序，六案皆有站內介紹。模板與技術規劃可展開瀏覽；素材待整理的模板僅供參考，保留來源署名。本輪狀態見 [BF-009～BF-016 報告](docs/reports/bf009-016-implementation.md)，原排序紀錄保留於 [歷史報告](docs/reports/brand-showcase-order-implementation.md)。
+
+## 持續驗證與正式發布
+
+日常網站 smoke 使用方式見 [驗證指南](docs/website-smoke.md)；正式聯絡、索引、政策與網址的資料缺口見 [正式發布前置清單](docs/publication-readiness.md)。BF-009～BF-016 的實作與限制見 [本輪報告](docs/reports/bf009-016-implementation.md)。
 
 ## 部署方向
 

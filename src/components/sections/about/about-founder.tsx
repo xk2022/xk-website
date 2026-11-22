@@ -2,7 +2,7 @@ import { BrandPattern } from "@/components/brand/brand-pattern";
 import { XkLogo } from "@/components/brand/xk-logo";
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
-import { founderProfile } from "@/config/about";
+import { aboutPage, founderProfile } from "@/config/about";
 
 export function AboutFounder() {
   return (
@@ -16,12 +16,10 @@ export function AboutFounder() {
           </div>
         </div>
         <div className="min-w-0">
-          <p lang="en" className="type-caption mb-4 text-primary-foreground/75">THE PERSON BEHIND XK</p>
-          <h2 id="founder-title" className="type-h2">創辦人</h2>
-          {founderProfile.name && <p className="type-h3 mt-5">{founderProfile.name}</p>}
-          <p lang="en" className="type-body-lg mt-4 font-medium text-primary-foreground/90">{founderProfile.role}</p>
-          <p className="type-body mt-6 text-primary-foreground/85">{founderProfile.introduction}</p>
-          <p className="type-body mt-4 text-primary-foreground/75">{founderProfile.description}</p>
+          <p lang="en" className="type-caption mb-4 text-primary-foreground/75">{aboutPage.engineeringApproach.eyebrow}</p>
+          <h2 id="founder-title" className="type-h2">{aboutPage.engineeringApproach.title}</h2>
+          <p className="type-body mt-6 text-primary-foreground/85">{aboutPage.engineeringApproach.introduction}</p>
+          <p className="type-body mt-4 text-primary-foreground/75">{aboutPage.engineeringApproach.description}</p>
           <h3 className="type-body mt-8 font-semibold">專注領域</h3>
           <ul lang="en" className="type-body-sm mt-4 flex flex-wrap gap-2 text-primary-foreground/90">
             {founderProfile.focusAreas.map((area) => <li key={area} className="max-w-full rounded-full border border-primary-foreground/20 px-4 py-2 break-words">{area}</li>)}

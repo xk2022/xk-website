@@ -1,0 +1,50 @@
+{
+  "id": "hongjia-birdnest",
+  "startedAt": "2026-11-22T11:28:52.715Z",
+  "checks": [
+    "Used native personal-gift fields with synthetic data because sample-data button was disabled."
+  ],
+  "sampleButtonEnabled": false,
+  "beforeSubmitValues": [
+    {
+      "id": "gift-scenario-personal",
+      "type": "radio",
+      "value": "personal",
+      "checked": true
+    },
+    {
+      "id": "gift-scenario-corporate",
+      "type": "radio",
+      "value": "corporate",
+      "checked": false
+    },
+    {
+      "id": "gift-email",
+      "type": "email",
+      "value": "gift@example.com",
+      "checked": false
+    },
+    {
+      "id": "gift-quantity",
+      "type": "text",
+      "value": "12",
+      "checked": false
+    },
+    {
+      "id": "gift-date",
+      "type": "date",
+      "value": "",
+      "checked": false
+    },
+    {
+      "id": "gift-notes",
+      "type": "textarea",
+      "value": ""
+    }
+  ],
+  "afterActionText": "宏家燕窩\n送禮情境\n洽詢表單\n\n燕窩送禮洽詢\n\n這份燕窩，\n想送給誰？\n\n這是送禮情境展示。選擇對象，填入已知的份數或日期，就能預覽模擬需求摘要。\n\n送給親友\n企業贈禮\n情境示意\n\n送禮情境\n\n先想想，這份禮要送給誰\n親友送禮\n\n想想收禮的人、預計送幾份，以及想在哪一天送到對方手上。\n\n收禮對象\n預計份數\n送禮日期\n\n如果只確定送禮日，可寫在其他需求；希望到貨日可稍後再決定。\n\n填寫個人送禮需求\n企業贈禮\n\n先整理預估總份數與希望到貨日，再記下想詢問的包裝或配送安排。\n\n預估總份數\n希望到貨日\n包裝與配送問題\n填寫企業贈禮需求\n送禮洽詢表單\n\n本頁為送禮情境展示，實際品項、售價與配送方式待品牌確認。\n\n填寫後會產生需求摘要，資料僅留在本頁。重新整理後即清除。\n\n模擬送禮洽詢已完成\n\n此摘要尚未寄送給品牌，亦未成立訂單\n\n送禮類型\n個人送禮\n聯絡信箱\ngift@example.com\n預計份數\n12 份\n希望到貨日\n尚未決定\n其他需求\n未填寫\n返回修改\n重新填寫\n\n宏家燕窩\n\nR01 網站建置｜食品品牌送禮展示案例\n\nXK SYSTEM 自製展示案例\n\nXplore Kaleidoscope 自主規劃與開發的展示案例",
+  "outputControls": [],
+  "nonGetRequests": [],
+  "outcome": "PASS",
+  "finishedAt": "2026-11-22T11:28:53.699Z"
+}

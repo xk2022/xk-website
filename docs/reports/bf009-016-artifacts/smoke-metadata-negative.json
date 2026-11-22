@@ -1,0 +1,223 @@
+{
+  "status": "PASS",
+  "cases": 24,
+  "scope": "Synthetic metadata fixtures from current Pages HTML; only root/trailingSlash equivalent accepted. Wrong scheme, domain, path, query, fragment and repeated slash rejected. No requests to synthetic destinations.",
+  "rows": [
+    {
+      "path": "/",
+      "input": "https://xplorekaleidoscope.com",
+      "expectedPass": true,
+      "observed": [
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "path": "/",
+      "input": "https://xplorekaleidoscope.com/",
+      "expectedPass": true,
+      "observed": [
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "path": "/",
+      "input": "http://xplorekaleidoscope.com/",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/",
+      "input": "https://example.invalid/",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/",
+      "input": "https://xplorekaleidoscope.com/wrong-path",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/",
+      "input": "https://xplorekaleidoscope.com?smoke=1",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/",
+      "input": "https://xplorekaleidoscope.com#smoke",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/",
+      "input": "https://xplorekaleidoscope.com//",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/about",
+      "input": "https://xplorekaleidoscope.com/about",
+      "expectedPass": true,
+      "observed": [
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "path": "/about",
+      "input": "https://xplorekaleidoscope.com/about/",
+      "expectedPass": true,
+      "observed": [
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "path": "/about",
+      "input": "http://xplorekaleidoscope.com/about",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/about",
+      "input": "https://example.invalid/about",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/about",
+      "input": "https://xplorekaleidoscope.com/wrong-path",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/about",
+      "input": "https://xplorekaleidoscope.com/about?smoke=1",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/about",
+      "input": "https://xplorekaleidoscope.com/about#smoke",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/about",
+      "input": "https://xplorekaleidoscope.com/about//",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "input": "https://xplorekaleidoscope.com/portfolio/showcases/qiangang-windows",
+      "expectedPass": true,
+      "observed": [
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "input": "https://xplorekaleidoscope.com/portfolio/showcases/qiangang-windows/",
+      "expectedPass": true,
+      "observed": [
+        "PASS",
+        "PASS"
+      ]
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "input": "http://xplorekaleidoscope.com/portfolio/showcases/qiangang-windows",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "input": "https://example.invalid/portfolio/showcases/qiangang-windows",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "input": "https://xplorekaleidoscope.com/wrong-path",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "input": "https://xplorekaleidoscope.com/portfolio/showcases/qiangang-windows?smoke=1",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "input": "https://xplorekaleidoscope.com/portfolio/showcases/qiangang-windows#smoke",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    },
+    {
+      "path": "/portfolio/showcases/qiangang-windows",
+      "input": "https://xplorekaleidoscope.com/portfolio/showcases/qiangang-windows//",
+      "expectedPass": false,
+      "observed": [
+        "FAIL",
+        "FAIL"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "source": "/tmp/xk-bf009-016/sources/qiangang-windows.png",
+  "path": "/workspace/xk-website/public/images/showcases/qiangang-windows.webp",
+  "format": "webp",
+  "width": 1280,
+  "height": 800,
+  "bytes": 51612,
+  "sha256": "b4dc1b5a6d8e29298a918c7b298facd46cc80b5ec2c16deb020a63c4f4279b58",
+  "quality": 88,
+  "method": 6,
+  "conversion": "Pillow RGB WebP encoding of unmodified native 1280×800 viewport screenshot. No crop, resize, painting, DOM changes or overlays."
+}

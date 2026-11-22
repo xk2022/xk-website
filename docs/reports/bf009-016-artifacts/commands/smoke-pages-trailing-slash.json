@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "run",
+    "test:smoke",
+    "--",
+    "--base-url",
+    "http://127.0.0.1:3161/xk-website/",
+    "--output",
+    "/tmp/xk-bf009-016/smoke-pages-trailing-slash-result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T11:39:31.520251+00:00",
+  "finishedAt": "2026-11-22T11:39:32.288563+00:00",
+  "processId": 8357,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-bf009-016/smoke-pages-trailing-slash.log",
+  "logSha256": "41fb7b17f9763c9cb2fa041a06652543817f9d06745061870a5584722018ada2",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

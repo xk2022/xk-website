@@ -1,0 +1,317 @@
+{
+  "testedAt": "2026-11-22T11:32:55.356811+00:00",
+  "environment": "https://xk2022.github.io/xk-website/",
+  "scope": "Parser/URL classification only; no HTTP/server/build",
+  "result": "PASS",
+  "cases": [
+    {
+      "item": "march-tangbao explicit available source",
+      "href": "https://xk2022.github.io/xk-showcase-march-tangbao/",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "march-tangbao root-relative source must fail",
+      "href": "/xk-showcase-march-tangbao/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "/xk-showcase-march-tangbao/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "hongjia-birdnest explicit available source",
+      "href": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "hongjia-birdnest root-relative source must fail",
+      "href": "/xk-showcase-hongjia-birdnest/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "/xk-showcase-hongjia-birdnest/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "yupinyuan-bento explicit available source",
+      "href": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "yupinyuan-bento root-relative source must fail",
+      "href": "/xk-showcase-yupinyuan-bento/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "/xk-showcase-yupinyuan-bento/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "campaign-website-design explicit available source",
+      "href": "https://xk2022.github.io/xk-campaign-website-design/",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "campaign-website-design root-relative source must fail",
+      "href": "/xk-campaign-website-design/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "/xk-campaign-website-design/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "honest-diecut explicit available source",
+      "href": "https://xk2022.github.io/xk-showcase-honest-diecut/",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "honest-diecut root-relative source must fail",
+      "href": "/xk-showcase-honest-diecut/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "/xk-showcase-honest-diecut/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "qiangang-windows explicit available source",
+      "href": "https://xk2022.github.io/xk-showcase-qiangang-windows/",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "qiangang-windows root-relative source must fail",
+      "href": "/xk-showcase-qiangang-windows/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "/xk-showcase-qiangang-windows/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "demo-001 explicit available source",
+      "href": "https://xk2022.github.io/single-demo001/",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "demo-001 root-relative source must fail",
+      "href": "/single-demo001/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "/single-demo001/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "demo-001 publisher attribution",
+      "href": "https://startbootstrap.com/theme/agency",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "demo-002 publisher attribution",
+      "href": "https://startbootstrap.com/theme/creative",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "demo-002 unavailable source CTA must fail",
+      "href": "https://xk2022.github.io/single-demo002/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "https://xk2022.github.io/single-demo002/",
+          "reason": "unavailable showcase source must not be linked"
+        }
+      ]
+    },
+    {
+      "item": "demo-003 publisher attribution",
+      "href": "https://templatemag.com/",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "demo-003 unavailable source CTA must fail",
+      "href": "https://xk2022.github.io/single-demo003/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "https://xk2022.github.io/single-demo003/",
+          "reason": "unavailable showcase source must not be linked"
+        }
+      ]
+    },
+    {
+      "item": "demo-004 explicit available source",
+      "href": "https://xk2022.github.io/single-demo004/",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "demo-004 root-relative source must fail",
+      "href": "/single-demo004/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "/single-demo004/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "demo-004 publisher attribution",
+      "href": "https://templatemag.com/",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "normalized explicit scheme/host/default port/trailing slash",
+      "href": "HTTPS://XK2022.GITHUB.IO:443/xk-showcase-march-tangbao",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "unknown absolute same-origin project must fail",
+      "href": "https://xk2022.github.io/not-approved-project/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "https://xk2022.github.io/not-approved-project/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "protocol-relative showcase must fail",
+      "href": "//xk2022.github.io/xk-showcase-march-tangbao/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "//xk2022.github.io/xk-showcase-march-tangbao/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "changed explicit query must fail",
+      "href": "https://xk2022.github.io/xk-showcase-march-tangbao/?unexpected=1",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "https://xk2022.github.io/xk-showcase-march-tangbao/?unexpected=1",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "changed explicit path must fail",
+      "href": "https://xk2022.github.io/xk-showcase-march-tangbao/other/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "https://xk2022.github.io/xk-showcase-march-tangbao/other/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "missing basepath internal route must fail",
+      "href": "/about/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "/about/",
+          "reason": "missing deployment base path"
+        }
+      ]
+    },
+    {
+      "item": "valid internal route and anchor",
+      "href": "/xk-website/about/#ok",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "valid absolute internal route and anchor",
+      "href": "https://xk2022.github.io/xk-website/about/#ok",
+      "expectedAccepted": true,
+      "actualAccepted": true,
+      "details": []
+    },
+    {
+      "item": "missing internal anchor must fail",
+      "href": "/xk-website/about/#missing",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "/xk-website/about/#missing",
+          "reason": "missing target anchor"
+        }
+      ]
+    },
+    {
+      "item": "unknown internal route must fail",
+      "href": "/xk-website/unknown/",
+      "expectedAccepted": false,
+      "actualAccepted": false,
+      "details": [
+        {
+          "href": "/xk-website/unknown/",
+          "reason": "not a registered public route"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "march-tangbao",
+    "outcome": "PASS"
+  },
+  {
+    "id": "hongjia-birdnest",
+    "outcome": "PASS"
+  },
+  {
+    "id": "yupinyuan-bento",
+    "outcome": "FAIL",
+    "error": "Cannot read properties of undefined (reading 'includes')"
+  },
+  {
+    "id": "campaign-website-design",
+    "outcome": "PASS"
+  },
+  {
+    "id": "honest-diecut",
+    "outcome": "PASS"
+  },
+  {
+    "id": "qiangang-windows",
+    "outcome": "PASS"
+  }
+]

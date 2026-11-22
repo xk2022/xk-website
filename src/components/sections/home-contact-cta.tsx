@@ -36,7 +36,7 @@ export function HomeContactCta() {
             <>
               <p className="type-body font-semibold text-primary">正式聯絡方式待確認</p>
               <p className="type-body-sm mt-3 text-muted-foreground">
-                網站仍在建置中，正式聯絡管道確認後將於此公開。
+                可先整理需求，正式聯絡管道確認後將於聯絡頁更新。
                 您可以先瀏覽服務項目，整理專案目標與需求。
               </p>
               <Button asChild variant="outline" className="mt-5">
