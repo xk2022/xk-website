@@ -1,0 +1,314 @@
+{
+  "mode": "pages",
+  "base": "http://127.0.0.1:3141/xk-website/",
+  "startedAt": "2026-11-22T09:27:18.181Z",
+  "finishedAt": "2026-11-22T09:27:48.485Z",
+  "status": "PASS",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "arch": "x64",
+    "browser": "156.0.8078.79",
+    "viewportHeights": 1000
+  },
+  "browser": "156.0.8078.79",
+  "tests": [
+    {
+      "testId": "PAGE-home",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
+        "canonical": "https://xplorekaleidoscope.com/",
+        "links": 47,
+        "ids": 36,
+        "widths": [
+          320,
+          375,
+          768,
+          1440,
+          1920
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-about",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "關於 XK | Xplore Kaleidoscope",
+        "canonical": "https://xplorekaleidoscope.com/about/",
+        "links": 33,
+        "ids": 21,
+        "widths": [
+          320,
+          375,
+          768,
+          1440,
+          1920
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-services",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "服務項目 | Xplore Kaleidoscope",
+        "canonical": "https://xplorekaleidoscope.com/services/",
+        "links": 42,
+        "ids": 24,
+        "widths": [
+          320,
+          375,
+          768,
+          1440,
+          1920
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-solutions",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "解決方案 | Xplore Kaleidoscope",
+        "canonical": "https://xplorekaleidoscope.com/solutions/",
+        "links": 80,
+        "ids": 30,
+        "widths": [
+          320,
+          375,
+          768,
+          1440,
+          1920
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-portfolio",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "作品展示 | Xplore Kaleidoscope",
+        "canonical": "https://xplorekaleidoscope.com/portfolio/",
+        "links": 53,
+        "ids": 20,
+        "widths": [
+          320,
+          375,
+          768,
+          1440,
+          1920
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-portfolio-corporate-website",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "XK Corporate Website Showcase | XK 技術作品集",
+        "canonical": "https://xplorekaleidoscope.com/portfolio/corporate-website/",
+        "links": 35,
+        "ids": 21,
+        "widths": [
+          320,
+          375,
+          768,
+          1440,
+          1920
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-portfolio-enterprise-management",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "XK Enterprise Management System | XK 技術作品集",
+        "canonical": "https://xplorekaleidoscope.com/portfolio/enterprise-management/",
+        "links": 36,
+        "ids": 21,
+        "widths": [
+          320,
+          375,
+          768,
+          1440,
+          1920
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-portfolio-integration-hub",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "XK Enterprise Integration Hub | XK 技術作品集",
+        "canonical": "https://xplorekaleidoscope.com/portfolio/integration-hub/",
+        "links": 36,
+        "ids": 21,
+        "widths": [
+          320,
+          375,
+          768,
+          1440,
+          1920
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "PAGE-contact",
+      "status": "PASS",
+      "procedure": "async()=>{\n  const target=new URL(spec.path==='/'?'':spec.path.slice(1)+'/',base).href;\n  const response=await page.goto(target,{waitUntil:'networkidle'});asser",
+      "actual": {
+        "status": 200,
+        "title": "聯絡我們 | Xplore Kaleidoscope",
+        "canonical": "https://xplorekaleidoscope.com/contact/",
+        "links": 43,
+        "ids": 16,
+        "widths": [
+          320,
+          375,
+          768,
+          1440,
+          1920
+        ],
+        "keyboard": {
+          "tag": "A",
+          "href": "#main-content",
+          "outline": "solid"
+        }
+      }
+    },
+    {
+      "testId": "LINKS-ALL-ANCHORS",
+      "status": "PASS",
+      "procedure": "async()=>{let checked=0;for(const[from,items]of links){for(const link of items){const u=new URL(link.href,from);if(u.origin!==new URL(base).origin)continue;if(!",
+      "actual": {
+        "checked": 389
+      }
+    },
+    {
+      "testId": "PORTFOLIO-SIX-BRANDS-AND-PREPARING",
+      "status": "PASS",
+      "procedure": "async()=>{await page.goto(new URL('portfolio/',base).href,{waitUntil:'networkidle'});for(const [id,count]of[['website-cases',6],['website-samples',4]]){const re",
+      "actual": {
+        "brands": 6,
+        "availableBrands": 5,
+        "preparing": 1,
+        "samples": 4,
+        "localImages": 9,
+        "plannedProjects": 3,
+        "attributions": 4
+      }
+    },
+    {
+      "testId": "FEATURED-AND-CROSS-PAGE-LINKS",
+      "status": "PASS",
+      "procedure": "async()=>{await page.goto(base,{waitUntil:'networkidle'});assert.equal(await page.locator('#featured-websites article').count(),3);assert.deepEqual(await page.l",
+      "actual": {
+        "home": 3,
+        "serviceEntrances": 2,
+        "solutionEntrances": 2
+      }
+    },
+    {
+      "testId": "FOCUS-AND-REDUCED-MOTION",
+      "status": "PASS",
+      "procedure": "async()=>{await page.goto(new URL('portfolio/',base).href,{waitUntil:'networkidle'});assert(await page.evaluate(()=>matchMedia('(prefers-reduced-motion: reduce)",
+      "actual": {
+        "outline": "solid",
+        "width": "2px",
+        "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgb(255, 255, 255) 0px 0px 0px 2px, rgb(49, 87, 213) 0px 0px 0px 4px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+      }
+    },
+    {
+      "testId": "SCREENSHOTS",
+      "status": "PASS",
+      "procedure": "async()=>{const shots=[['portfolio/','portfolio-1440',1440],['portfolio/','portfolio-375',375]];for(const[suffix,name,width]of shots){await page.setViewportSize",
+      "actual": {
+        "count": 3
+      }
+    },
+    {
+      "testId": "RUNTIME-CONSOLE-NETWORK",
+      "status": "PASS",
+      "procedure": "async()=>{assert.deepEqual(out.runtimeErrors,[]);assert.deepEqual(out.consoleErrors,[]);assert.deepEqual(out.network,[]);return{runtimeErrors:0,consoleErrors:0,",
+      "actual": {
+        "runtimeErrors": 0,
+        "consoleErrors": 0,
+        "failedResources": 0
+      }
+    },
+    {
+      "testId": "PROTECTED-404",
+      "status": "PASS",
+      "procedure": "async()=>{const c=await browser.newContext({ignoreHTTPSErrors:mode==='live'});for(const suffix of ['privacy/','dev/design-system/','portfolio/unknown-showcase/'",
+      "actual": {
+        "count": 5
+      }
+    }
+  ],
+  "counts": {
+    "responsive": 45,
+    "axe": 10,
+    "incomplete": 0,
+    "network": 0,
+    "consoleErrors": 0,
+    "runtimeErrors": 0,
+    "screenshots": 3
+  },
+  "rawEvidence": {
+    "file": "pages-result.json.gz",
+    "sha256": "f142903914a9fa9c3515d4cbf10e7c00ef80c1e6812937c41cc6a9abc85981ba"
+  }
+}

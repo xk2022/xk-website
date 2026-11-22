@@ -14,7 +14,7 @@ export function WebsiteShowcaseGallery() {
             eyebrow="BRAND WEBSITE SHOWCASES"
             title="品牌網站展示案例"
             titleLang="zh-TW"
-            description="從餐飲、送禮到工業製造，看看不同品牌資訊如何整理成網站。以下為自製展示案例，並非客戶交付或商業成效紀錄。"
+            description="從餐飲、送禮到網站服務與工業製造，探索品牌資訊的不同呈現方式。各項標示展示範圍；準備中的內容於公開後提供預覽。"
           />
           <div className="grid auto-rows-fr gap-6 md:grid-cols-2">
             {brandWebsiteShowcases.map((showcase) => <WebsiteShowcaseCard key={showcase.id} showcase={showcase} />)}
