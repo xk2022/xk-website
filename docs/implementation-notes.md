@@ -382,3 +382,9 @@ main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Mark
 ## 品牌展示排序與新增
 
 依使用者順序調整六筆品牌展示，新增 XK 一頁式網站建置服務推廣預覽。門窗來源回應 404 且 main 僅 README，使用者確認先顯示準備中；採型別約束空連結／空圖片與純文字狀態，沒有虛構品牌或上線。既有四模板、首頁三精選、三 Planned 與保護政策保留。驗收與後續見 [品牌展示排序與新增紀錄](reports/brand-showcase-order-implementation.md)。
+
+## BF-009～BF-016 官網改善
+
+本次以 main f2c8091 為基準，納入尚未發布的清單文件後建立 bugfix/009-016-website-refinements。使用者明確授權實作、Push／PR／CI 後合併與部署確認。改善中性品牌文案、啟用千剛提案、六品牌站內詳頁、性質標籤與原生收合；問題模板只供參考，來源外站仍需另案修補。
+
+15 公開路由維持 protected SEO，原三個 Planned 專案資料未改；Contact 實際渠道與 Privacy／正式索引資料仍缺，分別記 BLOCKED，不以合併指示代填核准。共用 smoke 與獨立 fixture 供後續重跑，不加 npm 依賴。變更、工具失敗及人工候選的最終判定見 [本輪報告](reports/bf009-016-implementation.md)；發布缺口見 [正式發布前置清單](publication-readiness.md)。

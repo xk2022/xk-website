@@ -6,24 +6,26 @@
 - 最後更新：2026-11-22；日期均以 Asia/Taipei（UTC+08:00）為準。
 - 盤點基準：`xk2022/xk-website`，`main@f2c8091c75980f240427066e368c41fc3d932efc`。
 - 公開網站：<https://xk2022.github.io/xk-website/>。
-- 來源：同日官網問題盤點、九個公開頁面的 HTTP／文字內容、程式碼與相關展示來源檢查。本清單不冒稱完成新的建置、視覺、效能或完整無障礙驗收。
-- 本輪交付：記錄問題、證據與後續處理方式，新增任務索引；不開始修復網站，不沿用先前個別任務的 Push／Merge／發布授權。
+- 初次盤點來源：同日官網問題盤點、當時九個公開頁面的 HTTP／文字內容、程式碼與相關展示來源檢查；初次建檔未執行新的建置、視覺、效能或完整無障礙驗收。後續實作的實際驗收範圍與結果見 [本輪實作報告](../reports/bf009-016-implementation.md)。
+- 初次建檔交付（歷史紀錄）：整理問題、證據與索引，當時未修復網站。使用者後續已明確授權執行本清單並 Push／Merge；實際進度以末節更新紀錄及本輪報告為準。
 - 沿用 [AGENTS.md](../../AGENTS.md) 與 [Subagent 工作流程](../subagent-workflow.md)。既有 `bugfix001.md` 至 `bugfix008.md` 與歷史實作報告保留，本清單接續使用 BF-009～BF-016。
 
-以下狀態代表「後續修復／改善進度」，不是問題是否已被記錄。檔案建立不等於修復或驗收通過。HTTP 狀態為 2026-11-22 的觀測快照，正式執行前必須重新確認。
+以下狀態代表「後續修復／改善進度」，不是問題是否已被記錄。第 2 節的問題描述與第 3 節逐項證據保留初次盤點快照；現行狀態以第 5 節更新紀錄及實作報告為準。檔案建立不等於修復或驗收通過。HTTP 狀態為 2026-11-22 的觀測快照，後續執行前必須重新確認。
 
 ## 2. 問題總覽
 
-| ID | 優先度 | 類型 | 問題／改善項目 | 狀態 | 建議分支 |
+| ID | 優先度 | 類型 | 初次盤點問題／改善項目 | 目前狀態 | 初次建議分支 |
 | --- | --- | --- | --- | --- | --- |
-| BF-009 | 高 | 品牌文案修正 | About／Solutions 仍有「一人全職」對外描述 | PENDING | `bugfix/009-brand-copy` |
-| BF-010 | 高 | 營運資料待確認 | 聯絡頁尚無可公開且可接收詢問的管道 | PENDING | `bugfix/010-contact-entry` |
-| BF-011 | 高 | 展示狀態同步 | 千剛來源已可瀏覽，官網仍維持準備中 | PENDING | `bugfix/011-qiangang-showcase` |
-| BF-012 | 中 | 外部展示品質 | Demo 002 背景與 Demo 003 Logo 素材仍回應 404 | PENDING | `bugfix/012-demo-asset-quality` |
-| BF-013 | 中 | 資訊架構改善 | 作品類型辨識與長頁瀏覽層級可改善 | PENDING | `bugfix/013-portfolio-classification` |
-| BF-014 | 中 | 內容功能完善 | 可瀏覽品牌展示缺少完整站內案例介紹 | PENDING | `bugfix/014-case-detail-pages` |
-| BF-015 | 正式推廣前 | 發布前置待辦 | 索引、正式網址與 Privacy 發布條件尚未完成 | PENDING | `bugfix/015-publication-readiness` |
-| BF-016 | 後續維護 | 工程維護改善 | 展示設定分散與瀏覽器 smoke 缺少共用入口 | PENDING | `bugfix/016-showcase-maintenance` |
+| BF-009 | 高 | 品牌文案修正 | About／Solutions 仍有「一人全職」對外描述 | PASS | `bugfix/009-brand-copy` |
+| BF-010 | 高 | 營運資料待確認 | 聯絡頁尚無可公開且可接收詢問的管道 | BLOCKED | `bugfix/010-contact-entry` |
+| BF-011 | 高 | 展示狀態同步 | 千剛來源已可瀏覽，官網仍維持準備中 | PASS | `bugfix/011-qiangang-showcase` |
+| BF-012 | 中 | 外部展示品質 | Demo 002 背景與 Demo 003 Logo 素材仍回應 404 | PASS（官網側） | `bugfix/012-demo-asset-quality` |
+| BF-013 | 中 | 資訊架構改善 | 作品類型辨識與長頁瀏覽層級可改善 | PASS | `bugfix/013-portfolio-classification` |
+| BF-014 | 中 | 內容功能完善 | 可瀏覽品牌展示缺少完整站內案例介紹 | PASS | `bugfix/014-case-detail-pages` |
+| BF-015 | 正式推廣前 | 發布前置待辦 | 索引、正式網址與 Privacy 發布條件尚未完成 | BLOCKED | `bugfix/015-publication-readiness` |
+| BF-016 | 後續維護 | 工程維護改善 | 展示設定分散與瀏覽器 smoke 缺少共用入口 | PASS | `bugfix/016-showcase-maintenance` |
+
+本輪依使用者後續指示合併於 `bugfix/009-016-website-refinements` 執行；官網側六項 PASS，BF-010／BF-015 因真實資料或核准尚缺而 BLOCKED。外部來源素材未修補，遠端 CI、合併與部署結果依實作報告及同一 PR 的實際事件分開記錄。
 
 ## 3. 逐項紀錄
 
@@ -105,7 +107,7 @@
 
 > 請依 `docs/task/bugfix-backlog-2026-11-22.md` 執行 BF-009，建立 `bugfix/009-brand-copy`，遵循 AGENTS.md 與 Subagent 工作流程，完成修正及驗證文件；Git 交付依本次指示執行。
 
-以上是未來使用方式，本輪僅建立清單與索引。
+上述流程與指令示例於初次建檔時建立；該次交付僅含清單與索引。後續已依使用者指示執行八項，實際結果見下方更新紀錄及實作報告。
 
 ## 5. 狀態與更新紀錄
 
@@ -118,5 +120,10 @@
 | 日期（Asia/Taipei） | 項目 | 紀錄 | 修復狀態 |
 | --- | --- | --- | --- |
 | 2026-11-22 | BF-009～BF-016 | 首次彙整官網盤點，共八項；建立證據、建議分支、界線與驗收條件；尚未開始功能修復 | 全部 PENDING |
+| 2026-11-22 | BF-009、011～014、016 | 已依後續指示執行；官網側六項完成並通過本機／Pages 與人工覆核，外部來源素材修補未納入 | PASS（Git 與部署見報告／PR） |
+| 2026-11-22 | BF-010 | 已查本輪文件 main 仍無收件管道，並詢問真實資料；沒有猜填或新增表單 | BLOCKED |
+| 2026-11-22 | BF-015 | 已交付前置清單，缺少正式發布與法律資料，保護維持 | BLOCKED |
 
 後續每次更新附日期、ID、實際變更、驗收／Commit／PR 連結與剩餘事項。不得因更新文字而覆蓋舊的失敗、核准或部署紀錄。
+
+本輪完整範圍、退出回執、來源限制及部署證據入口見 [BF-009～BF-016 實作報告](../reports/bf009-016-implementation.md)。

@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "/tmp/xk-bf009-016/sources/capture-sources.cjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T11:23:19.141843+00:00",
+  "finishedAt": "2026-11-22T11:23:27.468866+00:00",
+  "processId": 5089,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-bf009-016/sources/capture-sources.log",
+  "logSha256": "2cb52d445fa92da9c07b4c467f475701aaf86c605e35a849affcaa0cf2d24015",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

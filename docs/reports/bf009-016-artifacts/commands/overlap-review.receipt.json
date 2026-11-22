@@ -1,0 +1,44 @@
+{
+  "command": "node /tmp/xk-bf009-016/collect-overlap.cjs > /tmp/xk-bf009-016/overlap-review.log 2>&1",
+  "executionSession": 4365,
+  "observedExitCode": 0,
+  "status": "COLLECTED_PENDING_ROOT_ADJUDICATION",
+  "completedAt": "2026-11-22T11:46:26.834Z",
+  "files": [
+    {
+      "name": "collect-overlap.cjs",
+      "bytes": 11686,
+      "sha256": "21827949560f23f5069d9f772c3b43b056f2af2412237a4b7ae3fb46d28a811e"
+    },
+    {
+      "name": "overlap-review.json",
+      "bytes": 13452913,
+      "sha256": "28230b3eb8bdda78d6d75bb85cdd8f795799b43199dfe7faf3af0a48060d8adf"
+    },
+    {
+      "name": "overlap-review.log",
+      "bytes": 383,
+      "sha256": "73a4495ab58506b6be5fb446ee0a34cab96f08348e9c3d4f10a2c1a471d3ee3f"
+    },
+    {
+      "name": "focus-with-context.png",
+      "bytes": 108161,
+      "sha256": "ed5e1b4e3bc6924985411a97883fe87ee9bfc9ef4c6b0d509d5a1425c4d7d77e"
+    },
+    {
+      "name": "overlap-menu-portfolio-375.png",
+      "bytes": 84953,
+      "sha256": "b38d24af34660de0e08326a283b0b5135e956d4ff74a4c4e731e81427a08bd11"
+    },
+    {
+      "name": "overlap-menu-about-375.png",
+      "bytes": 105914,
+      "sha256": "e1319996f42832615276a6767b45811737b6a924f9fcaa2f8464b9f1e051ebaf"
+    },
+    {
+      "name": "overlap-menu-portfolio-showcases-qiangang-windows-375.png",
+      "bytes": 74333,
+      "sha256": "fd6c2f9b9ceee7aa877ca635b6fdf591bd93f5fa9b1aa9d47f21fe2ff0a097db"
+    }
+  ]
+}

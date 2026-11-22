@@ -1,0 +1,443 @@
+{
+  "id": "demo-003",
+  "url": "https://xk2022.github.io/single-demo003/",
+  "finalUrl": "https://xk2022.github.io/single-demo003/",
+  "status": 200,
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "age": "0",
+    "cache-control": "max-age=600",
+    "content-encoding": "gzip",
+    "content-length": "1097",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sun, 22 Nov 2026 11:23:23 GMT",
+    "etag": "W/\"614d7592-de5\"",
+    "expires": "Sun, 22 Nov 2026 11:33:23 GMT",
+    "last-modified": "Fri, 24 Sep 2021 06:52:02 GMT",
+    "server": "envoy",
+    "strict-transport-security": "max-age=31556952",
+    "vary": "Accept-Encoding",
+    "via": "1.1 varnish",
+    "x-cache": "MISS",
+    "x-cache-hits": "0",
+    "x-envoy-upstream-service-time": "64",
+    "x-fastly-request-id": "9b29208f1d9e9f3312f060a5df37a004654b4426",
+    "x-github-edge-region": "iad",
+    "x-github-request-id": "73E0:2277EB:29D5608:2EB79E9:6B02D0AB",
+    "x-proxy-cache": "MISS",
+    "x-served-by": "cache-chi-klot8100177-CHI",
+    "x-timer": "S1795346604.807287,VS0,VE58"
+  },
+  "checkedAt": "2026-11-22T11:23:25.509Z",
+  "title": "(SingleDemo003)Gadgetlanding Bootstrap Landing Template",
+  "bodyText": "HOME\nABOUT\nFEATURES\nCONTACT\nYOUR WATCH, OUR APP.\nIt's time to take your watch to the next level.\nUseful Information When You Need It\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nWorld Class Design\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.\nLearn From Experience\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.\nFit Your Needs\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.\nNotable Features\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s.\nACCURATE ANALYTICS\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nSOCIAL INTERACTION\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nWORLD-WIDE SUPPORT\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nMULTIPLE GAMES\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nACCURATE ANALYTICS\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nSOCIAL INTERACTION\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nWORLD-WIDE SUPPORT\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nMULTIPLE GAMES\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nOne App To Rule Them All\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.\n\nIf you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.\n\nAll the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.\n\nIncredible & Affordable\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.\n\nIf you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.\n\nAll the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.\n\nGrab It Now!\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nThere are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.\n\nIf you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.\n\nAll the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.\n\nWant To Try Us?\nJust put your email below\nand you'll receive your download link.\nYes, Please\nContact Us\nSend Message\n\n© Copyrights GadgetLanding. All Rights Reserved\n\nCreated with GadgetLanding template by TemplateMag",
+  "headings": [
+    {
+      "level": "H1",
+      "text": "YOUR WATCH, OUR APP."
+    },
+    {
+      "level": "H2",
+      "text": "It's time to take your watch to the next level."
+    },
+    {
+      "level": "H1",
+      "text": "Useful Information When You Need It"
+    },
+    {
+      "level": "H4",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    {
+      "level": "H2",
+      "text": "World Class Design"
+    },
+    {
+      "level": "H4",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    },
+    {
+      "level": "H2",
+      "text": "Learn From Experience"
+    },
+    {
+      "level": "H4",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    },
+    {
+      "level": "H2",
+      "text": "Fit Your Needs"
+    },
+    {
+      "level": "H4",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    },
+    {
+      "level": "H1",
+      "text": "Notable Features"
+    },
+    {
+      "level": "H4",
+      "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+    },
+    {
+      "level": "H1",
+      "text": "One App To Rule Them All"
+    },
+    {
+      "level": "H4",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "level": "H1",
+      "text": "Incredible & Affordable"
+    },
+    {
+      "level": "H4",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "level": "H1",
+      "text": "Grab It Now!"
+    },
+    {
+      "level": "H4",
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+    },
+    {
+      "level": "H1",
+      "text": "Want To Try Us?"
+    },
+    {
+      "level": "H2",
+      "text": "Just put your email below\nand you'll receive your download link."
+    },
+    {
+      "level": "H2",
+      "text": "Contact Us"
+    }
+  ],
+  "links": [
+    {
+      "text": "",
+      "href": "https://xk2022.github.io/single-demo003/#h"
+    },
+    {
+      "text": "HOME",
+      "href": "https://xk2022.github.io/single-demo003/#h"
+    },
+    {
+      "text": "ABOUT",
+      "href": "https://xk2022.github.io/single-demo003/#about"
+    },
+    {
+      "text": "FEATURES",
+      "href": "https://xk2022.github.io/single-demo003/#features"
+    },
+    {
+      "text": "CONTACT",
+      "href": "https://xk2022.github.io/single-demo003/#contact"
+    },
+    {
+      "text": "",
+      "href": "https://xk2022.github.io/single-demo003/assets/img/front.png"
+    },
+    {
+      "text": "",
+      "href": "https://xk2022.github.io/single-demo003/assets/img/front02.png"
+    },
+    {
+      "text": "",
+      "href": "https://xk2022.github.io/single-demo003/assets/img/front03.png"
+    },
+    {
+      "text": "",
+      "href": "https://xk2022.github.io/single-demo003/assets/img/front04.png"
+    },
+    {
+      "text": "",
+      "href": "https://xk2022.github.io/single-demo003/assets/img/front05.png"
+    },
+    {
+      "text": "",
+      "href": "https://xk2022.github.io/single-demo003/assets/img/front06.png"
+    },
+    {
+      "text": "",
+      "href": "https://xk2022.github.io/single-demo003/assets/img/front07.png"
+    },
+    {
+      "text": "",
+      "href": "https://xk2022.github.io/single-demo003/assets/img/front08.png"
+    },
+    {
+      "text": "TemplateMag",
+      "href": "https://templatemag.com/"
+    }
+  ],
+  "forms": [
+    {
+      "action": "register.php",
+      "method": "post",
+      "text": "Yes, Please",
+      "controls": [
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "id": "",
+          "name": "email",
+          "required": true,
+          "label": [],
+          "placeholder": "Enter your e-mail address..."
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "id": "",
+          "name": "",
+          "label": []
+        }
+      ]
+    },
+    {
+      "action": "contactform/contactform.php",
+      "method": "post",
+      "text": "Send Message",
+      "controls": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "id": "contact-name",
+          "name": "name",
+          "required": false,
+          "label": [],
+          "placeholder": "Your Name"
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "id": "contact-email",
+          "name": "email",
+          "required": false,
+          "label": [],
+          "placeholder": "Your Email"
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "id": "contact-subject",
+          "name": "subject",
+          "required": false,
+          "label": [],
+          "placeholder": "Subject"
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "id": "contact-message",
+          "name": "message",
+          "required": false,
+          "label": [],
+          "placeholder": "Your Message"
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "id": "",
+          "name": "",
+          "label": []
+        }
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Toggle navigation",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "Yes, Please",
+      "type": "submit",
+      "disabled": false
+    },
+    {
+      "text": "Send Message",
+      "type": "submit",
+      "disabled": false
+    }
+  ],
+  "images": [
+    {
+      "src": "https://xk2022.github.io/single-demo003/img/logo.png",
+      "alt": "",
+      "complete": true,
+      "width": 0,
+      "height": 0,
+      "inViewport": true
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/ls-watch.png",
+      "alt": "",
+      "complete": true,
+      "width": 709,
+      "height": 857,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/front.png",
+      "alt": "",
+      "complete": true,
+      "width": 381,
+      "height": 451,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/front02.png",
+      "alt": "",
+      "complete": true,
+      "width": 381,
+      "height": 451,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/front07.png",
+      "alt": "",
+      "complete": true,
+      "width": 381,
+      "height": 451,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f01.png",
+      "alt": "",
+      "complete": true,
+      "width": 800,
+      "height": 600,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f02.png",
+      "alt": "",
+      "complete": true,
+      "width": 800,
+      "height": 600,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f03.png",
+      "alt": "",
+      "complete": true,
+      "width": 800,
+      "height": 600,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f04.png",
+      "alt": "",
+      "complete": true,
+      "width": 800,
+      "height": 600,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f05.png",
+      "alt": "",
+      "complete": true,
+      "width": 800,
+      "height": 600,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f06.png",
+      "alt": "",
+      "complete": true,
+      "width": 800,
+      "height": 600,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f07.png",
+      "alt": "",
+      "complete": true,
+      "width": 800,
+      "height": 600,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/portfolio/f08.png",
+      "alt": "",
+      "complete": true,
+      "width": 800,
+      "height": 600,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/watch01.jpg",
+      "alt": "",
+      "complete": true,
+      "width": 764,
+      "height": 868,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/watch02.jpg",
+      "alt": "",
+      "complete": true,
+      "width": 764,
+      "height": 868,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo003/assets/img/watch03.jpg",
+      "alt": "",
+      "complete": true,
+      "width": 764,
+      "height": 868,
+      "inViewport": false
+    }
+  ],
+  "backgrounds": [
+    {
+      "tag": "DIV",
+      "class": "",
+      "background": "url(\"https://xk2022.github.io/single-demo003/assets/img/header.jpg\")"
+    },
+    {
+      "tag": "DIV",
+      "class": "sep s01",
+      "background": "url(\"https://xk2022.github.io/single-demo003/assets/img/s01.png\")"
+    },
+    {
+      "tag": "DIV",
+      "class": "sep s02",
+      "background": "url(\"https://xk2022.github.io/single-demo003/assets/img/s02.jpg\")"
+    },
+    {
+      "tag": "DIV",
+      "class": "",
+      "background": "url(\"https://xk2022.github.io/single-demo003/assets/img/cta.jpg\")"
+    }
+  ],
+  "fontStatus": "loaded",
+  "dimensions": {
+    "width": 1280,
+    "height": 10203
+  },
+  "errors": {
+    "pageErrors": [],
+    "requestFailures": [],
+    "httpErrors": [
+      {
+        "url": "https://xk2022.github.io/single-demo003/img/logo.png",
+        "status": 404
+      }
+    ]
+  },
+  "screenshot": {
+    "path": "/tmp/xk-bf009-016/sources/demo-003.png",
+    "bytes": 496837,
+    "sha256": "9a1844dce3c3435cc918d614c7226aed5b7a96b2aed54c6002657291b308d63d"
+  }
+}

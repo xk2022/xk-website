@@ -8,7 +8,7 @@
 
 ## 問題追蹤與後續 Bugfix
 
-- [2026-11-22 官網問題清單與 Bugfix 待辦](bugfix-backlog-2026-11-22.md)：BF-009～BF-016，共八項，記錄證據、影響、建議分支、前置條件與驗收標準；供後續依項目啟動修復，不代表本輪已實作或發布。
+- [2026-11-22 官網問題清單與 Bugfix 待辦](bugfix-backlog-2026-11-22.md)：BF-009～BF-016，共八項，記錄證據、影響、建議分支、前置條件與驗收標準。本輪官網側六項 PASS，BF-010／BF-015 因資料或核准尚缺而 BLOCKED；範圍及目前狀態以清單更新紀錄與 [本輪實作報告](../reports/bf009-016-implementation.md) 為準，不以本機驗收或文件存在推論已部署。
 - 既有 `bugfix001.md` 至 `bugfix008.md` 與 [歷史實作紀錄](../reports/bugfix001-008-implementation.md) 保留，不覆寫原始規格或舊驗收。
 
 ## 1. Repository

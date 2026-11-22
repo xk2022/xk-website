@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "/tmp/xk-bf009-016/sources/check-interactions.cjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T11:25:16.101505+00:00",
+  "finishedAt": "2026-11-22T11:27:04.321939+00:00",
+  "processId": 5873,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 240.0,
+  "logFile": "/tmp/xk-bf009-016/sources/interactions.log",
+  "logSha256": "e39e36fbec3af5fe0c32a1ac684b19a8de1eb5486ca5f31a75d3bb12206a3206",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

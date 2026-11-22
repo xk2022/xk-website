@@ -1,3 +1,5 @@
+import { showcaseSeoPages } from "./website-showcases.ts";
+
 export type SeoPage = Readonly<{
   path: `/${string}`;
   title: string;
@@ -79,6 +81,7 @@ export const seoPages = [
     description: "了解 Xplore Kaleidoscope 網站的個人資料處理、第三方服務與隱私權相關資訊。",
     availability: "draft",
   },
+  ...showcaseSeoPages,
 ] as const satisfies readonly SeoPage[];
 
 export function getSeoPage(path: string): SeoPage {

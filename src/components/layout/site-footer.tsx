@@ -6,6 +6,7 @@ import { services } from "@/config/homepage";
 import { contactNavigation, primaryNavigation } from "@/config/navigation";
 import { portfolioProjects } from "@/config/portfolio";
 import { siteConfig } from "@/config/site";
+import { brandWebsiteShowcases, showcaseDetailPath } from "@/config/website-showcases";
 import { isPrivacyPolicyPublished } from "@/lib/privacy-publication";
 
 const footerLinkStyles =
@@ -56,6 +57,13 @@ export function SiteFooter() {
                     className={`${footerLinkStyles} max-w-full break-words`}
                   >
                     {project.title}
+                  </Link>
+                </li>
+              ))}
+              {brandWebsiteShowcases.filter((showcase) => showcase.detail && showcase.href).map((showcase) => (
+                <li key={showcase.id}>
+                  <Link href={showcaseDetailPath(showcase.id)} className={`${footerLinkStyles} max-w-full break-words`}>
+                    {showcase.title}｜作品介紹
                   </Link>
                 </li>
               ))}

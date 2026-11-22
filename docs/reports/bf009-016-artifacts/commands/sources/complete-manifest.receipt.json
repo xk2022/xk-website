@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-bf009-016/sources/complete-manifest.cjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T11:24:13.147061+00:00",
+  "finishedAt": "2026-11-22T11:24:15.925582+00:00",
+  "processId": 5503,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 150.0,
+  "logFile": "/tmp/xk-bf009-016/sources/complete-manifest.log",
+  "logSha256": "7d0b595934e6ece6750b8d3d8a1f983027ffc9122aac433ddf52de93da5653fb",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

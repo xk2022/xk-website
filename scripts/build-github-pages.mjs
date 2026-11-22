@@ -8,7 +8,8 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const basePath = (process.env.XK_PAGES_BASE_PATH ?? "/xk-website").replace(/\/+$/, "");
 assert.match(basePath, /^(\/[A-Za-z0-9._~-]+)*$/, "XK_PAGES_BASE_PATH must be empty or a URL path such as /xk-website.");
 const { privacyPolicy, privacyDraftMarker, privacyPageMetadata } = await import(new URL("../src/config/privacy.ts", import.meta.url));
-const { websiteShowcases } = await import(new URL("../src/config/website-showcases.ts", import.meta.url));
+const { websiteShowcases, showcaseSettings, showcaseDetailPath, showcaseSeoPages, presentationLabels, showcaseStateLabels } = await import(new URL("../src/config/website-showcases.ts", import.meta.url));
+const showcaseContract = JSON.parse(readFileSync(new URL("./fixtures/showcase-contract.json", import.meta.url), "utf8"));
 const [{ seoPages, getSeoPage, seoProtectionPolicy }, { siteConfig }, seo, navigation] = await Promise.all([
   import(new URL("../src/config/seo.ts", import.meta.url)),
   import(new URL("../src/config/site.ts", import.meta.url)),
@@ -162,6 +163,21 @@ const portfolioPages = [
   },
 ];
 
+const expectedShowcasePaths = showcaseContract.brandOrder.map((id) => `/portfolio/showcases/${id}`);
+assert.deepEqual(websiteShowcases.map(({ id }) => id), [...showcaseContract.brandOrder, ...showcaseContract.templateIds], "Showcase inventory must match the independently reviewed contract.");
+assert.equal(new Set(websiteShowcases.map(({ id }) => id)).size, websiteShowcases.length, "Website showcase IDs must be unique.");
+assert.deepEqual(websiteShowcases.filter(({ kind }) => kind === "brand-demo").map(({ id }) => id), showcaseContract.brandOrder, "Keep the owner-approved brand order.");
+assert.ok(websiteShowcases.filter(({ kind }) => kind === "brand-demo").every(({ availability }) => (availability ?? "available") === "available"), "All six reviewed brand showcases must remain available.");
+assert.deepEqual(Object.fromEntries(websiteShowcases.map(({ id, presentation }) => [id, presentation])), showcaseContract.presentationById, "Showcase presentation classifications must match the reviewed fixture.");
+assert.deepEqual(showcaseSettings.brandOrder, showcaseContract.brandOrder, "The configured brand order must match the reviewed fixture.");
+assert.deepEqual(showcaseSettings.featuredIds, showcaseContract.featuredIds, "Featured showcases must match the independently reviewed selection.");
+assert.deepEqual(showcaseSeoPages.map(({ path }) => path), expectedShowcasePaths, "Brand detail SEO pages must match all approved brand IDs.");
+assert.deepEqual(portfolioPages.slice(1).map(({ pagePath }) => pagePath.split("/").at(-1)), showcaseContract.technicalPlanSlugs, "Retain the three original technical plan routes.");
+const expectedPublicPaths = [...showcaseContract.existingPublicPaths, ...expectedShowcasePaths, ...(privacyApproved ? ["/privacy"] : [])];
+const publicSeoPages = seoPages.filter(({ availability }) => availability === "public");
+assert.deepEqual(publicSeoPages.map(({ path }) => path).sort(), expectedPublicPaths.sort(), "Public SEO routes must match the independently reviewed route contract.");
+portfolioPages.push(...showcaseSeoPages.map(({ path, title, description }) => ({ pagePath: path, label: `Showcase ${path.split("/").at(-1)}`, title, description })));
+
 const exportedPages = [
   ["index.html", "", "homepage"],
   ["about/index.html", "/about", "About Us"],
@@ -193,42 +209,61 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   }
 
   const portfolioPage = portfolioPages.find((page) => page.pagePath === pagePath);
+  if (showcaseContract.technicalPlanSlugs.some((slug) => pagePath === `/portfolio/${slug}`)) {
+    const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? "";
+    assert.ok(main.includes("Planned／規劃中") && main.includes("尚未提供可核對的實作與測試證據。") && main.includes("尚無可驗證的系統畫面"), `${label} must preserve the technical plan and evidence boundaries.`);
+    assert.doesNotMatch(main, /<img\b/i, `${label} must not invent an implemented-system screenshot.`);
+  }
   if (pagePath === "/portfolio") {
     const visibleHtml = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
-    assert.equal(websiteShowcases.length, 10, "Portfolio must retain six brand entries and four template samples.");
-    assert.equal(new Set(websiteShowcases.map(({ id }) => id)).size, 10, "Website showcase IDs must be unique.");
-    const brandOrder = ["march-tangbao", "hongjia-birdnest", "yupinyuan-bento", "campaign-website-design", "honest-diecut", "qiangang-windows"];
-    assert.deepEqual(websiteShowcases.filter(({ kind }) => kind === "brand-demo").map(({ id }) => id), brandOrder, "Keep the owner-approved brand order.");
+    const brandOrder = showcaseContract.brandOrder;
     let previousPosition = -1;
     for (const id of brandOrder) {
       const position = visibleHtml.indexOf(`data-showcase-id="${id}"`);
       assert.ok(position > previousPosition, `Incorrect rendered brand order: ${id}.`);
       previousPosition = position;
     }
-    for (const id of ["website-cases", "website-samples", "portfolio-projects"]) {
+    for (const id of showcaseContract.portfolioAnchors) {
       assert.ok(visibleHtml.includes(`id="${id}"`), `Missing Portfolio category anchor: ${id}.`);
     }
     for (const showcase of websiteShowcases) {
-      if (showcase.availability === "preparing") {
-        assert.equal(showcase.href, null, "Preparing entries must not expose unavailable links.");
-        assert.equal(showcase.image, null, "Preparing entries must not fabricate previews.");
-        assert.ok(visibleHtml.includes(`data-showcase-id="${showcase.id}" data-showcase-state="preparing"`), "Missing explicit preparing state.");
-        continue;
+      const cards = [...visibleHtml.matchAll(/<article\b[^>]*>[\s\S]*?<\/article>/g)].map(([card]) => card)
+        .filter((card) => tagAttribute(card.match(/^<article\b[^>]*>/)?.[0], "data-showcase-id") === showcase.id);
+      assert.equal(cards.length, 1, `Portfolio must render one card for ${showcase.id}.`);
+      const card = cards[0];
+      const cardTag = card.match(/^<article\b[^>]*>/)?.[0];
+      const state = showcase.availability ?? "available";
+      assert.equal(tagAttribute(cardTag, "data-showcase-state"), state, `Incorrect card state: ${showcase.id}.`);
+      assert.equal(tagAttribute(cardTag, "data-showcase-presentation"), showcase.presentation, `Incorrect card presentation: ${showcase.id}.`);
+      assert.ok(presentationLabels[showcase.presentation] && card.includes(presentationLabels[showcase.presentation]), `Missing visible presentation label: ${showcase.id}.`);
+      assert.ok(showcaseStateLabels[state] && card.includes(showcaseStateLabels[state]), `Missing visible availability label: ${showcase.id}.`);
+      if (state !== "available") {
+        assert.ok(["preparing", "reference-only"].includes(state), `Unknown showcase state: ${showcase.id}.`);
+        assert.equal(showcase.href, null, "Unavailable entries must not expose unavailable links.");
+        assert.equal(showcase.image, null, "Unavailable entries must not fabricate previews.");
+        assert.doesNotMatch(card, /<img\b/i, `Unavailable card must not show a fake preview: ${showcase.id}.`);
+        if (showcase.sourceHref) assert.ok(!card.includes(`href="${showcase.sourceHref}"`), `Unavailable source must not be an active showcase link: ${showcase.id}.`);
+        const cardLinks = [...card.matchAll(/<a\b[^>]*>/g)].map(([tag]) => tagAttribute(tag, "href"));
+        assert.ok(cardLinks.every((href) => href === showcase.attribution?.href || href === `${basePath}${showcaseDetailPath(showcase.id)}` || href === `${basePath}${showcaseDetailPath(showcase.id)}/`), `Unavailable card exposes an unexpected link: ${showcase.id}.`);
+      } else {
+        assert.ok(card.includes(`href="${showcase.href}"`), `Missing public showcase link: ${showcase.id}.`);
+        assert.ok(card.includes(`src="${basePath}${showcase.image.src}"`), `Incorrect showcase preview base path: ${showcase.id}.`);
+        assert.ok(existsSync(join(output, showcase.image.src)), `Missing local preview: ${showcase.id}.`);
       }
-      assert.ok(visibleHtml.includes(`href="${showcase.href}"`), `Missing public showcase link: ${showcase.id}.`);
-      assert.ok(visibleHtml.includes(`src="${basePath}${showcase.image.src}"`), `Incorrect showcase preview base path: ${showcase.id}.`);
-      assert.ok(existsSync(join(output, showcase.image.src)), `Missing local preview: ${showcase.id}.`);
       if (showcase.kind === "template") {
-        assert.ok(showcase.attribution?.href && visibleHtml.includes(`href="${showcase.attribution.href}"`), `Missing template attribution: ${showcase.id}.`);
+        assert.ok(showcase.attribution?.href && card.includes(`href="${showcase.attribution.href}"`) && card.includes(showcase.attribution.label), `Missing template attribution: ${showcase.id}.`);
+      } else {
+        assert.ok(card.includes(`href="${basePath}${showcaseDetailPath(showcase.id)}"`) || card.includes(`href="${basePath}${showcaseDetailPath(showcase.id)}/"`), `Missing brand detail link: ${showcase.id}.`);
       }
     }
+    assert.deepEqual(websiteShowcases.filter(({ availability }) => availability === "reference-only").map(({ id }) => id), showcaseContract.referenceOnlyIds, "Reference-only templates must match the reviewed source limitations.");
   }
   if (portfolioPage) {
     const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/)?.[1] ?? "";
-    assert.equal(head.match(/<title>([^<]*)<\/title>/)?.[1], portfolioPage.title, `${label} title is incorrect.`);
-    assert.equal(metadataAttribute(html, "name", "description", "content"), portfolioPage.description, `${label} description is incorrect.`);
-    assert.equal(metadataAttribute(html, "property", "og:title", "content"), portfolioPage.title, `${label} Open Graph title is incorrect.`);
-    assert.equal(metadataAttribute(html, "property", "og:description", "content"), portfolioPage.description, `${label} Open Graph description is incorrect.`);
+    assert.equal(decodePublicText(head.match(/<title>([^<]*)<\/title>/)?.[1] ?? ""), portfolioPage.title, `${label} title is incorrect.`);
+    assert.equal(decodePublicText(metadataAttribute(html, "name", "description", "content") ?? ""), portfolioPage.description, `${label} description is incorrect.`);
+    assert.equal(decodePublicText(metadataAttribute(html, "property", "og:title", "content") ?? ""), portfolioPage.title, `${label} Open Graph title is incorrect.`);
+    assert.equal(decodePublicText(metadataAttribute(html, "property", "og:description", "content") ?? ""), portfolioPage.description, `${label} Open Graph description is incorrect.`);
     assert.equal(metadataAttribute(html, "property", "og:locale", "content"), "zh_TW", `${label} Open Graph locale is incorrect.`);
     assert.equal(metadataAttribute(html, "property", "og:type", "content"), "website", `${label} Open Graph type is incorrect.`);
   }
@@ -349,18 +384,17 @@ function collectHtmlFiles(directory, prefix) {
 }
 
 const portfolioRoot = join(output, "portfolio");
-const portfolioSlugs = portfolioPages.flatMap(({ pagePath }) => pagePath.split("/").slice(2));
+const portfolioSlugs = [...new Set(portfolioPages.flatMap(({ pagePath }) => pagePath.split("/").slice(2, 3)))];
 const exportedPortfolioSlugs = readdirSync(portfolioRoot, { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
   .map((entry) => entry.name);
-assert.deepEqual(exportedPortfolioSlugs.sort(), portfolioSlugs.sort(), "Portfolio must export only the three registered detail slugs, without unknown or fallback routes.");
+assert.deepEqual(exportedPortfolioSlugs.sort(), portfolioSlugs.sort(), "Portfolio must export only registered technical plans and the showcases directory, without unknown or fallback routes.");
 assert.deepEqual(
   collectHtmlFiles(portfolioRoot, "portfolio/").sort(),
   portfolioPages.map(({ pagePath }) => `${pagePath.slice(1)}/index.html`).sort(),
-  "Portfolio HTML must contain only the overview and its three registered details.",
+  "Portfolio HTML must contain only the overview and its registered technical and showcase details.",
 );
 
-const publicSeoPages = seoPages.filter(({ availability }) => availability === "public");
 const publicPaths = new Set(publicSeoPages.map(({ path }) => path));
 assert.equal(new Set(seoPages.map(({ path }) => path)).size, seoPages.length, "SEO registry paths must be unique.");
 assert.deepEqual([...publicPaths].sort(), exportedPages.map(([, path]) => path || "/").sort(), "SEO public paths must match every required exported page.");

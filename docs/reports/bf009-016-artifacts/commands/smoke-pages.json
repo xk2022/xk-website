@@ -1,0 +1,25 @@
+{
+  "status": "FAIL",
+  "command": [
+    "npm",
+    "run",
+    "test:smoke",
+    "--",
+    "--base-url",
+    "http://127.0.0.1:3161/xk-website/",
+    "--output",
+    "/tmp/xk-bf009-016/smoke-pages-result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T11:38:44.785071+00:00",
+  "finishedAt": "2026-11-22T11:38:45.655551+00:00",
+  "processId": 8266,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-bf009-016/smoke-pages.log",
+  "logSha256": "adb03c7907ab35f9c1edefbb8ad51e8c9c5c6f4a19861a91832f3893856c2828",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

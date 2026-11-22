@@ -1,0 +1,516 @@
+{
+  "id": "demo-004",
+  "url": "https://xk2022.github.io/single-demo004/",
+  "finalUrl": "https://xk2022.github.io/single-demo004/",
+  "status": 200,
+  "headers": {
+    "accept-ranges": "bytes",
+    "access-control-allow-origin": "*",
+    "age": "0",
+    "cache-control": "max-age=600",
+    "content-encoding": "gzip",
+    "content-length": "1080",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Sun, 22 Nov 2026 11:23:25 GMT",
+    "etag": "W/\"614d77e8-d27\"",
+    "expires": "Sun, 22 Nov 2026 11:33:25 GMT",
+    "last-modified": "Fri, 24 Sep 2021 07:02:00 GMT",
+    "server": "envoy",
+    "strict-transport-security": "max-age=31556952",
+    "vary": "Accept-Encoding",
+    "via": "1.1 varnish",
+    "x-cache": "MISS",
+    "x-cache-hits": "0",
+    "x-envoy-upstream-service-time": "70",
+    "x-fastly-request-id": "219fba95faf26d6134f4fb84ca5c5f91069a5d2d",
+    "x-github-edge-region": "iad",
+    "x-github-request-id": "F7BA:EA6BF:2A360F1:2F17F28:6B02D0AC",
+    "x-proxy-cache": "MISS",
+    "x-served-by": "cache-chi-klot8100115-CHI",
+    "x-timer": "S1795346606.915264,VS0,VE63"
+  },
+  "checkedAt": "2026-11-22T11:23:27.390Z",
+  "title": "(SingleDemo004)Foodlanding - Bootstrap Landing Template",
+  "bodyText": "Home\nChefs\nDishes\nContact\nA LANDING PAGE\nFOR YOUR RESTAURANT\n\nEnjoy the experience of our restaurant.\nRegister to know our latest news.\n\nSubscribe\nHANDSOME LANDING. AWESOME EXPERIENCES.\nTRULY TASTEFUL\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\n8 CITIES\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\nAFFORDABLE PRICES\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\nWE DELIVER\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.\n\nMEET OUR AWESOME CHEFS\nDavid Harrison\nPatrick Dawson\nDavid Harrison\nTOP CHEF\n\n\n\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nEXCLUSIVE MENU\n\nEnjoy our meals. You can click each menu to display more information.\n\nSalmon\nSeafood Platter\nCrawfish\nBouillabaisse\nSteak\nRibs & Bread\nPork\nLasagna\nBanana Pudding\nBlack Bottom Pie\nBlack Forest\nSEAFOODMEATDESSERTS\nRESERVE VIA YOUR PHONE\n\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.\n\nRichard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.\n\nLorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC.\n\nSUBSCRIBE TO OUR NEWSLETTER\n\nWe will let you know all our awesome offers.\n\nSubscribe\nCONTACT US\nYour Name\nYour Email\nSubject\nYour Message\nSend Message\n\n© Copyrights FoodLanding. All Rights Reserved\n\nCreated with FoodLanding template by TemplateMag",
+  "headings": [
+    {
+      "level": "H1",
+      "text": "A LANDING PAGE\nFOR YOUR RESTAURANT"
+    },
+    {
+      "level": "H3",
+      "text": "HANDSOME LANDING. AWESOME EXPERIENCES."
+    },
+    {
+      "level": "H3",
+      "text": "MEET OUR AWESOME CHEFS"
+    },
+    {
+      "level": "H4",
+      "text": "David Harrison"
+    },
+    {
+      "level": "H4",
+      "text": "Patrick Dawson"
+    },
+    {
+      "level": "H3",
+      "text": "EXCLUSIVE MENU"
+    },
+    {
+      "level": "H4",
+      "text": "Salmon"
+    },
+    {
+      "level": "H4",
+      "text": "Seafood Platter"
+    },
+    {
+      "level": "H4",
+      "text": "Crawfish"
+    },
+    {
+      "level": "H4",
+      "text": "Bouillabaisse"
+    },
+    {
+      "level": "H4",
+      "text": "Steak"
+    },
+    {
+      "level": "H4",
+      "text": "Ribs & Bread"
+    },
+    {
+      "level": "H4",
+      "text": "Pork"
+    },
+    {
+      "level": "H4",
+      "text": "Lasagna"
+    },
+    {
+      "level": "H4",
+      "text": "Banana Pudding"
+    },
+    {
+      "level": "H4",
+      "text": "Black Bottom Pie"
+    },
+    {
+      "level": "H4",
+      "text": "Black Forest"
+    },
+    {
+      "level": "H4",
+      "text": "Poached Eggs"
+    },
+    {
+      "level": "H3",
+      "text": "RESERVE VIA YOUR PHONE"
+    },
+    {
+      "level": "H3",
+      "text": "SUBSCRIBE TO OUR NEWSLETTER"
+    },
+    {
+      "level": "H3",
+      "text": "CONTACT US"
+    }
+  ],
+  "links": [
+    {
+      "text": "",
+      "href": "https://xk2022.github.io/single-demo004/#"
+    },
+    {
+      "text": "Home",
+      "href": "https://xk2022.github.io/single-demo004/#h"
+    },
+    {
+      "text": "Chefs",
+      "href": "https://xk2022.github.io/single-demo004/#chefs"
+    },
+    {
+      "text": "Dishes",
+      "href": "https://xk2022.github.io/single-demo004/#dishes"
+    },
+    {
+      "text": "Contact",
+      "href": "https://xk2022.github.io/single-demo004/#contact"
+    },
+    {
+      "text": "David Harrison",
+      "href": "https://xk2022.github.io/single-demo004/#tab1"
+    },
+    {
+      "text": "Patrick Dawson",
+      "href": "https://xk2022.github.io/single-demo004/#tab2"
+    },
+    {
+      "text": "Salmon",
+      "href": ""
+    },
+    {
+      "text": "Seafood Platter",
+      "href": ""
+    },
+    {
+      "text": "Crawfish",
+      "href": ""
+    },
+    {
+      "text": "Bouillabaisse",
+      "href": ""
+    },
+    {
+      "text": "Steak",
+      "href": ""
+    },
+    {
+      "text": "Ribs & Bread",
+      "href": ""
+    },
+    {
+      "text": "Pork",
+      "href": ""
+    },
+    {
+      "text": "Lasagna",
+      "href": ""
+    },
+    {
+      "text": "Banana Pudding",
+      "href": ""
+    },
+    {
+      "text": "Black Bottom Pie",
+      "href": ""
+    },
+    {
+      "text": "Black Forest",
+      "href": ""
+    },
+    {
+      "text": "SEAFOOD",
+      "href": "https://xk2022.github.io/single-demo004/#"
+    },
+    {
+      "text": "MEAT",
+      "href": "https://xk2022.github.io/single-demo004/#"
+    },
+    {
+      "text": "DESSERTS",
+      "href": "https://xk2022.github.io/single-demo004/#"
+    },
+    {
+      "text": "TemplateMag",
+      "href": "https://templatemag.com/"
+    }
+  ],
+  "forms": [
+    {
+      "action": "register.php",
+      "method": "post",
+      "text": "Subscribe",
+      "controls": [
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "id": "",
+          "name": "email",
+          "required": true,
+          "label": [],
+          "placeholder": "Enter your e-mail address..."
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "id": "",
+          "name": "",
+          "label": []
+        }
+      ]
+    },
+    {
+      "action": "register.php",
+      "method": "post",
+      "text": "Subscribe",
+      "controls": [
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "id": "",
+          "name": "email",
+          "required": true,
+          "label": [],
+          "placeholder": "Enter your e-mail address..."
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "id": "",
+          "name": "",
+          "label": []
+        }
+      ]
+    },
+    {
+      "action": "contactform/contactform.php",
+      "method": "post",
+      "text": "Your Name\nYour Email\nSubject\nYour Message\nSend Message",
+      "controls": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "id": "contact-name",
+          "name": "name",
+          "required": false,
+          "label": [
+            "Your Name"
+          ],
+          "placeholder": "Your Name"
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "id": "contact-email",
+          "name": "email",
+          "required": false,
+          "label": [
+            "Your Email"
+          ],
+          "placeholder": "Your Email"
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "id": "contact-subject",
+          "name": "subject",
+          "required": false,
+          "label": [
+            "Subject"
+          ],
+          "placeholder": "Subject"
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "id": "contact-message",
+          "name": "message",
+          "required": false,
+          "label": [
+            "Your Message"
+          ],
+          "placeholder": "Your Message"
+        },
+        {
+          "tag": "BUTTON",
+          "type": "submit",
+          "id": "",
+          "name": "",
+          "label": []
+        }
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "text": "Toggle navigation",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "Subscribe",
+      "type": "submit",
+      "disabled": false
+    },
+    {
+      "text": "×Close",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "Close",
+      "type": "button",
+      "disabled": false
+    },
+    {
+      "text": "Subscribe",
+      "type": "submit",
+      "disabled": false
+    },
+    {
+      "text": "Send Message",
+      "type": "submit",
+      "disabled": false
+    }
+  ],
+  "images": [
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/logo.png",
+      "alt": "",
+      "complete": true,
+      "width": 200,
+      "height": 200,
+      "inViewport": true
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/chef01.png",
+      "alt": "",
+      "complete": true,
+      "width": 755,
+      "height": 887,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/chef02.png",
+      "alt": "",
+      "complete": true,
+      "width": 755,
+      "height": 887,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/food/1.png",
+      "alt": "img01",
+      "complete": true,
+      "width": 360,
+      "height": 360,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/food/2.png",
+      "alt": "img02",
+      "complete": true,
+      "width": 360,
+      "height": 360,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/food/3.png",
+      "alt": "img03",
+      "complete": true,
+      "width": 360,
+      "height": 360,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/food/4.png",
+      "alt": "img04",
+      "complete": true,
+      "width": 360,
+      "height": 360,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/food/5.png",
+      "alt": "img05",
+      "complete": true,
+      "width": 360,
+      "height": 360,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/food/6.png",
+      "alt": "img06",
+      "complete": true,
+      "width": 360,
+      "height": 360,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/food/7.png",
+      "alt": "img07",
+      "complete": true,
+      "width": 360,
+      "height": 360,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/food/8.png",
+      "alt": "img08",
+      "complete": true,
+      "width": 360,
+      "height": 360,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/food/9.png",
+      "alt": "img09",
+      "complete": true,
+      "width": 360,
+      "height": 360,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/food/10.png",
+      "alt": "img10",
+      "complete": true,
+      "width": 360,
+      "height": 360,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/food/11.png",
+      "alt": "img11",
+      "complete": true,
+      "width": 360,
+      "height": 360,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/modalbg.jpg",
+      "alt": "",
+      "complete": true,
+      "width": 800,
+      "height": 350,
+      "inViewport": false
+    },
+    {
+      "src": "https://xk2022.github.io/single-demo004/assets/img/phone.png",
+      "alt": "",
+      "complete": true,
+      "width": 512,
+      "height": 1039,
+      "inViewport": false
+    }
+  ],
+  "backgrounds": [
+    {
+      "tag": "DIV",
+      "class": "",
+      "background": "url(\"https://xk2022.github.io/single-demo004/assets/img/header.jpg\")"
+    },
+    {
+      "tag": "DIV",
+      "class": "sep s01",
+      "background": "url(\"https://xk2022.github.io/single-demo004/assets/img/s01.jpg\")"
+    },
+    {
+      "tag": "DIV",
+      "class": "sep s02",
+      "background": "url(\"https://xk2022.github.io/single-demo004/assets/img/s02.jpg\")"
+    },
+    {
+      "tag": "DIV",
+      "class": "sep s03",
+      "background": "url(\"https://xk2022.github.io/single-demo004/assets/img/s03.jpg\")"
+    }
+  ],
+  "fontStatus": "loaded",
+  "dimensions": {
+    "width": 1280,
+    "height": 5423
+  },
+  "errors": {
+    "pageErrors": [],
+    "requestFailures": [],
+    "httpErrors": []
+  },
+  "screenshot": {
+    "path": "/tmp/xk-bf009-016/sources/demo-004.png",
+    "bytes": 1192889,
+    "sha256": "af8d82eed5845d31bbead08fae286e15c10a9fe6ebf79ed39486af0bf461a8a2"
+  }
+}

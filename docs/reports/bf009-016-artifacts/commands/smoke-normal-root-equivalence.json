@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "run",
+    "test:smoke",
+    "--",
+    "--base-url",
+    "http://127.0.0.1:3160/",
+    "--output",
+    "/tmp/xk-bf009-016/smoke-normal-root-equivalence-result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T11:34:41.756112+00:00",
+  "finishedAt": "2026-11-22T11:34:42.661415+00:00",
+  "processId": 7619,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-bf009-016/smoke-normal-root-equivalence.log",
+  "logSha256": "4cb0c39b26a79f78e92a065278f5077921a2f89628ebd3ea46a4286e0c72faba",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

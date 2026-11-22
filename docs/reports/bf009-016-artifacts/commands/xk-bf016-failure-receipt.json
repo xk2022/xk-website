@@ -1,0 +1,25 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python3",
+    "scripts/smoke-website.py",
+    "--base-url",
+    "http://127.0.0.1:1/",
+    "--timeout",
+    "0.2",
+    "--output",
+    "/tmp/xk-bf016-failure.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T11:29:42.490939+00:00",
+  "finishedAt": "2026-11-22T11:29:42.726345+00:00",
+  "processId": 6894,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 30.0,
+  "logFile": "/tmp/xk-bf016-failure.log",
+  "logSha256": "5c06c6ec931a5e220482da3f3e260d0f0eb40c61a9e80e9b232f1ac41b52f6d9",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

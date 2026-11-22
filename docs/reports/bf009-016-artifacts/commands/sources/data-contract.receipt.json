@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-bf009-016/sources/verify-data-contract.mjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T11:30:03.644862+00:00",
+  "finishedAt": "2026-11-22T11:30:03.779692+00:00",
+  "processId": 6946,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 30.0,
+  "logFile": "/tmp/xk-bf009-016/sources/data-contract.log",
+  "logSha256": "3096a316bd8e705a65116835215de898216ea91626dccdec6c8bd0c27657f09e",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

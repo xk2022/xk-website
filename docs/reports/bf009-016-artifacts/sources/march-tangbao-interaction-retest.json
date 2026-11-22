@@ -1,0 +1,63 @@
+{
+  "id": "march-tangbao",
+  "startedAt": "2026-11-22T11:28:51.330Z",
+  "checks": [],
+  "beforeSubmitValues": [
+    {
+      "id": "select-duck",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true
+    },
+    {
+      "id": "quantity-duck",
+      "type": "number",
+      "value": "1",
+      "checked": false
+    },
+    {
+      "id": "select-tofu",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true
+    },
+    {
+      "id": "quantity-tofu",
+      "type": "number",
+      "value": "2",
+      "checked": false
+    },
+    {
+      "id": "pickup-date",
+      "type": "date",
+      "value": "2026-11-24",
+      "checked": false
+    },
+    {
+      "id": "pickup-time",
+      "type": "time",
+      "value": "10:00",
+      "checked": false
+    }
+  ],
+  "afterActionText": "三月手工湯包\n菜單\n預留滷味\n門市資訊\n\n中壢新明市場附近\n\n早上來一籠湯包，\n滷味帶回家加菜。\n導航到店\n預留滷味\n查看營業時間\n餐點示意\n菜單\n\n品項以門市公告為準\n\n手工湯包\n餐點示意\n私房冷滷味\n餐點示意\n冰鎮鴨翅\n餐點示意\n香滷豆干\n預留滷味\n選品項與份數\n產生並複製訊息\n私訊店家\n店家回覆後取餐\n選擇滷味\n\n可填寫想詢問的份數，供應情況以店家回覆為準。表單內容暫存在此頁面，重新整理後清空。\n\n冰鎮鴨翅\n冰鎮鴨翅\n份數\n香滷豆干\n香滷豆干\n份數\n希望取餐日期\n希望取餐時間\n產生預留訊息\n帶入示範資料\n\n已產生預留訊息。\n\n預留訊息摘要\n\n訊息尚未送出，預留以店家回覆為準\n\n複製訊息\n查看店家 IG\n\n門市資訊\n\n桃園市中壢區民權路 66 號\n\n以前在長沙路吃過三月手工湯包嗎？現在可以到民權路 66 號。\n\n導航到店\n營業時間\n週一\n公休\n週二至週五\n07:00–13:00\n17:30–20:00\n週六、週日\n07:00–14:00\n\n營業時間依目前提供的 IG 簡介整理，正式使用前待店家核對。\n\n營業異動請看店家最新公告\n\n看店家最新公告\n三月手工湯包\nXK SYSTEM 作品集展示\n探索萬象科技（XK）自主展示專案",
+  "outputControls": [
+    {
+      "tag": "P",
+      "id": "",
+      "text": "已產生預留訊息。"
+    },
+    {
+      "tag": "TEXTAREA",
+      "id": "message",
+      "text": "您好，想詢問 11 月 24 日（週二）上午 10 點能否自取冰鎮鴨翅 1 份、香滷豆干 2 份？"
+    },
+    {
+      "tag": "P",
+      "id": ""
+    }
+  ],
+  "nonGetRequests": [],
+  "outcome": "PASS",
+  "finishedAt": "2026-11-22T11:28:52.591Z"
+}
