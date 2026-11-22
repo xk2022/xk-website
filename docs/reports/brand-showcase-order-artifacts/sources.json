@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "task": "showcase-order-additions",
+  "startedAt": "2026-11-22T09:19:58.702Z",
+  "finishedAt": "2026-11-22T09:20:01.065Z",
+  "viewport": {
+    "width": 1280,
+    "height": 800
+  },
+  "tool": {
+    "automation": "playwright-core",
+    "version": "1.65.1",
+    "browser": "156.0.8078.79",
+    "executable": "/usr/bin/chromium"
+  },
+  "publicHttpChecks": [
+    {
+      "id": "campaign-website-design",
+      "status": 200,
+      "headers": "/tmp/xk-showcase-order/campaign-http-headers.txt",
+      "body": "/tmp/xk-showcase-order/campaign-http.html",
+      "curlExitCode": 0
+    },
+    {
+      "id": "qiangang-windows",
+      "status": 404,
+      "headers": "/tmp/xk-showcase-order/qiangang-http-headers.txt",
+      "body": "/tmp/xk-showcase-order/qiangang-http.html",
+      "curlExitCode": 0
+    }
+  ],
+  "assets": [
+    {
+      "id": "campaign-website-design",
+      "url": "https://xk2022.github.io/xk-campaign-website-design/",
+      "finalUrl": "https://xk2022.github.io/xk-campaign-website-design/",
+      "status": 200,
+      "title": "一頁式網站建置｜Xplore Kaleidoscope（XK）",
+      "h1": [
+        "讓客人看懂\n你的服務，\n知道下一步怎麼做。"
+      ],
+      "declarationLines": [
+        "介面示意 · 虛構品牌，非實際客戶網站",
+        "帶入示範資料"
+      ],
+      "brandEvidence": [
+        {
+          "tag": "HEADER",
+          "text": "適用情境\n合作方式\n整理需求"
+        },
+        {
+          "tag": "NAV",
+          "text": "適用情境\n合作方式\n整理需求"
+        },
+        {
+          "tag": "FOOTER",
+          "text": "Xplore Kaleidoscope\n\nExplore Possibilities. Create Digital Value.\n\nXK 官網\n完整服務\n技術作品集\n© 2026 Xplore Kaleidoscope\nR01 網站建置 · W01 一頁式服務推廣預覽"
+        },
+        {
+          "tag": "NAV",
+          "text": "XK 官網\n完整服務\n技術作品集"
+        }
+      ],
+      "limitations": [
+        "Initial normal trust request returned certificate authority error. Capture used ignoreHTTPSErrors; this is not certificate-trust verification."
+      ],
+      "checkedAt": "2026-11-22T09:20:01.055Z",
+      "dimensions": {
+        "width": 1280,
+        "height": 3788
+      },
+      "productionAsset": {
+        "path": "/workspace/xk-website/public/images/showcases/campaign-website-design.webp",
+        "width": 1280,
+        "height": 800,
+        "bytes": 59484,
+        "sha256": "4517a49c253ff15c5bbb1a9d98a3f291ce033b7900200cb756034b0199d73586",
+        "format": "webp",
+        "quality": 88,
+        "method": 6,
+        "derivedFrom": "/tmp/xk-showcase-order/campaign-website-design.png",
+        "conversion": "Pillow RGB WebP; source screenshot not cropped, resized, painted, or otherwise altered"
+      },
+      "visualReview": {
+        "status": "PASS",
+        "reviewedAt": "2026-11-22T09:21:05.312543+00:00",
+        "method": "Viewed production WebP with view_image",
+        "observations": [
+          "Real 1280×800 first viewport, XK header and one-page service heading legible.",
+          "Phone mockup image loaded; no missing first-viewport imagery or apparent clipping.",
+          "Fictional-brand disclaimer is visible at lower right. No form interactions or DOM modifications."
+        ]
+      },
+      "contentEvidence": {
+        "brand": "Xplore Kaleidoscope（XK）",
+        "service": "一頁式網站建置",
+        "sectionLabels": [
+          "FIND YOUR STARTING POINT",
+          "HOW WE WORK TOGETHER",
+          "LET’S START WITH YOUR IDEA"
+        ],
+        "scenarioLabels": [
+          "在地店家",
+          "製造與企業服務",
+          "品牌與活動推廣"
+        ],
+        "declarations": [
+          "介面示意 · 虛構品牌，非實際客戶網站",
+          "填完就能複製需求摘要。草稿只留在此頁，重新整理即清空。",
+          "不用留下聯絡資料。",
+          "R01 網站建置 · W01 一頁式服務推廣預覽"
+        ],
+        "claimsBoundary": "Public source is an XK one-page website service preview. The restaurant name in the phone mockup is explicitly fictional; no real customer relationship or formal enquiry reception established. Form behaviour was not exercised."
+      }
+    },
+    {
+      "id": "qiangang-windows",
+      "url": "https://xk2022.github.io/xk-showcase-qiangang-windows/",
+      "finalUrl": "https://xk2022.github.io/xk-showcase-qiangang-windows/",
+      "status": 404,
+      "title": "Site not found · GitHub Pages",
+      "h1": [
+        "404"
+      ],
+      "declarationLines": [],
+      "brandEvidence": [],
+      "deliveryStatus": "BLOCKED_SOURCE_HTTP_404",
+      "limitations": [
+        "Initial normal trust request returned certificate authority error. Capture used ignoreHTTPSErrors; this is not certificate-trust verification.",
+        "Requested public source returned HTTP 404 in Chromium and curl. No brand name, business copy or demonstration disclaimer could be verified. Error screenshot is retained only in /tmp and is not a showcase asset."
+      ],
+      "checkedAt": "2026-11-22T09:20:00.184Z",
+      "dimensions": {
+        "width": 1280,
+        "height": 800
+      },
+      "visualReview": {
+        "status": "BLOCKED_SOURCE_HTTP_404",
+        "reviewedAt": "2026-11-22T09:21:05.312554+00:00",
+        "method": "Viewed raw PNG with view_image",
+        "observations": [
+          "GitHub Pages default 404 page, not requested brand website. No production WebP created."
+        ]
+      }
+    }
+  ],
+  "rawEvidence": {
+    "file": "sources.json.gz",
+    "sha256": "39d4637af6f609f0a550fbc5be8b21028904e95e9ee457f27cd13c7f4ee5e842"
+  },
+  "ownerDecision": "第 6 筆先顯示「準備中」，不放失效連結",
+  "windowsRepositoryMain": {
+    "tree": "db5cc8429e6339916a4ece196bb0fe86eb8489eb",
+    "files": [
+      "README.md"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-showcase-order/acceptance.cjs",
+    "normal",
+    "final"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T09:25:35.129516+00:00",
+  "finishedAt": "2026-11-22T09:25:58.939872+00:00",
+  "processId": 2005,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-showcase-order/normal.log",
+  "logSha256": "4866869575e288c6f02bd02d836b6f88aea24cf2d0feaa17525542740bb79c01",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

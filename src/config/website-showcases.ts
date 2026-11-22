@@ -5,19 +5,19 @@ export type WebsiteShowcase = Readonly<{
   category: string;
   summary: string;
   highlights: readonly string[];
-  href: `https://${string}`;
-  image: Readonly<{
-    src: string;
-    alt: string;
-    width: number;
-    height: number;
-  }>;
   note: string;
   attribution?: Readonly<{
     label: string;
     href: `https://${string}`;
   }>;
-}>;
+} & (
+  | {
+      availability?: "available";
+      href: `https://${string}`;
+      image: Readonly<{ src: string; alt: string; width: number; height: number }>;
+    }
+  | { availability: "preparing"; kind: "brand-demo"; href: null; image: null }
+)>;
 
 export const websiteShowcases = [
   {
@@ -53,6 +53,38 @@ export const websiteShowcases = [
     note: "自製品牌展示案例；洽詢摘要僅供模擬，實際品項、價格與配送待品牌確認。",
   },
   {
+    id: "yupinyuan-bento",
+    title: "御品園港式燒臘",
+    kind: "brand-demo",
+    category: "餐飲與團體訂餐",
+    summary: "以燒臘餐點與團體訂餐情境，展示餐飲品牌的菜單瀏覽與訂餐資訊安排。",
+    highlights: ["燒臘餐點展示", "菜單內容分類", "團體訂餐情境"],
+    href: "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+    image: {
+      src: "/images/showcases/yupinyuan-bento.webp",
+      alt: "御品園港式燒臘展示網站的桌面版首頁畫面",
+      width: 1280,
+      height: 800,
+    },
+    note: "自製品牌展示案例；餐點為示意，模擬流程不收件、不代聯絡店家。",
+  },
+  {
+    id: "campaign-website-design",
+    title: "XK 一頁式網站建置",
+    kind: "brand-demo",
+    category: "網站服務推廣",
+    summary: "以在地店家、企業服務與活動推廣為情境，呈現一頁式網站的服務介紹、合作流程與需求整理。",
+    highlights: ["適用情境導覽", "合作方式與驗收流程", "需求摘要整理示範"],
+    href: "https://xk2022.github.io/xk-campaign-website-design/",
+    image: {
+      src: "/images/showcases/campaign-website-design.webp",
+      alt: "XK 一頁式網站建置推廣頁的桌面版首頁畫面",
+      width: 1280,
+      height: 800,
+    },
+    note: "一頁式服務推廣預覽；介面含虛構品牌，需求摘要僅留在當前頁面。",
+  },
+  {
     id: "honest-diecut",
     title: "宏能興業",
     kind: "brand-demo",
@@ -69,20 +101,16 @@ export const websiteShowcases = [
     note: "自製品牌展示案例；詢價摘要僅供模擬，不會寄送或收件。",
   },
   {
-    id: "yupinyuan-bento",
-    title: "御品園港式燒臘",
+    id: "qiangang-windows",
+    title: "門窗網站展示",
     kind: "brand-demo",
-    category: "餐飲與團體訂餐",
-    summary: "以燒臘餐點與團體訂餐情境，展示餐飲品牌的菜單瀏覽與訂餐資訊安排。",
-    highlights: ["燒臘餐點展示", "菜單內容分類", "團體訂餐情境"],
-    href: "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
-    image: {
-      src: "/images/showcases/yupinyuan-bento.webp",
-      alt: "御品園港式燒臘展示網站的桌面版首頁畫面",
-      width: 1280,
-      height: 800,
-    },
-    note: "自製品牌展示案例；餐點為示意，模擬流程不收件、不代聯絡店家。",
+    category: "門窗網站",
+    availability: "preparing",
+    summary: "展示內容準備中，公開後將補上網站介紹與實際預覽。",
+    highlights: [],
+    href: null,
+    image: null,
+    note: "準備中，尚未提供可公開瀏覽的展示網站。",
   },
   {
     id: "demo-001",

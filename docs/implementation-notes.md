@@ -378,3 +378,7 @@ main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Mark
 以 main `614fb6dac0b170efd28f7441a6cf097a560d8f24` 建立 `feature/website-showcase-gallery`。依使用者提供八個網站與本次確認的資訊架構，擴充現有 Portfolio，新增四個品牌情境展示、四個第三方模板範例與八張實際 WebP 預覽；首頁精選三個產業案例，Services 與數位品牌 Solutions 導向兩個作品分類。既有九個公開路由、三個 Planned 技術專案、noindex/nofollow、Privacy/Contact 保護、套件與部署流程保持既有契約。
 
 來源頁面標示自製展示／模擬，不能因使用者口語稱「實際案例」就轉為客戶交付或成效宣稱。Demo002 背景與 Demo003 Logo 的上游缺圖於卡片提醒；Demo001 聯絡區背景缺圖記於報告。未修改其他 Repository；模板署名與真實截圖來源保留。完整驗收、限制與截圖見 [網站展示整合報告](reports/website-showcases-implementation.md)。
+
+## 品牌展示排序與新增
+
+依使用者順序調整六筆品牌展示，新增 XK 一頁式網站建置服務推廣預覽。門窗來源回應 404 且 main 僅 README，使用者確認先顯示準備中；採型別約束空連結／空圖片與純文字狀態，沒有虛構品牌或上線。既有四模板、首頁三精選、三 Planned 與保護政策保留。驗收與後續見 [品牌展示排序與新增紀錄](reports/brand-showcase-order-implementation.md)。

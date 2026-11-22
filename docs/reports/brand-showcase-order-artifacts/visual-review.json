@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-22T09:29:21.466166+00:00",
+  "reviewType": "Independent read-only visual review of root-captured final Pages screenshots; no browser/QA/build rerun",
+  "result": "PASS",
+  "blockingFindings": [],
+  "reviewedFiles": [
+    {
+      "path": "/tmp/xk-showcase-order/pages-final/portfolio-1440.png",
+      "sha256": "ec2e242936b83ecc1bfcd1220fe58970fe6b059852a9fe0af4b366d50ea47507",
+      "width": 1440,
+      "height": 9888,
+      "bytes": 2628372,
+      "method": "view_image rendered image inspected",
+      "scope": "Desktop full page; brand section additionally inspected at native crop resolution."
+    },
+    {
+      "path": "/tmp/xk-showcase-order/pages-final/portfolio-375.png",
+      "sha256": "5d2e90461be65f815086e8fbdb6117febc188dc30fcdb44ecb5394e3e216724c",
+      "width": 375,
+      "height": 17091,
+      "bytes": 1694316,
+      "method": "view_image rendered image inspected",
+      "scope": "Mobile full page; brand section additionally inspected at native crop resolution."
+    },
+    {
+      "path": "/tmp/xk-showcase-order/pages-final/preparing-375.png",
+      "sha256": "38ab3751a25041df8e522ba2139bbee09e33abf45c09066c6ae78a6610ce2b59",
+      "width": 327,
+      "height": 669,
+      "bytes": 27866,
+      "method": "view_image rendered image inspected",
+      "scope": "Native-resolution mobile preparing card."
+    },
+    {
+      "path": "/tmp/xk-showcase-order/visual-crops/brands-1440.png",
+      "sha256": "37730c485c38c2d8d92042735cad9b3093b7036a9b6f21c8ec75ddd4925a1536",
+      "width": 1240,
+      "height": 2800,
+      "bytes": 880395,
+      "method": "view_image rendered image inspected",
+      "scope": "Desktop six-brand native-resolution detail.",
+      "crop": {
+        "source": "pages-final/portfolio-1440.png",
+        "box": [
+          100,
+          1200,
+          1340,
+          4000
+        ]
+      }
+    },
+    {
+      "path": "/tmp/xk-showcase-order/visual-crops/brands-375-part1.png",
+      "sha256": "bf98114369126db24c9c1c6c49b599b25c48e74725c400d39f53cb01b8a1de02",
+      "width": 375,
+      "height": 2800,
+      "bytes": 375692,
+      "method": "view_image rendered image inspected",
+      "scope": "Mobile brands 1–4 native-resolution detail.",
+      "crop": {
+        "source": "pages-final/portfolio-375.png",
+        "box": [
+          0,
+          1750,
+          375,
+          4550
+        ]
+      }
+    },
+    {
+      "path": "/tmp/xk-showcase-order/visual-crops/brands-375-part2.png",
+      "sha256": "0eb66ac407c9f6ad978196eb3daa9a3f2c24e7e4c08fa1a4355ca3da710338f5",
+      "width": 375,
+      "height": 2800,
+      "bytes": 286409,
+      "method": "view_image rendered image inspected",
+      "scope": "Mobile brand 4 continuation, brands 5–6, and next section boundary.",
+      "crop": {
+        "source": "pages-final/portfolio-375.png",
+        "box": [
+          0,
+          4550,
+          375,
+          7350
+        ]
+      }
+    }
+  ],
+  "checks": [
+    {
+      "id": "brand-order-desktop-mobile",
+      "result": "PASS",
+      "observed": [
+        "三月手工湯包",
+        "宏家燕窩",
+        "御品園港式燒臘",
+        "XK 一頁式網站建置",
+        "宏能興業",
+        "門窗網站展示（準備中）"
+      ],
+      "detail": "Desktop row-major order and mobile top-to-bottom order match requested six entries."
+    },
+    {
+      "id": "campaign-preview",
+      "result": "PASS",
+      "detail": "Real XK one-page-service screenshot appears as fourth card; its title, descriptive content, three highlights and fictional-brand/current-page-summary caveat remain readable with normal wrapping."
+    },
+    {
+      "id": "preparing-state",
+      "result": "PASS",
+      "detail": "Sixth card displays a plain preparing text panel, explicit public-preview-unavailable wording and preparing footer text. No fake window screenshot, external-link arrow or active opening CTA is visible. Earlier source review confirmed this footer is a paragraph, href/image are null, and the card has no button or link."
+    },
+    {
+      "id": "reflow-clipping",
+      "result": "PASS",
+      "detail": "Brand cards have consistent margins, readable wrapping and aligned image/card boundaries at 1440px and 375px. No visible horizontal overflow, truncated headings, cropped card copy or overlapping elements in inspected brand regions."
+    }
+  ],
+  "nonBlockingLimitations": [
+    "Full-page images were initially downscaled by the viewing tool; the relevant brand regions were then inspected through lossless native-resolution crops, without repainting or modifying page content.",
+    "The preparing card retains whitespace to align the card grid and a dashed status text border. This is visually subdued and explicitly labelled preparing; source review established it is not interactive.",
+    "Screenshot inspection establishes visible layout only. Root owns actual keyboard, interaction, accessibility and resource assertions; these were not rerun by this review.",
+    "The requested qiangang public URL returned HTTP 404 in the earlier source check. This review validates the user-approved preparing representation, not availability or business content of that external site."
+  ],
+  "repositoryMutations": "None. Only review crops and this JSON were written under /tmp/xk-showcase-order."
+}

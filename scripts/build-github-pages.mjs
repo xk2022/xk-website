@@ -195,13 +195,26 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   const portfolioPage = portfolioPages.find((page) => page.pagePath === pagePath);
   if (pagePath === "/portfolio") {
     const visibleHtml = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
-    assert.equal(websiteShowcases.length, 8, "Portfolio must include all eight approved website links.");
-    assert.equal(new Set(websiteShowcases.map(({ id }) => id)).size, 8, "Website showcase IDs must be unique.");
-    assert.equal(websiteShowcases.filter(({ kind }) => kind === "brand-demo").length, 4, "Keep four brand demonstrations separate from templates.");
+    assert.equal(websiteShowcases.length, 10, "Portfolio must retain six brand entries and four template samples.");
+    assert.equal(new Set(websiteShowcases.map(({ id }) => id)).size, 10, "Website showcase IDs must be unique.");
+    const brandOrder = ["march-tangbao", "hongjia-birdnest", "yupinyuan-bento", "campaign-website-design", "honest-diecut", "qiangang-windows"];
+    assert.deepEqual(websiteShowcases.filter(({ kind }) => kind === "brand-demo").map(({ id }) => id), brandOrder, "Keep the owner-approved brand order.");
+    let previousPosition = -1;
+    for (const id of brandOrder) {
+      const position = visibleHtml.indexOf(`data-showcase-id="${id}"`);
+      assert.ok(position > previousPosition, `Incorrect rendered brand order: ${id}.`);
+      previousPosition = position;
+    }
     for (const id of ["website-cases", "website-samples", "portfolio-projects"]) {
       assert.ok(visibleHtml.includes(`id="${id}"`), `Missing Portfolio category anchor: ${id}.`);
     }
     for (const showcase of websiteShowcases) {
+      if (showcase.availability === "preparing") {
+        assert.equal(showcase.href, null, "Preparing entries must not expose unavailable links.");
+        assert.equal(showcase.image, null, "Preparing entries must not fabricate previews.");
+        assert.ok(visibleHtml.includes(`data-showcase-id="${showcase.id}" data-showcase-state="preparing"`), "Missing explicit preparing state.");
+        continue;
+      }
       assert.ok(visibleHtml.includes(`href="${showcase.href}"`), `Missing public showcase link: ${showcase.id}.`);
       assert.ok(visibleHtml.includes(`src="${basePath}${showcase.image.src}"`), `Incorrect showcase preview base path: ${showcase.id}.`);
       assert.ok(existsSync(join(output, showcase.image.src)), `Missing local preview: ${showcase.id}.`);

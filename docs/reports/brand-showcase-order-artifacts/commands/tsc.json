@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "npx",
+    "tsc",
+    "--noEmit"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-22T09:24:55.381935+00:00",
+  "finishedAt": "2026-11-22T09:24:58.154454+00:00",
+  "processId": 1763,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-showcase-order/tsc.log",
+  "logSha256": "e0d5fd0bdebcba8fe9c7e303d0e6bfcfbbc4cda1af1190b751ea1251221ce456",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

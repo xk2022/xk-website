@@ -16,9 +16,9 @@ export function WebsiteShowcaseCard({ showcase, headingLevel = "h3" }: WebsiteSh
     : "";
 
   return (
-    <article className="min-w-0">
+    <article className="min-w-0" data-showcase-id={showcase.id} data-showcase-state={showcase.availability ?? "available"}>
       <Card className="h-full gap-0 overflow-hidden p-0">
-        <Image
+        {showcase.image ? <Image
           src={`${basePath}${showcase.image.src}`}
           alt={showcase.image.alt}
           width={showcase.image.width}
@@ -27,7 +27,12 @@ export function WebsiteShowcaseCard({ showcase, headingLevel = "h3" }: WebsiteSh
           loading="lazy"
           unoptimized
           className="aspect-[8/5] h-auto w-full border-b bg-surface object-cover"
-        />
+        /> : (
+          <div className="flex aspect-[8/5] flex-col items-center justify-center gap-3 border-b bg-surface px-6 text-center">
+            <p className="type-h3 font-semibold text-primary">準備中</p>
+            <p className="type-body-sm text-muted-foreground">公開後提供網站預覽</p>
+          </div>
+        )}
         <CardHeader className="p-6">
           <p className="type-caption break-words font-semibold text-secondary">
             {showcase.category} · {showcase.kind === "brand-demo" ? "品牌網站展示" : "模板範例"}
@@ -36,12 +41,12 @@ export function WebsiteShowcaseCard({ showcase, headingLevel = "h3" }: WebsiteSh
           <CardDescription className="type-body">{showcase.summary}</CardDescription>
         </CardHeader>
         <CardContent className="space-y-5 px-6 pb-6">
-          <ul className="type-body-sm list-disc space-y-2 pl-5 text-muted-foreground">
+          {showcase.highlights.length > 0 && <ul className="type-body-sm list-disc space-y-2 pl-5 text-muted-foreground">
             {showcase.highlights.map((highlight) => <li key={highlight} className="break-words">{highlight}</li>)}
-          </ul>
+          </ul>}
           <p className="type-body-sm break-words text-muted-foreground">{showcase.note}</p>
         </CardContent>
-        <CardFooter className="flex-col items-stretch border-t p-6 pt-5">
+        <CardFooter className="mt-auto flex-col items-stretch border-t p-6 pt-5">
           {showcase.attribution && (
             <a
               href={showcase.attribution.href}
@@ -54,7 +59,7 @@ export function WebsiteShowcaseCard({ showcase, headingLevel = "h3" }: WebsiteSh
               <ExternalLink aria-hidden="true" className="size-4 shrink-0" />
             </a>
           )}
-          <Button asChild variant="outline" className="w-full">
+          {showcase.href ? <Button asChild variant="outline" className="w-full">
             <a
               href={showcase.href}
               target="_blank"
@@ -63,7 +68,9 @@ export function WebsiteShowcaseCard({ showcase, headingLevel = "h3" }: WebsiteSh
             >
               開啟展示網站<ArrowUpRight aria-hidden="true" />
             </a>
-          </Button>
+          </Button> : (
+            <p className="type-body-sm flex min-h-11 items-center justify-center rounded-md border border-dashed px-4 py-2 font-medium text-muted-foreground">展示網站準備中</p>
+          )}
         </CardFooter>
       </Card>
     </article>
