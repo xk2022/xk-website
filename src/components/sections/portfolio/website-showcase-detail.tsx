@@ -21,9 +21,6 @@ function ShowcaseTextList({ items }: { items: readonly string[] }) {
 
 export function WebsiteShowcaseDetail({ showcase }: { showcase: AvailableBrandShowcase }) {
   const { detail, image } = showcase;
-  const basePath = process.env.XK_PAGES_EXPORT === "1"
-    ? (process.env.XK_PAGES_BASE_PATH ?? "/xk-website")
-    : "";
   const websiteService = serviceCategories.find((service) => service.id === "website-development");
   if (!websiteService) throw new Error("Missing website development service");
 
@@ -67,7 +64,7 @@ export function WebsiteShowcaseDetail({ showcase }: { showcase: AvailableBrandSh
           <SectionHeading id="showcase-preview-title" eyebrow="WEBSITE PREVIEW" title="網站預覽與來源" titleLang="zh-TW" description="以展示網站的實際畫面了解內容與介面安排，完整互動可前往展示網站瀏覽。" />
           <figure className="min-w-0 overflow-hidden rounded-lg border bg-background">
             <Image
-              src={`${basePath}${image.src}`}
+              src={image.src}
               alt={image.alt}
               width={image.width}
               height={image.height}

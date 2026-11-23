@@ -388,3 +388,7 @@ main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Mark
 本次以 main f2c8091 為基準，納入尚未發布的清單文件後建立 bugfix/009-016-website-refinements。使用者明確授權實作、Push／PR／CI 後合併與部署確認。改善中性品牌文案、啟用千剛提案、六品牌站內詳頁、性質標籤與原生收合；問題模板只供參考，來源外站仍需另案修補。
 
 15 公開路由維持 protected SEO，原三個 Planned 專案資料未改；Contact 實際渠道與 Privacy／正式索引資料仍缺，分別記 BLOCKED，不以合併指示代填核准。共用 smoke 與獨立 fixture 供後續重跑，不加 npm 依賴。變更、工具失敗及人工候選的最終判定見 [本輪報告](reports/bf009-016-implementation.md)；發布缺口見 [正式發布前置清單](publication-readiness.md)。
+
+## 2026-11-23 自訂網域根路徑修正
+
+使用者指定 https://www.xplorekaleidoscope.com/ 為對外網址，修正既有 /xk-website 資源 404。集中正式 Origin 與空 Base Path，Pages 明確空 Asset Prefix，圖片／robots 移除舊 Repo fallback；workflow 對 provider 網域與空路徑先驗證，不再把 Repo 路徑直接注入 build。維持普通 Next.js 與靜態匯出、原 UI／內容／依賴、noindex、草案與無收件表單；分享圖／Sitemap 尚未發布。操作見 [自訂網域部署指南](custom-domain-deployment.md)，實際測試／版本／限制見 [本輪報告](reports/custom-domain-assets-2026-11-23.md)。

@@ -1,0 +1,41 @@
+{
+  "task": "custom-domain-root-assets-fix",
+  "baseCommit": "c124954",
+  "preparedAt": "2026-11-23T15:31:27.363Z",
+  "timezone": "Asia/Taipei",
+  "environments": {
+    "normal": "http://127.0.0.1:3170/",
+    "pages": "http://127.0.0.1:3171/",
+    "live": "https://www.xplorekaleidoscope.com/"
+  },
+  "canonicalOrigin": "https://www.xplorekaleidoscope.com",
+  "basePath": "",
+  "expected": {
+    "routes": 15,
+    "widths": [
+      375,
+      1440
+    ],
+    "testRows": 75,
+    "defaultResponsive": 30,
+    "portfolioExpandedResponsive": 2,
+    "previewHashes": 8,
+    "protected404": 6,
+    "representativeScreenshots": 2
+  },
+  "formalSuiteExecuted": false,
+  "files": {
+    "browser.cjs": "91d67d2aa089c015a795048ead0d12b56847b3b2b6739b511e5c5e665be3c61c",
+    "preflight-live.cjs": "bbd5040c793d033c1720d33df7c4c6c1dd20a60198e06504a4caf912248e922b",
+    "seo.json": "60a8d51028b255e7c461caf792f39577058099463e1a080e5367ea8d78027f02",
+    "showcases.json": "a25e20bdbf9ceaac63b4b46b0c34d7609e0571c4f5b6bd371c19fa3f39e61c7a"
+  },
+  "completedAt": "2026-11-23T15:31:49.386Z",
+  "preflight": {
+    "status": "REPRODUCED",
+    "observedExitCode": 0,
+    "bugPairs": 4,
+    "receipt": "preflight-live.receipt.json",
+    "result": "preflight-live.json"
+  }
+}

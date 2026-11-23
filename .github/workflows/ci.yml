@@ -84,13 +84,24 @@ jobs:
         id: pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
+      - name: Verify custom-domain root configuration
+        env:
+          CONFIGURED_PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          CONFIGURED_PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from "node:assert/strict";
+          assert.equal(process.env.CONFIGURED_PAGES_BASE_PATH, "", "GitHub Pages must serve the custom domain from its root.");
+          assert.equal(new URL(process.env.CONFIGURED_PAGES_BASE_URL).origin, "https://www.xplorekaleidoscope.com", "GitHub Pages must retain the approved www custom domain.");
+          NODE
+
       - name: Install locked dependencies
         run: npm ci
 
       - name: Build and verify static website
         run: npm run build:pages
         env:
-          XK_PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          XK_PAGES_BASE_PATH: ""
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0

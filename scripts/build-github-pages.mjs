@@ -5,8 +5,12 @@ import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const basePath = (process.env.XK_PAGES_BASE_PATH ?? "/xk-website").replace(/\/+$/, "");
-assert.match(basePath, /^(\/[A-Za-z0-9._~-]+)*$/, "XK_PAGES_BASE_PATH must be empty or a URL path such as /xk-website.");
+const { pagesDeployment, assertPagesBasePath } = await import(new URL("../src/config/deployment.ts", import.meta.url));
+// Independently approved deployment fixture: a source-config change must not
+// silently move this artifact back to a GitHub project path or the apex origin.
+assert.deepEqual(pagesDeployment, { origin: "https://www.xplorekaleidoscope.com", basePath: "" }, "Pages must retain the approved www custom-domain root deployment.");
+assertPagesBasePath(process.env.XK_PAGES_BASE_PATH);
+const basePath = pagesDeployment.basePath;
 const { privacyPolicy, privacyDraftMarker, privacyPageMetadata } = await import(new URL("../src/config/privacy.ts", import.meta.url));
 const { websiteShowcases, showcaseSettings, showcaseDetailPath, showcaseSeoPages, presentationLabels, showcaseStateLabels } = await import(new URL("../src/config/website-showcases.ts", import.meta.url));
 const showcaseContract = JSON.parse(readFileSync(new URL("./fixtures/showcase-contract.json", import.meta.url), "utf8"));
@@ -17,6 +21,7 @@ const [{ seoPages, getSeoPage, seoProtectionPolicy }, { siteConfig }, seo, navig
   import(new URL("../src/config/navigation.ts", import.meta.url)),
 ]);
 assert.deepEqual(seoProtectionPolicy, { mode: "protected", publishSitemap: false }, "SEO protection must remain enabled.");
+assert.equal(siteConfig.url, pagesDeployment.origin, "Brand metadata and the Pages deployment origin must agree.");
 assert.ok(["draft", "approved"].includes(privacyPolicy.status), "Unknown Privacy policy status.");
 const privacyApproved = privacyPolicy.status === "approved";
 const privacySectionIds = ["policy-scope", "data-collection", "data-use", "retention", "third-parties", "cookies-tracking", "your-rights", "privacy-contact", "policy-updates"];
@@ -84,7 +89,7 @@ function metadataAttribute(html, selectorAttribute, selectorValue, targetAttribu
 function verifyBrandUrl(value, expectedPath, label) {
   assert.ok(value, `${label} is missing.`);
   const url = new URL(value);
-  assert.equal(url.origin, "https://xplorekaleidoscope.com", `${label} origin is incorrect.`);
+  assert.equal(url.origin, pagesDeployment.origin, `${label} origin is incorrect.`);
   assert.equal(url.pathname.replace(/\/$/, ""), expectedPath, `${label} path is incorrect.`);
   assert.equal(url.search, "", `${label} must not contain a query string.`);
   assert.equal(url.hash, "", `${label} must not contain a fragment.`);
@@ -93,8 +98,16 @@ function verifyBrandUrl(value, expectedPath, label) {
 const assetOrigin = "https://pages.invalid";
 const checkedAssets = new Set();
 
+function verifyNoLegacyProjectPath(reference, fromUrl, label) {
+  if (!reference) return;
+  const url = new URL(reference.replaceAll("&amp;", "&"), fromUrl);
+  const websiteOrigins = new Set([assetOrigin, pagesDeployment.origin, "https://xplorekaleidoscope.com", "https://xk2022.github.io"]);
+  assert.ok(!websiteOrigins.has(url.origin) || !/^\/xk-website(?:\/|$)/.test(decodeURIComponent(url.pathname)), `${label} references the retired /xk-website/ deployment prefix: ${reference}`);
+}
+
 function verifyAsset(reference, fromUrl, label) {
   if (!reference || reference.startsWith("#")) return;
+  verifyNoLegacyProjectPath(reference, fromUrl, label);
   const url = new URL(reference.replaceAll("&amp;", "&"), fromUrl);
   // Remote and embedded resources are covered by browser/network checks.
   if (url.origin !== assetOrigin) return;
@@ -117,7 +130,10 @@ function verifyAsset(reference, fromUrl, label) {
 
 function verifyReferencedAssets(html, pagePath, label) {
   const fromUrl = new URL(`${basePath}${pagePath}/`, assetOrigin);
-  for (const tag of html.match(/<(?:script|link|img|source|video|audio)\b[^>]*>/g) ?? []) {
+  for (const tag of html.match(/<(?:a|script|link|img|source|video|audio)\b[^>]*>/g) ?? []) {
+    for (const attribute of ["href", "src", "poster"]) {
+      verifyNoLegacyProjectPath(tagAttribute(tag, attribute), fromUrl, label);
+    }
     if (tag.startsWith("<link")) {
       const rel = tagAttribute(tag, "rel") ?? "";
       if (/\b(?:stylesheet|preload|modulepreload|icon|apple-touch-icon|mask-icon)\b/.test(rel)) {

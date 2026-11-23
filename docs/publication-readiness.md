@@ -1,12 +1,12 @@
 # XK 正式發布前置清單
 
-建立／更新日期：2026-11-22（Asia/Taipei）。對應 BF-010、BF-015；本文件記錄決策與資料缺口，不是索引、法律政策或網域變更授權。
+建立日期：2026-11-22；更新日期：2026-11-23（Asia/Taipei）。對應 BF-010、BF-015；本文件記錄決策與資料缺口，不是索引、法律政策或網域變更授權。
 
 ## 目前可確認的狀態
 
 - 官網採 GitHub Actions → GitHub Pages；一般 Next.js production build 保留。
 - 所有公開頁面仍為 noindex/nofollow；Sitemap 不發布，Privacy 草案不公開。
-- 品牌網址與 Canonical 基準為 `https://xplorekaleidoscope.com`；Pages 可用網址為 `https://xk2022.github.io/xk-website/`。正式推廣網址與切換方式需要獨立決策，不把環境的 Tunnel 403 判為 DNS 故障。
+- 2026-11-23 使用者明確指定 `https://www.xplorekaleidoscope.com/`；本輪更新 Canonical／OG 等來源與根路徑建置。Pages API 顯示 www、自訂網域 HTTPS 憑證核准及強制 HTTPS；資源與部署驗收依 [本輪報告](reports/custom-domain-assets-2026-11-23.md)／PR，不把先前環境 Tunnel 403 判為 DNS 故障。
 - Contact 是否可用，僅由 [已確認管道](../src/config/contact.ts) 決定。本次已請使用者提供可公開且可收件的實際資料；沒有資料就不填入建議或猜測地址。
 - [Privacy 設定](../src/config/privacy.ts) 仍為 draft-1，資料處理主體、生效日與權利聯絡管道未確認。先前未提供的法律核准，不會因合併網站修正而視為取得。
 
@@ -15,7 +15,7 @@
 | ID | 項目 | 目前狀態 | 完成所需資料／證據 |
 | --- | --- | --- | --- |
 | PUB-01 | 商務聯絡管道 | BLOCKED | 使用者確認可公開的 Email／HTTPS 管道、接收對象與實際可用／收件紀錄；不以程式或 CI 成功替代 |
-| PUB-02 | 正式對外網址 | BLOCKED | 使用者指定發布網址、需要變更的範圍與對應管理權限；確認 Pages、Canonical、重新導向及實際 HTTP |
+| PUB-02 | 正式對外網址 | PENDING（網址已確認） | www 與根路徑已由使用者指定；本輪 PR 追蹤 Canonical、資源、部署與公開 HTTP 實測，與索引及法律核准分開 |
 | PUB-03 | 索引開放範圍 | PENDING | 明確的索引發布指示、可索引路由清單與實際內容核對；提案／模板不自動改為客戶成果 |
 | PUB-04 | Privacy 同版本核准 | BLOCKED | 同一版本正文的 Owner／法律審閱紀錄、真實資料處理主體、有效權利管道、生效日 |
 | PUB-05 | Sitemap／robots／搜尋驗證 | PENDING | PUB-02／03 決策完成後另行定義；GSC、驗證 token、DNS 或 Domain 需在當次授權範圍內 |

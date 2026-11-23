@@ -1,0 +1,46 @@
+{
+  "testId": "DOMAIN-FIX-LIMITED-VISUAL-REVIEW",
+  "reviewedAtUtc": "2026-11-23T15:39:37.809Z",
+  "status": "PASS_WITH_SCOPE_LIMITATIONS",
+  "images": [
+    {
+      "path": "/tmp/xk-domain-fix/pages-final/home-1440.png",
+      "sha256": "9938b27c62387d3b0572a2617a143f817e2d9b75facf171152ba89e8b97df909",
+      "width": 1440,
+      "height": 7872,
+      "actuallyViewed": true
+    },
+    {
+      "path": "/tmp/xk-domain-fix/pages-final/portfolio-375.png",
+      "sha256": "d46d5315a7780baa88a92d2dbb0e28d261c7398eb47043530a49b0e7c2166f64",
+      "width": 375,
+      "height": 12982,
+      "actuallyViewed": true
+    }
+  ],
+  "actualInspectionScope": [
+    "Directly viewed only the supplied Home 1440px and Portfolio 375px full-page screenshots, from header through footer, using view_image.",
+    "Checked visible CSS styling, typography appearance, rendered interface icons and brand/showcase images, desktop card alignment, mobile single-column layout, disclosure summaries, CTAs and gross clipping/overlap.",
+    "No repository or original image modifications; no Python, browser, build, server or network checks were run for this visual review."
+  ],
+  "findings": [
+    {
+      "scope": "home-1440.png",
+      "result": "PASS",
+      "observation": "The page is visibly styled with the established colors, typography hierarchy, spacing and card layout. Header/hero/footer brand marks, service icons, action icons and all three featured showcase images render. No major blank asset area, unstyled layout, overlapping content or severe clipping is visible."
+    },
+    {
+      "scope": "portfolio-375.png",
+      "result": "PASS",
+      "observation": "The mobile header, hero brand image and all six brand showcase previews render. Cards, badges, stacked actions, collapsed template/Planned summaries, technology cards and footer remain within the visible single-column layout. No major overflow, clipped section, overlapping controls or broken-image placeholder is visible."
+    }
+  ],
+  "blockingFindings": [],
+  "blockingCount": 0,
+  "limitations": [
+    "The viewer downscaled the very tall full-page images to 1098x6000 and 173x6000 respectively. This was a layout/resource-appearance check, not character-by-character or pixel-level inspection.",
+    "A screenshot shows the rendered typography appearance but cannot establish exact font files, HTTP status, asset URL correctness, metadata values or byte-for-byte design equivalence; those require the separate Root evidence.",
+    "No other pages, viewports, expanded disclosure/menu states, focus/interaction states or full accessibility assessment were reviewed. No axe or complete a11y claim is made."
+  ],
+  "frozen": true
+}

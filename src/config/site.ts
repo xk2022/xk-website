@@ -1,7 +1,9 @@
+import { pagesDeployment } from "./deployment.ts";
+
 export const siteConfig = {
   name: "Xplore Kaleidoscope",
   abbreviation: "XK",
-  url: "https://xplorekaleidoscope.com",
+  url: pagesDeployment.origin,
   locale: "zh-TW",
   tagline: "Building Digital Solutions with Web, Java & AI.",
   slogan: "Explore Possibilities. Create Digital Value.",

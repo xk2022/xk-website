@@ -1,0 +1,14 @@
+{
+  "testedAt": "2026-11-23T15:32:00.748724+00:00",
+  "command": [
+    "python3",
+    "scripts/smoke-website.py",
+    "--base-url",
+    "https://www.xplorekaleidoscope.com/xk-website/"
+  ],
+  "expectedExitCode": 2,
+  "actualExitCode": 2,
+  "stderr": "usage: smoke-website.py [-h] --base-url BASE_URL [--output OUTPUT]\n                        [--timeout TIMEOUT] [--check-external]\n                        [--check-source-assets]\nsmoke-website.py: error: --base-url must use the origin root; the retired /xk-website/ prefix is unsupported\n",
+  "normalizedDefaultPortLegacyPath": "rejected",
+  "result": "PASS"
+}

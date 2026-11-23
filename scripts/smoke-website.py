@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HTTP/HTML smoke for the existing production build; Python 3 standard library only."""
+"""HTTP/HTML smoke for a root-served production build; Python 3 standard library only."""
 
 import argparse
 from collections import Counter
@@ -21,6 +21,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTRACT_PATH = ROOT / "scripts/fixtures/showcase-contract.json"
+APPROVED_PAGES_DEPLOYMENT = {"origin": "https://www.xplorekaleidoscope.com", "basePath": ""}
 VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 
 
@@ -151,7 +152,9 @@ class Smoke:
         self.base = args.base_url.rstrip("/") + "/"
         parsed = urlsplit(self.base)
         if parsed.scheme not in {"http", "https"} or not parsed.netloc or parsed.query or parsed.fragment or parsed.username:
-            raise ValueError("--base-url must be a plain HTTP(S) URL, optionally with a deployment base path")
+            raise ValueError("--base-url must be a plain HTTP(S) root URL")
+        if parsed.path != "/":
+            raise ValueError("--base-url must use the origin root; the retired /xk-website/ prefix is unsupported")
         self.origin = (parsed.scheme, parsed.netloc)
         self.base_path = parsed.path.rstrip("/")
         self.environment = {"python": platform.python_version(), "platform": platform.platform(), "baseUrl": self.base,
@@ -180,13 +183,19 @@ class Smoke:
     def route_url(self, path):
         return self.base + path.lstrip("/") + ("/" if path != "/" and not path.endswith("/") else "")
 
+    def uses_legacy_project_path(self, url):
+        website_origins = {self.origin, ("https", "www.xplorekaleidoscope.com"), ("https", "xplorekaleidoscope.com"), ("https", "xk2022.github.io")}
+        normalized = urlsplit(normalized_absolute_http_url(url.geturl()) or url.geturl())
+        return (normalized.scheme, normalized.netloc) in website_origins and bool(re.match(r"^/xk-website(?:/|$)", unquote(normalized.path)))
+
     def source_contract(self):
         script = """
 import * as showcases from './src/config/website-showcases.ts';
 import {seoPages,seoProtectionPolicy} from './src/config/seo.ts';
 import {siteConfig} from './src/config/site.ts';
+import {pagesDeployment} from './src/config/deployment.ts';
 import {privacyPolicy,privacyDraftMarker} from './src/config/privacy.ts';
-console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,privacyPolicy,privacyDraftMarker}));
+console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pagesDeployment,privacyPolicy,privacyDraftMarker}));
 """
         result = subprocess.run(["node", "--input-type=module", "-e", script], cwd=ROOT, capture_output=True, text=True)
         self.check("Native Node.js source import exits successfully", 0, result.returncode, result.stderr.strip())
@@ -194,10 +203,13 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pr
             return False
         self.data = json.loads(result.stdout)
         self.environment["node"] = subprocess.run(["node", "--version"], capture_output=True, text=True, check=True).stdout.strip()
-        sources = ["scripts/smoke-website.py", "scripts/fixtures/showcase-contract.json", "src/config/website-showcases.ts", "src/config/seo.ts", "src/config/site.ts", "src/config/privacy.ts"]
+        sources = ["scripts/smoke-website.py", "scripts/fixtures/showcase-contract.json", "src/config/website-showcases.ts", "src/config/seo.ts", "src/config/site.ts", "src/config/deployment.ts", "src/config/privacy.ts"]
         self.environment["sourceSha256"] = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in sources}
         config = self.data["showcases"]
         entries = config["websiteShowcases"]
+        self.check("Independent approved www root deployment", APPROVED_PAGES_DEPLOYMENT, self.data["pagesDeployment"])
+        self.check("Independent approved brand metadata origin", APPROVED_PAGES_DEPLOYMENT["origin"], self.data["siteConfig"]["url"])
+        self.check("Smoke target uses the deployment root", APPROVED_PAGES_DEPLOYMENT["basePath"], self.base_path)
         # GitHub Pages projects can share the deployment origin. Only explicit,
         # reviewed absolute destinations may bypass this website's base path.
         self.external_destinations = {
@@ -334,6 +346,9 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pr
             if explicit_destination in self.external_destinations:
                 continue
             url = urlsplit(urljoin(page_url, reference))
+            if self.uses_legacy_project_path(url):
+                invalid.append({"href": reference, "reason": "retired /xk-website/ deployment prefix"})
+                continue
             if (url.scheme, url.netloc) != self.origin:
                 continue
             if self.base_path and not url.path.startswith(self.base_path + "/") and url.path != self.base_path:
@@ -361,6 +376,9 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pr
                 references.extend(filter(None, [element.attrs.get("href")]))
             for reference in references:
                 url = urlsplit(urljoin(page_url, reference))
+                if self.uses_legacy_project_path(url):
+                    bad_assets.append({"url": url.geturl(), "reason": "retired /xk-website/ deployment prefix"})
+                    continue
                 if (url.scheme, url.netloc) != self.origin:
                     continue
                 resolved = urlunsplit((url.scheme, url.netloc, url.path, url.query, ""))
@@ -458,7 +476,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pr
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--base-url", required=True, help="Existing normal or Pages server URL, including /xk-website/ when applicable")
+    parser.add_argument("--base-url", required=True, help="Existing production/Pages server at its origin root, e.g. http://127.0.0.1:3101/ or https://www.xplorekaleidoscope.com/; /xk-website/ is rejected")
     parser.add_argument("--output", default="/tmp/xk-website-smoke-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ") + ".json", help="JSON evidence path (default: unique timestamped /tmp file)")
     parser.add_argument("--timeout", type=float, default=20, help="Per-request timeout in seconds")
     parser.add_argument("--check-external", action="store_true", help="Also require available external showcase homepages to return HTTP 200")
