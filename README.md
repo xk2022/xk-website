@@ -1,6 +1,6 @@
 # xk-website
 
-網站：[https://xk2022.github.io/xk-website/](https://xk2022.github.io/xk-website/)
+網站：[https://www.xplorekaleidoscope.com/](https://www.xplorekaleidoscope.com/)
 
 官方網站，獨立交給 Codex 開發。
 
@@ -10,7 +10,7 @@
 
 ## 作品展示
 
-[作品展示頁](https://xk2022.github.io/xk-website/portfolio/) 收錄品牌網站展示、第三方模板範例及獨立的技術規劃。資料集中於 `src/config/website-showcases.ts`，預覽圖為來源網站的實際首屏；新增作品時應同步確認來源、展示性質、素材與外部連結。實作與驗收見 [網站展示整合報告](docs/reports/website-showcases-implementation.md)。
+[作品展示頁](https://www.xplorekaleidoscope.com/portfolio/) 收錄品牌網站展示、第三方模板範例及獨立的技術規劃。資料集中於 `src/config/website-showcases.ts`，預覽圖為來源網站的實際首屏；新增作品時應同步確認來源、展示性質、素材與外部連結。實作與驗收見 [網站展示整合報告](docs/reports/website-showcases-implementation.md)。
 
 品牌展示維持三月手工湯包、宏家燕窩、御品園港式燒臘、XK 一頁式網站建置、宏能興業及千剛實業順序，六案皆有站內介紹。模板與技術規劃可展開瀏覽；素材待整理的模板僅供參考，保留來源署名。本輪狀態見 [BF-009～BF-016 報告](docs/reports/bf009-016-implementation.md)，原排序紀錄保留於 [歷史報告](docs/reports/brand-showcase-order-implementation.md)。
 
@@ -22,7 +22,7 @@
 
 使用者於 Task 003 選擇 **GitHub Actions → GitHub Pages 靜態網站**。正式模式仍保留一般 Next.js 建置，Vercel 相容設定使用 Next.js preset、Repository 根目錄 `.`、production branch `main`；實際連結及發布狀態以 Task 013 報告與當次部署證據為準，不需要在 Repository 新增 Vercel Secrets。
 
-Pages 建置使用 `npm run build:pages`，輸出 `out/`，預設路徑為 `/xk-website`。Pull Request 執行品質檢查與靜態建置，只有 `main` 推送或手動選擇 `main` 時才進入部署工作，不會自動合併 PR。Pages 設定與部署狀態詳見 [GitHub Pages 部署指南](docs/reports/github-pages-deployment.md)。不變更 DNS 或品牌正式網域設定。
+Pages 建置使用 `npm run build:pages`，輸出 `out/`，使用自訂網域根路徑（`basePath: ""`、`assetPrefix: ""`）。Pull Request 執行品質檢查與靜態建置，只有 `main` 推送或手動選擇 `main` 時才進入部署工作，不會自動合併 PR。目前設定與操作見 [自訂網域部署指南](docs/custom-domain-deployment.md)，原 project-path 結果保留於 [歷史部署報告](docs/reports/github-pages-deployment.md)。不變更 DNS 或品牌正式網域設定。
 
 ## 本機開發與 Task 002 驗收
 
@@ -70,7 +70,7 @@ npm run build:pages
 
 新增 `/about`，提供品牌介紹、使命、願景、核心能力、工作方式、創辦人介紹與服務理念。Header、手機選單與 Footer 的「關於 XK」現在指向此頁；既有首頁 `#about`／`#brand` 錨點仍保留。
 
-本機執行 `npm run dev` 後開啟 <http://localhost:3000/about>。GitHub Pages 匯出使用 `/xk-website/about/` 路徑，CTA 返回實際首頁服務與聯絡區塊。頁面保留 `noindex, nofollow`，沒有公開未確認的創辦人姓名、照片或聯絡方式。
+本機執行 `npm run dev` 後開啟 <http://localhost:3000/about>。GitHub Pages 匯出使用 `/about/` 路徑，CTA 返回實際首頁服務與聯絡區塊。頁面保留 `noindex, nofollow`，沒有公開未確認的創辦人姓名、照片或聯絡方式。
 
 Task 004 指定的品質指令為 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`。Pages 部署流程延用 Task 003；本次 About 功能先以獨立 PR 供審核，不自動合併或宣稱已發布。
 
@@ -80,7 +80,7 @@ Task 004 指定的品質指令為 `npm ci`、`npx tsc --noEmit`、`npm run lint`
 
 新增 `/services`，以網站開發、Java 企業系統、系統整合與資料管理、AI 與自動化、雲端基礎架構五類服務說明技術範圍、適用情境、服務組合與五階段合作方式。首頁已新增「了解完整服務」連結；既有首頁 R05 Maintenance 服務分類及首頁服務錨點仍保留，沒有新增服務明細內頁。
 
-本機執行 `npm run dev` 後開啟 <http://localhost:3000/services>。Pages 靜態匯出路徑為 `/xk-website/services/`；共用「服務項目」導覽改為 `/services`。目前聯絡入口仍使用真實的首頁 `/#contact`，不公開未確認的信箱、表單、價格或服務保證。
+本機執行 `npm run dev` 後開啟 <http://localhost:3000/services>。Pages 靜態匯出路徑為 `/services/`；共用「服務項目」導覽改為 `/services`。目前聯絡入口仍使用真實的首頁 `/#contact`，不公開未確認的信箱、表單、價格或服務保證。
 
 本次驗收指令：
 
@@ -100,7 +100,7 @@ npm run build:pages
 
 Header、Footer 與手機導覽的「解決方案」指向 `/solutions`，首頁保留原 `#solutions` 及三項摘要，並提供「了解解決方案」入口。所有 Services 連結對應實際錨點，聯絡入口仍為 `/#contact`；不提供未確認信箱或假表單。
 
-本機網址為 `http://localhost:3000/solutions`；Pages 靜態網址使用 `/xk-website/solutions/`。保留一般 `npm run build` 與獨立 `npm run build:pages`、品牌 Canonical、Open Graph 及 `noindex, nofollow`。以 `npm ci`、TypeScript、Lint、兩種 Build 及實際瀏覽器驗收確認成果；Pages 產物不能用 `npm run start` 取代靜態服務。
+本機網址為 `http://localhost:3000/solutions`；Pages 靜態網址使用 `/solutions/`。保留一般 `npm run build` 與獨立 `npm run build:pages`、品牌 Canonical、Open Graph 及 `noindex, nofollow`。以 `npm ci`、TypeScript、Lint、兩種 Build 及實際瀏覽器驗收確認成果；Pages 產物不能用 `npm run start` 取代靜態服務。
 
 規格：[Task 006](docs/task/task006.md)。來源對照、實作內容、驗收結果、修正與七份真實截圖見 [Task 006 實作及驗證報告](docs/reports/task006-implementation.md)。遠端 PR／CI／部署狀態依報告及實際 GitHub 紀錄確認，不以本機建置或舊任務結果代替。
 
@@ -110,7 +110,7 @@ Header、Footer 與手機導覽的「解決方案」指向 `/solutions`，首頁
 
 Header、Footer 與手機導覽共用「技術作品集」入口；相關服務連至現有 `/services#...`，聯絡沿用 `contactNavigation.href` 的首頁錨點。無合法且可驗證的案例素材時顯示文字空狀態，不建立假畫面或無效按鈕。未新增展示系統、Backend、API、依賴或全域樣式。
 
-本機使用 `http://localhost:3000/portfolio`；Pages 使用 `/xk-website/portfolio/` 及三個同前綴詳頁。三個 slug 由明確 static params 產生，未知 slug 回傳 404；四頁保留各自 Metadata、品牌 Canonical 及 `noindex, nofollow`。一般 production server 與 Pages 靜態產物分別驗收，不混用 `.next/` 模式。
+本機使用 `http://localhost:3000/portfolio`；Pages 使用 `/portfolio/` 及三個同前綴詳頁。三個 slug 由明確 static params 產生，未知 slug 回傳 404；四頁保留各自 Metadata、品牌 Canonical 及 `noindex, nofollow`。一般 production server 與 Pages 靜態產物分別驗收，不混用 `.next/` 模式。
 
 Task 007 品質指令為 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`。本輪須回歸包含 Solutions 的八個公開路由、五種寬度與全部既有導覽／錨點；分支為 `feature/website-portfolio-page`。規格見 [Task 007](docs/task/task007.md)，作品狀態、素材權利及可公開連結依該規格的證據 Gate 處理，不以測試 PASS 推升作品狀態。
 
@@ -122,7 +122,7 @@ Task 007 品質指令為 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm r
 
 Header、Footer 與手機選單共用的聯絡入口指向 `/contact`；首頁原 `#contact` 與待確認內容保留，新增「查看聯絡資訊」。既有頁面的有效首頁聯絡錨點仍可使用，Privacy 尚未發布時維持無連結文字。
 
-本機網址為 `http://localhost:3000/contact`，Pages 路徑為 `/xk-website/contact/`。保留一般 Next.js build、獨立 Pages export、品牌 Canonical／Open Graph 與 `noindex, nofollow`。品質指令仍為 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`；本次一般 production 驗收使用 3050、Pages 靜態預覽使用 3051，兩種模式分開驗收。
+本機網址為 `http://localhost:3000/contact`，目前 Pages 路徑為 `/contact/`。保留一般 Next.js build、獨立 Pages export、品牌 Canonical／Open Graph 與 `noindex, nofollow`。品質指令仍為 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`；本次一般 production 驗收使用 3050、Pages 靜態預覽使用 3051，兩種模式分開驗收。
 
 規格見 [Task 008](docs/task/task008.md)。本次來源、修改檔、資料流、逐項實測、七張真實截圖與限制見 [Task 008 實作與驗證](docs/reports/task008-implementation.md)。最後五個品質指令 Exit 0，一般模式 27/27 PASS、Pages 148 項＝141 PASS＋7 有據 N/A，45 個響應式案例與 48 次 axe 零違規。原始失敗與未完成試次均保留；遠端 CI、合併、部署與公開頁面只依實際發生後的證據回報。
 
@@ -148,7 +148,7 @@ XK_PRIVACY_PREVIEW=1 npm run start -- --hostname 127.0.0.1 --port 3062
 
 九個公開路由與受控 Privacy 草案的既有 Title／Description 集中於 `src/config/seo.ts`；共用 Metadata 工具保留品牌 Canonical／Open Graph、加入無圖與無社群 handle 的 Twitter `summary`，全站維持 `noindex, nofollow`。Root Layout 只加入安全序列化的品牌 WebSite JSON-LD，不新增可見 UI、法定公司、產品或評價資料。
 
-一般模式提供 `/robots.txt`；Pages 提供 `/xk-website/robots.txt`。規則允許讀取公開 HTML 的 noindex，排除開發／草案路徑，沒有 Sitemap 宣告。Pages 專案檔不代表控制 `xk2022.github.io/robots.txt`；保護模式的 `/sitemap.xml` 維持 404，九個候選路由不等於已發布 Sitemap 或已獲准索引。
+一般模式提供 `/robots.txt`；Pages 提供 `/robots.txt`。規則允許讀取公開 HTML 的 noindex，排除開發／草案路徑，沒有 Sitemap 宣告。Pages 專案檔不代表控制 `xk2022.github.io/robots.txt`；保護模式的 `/sitemap.xml` 維持 404，九個候選路由不等於已發布 Sitemap 或已獲准索引。
 
 品質指令沿用 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`。普通與 Pages 建置／驗收分開；沒有新的依賴、Backend、Analytics、GSC token 或索引環境開關。Privacy 的公開 404／Pages 排除及 Contact 無收件狀態保留。
 

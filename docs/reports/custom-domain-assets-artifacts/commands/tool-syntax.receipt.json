@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "--check",
+    "/tmp/xk-domain-fix/browser.cjs"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-23T15:31:49.241428+00:00",
+  "finishedAt": "2026-11-23T15:31:49.308934+00:00",
+  "processId": 1806,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 30.0,
+  "logFile": "/tmp/xk-domain-fix/tool-syntax.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-domain-fix/preflight-live.cjs"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-23T15:29:28.128902+00:00",
+  "finishedAt": "2026-11-23T15:29:31.807248+00:00",
+  "processId": 1318,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 180.0,
+  "logFile": "/tmp/xk-domain-fix/preflight-live.log",
+  "logSha256": "eb2d6b57ea0a207ac0753026e8065547db91ba716679bef2ce558f9ab014d734",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

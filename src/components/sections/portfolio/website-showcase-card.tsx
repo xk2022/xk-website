@@ -12,9 +12,6 @@ type WebsiteShowcaseCardProps = {
 };
 
 export function WebsiteShowcaseCard({ showcase, headingLevel = "h3" }: WebsiteShowcaseCardProps) {
-  const basePath = process.env.XK_PAGES_EXPORT === "1"
-    ? (process.env.XK_PAGES_BASE_PATH ?? "/xk-website")
-    : "";
   const state = showcase.availability ?? "available";
   const hasDetail = showcase.kind === "brand-demo" && state === "available" && showcase.detail;
 
@@ -22,7 +19,7 @@ export function WebsiteShowcaseCard({ showcase, headingLevel = "h3" }: WebsiteSh
     <article className="min-w-0" data-showcase-id={showcase.id} data-showcase-state={state} data-showcase-presentation={showcase.presentation}>
       <Card className="h-full gap-0 overflow-hidden p-0">
         {showcase.image ? <Image
-          src={`${basePath}${showcase.image.src}`}
+          src={showcase.image.src}
           alt={showcase.image.alt}
           width={showcase.image.width}
           height={showcase.image.height}

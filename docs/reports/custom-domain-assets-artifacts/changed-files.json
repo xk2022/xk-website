@@ -1,0 +1,141 @@
+{
+  "capturedAt": "2026-11-23T15:40:26.920353+00:00",
+  "base": "c124954582edc2af3a24c187c1c937a73035a851",
+  "headAtCapture": "c124954582edc2af3a24c187c1c937a73035a851",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 3872,
+      "sha256": "3a4ccbeea7598c51167056a2213ebd3a8fba3a17e64fe638cefc246fd6b8ec1b"
+    },
+    {
+      "path": "AGENTS.md",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 24949,
+      "sha256": "7c4f5988074a2cd70a7859fd41ee2558fbfe9bec6475ce9d0b1552f66d21393a"
+    },
+    {
+      "path": "README.md",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 20202,
+      "sha256": "396ba44bbe2bb25b69889a4bd3e2edc7f0e247138d3c9f30d048faaebd18222c"
+    },
+    {
+      "path": "docs/implementation-notes.md",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 54808,
+      "sha256": "a8047c9ab40a6b4560ee158af26f2ef5fb8d574ebe66962ccabf3ee62110d374"
+    },
+    {
+      "path": "docs/publication-readiness.md",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 3442,
+      "sha256": "da676f515d6df831adc4da759667431aa2402ebbecd34b50f43f3767e55c61f5"
+    },
+    {
+      "path": "docs/seo-operations.md",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 6692,
+      "sha256": "e0becdbf66dc39984a36e099ec8003a6cb7f708ff14888fc6dfc872bc91dd4f0"
+    },
+    {
+      "path": "docs/website-smoke.md",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 6890,
+      "sha256": "73bc2c41144725c6c410f90f51d86af775ca28d8d2e3f0399f09f4315a1acd5b"
+    },
+    {
+      "path": "next.config.ts",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 672,
+      "sha256": "44d4d4edfbd90c9b02726bbfd00c34e4c7b16567893b54bc824639bbb4045079"
+    },
+    {
+      "path": "scripts/build-github-pages.mjs",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 34552,
+      "sha256": "71de8971a4c3d9f620b3579e63704d9a46bbefac30d8246d18be80e043858be0"
+    },
+    {
+      "path": "scripts/smoke-website.py",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 32902,
+      "sha256": "2550a936b254162d95053cd1b6a73d4ddd6d76b301e09b6015a2725338b009f2"
+    },
+    {
+      "path": "src/app/globals.css",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 8438,
+      "sha256": "600fc1e78b7ec31c071c17c3bb8146ff33e6f70664b793b146a1406d31325f00"
+    },
+    {
+      "path": "src/app/robots.ts",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 357,
+      "sha256": "f4f6aa41a6c0b7df303f458a2ae4924f05e63d2e99b9b614202da98702aa4a80"
+    },
+    {
+      "path": "src/components/sections/portfolio/website-showcase-card.tsx",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 4655,
+      "sha256": "ba8f4628becf98761d718ca0353b8eb68f6c6dbe5544a0f827bfb2b24e091bfe"
+    },
+    {
+      "path": "src/components/sections/portfolio/website-showcase-detail.tsx",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 7761,
+      "sha256": "b35881d38ab995a41c83e43566c4f661227f7560b4434ce2b37da3461365c61c"
+    },
+    {
+      "path": "src/config/privacy.ts",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 6509,
+      "sha256": "a233c66d6164491a3e15c072058ce1752f95e80fc77e07a6a837c0d5e752d57e"
+    },
+    {
+      "path": "src/config/site.ts",
+      "status": "M",
+      "method": "git diff --name-status c124954582edc2af3a24c187c1c937a73035a851",
+      "bytes": 490,
+      "sha256": "429400b48f80dce35f59260d98a4de9994990df96967c506a7bed28c635c9496"
+    },
+    {
+      "path": "docs/custom-domain-deployment.md",
+      "status": "UNTRACKED",
+      "method": "git ls-files --others --exclude-standard",
+      "bytes": 3118,
+      "sha256": "4c590a3b104f68c8d99d1f167e5d699069cd023b126cf4a10d3c90f8979eb269"
+    },
+    {
+      "path": "docs/reports/custom-domain-assets-2026-11-23.md",
+      "status": "UNTRACKED",
+      "method": "git ls-files --others --exclude-standard",
+      "bytes": 7253,
+      "sha256": "78c62ccbd7d2498bb75d645cdd08a83e00be7d4cfc08b5db0f8dc54fe31a76e2"
+    },
+    {
+      "path": "src/config/deployment.ts",
+      "status": "UNTRACKED",
+      "method": "git ls-files --others --exclude-standard",
+      "bytes": 460,
+      "sha256": "965aa7ca48026059667187c0a6e8fc68b681ade837db52d44efe33af79a8cd18"
+    }
+  ],
+  "scope": "This batch Git diff and untracked files, excluding generated evidence itself. Root owns subsequent commits and remote acceptance."
+}

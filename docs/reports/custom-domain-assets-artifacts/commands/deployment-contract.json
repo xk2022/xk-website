@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-domain-fix/check-deployment.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-23T15:33:24.781209+00:00",
+  "finishedAt": "2026-11-23T15:33:25.807847+00:00",
+  "processId": 2023,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-domain-fix/deployment-contract.log",
+  "logSha256": "043e2699d39e87310be56c3ce24a54958c058aa9d027130dfacd63d30a5e4e59",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

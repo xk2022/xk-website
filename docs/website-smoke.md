@@ -2,6 +2,8 @@
 
 `npm run test:smoke` 是 BF-016 的 HTTP／HTML 共用入口。它使用 Python 3 標準函式庫與 Node.js 24 的原生 TypeScript import，不安裝 npm 或 Python 套件，也不會 build、啟動 server、修改來源或變更部署。
 
+目前正式網址與空 Base Path 契約見 [自訂網域部署指南](custom-domain-deployment.md)。舊 `/xk-website` 預覽路徑已不適用。
+
 ## 執行條件與指令
 
 先依 [協作流程](subagent-workflow.md) 完成必要品質檢查，並由同一位 owner 管理 build 與 server。一般 production build 與 Pages build 共用 `.next/`，須先驗完一般模式，再執行 Pages build。smoke 應指向已啟動、與目前工作樹相符的 production／靜態 preview；不要以 development server 取代發布保護驗收。
@@ -10,11 +12,11 @@
 # 一般 production server，使用 Root 實際啟用的 port
 npm run test:smoke -- --base-url http://127.0.0.1:3100/ --output /tmp/xk-bugfix-smoke/normal.json
 
-# GitHub Pages preview，URL 必須包含實際 base path
-npm run test:smoke -- --base-url http://127.0.0.1:3101/xk-website/ --output /tmp/xk-bugfix-smoke/pages.json
+# GitHub Pages preview，自訂網域以根目錄提供網站
+npm run test:smoke -- --base-url http://127.0.0.1:3101/ --output /tmp/xk-bugfix-smoke/pages.json
 
 # 部署後的公開 HTTP，urllib 會使用環境的 proxy 設定
-npm run test:smoke -- --base-url https://xk2022.github.io/xk-website/ --output /tmp/xk-bugfix-smoke/public.json
+npm run test:smoke -- --base-url https://www.xplorekaleidoscope.com/ --output /tmp/xk-bugfix-smoke/public.json
 ```
 
 省略 `--output` 時，報告使用 `/tmp/xk-website-smoke-<UTC timestamp>.json`，避免覆寫先前結果。明確指定路徑時，每次重驗請使用新檔名。每個 request 的 timeout 預設 20 秒，可用 `--timeout 10` 調整；連線失敗會記為 FAIL。
@@ -26,7 +28,7 @@ python3 scripts/run-with-evidence.py \
   --receipt /tmp/xk-bugfix-smoke/pages-receipt.json \
   --log /tmp/xk-bugfix-smoke/pages.log \
   --timeout 600 -- npm run test:smoke -- \
-  --base-url http://127.0.0.1:3101/xk-website/ \
+  --base-url http://127.0.0.1:3101/ \
   --output /tmp/xk-bugfix-smoke/pages.json
 ```
 
@@ -46,10 +48,10 @@ python3 scripts/run-with-evidence.py \
 
 ```sh
 # 可用外站首頁須回應 HTTP 200；不代表外站全部功能或素材正常
-npm run test:smoke -- --base-url http://127.0.0.1:3101/xk-website/ --check-external
+npm run test:smoke -- --base-url http://127.0.0.1:3101/ --check-external
 
 # 重現契約列出的 Demo 002／003 來源素材 404
-npm run test:smoke -- --base-url http://127.0.0.1:3101/xk-website/ --check-source-assets
+npm run test:smoke -- --base-url http://127.0.0.1:3101/ --check-source-assets
 ```
 
 `--check-source-assets` 中的預期 404 是已知缺漏的證據，不能寫成「素材修復 PASS」。來源若改為 200，先核對內容／渲染與發布決策，再更新來源限制、展示 availability 及獨立契約；不能只修改期望來消除失敗。官網沒有獲授權修改這些外部 repository。

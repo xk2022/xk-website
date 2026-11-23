@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python",
+    "/tmp/xk-domain-fix/package-evidence.py"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-23T15:40:26.727841+00:00",
+  "finishedAt": "2026-11-23T15:40:26.949202+00:00",
+  "processId": 4176,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-domain-fix/package-evidence.log",
+  "logSha256": "195bc11627e6c66f8d03fac72cab16a159f74a14c94454436faf376d1e9bb504",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

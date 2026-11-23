@@ -4,7 +4,7 @@
 
 ## 目前的資料來源與界線
 
-- `src/config/site.ts` 是品牌名稱、Origin 與語言的單一來源。
+- `src/config/site.ts` 是品牌名稱與語言的單一來源；Origin 使用 `src/config/deployment.ts` 的 `https://www.xplorekaleidoscope.com`（2026-11-23 使用者指定）。所有現有 Metadata 與 JSON-LD 沿用此值。
 - `src/config/seo.ts` 集中實際路由與既有逐頁文案；`public` 只代表真實可讀，不代表可索引。
 - `src/lib/seo.ts` 處理品牌 URL、absolute title、Open Graph、Twitter summary、robots 與最小 WebSite JSON-LD。
 - Root Layout 保留原 title template 與 noindex／nofollow。各頁明確提供自己的 title／description／OG／Twitter，避免繼承其他頁面的文案。
@@ -35,9 +35,9 @@
 
 ## robots 與 Sitemap
 
-一般模式提供 `/robots.txt`；Pages 提供 `/xk-website/robots.txt`，實際前綴依既有 Pages Base Path。允許爬取公開 HTML，是為了讓 crawler 讀到 noindex；開發／草案路徑另排除，不攔必要 CSS、JavaScript 或字體。不輸出 Sitemap 宣告，也不用非標準 `Noindex:` 指令。
+一般模式與自訂網域 Pages 均提供根目錄 `/robots.txt`（空 Base Path）。允許爬取公開 HTML，是為了讓 crawler 讀到 noindex；開發／草案路徑另排除，不攔必要 CSS、JavaScript 或字體。不輸出 Sitemap 宣告，也不用非標準 `Noindex:` 指令。
 
-Pages 專案檔不是 origin 根 `https://xk2022.github.io/robots.txt`，多數 crawler 不會將專案檔視為全站規則。本任務不修改、不宣稱控制該根路徑；目前可控制的索引保護以 HTML noindex 為主。robots 與 noindex 都不是機密內容的存取控制，也不保證搜尋引擎收錄結果。
+目前 robots 位於 `https://www.xplorekaleidoscope.com/robots.txt`，不宣稱控制 `xk2022.github.io/robots.txt`；HTML noindex 保護持續。robots 與 noindex 都不是機密內容的存取控制，也不保證搜尋引擎收錄結果。
 
 保護模式不建立 sitemap.ts、空 XML 或 public/sitemap.xml；一般與 Pages 的 `sitemap.xml` 保持 HTTP 404。候選雖有九個真實可讀路由，沒有因此獲准發布正式可提交的 Sitemap。
 

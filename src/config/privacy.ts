@@ -1,3 +1,5 @@
+import { pagesDeployment } from "./deployment.ts";
+
 export type PrivacySection = Readonly<{
   id: string;
   title: string;
@@ -18,7 +20,7 @@ export const privacyDraftMarker = "草案，尚未核准生效";
 export const privacyPageMetadata = {
   title: "隱私權政策 | Xplore Kaleidoscope",
   description: "了解 Xplore Kaleidoscope 網站的個人資料處理、第三方服務與隱私權相關資訊。",
-  canonical: "https://xplorekaleidoscope.com/privacy",
+  canonical: `${pagesDeployment.origin}/privacy`,
   path: "/privacy",
 } as const;
 

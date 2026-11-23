@@ -1,0 +1,156 @@
+{
+  "testId": "DOMAIN-FIX-PRECHANGE-ASSET-HTTP",
+  "status": "REPRODUCED",
+  "startedAt": "2026-11-23T15:29:28.635Z",
+  "environment": {
+    "node": "v24.22.1",
+    "timezone": "Asia/Taipei",
+    "base": "https://www.xplorekaleidoscope.com/",
+    "browser": "156.0.8078.79"
+  },
+  "scope": "Targeted prechange diagnostic, not the formal website suite. Browser navigation and browser fetch only; no credentials or private URLs.",
+  "pairs": [
+    {
+      "kind": "css",
+      "old": {
+        "requestedURL": "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/2kctg0wbp1k3n.css",
+        "url": "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/2kctg0wbp1k3n.css",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 39016,
+        "redirected": false
+      },
+      "withoutPrefix": {
+        "requestedURL": "https://www.xplorekaleidoscope.com/_next/static/chunks/2kctg0wbp1k3n.css",
+        "url": "https://www.xplorekaleidoscope.com/_next/static/chunks/2kctg0wbp1k3n.css",
+        "status": 200,
+        "contentType": "text/css; charset=utf-8",
+        "bytes": 2065,
+        "redirected": false
+      }
+    },
+    {
+      "kind": "js",
+      "old": {
+        "requestedURL": "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/1wnov70f88xjy.js",
+        "url": "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/1wnov70f88xjy.js",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 39016,
+        "redirected": false
+      },
+      "withoutPrefix": {
+        "requestedURL": "https://www.xplorekaleidoscope.com/_next/static/chunks/1wnov70f88xjy.js",
+        "url": "https://www.xplorekaleidoscope.com/_next/static/chunks/1wnov70f88xjy.js",
+        "status": 200,
+        "contentType": "application/javascript; charset=utf-8",
+        "bytes": 29127,
+        "redirected": false
+      }
+    },
+    {
+      "kind": "image",
+      "old": {
+        "requestedURL": "https://www.xplorekaleidoscope.com/xk-website/images/showcases/march-tangbao.webp",
+        "url": "https://www.xplorekaleidoscope.com/xk-website/images/showcases/march-tangbao.webp",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 39016,
+        "redirected": false
+      },
+      "withoutPrefix": {
+        "requestedURL": "https://www.xplorekaleidoscope.com/images/showcases/march-tangbao.webp",
+        "url": "https://www.xplorekaleidoscope.com/images/showcases/march-tangbao.webp",
+        "status": 200,
+        "contentType": "image/webp",
+        "bytes": 58872,
+        "redirected": false
+      }
+    },
+    {
+      "kind": "favicon",
+      "old": {
+        "requestedURL": "https://www.xplorekaleidoscope.com/xk-website/icon.svg?icon.3tqzehpiw5ej6.svg",
+        "url": "https://www.xplorekaleidoscope.com/xk-website/icon.svg?icon.3tqzehpiw5ej6.svg",
+        "status": 404,
+        "contentType": "text/html; charset=utf-8",
+        "bytes": 39016,
+        "redirected": false
+      },
+      "withoutPrefix": {
+        "requestedURL": "https://www.xplorekaleidoscope.com/icon.svg?icon.3tqzehpiw5ej6.svg",
+        "url": "https://www.xplorekaleidoscope.com/icon.svg?icon.3tqzehpiw5ej6.svg",
+        "status": 200,
+        "contentType": "image/svg+xml",
+        "bytes": 411,
+        "redirected": false
+      }
+    }
+  ],
+  "console": [
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()",
+    "Failed to load resource: the server responded with a status of 404 ()"
+  ],
+  "runtimeErrors": [],
+  "homepage": {
+    "url": "https://www.xplorekaleidoscope.com/",
+    "status": 200,
+    "type": "text/html; charset=utf-8",
+    "title": "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
+    "canonical": "https://xplorekaleidoscope.com/"
+  },
+  "candidates": {
+    "css": [
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/2kctg0wbp1k3n.css",
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/0mr-7pbzposdm.css",
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/2egiyvr8aqn7u.css"
+    ],
+    "js": [
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/1wnov70f88xjy.js",
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/092r-mewpaf3q.js",
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/30sekecjjqkej.js",
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/turbopack-1mfkoo_4jufv0.js",
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/299nt7u5p6a9p.js",
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/0jk4htvmmu57l.js",
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/3b_qd30_frv59.js",
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/0cz1d0mv5g_q7.js",
+      "https://www.xplorekaleidoscope.com/xk-website/_next/static/chunks/1pcw6gskne7pf.js"
+    ],
+    "image": [
+      "https://www.xplorekaleidoscope.com/xk-website/images/showcases/march-tangbao.webp",
+      "https://www.xplorekaleidoscope.com/xk-website/images/showcases/hongjia-birdnest.webp",
+      "https://www.xplorekaleidoscope.com/xk-website/images/showcases/honest-diecut.webp"
+    ],
+    "favicon": [
+      "https://www.xplorekaleidoscope.com/xk-website/icon.svg?icon.3tqzehpiw5ej6.svg"
+    ]
+  },
+  "fontCandidates": [
+    "https://www.xplorekaleidoscope.com/_next/static/media/46a9e2f250689b4a-s.0-dom-5bn10r2.woff2",
+    "https://www.xplorekaleidoscope.com/_next/static/media/76b70a1dbe058eb5-s.1y4-pdgsjb-pw.woff2",
+    "https://www.xplorekaleidoscope.com/_next/static/media/2fb76073e23fd9e4-s.3lvt2whj97whp.woff2",
+    "https://www.xplorekaleidoscope.com/_next/static/media/6131cbbf5549afa2-s.2uwcyprjm3xu3.woff2"
+  ],
+  "observedBugPairs": 4,
+  "requiredKindsObserved": [
+    "css",
+    "js",
+    "image"
+  ],
+  "finishedAt": "2026-11-23T15:29:31.669Z"
+}
