@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python",
+    "/tmp/xk-contact-plans/package-evidence.py"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-24T10:25:15.736694+00:00",
+  "finishedAt": "2026-11-24T10:25:15.903975+00:00",
+  "processId": 12084,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-contact-plans/package-evidence.log",
+  "logSha256": "b7049a6d2f14acfb1ae81617b5706e4806d48295e2296232f0d3798095ab4d37",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

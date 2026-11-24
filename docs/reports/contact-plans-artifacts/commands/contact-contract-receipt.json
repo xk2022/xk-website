@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-contact-plans/contact-contract.mjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-24T10:09:18.987845+00:00",
+  "finishedAt": "2026-11-24T10:09:19.122583+00:00",
+  "processId": 10607,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-contact-plans/contact-contract.log",
+  "logSha256": "32b38a555715974bdc96038cd639647339f6afebf91b918ba55a0d352b5fdea5",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

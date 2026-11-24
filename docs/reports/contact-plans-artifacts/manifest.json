@@ -1,0 +1,793 @@
+{
+  "schemaVersion": 1,
+  "task": "PR26 continuation: contact email, service plans and verified showcase subdomains",
+  "createdAt": "2026-11-24T10:25:15.894200+00:00",
+  "timezone": "Asia/Taipei",
+  "source": {
+    "base": "4b67bdea84773d0034e835a0a572f47dd19abfc4",
+    "baseMain": "a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+    "fingerprint": "16ffe273829e269d6f457912767b5b7fae049dd4f4c53e9126f16d76ede115cd",
+    "snapshot": "source.json",
+    "fingerprintFiles": 132,
+    "currentMismatches": []
+  },
+  "changedFiles": {
+    "path": "changed-files.json",
+    "count": 22,
+    "rawSha256": "2748085b61ab586a53a7a6728362a9af62e45f5e2cad5af11397fdd529e86ebc",
+    "archiveSha256": "2748085b61ab586a53a7a6728362a9af62e45f5e2cad5af11397fdd529e86ebc",
+    "metadataRefreshedAt": "2026-11-24T10:28:16.646902+00:00"
+  },
+  "outcomes": {
+    "normalTests": 48,
+    "pagesTests": 49,
+    "normalAndPagesBrowserExitCode": 0,
+    "smokeChecksPerMode": 814,
+    "layoutsPerMode": 20,
+    "mailtoJourneysPerMode": 14,
+    "targetedAxeScansPerMode": 7,
+    "axeViolations": 0,
+    "axeIncomplete": 0,
+    "nativeContractCases": 9,
+    "visualStatus": "PASS_WITH_SCOPE_LIMITATIONS",
+    "visualImages": 4
+  },
+  "toolExecutionStatus": {
+    "check-artifact.py": "NOT_EXECUTED: snapshot for future actual CI artifact comparison; no CI artifact PASS inferred.",
+    "browser.cjs": "Normal/Pages actual runner receipts archived. Mailto default action was prevented; no external mail app was opened and no email was sent.",
+    "usecase-audit": "Initial and final audit results/logs and actual supplied runner receipts retained; read-only evidence is not deployment or delivery evidence.",
+    "fixtures/contact-tool-fixtures.py": "Original supplementary fixture result and harnessHistory preserved. No separate outer OS runner receipt was supplied, so none is invented."
+  },
+  "mappingNotes": [
+    "logicalPath maps report names to archivePath. Raw bytes are recoverable by gzip -dc; raw/archive SHA256 both recorded.",
+    "Only the four actual Pages screenshot PNGs were copied once. No normal/old-round/source image bulk was copied.",
+    "Command receipts require command, exitCode, returnCode and observationMethod; smoke result JSONs are not mistaken for OS receipts.",
+    "Only the explicit current-batch input list plus two supplementary fixture files is archived. Previous committed homepage-inquiry batch is excluded.",
+    "Source-summary.json retains minimum source commit/blob metadata, approval boundaries and raw digest. Raw sources.json, planning figures and source-document full text are deliberately not copied.",
+    "Manifest excludes its own hash to avoid self-reference; changed-files snapshot is separately hashed."
+  ],
+  "omittedRelatedArtifacts": [
+    {
+      "sourcePath": "/tmp/xk-contact-plans/sources.json",
+      "rawBytes": 8987,
+      "rawSha256": "3b23e2ca99ee519a45db67979e0662a355d94fe4dfd490b4de558d60e8a9fdd8",
+      "reason": "Raw planning/source evidence excluded by instruction. Minimal source-summary.json and its raw digest preserve provenance without republishing unapproved planning figures."
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/main-website-showcases.ts",
+      "rawBytes": 18874,
+      "rawSha256": "5a70b94bebb6cabc7034d7140c7f95c48db8c654afcc2e0ea62c147e715bfce9",
+      "reason": "Previous main source snapshot not repackaged; exact source repository commit/blob metadata and extracted URL audit records retained."
+    }
+  ],
+  "scopeLimits": [
+    "Owner-designated public Email is configured. No SMTP/mailbox delivery/read test, external mail-client opening, actual sending, Gmail rules or auto-reply setup was performed or certified.",
+    "All mailto click/Enter journeys were intercepted with preventDefault before default action, preserving handler propagation so event/focus/mobile-closing behavior could be checked safely. This is not proof of received mail.",
+    "Synthetic destinations use .invalid and were not requested or sent. HarnessHistory records the initial inline JavaScript-newline escape error; no missing outer runner receipt is reconstructed.",
+    "Only individually quoted plans are published. Numeric prices, currency amounts, free offers and guaranteed response times were not approved by this task. Raw planning figures/full source documents are not in this evidence package.",
+    "The unified usecase.xplorekaleidoscope.com candidate was not established. Six separately verified brand subdomains are linked; reference-only samples remain unavailable. DNS/HTTP audit is read-only and does not authorize domain changes.",
+    "Only targeted CTA/plan/pricing/contact/process axe and four-route focused browser regression were run here. No full-page axe, real AT, complete WCAG or performance certification is claimed. Separate smoke covers the 15 public routes.",
+    "PR CI/artifact, merge, deployment and post-deploy public checks are separate Root-owned stages and are not inferred from local PASS. No merge/deployment is asserted by this package."
+  ],
+  "securityReview": {
+    "textInputsScanned": 50,
+    "potentialSecretMatches": 0,
+    "rawSourceDocumentsCopied": false,
+    "planningFigureEvidenceCopied": false
+  },
+  "verification": {
+    "rawAndArchiveSha256RoundTrips": 56,
+    "sourceFingerprintFilesMatch": 132,
+    "screenshotCount": 4,
+    "uncompressedExecutableTools": 0,
+    "changedFilesHashMismatches": [],
+    "sealedAt": "2026-11-24T10:25:19.511901+00:00",
+    "metadataRefreshedAt": "2026-11-24T10:28:16.646902+00:00"
+  },
+  "files": [
+    {
+      "sourcePath": "/tmp/xk-contact-plans/npm-ci.json",
+      "logicalPath": "npm-ci.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/npm-ci.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 594,
+      "rawSha256": "43113bcc4dc5d2e5e0f453ec1d170ee3ada9d003cf45a0ebf6ac5d3d0642461b",
+      "archiveBytes": 594,
+      "archiveSha256": "43113bcc4dc5d2e5e0f453ec1d170ee3ada9d003cf45a0ebf6ac5d3d0642461b",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/npm-ci.log",
+      "logicalPath": "npm-ci.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/npm-ci.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 164,
+      "rawSha256": "d3f54cd9d4b744cf9a75d955f195e6a76c7db98de866e669e4d5cdddc3304b94",
+      "archiveBytes": 145,
+      "archiveSha256": "8190180fa308a4541ed36e69e6adb7486c35b9fd8cdb14826684652ed1d90879"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/tsc.json",
+      "logicalPath": "tsc.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/tsc.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 568,
+      "rawSha256": "b8d0b83643c4549bda68a224cb44835f3287ef983094145fa4df78cb9ca0bd2a",
+      "archiveBytes": 568,
+      "archiveSha256": "b8d0b83643c4549bda68a224cb44835f3287ef983094145fa4df78cb9ca0bd2a",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/tsc.log",
+      "logicalPath": "tsc.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/tsc.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveBytes": 20,
+      "archiveSha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/lint.json",
+      "logicalPath": "lint.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/lint.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 565,
+      "rawSha256": "60e1ed2ade40a94a883e0e139c996d4ee6e03f7abcfbe850e9200dace0860616",
+      "archiveBytes": 565,
+      "archiveSha256": "60e1ed2ade40a94a883e0e139c996d4ee6e03f7abcfbe850e9200dace0860616",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/lint.log",
+      "logicalPath": "lint.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/lint.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 54,
+      "rawSha256": "4696703654c92426c8748b7837936df0036098577fdcb7af6f2ee9d9db2e79e6",
+      "archiveBytes": 71,
+      "archiveSha256": "26648289651d2bf6f47089d7579de380557f3bbff2880cddfdb6e802b03431d1"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/build.json",
+      "logicalPath": "build.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/build.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 567,
+      "rawSha256": "d302aa0ce8182243ce4398870298fcca29f09d6c4c97f66a0ecd984be15c1a11",
+      "archiveBytes": 567,
+      "archiveSha256": "d302aa0ce8182243ce4398870298fcca29f09d6c4c97f66a0ecd984be15c1a11",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/build.log",
+      "logicalPath": "build.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/build.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 1531,
+      "rawSha256": "221d342cd6e0c7dba480fa20c487b7310f2e9bcd8d3ba3afcc61dcf9b1306b41",
+      "archiveBytes": 715,
+      "archiveSha256": "e7407d5aa1802f8279f363858eb1776032e5ef83b5a8c0cfc5cad577c3d120be"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/build-pages.json",
+      "logicalPath": "build-pages.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/build-pages.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 579,
+      "rawSha256": "f539651d80c98c9fb81224bdd7f164ff018148b14f8035d174a0ea7258a6f3e4",
+      "archiveBytes": 579,
+      "archiveSha256": "f539651d80c98c9fb81224bdd7f164ff018148b14f8035d174a0ea7258a6f3e4",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/build-pages.log",
+      "logicalPath": "build-pages.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/build-pages.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 2010,
+      "rawSha256": "0b6b94d6dc1b7ab9b4fd433d4f1714e33bfbb89a027da6a9812d5a0542afe806",
+      "archiveBytes": 1006,
+      "archiveSha256": "8e8900b575868287abc60b09703ced07bdec7513bb2bd663172549dfc9afb5ac"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/contact-contract-receipt.json",
+      "logicalPath": "contact-contract-receipt.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/contact-contract-receipt.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 605,
+      "rawSha256": "7ae38e0d34011b6561c48a0df09a570816057eb93a23782cbae7a49ecb8c0238",
+      "archiveBytes": 605,
+      "archiveSha256": "7ae38e0d34011b6561c48a0df09a570816057eb93a23782cbae7a49ecb8c0238",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/contact-contract.json",
+      "logicalPath": "contact-contract.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/contact-contract.json",
+      "category": "evidence",
+      "compression": "identity",
+      "rawBytes": 2776,
+      "rawSha256": "acf1c34f54f9f94a3d11d29856c00c2133cb154717a091468e49b9186d9cf960",
+      "archiveBytes": 2776,
+      "archiveSha256": "acf1c34f54f9f94a3d11d29856c00c2133cb154717a091468e49b9186d9cf960"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/contact-contract.log",
+      "logicalPath": "contact-contract.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/contact-contract.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 453,
+      "rawSha256": "32b38a555715974bdc96038cd639647339f6afebf91b918ba55a0d352b5fdea5",
+      "archiveBytes": 336,
+      "archiveSha256": "290d9905b4c0fc55fc4e1cbcea82cc2a80f4aff6ba08adb6a435ade3f9c9a796"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/contact-contract.mjs",
+      "logicalPath": "contact-contract.mjs",
+      "archivePath": "docs/reports/contact-plans-artifacts/contact-contract.mjs.gz",
+      "category": "tool",
+      "compression": "gzip",
+      "rawBytes": 3064,
+      "rawSha256": "492a1ba88c047ec2859cde25a596f194f7ca902adcaf493ab5f5f50f9d19b191",
+      "archiveBytes": 1304,
+      "archiveSha256": "3947ee0a666519e4c04381bbb1f5399edbc9206fa9e1e615af89fa8e86127052"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/smoke-normal.json",
+      "logicalPath": "smoke-normal.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/smoke-normal.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 707,
+      "rawSha256": "e7fef4ff7223feea7462c724d7db0fe8535ae4b40b9822e906742ff0cf6d151b",
+      "archiveBytes": 707,
+      "archiveSha256": "e7fef4ff7223feea7462c724d7db0fe8535ae4b40b9822e906742ff0cf6d151b",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/smoke-normal.log",
+      "logicalPath": "smoke-normal.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/smoke-normal.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 446,
+      "rawSha256": "eeab68952848ae58807e72cbcc8441600778ca9ccbe08ac8eefb392867f3500e",
+      "archiveBytes": 285,
+      "archiveSha256": "d1b03d5c641dcf219e437bd3662d9abd57d5ea66948b622d121bc7d7b40abcf9"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/smoke-normal-result.json",
+      "logicalPath": "smoke-normal-result.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/smoke-normal-result.json.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 325838,
+      "rawSha256": "9cfb620cb3094f3eec5ce984bc76445d96c05ab8aa6f9b82f806b8e8fd579d03",
+      "archiveBytes": 20450,
+      "archiveSha256": "91c511b7bd542be4f0c20406ca3ffca43348c3c4e680a637147160cbd49ef22b"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/smoke-pages.json",
+      "logicalPath": "smoke-pages.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/smoke-pages.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 705,
+      "rawSha256": "dd1cc2f62bb267017882f15dd3fce6997b8bbbc939d55fd9eece62b58f85e1ef",
+      "archiveBytes": 705,
+      "archiveSha256": "dd1cc2f62bb267017882f15dd3fce6997b8bbbc939d55fd9eece62b58f85e1ef",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/smoke-pages.log",
+      "logicalPath": "smoke-pages.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/smoke-pages.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 444,
+      "rawSha256": "c6b19f1329573e7e1bbd9dea2b38a5a409ab6ec43b4852f6e912a75d142fdda6",
+      "archiveBytes": 283,
+      "archiveSha256": "72f305f088f3a551d06979ea5ded2f5626b435f0cbcc37ef77a3087cbe5f4519"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/smoke-pages-result.json",
+      "logicalPath": "smoke-pages-result.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/smoke-pages-result.json.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 329065,
+      "rawSha256": "e71ee428fd22d6d6ad11a0c3df0c999bfc02491a9e9fe662f9d296eb15064779",
+      "archiveBytes": 20667,
+      "archiveSha256": "e6ac97e9b0ff151018a6c4f4d1ce5e2b7b2dfc40ba280b76eeedf0ab2fc1bbdc"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/browser-normal.json",
+      "logicalPath": "browser-normal.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/browser-normal.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 621,
+      "rawSha256": "7ba6dfb98f8588611866e3d9e0843f8f0a62020009e88294bc09fd04d7101c5a",
+      "archiveBytes": 621,
+      "archiveSha256": "7ba6dfb98f8588611866e3d9e0843f8f0a62020009e88294bc09fd04d7101c5a",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/browser-normal.log",
+      "logicalPath": "browser-normal.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/browser-normal.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 1751,
+      "rawSha256": "92b1bc66f4dfd1611b0b76aa98835e146037232b5342c6be1c31470d0785002e",
+      "archiveBytes": 591,
+      "archiveSha256": "0c048b78f710077588783d4746d7d5f94a3ef5599b52ed80d65a4b8e212b26b7"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/browser-pages.json",
+      "logicalPath": "browser-pages.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/browser-pages.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 619,
+      "rawSha256": "9d98cb2d3c37b5e33eccf6acf0d4669fc33d54553ac8e9164754c28d6867fd75",
+      "archiveBytes": 619,
+      "archiveSha256": "9d98cb2d3c37b5e33eccf6acf0d4669fc33d54553ac8e9164754c28d6867fd75",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/browser-pages.log",
+      "logicalPath": "browser-pages.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/browser-pages.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 1767,
+      "rawSha256": "e3b39fcb8770ebd5457ae996082387a8410ab610eb9a06868e75c6d0da499002",
+      "archiveBytes": 601,
+      "archiveSha256": "dde7fd097afff98bdde38dbe060cf135f72e9a1b6a1886682324cbd10be28d59"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/browser.cjs",
+      "logicalPath": "browser.cjs",
+      "archivePath": "docs/reports/contact-plans-artifacts/browser.cjs.gz",
+      "category": "tool",
+      "compression": "gzip",
+      "rawBytes": 23894,
+      "rawSha256": "34e3bda6753e2f8d7acc75646e9ebadd14a6639013697b277836b060f4311283",
+      "archiveBytes": 8248,
+      "archiveSha256": "ed4f5063e3f2ebc8a85e4f5daa038c074ed5fca036a59c5ba8b7abfa254f1cef"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/source.json",
+      "logicalPath": "source.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/source.json",
+      "category": "evidence",
+      "compression": "identity",
+      "rawBytes": 15432,
+      "rawSha256": "f30b131cbf97133394c1234aea3b0cdf70e6865a39dec2fb1a586f3a099c7b48",
+      "archiveBytes": 15432,
+      "archiveSha256": "f30b131cbf97133394c1234aea3b0cdf70e6865a39dec2fb1a586f3a099c7b48"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/source-summary.json",
+      "logicalPath": "source-summary.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/source-summary.json",
+      "category": "evidence",
+      "compression": "identity",
+      "rawBytes": 916,
+      "rawSha256": "ee29b53cad5521c7ea6cf89c37551028c24651825b1dd5ecc1e795770540f030",
+      "archiveBytes": 916,
+      "archiveSha256": "ee29b53cad5521c7ea6cf89c37551028c24651825b1dd5ecc1e795770540f030"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/tool-preparation.json",
+      "logicalPath": "tool-preparation.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/tool-preparation.json",
+      "category": "evidence",
+      "compression": "identity",
+      "rawBytes": 2009,
+      "rawSha256": "6e67913104f5ea29e4284d7e05508c1220cf31a976fed564eda060c99a44ba8d",
+      "archiveBytes": 2009,
+      "archiveSha256": "6e67913104f5ea29e4284d7e05508c1220cf31a976fed564eda060c99a44ba8d"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/tool-syntax.receipt.json",
+      "logicalPath": "tool-syntax.receipt.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/tool-syntax.receipt.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 594,
+      "rawSha256": "030fd4e1f0d29d2ff5b5c69627f25d3e00fa3bcc804ead159d474fb463fe1ff5",
+      "archiveBytes": 594,
+      "archiveSha256": "030fd4e1f0d29d2ff5b5c69627f25d3e00fa3bcc804ead159d474fb463fe1ff5",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/tool-syntax.log",
+      "logicalPath": "tool-syntax.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/tool-syntax.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archiveBytes": 20,
+      "archiveSha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/visual-review.json",
+      "logicalPath": "visual-review.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/visual-review.json",
+      "category": "evidence",
+      "compression": "identity",
+      "rawBytes": 4689,
+      "rawSha256": "d60c27696fd6bb0feef41a162723354f22f8ef47be9da4f7107287ebdaab5f1d",
+      "archiveBytes": 4689,
+      "archiveSha256": "d60c27696fd6bb0feef41a162723354f22f8ef47be9da4f7107287ebdaab5f1d"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/local-artifact.json",
+      "logicalPath": "local-artifact.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/local-artifact.json.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 30812,
+      "rawSha256": "f7140303a6225ff9b1bc2983213f7170077d229d63d1516c4b51ea78d69260cc",
+      "archiveBytes": 12724,
+      "archiveSha256": "cc210df76eddf6aad8b6a732b3e352df666ffe1b4ab2938c8d8eeb1d628e059d"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/seo.json",
+      "logicalPath": "seo.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/seo.json",
+      "category": "evidence",
+      "compression": "identity",
+      "rawBytes": 6287,
+      "rawSha256": "b8206eec9f78ee744ee9d9133c26871d39f0fe835405a76ee347b4a5a5ec7a94",
+      "archiveBytes": 6287,
+      "archiveSha256": "b8206eec9f78ee744ee9d9133c26871d39f0fe835405a76ee347b4a5a5ec7a94"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/showcases.json",
+      "logicalPath": "showcases.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/showcases.json",
+      "category": "evidence",
+      "compression": "identity",
+      "rawBytes": 22277,
+      "rawSha256": "8542a9d3ee79a04864a1c76ee7dfdf90ba12542e72ac32b9d94fd2761e64dd8d",
+      "archiveBytes": 22277,
+      "archiveSha256": "8542a9d3ee79a04864a1c76ee7dfdf90ba12542e72ac32b9d94fd2761e64dd8d"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/check-artifact.py",
+      "logicalPath": "check-artifact.py",
+      "archivePath": "docs/reports/contact-plans-artifacts/check-artifact.py.gz",
+      "category": "tool",
+      "compression": "gzip",
+      "rawBytes": 4488,
+      "rawSha256": "1d3c1af316d4ef6582a29451b0f3d01fe3147d4aed90ec5813622154ffa866c3",
+      "archiveBytes": 1803,
+      "archiveSha256": "d5f523bc76a28377abf85247b387f80546877c6fdbc7365f784b55bc2fc13f4c"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/usecase-audit.json",
+      "logicalPath": "usecase-audit.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/usecase-audit.json.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 32992,
+      "rawSha256": "dd8a74078891ff68d39f045a63e38d870887bd53c660a1ab3eeb8a53c97852a8",
+      "archiveBytes": 4456,
+      "archiveSha256": "558d84a05a9ec2ec90a9614aa2a7dc069e4c06cf4182b5a5f692ec4d3198bda6"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/usecase-audit.initial.json",
+      "logicalPath": "usecase-audit.initial.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/usecase-audit.initial.json.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 26040,
+      "rawSha256": "a47effba52cdbda7e7ce19983595a398abff6ea3b550ea022ea8325682cfd6f8",
+      "archiveBytes": 3074,
+      "archiveSha256": "2b0e3ab4509380e1a70d585a3193c120d303db231642813283ddcf3baafd1bde"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/usecase-audit-process.json",
+      "logicalPath": "usecase-audit-process.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/usecase-audit-process.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 600,
+      "rawSha256": "2789331c33c406d8ce4452de2333e9788be6ade9a84781c2bbf50126b959df23",
+      "archiveBytes": 600,
+      "archiveSha256": "2789331c33c406d8ce4452de2333e9788be6ade9a84781c2bbf50126b959df23",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/usecase-audit-final-process.json",
+      "logicalPath": "usecase-audit-final-process.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/usecase-audit-final-process.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 615,
+      "rawSha256": "720efcc71f5493e6f45e164e2bec16bc53af3c2c85e748f63c079ea3aa770f10",
+      "archiveBytes": 615,
+      "archiveSha256": "720efcc71f5493e6f45e164e2bec16bc53af3c2c85e748f63c079ea3aa770f10",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/usecase-audit.log",
+      "logicalPath": "usecase-audit.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/usecase-audit.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 1650,
+      "rawSha256": "8b924faa859182080a6b4b30003aafa70e58b37079ed196ac9cb6504a3e07ce8",
+      "archiveBytes": 415,
+      "archiveSha256": "4311abb8731867524a3dd4b17997fbb7689861640a57a79fee1fca8327d3733f"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/usecase-audit-final.log",
+      "logicalPath": "usecase-audit-final.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/usecase-audit-final.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 2108,
+      "rawSha256": "d4ae3687b0bd3d2a862f4c8db797bb96cba645027f78aa1fafc378945e6e90f8",
+      "archiveBytes": 687,
+      "archiveSha256": "0ac21b7ea6c826daebc7861bb0e7bf2b80dc0de83c316c94bbe46a6cca70742b"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/usecase-source.json",
+      "logicalPath": "usecase-source.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/usecase-source.json",
+      "category": "evidence",
+      "compression": "identity",
+      "rawBytes": 199,
+      "rawSha256": "fe290efb076cb770456b0fa1807dce3cfcd5a131e1506bf2b690364becfabac7",
+      "archiveBytes": 199,
+      "archiveSha256": "fe290efb076cb770456b0fa1807dce3cfcd5a131e1506bf2b690364becfabac7"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/usecase-entries.json",
+      "logicalPath": "usecase-entries.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/usecase-entries.json",
+      "category": "evidence",
+      "compression": "identity",
+      "rawBytes": 2814,
+      "rawSha256": "90a1ef3029f5dc4fb7d53c18681c46c20cb0be2181c29cc7187b138d7b855613",
+      "archiveBytes": 2814,
+      "archiveSha256": "90a1ef3029f5dc4fb7d53c18681c46c20cb0be2181c29cc7187b138d7b855613"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/audit-usecase.py",
+      "logicalPath": "audit-usecase.py",
+      "archivePath": "docs/reports/contact-plans-artifacts/audit-usecase.py.gz",
+      "category": "tool",
+      "compression": "gzip",
+      "rawBytes": 7945,
+      "rawSha256": "5a80ceedc09bea61cc2809ad7c205dd8d8e86afdf2e9bd61a5f47edcb7729dc0",
+      "archiveBytes": 3163,
+      "archiveSha256": "898e401726aec0701c1f4f2afe61c0634d38a712c02653630396748a0bca9095"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/complete-usecase-audit.py",
+      "logicalPath": "complete-usecase-audit.py",
+      "archivePath": "docs/reports/contact-plans-artifacts/complete-usecase-audit.py.gz",
+      "category": "tool",
+      "compression": "gzip",
+      "rawBytes": 5475,
+      "rawSha256": "35a6fb2abda79a9a77927a0f122e811af083971cb7bd687bd589bfd7a863f8a7",
+      "archiveBytes": 2241,
+      "archiveSha256": "773fd54831b1ff25db9d271e0770b7ccc1876ee9eb7fe5663aa6a810efa91f9f"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/normal-final/result.json",
+      "logicalPath": "browser-normal-result.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/browser-normal-result.json.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 438726,
+      "rawSha256": "07b1f6a79ac3753ec922f1ad4e402a70d104a2000718a075dcc67954384ea754",
+      "archiveBytes": 12271,
+      "archiveSha256": "5acfbb00fbe563ef8dc0ef43644d5d285ed51215fde24cb3e89beb5a511cdfa7"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/pages-final/result.json",
+      "logicalPath": "browser-pages-result.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/browser-pages-result.json.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 439803,
+      "rawSha256": "321f41c528ff45a9d217f102dfcb31237a761b263b7e59ca9631b38504effa73",
+      "archiveBytes": 12463,
+      "archiveSha256": "7fd04b6892f68fef8213c5a85b5baf2aca439b5f876eb6ea544c685c9b24f8f2"
+    },
+    {
+      "sourcePath": "/tmp/xk-pr26-contact-tool-fixtures-20261124.json",
+      "logicalPath": "fixtures/contact-tool-fixtures.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/fixtures/contact-tool-fixtures.json",
+      "category": "fixture",
+      "compression": "identity",
+      "rawBytes": 15444,
+      "rawSha256": "ad1a67a281be72d7e0f2ae70eabf419780165de73de8ec8090e48f3a9e63887f",
+      "archiveBytes": 15444,
+      "archiveSha256": "ad1a67a281be72d7e0f2ae70eabf419780165de73de8ec8090e48f3a9e63887f"
+    },
+    {
+      "sourcePath": "/tmp/xk-pr26-contact-tool-fixtures.py",
+      "logicalPath": "fixtures/contact-tool-fixtures.py",
+      "archivePath": "docs/reports/contact-plans-artifacts/fixtures/contact-tool-fixtures.py.gz",
+      "category": "tool",
+      "compression": "gzip",
+      "rawBytes": 9128,
+      "rawSha256": "ebc6e660e046bd23dba5e0171b4ab1ccb26a32dcc516b246e6710b01cc781ad4",
+      "archiveBytes": 3512,
+      "archiveSha256": "ac06db00d442d3483682c20a9a1fbee0a4473c2294e158ead7ccc4d86ea1c874"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/package-evidence.py",
+      "logicalPath": "tools/package-evidence.py",
+      "archivePath": "docs/reports/contact-plans-artifacts/tools/package-evidence.py.gz",
+      "category": "tool",
+      "compression": "gzip",
+      "rawBytes": 14180,
+      "rawSha256": "2ea0c7220aad0eb3189f803a1dc34c811cc6396bb1e92fe03205d279c79df2b1",
+      "archiveBytes": 5163,
+      "archiveSha256": "5b35e2c090a8ff83ee832d463007a1585fe8d5034446428ecb05e5b24134733c"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/pages-final/home-1440.png",
+      "logicalPath": "screenshots/home-1440.png",
+      "archivePath": "docs/screenshots/contact-plans/home-1440.png",
+      "category": "screenshot",
+      "compression": "identity",
+      "rawBytes": 1726791,
+      "rawSha256": "0a5c79d7aeca7692a7524b2552be33e30e1d3e128bcb11100dd243f1dd8e3301",
+      "archiveBytes": 1726791,
+      "archiveSha256": "0a5c79d7aeca7692a7524b2552be33e30e1d3e128bcb11100dd243f1dd8e3301"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/pages-final/home-375.png",
+      "logicalPath": "screenshots/home-375.png",
+      "archivePath": "docs/screenshots/contact-plans/home-375.png",
+      "category": "screenshot",
+      "compression": "identity",
+      "rawBytes": 150624,
+      "rawSha256": "62c244e1d88649d7d4c08ce5fca968c5b8770b56d829e036a1a875f8653a5b8c",
+      "archiveBytes": 150624,
+      "archiveSha256": "62c244e1d88649d7d4c08ce5fca968c5b8770b56d829e036a1a875f8653a5b8c"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/pages-final/services-plans-1440.png",
+      "logicalPath": "screenshots/services-plans-1440.png",
+      "archivePath": "docs/screenshots/contact-plans/services-plans-1440.png",
+      "category": "screenshot",
+      "compression": "identity",
+      "rawBytes": 167709,
+      "rawSha256": "6424e7bc62033d2f864d504ace221c19da24fc3ad9e2a06187222f8fec98c3ec",
+      "archiveBytes": 167709,
+      "archiveSha256": "6424e7bc62033d2f864d504ace221c19da24fc3ad9e2a06187222f8fec98c3ec"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/pages-final/contact-375.png",
+      "logicalPath": "screenshots/contact-375.png",
+      "archivePath": "docs/screenshots/contact-plans/contact-375.png",
+      "category": "screenshot",
+      "compression": "identity",
+      "rawBytes": 610072,
+      "rawSha256": "35d97cd0f82a2186ca1a4aca28a7c1cfcf7b7f8c41f3c667389a842d9f419a74",
+      "archiveBytes": 610072,
+      "archiveSha256": "35d97cd0f82a2186ca1a4aca28a7c1cfcf7b7f8c41f3c667389a842d9f419a74"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/package-evidence.receipt.json",
+      "logicalPath": "package-evidence.receipt.json",
+      "archivePath": "docs/reports/contact-plans-artifacts/commands/package-evidence.receipt.json",
+      "category": "command-receipt",
+      "compression": "identity",
+      "rawBytes": 595,
+      "rawSha256": "41b547da4de8cb37c3271553370fe91cdb922c7a5af9ebd3b7f7b44f2e47ac7d",
+      "archiveBytes": 595,
+      "archiveSha256": "41b547da4de8cb37c3271553370fe91cdb922c7a5af9ebd3b7f7b44f2e47ac7d",
+      "exitCode": 0,
+      "receiptStatus": "PASS",
+      "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+    },
+    {
+      "sourcePath": "/tmp/xk-contact-plans/package-evidence.log",
+      "logicalPath": "package-evidence.log",
+      "archivePath": "docs/reports/contact-plans-artifacts/package-evidence.log.gz",
+      "category": "evidence",
+      "compression": "gzip",
+      "rawBytes": 381,
+      "rawSha256": "b7049a6d2f14acfb1ae81617b5706e4806d48295e2296232f0d3798095ab4d37",
+      "archiveBytes": 284,
+      "archiveSha256": "7f5c818c897ef3d93fe53fc01d57fd07609865c7153435e35bf0ba75fa7c9b2c"
+    }
+  ],
+  "totals": {
+    "files": 56,
+    "commandReceipts": 14,
+    "gzipFiles": 28,
+    "rawBytes": 4440782,
+    "archiveBytes": 2853571,
+    "savedBytes": 1587211,
+    "reductionPercent": 35.74
+  },
+  "packaging": "Actual OS exit 0 receipt archived; --seal verifies archive bytes and adds the already completed packaging receipt. No website reruns.",
+  "metadataRefreshHistory": [
+    {
+      "refreshedAt": "2026-11-24T10:28:16.646902+00:00",
+      "reason": "Documentation formatting only: SOP hard line breaks replaced by empty quoted paragraphs; CTA/Gmail/HTTP 200 spacing adjusted in implementation notes. App source unchanged; no website rerun.",
+      "files": [
+        {
+          "path": "docs/contact-response-workflow.md",
+          "previous": {
+            "bytes": 4240,
+            "sha256": "509a8caf103bd34fa0ceaac372ef86f653691aa53247fcf991ca2c4e2fbda738"
+          },
+          "current": {
+            "bytes": 4240,
+            "sha256": "55757566c6498f4071575622419d23993377f8acb7b43b09936c311643952f6d"
+          }
+        },
+        {
+          "path": "docs/implementation-notes.md",
+          "previous": {
+            "bytes": 55871,
+            "sha256": "ce4ba80ced52565229dca2047d4a78eecf78ab49481c0a80906b150c9ba3576f"
+          },
+          "current": {
+            "bytes": 55880,
+            "sha256": "cb1c4b06ac5179c7b6bd955ec0ed335164a4da78870d25460a21d5ef644cdfba"
+          }
+        }
+      ],
+      "previousSnapshotSha256": "33a5a244abfc76505a5c0e6271466c0cbb67d623ff44114d3d4485baaa3b94d5",
+      "newSnapshotSha256": "2748085b61ab586a53a7a6728362a9af62e45f5e2cad5af11397fdd529e86ebc",
+      "archivedEvidenceFilesModified": 0,
+      "appSourceFilesMatched": 132,
+      "websiteRerun": false,
+      "rawCommandReceiptsModified": false
+    }
+  ]
+}

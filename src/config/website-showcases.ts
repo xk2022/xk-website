@@ -104,7 +104,7 @@ export const websiteShowcases = [
     category: "餐飲品牌",
     summary: "以湯包、冷滷味與門市資訊串起餐飲內容，展示餐點瀏覽與預留訊息整理。",
     highlights: ["餐點與冷滷味介紹", "預留訊息整理示範", "門市資訊導覽"],
-    href: "https://xk2022.github.io/xk-showcase-march-tangbao/",
+    href: "https://march.xplorekaleidoscope.com/",
     image: {
       src: "/images/showcases/march-tangbao.webp",
       alt: "三月手工湯包展示網站的桌面版首頁畫面",
@@ -141,7 +141,7 @@ export const websiteShowcases = [
     category: "禮品品牌",
     summary: "從親友送禮與企業贈禮情境出發，展示送禮資訊引導與模擬洽詢摘要。",
     highlights: ["親友送禮情境", "企業贈禮情境", "模擬洽詢摘要"],
-    href: "https://xk2022.github.io/xk-showcase-hongjia-birdnest/",
+    href: "https://honbird.xplorekaleidoscope.com/",
     image: {
       src: "/images/showcases/hongjia-birdnest.webp",
       alt: "宏家燕窩展示網站的桌面版首頁畫面",
@@ -177,7 +177,7 @@ export const websiteShowcases = [
     category: "餐飲與團體訂餐",
     summary: "以燒臘餐點與團體訂餐情境，展示餐飲品牌的菜單瀏覽與訂餐資訊安排。",
     highlights: ["燒臘餐點展示", "菜單內容分類", "團體訂餐情境"],
-    href: "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+    href: "https://yupinyuan.xplorekaleidoscope.com/",
     image: {
       src: "/images/showcases/yupinyuan-bento.webp",
       alt: "御品園港式燒臘展示網站的桌面版首頁畫面",
@@ -213,7 +213,7 @@ export const websiteShowcases = [
     category: "網站服務推廣",
     summary: "以在地店家、企業服務與活動推廣為情境，呈現一頁式網站的服務介紹、合作流程與需求整理。",
     highlights: ["適用情境導覽", "合作方式與驗收流程", "需求摘要整理示範"],
-    href: "https://xk2022.github.io/xk-campaign-website-design/",
+    href: "https://web.xplorekaleidoscope.com/",
     image: {
       src: "/images/showcases/campaign-website-design.webp",
       alt: "XK 一頁式網站建置推廣頁的桌面版首頁畫面",
@@ -249,7 +249,7 @@ export const websiteShowcases = [
     category: "工業製造",
     summary: "整理模切沖型、保護膜與工業標籤等服務，展示製造業網站的資訊與需求引導。",
     highlights: ["加工服務分類", "材料與應用介紹", "詢價需求摘要示範"],
-    href: "https://xk2022.github.io/xk-showcase-honest-diecut/",
+    href: "https://honest.xplorekaleidoscope.com/",
     image: {
       src: "/images/showcases/honest-diecut.webp",
       alt: "宏能興業展示網站的桌面版首頁畫面",
@@ -286,7 +286,7 @@ export const websiteShowcases = [
     availability: "available",
     summary: "以桃園住宅換窗與大園看樣為情境，展示窗型介紹、拍攝指南與門窗需求整理。",
     highlights: ["三種窗型開法示意", "住宅現況拍攝指南", "換窗與看樣需求模擬"],
-    href: "https://xk2022.github.io/xk-showcase-qiangang-windows/",
+    href: "https://qiangang.xplorekaleidoscope.com/",
     image: {
       src: "/images/showcases/qiangang-windows.webp",
       alt: "千剛實業門窗提案展示網站的桌面版首頁畫面",

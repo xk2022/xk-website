@@ -7,8 +7,30 @@ type InquiryAction = Readonly<{
   description: string;
 }>;
 
+export const inquiryEmailTemplate = {
+  subject: "XK 專案詢價",
+  fields: ["專案目標", "需求範圍", "目前網站或系統（選填）", "期望時程（選填）", "可討論預算（選填）", "參考網址（選填）"],
+} as const;
+
+/** Static prompts only: no visitor data is collected or sent by this website. */
+export function createInquiryHref(href: ContactChannel["href"], context?: string): ContactChannel["href"] {
+  if (!href.startsWith("mailto:")) return href;
+  const recipient = new URL(href).pathname;
+  const subject = context ? `${inquiryEmailTemplate.subject}｜${context}` : inquiryEmailTemplate.subject;
+  const body = [
+    "您好，我想了解 XK 的服務，以下是需求概況：",
+    ...(context ? [`參考方案：${context}`] : []),
+    "",
+    ...inquiryEmailTemplate.fields.map((field) => `${field}：`),
+    "",
+    "請勿提供帳號密碼、金鑰或敏感資料。",
+    "請依需求協助確認適合的方案與報價，謝謝。",
+  ].join("\r\n");
+  return `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
 /** An enquiry action is available only through the existing verified registry. */
-export function getInquiryAction(channels: readonly ContactChannel[]): InquiryAction {
+export function getInquiryAction(channels: readonly ContactChannel[], context?: string): InquiryAction {
   const channel = channels[0];
   if (!channel) {
     return {
@@ -31,9 +53,9 @@ export function getInquiryAction(channels: readonly ContactChannel[]): InquiryAc
   return {
     state: "direct",
     label: "立即詢價",
-    href: channel.href,
+    href: createInquiryHref(channel.href, context),
     description: channel.href.startsWith("mailto:")
-      ? "開啟電子郵件程式，說明您的專案目標與需求範圍。"
+      ? "開啟郵件程式並帶入需求範本，請確認內容後自行寄出；本站不會代為寄信。"
       : "前往已確認的聯絡管道，說明您的專案目標與需求範圍。",
   };
 }

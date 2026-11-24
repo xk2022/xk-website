@@ -41,7 +41,8 @@ python3 scripts/run-with-evidence.py \
 - 所有站內 `<a>` 的公開 route、Pages base path 及 fragment 目標；未知目的地會失敗，不能因未列入 registry 就忽略。
 - 本機 script／stylesheet／preload／圖片等 HTML 資源的 HTTP 200 與 base path；圖片的 Content-Type、實際 bytes 與 PNG／JPEG／GIF／WebP／SVG header 尺寸。這不是完整瀏覽器圖片解碼，也不解析 CSS 內的背景圖。
 - 首頁精選與 Portfolio 的每張展示卡：`data-showcase-id`／state／presentation、可見分類、可用外連與真實預覽、品牌詳頁入口、第三方模板署名。`preparing`／`reference-only` 必須是 null href／image，沒有假圖或失效外站按鈕。
-- 原三個技術詳頁的 Planned 與缺乏實作／系統畫面的誠實說明；About／Solutions 的對外人數強調回歸；Contact 保留無表單與管道待確認狀態。
+- 原三個技術詳頁的 Planned 與缺乏實作／系統畫面的誠實說明；About／Solutions 的對外人數強調回歸。Contact 使用本輪指定 Email，維持無表單與無送達宣稱。
+- [Contact 契約](../scripts/fixtures/contact-contract.json) 獨立鎖定唯一收件人、subject/body 靜態提示、方案 context 與三步流程；解析 mailto 不寄信。Home／Services 的三方案與 pricing-guide 不採未核准數字價格。
 - `/privacy`、`/dev/design-system`、`/sitemap.xml`、未知一般 route、未知技術與品牌 slug 的真實 HTTP 404；robots 的精確保護規則，以及公開 HTML 不包含 Privacy 草案正文。
 
 外部展示首頁與已知來源素材是獨立選項，不是官網本地資源通過的推論：

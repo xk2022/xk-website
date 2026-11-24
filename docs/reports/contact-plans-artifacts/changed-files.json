@@ -1,0 +1,193 @@
+{
+  "capturedAt": "2026-11-24T10:25:15.884156+00:00",
+  "base": "4b67bdea84773d0034e835a0a572f47dd19abfc4",
+  "headAtCapture": "4b67bdea84773d0034e835a0a572f47dd19abfc4",
+  "scope": "Only this continuation after previous feature head 4b67; current diff plus untracked files, excluding generated evidence. Previous committed round is not repackaged.",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 26202,
+      "sha256": "76452f9641cd2f523e2d87e73425418ac006b870574f553608ce47b6fc79cc73"
+    },
+    {
+      "path": "README.md",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 20744,
+      "sha256": "2ee1d486669e013e4078fb06a70728dbc4efe622d01fa568e0e53adb5ee8352f"
+    },
+    {
+      "path": "docs/implementation-notes.md",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 55880,
+      "sha256": "cb1c4b06ac5179c7b6bd955ec0ed335164a4da78870d25460a21d5ef644cdfba"
+    },
+    {
+      "path": "docs/publication-readiness.md",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 3543,
+      "sha256": "942df0b24032cfdda3abbf3ae707f218727216ac79516e3d7a0ffb781bcd7726"
+    },
+    {
+      "path": "docs/website-smoke.md",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 7167,
+      "sha256": "22a5e13a0fee55062963ba68937a72520ee4814190ab041823150057b6b4a333"
+    },
+    {
+      "path": "scripts/build-github-pages.mjs",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 41068,
+      "sha256": "5243324087ba1767e0438826ea3f4ca9397db0fcd0e300af824eed7e3a6f6533"
+    },
+    {
+      "path": "scripts/smoke-website.py",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 41153,
+      "sha256": "d78d2d94ba92077fa0f7644c61161ece782a9481f1f0fe90874161fd000922d3"
+    },
+    {
+      "path": "src/app/globals.css",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 8674,
+      "sha256": "39cd718e2635223c940b36ee800a70595520a5d8b6cb70838c7473a0ac3a2938"
+    },
+    {
+      "path": "src/app/page.tsx",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 1205,
+      "sha256": "9fa09907d1485da6cf9c7b7a400c092ab3aa8d93b364a3e87809e4478068c1e1"
+    },
+    {
+      "path": "src/app/services/page.tsx",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 1502,
+      "sha256": "e5361f7a09d8ebf0e4362c31899859188da3504b27cd6e6b90a0223d70eb5a23"
+    },
+    {
+      "path": "src/components/layout/inquiry-button.tsx",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 1318,
+      "sha256": "b9c3f9a406d54f1d4e806da63fc91c37a713c26720ca77d03b1645115a6cebeb"
+    },
+    {
+      "path": "src/components/sections/contact/contact-channels.tsx",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 3216,
+      "sha256": "dbdd74e38ce829d398a7191432270ae88029e1f60a48b76c0c11b8e44ec9d59d"
+    },
+    {
+      "path": "src/components/sections/contact/contact-hero.tsx",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 2992,
+      "sha256": "360df02aa7d24544cbc76c5c0c1257d65eb020aad8dcab8976de666eee95bfe7"
+    },
+    {
+      "path": "src/config/contact-page.ts",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 10773,
+      "sha256": "97f6aae07b733612158ef07c8b0ce7b0df596b40871226c1579421c1acfa5a7b"
+    },
+    {
+      "path": "src/config/contact.ts",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 486,
+      "sha256": "a49f05808551a128097eb5295f78bbee99ca2d1f30308ebf09ce8a8422426d15"
+    },
+    {
+      "path": "src/config/inquiry.ts",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 2608,
+      "sha256": "b768613553499e594019b62811d5611c6b608546880e64f7e7558886228d2d00"
+    },
+    {
+      "path": "src/config/website-showcases.ts",
+      "status": "M",
+      "method": "git diff --name-status 4b67bdea84773d0034e835a0a572f47dd19abfc4",
+      "bytes": 18789,
+      "sha256": "806057415b29ba0756829aaf81e9a88b52d3425506304acfe33e7b614c67db9e"
+    },
+    {
+      "path": "docs/contact-response-workflow.md",
+      "status": "UNTRACKED",
+      "method": "git ls-files --others --exclude-standard",
+      "bytes": 4240,
+      "sha256": "55757566c6498f4071575622419d23993377f8acb7b43b09936c311643952f6d"
+    },
+    {
+      "path": "docs/reports/contact-plans-usecase.md",
+      "status": "UNTRACKED",
+      "method": "git ls-files --others --exclude-standard",
+      "bytes": 8941,
+      "sha256": "e280ce5e281d6db0045f84e8d0745a3053757129e71d9f43d55722b187a09708"
+    },
+    {
+      "path": "scripts/fixtures/contact-contract.json",
+      "status": "UNTRACKED",
+      "method": "git ls-files --others --exclude-standard",
+      "bytes": 2473,
+      "sha256": "d9b6d713e9cc3e85d682637ccca40e6f89198ac22ced7720d28dd72bc496b88d"
+    },
+    {
+      "path": "src/components/sections/service-plans.tsx",
+      "status": "UNTRACKED",
+      "method": "git ls-files --others --exclude-standard",
+      "bytes": 4362,
+      "sha256": "6ede52c42a52f5a667c882536f394aaf0b1c5959aa3081fe54b5db0f5249ccc4"
+    },
+    {
+      "path": "src/config/service-plans.ts",
+      "status": "UNTRACKED",
+      "method": "git ls-files --others --exclude-standard",
+      "bytes": 4841,
+      "sha256": "c1f3ecea597da0270d04bb67102c1d041eb84bd646a2fc2abae617a381acd10e"
+    }
+  ],
+  "metadataRefreshHistory": [
+    {
+      "refreshedAt": "2026-11-24T10:28:16.646902+00:00",
+      "reason": "Documentation formatting only: SOP hard line breaks replaced by empty quoted paragraphs; CTA/Gmail/HTTP 200 spacing adjusted in implementation notes. App source unchanged; no website rerun.",
+      "files": [
+        {
+          "path": "docs/contact-response-workflow.md",
+          "previous": {
+            "bytes": 4240,
+            "sha256": "509a8caf103bd34fa0ceaac372ef86f653691aa53247fcf991ca2c4e2fbda738"
+          },
+          "current": {
+            "bytes": 4240,
+            "sha256": "55757566c6498f4071575622419d23993377f8acb7b43b09936c311643952f6d"
+          }
+        },
+        {
+          "path": "docs/implementation-notes.md",
+          "previous": {
+            "bytes": 55871,
+            "sha256": "ce4ba80ced52565229dca2047d4a78eecf78ab49481c0a80906b150c9ba3576f"
+          },
+          "current": {
+            "bytes": 55880,
+            "sha256": "cb1c4b06ac5179c7b6bd955ec0ed335164a4da78870d25460a21d5ef644cdfba"
+          }
+        }
+      ],
+      "previousSnapshotSha256": "33a5a244abfc76505a5c0e6271466c0cbb67d623ff44114d3d4485baaa3b94d5"
+    }
+  ]
+}

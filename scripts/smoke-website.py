@@ -14,7 +14,7 @@ import struct
 import subprocess
 import sys
 from urllib.error import HTTPError, URLError
-from urllib.parse import unquote, urljoin, urlsplit, urlunsplit
+from urllib.parse import parse_qsl, unquote, urljoin, urlsplit, urlunsplit
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
@@ -44,6 +44,37 @@ def normalized_absolute_http_url(reference):
     if port is not None and (scheme, port) not in {("http", 80), ("https", 443)}:
         host += ":" + str(port)
     return urlunsplit((scheme, host, url.path.removesuffix("/") or "/", url.query, url.fragment))
+
+
+def mailto_errors(href, contract, expected_context=None):
+    """Inspect a static draft URL only; never open a mail client or send Email."""
+    errors = []
+    try:
+        url = urlsplit(href)
+    except ValueError as error:
+        return [str(error)]
+    if url.scheme != "mailto" or url.netloc or url.fragment:
+        errors.append("must use mailto without an authority or fragment")
+    if unquote(url.path) != contract["ownerEmail"]:
+        errors.append("recipient must be exactly the owner-approved Email")
+    fields = parse_qsl(url.query, keep_blank_values=True)
+    if sorted(key for key, _ in fields) != ["body", "subject"]:
+        errors.append("only one static subject and body are allowed; no cc/bcc or extra recipients")
+    values = dict(fields)
+    subject, context = values.get("subject", ""), ""
+    if subject != contract["mailtoSubject"]:
+        prefix = contract["mailtoSubject"] + "｜"
+        context = subject[len(prefix):] if subject.startswith(prefix) else ""
+        if not context or context not in contract["servicePlanContexts"].values():
+            errors.append("subject must use the general template or an approved static plan context")
+    body = list(contract["mailtoBody"])
+    if context:
+        body.insert(1, "參考方案：" + context)
+    if values.get("body") != contract["lineEnding"].join(body):
+        errors.append("body must contain only the exact static prompts with CRLF line endings")
+    if expected_context is not None and context != expected_context:
+        errors.append("mail template and rendered plan context must agree")
+    return errors
 
 
 class Element:
@@ -161,6 +192,7 @@ class Smoke:
                             "basePath": self.base_path, "transport": "urllib.request (environment proxies honored)",
                             "externalSitesRequested": args.check_external, "sourceAssetsRequested": args.check_source_assets}
         self.contract = json.loads(CONTRACT_PATH.read_text())
+        self.contact_contract = json.loads((ROOT / "scripts/fixtures/contact-contract.json").read_text())
         self.data = None
         self.external_destinations, self.unavailable_source_destinations = set(), set()
 
@@ -194,8 +226,10 @@ import * as showcases from './src/config/website-showcases.ts';
 import {seoPages,seoProtectionPolicy} from './src/config/seo.ts';
 import {siteConfig} from './src/config/site.ts';
 import {pagesDeployment} from './src/config/deployment.ts';
+import * as contact from './src/config/contact.ts';
+import * as inquiry from './src/config/inquiry.ts';
 import {privacyPolicy,privacyDraftMarker} from './src/config/privacy.ts';
-console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pagesDeployment,privacyPolicy,privacyDraftMarker}));
+console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pagesDeployment,contact,inquiry,privacyPolicy,privacyDraftMarker}));
 """
         result = subprocess.run(["node", "--input-type=module", "-e", script], cwd=ROOT, capture_output=True, text=True)
         self.check("Native Node.js source import exits successfully", 0, result.returncode, result.stderr.strip())
@@ -203,13 +237,21 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             return False
         self.data = json.loads(result.stdout)
         self.environment["node"] = subprocess.run(["node", "--version"], capture_output=True, text=True, check=True).stdout.strip()
-        sources = ["scripts/smoke-website.py", "scripts/fixtures/showcase-contract.json", "src/config/website-showcases.ts", "src/config/seo.ts", "src/config/site.ts", "src/config/deployment.ts", "src/config/privacy.ts"]
+        sources = ["scripts/smoke-website.py", "scripts/fixtures/showcase-contract.json", "scripts/fixtures/contact-contract.json", "src/config/website-showcases.ts", "src/config/seo.ts", "src/config/site.ts", "src/config/deployment.ts", "src/config/privacy.ts", "src/config/contact.ts", "src/config/inquiry.ts"]
         self.environment["sourceSha256"] = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in sources}
         config = self.data["showcases"]
         entries = config["websiteShowcases"]
         self.check("Independent approved www root deployment", APPROVED_PAGES_DEPLOYMENT, self.data["pagesDeployment"])
         self.check("Independent approved brand metadata origin", APPROVED_PAGES_DEPLOYMENT["origin"], self.data["siteConfig"]["url"])
         self.check("Smoke target uses the deployment root", APPROVED_PAGES_DEPLOYMENT["basePath"], self.base_path)
+        approved = self.contact_contract
+        action = self.data["inquiry"]["inquiryAction"]
+        self.check("Independent owner-approved Email registry", ["mailto:" + approved["ownerEmail"]], [channel["href"] for channel in self.data["contact"]["verifiedContactChannels"]])
+        self.check("Owner-approved direct enquiry state", approved["inquiryState"], action["state"])
+        self.check("Owner-approved enquiry label", approved["inquiryLabel"], action["label"])
+        self.check("Independent static enquiry template", {"subject": approved["mailtoSubject"], "fields": approved["mailtoFields"]}, self.data["inquiry"]["inquiryEmailTemplate"])
+        self.check("Configured enquiry action opens the static general Email draft", [], mailto_errors(action["href"], approved, ""))
+        self.check("Enquiry description distinguishes opening from sending", True, "開啟郵件程式" in action["description"] and "自行寄出" in action["description"] and "不會代為寄信" in action["description"])
         # GitHub Pages projects can share the deployment origin. Only explicit,
         # reviewed absolute destinations may bypass this website's base path.
         self.external_destinations = {
@@ -398,6 +440,65 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check(f"{path} referenced local assets use base path and HTTP 200", [], bad_assets)
         self.check(f"{path} real image bytes and natural header dimensions", [], [item for item in images if not item["valid"]], "Header inspection is not a full browser image-decoding check.")
 
+    def enquiry_markup(self, path, doc):
+        approved = self.contact_contract
+        controls = [element.tag for element in doc.all() if element.tag in {"form", "input", "textarea", "select"} or element.attrs.get("type") == "submit" or "formaction" in element.attrs or "onsubmit" in element.attrs]
+        self.check(f"{path} retains no receiving form or submit action", [], controls)
+        anchors = doc.all("a")
+        self.check(f"{path} has no unapproved phone channel", [], [anchor.attrs.get("href") for anchor in anchors if anchor.attrs.get("href", "").lower().startswith("tel:")])
+        mailtos = [anchor for anchor in anchors if anchor.attrs.get("href", "").lower().startswith("mailto:")]
+        for index, anchor in enumerate(mailtos, 1):
+            self.check(f"{path} Email link {index} has the sole recipient and static prompts", [], mailto_errors(anchor.attrs["href"], approved), "URL parsing only; no Email is sent and delivery is not tested.")
+        actions = [anchor for anchor in anchors if "data-inquiry-state" in anchor.attrs]
+        self.check(f"{path} retains a direct enquiry action", True, bool(actions))
+        for index, anchor in enumerate(actions, 1):
+            context = anchor.attrs.get("data-inquiry-context", "")
+            self.check(f"{path} enquiry {index} state", approved["inquiryState"], anchor.attrs["data-inquiry-state"])
+            self.check(f"{path} enquiry {index} visible label", approved["planInquiryLabel"] if context else approved["inquiryLabel"], anchor.text().strip())
+            self.check(f"{path} enquiry {index} exact static context", [], mailto_errors(anchor.attrs.get("href", ""), approved, context))
+            if context:
+                self.check(f"{path} enquiry {index} contextual accessible name", approved["planInquiryLabel"] + "：" + context, anchor.attrs.get("aria-label"))
+        claims = [match.group() for pattern in approved["forbiddenClaimPatterns"] for match in re.finditer(pattern, doc.text(), re.I)]
+        self.check(f"{path} has no delivery, automatic-reply or response-SLA claim", [], claims)
+
+    def contact_page(self, doc):
+        approved = self.contact_contract
+        main = doc.all("main")
+        self.check("Contact retains one main landmark", 1, len(main))
+        if not main:
+            return
+        main = main[0]
+        self.check("Contact has the approved heading", [approved["contactHeading"]], [element.text().strip() for element in main.all("h1")])
+        channels = [element for element in main.all("section") if element.attrs.get("id") == "contact-channels"]
+        self.check("Contact shows the approved channels-only state", [approved["availability"]], [element.attrs.get("data-contact-availability") for element in channels])
+        self.check("Contact displays the owner-approved Email", True, bool(channels) and approved["ownerEmail"] in channels[0].text())
+        self.check("Contact exposes the Email draft link", True, bool(channels) and any(anchor.attrs.get("href", "").startswith("mailto:") for anchor in channels[0].all("a")))
+        self.check("Contact no longer shows the unconfirmed-channel fallback", False, "正式聯絡管道確認中" in main.text())
+        process = [element for element in main.all("section") if element.attrs.get("id") == "contact-process"]
+        self.check("Contact has the three Email/clarification/quotation steps", approved["processSteps"], [element.text().strip() for element in process[0].all("h3")] if len(process) == 1 else [])
+        notes = [element.text() for element in main.all("section") if element.attrs.get("id") == "contact-data-note"]
+        self.check("Contact explains draft, manual sending and delivery boundaries", [], [note for note in approved["requiredDataNotes"] if not notes or note not in notes[0]])
+
+    def service_plans(self, path, doc):
+        approved = self.contact_contract
+        sections = [element for element in doc.all("section") if element.attrs.get("id") == "service-plans"]
+        self.check(f"{path} has one service-plans section", 1, len(sections))
+        if not sections:
+            return
+        plans = sections[0]
+        cards = [element for element in plans.all() if "data-service-plan-id" in element.attrs]
+        self.check(f"{path} retains the three approved service plans in order", approved["servicePlanIds"], [card.attrs["data-service-plan-id"] for card in cards])
+        for card in cards:
+            item_id = card.attrs["data-service-plan-id"]
+            context = approved["servicePlanContexts"].get(item_id)
+            self.check(f"{path} {item_id} plan links to its own enquiry draft", [context], [anchor.attrs.get("data-inquiry-context") for anchor in card.all("a") if "data-inquiry-state" in anchor.attrs])
+            self.check(f"{path} {item_id} retains scope-based pricing", True, "依需求報價" in card.text())
+        pricing = [element for element in doc.all("section") if element.attrs.get("id") == "pricing-guide"]
+        if path == "/services":
+            self.check("Services has one pricing-guide section", 1, len(pricing))
+        text = plans.text() + "".join(element.text() for element in pricing)
+        self.check(f"{path} plans/pricing guide contain no unapproved numerical prices", [], re.findall(approved["unapprovedPricePattern"], text, re.I), "Only monetary price patterns in these sections are checked; case numbers and technical versions remain valid.")
+
     def run(self):
         if not self.source_contract():
             return
@@ -412,8 +513,11 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         for path, doc in self.documents.items():
             self.metadata(path, doc)
             self.links_and_resources(path, doc)
+            self.enquiry_markup(path, doc)
             if path in {"/", "/portfolio"}:
                 self.cards(path, doc)
+            if path in {"/", "/services"}:
+                self.service_plans(path, doc)
             if path == "/portfolio":
                 ids = {element.attrs["id"] for element in doc.all() if "id" in element.attrs}
                 self.check("Portfolio retains all existing category anchors", [], [item for item in self.contract["portfolioAnchors"] if item not in ids])
@@ -426,10 +530,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             if path in {"/about", "/solutions"}:
                 self.check(f"{path} revised visible operating-model copy", [], re.findall(r"一人全職|由一人|創辦人一人", doc.text()))
             if path == "/contact":
-                main = doc.all("main")
-                controls = [element.tag for element in main[0].all() if element.tag in {"form", "input", "textarea", "select"} or element.attrs.get("type") == "submit"] if main else ["missing main"]
-                self.check("Contact retains no receiving form", [], controls)
-                self.check("Contact retains honest unconfirmed-channel state", True, bool(main) and "正式聯絡管道確認中" in main[0].text())
+                self.contact_page(doc)
             draft_markers = [self.data["privacyDraftMarker"]] + [text for section in self.data["privacyPolicy"]["sections"] for text in section["paragraphs"]]
             self.check(f"{path} contains no unpublished Privacy draft text", [], [marker for marker in draft_markers if marker and marker in doc.text()])
         negative = ["/privacy", "/dev/design-system", "/sitemap.xml", "/portfolio/unknown-smoke-route", "/portfolio/showcases/unknown-smoke-route", "/unknown-smoke-route"]
@@ -463,6 +564,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
                   "imageObservations": list(self.image_observations.values()),
                   "scopeNotes": ["No browser rendering, keyboard, screen reader, responsive, axe or complete WCAG audit is performed.",
                                  "External source checks run only when requested; source-asset expected 404 is evidence of a limitation.",
+                                 "Email checks parse the public recipient and static draft prompts only; no message, SMTP or delivery test is performed.",
                                  "Image headers/bytes are inspected; full browser decoding is a separate check."]}
         output = Path(self.args.output).expanduser()
         output.parent.mkdir(parents=True, exist_ok=True)

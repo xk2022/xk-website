@@ -8,6 +8,7 @@ import { HomeServices } from "@/components/sections/home-services";
 import { HomeSolutions } from "@/components/sections/home-solutions";
 import { HomeTechnologies } from "@/components/sections/home-technologies";
 import { HomeWhyXk } from "@/components/sections/home-why-xk";
+import { ServicePlans } from "@/components/sections/service-plans";
 import { getSeoPage } from "@/config/seo";
 import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/seo";
@@ -20,6 +21,7 @@ export default function HomePage() {
       <HomeHero />
       <HomeIntroduction />
       <HomeServices />
+      <ServicePlans variant="home" />
       <HomeFeaturedShowcases />
       <HomeTechnologies />
       <HomeWhyXk />

@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { BrandPattern } from "@/components/brand/brand-pattern";
 import { XkLogo } from "@/components/brand/xk-logo";
 import { Container } from "@/components/layout/container";
+import { InquiryButton } from "@/components/layout/inquiry-button";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { contactPage } from "@/config/contact-page";
@@ -27,9 +28,10 @@ export function ContactHero() {
           <p className="type-body-lg mt-6 max-w-2xl text-foreground">{hero.description}</p>
           <p lang="en" className="type-body-sm mt-6 text-secondary">{siteConfig.tagline}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Button asChild size="lg"><Link href={hero.primaryCta.href}>{hero.primaryCta.label}<ArrowDown aria-hidden="true" /></Link></Button>
+            <InquiryButton descriptionId="contact-hero-action-note" />
             <Button asChild size="lg" variant="outline"><Link href={hero.secondaryCta.href}>{hero.secondaryCta.label}<ArrowUpRight aria-hidden="true" /></Link></Button>
           </div>
+          <p id="contact-hero-action-note" className="type-body-sm mt-4 max-w-2xl text-foreground">按鈕會開啟郵件程式；若尚未設定，請使用下方信箱地址在慣用信箱撰寫郵件。寄出前請自行確認內容。</p>
         </div>
         <figure className="relative mx-auto flex w-full min-w-0 max-w-sm flex-col items-center overflow-hidden rounded-2xl border bg-background px-6 py-10 shadow-subtle sm:px-8 sm:py-12">
           <BrandPattern variant="kaleidoscope" />

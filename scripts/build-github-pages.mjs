@@ -14,6 +14,11 @@ const basePath = pagesDeployment.basePath;
 const { privacyPolicy, privacyDraftMarker, privacyPageMetadata } = await import(new URL("../src/config/privacy.ts", import.meta.url));
 const { websiteShowcases, showcaseSettings, showcaseDetailPath, showcaseSeoPages, presentationLabels, showcaseStateLabels } = await import(new URL("../src/config/website-showcases.ts", import.meta.url));
 const showcaseContract = JSON.parse(readFileSync(new URL("./fixtures/showcase-contract.json", import.meta.url), "utf8"));
+const contactContract = JSON.parse(readFileSync(new URL("./fixtures/contact-contract.json", import.meta.url), "utf8"));
+const [{ verifiedContactChannels }, { inquiryAction, inquiryEmailTemplate }] = await Promise.all([
+  import(new URL("../src/config/contact.ts", import.meta.url)),
+  import(new URL("../src/config/inquiry.ts", import.meta.url)),
+]);
 const [{ seoPages, getSeoPage, seoProtectionPolicy }, { siteConfig }, seo, navigation] = await Promise.all([
   import(new URL("../src/config/seo.ts", import.meta.url)),
   import(new URL("../src/config/site.ts", import.meta.url)),
@@ -22,6 +27,11 @@ const [{ seoPages, getSeoPage, seoProtectionPolicy }, { siteConfig }, seo, navig
 ]);
 assert.deepEqual(seoProtectionPolicy, { mode: "protected", publishSitemap: false }, "SEO protection must remain enabled.");
 assert.equal(siteConfig.url, pagesDeployment.origin, "Brand metadata and the Pages deployment origin must agree.");
+assert.deepEqual(verifiedContactChannels.map(({ href }) => href), [`mailto:${contactContract.ownerEmail}`], "Publish only the owner-approved enquiry Email.");
+assert.equal(inquiryAction.state, contactContract.inquiryState, "The approved Email must enable the direct enquiry action.");
+assert.equal(inquiryAction.label, contactContract.inquiryLabel, "Keep the approved enquiry action label.");
+assert.deepEqual(inquiryEmailTemplate, { subject: contactContract.mailtoSubject, fields: contactContract.mailtoFields }, "Keep the independently approved static Email prompts.");
+assert.equal(verifyMailtoHref(inquiryAction.href, "Configured enquiry action"), "", "The default enquiry must use the general template.");
 assert.ok(["draft", "approved"].includes(privacyPolicy.status), "Unknown Privacy policy status.");
 const privacyApproved = privacyPolicy.status === "approved";
 const privacySectionIds = ["policy-scope", "data-collection", "data-use", "retention", "third-parties", "cookies-tracking", "your-rights", "privacy-contact", "policy-updates"];
@@ -84,6 +94,71 @@ function metadataAttribute(html, selectorAttribute, selectorValue, targetAttribu
   const tags = html.match(/<(?:meta|link)\b[^>]*>/g) ?? [];
   const tag = tags.find((value) => tagAttribute(value, selectorAttribute) === selectorValue);
   return tagAttribute(tag, targetAttribute);
+}
+
+function verifyMailtoHref(href, label) {
+  const url = new URL(href);
+  assert.equal(url.protocol, "mailto:", `${label} must use mailto.`);
+  assert.equal(url.host, "", `${label} must not contain a mailto authority.`);
+  assert.equal(decodeURIComponent(url.pathname), contactContract.ownerEmail, `${label} must target only the owner-approved Email.`);
+  assert.equal(url.hash, "", `${label} must not contain a fragment.`);
+  assert.deepEqual([...url.searchParams.keys()].sort(), ["body", "subject"], `${label} must contain only one static subject and body, without cc/bcc or extra recipients.`);
+  const subject = url.searchParams.get("subject");
+  let context = "";
+  if (subject !== contactContract.mailtoSubject) {
+    const prefix = `${contactContract.mailtoSubject}｜`;
+    assert.ok(subject?.startsWith(prefix), `${label} must keep the approved static subject.`);
+    context = subject.slice(prefix.length);
+    assert.ok(Object.values(contactContract.servicePlanContexts).includes(context), `${label} must use an approved static plan context.`);
+  }
+  const body = [...contactContract.mailtoBody];
+  if (context) body.splice(1, 0, `參考方案：${context}`);
+  assert.equal(url.searchParams.get("body"), body.join(contactContract.lineEnding), `${label} must keep the approved static body.`);
+  return context;
+}
+
+function verifyEnquiryMarkup(html, label) {
+  const visible = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
+  assert.doesNotMatch(visible, /<(?:form|input|textarea|select)\b/i, `${label} must not publish a receiving form or input controls.`);
+  assert.doesNotMatch(visible, /\b(?:type="submit"|formaction=|onsubmit=)/i, `${label} must not publish a submit action.`);
+  assert.doesNotMatch(visible, /\bhref="tel:/i, `${label} must not publish an unconfirmed phone channel.`);
+  const anchors = [...visible.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)];
+  for (const [, attributes] of anchors) {
+    const href = decodePublicText(tagAttribute(attributes, "href") ?? "");
+    if (/^mailto:/i.test(href)) verifyMailtoHref(href, label);
+  }
+  const actions = anchors.filter(([, attributes]) => tagAttribute(attributes, "data-inquiry-state") !== undefined);
+  assert.ok(actions.length > 0, `${label} must retain a direct enquiry action.`);
+  for (const [, attributes, content] of actions) {
+    assert.equal(tagAttribute(attributes, "data-inquiry-state"), contactContract.inquiryState, `${label} enquiry state is incorrect.`);
+    const context = decodePublicText(tagAttribute(attributes, "data-inquiry-context") ?? "");
+    assert.equal(decodePublicText(content.replace(/<[^>]*>/g, "")).trim(), context ? contactContract.planInquiryLabel : contactContract.inquiryLabel, `${label} enquiry label is incorrect.`);
+    if (context) assert.equal(decodePublicText(tagAttribute(attributes, "aria-label") ?? ""), `${contactContract.planInquiryLabel}：${context}`, `${label} plan enquiry must have a contextual accessible name.`);
+    assert.equal(verifyMailtoHref(decodePublicText(tagAttribute(attributes, "href") ?? ""), label), context, `${label} enquiry context and mail template must agree.`);
+  }
+  const text = decodePublicText(visible.replace(/<[^>]*>/g, ""));
+  for (const pattern of contactContract.forbiddenClaimPatterns) {
+    assert.doesNotMatch(text, new RegExp(pattern, "i"), `${label} must not claim delivery, automatic replies or a response SLA.`);
+  }
+}
+
+function verifyServicePlans(html, pagePath) {
+  const plans = html.match(/<section\b[^>]*\bid="service-plans"[^>]*>([\s\S]*?)<\/section>/)?.[1] ?? "";
+  assert.ok(plans, `${pagePath} must retain its service-plans section.`);
+  assert.deepEqual([...plans.matchAll(/\bdata-service-plan-id="([^"]+)"/g)].map(([, id]) => id), contactContract.servicePlanIds, `${pagePath} must show the three approved service plans in order.`);
+  const cards = [...plans.matchAll(/\bdata-service-plan-id="([^"]+)"/g)];
+  for (let index = 0; index < cards.length; index++) {
+    const id = cards[index][1];
+    const card = plans.slice(cards[index].index, cards[index + 1]?.index ?? plans.length);
+    assert.ok(card.includes(`data-inquiry-context="${contactContract.servicePlanContexts[id]}"`), `${pagePath} plan ${id} must use its own static enquiry context.`);
+    assert.ok(card.includes("依需求報價"), `${pagePath} plan ${id} must show the honest quote-by-scope state.`);
+  }
+  const pricing = pagePath === "/services"
+    ? html.match(/<section\b[^>]*\bid="pricing-guide"[^>]*>([\s\S]*?)<\/section>/)?.[1]
+    : "";
+  if (pagePath === "/services") assert.ok(pricing, "Services must retain the pricing-guide section.");
+  const text = decodePublicText(`${plans}${pricing ?? ""}`.replace(/<[^>]*>/g, ""));
+  assert.doesNotMatch(text, new RegExp(contactContract.unapprovedPricePattern, "i"), `${pagePath} must not publish unapproved numerical prices.`);
 }
 
 function verifyBrandUrl(value, expectedPath, label) {
@@ -214,6 +289,8 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   assert.equal(tagAttribute(html.match(/<html\b[^>]*>/)?.[0], "lang"), "zh-TW", `${label} HTML language is incorrect.`);
   verifyReferencedAssets(html, pagePath, label);
   verifySeoMetadata(html, getSeoPage(pagePath || "/"), label);
+  verifyEnquiryMarkup(html, label);
+  if (pagePath === "" || pagePath === "/services") verifyServicePlans(html, pagePath || "/");
 
   if (pagePath === "/solutions") {
     const title = "解決方案 | Xplore Kaleidoscope";
@@ -298,23 +375,25 @@ for (const [relativePath, pagePath, label] of exportedPages) {
     const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? "";
     const headings = [...main.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
     assert.equal(headings.length, 1, "Contact must have exactly one H1.");
-    assert.equal(headings[0][1].replace(/<[^>]*>/g, "").trim(), "從理解需求，開始探索合作可能。", "Contact H1 is incorrect.");
+    assert.equal(decodePublicText(headings[0][1].replace(/<[^>]*>/g, "")).trim(), contactContract.contactHeading, "Contact H1 is incorrect.");
     assert.deepEqual(
       [...main.matchAll(/<section\b[^>]*>/g)].map(([tag]) => tagAttribute(tag, "id")),
       ["contact-hero", "contact-channels", "contact-preparation", "contact-process", "contact-data-note", "contact-next-step"],
       "Contact must retain the six required sections in reading order.",
     );
 
-    // The current milestone has no approved public channels or receiving service.
-    // A future channel publication must update these acceptance expectations too.
-    assert.ok(main.includes("正式聯絡管道確認中"), "Contact must show the honest unavailable state.");
-    assert.ok(main.includes("目前尚未提供可公開的正式聯絡管道；可先了解服務與品牌，後續依確認資訊更新。"), "Contact unavailable-state explanation is missing.");
+    const channelSection = main.match(/<section\b[^>]*\bid="contact-channels"[^>]*>([\s\S]*?)<\/section>/)?.[0] ?? "";
+    assert.equal(tagAttribute(channelSection.match(/^<section\b[^>]*>/)?.[0], "data-contact-availability"), contactContract.availability, "Contact must show the approved channels-only state.");
+    assert.ok(channelSection.includes(contactContract.ownerEmail), "Contact must display the owner-approved Email.");
+    assert.match(channelSection, /\bhref="mailto:/i, "Contact must provide the registered Email draft link.");
+    assert.ok(!main.includes("正式聯絡管道確認中"), "Contact must not retain the unavailable-channel notice after owner approval.");
+    const process = main.match(/<section\b[^>]*\bid="contact-process"[^>]*>([\s\S]*?)<\/section>/)?.[1] ?? "";
+    assert.deepEqual([...process.matchAll(/<h3\b[^>]*>([\s\S]*?)<\/h3>/g)].map(([, content]) => decodePublicText(content.replace(/<[^>]*>/g, "")).trim()), contactContract.processSteps, "Contact must retain Email, requirements clarification and proposal/quotation in order.");
     const dataNote = main.match(/<section\b[^>]*\bid="contact-data-note"[^>]*>([\s\S]*?)<\/section>/)?.[1] ?? "";
-    assert.ok(dataNote.includes("本頁提供聯絡與合作準備資訊，目前沒有線上表單或需求提交功能。"), "Contact data note must describe the current no-form mode.");
+    for (const note of contactContract.requiredDataNotes) assert.ok(decodePublicText(dataNote.replace(/<[^>]*>/g, "")).includes(note), "Contact must distinguish opening an Email draft from sending or delivery.");
     assert.ok(dataNote.includes("網站託管服務可能依其服務設定保留存取紀錄；本頁沒有表單，不代表託管服務完全不處理資料。"), "Contact data note must distinguish the page from hosting-provider access records.");
     assert.doesNotMatch(main, /<(?:form|input|textarea|select)\b/i, "Contact must not publish a form or input controls.");
     assert.doesNotMatch(main, /<button\b[^>]*\btype="submit"/i, "Contact must not publish a submit button.");
-    assert.doesNotMatch(main, /\bhref="(?:mailto:|tel:)/i, "Contact must not publish an unconfirmed email or phone channel.");
     if (!privacyApproved) {
       assert.doesNotMatch(main, /\bhref="[^"]*\/privacy(?:\/|[?#"])/i, "Contact must not link to the unpublished Privacy route.");
     }

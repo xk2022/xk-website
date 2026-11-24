@@ -3,27 +3,33 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { inquiryAction } from "@/config/inquiry";
+import { verifiedContactChannels } from "@/config/contact";
+import { getInquiryAction, inquiryAction } from "@/config/inquiry";
 
 type InquiryButtonProps = {
   size?: "sm" | "lg";
   className?: string;
   descriptionId?: string;
+  context?: string;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 };
 
-export function InquiryButton({ size = "lg", className, descriptionId, onClick }: InquiryButtonProps) {
+export function InquiryButton({ size = "lg", className, descriptionId, context, onClick }: InquiryButtonProps) {
+  const action = context ? getInquiryAction(verifiedContactChannels, context) : inquiryAction;
+  const label = context && action.state !== "preparation" ? "詢問方案" : action.label;
   const props = {
-    href: inquiryAction.href,
+    href: action.href,
+    "aria-label": context && action.state !== "preparation" ? `${label}：${context}` : undefined,
     "aria-describedby": descriptionId,
-    "data-inquiry-state": inquiryAction.state,
+    "data-inquiry-state": action.state,
+    "data-inquiry-context": context,
     onClick,
   };
-  const content = <>{inquiryAction.label}<ArrowUpRight aria-hidden="true" /></>;
+  const content = <>{label}<ArrowUpRight aria-hidden="true" /></>;
 
   return (
     <Button asChild size={size} className={className}>
-      {inquiryAction.state === "direct"
+      {action.state === "direct"
         ? <a {...props}>{content}</a>
         : <Link {...props}>{content}</Link>}
     </Button>

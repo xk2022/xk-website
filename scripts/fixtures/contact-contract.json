@@ -1,0 +1,46 @@
+{
+  "reviewedAt": "2026-11-24",
+  "scope": "Owner-approved public Email and static inquiry prompts; opening a draft does not establish sending, delivery, automatic replies or a response SLA.",
+  "ownerEmail": "system.xk2022@gmail.com",
+  "availability": "channels-only",
+  "inquiryState": "direct",
+  "inquiryLabel": "立即詢價",
+  "planInquiryLabel": "詢問方案",
+  "mailtoSubject": "XK 專案詢價",
+  "mailtoFields": ["專案目標", "需求範圍", "目前網站或系統（選填）", "期望時程（選填）", "可討論預算（選填）", "參考網址（選填）"],
+  "mailtoBody": [
+    "您好，我想了解 XK 的服務，以下是需求概況：",
+    "",
+    "專案目標：",
+    "需求範圍：",
+    "目前網站或系統（選填）：",
+    "期望時程（選填）：",
+    "可討論預算（選填）：",
+    "參考網址（選填）：",
+    "",
+    "請勿提供帳號密碼、金鑰或敏感資料。",
+    "請依需求協助確認適合的方案與報價，謝謝。"
+  ],
+  "lineEnding": "\r\n",
+  "contactHeading": "從需求摘要開始，討論合適的方案。",
+  "processSteps": ["寄出需求摘要", "釐清需求與範圍", "確認方案與報價"],
+  "requiredDataNotes": [
+    "按鈕只會開啟郵件程式並帶入空白需求提示，不會自動寄信；本站沒有收件表單或已送達提示。",
+    "寄出前請確認收件地址、內容與附件；若沒有設定郵件程式，可自行複製信箱地址撰寫郵件。"
+  ],
+  "servicePlanIds": ["one-page", "corporate", "integration"],
+  "servicePlanContexts": {
+    "one-page": "一頁式服務推廣",
+    "corporate": "企業與品牌官網",
+    "integration": "網站功能與流程整合"
+  },
+  "numericPricesApproved": false,
+  "unapprovedPricePattern": "(?:NT\\$|NTD|TWD|新臺幣|新台幣|\\$)\\s*[0-9,]+|(?:[0-9,]+(?:\\.[0-9]+)?|[一二三四五六七八九十百千萬壹貳參肆伍陸柒捌玖拾佰仟]+)\\s*元|(?:售價|起價|價格|月費|年費|每月|每年)\\s*[:：]?\\s*[0-9,]+",
+  "forbiddenClaimPatterns": [
+    "(?:詢價|需求|信件|郵件)(?:已成功|已經成功|成功)(?:送出|寄出|送達|提交)",
+    "(?:本站|網站)(?:會|將)(?:自動)?(?:寄信|寄送郵件|回覆)",
+    "(?:[0-9]+|[一二三四五六七八九十]+)\\s*(?:分鐘|小時|天|工作日)\\s*內(?:即可|會|將)?(?:回覆|回應)",
+    "(?:24\\s*/\\s*7|全天候)(?:客服|回覆|支援)",
+    "自動回覆已(?:啟用|開啟)"
+  ]
+}

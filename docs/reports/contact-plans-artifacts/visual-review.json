@@ -1,0 +1,74 @@
+{
+  "testId": "CONTACT-PLANS-LIMITED-MANUAL-VISUAL",
+  "reviewedAtUtc": "2026-11-24T10:21:02.467Z",
+  "status": "PASS_WITH_SCOPE_LIMITATIONS",
+  "images": [
+    {
+      "path": "/tmp/xk-contact-plans/pages-final/home-1440.png",
+      "sha256": "0a5c79d7aeca7692a7524b2552be33e30e1d3e128bcb11100dd243f1dd8e3301",
+      "width": 1440,
+      "height": 9067,
+      "actuallyViewed": true
+    },
+    {
+      "path": "/tmp/xk-contact-plans/pages-final/home-375.png",
+      "sha256": "62c244e1d88649d7d4c08ce5fca968c5b8770b56d829e036a1a875f8653a5b8c",
+      "width": 375,
+      "height": 812,
+      "actuallyViewed": true
+    },
+    {
+      "path": "/tmp/xk-contact-plans/pages-final/services-plans-1440.png",
+      "sha256": "6424e7bc62033d2f864d504ace221c19da24fc3ad9e2a06187222f8fec98c3ec",
+      "width": 1440,
+      "height": 960,
+      "actuallyViewed": true
+    },
+    {
+      "path": "/tmp/xk-contact-plans/pages-final/contact-375.png",
+      "sha256": "35d97cd0f82a2186ca1a4aca28a7c1cfcf7b7f8c41f3c667389a842d9f419a74",
+      "width": 375,
+      "height": 6624,
+      "actuallyViewed": true
+    }
+  ],
+  "actualInspectionScope": "Actually viewed the four supplied screenshots directly with view_image: desktop Home full page, mobile Home initial 375x812 viewport, desktop Services plan-section element and mobile Contact full page. No repository/original-image changes, image editing, browser, build or network checks.",
+  "observations": [
+    {
+      "scope": "Home desktop and mobile first viewport",
+      "result": "PASS",
+      "detail": "The dark primary action clearly says 立即詢價; the service action remains outlined and the portfolio action remains a text link. At 375x812 both main buttons, the email-program explanation and portfolio link/description fit in the first viewport without major clipping or overlap. The explanation says the visitor reviews and sends the draft and the site does not send on their behalf."
+    },
+    {
+      "scope": "Three Services plan cards",
+      "result": "PASS",
+      "detail": "All three cards are readable at the supplied desktop element size. Their prices each visibly say 依需求報價, with no numerical amount or currency displayed in the cards. Each has an audience, three scope points, a scope note and an aligned 詢問方案 action. The third card visibly says 依需求組合 rather than implying a fixed product/package."
+    },
+    {
+      "scope": "Contact email and receiving impression",
+      "result": "PASS",
+      "detail": "The contact card visibly displays system.xk2022@gmail.com with the label Email 專案詢價. Contact explains that the visitor sends through their email program, with no site submission or automatic success message. No fake received/submitted state is shown."
+    },
+    {
+      "scope": "Contact three-step process and mobile layout",
+      "result": "PASS",
+      "detail": "Three distinct process entries are visible: 寄出需求摘要, 釐清需求與範圍 and 確認方案與報價. The email address, preparation cards, process text, data note, actions and footer fit the supplied 375px layout without major horizontal clipping or overlapping controls."
+    },
+    {
+      "scope": "Existing visual design",
+      "result": "PASS",
+      "detail": "Brand marks, service icons, English branding, existing service/showcase sections, image previews and footer styling remain visibly intact in the desktop overview. The new cards use the existing type hierarchy, borders, color scheme and button styles."
+    }
+  ],
+  "findings": [],
+  "blockingFindings": [],
+  "blockingCount": 0,
+  "limitations": [
+    "This review covers only these four SHA-identified screenshots, not every route, width or interaction state. No 320px or expanded mobile-menu screenshot was reviewed.",
+    "The viewer displayed Home full page at 953x6000 from 1440x9067, and Contact full page at 340x6000 from 375x6624. These long-page views support layout inspection, not pixel-level or complete character-by-character checks. The 375x812 Home viewport and 1440px Services element were directly readable without this tall-image downscaling.",
+    "The Services screenshot covers the three-plan section; the separate pricing-guide section and mobile plan cards are outside the supplied image scope.",
+    "No actual email was sent and receipt/delivery was not verified. Screenshot appearance does not establish mailto parameters, link behavior, email-account control or response availability.",
+    "No additional axe run, contrast-ratio measurement, keyboard/focus test or complete accessibility certification is claimed. Root browser/interception/targeted-axe evidence is separate."
+  ],
+  "frozen": true
+}

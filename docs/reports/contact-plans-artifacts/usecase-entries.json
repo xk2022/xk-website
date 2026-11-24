@@ -1,0 +1,104 @@
+[
+  {
+    "id": "march-tangbao",
+    "title": "三月手工湯包",
+    "kind": "brand-demo",
+    "availability": "available",
+    "href": "https://xk2022.github.io/xk-showcase-march-tangbao/",
+    "sourceHref": null,
+    "attribution": null
+  },
+  {
+    "id": "hongjia-birdnest",
+    "title": "宏家燕窩",
+    "kind": "brand-demo",
+    "availability": "available",
+    "href": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/",
+    "sourceHref": null,
+    "attribution": null
+  },
+  {
+    "id": "yupinyuan-bento",
+    "title": "御品園港式燒臘",
+    "kind": "brand-demo",
+    "availability": "available",
+    "href": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+    "sourceHref": null,
+    "attribution": null
+  },
+  {
+    "id": "campaign-website-design",
+    "title": "XK 一頁式網站建置",
+    "kind": "brand-demo",
+    "availability": "available",
+    "href": "https://xk2022.github.io/xk-campaign-website-design/",
+    "sourceHref": null,
+    "attribution": null
+  },
+  {
+    "id": "honest-diecut",
+    "title": "宏能興業",
+    "kind": "brand-demo",
+    "availability": "available",
+    "href": "https://xk2022.github.io/xk-showcase-honest-diecut/",
+    "sourceHref": null,
+    "attribution": null
+  },
+  {
+    "id": "qiangang-windows",
+    "title": "千剛實業",
+    "kind": "brand-demo",
+    "availability": "available",
+    "href": "https://xk2022.github.io/xk-showcase-qiangang-windows/",
+    "sourceHref": null,
+    "attribution": null
+  },
+  {
+    "id": "demo-001",
+    "title": "Agency 形象工作室",
+    "kind": "template",
+    "availability": "available",
+    "href": "https://xk2022.github.io/single-demo001/",
+    "sourceHref": null,
+    "attribution": {
+      "label": "Start Bootstrap · Agency",
+      "href": "https://startbootstrap.com/theme/agency"
+    }
+  },
+  {
+    "id": "demo-002",
+    "title": "Creative 簡潔形象",
+    "kind": "template",
+    "availability": "reference-only",
+    "href": null,
+    "sourceHref": "https://xk2022.github.io/single-demo002/",
+    "attribution": {
+      "label": "Start Bootstrap · Creative",
+      "href": "https://startbootstrap.com/theme/creative"
+    }
+  },
+  {
+    "id": "demo-003",
+    "title": "GadgetLanding 產品／App",
+    "kind": "template",
+    "availability": "reference-only",
+    "href": null,
+    "sourceHref": "https://xk2022.github.io/single-demo003/",
+    "attribution": {
+      "label": "TemplateMag · GadgetLanding",
+      "href": "https://templatemag.com/"
+    }
+  },
+  {
+    "id": "demo-004",
+    "title": "FoodLanding 餐廳",
+    "kind": "template",
+    "availability": "available",
+    "href": "https://xk2022.github.io/single-demo004/",
+    "sourceHref": null,
+    "attribution": {
+      "label": "TemplateMag · FoodLanding",
+      "href": "https://templatemag.com/"
+    }
+  }
+]
