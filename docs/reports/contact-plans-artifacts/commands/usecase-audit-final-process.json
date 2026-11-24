@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-contact-plans/complete-usecase-audit.py"
+  ],
+  "cwd": "/tmp/xk-contact-plans",
+  "startedAt": "2026-11-24T09:56:19.196333+00:00",
+  "finishedAt": "2026-11-24T09:56:19.763935+00:00",
+  "processId": 10047,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 90.0,
+  "logFile": "/tmp/xk-contact-plans/usecase-audit-final.log",
+  "logSha256": "d4ae3687b0bd3d2a862f4c8db797bb96cba645027f78aa1fafc378945e6e90f8",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

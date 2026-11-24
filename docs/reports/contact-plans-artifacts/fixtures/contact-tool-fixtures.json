@@ -1,0 +1,564 @@
+{
+  "testedAt": "2026-11-24T10:03:38.487412+00:00",
+  "scope": "Pure native imports/mailto/HTML fixtures; no formal build, server, HTTP, mail client, SMTP or send",
+  "result": "PASS",
+  "counts": {
+    "PASS": 69,
+    "FAIL": 0
+  },
+  "checks": [
+    {
+      "testId": "CONTACT-TOOL-001",
+      "item": "Python mailto: default draft",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": "[]"
+    },
+    {
+      "testId": "CONTACT-TOOL-002",
+      "item": "Python mailto: plan 一頁式服務推廣",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": "[]"
+    },
+    {
+      "testId": "CONTACT-TOOL-003",
+      "item": "Python mailto: plan 企業與品牌官網",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": "[]"
+    },
+    {
+      "testId": "CONTACT-TOOL-004",
+      "item": "Python mailto: plan 網站功能與流程整合",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": "[]"
+    },
+    {
+      "testId": "CONTACT-TOOL-005",
+      "item": "Python mailto: wrong recipient",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['recipient must be exactly the owner-approved Email']"
+    },
+    {
+      "testId": "CONTACT-TOOL-006",
+      "item": "Python mailto: comma recipient",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['recipient must be exactly the owner-approved Email']"
+    },
+    {
+      "testId": "CONTACT-TOOL-007",
+      "item": "Python mailto: bcc",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['only one static subject and body are allowed; no cc/bcc or extra recipients']"
+    },
+    {
+      "testId": "CONTACT-TOOL-008",
+      "item": "Python mailto: cc",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['only one static subject and body are allowed; no cc/bcc or extra recipients']"
+    },
+    {
+      "testId": "CONTACT-TOOL-009",
+      "item": "Python mailto: duplicate body",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['only one static subject and body are allowed; no cc/bcc or extra recipients']"
+    },
+    {
+      "testId": "CONTACT-TOOL-010",
+      "item": "Python mailto: duplicate subject",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['only one static subject and body are allowed; no cc/bcc or extra recipients']"
+    },
+    {
+      "testId": "CONTACT-TOOL-011",
+      "item": "Python mailto: missing body",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['only one static subject and body are allowed; no cc/bcc or extra recipients', 'body must contain only the exact static prompts with CRLF line endings']"
+    },
+    {
+      "testId": "CONTACT-TOOL-012",
+      "item": "Python mailto: raw address without prompts",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['only one static subject and body are allowed; no cc/bcc or extra recipients', 'subject must use the general template or an approved static plan context', 'body must contain only the exact static prompts with CRLF line endings']"
+    },
+    {
+      "testId": "CONTACT-TOOL-013",
+      "item": "Python mailto: visitor body",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['body must contain only the exact static prompts with CRLF line endings']"
+    },
+    {
+      "testId": "CONTACT-TOOL-014",
+      "item": "Python mailto: LF-only body",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['body must contain only the exact static prompts with CRLF line endings']"
+    },
+    {
+      "testId": "CONTACT-TOOL-015",
+      "item": "Python mailto: unknown context",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['subject must use the general template or an approved static plan context', 'body must contain only the exact static prompts with CRLF line endings']"
+    },
+    {
+      "testId": "CONTACT-TOOL-016",
+      "item": "Python mailto: fragment",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['must use mailto without an authority or fragment']"
+    },
+    {
+      "testId": "CONTACT-TOOL-017",
+      "item": "Python mailto: wrong rendered context",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['mail template and rendered plan context must agree']"
+    },
+    {
+      "testId": "CONTACT-TOOL-018",
+      "item": "Python markup: default and plan actions",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": "[]"
+    },
+    {
+      "testId": "CONTACT-TOOL-019",
+      "item": "Python markup: form",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/ retains no receiving form or submit action']"
+    },
+    {
+      "testId": "CONTACT-TOOL-020",
+      "item": "Python markup: input",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/ retains no receiving form or submit action']"
+    },
+    {
+      "testId": "CONTACT-TOOL-021",
+      "item": "Python markup: submit",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/ retains no receiving form or submit action']"
+    },
+    {
+      "testId": "CONTACT-TOOL-022",
+      "item": "Python markup: delivery claim",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/ has no delivery, automatic-reply or response-SLA claim']"
+    },
+    {
+      "testId": "CONTACT-TOOL-023",
+      "item": "Python markup: automatic reply",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/ has no delivery, automatic-reply or response-SLA claim']"
+    },
+    {
+      "testId": "CONTACT-TOOL-024",
+      "item": "Python markup: SLA",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/ has no delivery, automatic-reply or response-SLA claim']"
+    },
+    {
+      "testId": "CONTACT-TOOL-025",
+      "item": "Python markup: truthful draft disclaimer",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": "[]"
+    },
+    {
+      "testId": "CONTACT-TOOL-026",
+      "item": "Python markup: wrong label",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/ enquiry 1 visible label']"
+    },
+    {
+      "testId": "CONTACT-TOOL-027",
+      "item": "Python markup: wrong state",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/ enquiry 1 state']"
+    },
+    {
+      "testId": "CONTACT-TOOL-028",
+      "item": "Python markup: wrong rendered context",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/ enquiry 1 exact static context']"
+    },
+    {
+      "testId": "CONTACT-TOOL-029",
+      "item": "Python pricing scope: case/version/year numbers",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": "[]"
+    },
+    {
+      "testId": "CONTACT-TOOL-030",
+      "item": "Python pricing scope: NT currency",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/services plans/pricing guide contain no unapproved numerical prices']"
+    },
+    {
+      "testId": "CONTACT-TOOL-031",
+      "item": "Python pricing scope: Yuan price",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/services plans/pricing guide contain no unapproved numerical prices']"
+    },
+    {
+      "testId": "CONTACT-TOOL-032",
+      "item": "Python pricing scope: Chinese price",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/services plans/pricing guide contain no unapproved numerical prices']"
+    },
+    {
+      "testId": "CONTACT-TOOL-033",
+      "item": "Python pricing scope: numeric price label",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/services plans/pricing guide contain no unapproved numerical prices']"
+    },
+    {
+      "testId": "CONTACT-TOOL-034",
+      "item": "Python pricing scope: swapped context",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": "['/services one-page plan links to its own enquiry draft']"
+    },
+    {
+      "testId": "CONTACT-TOOL-035",
+      "item": "Python Contact structure",
+      "expected": [],
+      "actual": [],
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-036",
+      "item": "Builder mailto: default draft",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-037",
+      "item": "Builder mailto: plan 一頁式服務推廣",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-038",
+      "item": "Builder mailto: plan 企業與品牌官網",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-039",
+      "item": "Builder mailto: plan 網站功能與流程整合",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-040",
+      "item": "Builder mailto: wrong recipient",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-041",
+      "item": "Builder mailto: comma recipient",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-042",
+      "item": "Builder mailto: bcc",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-043",
+      "item": "Builder mailto: cc",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-044",
+      "item": "Builder mailto: duplicate body",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-045",
+      "item": "Builder mailto: duplicate subject",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-046",
+      "item": "Builder mailto: missing body",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-047",
+      "item": "Builder mailto: raw address without prompts",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-048",
+      "item": "Builder mailto: visitor body",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-049",
+      "item": "Builder mailto: LF-only body",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-050",
+      "item": "Builder mailto: unknown context",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-051",
+      "item": "Builder mailto: fragment",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-052",
+      "item": "Builder markup: default and plan actions",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-053",
+      "item": "Builder markup: form",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-054",
+      "item": "Builder markup: input",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-055",
+      "item": "Builder markup: submit",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-056",
+      "item": "Builder markup: delivery claim",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-057",
+      "item": "Builder markup: automatic reply",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-058",
+      "item": "Builder markup: SLA",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-059",
+      "item": "Builder markup: truthful draft disclaimer",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-060",
+      "item": "Builder markup: wrong label",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-061",
+      "item": "Builder markup: wrong state",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-062",
+      "item": "Builder markup: wrong rendered context",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-063",
+      "item": "Builder pricing scope: case/version/year numbers",
+      "expected": true,
+      "actual": true,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-064",
+      "item": "Builder pricing scope: NT currency",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-065",
+      "item": "Builder pricing scope: Yuan price",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-066",
+      "item": "Builder pricing scope: Chinese price",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-067",
+      "item": "Builder pricing scope: numeric price label",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-068",
+      "item": "Builder pricing scope: swapped context",
+      "expected": false,
+      "actual": false,
+      "status": "PASS",
+      "notes": ""
+    },
+    {
+      "testId": "CONTACT-TOOL-069",
+      "item": "Native source/contact/inquiry/SEO/showcase/deployment contracts",
+      "expected": [],
+      "actual": [],
+      "status": "PASS",
+      "notes": ""
+    }
+  ],
+  "harnessHistory": "The first inline tool harness failed because Python expanded a JavaScript newline escape; this standalone raw-string harness corrects that tooling error. No application source failed in that attempt."
+}

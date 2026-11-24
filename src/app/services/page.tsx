@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { ServicePlans } from "@/components/sections/service-plans";
 import { ServiceAI } from "@/components/sections/services/service-ai";
 import { ServiceCloud } from "@/components/sections/services/service-cloud";
 import { ServiceIntegration } from "@/components/sections/services/service-integration";
@@ -21,6 +22,7 @@ export default function ServicesPage() {
     <>
       <ServicesHero />
       <ServicesOverview />
+      <ServicePlans variant="services" />
       <ServiceWebsite />
       <ServiceJava />
       <ServiceIntegration />

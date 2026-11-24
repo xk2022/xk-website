@@ -1,0 +1,16 @@
+[
+  {
+    "name": "home-1440.png",
+    "reviewedPath": "/tmp/xk-inquiry-cta/pages-final/home-1440.png",
+    "finalPath": "/tmp/xk-inquiry-cta/pages-corrected/home-1440.png",
+    "sha256": "ddd91d4bb824338b5f6f10494baf398b78866819c1d61aa3bd695412ede9393c",
+    "byteIdentical": true
+  },
+  {
+    "name": "home-375.png",
+    "reviewedPath": "/tmp/xk-inquiry-cta/pages-final/home-375.png",
+    "finalPath": "/tmp/xk-inquiry-cta/pages-corrected/home-375.png",
+    "sha256": "a3810eb7368e417470497378770a3e82b3b5eac938a3b47071de647099a96d7a",
+    "byteIdentical": true
+  }
+]

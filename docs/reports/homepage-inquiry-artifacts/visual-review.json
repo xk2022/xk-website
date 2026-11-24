@@ -1,0 +1,50 @@
+{
+  "testId": "INQUIRY-CTA-LIMITED-VISUAL-REVIEW",
+  "reviewedAtUtc": "2026-11-24T09:26:45.565Z",
+  "status": "PASS_WITH_SCOPE_LIMITATIONS",
+  "images": [
+    {
+      "path": "/tmp/xk-inquiry-cta/pages-final/home-1440.png",
+      "sha256": "ddd91d4bb824338b5f6f10494baf398b78866819c1d61aa3bd695412ede9393c",
+      "width": 1440,
+      "height": 8005,
+      "actuallyViewed": true
+    },
+    {
+      "path": "/tmp/xk-inquiry-cta/pages-final/home-375.png",
+      "sha256": "a3810eb7368e417470497378770a3e82b3b5eac938a3b47071de647099a96d7a",
+      "width": 375,
+      "height": 812,
+      "actuallyViewed": true
+    }
+  ],
+  "actualInspectionScope": "Direct view_image inspection of only the supplied Home 1440px full page and Home 375x812 first viewport; no repository/image modifications, browser or build commands.",
+  "observations": [
+    {
+      "scope": "Desktop homepage",
+      "result": "PASS",
+      "detail": "Header, Hero and bottom contact card consistently display the prominent preparation CTA. Hero separates the dark primary preparation action, outline service action and text portfolio link. Brand wordmark, English tagline/slogan, service chips, existing service content, showcase previews and footer remain visible and styled. No major clipping or overlap was observed."
+    },
+    {
+      "scope": "375x812 first viewport",
+      "result": "PASS",
+      "detail": "The primary inquiry-preparation and secondary service buttons stack at full content width and both fit in the first viewport. Their labels and arrows are readable. The unavailable-receiving explanation appears directly below, and the portfolio text link plus its supporting description also remain visible. Header brand and menu fit without visible overlap. No major horizontal clipping was observed."
+    },
+    {
+      "scope": "Receiving-state impression",
+      "result": "PASS",
+      "detail": "The visible CTA says inquiry preparation rather than immediate submission. The adjacent text explicitly says enquiry receiving is not open. No submission control, receipt/success message, reply-time promise or apparent available receiving channel is shown in these images."
+    }
+  ],
+  "findings": [],
+  "blockingFindings": [],
+  "blockingCount": 0,
+  "limitations": [
+    "Only these two screenshots were manually reviewed. There is no 320px screenshot here; the 375px result does not establish 320px visual acceptance.",
+    "The mobile screenshot covers only the initial 812px viewport. Its lower brand tagline/service chips, bottom contact area and expanded mobile panel were not visually inspected in this review.",
+    "The tall desktop image was displayed at 1079x6000 by the viewer; lower-page review is a layout overview, not character-by-character or pixel-level inspection.",
+    "Screenshots do not verify link destinations, live channel availability, DOM/accessibility names, keyboard/focus behavior or complete accessibility compliance. No additional axe or all-route acceptance claim is made.",
+    "This review applies to the SHA-identified images above. Root will compare retry screenshot bytes before reusing the conclusion."
+  ],
+  "frozen": true
+}

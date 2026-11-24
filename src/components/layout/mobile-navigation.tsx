@@ -5,8 +5,9 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
+import { InquiryButton } from "@/components/layout/inquiry-button";
 import { Button } from "@/components/ui/button";
-import { contactNavigation, primaryNavigation } from "@/config/navigation";
+import { primaryNavigation } from "@/config/navigation";
 
 /** A disclosure, not a modal: the rest of the page remains available. */
 export function MobileNavigation() {
@@ -96,11 +97,7 @@ export function MobileNavigation() {
                 </li>
               ))}
             </ul>
-            <Button asChild size="sm" className="mt-4 w-full">
-              <Link href={contactNavigation.href} onClick={() => setOpen(false)}>
-                {contactNavigation.label}
-              </Link>
-            </Button>
+            <InquiryButton size="sm" className="mt-4 w-full" onClick={() => setOpen(false)} />
           </nav>
         </Container>
       </div>

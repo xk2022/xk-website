@@ -1,0 +1,74 @@
+{
+  "task": "Owner Email, service plans and actual showcase subdomain focused UI QA",
+  "preparedAt": "2026-11-24T10:05:27.902Z",
+  "formalSuiteExecuted": false,
+  "modes": {
+    "normal": "http://127.0.0.1:3190/",
+    "pages": "http://127.0.0.1:3191/"
+  },
+  "viewportHeight": 812,
+  "routes": [
+    "/",
+    "/services",
+    "/contact",
+    "/portfolio"
+  ],
+  "widths": [
+    320,
+    375,
+    768,
+    1440,
+    1920
+  ],
+  "expected": {
+    "layouts": 20,
+    "normalTestRows": 48,
+    "pagesTestRows": 49,
+    "mailtoJourneys": 14,
+    "targetedAxeScans": 7,
+    "pagesScreenshots": 4,
+    "renderedActiveSourceHrefs": 8
+  },
+  "mailtoSafety": {
+    "recipient": "system.xk2022@gmail.com",
+    "queryKeys": [
+      "subject",
+      "body"
+    ],
+    "blankPrompts": 6,
+    "defaultActionPrevented": true,
+    "listenerInstalled": "Once per document through one context.addInitScript registration",
+    "sendsEmail": false,
+    "opensExternalApp": false,
+    "deliveryTested": false
+  },
+  "targetedAxe": {
+    "home": [
+      "[data-inquiry-state]",
+      "#service-plans"
+    ],
+    "services": [
+      "[data-inquiry-state]",
+      "#service-plans",
+      "#pricing-guide"
+    ],
+    "contact": [
+      "[data-inquiry-state]",
+      "#contact-channels",
+      "#contact-process"
+    ],
+    "states": "Each route 375/1440 menu closed; Home 375 menu open.",
+    "incomplete": "MANUAL_PENDING with raw nodes and fresh styles/ancestors, exit2; no automatic PASS"
+  },
+  "tool": {
+    "path": "/tmp/xk-contact-plans/browser.cjs",
+    "sha256": "34e3bda6753e2f8d7acc75646e9ebadd14a6639013697b277836b060f4311283"
+  },
+  "syntaxReceipt": "tool-syntax.receipt.json",
+  "scopeLimits": [
+    "No full site/AT/WCAG audit",
+    "No email sent, no real external mail client opened, and no inbox/SLA certification",
+    "External source URLs are only rendered-href checks; Root HTTP/DNS audit is separate",
+    "Manual visual review remains PENDING until four actual Pages captures are independently examined"
+  ]
+}

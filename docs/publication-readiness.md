@@ -7,14 +7,14 @@
 - 官網採 GitHub Actions → GitHub Pages；一般 Next.js production build 保留。
 - 所有公開頁面仍為 noindex/nofollow；Sitemap 不發布，Privacy 草案不公開。
 - 2026-11-23 使用者明確指定 `https://www.xplorekaleidoscope.com/`；本輪更新 Canonical／OG 等來源與根路徑建置。Pages API 顯示 www、自訂網域 HTTPS 憑證核准及強制 HTTPS；資源與部署驗收依 [本輪報告](reports/custom-domain-assets-2026-11-23.md)／PR，不把先前環境 Tunnel 403 判為 DNS 故障。
-- Contact 是否可用，僅由 [已確認管道](../src/config/contact.ts) 決定。本次已請使用者提供可公開且可收件的實際資料；沒有資料就不填入建議或猜測地址。
+- 商務聯絡使用品牌負責人本輪提供的 `system.xk2022@gmail.com`，由 [管道設定](../src/config/contact.ts) 派生 mailto 詢價。UI／連結及限制依 [本輪報告](reports/contact-plans-usecase.md)；沒有實寄／收件驗證或自動回覆宣稱。
 - [Privacy 設定](../src/config/privacy.ts) 仍為 draft-1，資料處理主體、生效日與權利聯絡管道未確認。先前未提供的法律核准，不會因合併網站修正而視為取得。
 
 ## 前置條件與證據
 
 | ID | 項目 | 目前狀態 | 完成所需資料／證據 |
 | --- | --- | --- | --- |
-| PUB-01 | 商務聯絡管道 | BLOCKED | 使用者確認可公開的 Email／HTTPS 管道、接收對象與實際可用／收件紀錄；不以程式或 CI 成功替代 |
+| PUB-01 | 商務聯絡管道 | PENDING（Email 已指定） | 公開地址與用途由本輪使用者提供，mailto/UI驗收見同輪PR；未實寄，不能將格式或CI成功當成送達紀錄 |
 | PUB-02 | 正式對外網址 | PENDING（網址已確認） | www 與根路徑已由使用者指定；本輪 PR 追蹤 Canonical、資源、部署與公開 HTTP 實測，與索引及法律核准分開 |
 | PUB-03 | 索引開放範圍 | PENDING | 明確的索引發布指示、可索引路由清單與實際內容核對；提案／模板不自動改為客戶成果 |
 | PUB-04 | Privacy 同版本核准 | BLOCKED | 同一版本正文的 Owner／法律審閱紀錄、真實資料處理主體、有效權利管道、生效日 |

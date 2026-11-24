@@ -18,6 +18,8 @@
 
 日常網站 smoke 使用方式見 [驗證指南](docs/website-smoke.md)；正式聯絡、索引、政策與網址的資料缺口見 [正式發布前置清單](docs/publication-readiness.md)。BF-009～BF-016 的實作與限制見 [本輪報告](docs/reports/bf009-016-implementation.md)。
 
+首頁與方案詢價入口使用品牌負責人提供的 `system.xk2022@gmail.com`，開啟郵件程式並帶入需求範本，由訪客自行確認寄出。Home／Services 提供三個方案方向與個別報價評估；展示案例連到已驗證的各案子網域。現況見 [Email、方案與展示連結報告](docs/reports/contact-plans-usecase.md)，人工回覆安排見 [聯絡與回覆流程](docs/contact-response-workflow.md)；未提供管道時的歷史驗收保留於 [前輪報告](docs/reports/homepage-inquiry-cta.md)。
+
 ## 部署方向
 
 使用者於 Task 003 選擇 **GitHub Actions → GitHub Pages 靜態網站**。正式模式仍保留一般 Next.js 建置，Vercel 相容設定使用 Next.js preset、Repository 根目錄 `.`、production branch `main`；實際連結及發布狀態以 Task 013 報告與當次部署證據為準，不需要在 Repository 新增 Vercel Secrets。

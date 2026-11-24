@@ -392,3 +392,11 @@ main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Mark
 ## 2026-11-23 自訂網域根路徑修正
 
 使用者指定 https://www.xplorekaleidoscope.com/ 為對外網址，修正既有 /xk-website 資源 404。集中正式 Origin 與空 Base Path，Pages 明確空 Asset Prefix，圖片／robots 移除舊 Repo fallback；workflow 對 provider 網域與空路徑先驗證，不再把 Repo 路徑直接注入 build。維持普通 Next.js 與靜態匯出、原 UI／內容／依賴、noindex、草案與無收件表單；分享圖／Sitemap 尚未發布。操作見 [自訂網域部署指南](custom-domain-deployment.md)，實際測試／版本／限制見 [本輪報告](reports/custom-domain-assets-2026-11-23.md)。
+
+## 首頁詢價入口
+
+Hero、桌面導覽、手機選單與底部 CTA 共用依正式管道可用性派生的詢價入口。目前沒有可公開收件管道，按鈕清楚標為「詢價前準備」，導向既有三項準備指南；真實管道確認後才顯示「立即詢價」。使用者第 2 項尚未填寫，不自行擴張功能。來源、實際驗收與未完成條件見 [首頁詢價動線報告](reports/homepage-inquiry-cta.md)。
+
+## Email 詢價、方案與展示子網域
+
+延續首頁詢價分支，由使用者提供 system.xk2022@gmail.com 作為公開商務聯絡，CTA 開啟靜態郵件需求範本，不代寄或宣稱送達。Contact改為寄出摘要、需求釐清、方案報價三步，另有人工回覆範本；未操作 Gmail 設定。新增三個網站方案方向與個別報價因素，未採未核准的建議價格。六品牌連結改用來源Pages設定與 HTTP 200 核對的各案子網域，沒有把NXDOMAIN 的 usecase 候選寫成有效連結。完整範圍與驗收見 [本輪報告](reports/contact-plans-usecase.md)。

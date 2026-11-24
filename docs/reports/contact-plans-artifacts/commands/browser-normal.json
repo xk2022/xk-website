@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-contact-plans/browser.cjs",
+    "normal",
+    "final"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-24T10:12:19.192710+00:00",
+  "finishedAt": "2026-11-24T10:13:01.013725+00:00",
+  "processId": 10885,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 900.0,
+  "logFile": "/tmp/xk-contact-plans/browser-normal.log",
+  "logSha256": "92b1bc66f4dfd1611b0b76aa98835e146037232b5342c6be1c31470d0785002e",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

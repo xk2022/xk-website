@@ -1,0 +1,22 @@
+{
+  "repository": "xk2022/xplore-kaleidoscope",
+  "main": "cd9be948fe843c437d69ed635263a9527e931367",
+  "sourceEvidenceRawSha256": "3b23e2ca99ee519a45db67979e0662a355d94fe4dfd490b4de558d60e8a9fdd8",
+  "references": [
+    {
+      "path": "doc/02_services/網站建置方案.md",
+      "blob": "02a2685b81f23988fe49d6d0ea03f71fd8c40c43",
+      "supports": "one-page and corporate directions; individual quotation"
+    },
+    {
+      "path": "doc/02_services/定價策略.md",
+      "blob": "59fea2a9d9805bbbfa7407a01ce5ce275a737a77",
+      "supports": "suggested pricing, not current approval of public numbers"
+    }
+  ],
+  "publicNumericPricesApproved": false,
+  "rawPlanningFiguresCopied": false,
+  "ownerDesignatedBusinessEmail": "system.xk2022@gmail.com",
+  "deliveryTestPerformed": false,
+  "note": "Only minimum source metadata and approval boundaries are archived; raw planning figures are not republished."
+}

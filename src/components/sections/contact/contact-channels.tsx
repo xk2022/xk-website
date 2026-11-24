@@ -7,6 +7,7 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { verifiedContactChannels, type ContactChannel } from "@/config/contact";
+import { createInquiryHref } from "@/config/inquiry";
 import { contactAvailability, contactPage } from "@/config/contact-page";
 
 /** Shared presentation; the public page supplies only the verified registry. */
@@ -22,7 +23,7 @@ export function ContactChannelList({ channels }: { channels: readonly ContactCha
           <li key={channel.href} className="min-w-0">
             <Card className="h-full">
               <a
-                href={channel.href}
+                href={createInquiryHref(channel.href)}
                 className="group flex min-h-11 w-full min-w-0 max-w-full items-start gap-4 rounded-sm text-secondary underline-offset-4 hover:underline"
               >
                 <Icon aria-hidden="true" className="mt-1 size-5 shrink-0" />

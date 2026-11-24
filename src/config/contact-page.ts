@@ -18,7 +18,7 @@ export const contactAvailability = getContactAvailability(verifiedContactChannel
 
 export type ContactPageLink = {
   readonly label: string;
-  readonly href: "/" | "/about" | "/services" | "#contact-channels" | `/services#${ServiceId}`;
+  readonly href: "/" | "/about" | "/services" | "/services#service-plans" | "/services#pricing-guide" | "#contact-channels" | `/services#${ServiceId}`;
 };
 
 export type ContactServiceLink = ContactPageLink & {
@@ -60,7 +60,6 @@ export type ContactPageContent = {
   };
   readonly hero: ContactSectionContent & {
     readonly englishTitle: string;
-    readonly primaryCta: ContactPageLink;
     readonly secondaryCta: ContactPageLink;
   };
   readonly channels: ContactSectionContent & {
@@ -152,15 +151,14 @@ export const contactPage = {
     path: "/contact",
   },
   hero: {
-    title: "從理解需求，開始探索合作可能。",
+    title: "從需求摘要開始，討論合適的方案。",
     englishTitle: "Contact XK",
-    description: `與 ${siteConfig.name}（${siteConfig.abbreviation}）討論技術需求前，可以先整理目前的問題、使用情境與希望討論的範圍。正式聯絡資訊以本頁確認的管道為準。`,
-    primaryCta: { label: "查看聯絡資訊", href: "#contact-channels" },
-    secondaryCta: { label: "了解技術服務", href: "/services" },
+    description: `透過 Email 與 ${siteConfig.name}（${siteConfig.abbreviation}）說明專案目標、現況與希望討論的範圍，後續再釐清需求並確認方案與報價。`,
+    secondaryCta: { label: "比較服務方案", href: "/services#service-plans" },
   },
   channels: {
-    title: "確認管道，再開始交流。",
-    description: "這裡只提供已確認可公開的正式聯絡管道；尚未提供時，可先瀏覽服務與品牌資訊。",
+    title: "透過 Email，開始討論您的專案。",
+    description: "使用以下商務信箱提供需求摘要；信件由您的郵件程式寄出，本站不會代為提交或顯示寄送成功。",
     emptyTitle: "正式聯絡管道確認中",
     emptyDescription: "目前尚未提供可公開的正式聯絡管道；可先了解服務與品牌，後續依確認資訊更新。",
     fallbackLinks: [
@@ -170,39 +168,40 @@ export const contactPage = {
     ],
   },
   preparation: {
-    title: "先整理需求，讓討論更清楚。",
+    title: "先整理這三件事，讓詢價更清楚。",
     description: "可從以下三個方向準備，不需要先選好全部技術，也請勿分享帳密或敏感資料。",
     servicesLabel: "依需求了解相關技術服務",
     items: [
       { title: "商業目標", description: "目前想解決什麼問題？希望改善哪個流程，或讓哪些資訊更容易理解？" },
       { title: "現有系統與限制", description: "整理目前網站、系統與作業方式，以及需要保留的功能、資料或使用限制。" },
-      { title: "需要討論的範圍", description: "說明預計討論的服務與使用情境，區分目前必要項目與後續方向。" },
+      { title: "需要討論的範圍", description: "區分目前必要項目與後續方向；如有期望時程與可討論預算，可一併提供，細節仍會逐案確認。" },
     ],
   },
   process: {
-    title: "從需求整理，走向合適的下一步。",
-    description: "以下是討論前的準備方向，實際範圍、合作方式與回應條件依個別情況確認。",
+    title: "寄出需求後，如何確認下一步？",
+    description: "以 Email 往返確認需求與方案，實際回覆安排、討論方式與交付條件依個別情況確認。",
     steps: [
-      { title: "整理需求", description: "先整理商業目標、目前流程、系統限制與希望討論的項目。" },
-      { title: "確認可用管道", description: "以本頁列出的已確認管道為準；若尚未提供，可先了解服務與品牌資訊。" },
-      { title: "依情況討論下一步", description: "有可用管道後，再依需求確認討論範圍與合作方式，不預設報價、工期或回覆時限。" },
+      { title: "寄出需求摘要", description: "以 Email 說明目標、目前狀況與需求範圍，必要時附上可公開的參考網址。" },
+      { title: "釐清需求與範圍", description: "透過回信確認對需求的理解、需要補充的資訊與優先順序，再視情況安排進一步討論。" },
+      { title: "確認方案與報價", description: "依確認範圍討論交付內容、費用項目、時程與維護方式；合作條件以雙方書面確認為準。" },
     ],
   },
   dataNote: {
     title: "分享需求前，先留意資訊範圍。",
-    description: "本頁提供聯絡與合作準備資訊，目前沒有線上表單或需求提交功能。",
+    description: "本頁提供商務 Email 與詢價範本；寄信與後續回覆在您選擇的郵件服務中進行。",
     notes: [
-      "本頁未提供線上表單，也不在此頁提交需求資料。",
+      "按鈕只會開啟郵件程式並帶入空白需求提示，不會自動寄信；本站沒有收件表單或已送達提示。",
+      "寄出前請確認收件地址、內容與附件；若沒有設定郵件程式，可自行複製信箱地址撰寫郵件。",
       "使用已確認的聯絡管道時，請先確認接收對象，只提供討論所需資訊；請勿傳送帳號密碼、金鑰或敏感資料。",
       "網站託管服務可能依其服務設定保留存取紀錄；本頁沒有表單，不代表託管服務完全不處理資料。",
     ],
   },
   cta: {
-    title: "先了解適合的技術服務。",
-    description: "從服務範圍與品牌介紹了解 XK，整理需求後，再依已確認資訊選擇合適的交流方式。",
+    title: "從方案範圍，準備更清楚的詢價。",
+    description: "先比較服務方向與影響費用的因素，再以 Email 說明您的目標；實際報價與交付條件會依確認需求討論。",
     links: [
-      { label: "了解服務", href: "/services" },
-      { label: "認識 XK", href: "/about" },
+      { label: "比較服務方案", href: "/services#service-plans" },
+      { label: "了解報價評估方式", href: "/services#pricing-guide" },
       { label: "返回首頁", href: "/" },
     ],
   },

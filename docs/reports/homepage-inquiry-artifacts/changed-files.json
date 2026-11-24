@@ -1,0 +1,92 @@
+{
+  "capturedAt": "2026-11-24T09:30:53.602877+00:00",
+  "base": "a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+  "headAtCapture": "a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+  "scope": "Current batch diff plus untracked files excluding generated evidence. No Git mutation by packager.",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "status": "M",
+      "method": "git diff --name-status a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+      "bytes": 25409,
+      "sha256": "84cf9d3410e447acf91b5d34fc0fb8347295ac2e49a0677ae48bdf28d8cb58e9"
+    },
+    {
+      "path": "README.md",
+      "status": "M",
+      "method": "git diff --name-status a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+      "bytes": 20449,
+      "sha256": "ddd1897b792ea7e8759828f0d408a4c38dc9743af729dd1815a4add81c27c78d"
+    },
+    {
+      "path": "docs/implementation-notes.md",
+      "status": "M",
+      "method": "git diff --name-status a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+      "bytes": 55259,
+      "sha256": "fa4af38540672aceda2dbd6c9ba01a5ae26dcfbad3129229947ca0a29e0376b7"
+    },
+    {
+      "path": "src/app/globals.css",
+      "status": "M",
+      "method": "git diff --name-status a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+      "bytes": 8557,
+      "sha256": "8621b91b0daa249361e5b15f413654c4ec9c44b82f35fa4306bafe4ded0cf0e8"
+    },
+    {
+      "path": "src/components/layout/mobile-navigation.tsx",
+      "status": "M",
+      "method": "git diff --name-status a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+      "bytes": 3403,
+      "sha256": "daf7397767b6711078795a3790a50ad19f67b2bc69d707f1b0b113df6ae5e2a2"
+    },
+    {
+      "path": "src/components/layout/site-header.tsx",
+      "status": "M",
+      "method": "git diff --name-status a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+      "bytes": 1915,
+      "sha256": "1e685bef18282fdf2e81038f1f315e4759c9dc027c8bb28e736449ed67092900"
+    },
+    {
+      "path": "src/components/sections/contact/contact-preparation.tsx",
+      "status": "M",
+      "method": "git diff --name-status a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+      "bytes": 2369,
+      "sha256": "50b0026e69c49b044dd06bd92dc12eb0a76a9251416096aa286dfe64a84c23d7"
+    },
+    {
+      "path": "src/components/sections/home-contact-cta.tsx",
+      "status": "M",
+      "method": "git diff --name-status a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+      "bytes": 2125,
+      "sha256": "1705ad4a0ec6866634aaae6780ab44bf4a1a169194ab68b8e39d6205ae201d82"
+    },
+    {
+      "path": "src/components/sections/home-hero.tsx",
+      "status": "M",
+      "method": "git diff --name-status a08c5d86ada6a5ae2600d56df42e7291a4d90abd",
+      "bytes": 4718,
+      "sha256": "b4e8d6a3d3bb8a9786187d709547b9218a33181fe64cb16383ac6d425d723c84"
+    },
+    {
+      "path": "docs/reports/homepage-inquiry-cta.md",
+      "status": "UNTRACKED",
+      "method": "git ls-files --others --exclude-standard",
+      "bytes": 7310,
+      "sha256": "975412badf856810dccf0ab7b414c21b48e33347b9894485ef29e3b78eead383"
+    },
+    {
+      "path": "src/components/layout/inquiry-button.tsx",
+      "status": "UNTRACKED",
+      "method": "git ls-files --others --exclude-standard",
+      "bytes": 924,
+      "sha256": "aafeb8ebd703a42ac2bbc4d71226e865ed989eff4c0b34671c90405b9ff21755"
+    },
+    {
+      "path": "src/config/inquiry.ts",
+      "status": "UNTRACKED",
+      "method": "git ls-files --others --exclude-standard",
+      "bytes": 1416,
+      "sha256": "da1711fc5b820c28d60ab03c7fe08a7d11793d82acf6107d4656eedafc4a83ea"
+    }
+  ]
+}
