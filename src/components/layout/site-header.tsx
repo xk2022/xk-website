@@ -2,9 +2,9 @@ import Link from "next/link";
 
 import { XkLogo } from "@/components/brand/xk-logo";
 import { Container } from "@/components/layout/container";
+import { InquiryButton } from "@/components/layout/inquiry-button";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
-import { Button } from "@/components/ui/button";
-import { contactNavigation, primaryNavigation } from "@/config/navigation";
+import { primaryNavigation } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
 
 export function SiteHeader() {
@@ -45,9 +45,7 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <Button asChild size="sm" className="hidden lg:inline-flex">
-          <Link href={contactNavigation.href}>{contactNavigation.label}</Link>
-        </Button>
+        <InquiryButton size="sm" className="hidden lg:inline-flex" />
         <MobileNavigation />
       </Container>
     </header>

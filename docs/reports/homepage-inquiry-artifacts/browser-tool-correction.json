@@ -1,0 +1,6 @@
+{
+  "reason": "Pages trailingSlash serializes the existing portfolio link with a final slash; one exact mode-specific expectation fixed, no application change.",
+  "originalSha256": "ba6f194a69ca338b95b04cd77ebd54f72b07c836ba693c3f4f29dfa1d110b276",
+  "correctedSha256": "74efee7a115387a7930cf3f0920911a23a9bb3fca7c497c486a85bcb11f83edd",
+  "retestScope": "Repeat the short Pages focused suite to complete the previously interrupted HOME-CTA-CONSISTENCY assertions; no dependency/typecheck/build/smoke rerun because app is unchanged."
+}

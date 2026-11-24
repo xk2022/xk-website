@@ -18,6 +18,8 @@
 
 日常網站 smoke 使用方式見 [驗證指南](docs/website-smoke.md)；正式聯絡、索引、政策與網址的資料缺口見 [正式發布前置清單](docs/publication-readiness.md)。BF-009～BF-016 的實作與限制見 [本輪報告](docs/reports/bf009-016-implementation.md)。
 
+首頁詢價入口依 `verifiedContactChannels` 派生：未提供管道時是需求準備指南，正式管道確認後才提供立即詢價。介面、驗收與收件缺口見 [首頁詢價動線報告](docs/reports/homepage-inquiry-cta.md)。
+
 ## 部署方向
 
 使用者於 Task 003 選擇 **GitHub Actions → GitHub Pages 靜態網站**。正式模式仍保留一般 Next.js 建置，Vercel 相容設定使用 Next.js preset、Repository 根目錄 `.`、production branch `main`；實際連結及發布狀態以 Task 013 報告與當次部署證據為準，不需要在 Repository 新增 Vercel Secrets。

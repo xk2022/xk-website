@@ -11,7 +11,7 @@ export function ContactPreparation() {
   const { preparation } = contactPage;
 
   return (
-    <Section id="contact-preparation" background="surface" aria-labelledby="contact-preparation-title" className="border-y">
+    <Section id="contact-preparation" background="surface" aria-labelledby="contact-preparation-title" className="scroll-mt-8 border-y">
       <Container>
         <SectionHeading id="contact-preparation-title" eyebrow="PREPARE YOUR REQUIREMENTS" titleLang="zh-TW" title={preparation.title} description={preparation.description} />
         <ol className="grid min-w-0 gap-6 lg:grid-cols-3">

@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "cases": 5,
+  "syntheticDestinationsRequested": false,
+  "rows": [
+    {
+      "id": "EMPTY_IS_PREPARATION_ONLY",
+      "actual": {
+        "state": "preparation",
+        "label": "詢價前準備",
+        "href": "/contact#contact-preparation",
+        "description": "目前尚未開放詢價收件，可先依指南整理專案目標與需求。"
+      }
+    },
+    {
+      "id": "ONE_EMAIL_OPENS_COMPOSER",
+      "actual": {
+        "state": "direct",
+        "label": "立即詢價",
+        "href": "mailto:fixture@example.invalid",
+        "description": "開啟電子郵件程式，說明您的專案目標與需求範圍。"
+      }
+    },
+    {
+      "id": "ONE_WEB_USES_VERIFIED_DESTINATION",
+      "actual": {
+        "state": "direct",
+        "label": "立即詢價",
+        "href": "https://contact.example.invalid/",
+        "description": "前往已確認的聯絡管道，說明您的專案目標與需求範圍。"
+      }
+    },
+    {
+      "id": "MULTIPLE_CHANNELS_ALLOW_CHOICE",
+      "actual": {
+        "state": "choose-channel",
+        "label": "立即詢價",
+        "href": "/contact#contact-channels",
+        "description": "選擇已確認的聯絡管道，說明您的專案目標與需求範圍。"
+      }
+    },
+    {
+      "id": "PUBLIC_REGISTRY_STILL_EMPTY",
+      "actual": []
+    }
+  ]
+}

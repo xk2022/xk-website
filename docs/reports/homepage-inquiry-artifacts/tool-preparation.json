@@ -1,0 +1,45 @@
+{
+  "task": "Homepage inquiry CTA focused QA",
+  "preparedAt": "2026-11-24T09:18:38.977Z",
+  "baseCommit": "a08c5d8",
+  "modes": {
+    "normal": "http://127.0.0.1:3180/",
+    "pages": "http://127.0.0.1:3181/"
+  },
+  "currentExpectedState": "preparation",
+  "label": "詢價前準備",
+  "href": "/contact#contact-preparation",
+  "routes": [
+    "/",
+    "/about",
+    "/contact"
+  ],
+  "widths": [
+    320,
+    375,
+    768,
+    1440,
+    1920
+  ],
+  "height": 812,
+  "expected": {
+    "layouts": 15,
+    "normalTestRows": 28,
+    "pagesTestRows": 29,
+    "actionJourneys": 6,
+    "targetedAxeScans": 3,
+    "pagesScreenshots": 2
+  },
+  "formalSuiteExecuted": false,
+  "scopeLimits": [
+    "No complete site/136-asset/15-route browser matrix",
+    "No full-page axe or AT audit",
+    "No real inquiry delivery: receiving channel remains empty, form submission is N/A",
+    "Axe incomplete remains manual pending with exit 2 and fresh raw nodes/styles, rather than automatically passing."
+  ],
+  "tool": {
+    "path": "/tmp/xk-inquiry-cta/browser.cjs",
+    "sha256": "ba6f194a69ca338b95b04cd77ebd54f72b07c836ba693c3f4f29dfa1d110b276"
+  },
+  "syntaxReceipt": "tool-syntax.receipt.json"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-inquiry-cta/browser.cjs",
+    "pages",
+    "corrected"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-24T09:25:19.962836+00:00",
+  "finishedAt": "2026-11-24T09:25:46.374546+00:00",
+  "processId": 8509,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-inquiry-cta/browser-pages-retest.log",
+  "logSha256": "afc521e1a2581009e84ca770a3556017b35b195c3b8b71feaac486943beaa6b0",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

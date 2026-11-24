@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python",
+    "/tmp/xk-inquiry-cta/package-evidence.py"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-24T09:30:02.324981+00:00",
+  "finishedAt": "2026-11-24T09:30:02.428251+00:00",
+  "processId": 9044,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-inquiry-cta/package-evidence.log",
+  "logSha256": "c23e4d9986ee6737c22da1c01b843f1ae6224d803b84c0e01ffd01fb522c565d",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

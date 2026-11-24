@@ -83,3 +83,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 - The current owner-approved production origin is https://www.xplorekaleidoscope.com with an empty Pages basePath and assetPrefix. Use src/config/deployment.ts as the source; reject nonempty XK_PAGES_BASE_PATH values instead of accepting repository paths or URLs. Current instructions supersede historical project-path examples.
 - Keep the standard Next.js build and separate static export. Workflow provider metadata is checked against the approved domain/root contract, and the build receives an explicit empty path. Local public images and App icon stay root-relative.
 - This deployment repair authorizes Commit/Push and production delivery through PR CI and main deployment. Keep protected SEO, unpublished sharing images/Sitemap, draft Privacy and the existing no-form Contact state. Validate both builds, all public routes/resources and actual desktop/mobile interaction; document local versus remote evidence separately.
+
+## Homepage enquiry actions
+
+- Derive enquiry calls to action from verifiedContactChannels through src/config/inquiry.ts. An empty registry exposes a clearly labelled preparation guide, never a working enquiry or successful submission claim. A single confirmed channel may be linked directly; multiple channels use the existing channel chooser. Preserve Header/mobile navigation semantics, public route/SEO protections and the real Contact availability gate.

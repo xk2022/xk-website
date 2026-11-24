@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-inquiry-cta/inquiry-contract.mjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-24T09:18:31.901166+00:00",
+  "finishedAt": "2026-11-24T09:18:32.036272+00:00",
+  "processId": 7276,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-inquiry-cta/inquiry-contract.log",
+  "logSha256": "a3301815e942f0fb05e324b5aab6d519d59caa8e9129150613f2bf1ce760a63c",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}
