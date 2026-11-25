@@ -400,3 +400,11 @@ Hero、桌面導覽、手機選單與底部 CTA 共用依正式管道可用性�
 ## Email 詢價、方案與展示子網域
 
 延續首頁詢價分支，由使用者提供 system.xk2022@gmail.com 作為公開商務聯絡，CTA 開啟靜態郵件需求範本，不代寄或宣稱送達。Contact改為寄出摘要、需求釐清、方案報價三步，另有人工回覆範本；未操作 Gmail 設定。新增三個網站方案方向與個別報價因素，未採未核准的建議價格。六品牌連結改用來源Pages設定與 HTTP 200 核對的各案子網域，沒有把NXDOMAIN 的 usecase 候選寫成有效連結。完整範圍與驗收見 [本輪報告](reports/contact-plans-usecase.md)。
+
+## Contact 需求整理表單
+
+本輪以 main `1e16144c21a848399e2986948d4239481672f12c` 建立 `feature/contact-inquiry-form`。使用者要求優化 Contact、沿用 `system.xk2022@gmail.com` 並建立線上詢問表單；Repository 沒有已設定的收件端點，已詢問 owner，未自行挑選供應商或傳送資料。
+
+先完成可用的本地需求整理：四欄驗證、錯誤摘要、預覽、完整複製與郵件草稿，仍由訪客自行寄出。Hero 提供明確填寫入口，商務 Email 支援真實複製與手動 fallback；保留全站原詢價連結及六個 Contact 區塊錨點，另加入 `contact-form`。靜態守門僅對指定草稿表單開例外，其餘頁仍禁止收件表單；沒有新 Backend、第三方、依賴、儲存或公開法律政策。
+
+直接線上送出不是本地草稿流程的完成項目，端點／資料契約與真實驗收仍待確認。實際命令、瀏覽器、截圖、失敗／重驗與 Git 狀態見 [Contact 表單報告](reports/contact-inquiry-form.md)，不沿用前輪 merge 授權。

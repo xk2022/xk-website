@@ -20,6 +20,12 @@
 
 首頁與方案詢價入口使用品牌負責人提供的 `system.xk2022@gmail.com`，開啟郵件程式並帶入需求範本，由訪客自行確認寄出。Home／Services 提供三個方案方向與個別報價評估；展示案例連到已驗證的各案子網域。現況見 [Email、方案與展示連結報告](docs/reports/contact-plans-usecase.md)，人工回覆安排見 [聯絡與回覆流程](docs/contact-response-workflow.md)；未提供管道時的歷史驗收保留於 [前輪報告](docs/reports/homepage-inquiry-cta.md)。
 
+## Contact 需求整理表單
+
+本輪新增 `/contact#contact-form`：稱呼（選填）、回覆 Email（必填）、服務方向（選填）與需求摘要（必填）。填寫後先預覽，再複製完整內容或開啟寄給 `system.xk2022@gmail.com` 的郵件草稿，由訪客自行寄出。信箱另提供複製按鈕；未設定郵件程式或內容較長時仍可手動寄信。
+
+目前沒有外部收件端點，**表單不是站內直接送出服務**。輸入只保留在本頁記憶體，不自動寄送或寫入持久儲存；沒有 JavaScript 時提供 Email 替代入口。第三方服務、資料告知與真實受控收件驗收尚待確認，不新增 Backend、API、依賴或公開草案 Privacy。實際結果與待辦見 [Contact 表單實作報告](docs/reports/contact-inquiry-form.md)；下方原始 Task 段落保留各里程碑的歷史狀態。
+
 ## 部署方向
 
 使用者於 Task 003 選擇 **GitHub Actions → GitHub Pages 靜態網站**。正式模式仍保留一般 Next.js 建置，Vercel 相容設定使用 Next.js preset、Repository 根目錄 `.`、production branch `main`；實際連結及發布狀態以 Task 013 報告與當次部署證據為準，不需要在 Repository 新增 Vercel Secrets。

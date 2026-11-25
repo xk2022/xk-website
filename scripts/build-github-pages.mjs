@@ -19,6 +19,7 @@ const [{ verifiedContactChannels }, { inquiryAction, inquiryEmailTemplate }] = a
   import(new URL("../src/config/contact.ts", import.meta.url)),
   import(new URL("../src/config/inquiry.ts", import.meta.url)),
 ]);
+const { contactInquiry } = await import(new URL("../src/config/contact-inquiry.ts", import.meta.url));
 const [{ seoPages, getSeoPage, seoProtectionPolicy }, { siteConfig }, seo, navigation] = await Promise.all([
   import(new URL("../src/config/seo.ts", import.meta.url)),
   import(new URL("../src/config/site.ts", import.meta.url)),
@@ -32,6 +33,19 @@ assert.equal(inquiryAction.state, contactContract.inquiryState, "The approved Em
 assert.equal(inquiryAction.label, contactContract.inquiryLabel, "Keep the approved enquiry action label.");
 assert.deepEqual(inquiryEmailTemplate, { subject: contactContract.mailtoSubject, fields: contactContract.mailtoFields }, "Keep the independently approved static Email prompts.");
 assert.equal(verifyMailtoHref(inquiryAction.href, "Configured enquiry action"), "", "The default enquiry must use the general template.");
+assert.equal(contactInquiry.mode, contactContract.draftForm.mode, "Contact must remain a local Email-draft form.");
+assert.deepEqual(Object.fromEntries(Object.keys(contactContract.draftForm.limits).map((key) => [key, contactInquiry.limits[key]])), contactContract.draftForm.limits, "Keep the independently approved draft-field limits.");
+assert.deepEqual(contactInquiry.services.map(({ id }) => id), contactContract.draftForm.serviceIds, "Draft service choices must retain the five approved registry IDs.");
+for (const path of contactContract.draftForm.sourceFiles) {
+  const source = readFileSync(join(root, path), "utf8");
+  for (const pattern of contactContract.draftForm.forbiddenSourcePatterns) assert.doesNotMatch(source, new RegExp(pattern), `${path} must not introduce a network or persistent-storage API.`);
+}
+function collectApiHandlers(directory) {
+  return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => entry.isDirectory()
+    ? collectApiHandlers(join(directory, entry.name))
+    : /^route\.[cm]?[jt]sx?$/.test(entry.name) ? [join(directory, entry.name)] : []);
+}
+assert.deepEqual(collectApiHandlers(join(root, "src/app")), [], "The local draft form must not add a receiving API route.");
 assert.ok(["draft", "approved"].includes(privacyPolicy.status), "Unknown Privacy policy status.");
 const privacyApproved = privacyPolicy.status === "approved";
 const privacySectionIds = ["policy-scope", "data-collection", "data-use", "retention", "third-parties", "cookies-tracking", "your-rights", "privacy-contact", "policy-updates"];
@@ -117,10 +131,62 @@ function verifyMailtoHref(href, label) {
   return context;
 }
 
-function verifyEnquiryMarkup(html, label) {
+function htmlAttributes(tag) {
+  const attributes = new Map();
+  const content = tag.replace(/^<[^\s>]+/, "").replace(/\/?>$/, "");
+  for (const match of content.matchAll(/([^\s"'<>/=]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+)))?/g)) {
+    attributes.set(match[1].toLowerCase(), match[2] ?? match[3] ?? match[4] ?? "");
+  }
+  return attributes;
+}
+
+function verifyContactDraftForm(visible, label) {
+  const contract = contactContract.draftForm;
+  const forms = [...visible.matchAll(/<form\b[^>]*>[\s\S]*?<\/form>/gi)];
+  assert.equal((visible.match(/<form\b/gi) ?? []).length, 1, `${label} must have exactly one draft form.`);
+  assert.equal(forms.length, 1, `${label} must have one complete draft form.`);
+  const form = forms[0][0];
+  const section = visible.match(/<section\b[^>]*\bid="contact-form"[^>]*>[\s\S]*?<\/section>/)?.[0] ?? "";
+  assert.ok(section.includes(form), `${label} draft form must stay inside contact-form.`);
+  const attributes = htmlAttributes(form.match(/^<form\b[^>]*>/i)[0]);
+  assert.equal(attributes.get("data-contact-form-mode"), contract.mode, `${label} must retain Email-draft mode.`);
+  assert.ok(attributes.has("novalidate"), `${label} draft form must use its local validation handler.`);
+  for (const tag of form.match(/<[a-z][^>]*>/gi) ?? []) {
+    const attrs = htmlAttributes(tag);
+    for (const name of contract.forbiddenAttributes) assert.ok(!attrs.has(name), `${label} draft form must not contain ${name}.`);
+  }
+  const controls = [...form.matchAll(/<(input|select|textarea)\b[^>]*>/gi)];
+  assert.equal(controls.length, contract.controls.length, `${label} must render only the four approved editable controls.`);
+  for (let index = 0; index < controls.length; index++) {
+    const [tag, name] = controls[index];
+    const actual = htmlAttributes(tag);
+    const expected = contract.controls[index];
+    assert.equal(name.toLowerCase(), expected.tag, `${label} control tag differs from the approved contract.`);
+    for (const attribute of ["id", "type", "minlength", "maxlength", "autocomplete"]) assert.equal(actual.get(attribute), expected[attribute], `${label} ${expected.id} ${attribute} is incorrect.`);
+    assert.equal(actual.has("required"), expected.required, `${label} ${expected.id} required state is incorrect.`);
+    assert.ok(!actual.has("readonly") && !actual.has("disabled"), `${label} ${expected.id} must remain editable.`);
+    if (name.toLowerCase() === "input") assert.ok(!actual.get("value"), `${label} must not SSR visitor values.`);
+    assert.match(form, new RegExp(`<label\\b[^>]*\\bfor="${expected.id}"`), `${label} ${expected.id} must have an associated label.`);
+  }
+  const select = form.match(/<select\b[^>]*>[\s\S]*?<\/select>/i)?.[0] ?? "";
+  assert.deepEqual([...select.matchAll(/<option\b[^>]*>/gi)].map(([tag]) => htmlAttributes(tag).get("value")), ["", ...contract.serviceIds], `${label} must retain the empty choice and five approved services.`);
+  assert.ok([...select.matchAll(/<option\b[^>]*>/gi)].every(([tag]) => !htmlAttributes(tag).has("selected") || !htmlAttributes(tag).get("value")), `${label} must not SSR a visitor service selection.`);
+  const textarea = form.match(/<textarea\b[^>]*>([\s\S]*?)<\/textarea>/i)?.[1];
+  assert.equal(textarea, "", `${label} must not SSR a filled message or preview.`);
+  const submits = [...form.matchAll(/<button\b[^>]*>/gi)].map(([tag]) => htmlAttributes(tag)).filter((attrs) => (attrs.get("type") ?? "submit") === "submit");
+  assert.equal(submits.length, 1, `${label} must have one preview submit control.`);
+  assert.ok(submits[0].has("disabled"), `${label} preview submission must remain disabled before hydration.`);
+  const noscript = [...section.matchAll(/<noscript\b[^>]*>([\s\S]*?)<\/noscript>/gi)].map(([, text]) => decodePublicText(text.replace(/<[^>]*>/g, "")));
+  assert.ok(noscript.some((text) => text.includes(contract.noscriptText)), `${label} must explain the no-JavaScript Email alternative.`);
+  assert.doesNotMatch(visible, /\b(?:id="contact-inquiry-(?:preview|draft)"|data-contact-draft-link=)/i, `${label} must not SSR a filled draft or preview.`);
+  return visible.replace(form, "");
+}
+
+function verifyEnquiryMarkup(html, label, pagePath = "") {
   const visible = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
-  assert.doesNotMatch(visible, /<(?:form|input|textarea|select)\b/i, `${label} must not publish a receiving form or input controls.`);
-  assert.doesNotMatch(visible, /\b(?:type="submit"|formaction=|onsubmit=)/i, `${label} must not publish a submit action.`);
+  const outsideDraft = pagePath === "/contact" ? verifyContactDraftForm(visible, label) : visible;
+  assert.doesNotMatch(outsideDraft, /<(?:form|input|textarea|select)\b/i, `${label} must not publish another form or input controls.`);
+  assert.doesNotMatch(outsideDraft, /\b(?:type="submit"|formaction=|onsubmit=)/i, `${label} must not publish an outbound submit action.`);
   assert.doesNotMatch(visible, /\bhref="tel:/i, `${label} must not publish an unconfirmed phone channel.`);
   const anchors = [...visible.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)];
   for (const [, attributes] of anchors) {
@@ -289,7 +355,7 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   assert.equal(tagAttribute(html.match(/<html\b[^>]*>/)?.[0], "lang"), "zh-TW", `${label} HTML language is incorrect.`);
   verifyReferencedAssets(html, pagePath, label);
   verifySeoMetadata(html, getSeoPage(pagePath || "/"), label);
-  verifyEnquiryMarkup(html, label);
+  verifyEnquiryMarkup(html, label, pagePath);
   if (pagePath === "" || pagePath === "/services") verifyServicePlans(html, pagePath || "/");
 
   if (pagePath === "/solutions") {
@@ -378,8 +444,8 @@ for (const [relativePath, pagePath, label] of exportedPages) {
     assert.equal(decodePublicText(headings[0][1].replace(/<[^>]*>/g, "")).trim(), contactContract.contactHeading, "Contact H1 is incorrect.");
     assert.deepEqual(
       [...main.matchAll(/<section\b[^>]*>/g)].map(([tag]) => tagAttribute(tag, "id")),
-      ["contact-hero", "contact-channels", "contact-preparation", "contact-process", "contact-data-note", "contact-next-step"],
-      "Contact must retain the six required sections in reading order.",
+      contactContract.contactSectionIds,
+      "Contact must retain the seven approved sections in reading order.",
     );
 
     const channelSection = main.match(/<section\b[^>]*\bid="contact-channels"[^>]*>([\s\S]*?)<\/section>/)?.[0] ?? "";
@@ -391,9 +457,7 @@ for (const [relativePath, pagePath, label] of exportedPages) {
     assert.deepEqual([...process.matchAll(/<h3\b[^>]*>([\s\S]*?)<\/h3>/g)].map(([, content]) => decodePublicText(content.replace(/<[^>]*>/g, "")).trim()), contactContract.processSteps, "Contact must retain Email, requirements clarification and proposal/quotation in order.");
     const dataNote = main.match(/<section\b[^>]*\bid="contact-data-note"[^>]*>([\s\S]*?)<\/section>/)?.[1] ?? "";
     for (const note of contactContract.requiredDataNotes) assert.ok(decodePublicText(dataNote.replace(/<[^>]*>/g, "")).includes(note), "Contact must distinguish opening an Email draft from sending or delivery.");
-    assert.ok(dataNote.includes("網站託管服務可能依其服務設定保留存取紀錄；本頁沒有表單，不代表託管服務完全不處理資料。"), "Contact data note must distinguish the page from hosting-provider access records.");
-    assert.doesNotMatch(main, /<(?:form|input|textarea|select)\b/i, "Contact must not publish a form or input controls.");
-    assert.doesNotMatch(main, /<button\b[^>]*\btype="submit"/i, "Contact must not publish a submit button.");
+    assert.ok(dataNote.includes("網站託管服務可能依其服務設定保留存取紀錄"), "Contact data note must distinguish local draft preparation from hosting-provider access records.");
     if (!privacyApproved) {
       assert.doesNotMatch(main, /\bhref="[^"]*\/privacy(?:\/|[?#"])/i, "Contact must not link to the unpublished Privacy route.");
     }

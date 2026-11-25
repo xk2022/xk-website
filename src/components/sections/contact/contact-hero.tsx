@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 
 import { BrandPattern } from "@/components/brand/brand-pattern";
 import { XkLogo } from "@/components/brand/xk-logo";
@@ -8,10 +8,13 @@ import { InquiryButton } from "@/components/layout/inquiry-button";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { contactPage } from "@/config/contact-page";
+import { verifiedContactChannels } from "@/config/contact";
+import { inquiryAction } from "@/config/inquiry";
 import { siteConfig } from "@/config/site";
 
 export function ContactHero() {
   const { hero } = contactPage;
+  const businessEmail = verifiedContactChannels.find(({ href }) => href.startsWith("mailto:"))?.href.slice("mailto:".length);
 
   return (
     <Section id="contact-hero" background="surface" aria-labelledby="contact-page-title" className="relative overflow-hidden border-b">
@@ -28,10 +31,12 @@ export function ContactHero() {
           <p className="type-body-lg mt-6 max-w-2xl text-foreground">{hero.description}</p>
           <p lang="en" className="type-body-sm mt-6 text-secondary">{siteConfig.tagline}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <InquiryButton descriptionId="contact-hero-action-note" />
-            <Button asChild size="lg" variant="outline"><Link href={hero.secondaryCta.href}>{hero.secondaryCta.label}<ArrowUpRight aria-hidden="true" /></Link></Button>
+            <Button asChild size="lg"><Link href="#contact-form">填寫詢問內容<ArrowDown aria-hidden="true" /></Link></Button>
+            <InquiryButton descriptionId="contact-hero-email-note" variant="outline" />
           </div>
-          <p id="contact-hero-action-note" className="type-body-sm mt-4 max-w-2xl text-foreground">按鈕會開啟郵件程式；若尚未設定，請使用下方信箱地址在慣用信箱撰寫郵件。寄出前請自行確認內容。</p>
+          <p id="contact-hero-email-note" className="type-body-sm mt-4 max-w-2xl text-foreground">{inquiryAction.label}：{inquiryAction.description}</p>
+          {businessEmail && <p className="type-body-sm mt-3 break-all font-medium text-primary">商務 Email：{businessEmail}</p>}
+          <Link href={hero.secondaryCta.href} className="type-body-sm mt-3 inline-flex min-h-11 items-center gap-2 rounded-sm font-medium text-secondary underline-offset-4 hover:underline">{hero.secondaryCta.label}<ArrowUpRight aria-hidden="true" className="size-4 shrink-0" /></Link>
         </div>
         <figure className="relative mx-auto flex w-full min-w-0 max-w-sm flex-col items-center overflow-hidden rounded-2xl border bg-background px-6 py-10 shadow-subtle sm:px-8 sm:py-12">
           <BrandPattern variant="kaleidoscope" />

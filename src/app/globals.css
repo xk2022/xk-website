@@ -19,6 +19,8 @@
 @source not "../../docs/reports/homepage-inquiry-cta.md";
 @source not "../../docs/reports/contact-plans-artifacts";
 @source not "../../docs/reports/contact-plans-usecase.md";
+@source not "../../docs/reports/contact-inquiry-form.md";
+@source not "../../docs/reports/contact-inquiry-artifacts";
 
 :root {
   color-scheme: light;

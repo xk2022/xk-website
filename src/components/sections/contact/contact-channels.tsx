@@ -3,6 +3,7 @@ import { ArrowUpRight, Globe, Mail } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
+import { ContactCopyEmail } from "@/components/sections/contact/contact-copy-email";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -17,22 +18,22 @@ export function ContactChannelList({ channels }: { channels: readonly ContactCha
       {channels.map((channel) => {
         const isEmail = channel.href.startsWith("mailto:");
         const Icon = isEmail ? Mail : Globe;
-        const destination = isEmail ? channel.href.slice("mailto:".length) : channel.href;
+        const destination = isEmail ? new URL(channel.href).pathname : channel.href;
 
         return (
           <li key={channel.href} className="min-w-0">
             <Card className="h-full">
+              <p className="type-caption font-semibold text-primary">{isEmail ? "商務詢問信箱" : "已確認聯絡管道"}</p>
               <a
                 href={createInquiryHref(channel.href)}
                 className="group flex min-h-11 w-full min-w-0 max-w-full items-start gap-4 rounded-sm text-secondary underline-offset-4 hover:underline"
               >
                 <Icon aria-hidden="true" className="mt-1 size-5 shrink-0" />
-                <span className="min-w-0 flex-1">
-                  <span className="type-body block min-w-0 max-w-full break-all font-semibold">{channel.label}</span>
-                  <span className="type-body-sm mt-3 block min-w-0 max-w-full break-all text-muted-foreground">{destination}</span>
-                </span>
+                <span className="type-body min-w-0 flex-1 break-words font-semibold">{channel.label}</span>
                 <ArrowUpRight aria-hidden="true" className="mt-1 size-4 shrink-0" />
               </a>
+              <p className="type-body-lg min-w-0 max-w-full break-all font-semibold text-primary select-text">{destination}</p>
+              {isEmail && <ContactCopyEmail email={destination} />}
             </Card>
           </li>
         );
