@@ -128,6 +128,57 @@ class Document(HTMLParser):
         self.stack[-1].children.append(data)
 
 
+def contact_draft_form_errors(doc, contract):
+    """Validate only the approved pre-hydration Contact form, never a live draft."""
+    errors = []
+    forms = doc.all("form")
+    sections = [element for element in doc.all("section") if element.attrs.get("id") == contract["sectionId"]]
+    if len(forms) != 1:
+        return ["Contact must contain exactly one local draft form"]
+    form = forms[0]
+    if len(sections) != 1 or form not in sections[0].all("form"):
+        errors.append("the draft form must be inside its unique contact-form section")
+    if form.attrs.get("data-contact-form-mode") != contract["mode"] or "novalidate" not in form.attrs:
+        errors.append("the form must use email-draft mode and noValidate")
+    for element in [form, *form.all()]:
+        for attribute in contract["forbiddenAttributes"]:
+            if attribute in element.attrs:
+                errors.append("draft form must not contain attribute " + attribute)
+    controls = [element for element in form.all() if element.tag in {"input", "select", "textarea"}]
+    all_controls = [element for element in doc.all() if element.tag in {"input", "select", "textarea"}]
+    if len(controls) != len(contract["controls"]) or all_controls != controls:
+        errors.append("only the four approved controls may appear, all inside the draft form")
+    labels = {element.attrs.get("for") for element in form.all("label")}
+    for actual, expected in zip(controls, contract["controls"]):
+        if actual.tag != expected["tag"]:
+            errors.append(expected["id"] + " control tag is incorrect")
+        for attribute in ["id", "type", "minlength", "maxlength", "autocomplete"]:
+            if actual.attrs.get(attribute) != expected.get(attribute):
+                errors.append(expected["id"] + " " + attribute + " differs from the approved contract")
+        if ("required" in actual.attrs) != expected["required"] or "readonly" in actual.attrs or "disabled" in actual.attrs:
+            errors.append(expected["id"] + " must retain its required/editable state")
+        if expected["id"] not in labels:
+            errors.append(expected["id"] + " must have an associated label")
+        if actual.tag == "input" and actual.attrs.get("value", ""):
+            errors.append("visitor values must not appear in the server-rendered form")
+        if actual.tag == "textarea" and actual.raw_text():
+            errors.append("a filled message or preview must not be server-rendered")
+    selects = form.all("select")
+    options = selects[0].all("option") if len(selects) == 1 else []
+    if [element.attrs.get("value") for element in options] != ["", *contract["serviceIds"]]:
+        errors.append("the service select must retain the empty choice and five approved service IDs")
+    if any("selected" in element.attrs and element.attrs.get("value") for element in options):
+        errors.append("a nonempty visitor service selection must not be server-rendered")
+    submits = [element for element in form.all("button") if element.attrs.get("type", "submit") == "submit"]
+    if len(submits) != 1 or "disabled" not in submits[0].attrs:
+        errors.append("the sole preview submit must be inside the form and disabled before hydration")
+    if not sections or not any(contract["noscriptText"] in element.text() for element in sections[0].all("noscript")):
+        errors.append("the no-JavaScript Email alternative must remain visible in noscript")
+    if any(element.attrs.get("id") in {"contact-inquiry-preview", "contact-inquiry-draft"} or "data-contact-draft-link" in element.attrs for element in doc.all()):
+        errors.append("filled drafts, readonly previews and dynamic mailto links must not be server-rendered")
+    return errors
+
+
 def image_dimensions(data):
     """Read real image headers, without a Pillow dependency or a full browser decoder."""
     if data.startswith(b"\x89PNG\r\n\x1a\n") and len(data) >= 24:
@@ -228,8 +279,10 @@ import {siteConfig} from './src/config/site.ts';
 import {pagesDeployment} from './src/config/deployment.ts';
 import * as contact from './src/config/contact.ts';
 import * as inquiry from './src/config/inquiry.ts';
+import {contactInquiry} from './src/config/contact-inquiry.ts';
+import * as contactDraft from './src/lib/contact-inquiry.ts';
 import {privacyPolicy,privacyDraftMarker} from './src/config/privacy.ts';
-console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pagesDeployment,contact,inquiry,privacyPolicy,privacyDraftMarker}));
+console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pagesDeployment,contact,inquiry,contactInquiry,contactDraftExports:Object.keys(contactDraft),privacyPolicy,privacyDraftMarker}));
 """
         result = subprocess.run(["node", "--input-type=module", "-e", script], cwd=ROOT, capture_output=True, text=True)
         self.check("Native Node.js source import exits successfully", 0, result.returncode, result.stderr.strip())
@@ -237,7 +290,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             return False
         self.data = json.loads(result.stdout)
         self.environment["node"] = subprocess.run(["node", "--version"], capture_output=True, text=True, check=True).stdout.strip()
-        sources = ["scripts/smoke-website.py", "scripts/fixtures/showcase-contract.json", "scripts/fixtures/contact-contract.json", "src/config/website-showcases.ts", "src/config/seo.ts", "src/config/site.ts", "src/config/deployment.ts", "src/config/privacy.ts", "src/config/contact.ts", "src/config/inquiry.ts"]
+        sources = ["scripts/smoke-website.py", "scripts/fixtures/showcase-contract.json", "scripts/fixtures/contact-contract.json", "src/config/website-showcases.ts", "src/config/seo.ts", "src/config/site.ts", "src/config/deployment.ts", "src/config/privacy.ts", "src/config/contact.ts", "src/config/inquiry.ts", "src/config/services.ts", *self.contact_contract["draftForm"]["sourceFiles"]]
         self.environment["sourceSha256"] = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in sources}
         config = self.data["showcases"]
         entries = config["websiteShowcases"]
@@ -245,6 +298,15 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check("Independent approved brand metadata origin", APPROVED_PAGES_DEPLOYMENT["origin"], self.data["siteConfig"]["url"])
         self.check("Smoke target uses the deployment root", APPROVED_PAGES_DEPLOYMENT["basePath"], self.base_path)
         approved = self.contact_contract
+        draft = approved["draftForm"]
+        self.check("Independent Contact local-draft mode", draft["mode"], self.data["contactInquiry"]["mode"])
+        self.check("Independent Contact draft field limits", draft["limits"], {key: self.data["contactInquiry"]["limits"].get(key) for key in draft["limits"]})
+        self.check("Independent Contact draft service registry IDs", draft["serviceIds"], [item["id"] for item in self.data["contactInquiry"]["services"]])
+        self.check("Native local-draft helper exports", ["createContactInquiryDraft", "validateContactInquiry"], sorted(self.data["contactDraftExports"]))
+        for source in draft["sourceFiles"]:
+            content = (ROOT / source).read_text()
+            self.check(f"{source} contains no network/persistent-storage API references", [], [match.group() for pattern in draft["forbiddenSourcePatterns"] for match in re.finditer(pattern, content)], "Supplemental source inspection; browser network/storage and no-JavaScript behavior require separate testing.")
+        self.check("Local draft does not add a receiving API route", [], [str(path.relative_to(ROOT)) for path in (ROOT / "src/app").rglob("route.*") if re.fullmatch(r"route\.[cm]?[jt]sx?", path.name)])
         action = self.data["inquiry"]["inquiryAction"]
         self.check("Independent owner-approved Email registry", ["mailto:" + approved["ownerEmail"]], [channel["href"] for channel in self.data["contact"]["verifiedContactChannels"]])
         self.check("Owner-approved direct enquiry state", approved["inquiryState"], action["state"])
@@ -442,8 +504,14 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
 
     def enquiry_markup(self, path, doc):
         approved = self.contact_contract
-        controls = [element.tag for element in doc.all() if element.tag in {"form", "input", "textarea", "select"} or element.attrs.get("type") == "submit" or "formaction" in element.attrs or "onsubmit" in element.attrs]
-        self.check(f"{path} retains no receiving form or submit action", [], controls)
+        draft_elements = []
+        if path == "/contact":
+            self.check("Contact contains only its approved pre-hydration local draft form", [], contact_draft_form_errors(doc, approved["draftForm"]), "Static SSR contract only; post-hydration validation, no-JavaScript behavior, network and storage are tested separately.")
+            forms = doc.all("form")
+            if len(forms) == 1:
+                draft_elements = [forms[0], *forms[0].all()]
+        controls = [element.tag for element in doc.all() if element not in draft_elements and (element.tag in {"form", "input", "textarea", "select"} or element.attrs.get("type") == "submit" or "formaction" in element.attrs or "onsubmit" in element.attrs)]
+        self.check(f"{path} has no form or outbound submit outside the approved Contact draft", [], controls)
         anchors = doc.all("a")
         self.check(f"{path} has no unapproved phone channel", [], [anchor.attrs.get("href") for anchor in anchors if anchor.attrs.get("href", "").lower().startswith("tel:")])
         mailtos = [anchor for anchor in anchors if anchor.attrs.get("href", "").lower().startswith("mailto:")]
@@ -468,6 +536,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         if not main:
             return
         main = main[0]
+        self.check("Contact retains the seven approved sections in order", approved["contactSectionIds"], [element.attrs.get("id") for element in main.all("section")])
         self.check("Contact has the approved heading", [approved["contactHeading"]], [element.text().strip() for element in main.all("h1")])
         channels = [element for element in main.all("section") if element.attrs.get("id") == "contact-channels"]
         self.check("Contact shows the approved channels-only state", [approved["availability"]], [element.attrs.get("data-contact-availability") for element in channels])
@@ -565,6 +634,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
                   "scopeNotes": ["No browser rendering, keyboard, screen reader, responsive, axe or complete WCAG audit is performed.",
                                  "External source checks run only when requested; source-asset expected 404 is evidence of a limitation.",
                                  "Email checks parse the public recipient and static draft prompts only; no message, SMTP or delivery test is performed.",
+                                 "Contact form checks inspect initial server HTML and source references; browser interactions, persistent-storage behavior and network flows require separate tests.",
                                  "Image headers/bytes are inspected; full browser decoding is a separate check."]}
         output = Path(self.args.output).expanduser()
         output.parent.mkdir(parents=True, exist_ok=True)
