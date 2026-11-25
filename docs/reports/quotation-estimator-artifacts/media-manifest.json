@@ -1,0 +1,16 @@
+{
+  "docs/screenshots/quotation-estimator/quotation-desktop-1440.png": "22c7e9337678b90b236e2a671fe670ecea1953a71fdaec8b11ceb71bae767b63",
+  "docs/screenshots/quotation-estimator/quotation-selection-1440.png": "1fd4944a86b8a216d422589e554f0cd569bc86e4089e535bee4c616b3f63de49",
+  "docs/screenshots/quotation-estimator/quotation-print-preview.png": "371e6dde6394dd3431f2133cdcdac62093ee4bedf044c6cd3f9c49cfd114cd24",
+  "docs/screenshots/quotation-estimator/quotation-a4-150dpi.png": "2f7a97d8c248b89241fbaf01e5e4d6d6b5439f052982a724ebc429cad664ea84",
+  "docs/screenshots/quotation-estimator/quotation-mobile-375.png": "d22458e6eb35d6e0176dfef8e77ba82a5c1e76fff42f465ec3b14e1ab99ec93a",
+  "docs/reports/quotation-estimator-artifacts/normal-worstcase-a4.pdf": "a1c9bfe9655c5d77616b24d25980bac88fb645c025488a578039741e37563f4b",
+  "docs/reports/quotation-estimator-artifacts/failed-normal-v3-two-pages.pdf": "4140bdff093677a92be52b54deeb9dd368ffcadbb2d7b2b085bf0bf30ce31ae6",
+  "docs/reports/quotation-estimator-artifacts/failed-normal-v2-two-pages.pdf": "8f43d4fd6cb645a3131e113fe1545b9524433f6f382f8a054f6ab3c521d3f2f0",
+  "docs/reports/quotation-estimator-artifacts/pages-worstcase-a4.pdf": "554c46b01ded7faa380be44cb24290935568d4044b76dd637553c8d710dbf962",
+  "docs/screenshots/quotation-estimator/service-radio-375.png": "72de4fd74fbe03741760c9a3ee99d71d711c408f3d8a9d09667ccb0a77a99276",
+  "docs/screenshots/quotation-estimator/selected-results-375.png": "4eb3655257689d1999d550f4cacf46457958bfbc92e25da3b34c86fe1742eb3d",
+  "docs/screenshots/quotation-estimator/selected-build-375.png": "806fc6a2accb5f00d056f47e4e5ed883e45cf07e8e29e6c31ae8e2125ac87119",
+  "docs/screenshots/quotation-estimator/selected-addon-1440.png": "c2e1b482720ed80a1792316080ba2aefa2b3f7378966f09974f47cbb4935140c",
+  "docs/screenshots/quotation-estimator/selected-addon-375.png": "88ffccebe7c055134e4971ffb03733414f86bcd8bf47d5b8228b029618b54dd3"
+}

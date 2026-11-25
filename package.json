@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit",
+    "test": "node scripts/test-contact-inquiry.mjs && node scripts/test-quotation.mjs && node scripts/test-quotation-storage.mjs",
+    "test:quotation": "node scripts/test-quotation.mjs && node scripts/test-quotation-storage.mjs",
     "build:pages": "node scripts/build-github-pages.mjs",
     "test:smoke": "python3 scripts/smoke-website.py"
   },

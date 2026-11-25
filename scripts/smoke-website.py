@@ -179,6 +179,57 @@ def contact_draft_form_errors(doc, contract):
     return errors
 
 
+def quotation_markup_errors(doc, contract, catalog):
+    """A narrow SSR whitelist for local estimator controls, never a receiving form."""
+    errors = []
+    forbidden = {"action", "formaction", "method", "onsubmit", "formmethod", "formtarget", "form"}
+    if doc.all("form") or doc.all("select") or any(forbidden.intersection(element.attrs) for element in doc.all()):
+        errors.append("Quotation must not contain a form, select or outbound submission attributes")
+    expected_ids = [*("quotation-service-" + item for item in contract["serviceIds"]),
+                    *("quotation-build-" + item for item in contract["initialBuildIds"]),
+                    *("quotation-complexity-" + item for item in contract["complexityIds"]), *contract["personalInputs"]]
+    inputs = doc.all("input")
+    if [element.attrs.get("id") for element in inputs] != expected_ids:
+        errors.append("SSR inputs must be exactly the default four services, four builds, three complexities and two personal fields")
+    if [element.attrs.get("id") for element in inputs if "checked" in element.attrs] != contract["initialCheckedIds"]:
+        errors.append("SSR must select website/basic without a build or addon")
+    disabled = {child for fieldset in doc.all("fieldset") if "disabled" in fieldset.attrs for child in fieldset.all()}
+    labels = {element.attrs.get("for") for element in doc.all("label")}
+    for element in inputs:
+        item_id = element.attrs.get("id", "")
+        if element not in disabled and "disabled" not in element.attrs:
+            errors.append(item_id + " must remain disabled until hydration")
+        if item_id not in labels:
+            errors.append(item_id + " must have an associated label")
+        if item_id in contract["personalInputs"]:
+            if element.attrs.get("type") != "text" or element.attrs.get("maxlength") != contract["personalInputs"][item_id] or "name" in element.attrs or element.attrs.get("value", ""):
+                errors.append(item_id + " must be empty, unnamed text with its approved length limit")
+        else:
+            group = "service" if item_id.startswith("quotation-service-") else "build" if item_id.startswith("quotation-build-") else "complexity"
+            if element.attrs.get("type") != "radio" or element.attrs.get("name") != "quotation-" + group or element.attrs.get("value") != item_id.removeprefix("quotation-" + group + "-"):
+                errors.append(item_id + " must retain its native radio group and value")
+    summaries = doc.all("textarea")
+    if len(summaries) != 1 or summaries[0].attrs.get("id") != contract["summaryId"] or "readonly" not in summaries[0].attrs or "name" in summaries[0].attrs:
+        errors.append("only the unnamed readonly enquiry summary textarea is allowed")
+    if any(element.attrs.get("type") != "button" for element in doc.all("button")):
+        errors.append("Quotation may expose only type=button controls, never a submit action")
+    estimator = [element for element in doc.all() if element.attrs.get("id") == "quotation-estimator"]
+    if len(estimator) != 1 or estimator[0].attrs.get("data-quotation-ready") != "false":
+        errors.append("the server-rendered estimator must be unhydrated")
+    text = doc.text()
+    if any(value not in text for value in contract["requiredText"]):
+        errors.append("the estimator must identify its reference/non-quotation boundary")
+    for item_id in contract["initialBuildIds"]:
+        item = next((item for item in catalog["builds"] if item["id"] == item_id), None)
+        if not item or item["reference"]["label"] not in text:
+            errors.append(item_id + " must retain its visible price provenance label")
+    for qr in contract["qrImages"]:
+        images = [element for element in doc.all("img") if element.attrs.get("id") == qr["id"]]
+        if [element.attrs.get("src") for element in images] != [qr["src"]]:
+            errors.append(qr["id"] + " must use its fixed root image source")
+    return errors
+
+
 def image_dimensions(data):
     """Read real image headers, without a Pillow dependency or a full browser decoder."""
     if data.startswith(b"\x89PNG\r\n\x1a\n") and len(data) >= 24:
@@ -244,6 +295,7 @@ class Smoke:
                             "externalSitesRequested": args.check_external, "sourceAssetsRequested": args.check_source_assets}
         self.contract = json.loads(CONTRACT_PATH.read_text())
         self.contact_contract = json.loads((ROOT / "scripts/fixtures/contact-contract.json").read_text())
+        self.quotation_contract = json.loads((ROOT / "scripts/fixtures/quotation-contract.json").read_text())
         self.data = None
         self.external_destinations, self.unavailable_source_destinations = set(), set()
 
@@ -281,8 +333,9 @@ import * as contact from './src/config/contact.ts';
 import * as inquiry from './src/config/inquiry.ts';
 import {contactInquiry} from './src/config/contact-inquiry.ts';
 import * as contactDraft from './src/lib/contact-inquiry.ts';
+import {quotationCatalog,quotationSources} from './src/config/quotation.ts';
 import {privacyPolicy,privacyDraftMarker} from './src/config/privacy.ts';
-console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pagesDeployment,contact,inquiry,contactInquiry,contactDraftExports:Object.keys(contactDraft),privacyPolicy,privacyDraftMarker}));
+console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pagesDeployment,contact,inquiry,contactInquiry,contactDraftExports:Object.keys(contactDraft),quotationCatalog,quotationSources,privacyPolicy,privacyDraftMarker}));
 """
         result = subprocess.run(["node", "--input-type=module", "-e", script], cwd=ROOT, capture_output=True, text=True)
         self.check("Native Node.js source import exits successfully", 0, result.returncode, result.stderr.strip())
@@ -291,12 +344,41 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.data = json.loads(result.stdout)
         self.environment["node"] = subprocess.run(["node", "--version"], capture_output=True, text=True, check=True).stdout.strip()
         sources = ["scripts/smoke-website.py", "scripts/fixtures/showcase-contract.json", "scripts/fixtures/contact-contract.json", "src/config/website-showcases.ts", "src/config/seo.ts", "src/config/site.ts", "src/config/deployment.ts", "src/config/privacy.ts", "src/config/contact.ts", "src/config/inquiry.ts", "src/config/services.ts", *self.contact_contract["draftForm"]["sourceFiles"]]
+        quotation_files = []
+        for source in self.quotation_contract["sourceRoots"]:
+            path = ROOT / source
+            quotation_files.extend([path] if path.is_file() else sorted(item for item in path.rglob("*") if item.suffix in {".ts", ".tsx", ".css"}))
+        sources.extend(["scripts/fixtures/quotation-contract.json", *(str(path.relative_to(ROOT)) for path in quotation_files)])
         self.environment["sourceSha256"] = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in sources}
         config = self.data["showcases"]
         entries = config["websiteShowcases"]
         self.check("Independent approved www root deployment", APPROVED_PAGES_DEPLOYMENT, self.data["pagesDeployment"])
         self.check("Independent approved brand metadata origin", APPROVED_PAGES_DEPLOYMENT["origin"], self.data["siteConfig"]["url"])
         self.check("Smoke target uses the deployment root", APPROVED_PAGES_DEPLOYMENT["basePath"], self.base_path)
+        quotation = self.quotation_contract
+        catalog = self.data["quotationCatalog"]
+        self.check("Independent quotation reference-publication boundary", quotation["publication"], catalog["publication"])
+        for key, expected in [("services", quotation["serviceIds"]), ("builds", quotation["buildIds"]), ("addons", quotation["addonIds"]), ("complexities", quotation["complexityIds"])]:
+            self.check("Independent quotation " + key + " inventory", expected, [item["id"] for item in catalog[key]])
+        self.check("Quotation retains only five formal product codes", sorted(quotation["productCodes"]), sorted({item["code"] for item in catalog["builds"]}))
+        for item_id, price in quotation["criticalPrices"].items():
+            item = next((item for item in catalog["builds"] if item["id"] == item_id), {})
+            self.check("Independent source-price decision for " + item_id, price, item.get("price"))
+        annual = [item for item in catalog["addons"] if item["billing"] == "annual"]
+        self.check("Independent annually assessed service inventory", quotation["annualQuoteIds"], [item["id"] for item in annual])
+        self.check("Annual prices remain assessed separately rather than annualized", True, all(item["price"]["kind"] == "quote" for item in annual))
+        self.check("Complexity catalog adds no price multiplier", [], [key for item in catalog["complexities"] for key in item if re.search(r"multiplier|factor|price", key, re.I)])
+        source_ids = {item["id"] for item in self.data["quotationSources"]}
+        self.check("All estimator prices retain an attributable reference label", [], [item["id"] for item in [*catalog["builds"], *catalog["addons"]] if not item["reference"]["label"].strip() or item["reference"]["sourceId"] not in source_ids])
+        for path in quotation_files:
+            source = str(path.relative_to(ROOT))
+            content = path.read_text()
+            self.check(source + " has no outbound/logging/unsupported-storage API", [], [match.group() for pattern in [*quotation["networkPatterns"], *quotation["forbiddenStoragePatterns"]] for match in re.finditer(pattern, content)], "Supplemental source inspection; browser persistence and PII tests remain separate.")
+            if source == quotation["storageFile"]:
+                self.check("Quotation storage retains its sole key", True, '"' + quotation["storageKey"] + '"' in content)
+                self.check("Quotation storage excludes personal fields and clearing unrelated data", [], re.findall(r"\b(?:customerName|projectName)\b|\.clear\s*\(", content))
+            else:
+                self.check(source + " leaves LocalStorage to the selection module", False, bool(re.search(r"\blocalStorage\b", content)))
         approved = self.contact_contract
         draft = approved["draftForm"]
         self.check("Independent Contact local-draft mode", draft["mode"], self.data["contactInquiry"]["mode"])
@@ -347,7 +429,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check("Protected SEO policy remains explicit", {"mode": "protected", "publishSitemap": False}, self.data["seoProtectionPolicy"])
         self.check("Privacy remains an unpublished draft", "draft", self.data["privacyPolicy"]["status"])
         self.public_pages = [page for page in self.data["seoPages"] if page["availability"] == "public"]
-        expected_paths = self.contract["existingPublicPaths"] + ["/portfolio/showcases/" + item for item in self.contract["brandOrder"]]
+        expected_paths = self.contract["existingPublicPaths"] + ["/portfolio/showcases/" + item for item in self.contract["brandOrder"]] + [self.quotation_contract["path"]]
         self.check("Independent public route inventory", sorted(expected_paths), sorted(page["path"] for page in self.public_pages))
         self.check("SEO route paths are unique", len(self.data["seoPages"]), len({page["path"] for page in self.data["seoPages"]}))
         return True
@@ -510,6 +592,9 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             forms = doc.all("form")
             if len(forms) == 1:
                 draft_elements = [forms[0], *forms[0].all()]
+        elif path == self.quotation_contract["path"]:
+            self.check("Quotation permits only its fixed local SSR controls", [], quotation_markup_errors(doc, self.quotation_contract, self.data["quotationCatalog"]), "Initial HTML only; post-hydration calculation, persistence, PII and printing require separate browser/native tests.")
+            draft_elements = [*doc.all("input"), *doc.all("textarea")]
         controls = [element.tag for element in doc.all() if element not in draft_elements and (element.tag in {"form", "input", "textarea", "select"} or element.attrs.get("type") == "submit" or "formaction" in element.attrs or "onsubmit" in element.attrs)]
         self.check(f"{path} has no form or outbound submit outside the approved Contact draft", [], controls)
         anchors = doc.all("a")
@@ -583,6 +668,10 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             self.metadata(path, doc)
             self.links_and_resources(path, doc)
             self.enquiry_markup(path, doc)
+            footer = doc.all("footer")
+            footer_urls = [urlsplit(urljoin(self.route_url(path), anchor.attrs.get("href", ""))) for element in footer for anchor in element.all("a")]
+            footer_paths = {url.path.rstrip("/") or "/" for url in footer_urls if (url.scheme, url.netloc) == self.origin}
+            self.check(f"{path} Footer lists every published route including Quotation", [], [page["path"] for page in self.public_pages if page["path"] not in footer_paths])
             if path in {"/", "/portfolio"}:
                 self.cards(path, doc)
             if path in {"/", "/services"}:
@@ -602,7 +691,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
                 self.contact_page(doc)
             draft_markers = [self.data["privacyDraftMarker"]] + [text for section in self.data["privacyPolicy"]["sections"] for text in section["paragraphs"]]
             self.check(f"{path} contains no unpublished Privacy draft text", [], [marker for marker in draft_markers if marker and marker in doc.text()])
-        negative = ["/privacy", "/dev/design-system", "/sitemap.xml", "/portfolio/unknown-smoke-route", "/portfolio/showcases/unknown-smoke-route", "/unknown-smoke-route"]
+        negative = ["/privacy", "/dev/design-system", "/sitemap.xml", "/portfolio/unknown-smoke-route", "/portfolio/showcases/unknown-smoke-route", "/quotation/unknown-smoke-route", "/api/quotation", "/unknown-smoke-route"]
         for path in negative:
             url = self.base + path.lstrip("/")
             self.check(f"{path} unpublished/unknown route returns real HTTP 404", 404, self.fetch(url)["status"], "A soft 404 or redirect to Home is a failure.")

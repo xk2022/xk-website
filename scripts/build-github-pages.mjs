@@ -15,6 +15,8 @@ const { privacyPolicy, privacyDraftMarker, privacyPageMetadata } = await import(
 const { websiteShowcases, showcaseSettings, showcaseDetailPath, showcaseSeoPages, presentationLabels, showcaseStateLabels } = await import(new URL("../src/config/website-showcases.ts", import.meta.url));
 const showcaseContract = JSON.parse(readFileSync(new URL("./fixtures/showcase-contract.json", import.meta.url), "utf8"));
 const contactContract = JSON.parse(readFileSync(new URL("./fixtures/contact-contract.json", import.meta.url), "utf8"));
+const quotationContract = JSON.parse(readFileSync(new URL("./fixtures/quotation-contract.json", import.meta.url), "utf8"));
+const { quotationCatalog, quotationSources } = await import(new URL("../src/config/quotation.ts", import.meta.url));
 const [{ verifiedContactChannels }, { inquiryAction, inquiryEmailTemplate }] = await Promise.all([
   import(new URL("../src/config/contact.ts", import.meta.url)),
   import(new URL("../src/config/inquiry.ts", import.meta.url)),
@@ -46,6 +48,31 @@ function collectApiHandlers(directory) {
     : /^route\.[cm]?[jt]sx?$/.test(entry.name) ? [join(directory, entry.name)] : []);
 }
 assert.deepEqual(collectApiHandlers(join(root, "src/app")), [], "The local draft form must not add a receiving API route.");
+assert.equal(quotationCatalog.publication, quotationContract.publication, "Estimator prices must remain references awaiting owner review.");
+for (const [key, expected] of [["services", quotationContract.serviceIds], ["builds", quotationContract.buildIds], ["addons", quotationContract.addonIds], ["complexities", quotationContract.complexityIds]]) {
+  assert.deepEqual(quotationCatalog[key].map(({ id }) => id), expected, `Estimator ${key} must match the independent inventory.`);
+}
+assert.deepEqual([...new Set(quotationCatalog.builds.map(({ code }) => code))].sort(), [...quotationContract.productCodes].sort(), "Use only LP/BRAND/CORP/SHOP/APP product codes.");
+for (const [id, price] of Object.entries(quotationContract.criticalPrices)) assert.deepEqual(quotationCatalog.builds.find((build) => build.id === id)?.price, price, `Keep the approved ${id} source-price decision.`);
+assert.deepEqual(quotationCatalog.addons.filter(({ billing }) => billing === "annual").map(({ id }) => id), quotationContract.annualQuoteIds, "Retain the three separately assessed annual services.");
+assert.ok(quotationCatalog.addons.filter(({ billing }) => billing === "annual").every(({ price }) => price.kind === "quote"), "Annual costs must not be invented from monthly reference prices.");
+assert.ok(quotationCatalog.complexities.every((value) => !Object.keys(value).some((key) => /multiplier|factor|price/i.test(key))), "Complexity is a discussion label, without a price multiplier.");
+for (const item of [...quotationCatalog.builds, ...quotationCatalog.addons]) {
+  assert.ok(item.reference.label.trim() && quotationSources.some(({ id }) => id === item.reference.sourceId), `${item.id} must retain an attributable reference label.`);
+}
+function quotationSourceFiles(path) {
+  if (statSync(path).isFile()) return /\.[jt]sx?$/.test(path) ? [path] : [];
+  return readdirSync(path, { withFileTypes: true }).flatMap((entry) => quotationSourceFiles(join(path, entry.name)));
+}
+for (const path of quotationContract.sourceRoots.flatMap((path) => quotationSourceFiles(join(root, path)))) {
+  const source = readFileSync(path, "utf8");
+  for (const pattern of [...quotationContract.networkPatterns, ...quotationContract.forbiddenStoragePatterns]) assert.doesNotMatch(source, new RegExp(pattern), `${path} must not add a network, logging or unsupported persistence API.`);
+  if (path !== join(root, quotationContract.storageFile)) assert.doesNotMatch(source, /\blocalStorage\b/, `${path} must leave persistence in the dedicated selection-only storage module.`);
+  else {
+    assert.ok(source.includes(`"${quotationContract.storageKey}"`), "Keep the sole estimator storage key.");
+    assert.doesNotMatch(source, /\b(?:customerName|projectName)\b|\.clear\s*\(/, "Estimator storage must not contain personal fields or clear unrelated data.");
+  }
+}
 assert.ok(["draft", "approved"].includes(privacyPolicy.status), "Unknown Privacy policy status.");
 const privacyApproved = privacyPolicy.status === "approved";
 const privacySectionIds = ["policy-scope", "data-collection", "data-use", "retention", "third-parties", "cookies-tracking", "your-rights", "privacy-contact", "policy-updates"];
@@ -182,9 +209,63 @@ function verifyContactDraftForm(visible, label) {
   return visible.replace(form, "");
 }
 
+function verifyQuotationMarkup(visible, label) {
+  assert.doesNotMatch(visible, /<form\b|\b(?:action|formaction|method|onsubmit|formmethod|formtarget)\s*=/i, `${label} must remain a local estimator without submission actions.`);
+  const expectedInputs = [
+    ...quotationContract.serviceIds.map((id) => `quotation-service-${id}`),
+    ...quotationContract.initialBuildIds.map((id) => `quotation-build-${id}`),
+    ...quotationContract.complexityIds.map((id) => `quotation-complexity-${id}`),
+    ...Object.keys(quotationContract.personalInputs),
+  ];
+  const controls = [];
+  const disabledFieldsets = [];
+  for (const [tag] of visible.matchAll(/<\/?(?:fieldset|input)\b[^>]*>/gi)) {
+    if (/^<\/fieldset/i.test(tag)) disabledFieldsets.pop();
+    else if (/^<fieldset/i.test(tag)) disabledFieldsets.push(htmlAttributes(tag).has("disabled"));
+    else controls.push({ attrs: htmlAttributes(tag), disabled: disabledFieldsets.some(Boolean) });
+  }
+  assert.deepEqual(controls.map(({ attrs }) => attrs.get("id")), expectedInputs, `${label} SSR must show only the default service/build/complexity and two personal controls.`);
+  assert.deepEqual(controls.filter(({ attrs }) => attrs.has("checked")).map(({ attrs }) => attrs.get("id")), quotationContract.initialCheckedIds, `${label} SSR must select website/basic with no build or addon.`);
+  for (const { attrs, disabled } of controls) {
+    const id = attrs.get("id");
+    assert.ok(disabled || attrs.has("disabled"), `${label} ${id} must be disabled until hydration.`);
+    assert.match(visible, new RegExp(`<label\\b[^>]*\\bfor="${id}"`), `${label} ${id} must have a label.`);
+    if (id in quotationContract.personalInputs) {
+      assert.equal(attrs.get("type"), "text", `${label} personal fields must be plain text.`);
+      assert.equal(attrs.get("maxlength"), quotationContract.personalInputs[id], `${label} ${id} length is incorrect.`);
+      assert.equal(attrs.has("name"), false, `${label} personal fields must not have submission names.`);
+      assert.ok(!attrs.get("value"), `${label} must not SSR personal data.`);
+    } else {
+      const group = id.startsWith("quotation-service-") ? "service" : id.startsWith("quotation-build-") ? "build" : "complexity";
+      assert.equal(attrs.get("type"), "radio", `${label} ${id} must be a native radio.`);
+      assert.equal(attrs.get("name"), `quotation-${group}`, `${label} ${id} radio group is incorrect.`);
+      assert.equal(attrs.get("value"), id.slice(`quotation-${group}-`.length), `${label} ${id} value is incorrect.`);
+    }
+  }
+  const summaries = [...visible.matchAll(/<textarea\b[^>]*>[\s\S]*?<\/textarea>/gi)];
+  assert.equal(summaries.length, 1, `${label} may expose only its readonly enquiry summary.`);
+  const summary = htmlAttributes(summaries[0][0].match(/^<textarea\b[^>]*>/i)[0]);
+  assert.equal(summary.get("id"), quotationContract.summaryId, `${label} summary ID is incorrect.`);
+  assert.ok(summary.has("readonly") && !summary.has("name"), `${label} summary must be readonly and unnamed.`);
+  for (const [tag] of visible.matchAll(/<button\b[^>]*>/gi)) assert.equal(htmlAttributes(tag).get("type"), "button", `${label} must not publish a submit button.`);
+  const estimator = (visible.match(/<div\b[^>]*>/g) ?? []).find((tag) => tagAttribute(tag, "id") === "quotation-estimator");
+  assert.equal(tagAttribute(estimator, "data-quotation-ready"), "false", `${label} SSR must remain unhydrated.`);
+  const text = decodePublicText(visible.replace(/<[^>]*>/g, ""));
+  for (const value of quotationContract.requiredText) assert.ok(text.includes(value), `${label} must identify its reference/non-quotation boundary.`);
+  for (const id of quotationContract.initialBuildIds) {
+    const item = quotationCatalog.builds.find((item) => item.id === id);
+    assert.ok(text.includes(item.reference.label), `${label} must show ${id} price provenance.`);
+  }
+  for (const qr of quotationContract.qrImages) {
+    const image = (visible.match(/<img\b[^>]*>/g) ?? []).find((tag) => tagAttribute(tag, "id") === qr.id);
+    assert.equal(tagAttribute(image, "src"), qr.src, `${label} must retain the fixed root QR image ${qr.id}.`);
+  }
+  return visible.replace(/<input\b[^>]*>/gi, "").replace(summaries[0][0], "");
+}
+
 function verifyEnquiryMarkup(html, label, pagePath = "") {
   const visible = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
-  const outsideDraft = pagePath === "/contact" ? verifyContactDraftForm(visible, label) : visible;
+  const outsideDraft = pagePath === "/contact" ? verifyContactDraftForm(visible, label) : pagePath === quotationContract.path ? verifyQuotationMarkup(visible, label) : visible;
   assert.doesNotMatch(outsideDraft, /<(?:form|input|textarea|select)\b/i, `${label} must not publish another form or input controls.`);
   assert.doesNotMatch(outsideDraft, /\b(?:type="submit"|formaction=|onsubmit=)/i, `${label} must not publish an outbound submit action.`);
   assert.doesNotMatch(visible, /\bhref="tel:/i, `${label} must not publish an unconfirmed phone channel.`);
@@ -330,7 +411,7 @@ assert.deepEqual(showcaseSettings.brandOrder, showcaseContract.brandOrder, "The 
 assert.deepEqual(showcaseSettings.featuredIds, showcaseContract.featuredIds, "Featured showcases must match the independently reviewed selection.");
 assert.deepEqual(showcaseSeoPages.map(({ path }) => path), expectedShowcasePaths, "Brand detail SEO pages must match all approved brand IDs.");
 assert.deepEqual(portfolioPages.slice(1).map(({ pagePath }) => pagePath.split("/").at(-1)), showcaseContract.technicalPlanSlugs, "Retain the three original technical plan routes.");
-const expectedPublicPaths = [...showcaseContract.existingPublicPaths, ...expectedShowcasePaths, ...(privacyApproved ? ["/privacy"] : [])];
+const expectedPublicPaths = [...showcaseContract.existingPublicPaths, ...expectedShowcasePaths, quotationContract.path, ...(privacyApproved ? ["/privacy"] : [])];
 const publicSeoPages = seoPages.filter(({ availability }) => availability === "public");
 assert.deepEqual(publicSeoPages.map(({ path }) => path).sort(), expectedPublicPaths.sort(), "Public SEO routes must match the independently reviewed route contract.");
 portfolioPages.push(...showcaseSeoPages.map(({ path, title, description }) => ({ pagePath: path, label: `Showcase ${path.split("/").at(-1)}`, title, description })));
@@ -341,6 +422,7 @@ const exportedPages = [
   ["services/index.html", "/services", "Services"],
   ["solutions/index.html", "/solutions", "Solutions"],
   ["contact/index.html", "/contact", "Contact"],
+  ["quotation/index.html", quotationContract.path, "Quotation"],
   ...(privacyApproved ? [["privacy/index.html", "/privacy", "Privacy"]] : []),
   ...portfolioPages.map(({ pagePath, label }) => [`${pagePath.slice(1)}/index.html`, pagePath, label]),
 ];
@@ -356,6 +438,10 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   verifyReferencedAssets(html, pagePath, label);
   verifySeoMetadata(html, getSeoPage(pagePath || "/"), label);
   verifyEnquiryMarkup(html, label, pagePath);
+  const footer = html.match(/<footer\b[^>]*>([\s\S]*?)<\/footer>/)?.[1] ?? "";
+  const footerUrls = [...footer.matchAll(/<a\b[^>]*>/g)].map(([tag]) => new URL(decodePublicText(tagAttribute(tag, "href") ?? ""), siteConfig.url));
+  const footerPaths = new Set(footerUrls.filter(({ origin }) => origin === siteConfig.url).map(({ pathname }) => pathname.replace(/\/$/, "") || "/"));
+  assert.ok(publicSeoPages.every(({ path }) => footerPaths.has(path)), `${label} Footer must list all published routes, including Quotation.`);
   if (pagePath === "" || pagePath === "/services") verifyServicePlans(html, pagePath || "/");
 
   if (pagePath === "/solutions") {

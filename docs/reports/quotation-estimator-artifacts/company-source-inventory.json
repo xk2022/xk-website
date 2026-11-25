@@ -1,0 +1,149 @@
+{
+  "checkedAt": "2026-11-25T06:37:48.214Z",
+  "repository": "xk2022/xplore-kaleidoscope",
+  "commit": "5be640ab11811b24706101ea13db73185e9ce4d8",
+  "tree": "10895f056504089267a9661c3685b7ff2d8ff1d8",
+  "sources": [
+    {
+      "path": "README.md",
+      "blob": "82d10f836169f6e368060ba37e2919c2f316026a",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/README.md",
+      "read": "FULL",
+      "sections": [
+        "探索萬象科技｜XK SYSTEM"
+      ]
+    },
+    {
+      "path": "doc/01_company/README.md",
+      "blob": "8cee451c85c6dd2e7644bc26de7a86396ca3e837",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/doc/01_company/README.md",
+      "read": "FULL",
+      "sections": [
+        "公司經營文件"
+      ]
+    },
+    {
+      "path": "doc/01_company/公司簡介.md",
+      "blob": "2842b231dfd6fb12c80dd4473eca8c7897558291",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/doc/01_company/%E5%85%AC%E5%8F%B8%E7%B0%A1%E4%BB%8B.md",
+      "read": "FULL",
+      "sections": [
+        "探索萬象科技｜公司簡介",
+        "一句話定位",
+        "提案用短介",
+        "適合的合作對象"
+      ]
+    },
+    {
+      "path": "doc/01_company/客戶分類.md",
+      "blob": "1a05a5d04d132d2bea74a06e85d582a0e15af6c5",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/doc/01_company/%E5%AE%A2%E6%88%B6%E5%88%86%E9%A1%9E.md",
+      "read": "FULL",
+      "sections": []
+    },
+    {
+      "path": "doc/02_services/README.md",
+      "blob": "f15c71d7901946a9ba28048c3ef0260e337a0e2f",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/doc/02_services/README.md",
+      "read": "FULL",
+      "sections": [
+        "服務目錄",
+        "原始依據"
+      ]
+    },
+    {
+      "path": "doc/02_services/定價策略.md",
+      "blob": "59fea2a9d9805bbbfa7407a01ce5ce275a737a77",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/doc/02_services/%E5%AE%9A%E5%83%B9%E7%AD%96%E7%95%A5.md",
+      "read": "FULL",
+      "sections": [
+        "Xplore Kaleidoscope — 定價策略",
+        "1. 定價原則",
+        "2. 第一階段營收目標",
+        "3. 內部工時計價基準",
+        "4. 網站建置報價",
+        "加購服務",
+        "5. Java 企業系統報價",
+        "6. 系統架構與整合報價",
+        "7. AI 商業解決方案報價",
+        "8. 維護服務月費",
+        "9. SaaS 訂閱定價",
+        "10. 最低接案金額",
+        "11. 海外市場定價",
+        "12. 報價與付款政策",
+        "13. 獲利管理",
+        "14. 定價發展策略",
+        "第一階段",
+        "第二階段",
+        "第三階段",
+        "第四階段",
+        "原始依據"
+      ]
+    },
+    {
+      "path": "doc/02_services/客戶開發與需求訪談.md",
+      "blob": "2f739957424ae94473213e314653f2f7f4714f68",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/doc/02_services/%E5%AE%A2%E6%88%B6%E9%96%8B%E7%99%BC%E8%88%87%E9%9C%80%E6%B1%82%E8%A8%AA%E8%AB%87.md",
+      "read": "FULL",
+      "sections": [
+        "客戶開發與需求訪談",
+        "從哪裡找客戶",
+        "訪談到報價",
+        "每週檢視"
+      ]
+    },
+    {
+      "path": "doc/02_services/網站建置方案.md",
+      "blob": "02a2685b81f23988fe49d6d0ea03f71fd8c40c43",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/doc/02_services/%E7%B6%B2%E7%AB%99%E5%BB%BA%E7%BD%AE%E6%96%B9%E6%A1%88.md",
+      "read": "FULL",
+      "sections": [
+        "R01 網站建置方案",
+        "購物與詢問的範圍怎麼談",
+        "報價與交付"
+      ]
+    },
+    {
+      "path": "doc/04_engineering/website-repository-naming.md",
+      "blob": "2e3488d10194bb12c151c9e7eb16a722f015a2c5",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/doc/04_engineering/website-repository-naming.md",
+      "read": "FULL",
+      "sections": []
+    },
+    {
+      "path": "doc/05_projects/case-studies/landing-pages.md",
+      "blob": "d03feb6befc94be716ab2696b0ce1490d2aab6dc",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/doc/05_projects/case-studies/landing-pages.md",
+      "read": "FULL",
+      "sections": [
+        "一頁式作品展示對照表"
+      ]
+    },
+    {
+      "path": "doc/06_templates/proposal-and-quotation.md",
+      "blob": "96f409bb8b01204ce21d0bc3eff2ba3eb60e4437",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/doc/06_templates/proposal-and-quotation.md",
+      "read": "FULL",
+      "sections": [
+        "提案與報價單"
+      ]
+    },
+    {
+      "path": "doc/98_decisions/2026-11-25.md",
+      "blob": "bb1946534130876aede2e5afb278babbec197d36",
+      "url": "https://github.com/xk2022/xplore-kaleidoscope/blob/5be640ab11811b24706101ea13db73185e9ce4d8/doc/98_decisions/2026-11-25.md",
+      "read": "FULL",
+      "sections": [
+        "2026-11-25 APP 工程規範決議",
+        "DEMO 免費部署補充決議",
+        "規範入口"
+      ]
+    }
+  ],
+  "missing": [
+    {
+      "path": "AGENTS.md",
+      "result": "HTTP 404; recursive tree contains no AGENTS.md"
+    }
+  ]
+}
