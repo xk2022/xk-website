@@ -12,6 +12,8 @@ export const contactNavigation = {
   label: "聯絡我們",
 } as const;
 
+export const quotationNavigation = { href: "/quotation", label: "方案試算" } as const;
+
 // Planning inventory only. Publish each route after its content is implemented.
 export const plannedRoutes = [
   { path: "/", label: "首頁", status: "implemented" },
@@ -25,5 +27,6 @@ export const plannedRoutes = [
   { path: "/solutions", label: "解決方案", status: "implemented" },
   { path: "/portfolio", label: "作品展示", status: "implemented" },
   { path: "/contact", label: "聯絡我們", status: "implemented" },
+  { path: "/quotation", label: "方案試算", status: "implemented" },
   { path: "/privacy", label: "隱私權政策", status: "planned" },
 ] as const;

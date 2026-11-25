@@ -1,0 +1,82 @@
+.quotation-root {
+  --primary: #101828;
+  --secondary: #2563eb;
+  --accent: #06b6d4;
+  --background: #fff;
+  --surface: #f8fafc;
+  --foreground: #334155;
+  --muted: #64748b;
+  --muted-foreground: #64748b;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #2563eb;
+  --card: #fff;
+  --card-foreground: #334155;
+  --primary-foreground: #fff;
+  --secondary-foreground: #fff;
+}
+
+/* Selected surfaces use the foreground token for readable small text. */
+.quotation-root [data-slot="card"]:has(input:checked) .text-muted-foreground { color: var(--foreground); }
+
+.quotation-preview-container {
+  width: 100%;
+  max-width: 210mm;
+  margin-inline: auto;
+  container-type: inline-size;
+}
+
+.quotation-paper {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 141.4286cqw;
+  padding: 3cqw 4.76cqw;
+  border: 1px solid var(--border);
+  background: white;
+  color: #334155;
+  font-size: 1.5cqw;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  box-shadow: 0 8px 24px #10182812;
+}
+
+.quotation-paper h3 { font-size: 2.65cqw; font-weight: 700; color: #101828; }
+.quotation-paper h4 { font-size: 1.7cqw; font-weight: 700; color: #101828; }
+.quotation-paper p, .quotation-paper dl, .quotation-paper ul { margin: 0; }
+.quotation-paper-header { display: flex; gap: 3cqw; align-items: center; padding-bottom: 2.2cqw; border-bottom: 0.25cqw solid #2563eb; }
+.quotation-paper-logo { width: 22cqw; height: auto; flex-shrink: 0; }
+.quotation-paper-meta { margin-block: 2.1cqw; display: grid; grid-template-columns: 1fr 1fr; gap: 1cqw 2cqw; }
+.quotation-paper-meta dt { font-weight: 600; color: #101828; }
+.quotation-paper-meta dd { margin: 0.3cqw 0 0; }
+.quotation-paper-base { margin-block: 2cqw; padding: 1.5cqw; border: 0.22cqw solid #2563eb; background: #eff6ff; }
+.quotation-paper-addon-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.7cqw; margin-top: 1.2cqw; }
+.quotation-paper-addon { display: flex; align-items: flex-start; gap: 0.7cqw; min-width: 0; padding: 0.8cqw; border: 0.1cqw solid #e2e8f0; background: #f8fafc; }
+.quotation-paper-addon svg { flex-shrink: 0; width: 1.6cqw; height: 1.6cqw; margin-top: 0.2cqw; }
+.quotation-paper-selected { border-color: #2563eb; background: #eff6ff; }
+.quotation-paper-totals { margin-top: 2.2cqw; padding: 1.6cqw; border: 0.15cqw solid #e2e8f0; }
+.quotation-paper-totals dl { display: grid; grid-template-columns: 1.05fr 1.5fr 1.05fr 1.5fr; gap: 0.7cqw 1.5cqw; margin-top: 1cqw; }
+.quotation-paper-totals dt { font-weight: 600; }
+.quotation-paper-totals dd { margin: 0; text-align: right; }
+.quotation-paper-notes { margin-top: 1.5cqw; font-size: 1.35cqw; }
+.quotation-paper-notes p + p { margin-top: 0.5cqw; }
+.quotation-paper-footer { margin-top: 2cqw; border-top: 0.15cqw solid #e2e8f0; padding-top: 1.5cqw; display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 2cqw; }
+.quotation-qr { display: block; width: 11.43cqw; height: 11.43cqw; }
+.quotation-qr-caption { margin-top: 0.3cqw; text-align: center; font-size: 1.25cqw; }
+
+@page { size: A4 portrait; margin: 0; }
+
+@media print {
+  body:has([data-quotation-page]) { margin: 0 !important; padding: 0 !important; background: white !important; }
+  body:has([data-quotation-page]) > div > header,
+  body:has([data-quotation-page]) header:not([data-summary-header]),
+  body:has([data-quotation-page]) footer,
+  body:has([data-quotation-page]) > a,
+  body:has([data-quotation-page]) #main-content > :not([data-quotation-page]) { display: none !important; }
+  body:has([data-quotation-page]) #main-content { margin: 0 !important; padding: 0 !important; }
+  .quotation-root, .quotation-preview-section { margin: 0 !important; padding: 0 !important; border: 0 !important; background: white !important; }
+  .quotation-preview-outer { width: 210mm !important; max-width: 210mm !important; margin: 0 !important; padding: 0 !important; }
+  .quotation-screen-only { display: none !important; }
+  .quotation-preview-container { width: 210mm; max-width: 210mm; margin: 0; padding: 0; }
+  .quotation-paper { width: 100%; min-height: 296mm; border: 0; box-shadow: none; break-inside: avoid; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .quotation-qr { width: 24mm; height: 24mm; }
+}

@@ -1,0 +1,7 @@
+{
+  "format": "gzip JSON, files[].content preserves UTF-8 bytes",
+  "files": 147,
+  "uncompressedBytes": 4172180,
+  "compressedBytes": 282718,
+  "sha256": "6c3dd07131bc0cdebb324ccd2033e3b14e53906e17963e063fefffa884c259ae"
+}

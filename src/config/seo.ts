@@ -76,6 +76,12 @@ export const seoPages = [
     availability: "public",
   },
   {
+    path: "/quotation",
+    title: "數位服務方案試算 | XK SYSTEM",
+    description: "依網站、系統開發與 AI 整合需求選擇方案及附加服務，查看參考費用、產生 A4 摘要並聯繫 XK SYSTEM。試算不是正式報價。",
+    availability: "public",
+  },
+  {
     path: "/privacy",
     title: "隱私權政策 | Xplore Kaleidoscope",
     description: "了解 Xplore Kaleidoscope 網站的個人資料處理、第三方服務與隱私權相關資訊。",

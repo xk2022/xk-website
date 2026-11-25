@@ -408,3 +408,17 @@ Hero、桌面導覽、手機選單與底部 CTA 共用依正式管道可用性�
 先完成可用的本地需求整理：四欄驗證、錯誤摘要、預覽、完整複製與郵件草稿，仍由訪客自行寄出。Hero 提供明確填寫入口，商務 Email 支援真實複製與手動 fallback；保留全站原詢價連結及六個 Contact 區塊錨點，另加入 `contact-form`。靜態守門僅對指定草稿表單開例外，其餘頁仍禁止收件表單；沒有新 Backend、第三方、依賴、儲存或公開法律政策。
 
 直接線上送出不是本地草稿流程的完成項目，端點／資料契約與真實驗收仍待確認。實際命令、瀏覽器、截圖、失敗／重驗與 Git 狀態見 [Contact 表單報告](reports/contact-inquiry-form.md)，不沿用前輪 merge 授權。
+
+## 2026-11-25 XK-ESTIMATOR — 方案試算審閱版本
+
+本輪以 `main@eaadead716f9a277b93aedc10e6fe234f1cc813a` 為網站基準，在 `feature/quotation-estimator` 新增 `/quotation`，規格見 [XK-ESTIMATOR V1](task/quotation-estimator-v1.md)。功能供訪客整理服務、建置、附加項目與需求程度，區分一次性、年度、第三方費用及待估項目；摘要、郵件草稿與 A4 列印不構成正式報價、訂單、付款或送達證據。既有 Contact 的實際收件界線與未公開 Privacy 保護繼續適用。
+
+公司來源只讀固定於 `5be640ab11811b24706101ea13db73185e9ce4d8`，以正式 `doc/01_company`、`02_services`、`03_brand`、`04_engineering` 等路徑為準。公司根目錄 `AGENTS.md` 回應 404，完整 tree 亦無同名檔案，沒有建立替代文件或改動公司 Repository。公司／服務／定價等十二份指定文件全文與 Blob 已核對；來源重點集中於 quotation config 的最小 commit/blob/section 註記及本輪報告，不複製公司全文、內部時薪或營收模型。
+
+來源與使用者暫定表的差異明確保留：LP、企業形象、多語、進階 SEO、Analytics 及限定內容 CMS 採相符的公司建議參考；BRAND、SHOP 與部分附加項目僅為本輪暫定；缺少對應範圍的項目待估。CORP 只指企業形象，管理平台歸 APP；公司五種網站分類包含 SHOP，AI 則是服務方向並沿用 APP。AI Chatbot、RAG 與客製 AI 分開，不以單一價格概括所有 AI 整合。CMS 僅指內容管理，不當作任意業務後台。
+
+公司價格策略不是已核准公開價目表。年度維護不直接換算公司月費，未定價格不作零，起價不補有限上界，三種複雜度沒有倍率。完整內含功能矩陣沒有來源定稿，本輪保持空清單；已內含不重計的邏輯應另以合成案例驗證，不以測試資料虛構正式方案。這些試算資料不改既有正式服務定價，也不加入依賴、後端、支付或收件服務。
+
+本輪在 `/quotation` 範圍使用正式品牌色與既有 Logo 03，頁面標示 XK SYSTEM；公司正文仍保留 Xplore Kaleidoscope／XK，不推論法定名稱變更，也不全站換色。原生 radio／checkbox 是試算頁的限定控制項例外；唯一保存 key `xk:quotation:v1` 只存版本及選項 ID，稱呼／專案名留在頁面記憶體，不進入網址、紀錄、QR 或網路請求。
+
+此處記錄開發審閱快照：完整品質、一般／Pages 瀏覽器、A4 PDF 與 QR 驗收均以 [試算實作報告](reports/quotation-estimator-v1.md) 的實際證據為準，不由功能或測試指令存在推定通過。交付目標為 Draft PR 與 CI，待人工驗收及價格審閱；未發生的 PR 識別碼、最終 SHA、人工核准、合併與正式部署不預填，未發布本輪分支。

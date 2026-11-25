@@ -21,6 +21,8 @@
 @source not "../../docs/reports/contact-plans-usecase.md";
 @source not "../../docs/reports/contact-inquiry-form.md";
 @source not "../../docs/reports/contact-inquiry-artifacts";
+@source not "../../docs/reports/quotation-estimator-v1.md";
+@source not "../../docs/reports/quotation-estimator-artifacts";
 
 :root {
   color-scheme: light;

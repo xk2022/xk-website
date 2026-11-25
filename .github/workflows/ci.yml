@@ -42,6 +42,9 @@ jobs:
       - name: Check ESLint
         run: npm run lint
 
+      - name: Test inquiry and quotation logic
+        run: npm test
+
       - name: Build production website
         run: npm run build
 

@@ -26,6 +26,14 @@
 
 目前沒有外部收件端點，**表單不是站內直接送出服務**。輸入只保留在本頁記憶體，不自動寄送或寫入持久儲存；沒有 JavaScript 時提供 Email 替代入口。第三方服務、資料告知與真實受控收件驗收尚待確認，不新增 Backend、API、依賴或公開草案 Privacy。實際結果與待辦見 [Contact 表單實作報告](docs/reports/contact-inquiry-form.md)；下方原始 Task 段落保留各里程碑的歷史狀態。
 
+## 方案試算（分支審閱中）
+
+`feature/quotation-estimator` 新增 `/quotation`，以 XK SYSTEM 方案試算整理服務方向、建置種類、附加項目與需求複雜度，分開呈現一次性費用、年度項目及第三方另計。可複製摘要、開啟郵件草稿，並使用 A4 預覽列印或另存 PDF；這些操作不代表已寄出需求、成立訂單或取得正式報價。
+
+本機執行 `npm run dev` 後開啟 <http://localhost:3000/quotation>。方案計算與保存的定向測試入口為 `npm run test:quotation`；完整品質指令、一般 production 與 Pages 預覽順序依 [本輪規格](docs/task/quotation-estimator-v1.md) 執行。測試入口存在不代表已完成驗收，實際命令、結果與限制由 [試算實作報告](docs/reports/quotation-estimator-v1.md) 記錄。
+
+價格集中於 `src/config/quotation.ts`，公司建議、本輪暫定及待評估項目分開標示，均待 Owner 審閱。未知價格不當作免費，起價不補上限，年度維護不由月費換算，複雜度不套倍率。保存方案時只將選項 ID 寫入 `xk:quotation:v1`；客戶稱呼與專案名稱只留在本頁記憶體。此功能以 Draft PR 等待人工驗收，尚未發布；既有正式服務價格及全站色票不因試算頁改動。
+
 ## 部署方向
 
 使用者於 Task 003 選擇 **GitHub Actions → GitHub Pages 靜態網站**。正式模式仍保留一般 Next.js 建置，Vercel 相容設定使用 Next.js preset、Repository 根目錄 `.`、production branch `main`；實際連結及發布狀態以 Task 013 報告與當次部署證據為準，不需要在 Repository 新增 Vercel Secrets。

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { XkLogo } from "@/components/brand/xk-logo";
 import { Container } from "@/components/layout/container";
 import { services } from "@/config/homepage";
-import { contactNavigation, primaryNavigation } from "@/config/navigation";
+import { contactNavigation, primaryNavigation, quotationNavigation } from "@/config/navigation";
 import { portfolioProjects } from "@/config/portfolio";
 import { siteConfig } from "@/config/site";
 import { brandWebsiteShowcases, showcaseDetailPath } from "@/config/website-showcases";
@@ -49,6 +49,7 @@ export function SiteFooter() {
                   {contactNavigation.label}
                 </Link>
               </li>
+              <li><Link href={quotationNavigation.href} className={footerLinkStyles}>{quotationNavigation.label}</Link></li>
               {portfolioProjects.map((project) => (
                 <li key={project.slug}>
                   <Link

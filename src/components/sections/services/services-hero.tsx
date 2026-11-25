@@ -7,6 +7,7 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { servicesPage } from "@/config/services";
+import { quotationNavigation } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
 
 export function ServicesHero() {
@@ -29,6 +30,7 @@ export function ServicesHero() {
           <p className="type-body-lg mt-6 max-w-2xl text-foreground">{hero.description}</p>
           <p lang="en" className="type-body-sm mt-6 text-secondary">{siteConfig.tagline}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <Button asChild size="lg" variant="secondary"><Link href={quotationNavigation.href}>立即試算方案<ArrowUpRight aria-hidden="true" /></Link></Button>
             <Button asChild size="lg">
               <Link href={hero.primaryCta.href}>{hero.primaryCta.label}<ArrowDown aria-hidden="true" /></Link>
             </Button>
