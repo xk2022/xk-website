@@ -67,3 +67,55 @@ HTTP 的 2 N/A 僅限普通 Next 私有 error shell 的原始 SSR frame 判定�
 | DC-006 新功能 PR | **PENDING**：兩個前置 PR 實際合併後實作與驗收；新 PR 供審閱，不自動合併 |
 
 PR #40 先形成 33 頁交付，再由 PR #42 加入 Luxury，形成 Modern／Heritage／Luxury 各 16 頁與 Gallery 的 49 頁清冊。清冊目標、使用者授權、程序通過、遠端 merge、main CI、部署與公開可用性分開記錄；本報告尚未宣稱 33／49 頁已發布。原完整報告中的未授權／未合併描述屬各自歷史時點，不反向改寫既有測試與失敗紀錄。本次亦不改動法律政策、正式索引、價格核准、DNS 或站內直接收件邊界。
+
+## Luxury：合併整合開始（2026-11-26）
+
+Heritage [PR #40](https://github.com/xk2022/xk-website/pull/40) 已實際合併為 `main@0d41ecf495e55b792f966c9fe27bd07c27bc5647`，main 清冊現在為 Modern 16＋Gallery＋Heritage 16，共 33 頁；main CI [45796333591](https://github.com/xk2022/xk-website/actions/runs/45796333591) 已成功，Pages deploy 於 09:56:20 UTC 完成；隨後正式 HTTPS smoke 2,329/2,329 PASS、實際 Exit 0（33 頁與 36 引用資源為 200，38 保護／未知路由為 404）。最終 PR head `7e13143e` 的 CI [45795727562](https://github.com/xk2022/xk-website/actions/runs/45795727562) 與實際 artifact 1,260/1,260 核對先行完成；遠端原始證據及 SHA 詳見 PR #40 說明。上方 Heritage 表格是先前階段快照，其原始 Exit 2、38 incomplete、逐 target 人工補充及版本邊界保持原樣；本段不追改舊收據或預填尚未取得的遠端結果。
+
+本階段以原 Luxury head `efd098a9a79667b29d5f0a8e71d2752941c30a0d` 為基礎，將該已核准 main 整合進 `feature/design-collection-luxury`／[PR #42](https://github.com/xk2022/xk-website/pull/42)，保留 [DC-004 完整規格](../task/dc004.md)／[實作報告](dc004-implementation.md) 及 [DC-005 完整規格](../task/dc005.md)／[實作報告](dc005-implementation.md)，並保留兩風格的版本審閱與核准。本分支整合清冊為三系列各 16 頁＋Gallery，共 49 頁，等待此次新驗收。原 Luxury-only 33 頁測試不改稱本次 49 頁結果；原先五外站 404 屬歷史版本，主線已含 PR #43 的五來源 Hub 修正，實際新來源驗收依本階段證據另記。
+
+公司來源最新 main `9213a3d8dacb8774d87c26cb736c4a4315779e95` 在本階段重核無新增適用規範變更。`source-bridge.json` 凍結 212 個 runtime／設定／資產／驗證檔，fingerprint `a5d7003b1babc38b9a8525a750f1b957a810f71f5530361b0fb2e3c6becd2303`；32 檔在雙分支及現在完全同 bytes，22 個核准系列 composition／theme 原檔未變，不以這項結論擴張品牌、服務、價格或發布核准。以下是此次 Luxury 階段待填矩陣，尚未把預計執行寫成通過；後續收據與必要原始失敗預定存入 [Luxury 整合證據](design-collection-integration-artifacts/luxury/)。
+
+| 程序／階段 | 本階段狀態 | 待記錄的實際證據 |
+| --- | --- | --- |
+| 原 Luxury head／核准 main／衝突與 source bridge | **PASS** | `source-bridge.json.gz`；212 檔與實際差異界線，下段詳列 |
+| `npm ci --cache /tmp/xk-npm-cache` | **PASS** | `npm-ci-final.json`／`.log.gz`，Exit 0 |
+| `npx next typegen`／`npx tsc --noEmit` | **PASS** | `typegen.json`／`typescript.json` 及 log，Exit 均 0 |
+| `npm run lint`／`npm test` | **PASS** | `lint.json`／`test.json` 及 log，Exit 均 0；最終附件 lint 另記 |
+| `npm run build`／`npm run build:pages` | **PASS** | `build-normal.json`／`build-pages.json` 及 log，Exit 均 0；49 頁 |
+| normal／Pages HTTP／metadata／assets／anchors／404 | **PASS** | 每 mode 3,273 PASS；normal 另 2 個私有 SSR N/A；`http-{mode}.json` 及 result.gz，Exit 均 0 |
+| normal／Pages 受影響瀏覽器／行為／網路驗收 | **PASS** | 每 mode 297/297、245 layouts、18 局部 axe；`browser-{mode}-v2.json`，Exit 均 0；原 v1 FAIL 保留 |
+| axe incomplete／人工補充（若有） | **PASS** | 每 mode 18 次受影響元件掃描，0 violations／0 incomplete；不宣稱全頁 WCAG／真人 AT 驗收 |
+| Contact／Quotation／個資／storage／A4 等共用整合界線 | **PASS** | 每 mode 24 業務斷言、三向 Footer／history 清個資及 IDs 還原、3 print media；物理 PDF 限 byte bridge 沿用 |
+| 實際 Pages artifact／封存／文件／最後 lint | **PASS（本機產物）** | 1,899/1,899 checker、515 files／163 runtime；manifest 已封存；最終 lint 及 docs-v2 均真 Exit 0，遠端另核 |
+| PR #42 最終精確 head CI／artifact | **PENDING** | 對應該 head 的真實 run／artifact，不能沿用舊 head 成功 |
+| PR #42 merge／main CI／deploy／公開驗證 | **PENDING** | 已授權合併，逐一記錄真實事件；不預填 49 頁已發布 |
+| DC-006 新功能階段 | **未開始** | PR #42 實際合併後接續；另立規格落地／測試／報告與新 PR 審閱，不自動合併該新 PR |
+
+現有使用者授權涵蓋 PR #42 合併及其後執行 DC-006，不需重複請批；PR #42 仍須完成此次必要驗收再合併。此處只開始雙風格合併整合，未提前實作 DC-006 的三向切換器，也未解除既有法律、索引、價格、收件或 DNS 邊界。
+
+### Luxury：受影響範圍與執行紀錄
+
+- 保留兩系列獨立版面，合併時以明列兩 style 的 static params 與 Server dispatcher 共存；每個頁面只有一套 Frame。三套 Footer 分組列出全部 49 頁。
+- Contact／Quotation 相對原 Luxury 僅新增 Heritage 的 class／data 分支，保留其直接清除 DOM／defaultValue／mailto／個人摘要、Activity 及 bfcache 生命週期處理。Heritage 舊控制器被這個已驗收的較完整共用處理取代，故三風格生命週期與個資必須重新驗收。
+- Summary、print CSS、QR、定價、計算與 IDs storage 原始 bytes 未變；只在此界線沿用原實體 PDF／QR 結果，這次仍驗三風格實際 print media、離頁與還原。不把歷史 PDF 說成本輪新產生。
+- 衝突 review 發現 `servicesPage.websiteGuide` 被 Git 自動合併重複插入；保留已合併 main 的唯一原設定，沒有改文案或價格。
+- 先安裝新工作樹的鎖定依賴以準備 snapshot，freeze 後另有 `npm-ci-final.json` 作正式基準；初次 snapshot 缺依賴與不適用的 Node CJS `--check` TypeScript 操作均記入 `preparation.json`。實際 Next typegen、TypeScript、Lint 與 native tests 已另成功，不為工具問題改 package type。
+
+正式 `npm ci`、`npx next typegen`、`npx tsc --noEmit`、`npm run lint`、`npm test`、`npm run build` 均已真 Exit 0。native route 86、metadata 59、content 24 項通過；其他原 Contact／Quotation／contract 測試完成，完整計數見原 log。普通 production HTTP 為 **3,273 PASS、2 N/A**，`complete: true`、Exit 0；兩 N/A 仍只限精確私有 Next error shell，沒有放寬保護或其他未知路由。
+
+第一次 browser `normal-final` **Exit 1**，269 個記錄 FAIL、0 個 layout 完成後中止：工具在新 context 的初始 `about:blank` opaque origin 讀取 cookie／storage，還未進入網站即遭 SecurityError。原結果、工具 v1、收據與必要失敗圖保留；它不能作為網站驗收。v2 只修正初始 opaque document 的前置條件，真實 App document 仍維持嚴格儲存／個資檢查；v2 的真單頁預檢先通過，再於 normal／Pages 各重新完成 297/297、Exit 0；未修改網站來迎合工具。
+
+### Luxury：內容、畫面與驗證邊界
+
+獨立比對已對 HTTP parity 的 90 個候選逐筆核對 18 個實際 HTML 與原生公開 DTO：87 個為父節點串接／編號／重排，3 個 Heritage「服務組合」改為「相關技術服務」；相應三組 serviceIds、標題及 href 完整等價，未發現真正事實遺漏。保留第一輪 Exit 2／3 個待判讀與後續 `parity/adjudication-final.json.gz`、真 Exit 0，各候選有原文、DTO path、semantic section 及 actual leaf。272 個 DTO 文字 leaf、9 個保留 UI label、3 個改名與 86 個展示編號有明確依據；此為 90 個候選的內容判讀，不擴張為所有 DTO 欄位或人工作品聲明。
+
+兩模式各 297 項為：245 個 49 頁×320／375／768／1440／1920px layout，18 次受影響 Header／Footer／Contact／Quotation 區域 axe，24 個選定業務斷言，3 組鍵盤／原生選單／focus／reduced motion，2 組三風格真 Footer／back-forward 個資與 IDs 生命週期，3 組 print media 離頁／還原，Gallery 及嚴格被動網路各 1。兩模式均 0 assertion FAIL、0 Console／Runtime／實際資源／個資錯誤；原精確可辨識的 prefetch cancellation 原記錄保留，不把它們改稱 2xx。Clipboard API 真 readback 與宣告拒絕模擬分開，storage SecurityError 限本網站既有 key 的失敗路徑測試，沒有聲稱所有瀏覽器政策皆已測到。
+
+三風格 print media 均只有一個 active Quotation 與白色 A4、原 Logo／兩個 QR 資源；離開後普通頁不帶殘留 A4，返回可恢復列印。這輪沒有新 PDF 或重新解碼實體 QR；未變的實體列印與 QR bytes 限定沿用各原完整報告。
+
+Pages [14 張實際截圖與人工檢視](../screenshots/design-collection/integration-pr42/README.md) 包含 Home／Gallery 的 375／1440px 全頁及三風格頁尾頂端 viewport。圖片全長用於總覽，文字換行與品牌對比另看實際 viewport；局部圖不假稱包含整個 49-link 目錄，完整 href 另由逐頁斷言驗證。沒有將 normal 未拍的圖宣稱為 byte-identical。
+
+原始 receipts、結果、工具 v1／v2、scope、source／fixture／catalog、原始失敗、兩個唯一失敗 PNG 與全部 269 筆失敗圖 mapping 均在 artifact 目錄，log／工具以 gzip 保存並列 encoded／decoded SHA。沒有 secrets、.next、out 或 dependencies。正式品質在 runtime freeze 後執行，後續只是排除於 Tailwind 的報告／證據與遠端事件記錄，不重跑無關網站矩陣；最終 commit 對應的 CI artifact 仍須獨立精確核對。
+
+文件封存初次 SHA checker 將原本已 gzip 的 HTTP 原檔誤當為新增 archive wrapper 解壓，真 Exit 1 保留（`docs-final.json`）；修正 manifest 的明確 `archiveEncoding`／`originalEncoding`，只解開本次 archive wrapper，再以 v2 重新檢查。原始來源 gzip bytes 及來源自己的 body SHA 均保留，不為此重新建置網站。

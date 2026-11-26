@@ -41,6 +41,7 @@ export function HeritageFrame({ children, pageKey, slug }: Readonly<{ children: 
   const directories = [
     { id: "heritage", title: "Heritage 網站目錄", routes: published.filter((route) => route.styleId === "heritage") },
     { id: "modern", title: "Modern 網站目錄", routes: published.filter((route) => route.styleId === "modern") },
+    { id: "luxury", title: "Luxury 網站目錄", routes: published.filter((route) => route.styleId === "luxury") },
     { id: "collection", title: "設計系列目錄", routes: published.filter((route) => route.pageKey === "collection") },
   ];
 

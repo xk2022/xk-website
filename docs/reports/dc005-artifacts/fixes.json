@@ -1,0 +1,27 @@
+[
+  {
+    "id": "DC5-FIX-01",
+    "observed": "http-normal SMOKE-1758 FAIL; exact original Contact step titles included added decorative number prefix",
+    "change": "Remove duplicate inline numbers from Contact h3; ordered list already provides numbering. Keep all original step titles and paragraphs.",
+    "retest": "Normal affected Contact HTML/five-width/axe and complete HTTP; final Pages full matrix; typecheck/lint/build. Original normal broader matrix remains original source evidence."
+  },
+  {
+    "id": "DC5-FIX-02",
+    "observed": "Root/independent visual view of actual Pages Home375/1440: outside bullet markers detached from centered service labels",
+    "change": "Home only uses existing lx-index wrapping flex list for same three DTO strings; no CSS/Token or other page changes.",
+    "retest": "normal and Pages fresh builds + Home scoped5width/2axe/keyboard/network; Pages5 replacement screenshots; complete HTTP checks; source/runtime bridge. Full v1/v2 results remain immutable."
+  },
+  {
+    "id": "DC5-FIX-03",
+    "observed": "Actual Pages Quotation375/1440: original navy wordmark on dark screen intro Card has insufficient visibility; image lettering not covered by axe text checks.",
+    "change": "Only screen-scoped Luxury quotation-introduction img gets white backplate and .75rem padding. Original Logo bytes and standardA4 unchanged.",
+    "retest": "Fresh normal/Pages builds; Home+Quote17 affected assertions (10layouts,4axe,2keyboard,1strictnetwork),7 final screenshots, allHTTP, source bridge and new CI artifact. Original4 PDF evidence remains because print/image/src/paperCSS unchanged; screen-only selector explicitly excludes sheet."
+  },
+  {
+    "id": "DC5-QA-04",
+    "observed": "normal v3 affected17: 16PASS/1FAIL, numeric animationDuration0 assertion failed Home CTA (global existing reduced .01ms).",
+    "diagnosis": "Real DOM animationName=none, getAnimations=[] and transition none/0s; .01ms is only unused duration parameter. Not an active animation or app bug.",
+    "change": "Clone v4 QA checks animationName none OR true0 duration, plus no actual running/pending Animation object. No change to app, no .01ms tolerance introduced. Original tool/result/FAIL immutable.",
+    "retest": "Fresh normal and Pages affected17 with actual timing evidence."
+  }
+]

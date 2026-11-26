@@ -87,11 +87,25 @@ export function QuotationEstimator({ styleId = "modern", catalog = quotationCata
   const presentationHref = (href: string) => hrefMap?.[href] ?? href;
 
   useEffect(() => {
-    const page = estimatorRef.current?.closest("[data-quotation-page]");
+    const estimator = estimatorRef.current;
+    const page = estimator?.closest("[data-quotation-page]");
     const activatePrintScope = () => page?.setAttribute("data-quotation-page", "true");
-    // Selection IDs remain in the original store; personal fields never do.
-    const clearPersonalMemory = () => {
-      page?.setAttribute("data-quotation-page", "inactive");
+    const clearPersonalFields = () => {
+      // Reset retained DOM immediately as well as its eventual React snapshot.
+      const personalFields = estimator?.querySelectorAll<HTMLInputElement>("#quotation-customer, #quotation-project");
+      const hadPersonalFields = Array.from(personalFields ?? []).some((field) => field.value !== "" || field.defaultValue !== "");
+      personalFields?.forEach((field) => {
+        field.value = "";
+        field.defaultValue = "";
+      });
+      estimator?.querySelectorAll(".quotation-paper-meta > div:nth-child(-n+2) dd").forEach((field) => { field.textContent = "未填寫"; });
+      if (hadPersonalFields) {
+        if (summaryTextRef.current) {
+          summaryTextRef.current.value = "";
+          summaryTextRef.current.defaultValue = "";
+        }
+        estimator?.querySelector("#quotation-next-step a[href^='mailto:']")?.removeAttribute("href");
+      }
       setCustomerName("");
       setProjectName("");
       setCopying(false);
@@ -99,13 +113,21 @@ export function QuotationEstimator({ styleId = "modern", catalog = quotationCata
       setPrinting(false);
       setPrintStatus("");
     };
+    const leavePage = () => {
+      page?.setAttribute("data-quotation-page", "inactive");
+      clearPersonalFields();
+    };
+    const restorePage = (event: PageTransitionEvent) => {
+      if (event.persisted) clearPersonalFields();
+      activatePrintScope();
+    };
     activatePrintScope();
-    window.addEventListener("pagehide", clearPersonalMemory);
-    window.addEventListener("pageshow", activatePrintScope);
+    window.addEventListener("pagehide", leavePage);
+    window.addEventListener("pageshow", restorePage);
     return () => {
-      window.removeEventListener("pagehide", clearPersonalMemory);
-      window.removeEventListener("pageshow", activatePrintScope);
-      clearPersonalMemory();
+      window.removeEventListener("pagehide", leavePage);
+      window.removeEventListener("pageshow", restorePage);
+      leavePage();
     };
   }, [styleId]);
 
@@ -188,7 +210,7 @@ export function QuotationEstimator({ styleId = "modern", catalog = quotationCata
   }
 
   return (
-    <div ref={estimatorRef} id="quotation-estimator" data-quotation-ready={hydrated} data-quotation-style={styleId === "heritage" ? styleId : undefined} className={styleId === "heritage" ? "htg-quotation-estimator" : undefined}>
+    <div ref={estimatorRef} id="quotation-estimator" data-quotation-ready={hydrated} data-quotation-style={styleId === "modern" ? undefined : styleId} className={styleId === "luxury" ? "lx-quotation-estimator" : styleId === "heritage" ? "htg-quotation-estimator" : undefined}>
       <Section id="quotation-introduction" aria-labelledby="quotation-title" className={cn("quotation-screen-only", "border-b")}>
         <Container>
           <div className="grid min-w-0 items-start gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,.6fr)] lg:gap-12">

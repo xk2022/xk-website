@@ -1,0 +1,560 @@
+{
+  "status": "DIAGNOSTIC_COMPLETED",
+  "scope": "Exactly five failing existing brand destinations, one custom GET and one original GitHub URL GET per destination plus DNS; no retries or mutations",
+  "startedAt": "2026-11-26T07:14:52.430198+00:00",
+  "finishedAt": "2026-11-26T07:14:58.163192+00:00",
+  "records": [
+    {
+      "id": "march-tangbao",
+      "customUrl": "https://march.xplorekaleidoscope.com/",
+      "originalUrl": "https://xk2022.github.io/xk-showcase-march-tangbao/",
+      "custom": {
+        "requestedUrl": "https://march.xplorekaleidoscope.com/",
+        "startedAt": "2026-11-26T07:14:52.430476+00:00",
+        "status": 404,
+        "finalUrl": "https://march.xplorekaleidoscope.com/",
+        "headers": {
+          "server": "envoy",
+          "content-type": "text/html; charset=utf-8",
+          "x-github-request-id": "4A0E:2C4ECE:C922AC:DAA648:6B07DBE8",
+          "age": "132",
+          "date": "Thu, 26 Nov 2026 07:14:52 GMT",
+          "via": "1.1 varnish",
+          "x-served-by": "cache-chi-klot8100057-CHI",
+          "x-cache": "HIT",
+          "x-cache-hits": "0",
+          "content-length": "9115",
+          "x-envoy-upstream-service-time": "62"
+        },
+        "title": "Site not found &middot; GitHub Pages",
+        "bodyBytes": 9115,
+        "bodySha256": "70d613e3acfba24fd2876fcbacaf639e1e111ef4d54baf70761c47673f37d6a3",
+        "bodySignature": {
+          "githubPagesNotFound": true,
+          "githubPagesMention": true,
+          "proxyOrTunnelFailure": false
+        },
+        "classification": "GITHUB_PAGES_SITE_NOT_FOUND_RESPONSE",
+        "redirects": [],
+        "finishedAt": "2026-11-26T07:14:52.668142+00:00"
+      },
+      "original": {
+        "requestedUrl": "https://xk2022.github.io/xk-showcase-march-tangbao/",
+        "startedAt": "2026-11-26T07:14:52.668155+00:00",
+        "status": 404,
+        "finalUrl": "https://xk2022.github.io/xk-showcase-march-tangbao/",
+        "headers": {
+          "server": "envoy",
+          "content-type": "text/html; charset=utf-8",
+          "x-github-request-id": "F1E4:DE455:C60D55:D7A462:6B07DC6C",
+          "age": "0",
+          "date": "Thu, 26 Nov 2026 07:14:52 GMT",
+          "via": "1.1 varnish",
+          "x-served-by": "cache-chi-klot8100101-CHI",
+          "x-cache": "MISS",
+          "x-cache-hits": "0",
+          "content-length": "9115",
+          "x-envoy-upstream-service-time": "67"
+        },
+        "title": "Site not found &middot; GitHub Pages",
+        "bodyBytes": 9115,
+        "bodySha256": "70d613e3acfba24fd2876fcbacaf639e1e111ef4d54baf70761c47673f37d6a3",
+        "bodySignature": {
+          "githubPagesNotFound": true,
+          "githubPagesMention": true,
+          "proxyOrTunnelFailure": false
+        },
+        "classification": "GITHUB_PAGES_SITE_NOT_FOUND_RESPONSE",
+        "redirects": [],
+        "finishedAt": "2026-11-26T07:14:52.775847+00:00"
+      },
+      "localDnsAddresses": [
+        "185.199.108.153",
+        "185.199.109.153",
+        "185.199.110.153",
+        "185.199.111.153",
+        "2606:50c0:8000::153",
+        "2606:50c0:8001::153",
+        "2606:50c0:8002::153",
+        "2606:50c0:8003::153"
+      ],
+      "googleDns": {
+        "status": 0,
+        "answers": [
+          {
+            "name": "march.xplorekaleidoscope.com.",
+            "type": 5,
+            "TTL": 3600,
+            "data": "xk2022.github.io."
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.108.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.110.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.109.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.111.153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hongjia-birdnest",
+      "customUrl": "https://honbird.xplorekaleidoscope.com/",
+      "originalUrl": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/",
+      "custom": {
+        "requestedUrl": "https://honbird.xplorekaleidoscope.com/",
+        "startedAt": "2026-11-26T07:14:52.431047+00:00",
+        "status": 404,
+        "finalUrl": "https://honbird.xplorekaleidoscope.com/",
+        "headers": {
+          "server": "envoy",
+          "content-type": "text/html; charset=utf-8",
+          "x-github-request-id": "FCCA:3A1E3E:73127D:8BEF16:6B07DBE8",
+          "age": "132",
+          "date": "Thu, 26 Nov 2026 07:14:52 GMT",
+          "via": "1.1 varnish",
+          "x-served-by": "cache-chi-klot8100147-CHI",
+          "x-cache": "HIT",
+          "x-cache-hits": "0",
+          "content-length": "9115",
+          "x-envoy-upstream-service-time": "55"
+        },
+        "title": "Site not found &middot; GitHub Pages",
+        "bodyBytes": 9115,
+        "bodySha256": "70d613e3acfba24fd2876fcbacaf639e1e111ef4d54baf70761c47673f37d6a3",
+        "bodySignature": {
+          "githubPagesNotFound": true,
+          "githubPagesMention": true,
+          "proxyOrTunnelFailure": false
+        },
+        "classification": "GITHUB_PAGES_SITE_NOT_FOUND_RESPONSE",
+        "redirects": [],
+        "finishedAt": "2026-11-26T07:14:52.742590+00:00"
+      },
+      "original": {
+        "requestedUrl": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/",
+        "startedAt": "2026-11-26T07:14:52.742609+00:00",
+        "status": 404,
+        "finalUrl": "https://xk2022.github.io/xk-showcase-hongjia-birdnest/",
+        "headers": {
+          "server": "envoy",
+          "content-type": "text/html; charset=utf-8",
+          "x-github-request-id": "AF52:EC93D:CEFD14:E08B6F:6B07DC68",
+          "age": "0",
+          "date": "Thu, 26 Nov 2026 07:14:52 GMT",
+          "via": "1.1 varnish",
+          "x-served-by": "cache-chi-klot8100024-CHI",
+          "x-cache": "MISS",
+          "x-cache-hits": "0",
+          "content-length": "9115",
+          "x-envoy-upstream-service-time": "78"
+        },
+        "title": "Site not found &middot; GitHub Pages",
+        "bodyBytes": 9115,
+        "bodySha256": "70d613e3acfba24fd2876fcbacaf639e1e111ef4d54baf70761c47673f37d6a3",
+        "bodySignature": {
+          "githubPagesNotFound": true,
+          "githubPagesMention": true,
+          "proxyOrTunnelFailure": false
+        },
+        "classification": "GITHUB_PAGES_SITE_NOT_FOUND_RESPONSE",
+        "redirects": [],
+        "finishedAt": "2026-11-26T07:14:52.906175+00:00"
+      },
+      "localDnsAddresses": [
+        "185.199.108.153",
+        "185.199.109.153",
+        "185.199.110.153",
+        "185.199.111.153",
+        "2606:50c0:8000::153",
+        "2606:50c0:8001::153",
+        "2606:50c0:8002::153",
+        "2606:50c0:8003::153"
+      ],
+      "googleDns": {
+        "status": 0,
+        "answers": [
+          {
+            "name": "honbird.xplorekaleidoscope.com.",
+            "type": 5,
+            "TTL": 3600,
+            "data": "xk2022.github.io."
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.108.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.110.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.109.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.111.153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "yupinyuan-bento",
+      "customUrl": "https://yupinyuan.xplorekaleidoscope.com/",
+      "originalUrl": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+      "custom": {
+        "requestedUrl": "https://yupinyuan.xplorekaleidoscope.com/",
+        "startedAt": "2026-11-26T07:14:52.431521+00:00",
+        "status": 404,
+        "finalUrl": "https://yupinyuan.xplorekaleidoscope.com/",
+        "headers": {
+          "server": "envoy",
+          "content-type": "text/html; charset=utf-8",
+          "x-github-request-id": "2F2A:35A01D:CE7FB0:E001BA:6B07DBE4",
+          "age": "132",
+          "date": "Thu, 26 Nov 2026 07:14:52 GMT",
+          "via": "1.1 varnish",
+          "x-served-by": "cache-chi-klot8100100-CHI",
+          "x-cache": "HIT",
+          "x-cache-hits": "0",
+          "content-length": "9115",
+          "x-envoy-upstream-service-time": "57"
+        },
+        "title": "Site not found &middot; GitHub Pages",
+        "bodyBytes": 9115,
+        "bodySha256": "70d613e3acfba24fd2876fcbacaf639e1e111ef4d54baf70761c47673f37d6a3",
+        "bodySignature": {
+          "githubPagesNotFound": true,
+          "githubPagesMention": true,
+          "proxyOrTunnelFailure": false
+        },
+        "classification": "GITHUB_PAGES_SITE_NOT_FOUND_RESPONSE",
+        "redirects": [],
+        "finishedAt": "2026-11-26T07:14:52.690022+00:00"
+      },
+      "original": {
+        "requestedUrl": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+        "startedAt": "2026-11-26T07:14:52.690040+00:00",
+        "status": 404,
+        "finalUrl": "https://xk2022.github.io/xk-showcase-yupinyuan-bento/",
+        "headers": {
+          "server": "envoy",
+          "content-type": "text/html; charset=utf-8",
+          "x-github-request-id": "E446:3A1FB7:CAEB90:DC7EE4:6B07DC6B",
+          "age": "0",
+          "date": "Thu, 26 Nov 2026 07:14:52 GMT",
+          "via": "1.1 varnish",
+          "x-served-by": "cache-chi-klot8100140-CHI",
+          "x-cache": "MISS",
+          "x-cache-hits": "0",
+          "content-length": "9115",
+          "x-envoy-upstream-service-time": "78"
+        },
+        "title": "Site not found &middot; GitHub Pages",
+        "bodyBytes": 9115,
+        "bodySha256": "70d613e3acfba24fd2876fcbacaf639e1e111ef4d54baf70761c47673f37d6a3",
+        "bodySignature": {
+          "githubPagesNotFound": true,
+          "githubPagesMention": true,
+          "proxyOrTunnelFailure": false
+        },
+        "classification": "GITHUB_PAGES_SITE_NOT_FOUND_RESPONSE",
+        "redirects": [],
+        "finishedAt": "2026-11-26T07:14:52.857287+00:00"
+      },
+      "localDnsAddresses": [
+        "185.199.108.153",
+        "185.199.109.153",
+        "185.199.110.153",
+        "185.199.111.153",
+        "2606:50c0:8000::153",
+        "2606:50c0:8001::153",
+        "2606:50c0:8002::153",
+        "2606:50c0:8003::153"
+      ],
+      "googleDns": {
+        "status": 0,
+        "answers": [
+          {
+            "name": "yupinyuan.xplorekaleidoscope.com.",
+            "type": 5,
+            "TTL": 3600,
+            "data": "xk2022.github.io."
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.108.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.111.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.109.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.110.153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "honest-diecut",
+      "customUrl": "https://honest.xplorekaleidoscope.com/",
+      "originalUrl": "https://xk2022.github.io/xk-showcase-honest-diecut/",
+      "custom": {
+        "requestedUrl": "https://honest.xplorekaleidoscope.com/",
+        "startedAt": "2026-11-26T07:14:52.432368+00:00",
+        "status": 404,
+        "finalUrl": "https://honest.xplorekaleidoscope.com/",
+        "headers": {
+          "server": "envoy",
+          "content-type": "text/html; charset=utf-8",
+          "x-github-request-id": "0DAC:2432CC:C5B70A:D73DEF:6B07DBE9",
+          "age": "131",
+          "date": "Thu, 26 Nov 2026 07:14:52 GMT",
+          "via": "1.1 varnish",
+          "x-served-by": "cache-chi-klot8100076-CHI",
+          "x-cache": "HIT",
+          "x-cache-hits": "0",
+          "content-length": "9115",
+          "x-envoy-upstream-service-time": "54"
+        },
+        "title": "Site not found &middot; GitHub Pages",
+        "bodyBytes": 9115,
+        "bodySha256": "70d613e3acfba24fd2876fcbacaf639e1e111ef4d54baf70761c47673f37d6a3",
+        "bodySignature": {
+          "githubPagesNotFound": true,
+          "githubPagesMention": true,
+          "proxyOrTunnelFailure": false
+        },
+        "classification": "GITHUB_PAGES_SITE_NOT_FOUND_RESPONSE",
+        "redirects": [],
+        "finishedAt": "2026-11-26T07:14:52.663021+00:00"
+      },
+      "original": {
+        "requestedUrl": "https://xk2022.github.io/xk-showcase-honest-diecut/",
+        "startedAt": "2026-11-26T07:14:52.663031+00:00",
+        "status": 404,
+        "finalUrl": "https://xk2022.github.io/xk-showcase-honest-diecut/",
+        "headers": {
+          "server": "envoy",
+          "content-type": "text/html; charset=utf-8",
+          "x-github-request-id": "9A86:69377:BF4CED:D3125F:6B07DC6C",
+          "age": "0",
+          "date": "Thu, 26 Nov 2026 07:14:52 GMT",
+          "via": "1.1 varnish",
+          "x-served-by": "cache-chi-klot8100032-CHI",
+          "x-cache": "MISS",
+          "x-cache-hits": "0",
+          "content-length": "9115",
+          "x-envoy-upstream-service-time": "101"
+        },
+        "title": "Site not found &middot; GitHub Pages",
+        "bodyBytes": 9115,
+        "bodySha256": "70d613e3acfba24fd2876fcbacaf639e1e111ef4d54baf70761c47673f37d6a3",
+        "bodySignature": {
+          "githubPagesNotFound": true,
+          "githubPagesMention": true,
+          "proxyOrTunnelFailure": false
+        },
+        "classification": "GITHUB_PAGES_SITE_NOT_FOUND_RESPONSE",
+        "redirects": [],
+        "finishedAt": "2026-11-26T07:14:52.865263+00:00"
+      },
+      "localDnsAddresses": [
+        "185.199.108.153",
+        "185.199.109.153",
+        "185.199.110.153",
+        "185.199.111.153",
+        "2606:50c0:8000::153",
+        "2606:50c0:8001::153",
+        "2606:50c0:8002::153",
+        "2606:50c0:8003::153"
+      ],
+      "googleDns": {
+        "status": 0,
+        "answers": [
+          {
+            "name": "honest.xplorekaleidoscope.com.",
+            "type": 5,
+            "TTL": 3600,
+            "data": "xk2022.github.io."
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.109.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.111.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.110.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.108.153"
+          }
+        ]
+      }
+    },
+    {
+      "id": "qiangang-windows",
+      "customUrl": "https://qiangang.xplorekaleidoscope.com/",
+      "originalUrl": "https://xk2022.github.io/xk-showcase-qiangang-windows/",
+      "custom": {
+        "requestedUrl": "https://qiangang.xplorekaleidoscope.com/",
+        "startedAt": "2026-11-26T07:14:52.433879+00:00",
+        "status": 404,
+        "finalUrl": "https://qiangang.xplorekaleidoscope.com/",
+        "headers": {
+          "server": "envoy",
+          "content-type": "text/html; charset=utf-8",
+          "x-github-request-id": "615A:9AB89:CD4208:DEBE50:6B07DBE9",
+          "age": "131",
+          "date": "Thu, 26 Nov 2026 07:14:52 GMT",
+          "via": "1.1 varnish",
+          "x-served-by": "cache-chi-klot8100151-CHI",
+          "x-cache": "HIT",
+          "x-cache-hits": "0",
+          "content-length": "9115",
+          "x-envoy-upstream-service-time": "30"
+        },
+        "title": "Site not found &middot; GitHub Pages",
+        "bodyBytes": 9115,
+        "bodySha256": "70d613e3acfba24fd2876fcbacaf639e1e111ef4d54baf70761c47673f37d6a3",
+        "bodySignature": {
+          "githubPagesNotFound": true,
+          "githubPagesMention": true,
+          "proxyOrTunnelFailure": false
+        },
+        "classification": "GITHUB_PAGES_SITE_NOT_FOUND_RESPONSE",
+        "redirects": [],
+        "finishedAt": "2026-11-26T07:14:52.661732+00:00"
+      },
+      "original": {
+        "requestedUrl": "https://xk2022.github.io/xk-showcase-qiangang-windows/",
+        "startedAt": "2026-11-26T07:14:52.661770+00:00",
+        "status": 404,
+        "finalUrl": "https://xk2022.github.io/xk-showcase-qiangang-windows/",
+        "headers": {
+          "server": "envoy",
+          "content-type": "text/html; charset=utf-8",
+          "x-github-request-id": "6F8E:1FE198:B50FFC:C8DA88:6B07DC6C",
+          "age": "0",
+          "date": "Thu, 26 Nov 2026 07:14:52 GMT",
+          "via": "1.1 varnish",
+          "x-served-by": "cache-chi-klot8100143-CHI",
+          "x-cache": "MISS",
+          "x-cache-hits": "0",
+          "content-length": "9115",
+          "x-envoy-upstream-service-time": "82"
+        },
+        "title": "Site not found &middot; GitHub Pages",
+        "bodyBytes": 9115,
+        "bodySha256": "70d613e3acfba24fd2876fcbacaf639e1e111ef4d54baf70761c47673f37d6a3",
+        "bodySignature": {
+          "githubPagesNotFound": true,
+          "githubPagesMention": true,
+          "proxyOrTunnelFailure": false
+        },
+        "classification": "GITHUB_PAGES_SITE_NOT_FOUND_RESPONSE",
+        "redirects": [],
+        "finishedAt": "2026-11-26T07:14:52.822797+00:00"
+      },
+      "localDnsAddresses": [
+        "185.199.108.153",
+        "185.199.109.153",
+        "185.199.110.153",
+        "185.199.111.153",
+        "2606:50c0:8000::153",
+        "2606:50c0:8001::153",
+        "2606:50c0:8002::153",
+        "2606:50c0:8003::153"
+      ],
+      "googleDns": {
+        "status": 0,
+        "answers": [
+          {
+            "name": "qiangang.xplorekaleidoscope.com.",
+            "type": 5,
+            "TTL": 3600,
+            "data": "xk2022.github.io."
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.111.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.110.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.108.153"
+          },
+          {
+            "name": "xk2022.github.io.",
+            "type": 1,
+            "TTL": 3600,
+            "data": "185.199.109.153"
+          }
+        ]
+      }
+    }
+  ],
+  "originalUrlProvenance": "Existing /tmp/xk-contact-plans/usecase-audit.json historic registered hrefs; not guessed paths",
+  "limitations": "Requests use the managed environment HTTPS proxy and normal TLS verification. A GitHub Pages-branded HTTP404 is distinguished from tunnel/transport errors; provider account state and third-party reachability are not proven by this one vantage."
+}

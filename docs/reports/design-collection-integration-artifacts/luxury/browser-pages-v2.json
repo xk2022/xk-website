@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc006/merge2/browser-v2.cjs",
+    "pages",
+    "http://127.0.0.1:3275/",
+    "v2",
+    "/tmp/xk-dc006-merge/luxury/source-bridge.json",
+    "/tmp/xk-dc006/merge2/fixture.json",
+    "/tmp/xk-dc006/merge2/catalog.json"
+  ],
+  "cwd": "/tmp/xk-merge-luxury",
+  "startedAt": "2026-11-26T10:18:53.931678+00:00",
+  "finishedAt": "2026-11-26T10:22:03.491712+00:00",
+  "processId": 106989,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 720.0,
+  "logFile": "/tmp/xk-dc006-merge/luxury/browser-pages-v2.log",
+  "logSha256": "f3995c4b2ec9f81a5d3bd093252e482cb1a206c8b4e64a1e8b63a5fdbf6832f6",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

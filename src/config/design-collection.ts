@@ -39,9 +39,8 @@ const modernAnchors = {
 type PageAnchors = Readonly<Partial<Record<DesignContentPageKey, readonly string[]>>>;
 const anchors: Readonly<Record<DesignStyleId, PageAnchors>> = {
   modern: modernAnchors,
-  // Heritage preserves the same semantic destinations with independent layouts.
   heritage: modernAnchors,
-  luxury: {},
+  luxury: modernAnchors,
 };
 
 /** Approved publication inventory; planned styles do not create public routes. */
@@ -51,7 +50,7 @@ export const designCollectionRegistry = freeze({
   styles: [
     { id: "modern", name: "Modern 現代專業", status: "implemented" },
     { id: "heritage", name: "Heritage 懷舊復古", status: "implemented" },
-    { id: "luxury", name: "Luxury 奢華精品", status: "planned" },
+    { id: "luxury", name: "Luxury 奢華精品", status: "implemented" },
   ] as const satisfies readonly DesignStyleDefinition[],
   collection: { path: "/design-collection", status: "implemented" } as const,
   contentPages,

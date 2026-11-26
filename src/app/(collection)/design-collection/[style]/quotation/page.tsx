@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-
 import { HeritageFrame } from "@/components/design-collection/heritage/heritage-frame";
 import { HeritageQuotation } from "@/components/design-collection/heritage/heritage-quotation";
-import { assertHeritageStyle, heritagePageMetadata } from "@/components/design-collection/heritage/heritage-route";
+import { LuxuryFrame } from "@/components/design-collection/luxury/luxury-frame";
+import { LuxuryQuotation } from "@/components/design-collection/luxury/luxury-quotation";
+import { assertPresentationStyle, presentationPageMetadata } from "@/components/design-collection/shared/style-route";
 
 type PageProps = { params: Promise<{ style: string }> };
-
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { style } = await params;
-  return heritagePageMetadata(style, "quotation");
+  return presentationPageMetadata(style, "quotation");
 }
-
 export default async function Page({ params }: PageProps) {
   const { style } = await params;
-  assertHeritageStyle(style);
-  return <HeritageFrame pageKey="quotation"><HeritageQuotation /></HeritageFrame>;
+  assertPresentationStyle(style);
+  return style === "heritage"
+    ? <HeritageFrame pageKey="quotation"><HeritageQuotation /></HeritageFrame>
+    : <LuxuryFrame pageKey="quotation"><LuxuryQuotation /></LuxuryFrame>;
 }

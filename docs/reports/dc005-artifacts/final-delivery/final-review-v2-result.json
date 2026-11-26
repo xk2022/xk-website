@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "exitCode": 0,
+  "testedAt": "2026-11-26T07:10:19.674196+00:00",
+  "preflight": false,
+  "base": "74369376a0dbeeb0a17b5ee34557059c8e2a9491",
+  "repo": "/workspace/xk-website",
+  "isolatedBuild": "/tmp/xk-dc005-build",
+  "source": "/tmp/xk-dc005-full/source.json",
+  "contract": "/tmp/xk-dc005-full/contract.json",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/tmp/xk-dc005-full/final-review.py",
+    "--source",
+    "/tmp/xk-dc005-full/source.json",
+    "--contract",
+    "/tmp/xk-dc005-full/contract.json",
+    "--output",
+    "/tmp/xk-dc005-full/final-review-v2-result.json"
+  ],
+  "checks": [
+    {
+      "testId": "SOURCE-ROOT-ISOLATED-BUILD-BRIDGE",
+      "status": "PASS",
+      "actual": {
+        "source": "/tmp/xk-dc005-full/source.json",
+        "sourceFileSha256": "4dab0b7c3c48a4237e0917cc254a4fa365fd8ad1035cb7a05ecf3d8f614221eb",
+        "manifestFingerprint": "c45eda25642ef1a236c5cbcaa2acbca6a6c01d6b92870fd63e50e3aeda7db1e2",
+        "declaredFingerprint": "c45eda25642ef1a236c5cbcaa2acbca6a6c01d6b92870fd63e50e3aeda7db1e2",
+        "contractFingerprint": "c45eda25642ef1a236c5cbcaa2acbca6a6c01d6b92870fd63e50e3aeda7db1e2",
+        "sourceRecords": 202,
+        "runtimeFiles": 202,
+        "runtimeMismatches": [],
+        "runtimeInventory": {
+          "root": {
+            "extra": [],
+            "missing": []
+          },
+          "build": {
+            "extra": [],
+            "missing": []
+          }
+        },
+        "documentOnly": [],
+        "notes": "No byte normalization. README/AGENTS root documents are explicitly reported outside runtime equality; all src/public/scripts/.github and root engineering files are strict. Runtime edits require new source identity and corresponding acceptance evidence."
+      }
+    },
+    {
+      "testId": "CHANGED-MARKDOWN-LOCAL-LINKS-ANCHORS",
+      "status": "PASS",
+      "actual": {
+        "documents": [
+          "AGENTS.md",
+          "README.md",
+          "docs/01_design/README.md",
+          "docs/01_design/design-collection/reviews/luxury-v1-approval.md",
+          "docs/01_design/design-collection/reviews/luxury-v1.md",
+          "docs/98_decisions/implementation-notes.md",
+          "docs/reports/README.md",
+          "docs/reports/dc005-artifacts/README.md",
+          "docs/reports/dc005-implementation.md",
+          "docs/task/README.md",
+          "docs/task/ROADMAP.md",
+          "docs/task/dc005.md"
+        ],
+        "localLinks": 299,
+        "errors": [],
+        "scope": "Only changed/untracked/staged Markdown, never a recursive historical-document audit"
+      }
+    },
+    {
+      "testId": "CHANGED-TEXT-EOF-HEADINGS-TABLES-FORMAT",
+      "status": "PASS",
+      "actual": {
+        "errors": []
+      }
+    },
+    {
+      "testId": "DIFF-WHITESPACE-ALL",
+      "status": "PASS",
+      "actual": {
+        "exitCode": 0,
+        "detailsSuppressed": false
+      }
+    },
+    {
+      "testId": "DIFF-WHITESPACE-STAGED",
+      "status": "PASS",
+      "actual": {
+        "exitCode": 0,
+        "detailsSuppressed": false
+      }
+    },
+    {
+      "testId": "DELIVERY-NO-SECRETS-BUILD-CACHE",
+      "status": "PASS",
+      "actual": {
+        "changedFiles": 253,
+        "stagedFiles": 0,
+        "forbiddenPaths": [],
+        "suspectedSecretFiles": [],
+        "escapingPaths": [],
+        "notes": "Only filenames/counts are reported. Matched secret text and Git diff contents are never printed or saved."
+      }
+    }
+  ],
+  "scope": "Read-only source/document/delivery review. No build/server/browser/install/Git mutation. Runtime byte differences are never normalized or waived as documentation changes."
+}

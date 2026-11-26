@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "source": "final-staged-check.json",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-staged-check.json",
+      "compression": "identity",
+      "rawSha256": "c6218fcfef282d8f7e65abb2abc4df90c4dd36758d5afda122696dbc1c573b13",
+      "archiveSha256": "c6218fcfef282d8f7e65abb2abc4df90c4dd36758d5afda122696dbc1c573b13"
+    },
+    {
+      "source": "final-staged-check.log",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-staged-check.log.gz",
+      "compression": "gzip",
+      "rawSha256": "9fcafaccb96d9b09652ce486aee2e20f131db63b424a40d3490c64758d88e187",
+      "archiveSha256": "43237fa041f8743561bd06e03495b5a6b8d11be6d9e19331e77f7919b5fa478b"
+    },
+    {
+      "source": "final-staged-result.json",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-staged-result.json",
+      "compression": "identity",
+      "rawSha256": "8e85f3d333e14a9f5347f99b0b9dddc6b14b2a04c27ad03bbcad770d5ec2bf15",
+      "archiveSha256": "8e85f3d333e14a9f5347f99b0b9dddc6b14b2a04c27ad03bbcad770d5ec2bf15"
+    },
+    {
+      "source": "staged-files.json",
+      "path": "docs/reports/dc005-artifacts/final-delivery/staged-files.json",
+      "compression": "identity",
+      "rawSha256": "7585931f741fbd43174f73f35fac3adc394d10ec188cc30ef36c40a65cb85630",
+      "archiveSha256": "7585931f741fbd43174f73f35fac3adc394d10ec188cc30ef36c40a65cb85630"
+    },
+    {
+      "source": "final-review-v2.receipt.json",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-review-v2.receipt.json",
+      "compression": "identity",
+      "rawSha256": "939e25853e01a86ddab525d47fff09e68d1409f822d75ada7f8fa0f462e6b9ca",
+      "archiveSha256": "939e25853e01a86ddab525d47fff09e68d1409f822d75ada7f8fa0f462e6b9ca"
+    },
+    {
+      "source": "final-review-v2.log",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-review-v2.log.gz",
+      "compression": "gzip",
+      "rawSha256": "3b386ded3caa610f3bfa4ce4935a1dd590186229aece881dc9c48f6d4b403038",
+      "archiveSha256": "7608f0ef0df465c5379194b34795f3c3f4d5e951b494cfd72e59fe694ebbf3b8"
+    },
+    {
+      "source": "final-review-v2-result.json",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-review-v2-result.json",
+      "compression": "identity",
+      "rawSha256": "3b2a69bd5faa525a4c47f9b24e7e3a8a2dd0ee26f5d671ce25551a180f9474fd",
+      "archiveSha256": "3b2a69bd5faa525a4c47f9b24e7e3a8a2dd0ee26f5d671ce25551a180f9474fd"
+    }
+  ],
+  "scope": "Actual full staged six-category pass before pure documentation/evidence handoff additions. Runtime fingerprint remains c45eda2..."
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc005-full-remote/v3/inspect-ci-artifact.py",
+    "--prepare",
+    "--repo",
+    "/workspace/xk-website",
+    "--directory",
+    "/tmp/xk-dc005-build/out",
+    "--build-receipt",
+    "/tmp/xk-dc005-full/build-pages-v3.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T07:04:46.614255+00:00",
+  "finishedAt": "2026-11-26T07:04:47.129446+00:00",
+  "processId": 97388,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc005-full-remote/v3/prepare-local-baseline.log",
+  "logSha256": "835b58e419eeeac9f449348a36ea0b674702c58454bc9dbf8fcb8a1946a23c33",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

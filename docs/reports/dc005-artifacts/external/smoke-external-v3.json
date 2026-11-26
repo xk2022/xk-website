@@ -1,0 +1,24 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python3",
+    "scripts/smoke-website.py",
+    "--base-url",
+    "http://127.0.0.1:3263/",
+    "--output",
+    "/tmp/xk-dc005-full/http-external-v3.json",
+    "--check-external"
+  ],
+  "cwd": "/tmp/xk-dc005-build",
+  "startedAt": "2026-11-26T07:12:39.003983+00:00",
+  "finishedAt": "2026-11-26T07:12:42.328221+00:00",
+  "processId": 97925,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-dc005-full/smoke-external-v3.log",
+  "logSha256": "2de3428f24a057bece92b351a7d823addfdc037560ac11252a0fdff9ccd6edb2",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

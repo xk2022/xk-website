@@ -1,0 +1,27 @@
+{
+  "files": [
+    {
+      "source": "smoke-external-v3.json",
+      "path": "docs/reports/dc005-artifacts/external/smoke-external-v3.json",
+      "compression": "identity",
+      "rawSha256": "ce8c8617380b59b417cc8d5a4f3511ff672b454901b4ff245ceba8ffcdd15b6a",
+      "archiveSha256": "ce8c8617380b59b417cc8d5a4f3511ff672b454901b4ff245ceba8ffcdd15b6a"
+    },
+    {
+      "source": "smoke-external-v3.log",
+      "path": "docs/reports/dc005-artifacts/external/smoke-external-v3.log.gz",
+      "compression": "gzip",
+      "rawSha256": "2de3428f24a057bece92b351a7d823addfdc037560ac11252a0fdff9ccd6edb2",
+      "archiveSha256": "39bb2abe288083dde1201252eda37306056e1c61f23c176fef955a9f8a5f0970"
+    },
+    {
+      "source": "http-external-v3.json",
+      "path": "docs/reports/dc005-artifacts/external/http-external-v3.json.gz",
+      "compression": "gzip",
+      "rawSha256": "04d7842dc27fe2dc1cd4060116c4ba9cd8c4d7b2503052578919715fe362aafa",
+      "archiveSha256": "1a098e42ba41d9fa409ea568da5ce80f484a2e054e05931e9cfe9acc87a6f986"
+    }
+  ],
+  "result": "FAIL",
+  "scope": "8 existing available showcase homepages,5actual404. Original completed FAIL preserved; internal2189PASS remains separately scoped."
+}

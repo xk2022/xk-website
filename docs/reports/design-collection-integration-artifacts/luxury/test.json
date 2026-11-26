@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "test"
+  ],
+  "cwd": "/tmp/xk-merge-luxury",
+  "startedAt": "2026-11-26T10:04:31.871982+00:00",
+  "finishedAt": "2026-11-26T10:04:34.257216+00:00",
+  "processId": 105090,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 180.0,
+  "logFile": "/tmp/xk-dc006-merge/luxury/test.log",
+  "logSha256": "13b51b1ba70bd9e374178fd57682d07b59aaf0f297c6c150d282e491d03c8105",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

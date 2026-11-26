@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python3",
+    "/tmp/xk-dc006-merge/check-luxury-docs.py"
+  ],
+  "cwd": "/tmp/xk-merge-luxury",
+  "startedAt": "2026-11-26T10:25:31.648836+00:00",
+  "finishedAt": "2026-11-26T10:25:31.952760+00:00",
+  "processId": 111734,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc006-merge/luxury/docs-final.log",
+  "logSha256": "f2eff0bb6752df6b4b879e0c489435c19231283690b8a61e3cd9d1ba090db71a",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

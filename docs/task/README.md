@@ -288,10 +288,12 @@ docs(task): add XK website task specifications 006-014
 
 使用者已對 PR #40 的 v1 配色、品牌外框與桌面／手機版型明確核准；[同版本紀錄](../01_design/design-collection/reviews/heritage-v1-approval.md) 滿足品牌前置。完整 Heritage 16 頁依 [DC-004](dc004.md) 及既有工作包實作，與 Modern 16＋Gallery 合計 33 頁。功能、分支驗收與限制見 [實作報告](../reports/dc004-implementation.md)，保留原始失敗與版本邊界。
 
-使用者最新「合併」已授權 PR #40 與 PR #42 依序合併，不重複要求同一確認。當前先整合 PR #40 與 `main@4500ccf`；正式 main 仍為 17 頁，合併後的 CI／部署／公開驗證依實際事件更新。
+使用者最新「合併」已授權 PR #40 與 PR #42 依序合併，不重複要求同一確認。PR #40 已實際合併為 `main@0d41ecf495e55b792f966c9fe27bd07c27bc5647`，main 清冊 33 頁；main CI、Pages 部署及正式 33 頁 HTTP 驗證已完成（run 45796333591）。後續事件依 [整合報告](../reports/design-collection-integration.md) 的實際版本記錄。
 
 ## DC-005 執行入口
 
-[Luxury v1 品牌審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、本機原型／截圖及 [品牌前置報告](../reports/dc005-brand-review.md) 保留核准前快照；使用者「批准合併」已核准該版本並合併 [PR #41](https://github.com/xk2022/xk-website/pull/41)。品牌前置已滿足，不能再以舊 PENDING／BLOCKED 阻擋同版本完整實作。
+使用者以「批准合併」核准 [Luxury v1](../01_design/design-collection/reviews/luxury-v1-approval.md)，[PR #41](https://github.com/xk2022/xk-website/pull/41) 已合併；原 [品牌審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、原型／截圖與 [品牌前置報告](../reports/dc005-brand-review.md) 保留原時點，不回寫為完整功能驗收。
 
-原 [DC-005 完整工作包](dc005.md) 的功能交付在 [PR #42](https://github.com/xk2022/xk-website/pull/42)，已獲最新合併授權，待 PR #40 後整合；未複製進本次 Heritage 程式。兩個功能 PR 實際合併後接續 DC-006，保留各自必要驗收、報告與發布事件。
+[DC-005 完整工作包](dc005.md) 的 16 頁實作與原 33 頁驗收見 [實作報告](../reports/dc005-implementation.md)。[PR #42](https://github.com/xk2022/xk-website/pull/42) 已獲使用者後續明確合併授權，現在整合已合併 Heritage 的 main，本分支清冊為 Modern／Heritage／Luxury 各 16 頁＋Gallery，共 49 頁，待新驗收。當前 main 清冊仍為 33 頁，main CI、Pages 部署及正式 33 頁 HTTP 驗證已完成（run 45796333591）；不能把舊完整測試改稱本次重跑。
+
+DC-006 尚未開始，待 PR #42 實際合併後接續實作與驗收，另開新 PR 審閱，不自動合併。新舊來源、測試及遠端事件界線見 [整合報告](../reports/design-collection-integration.md)。

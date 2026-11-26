@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc005-full-remote/v3/verify-source-bridge.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T07:05:50.346957+00:00",
+  "finishedAt": "2026-11-26T07:05:50.450388+00:00",
+  "processId": 97566,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc005-full-remote/v3/source-bridge.log",
+  "logSha256": "94a259ff3dc20405b724b31bc7b3601bfe8ee5906b071adfcd19fcc9f2493ee0",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

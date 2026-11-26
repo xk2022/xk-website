@@ -18,14 +18,15 @@ test("DC2-ROUTE-01: independent style, nine content keys and collection publicat
   assert.deepEqual(designCollectionRegistry.brandShowcaseSlugs, fixture.brandShowcaseSlugs);
   assert.deepEqual(designCollectionRegistry.anchors.modern, fixture.semanticAnchors);
   assert.deepEqual(designCollectionRegistry.anchors.heritage, fixture.semanticAnchors);
+  assert.deepEqual(designCollectionRegistry.anchors.luxury, fixture.semanticAnchors);
 });
 
-test("DC4-ROUTE-01: independent exact 33-path publication with the original Modern 16", () => {
+test("DC5-INTEGRATION-ROUTE-01: independent exact 49-path publication with the original Modern 16", () => {
   const published = getPublishedDesignRoutes();
-  assert.equal(published.length, 33);
+  assert.equal(published.length, 49);
   assert.deepEqual(published.map(({ presentationPath }) => presentationPath).sort(), [...fixture.publishedPaths].sort());
   assert.deepEqual(published.filter(({ styleId }) => styleId === "modern").map(({ presentationPath }) => presentationPath), fixture.modernRoutes.map(({ path }) => path));
-  assert.ok(published.every(({ styleId, availability }) => ["modern", "heritage", null].includes(styleId) && availability === "public"));
+  assert.ok(published.every(({ styleId, availability }) => ["modern", "heritage", "luxury", null].includes(styleId) && availability === "public"));
   assert.deepEqual(published.map(({ presentationPath }) => presentationPath).sort(), seoPages.filter(({ availability }) => availability === "public").map(({ path }) => path).sort());
 });
 
@@ -41,32 +42,25 @@ for (const route of fixture.modernRoutes) {
   });
 }
 
-for (const route of fixture.heritageRoutes) {
-  test(`DC4-ROUTE-HERITAGE: ${route.path} is public with its original Modern canonical`, () => {
-    const request = requestFor(route, "heritage");
-    const descriptor = describeDesignRoute(request);
-    assert.deepEqual(descriptor, { ...request, slug: route.slug ?? null, canonicalPath: route.canonicalPath, presentationPath: route.path, availability: "public", hash: null, hashPreserved: false });
-    assert.equal(resolveDesignHref(request), route.path);
-    assert.deepEqual(identifyDesignRoute(route.path), descriptor);
-    assert.deepEqual(identifyDesignRoute(route.path + "/"), descriptor);
-  });
+for (const [styleId, approvedRoutes] of [["heritage", fixture.heritageRoutes], ["luxury", fixture.luxuryRoutes]]) {
+  for (const route of approvedRoutes) {
+    test(`DC5-INTEGRATION-ROUTE-${styleId.toUpperCase()}: ${route.path} is public with its original Modern canonical`, () => {
+      const request = requestFor(route, styleId);
+      const descriptor = describeDesignRoute(request);
+      assert.deepEqual(descriptor, { ...request, slug: route.slug ?? null, canonicalPath: route.canonicalPath, presentationPath: route.path, availability: "public", hash: null, hashPreserved: false });
+      assert.equal(resolveDesignHref(request), route.path);
+      assert.deepEqual(identifyDesignRoute(route.path), descriptor);
+      assert.deepEqual(identifyDesignRoute(route.path + "/"), descriptor);
+    });
+  }
 }
 
-for (const styleId of ["luxury"]) {
-  test(`DC2-ROUTE-PLANNED: all ${styleId} 16 destinations have Modern canonicals but no hrefs`, () => {
-    for (const route of fixture.modernRoutes) {
-      const request = requestFor(route, styleId);
-      const expected = fixture.namespace + "/" + styleId + (route.path === "/" ? "" : route.path);
-      const descriptor = describeDesignRoute(request);
-      assert.equal(descriptor.canonicalPath, route.path);
-      assert.equal(descriptor.presentationPath, expected);
-      assert.equal(descriptor.availability, "planned");
-      assert.equal(resolveDesignHref(request), null);
-      assert.deepEqual(identifyDesignRoute(expected), descriptor);
-      assert.deepEqual(identifyDesignRoute(expected + "/"), descriptor);
-    }
-  });
-}
+test("DC5-INTEGRATION-ROUTE-02: each implemented style publishes exactly its independently approved 16 identities", () => {
+  for (const [styleId, routes] of [["modern", fixture.modernRoutes], ["heritage", fixture.heritageRoutes], ["luxury", fixture.luxuryRoutes]]) {
+    assert.equal(routes.length, 16);
+    assert.deepEqual(getPublishedDesignRoutes().filter((route) => route.styleId === styleId).map(({ presentationPath }) => presentationPath), routes.map(({ path }) => path));
+  }
+});
 
 test("DC3-ROUTE-02: Gallery is public without a style and only preserves its two declared anchors", () => {
   const descriptor = describeDesignRoute({ pageKey: "collection" });
@@ -88,13 +82,13 @@ test("DC3-ROUTE-02: Gallery is public without a style and only preserves its two
   }
 });
 
-test("DC2-ROUTE-04: future 49-route formula is collision-free without publishing plans", () => {
+test("DC5-INTEGRATION-ROUTE-03: implemented 49-route formula remains collision-free through all approved stages", () => {
   const paths = new Set([describeDesignRoute({ pageKey: "collection" }).presentationPath]);
   for (const styleId of Object.keys(fixture.styleStatus)) for (const route of fixture.modernRoutes) paths.add(describeDesignRoute(requestFor(route, styleId)).presentationPath);
   assert.equal(paths.size, 49);
   assert.deepEqual(fixture.stages.map(({ total }) => total), [16, 17, 33, 49]);
   for (const stage of fixture.stages) assert.equal(stage.modern + stage.collection + stage.heritage + stage.luxury, stage.total);
-  assert.equal(getPublishedDesignRoutes().length, fixture.stages[2].total);
+  assert.equal(getPublishedDesignRoutes().length, fixture.stages[3].total);
 });
 
 for (const example of fixture.anchorExamples) {
@@ -108,13 +102,15 @@ for (const example of fixture.anchorExamples) {
     assert.deepEqual(describeDesignRoute({ ...request, hash: "#" + example.hash }), descriptor);
     assert.ok(!descriptor.canonicalPath.includes("#") && !descriptor.presentationPath.includes("#"));
   });
-  test(`DC4-ROUTE-ANCHOR: Heritage preserves the same declared semantic ${example.hash}`, () => {
-    const request = { pageKey: example.pageKey, styleId: "heritage", ...(example.slug ? { slug: example.slug } : {}), hash: example.hash };
-    const href = fixture.heritageRoutes.find((route) => route.pageKey === example.pageKey && route.slug === example.slug).path + "#" + example.hash;
-    assert.equal(resolveDesignHref(request), href);
-    assert.equal(describeDesignRoute(request).hashPreserved, true);
-    assert.deepEqual(identifyDesignRoute(href), describeDesignRoute(request));
-  });
+  for (const [styleId, approvedRoutes] of [["heritage", fixture.heritageRoutes], ["luxury", fixture.luxuryRoutes]]) {
+    test(`DC5-INTEGRATION-ROUTE-ANCHOR: ${styleId} preserves the same declared semantic ${example.hash}`, () => {
+      const request = { pageKey: example.pageKey, styleId, ...(example.slug ? { slug: example.slug } : {}), hash: example.hash };
+      const href = approvedRoutes.find((route) => route.pageKey === example.pageKey && route.slug === example.slug).path + "#" + example.hash;
+      assert.equal(resolveDesignHref(request), href);
+      assert.equal(describeDesignRoute(request).hashPreserved, true);
+      assert.deepEqual(identifyDesignRoute(href), describeDesignRoute(request));
+    });
+  }
 }
 
 test("DC2-ROUTE-05: unknown and unsafe fragments are dropped without retaining personal text", () => {
@@ -128,18 +124,22 @@ test("DC2-ROUTE-05: unknown and unsafe fragments are dropped without retaining p
   assert.equal(identifyDesignRoute("/contact#unknown").hashPreserved, false);
 });
 
-test("DC2-ROUTE-06: planned styles do not claim Modern anchors already exist", () => {
-  const descriptor = describeDesignRoute({ pageKey: "contact", styleId: "luxury", hash: "contact-form" });
-  assert.equal(descriptor.hash, null);
-  assert.equal(descriptor.hashPreserved, false);
-  assert.equal(resolveDesignHref({ pageKey: "contact", styleId: "luxury", hash: "contact-form" }), null);
+test("DC5-INTEGRATION-ROUTE-04: publication does not permit undeclared or cross-page anchors in any style", () => {
+  for (const styleId of ["modern", "heritage", "luxury"]) {
+    const request = { pageKey: "contact", styleId, hash: "quotation-results" };
+    const descriptor = describeDesignRoute(request);
+    assert.equal(descriptor.hash, null);
+    assert.equal(descriptor.hashPreserved, false);
+    assert.equal(resolveDesignHref(request), descriptor.presentationPath);
+    assert.equal(describeDesignRoute({ ...request, pageKey: "privacy" }), null);
+  }
 });
 
 const invalidRequests = [
   null, undefined, false, 1, "home", [], {}, new Date(),
   { styleId: "unknown", pageKey: "home" }, { styleId: "Modern", pageKey: "home" },
   { pageKey: "home" }, { styleId: "modern", pageKey: "privacy" }, { styleId: "modern", pageKey: "dev" },
-  { styleId: "modern", pageKey: "collection" }, { styleId: "heritage", pageKey: "collection" },
+  { styleId: "modern", pageKey: "collection" }, { styleId: "heritage", pageKey: "collection" }, { styleId: "luxury", pageKey: "collection" },
   { pageKey: "collection", slug: "about" }, { pageKey: "collection", slug: undefined },
   { styleId: "modern", pageKey: "about", slug: "corporate-website" },
   { styleId: "modern", pageKey: "about", slug: undefined },
@@ -156,7 +156,7 @@ const invalidRequests = [
   { styleId: "modern", pageKey: "home", customerName: "PRIVATE" },
   Object.assign(Object.create({ styleId: "modern" }), { pageKey: "home" }),
 ];
-test("DC2-ROUTE-07: invalid identities/combinations/data and planned-link bypass attempts fail closed", () => {
+test("DC2-ROUTE-07: invalid identities/combinations/data and publication-bypass attempts fail closed", () => {
   for (const request of invalidRequests) {
     assert.equal(describeDesignRoute(request), null);
     assert.equal(resolveDesignHref(request), null);
@@ -177,6 +177,11 @@ const rejectedPaths = [
   "https://www.xplorekaleidoscope.com/about?project=PRIVATE", "mailto:system.xk2022@gmail.com",
   "/" + "a".repeat(5000), "/about#" + "a".repeat(5000),
 ];
+for (const styleId of ["heritage", "luxury"]) {
+  for (const suffix of ["/privacy", "/dev/design-system", "/sitemap.xml", "/api/quotation", "/portfolio/unknown", "/portfolio/showcases/unknown", "/services/website-development"]) {
+    rejectedPaths.push(`/design-collection/${styleId}${suffix}`);
+  }
+}
 test("DC2-ROUTE-08: strict reverse lookup rejects unknowns, aliases, traversal, query PII and external destinations", () => {
   for (const path of rejectedPaths) assert.equal(identifyDesignRoute(path), null, path);
   for (const value of [null, undefined, {}, [], 42]) assert.equal(identifyDesignRoute(value), null);

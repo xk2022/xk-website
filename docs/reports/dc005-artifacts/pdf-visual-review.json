@@ -1,0 +1,53 @@
+{
+  "reviewer": "Codex via view_image; not Owner final acceptance",
+  "viewed": "normal Luxury150dpi",
+  "renderSha256": "2f7a97d8c248b89241fbaf01e5e4d6d6b5439f052982a724ebc429cad664ea84",
+  "rows": [
+    {
+      "mode": "normal",
+      "style": "luxury",
+      "verification": "/tmp/xk-dc005-full/pdf-normal-luxury/verification.json",
+      "pdf": "/tmp/xk-dc005-full/normal-final/quotation-luxury-worstcase-a4.pdf",
+      "pdfSha256": "e289b57599b820b6a5a991c0abe46cb6b29df66ab65b74f895a61400e05621d2",
+      "render150": "/tmp/xk-dc005-full/pdf-normal-luxury/page-1-150dpi.png",
+      "renderSha256": "2f7a97d8c248b89241fbaf01e5e4d6d6b5439f052982a724ebc429cad664ea84",
+      "status": "PASS_VISUAL_BY_BYTE_BRIDGE",
+      "notes": "Root viewed normal Luxury150dpi actual render; all4 actual independent PDFs render exact same bytes. Logo, full17addons,40/60CJK fields, price/disclaimers/2QR legible with clear page margins; physical and150/300QR checks separate actual verifier."
+    },
+    {
+      "mode": "normal",
+      "style": "modern",
+      "verification": "/tmp/xk-dc005-full/pdf-normal-modern/verification.json",
+      "pdf": "/tmp/xk-dc005-full/normal-final/quotation-modern-worstcase-a4.pdf",
+      "pdfSha256": "fcc989aa0c617a0663e775186fad9dd5f9143d3e765c5471501381f89629acbc",
+      "render150": "/tmp/xk-dc005-full/pdf-normal-modern/page-1-150dpi.png",
+      "renderSha256": "2f7a97d8c248b89241fbaf01e5e4d6d6b5439f052982a724ebc429cad664ea84",
+      "status": "PASS_VISUAL_BY_BYTE_BRIDGE",
+      "notes": "Root viewed normal Luxury150dpi actual render; all4 actual independent PDFs render exact same bytes. Logo, full17addons,40/60CJK fields, price/disclaimers/2QR legible with clear page margins; physical and150/300QR checks separate actual verifier."
+    },
+    {
+      "mode": "pages",
+      "style": "luxury",
+      "verification": "/tmp/xk-dc005-full/pdf-pages-luxury/verification.json",
+      "pdf": "/tmp/xk-dc005-full/pages-final/quotation-luxury-worstcase-a4.pdf",
+      "pdfSha256": "f987a5b0e3815b9d5a297d3f4f08abc28c0bbeabd0be7ece719d6c3efdd105f2",
+      "render150": "/tmp/xk-dc005-full/pdf-pages-luxury/page-1-150dpi.png",
+      "renderSha256": "2f7a97d8c248b89241fbaf01e5e4d6d6b5439f052982a724ebc429cad664ea84",
+      "status": "PASS_VISUAL_BY_BYTE_BRIDGE",
+      "notes": "Root viewed normal Luxury150dpi actual render; all4 actual independent PDFs render exact same bytes. Logo, full17addons,40/60CJK fields, price/disclaimers/2QR legible with clear page margins; physical and150/300QR checks separate actual verifier."
+    },
+    {
+      "mode": "pages",
+      "style": "modern",
+      "verification": "/tmp/xk-dc005-full/pdf-pages-modern/verification.json",
+      "pdf": "/tmp/xk-dc005-full/pages-final/quotation-modern-worstcase-a4.pdf",
+      "pdfSha256": "89712c89e4641ebbb1461c94c74f83ac226f077ae58bdae56b99f0777a19e226",
+      "render150": "/tmp/xk-dc005-full/pdf-pages-modern/page-1-150dpi.png",
+      "renderSha256": "2f7a97d8c248b89241fbaf01e5e4d6d6b5439f052982a724ebc429cad664ea84",
+      "status": "PASS_VISUAL_BY_BYTE_BRIDGE",
+      "notes": "Root viewed normal Luxury150dpi actual render; all4 actual independent PDFs render exact same bytes. Logo, full17addons,40/60CJK fields, price/disclaimers/2QR legible with clear page margins; physical and150/300QR checks separate actual verifier."
+    }
+  ],
+  "status": "PASS",
+  "scope": "Each actual PDF separately parsed and decoded. Reuse of one visual view is bounded by exact renderedPNG byte equality; source PDFs are not relabeled identical."
+}

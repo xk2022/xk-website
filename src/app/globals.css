@@ -40,16 +40,13 @@
 @source not "../../docs/task/dc003.md";
 @source not "../../docs/reports/dc003-implementation.md";
 @source not "../../docs/reports/dc003-artifacts";
-/* Local design reviews and task evidence must not add website utilities. */
+/* Local design-review documents must not add production utilities. */
 @source not "../../docs/01_design/design-collection/reviews";
-@source not "../../docs/reports/dc004-brand-review.md";
-@source not "../../docs/reports/dc004-review-artifacts";
-@source not "../../docs/task/dc004.md";
-@source not "../../docs/reports/dc004-implementation.md";
-@source not "../../docs/reports/dc004-artifacts";
 @source not "../../docs/task/dc005.md";
 @source not "../../docs/reports/dc005-brand-review.md";
 @source not "../../docs/reports/dc005-review-artifacts";
+@source not "../../docs/reports/dc005-implementation.md";
+@source not "../../docs/reports/dc005-artifacts";
 @source not "../../docs/reports/design-collection-integration.md";
 @source not "../../docs/reports/design-collection-integration-artifacts";
 

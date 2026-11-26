@@ -18,12 +18,16 @@ const showcaseContract = JSON.parse(readFileSync(new URL("./fixtures/showcase-co
 const contactContract = JSON.parse(readFileSync(new URL("./fixtures/contact-contract.json", import.meta.url), "utf8"));
 const quotationContract = JSON.parse(readFileSync(new URL("./fixtures/quotation-contract.json", import.meta.url), "utf8"));
 const designContract = JSON.parse(readFileSync(new URL("./fixtures/design-collection-contract.json", import.meta.url), "utf8"));
+const presentationRoutes = [
+  ...designContract.heritageRoutes.map((route) => ({ ...route, styleId: "heritage" })),
+  ...designContract.luxuryRoutes.map((route) => ({ ...route, styleId: "luxury" })),
+];
 function contentPathFor(path) {
-  return designContract.heritageRoutes.find((route) => route.path === path)?.canonicalPath ?? (path || "/");
+  return presentationRoutes.find((route) => route.path === path)?.canonicalPath ?? (path || "/");
 }
 function presentationHref(path, currentPath) {
-  return designContract.heritageRoutes.some((route) => route.path === currentPath)
-    ? designContract.heritageRoutes.find((route) => route.canonicalPath === path)?.path ?? path : path;
+  const current = presentationRoutes.find((route) => route.path === currentPath);
+  return current ? presentationRoutes.find((route) => route.styleId === current.styleId && route.canonicalPath === path)?.path ?? path : path;
 }
 for (const logo of Object.values(designContract.heritageLogos)) {
   const source = readFileSync(join(root, "public", logo.src));
@@ -152,6 +156,7 @@ function metadataAttribute(html, selectorAttribute, selectorValue, targetAttribu
 }
 
 function verifyStyleHomeLink(links, expectedPath) {
+  assert.ok(typeof expectedPath === "string" && Object.values(designContract.styleHomePaths).includes(expectedPath), "Gallery homepage must be independently approved.");
   assert.equal(links.length, 1, "Implemented Gallery styles must have exactly one homepage link.");
   assert.ok(links[0] === expectedPath || (expectedPath !== "/" && links[0] === `${expectedPath}/`), "Implemented Gallery styles must link only to the approved homepage, with at most its single Pages trailing slash.");
 }
@@ -443,9 +448,9 @@ assert.deepEqual(showcaseSettings.brandOrder, showcaseContract.brandOrder, "The 
 assert.deepEqual(showcaseSettings.featuredIds, showcaseContract.featuredIds, "Featured showcases must match the independently reviewed selection.");
 assert.deepEqual(showcaseSeoPages.map(({ path }) => path), expectedShowcasePaths, "Brand detail SEO pages must match all approved brand IDs.");
 assert.deepEqual(portfolioPages.slice(1).map(({ pagePath }) => pagePath.split("/").at(-1)), showcaseContract.technicalPlanSlugs, "Retain the three original technical plan routes.");
-const expectedPublicPaths = [...showcaseContract.existingPublicPaths, ...expectedShowcasePaths, quotationContract.path, designContract.collectionRoute.path, ...designContract.heritageRoutes.map(({ path }) => path), ...(privacyApproved ? ["/privacy"] : [])];
+const expectedPublicPaths = [...showcaseContract.existingPublicPaths, ...expectedShowcasePaths, quotationContract.path, designContract.collectionRoute.path, ...presentationRoutes.map(({ path }) => path), ...(privacyApproved ? ["/privacy"] : [])];
 const publicSeoPages = seoPages.filter(({ availability }) => availability === "public");
-assert.equal(designContract.publishedPaths.length, 33, "DC-004 must approve exactly Modern 16, Gallery and Heritage 16.");
+assert.equal(designContract.publishedPaths.length, 49, "Approved three-series integration (PR42) must contain exactly Modern 16, Gallery, Heritage 16 and Luxury 16.");
 assert.deepEqual([...expectedPublicPaths].sort(), [...designContract.publishedPaths, ...(privacyApproved ? ["/privacy"] : [])].sort(), "Design publication must match the independent route and content contracts.");
 assert.deepEqual(publicSeoPages.map(({ path }) => path).sort(), expectedPublicPaths.sort(), "Public SEO routes must match the independently reviewed route contract.");
 assert.deepEqual(getSeoPage(designContract.collectionRoute.path), { path: designContract.collectionRoute.path, title: designContract.collectionRoute.title, description: designContract.collectionRoute.description, availability: "public" }, "Gallery must retain its independently approved SEO copy.");
@@ -459,7 +464,7 @@ const exportedPages = [
   ["contact/index.html", "/contact", "Contact"],
   ["quotation/index.html", quotationContract.path, "Quotation"],
   ["design-collection/index.html", designContract.collectionRoute.path, "Design Collection"],
-  ...designContract.heritageRoutes.map(({ path }) => [`${path.slice(1)}/index.html`, path, `Heritage ${path}`]),
+  ...presentationRoutes.map(({ path, styleId }) => [`${path.slice(1)}/index.html`, path, `${styleId} ${path}`]),
   ...(privacyApproved ? [["privacy/index.html", "/privacy", "Privacy"]] : []),
   ...portfolioPages.map(({ pagePath, label }) => [`${pagePath.slice(1)}/index.html`, pagePath, label]),
 ];
@@ -477,7 +482,7 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   verifySeoMetadata(html, getSeoPage(pagePath || "/"), label);
   verifyModernFrame(html, label);
   verifyEnquiryMarkup(html, label, contentPath);
-  const identity = [...designContract.modernRoutes, ...designContract.heritageRoutes].find((route) => route.path === (pagePath || "/"));
+  const identity = [...designContract.modernRoutes, ...presentationRoutes].find((route) => route.path === (pagePath || "/"));
   if (designContract.heritageRoutes.some((route) => route.path === pagePath)) {
     for (const [landmark, logo] of Object.entries(designContract.heritageLogos)) {
       const section = html.match(new RegExp(`<${landmark}\\b[^>]*>[\\s\\S]*?</${landmark}>`))?.[0] ?? "";

@@ -1,0 +1,20 @@
+{
+  "mode": "apply",
+  "ready": true,
+  "selection": "/tmp/xk-dc005-full/package-selection.json",
+  "selectionSha256": "55ccf89f7cb822ee1705684f63390607739b6dbb291d3b34a3b089c3fcf720dc",
+  "evidenceFiles": 147,
+  "mediaCounts": {
+    "screenshot": 17,
+    "pdf": 4,
+    "pdf-render": 4
+  },
+  "missing": [],
+  "screenshotOverridesUsed": 7,
+  "unfinished": [],
+  "errors": [],
+  "existingConflicts": [],
+  "repositoryWrites": true,
+  "outcomePolicy": "Archive completed FAIL and nonzero exits unchanged. Pending/missing receipts are never PASS. No original evidence is deleted or overwritten.",
+  "manifest": "docs/reports/dc005-artifacts/manifest.json"
+}

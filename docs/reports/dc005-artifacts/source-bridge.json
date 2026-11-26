@@ -1,0 +1,25 @@
+{
+  "old": "9df2a8a212ffdce0625334972b888537032599cbcf24dd886ef41092d410dc36",
+  "new": "41c6ff4de2ebc88b1940aba4b53d6758931499dcafc66a566355352aa6b21ea5",
+  "changes": [
+    {
+      "path": "AGENTS.md",
+      "before": "e668771b04f797983f86130929eaacb27f7921b256d43d697ca0da4c2637cd5c",
+      "after": null,
+      "kind": "documentOnly"
+    },
+    {
+      "path": "README.md",
+      "before": "3edbd995d242f17749f7c7d9265433442d63bc986efa9d978872f7d3234a7cd1",
+      "after": null,
+      "kind": "documentOnly"
+    },
+    {
+      "path": "src/components/design-collection/luxury/luxury-contact.tsx",
+      "before": "2c5070cf8ce603426386850f96c52aed8b659af7eee2ed7701b40811cd6f99ca",
+      "after": "849495ac11aa123cf354abf3335f6aa4d6a589cf3243ce9028ba7c20f94cc783",
+      "kind": "runtime"
+    }
+  ],
+  "impact": "Only Luxury Contact decorative duplicate numbers removed; all other runtime bytes identical. Normal262/165/58 initial broader evidence retained; Contact scoped and final Pages full validate final source. Document root markdown excluded from new runtime inventory."
+}

@@ -1,0 +1,61 @@
+{
+  "testId": "DC005-FULL-TOOL-PREFLIGHT",
+  "status": "PASS",
+  "completedAt": "2026-11-26T06:35:48.549Z",
+  "checks": {
+    "nodeSyntax": 6,
+    "pythonSyntax": 1,
+    "contrastMathFixtures": 5,
+    "jsonParse": 3
+  },
+  "browser": "NOT_EXECUTED",
+  "formalAcceptance": "NOT_EXECUTED_PENDING_ROOT_FREEZE",
+  "sourceStatus": "PENDING_ROOT_FREEZE",
+  "files": [
+    {
+      "name": "browser.cjs",
+      "bytes": 40999,
+      "sha256": "05e17caac4bb34eaafa7a08b472b231fd002a8f76610b95474771b208cee970a"
+    },
+    {
+      "name": "business.cjs",
+      "bytes": 25566,
+      "sha256": "3e515423db5cb51abdaaba29daa3729dbb49f5fcadb24a90681db5906e5ed875"
+    },
+    {
+      "name": "monitor.cjs",
+      "bytes": 5594,
+      "sha256": "dca9d2b339f702af06c298262cd590df56ab1dae6e3cc05d597e416654ee957a"
+    },
+    {
+      "name": "snapshot.cjs",
+      "bytes": 3351,
+      "sha256": "818bd420212ba374d10145e4a4d6237122925de7d7097512f7af42635c410b5a"
+    },
+    {
+      "name": "verify-theme-runtime.cjs",
+      "bytes": 28400,
+      "sha256": "c086ba1b642460042052f0c04a29ea5e05afdd9cc237459f16362c8037b32561"
+    },
+    {
+      "name": "verify-pdf.py",
+      "bytes": 12845,
+      "sha256": "7a65ec22790422418e13759c7eeb30595e800a629b4c7f3f708385e56fe64e23"
+    },
+    {
+      "name": "matrix.json",
+      "bytes": 10148,
+      "sha256": "205a4d1c7d78662e48fa21d6b3a2aef367236f1eb530e498c64ae405aa438b9c"
+    },
+    {
+      "name": "contract.json",
+      "bytes": 1312,
+      "sha256": "ae0fe70f528326372e466c751909cef71337138d8c0068f2cd45edb70819c463"
+    },
+    {
+      "name": "catalog.json",
+      "bytes": 22086,
+      "sha256": "1c4ad0dc46e4d8efbce773fc630a4fc8c5bc57d0c29b0744a0608888c894dd63"
+    }
+  ]
+}

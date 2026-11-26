@@ -349,6 +349,8 @@ class Smoke:
         self.contact_contract = json.loads((ROOT / "scripts/fixtures/contact-contract.json").read_text())
         self.quotation_contract = json.loads((ROOT / "scripts/fixtures/quotation-contract.json").read_text())
         self.design_contract = json.loads((ROOT / "scripts/fixtures/design-collection-contract.json").read_text())
+        self.presentation_routes = [{**route, "styleId": style_id} for style_id in ("heritage", "luxury")
+                                    for route in self.design_contract[style_id + "Routes"]]
         self.data = None
         self.external_destinations, self.unavailable_source_destinations = set(), set()
         self.gated_404_observations = []
@@ -374,14 +376,15 @@ class Smoke:
         return self.base + path.lstrip("/") + ("/" if path != "/" and not path.endswith("/") else "")
 
     def design_identity(self, path):
-        return next((route for route in [*self.design_contract["modernRoutes"], *self.design_contract["heritageRoutes"]] if route["path"] == path), None)
+        return next((route for route in [*self.design_contract["modernRoutes"], *self.presentation_routes] if route["path"] == path), None)
 
     def content_path(self, path):
-        return next((route["canonicalPath"] for route in self.design_contract["heritageRoutes"] if route["path"] == path), path)
+        return next((route["canonicalPath"] for route in self.presentation_routes if route["path"] == path), path)
 
     def presentation_href(self, path, current_path):
-        if any(route["path"] == current_path for route in self.design_contract["heritageRoutes"]):
-            return next((route["path"] for route in self.design_contract["heritageRoutes"] if route["canonicalPath"] == path), path)
+        current = next((route for route in self.presentation_routes if route["path"] == current_path), None)
+        if current:
+            return next((route["path"] for route in self.presentation_routes if route["styleId"] == current["styleId"] and route["canonicalPath"] == path), path)
         return path
 
     def uses_legacy_project_path(self, url):
@@ -463,7 +466,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         for source in draft["sourceFiles"]:
             content = (ROOT / source).read_text()
             self.check(f"{source} contains no network/persistent-storage API references", [], [match.group() for pattern in draft["forbiddenSourcePatterns"] for match in re.finditer(pattern, content)], "Supplemental source inspection; browser network/storage and no-JavaScript behavior require separate testing.")
-        for source in sorted((ROOT / "src/components/design-collection/heritage").rglob("*")):
+        for source in sorted(path for style_id in ("heritage", "luxury") for path in (ROOT / "src/components/design-collection" / style_id).rglob("*")):
             if source.suffix not in {".ts", ".tsx"}:
                 continue
             content = source.read_text()
@@ -510,8 +513,8 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check("Protected SEO policy remains explicit", {"mode": "protected", "publishSitemap": False}, self.data["seoProtectionPolicy"])
         self.check("Privacy remains an unpublished draft", "draft", self.data["privacyPolicy"]["status"])
         self.public_pages = [page for page in self.data["seoPages"] if page["availability"] == "public"]
-        expected_paths = self.contract["existingPublicPaths"] + ["/portfolio/showcases/" + item for item in self.contract["brandOrder"]] + [self.quotation_contract["path"], self.design_contract["collectionRoute"]["path"]] + [route["path"] for route in self.design_contract["heritageRoutes"]]
-        self.check("Independent DC-004 published route count", 33, len(self.design_contract["publishedPaths"]))
+        expected_paths = self.contract["existingPublicPaths"] + ["/portfolio/showcases/" + item for item in self.contract["brandOrder"]] + [self.quotation_contract["path"], self.design_contract["collectionRoute"]["path"]] + [route["path"] for route in self.presentation_routes]
+        self.check("Independent approved three-series integration (PR42) route count", 49, len(self.design_contract["publishedPaths"]))
         self.check("Independent publication and content inventories agree", sorted(self.design_contract["publishedPaths"]), sorted(expected_paths))
         self.check("Independent public route inventory", sorted(expected_paths), sorted(page["path"] for page in self.public_pages))
         gallery = self.design_contract["collectionRoute"]
@@ -812,7 +815,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             self.check(f"{path} contains no unpublished Privacy draft text", [], [marker for marker in draft_markers if marker and marker in doc.text()])
         # Candidate omissions are retained for semantic review: editorial labels
         # may change, while missing business facts still require correction.
-        for route in self.design_contract["heritageRoutes"]:
+        for route in self.presentation_routes:
             original = self.documents.get(route["canonicalPath"])
             variant = self.documents.get(route["path"])
             if original is None or variant is None:
@@ -825,10 +828,11 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             missing = [text for text in chunks if re.sub(r"\s+", "", text) not in normalized]
             self.content_parity_diagnostics.append({"path": route["path"], "canonicalPath": route["canonicalPath"], "comparedChunks": len(chunks), "candidateMissingChunks": missing, "status": "REVIEW_REQUIRED" if missing else "NO_CANDIDATE_OMISSIONS", "notes": "Diagnostic only: distinguish missing DTO facts, limitations and prices from permitted editorial/UI changes. This does not prove that every source field is rendered."})
         negative = ["/privacy", "/dev/design-system", "/sitemap.xml", "/portfolio/unknown-smoke-route", "/portfolio/showcases/unknown-smoke-route", "/quotation/unknown-smoke-route", "/api/quotation", "/unknown-smoke-route"]
-        negative.extend(["/modern", "/modern/about", "/design-collection/modern", "/design-collection/modern/about", "/design-collection/unknown-smoke-route", "/design-collection/heritage/privacy", "/design-collection/luxury/dev/design-system"])
-        negative.extend(["/design-collection/heritage/dev/design-system", "/design-collection/heritage/portfolio/unknown-smoke-route", "/design-collection/heritage/portfolio/showcases/unknown-smoke-route", "/design-collection/heritage/quotation/unknown-smoke-route", "/design-collection/heritage/api/quotation", "/design-collection/heritage/sitemap.xml", "/design-collection/heritage/services/website-development"])
-        for style_id in ["luxury"]:
-            negative.extend(self.design_contract["namespace"] + "/" + style_id + (route["path"] if route["path"] != "/" else "") for route in self.design_contract["modernRoutes"])
+        negative.extend(["/modern", "/modern/about", "/design-collection/modern", "/design-collection/modern/about", "/design-collection/unknown-smoke-route"])
+        for style_id in ("heritage", "luxury"):
+            negative.extend(self.design_contract["namespace"] + "/" + style_id + suffix for suffix in (
+                "/privacy", "/dev/design-system", "/portfolio/unknown-smoke-route", "/portfolio/showcases/unknown-smoke-route",
+                "/quotation/unknown-smoke-route", "/api/quotation", "/sitemap.xml", "/services/website-development"))
         for path in negative:
             url = self.base + path.lstrip("/")
             response = self.fetch(url)
