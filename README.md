@@ -65,6 +65,8 @@ DC-002 已透過 [PR #33](https://github.com/xk2022/xk-website/pull/33) 合併�
 | `.github/workflows/` | CI／Pages 工作流程 |
 | `docs/` | 規格、設計、報告及證據 |
 
+完整技術與資料夾對照見 [工程索引](docs/03_engineering/README.md)，設計規格入口見 [設計索引](docs/01_design/README.md)。
+
 精確依賴以 [package.json](package.json) 與 [package-lock.json](package-lock.json) 為準。
 
 ## 4. 本機開發
