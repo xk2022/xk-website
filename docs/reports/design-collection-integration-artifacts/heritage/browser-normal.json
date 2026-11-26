@@ -1,0 +1,25 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "/tmp/xk-dc006/merge1-regression.cjs",
+    "normal",
+    "http://127.0.0.1:3272/",
+    "final",
+    "/tmp/xk-dc006-merge/heritage/source-bridge.json",
+    "/tmp/xk-dc006/fixture-merge1.json",
+    "/tmp/xk-dc006/contract-merge1.json"
+  ],
+  "cwd": "/tmp/xk-merge-heritage",
+  "startedAt": "2026-11-26T09:35:32.261259+00:00",
+  "finishedAt": "2026-11-26T09:36:07.950548+00:00",
+  "processId": 99920,
+  "returnCode": 2,
+  "exitCode": 2,
+  "timeoutSeconds": 480.0,
+  "logFile": "/tmp/xk-dc006-merge/heritage/browser-normal.log",
+  "logSha256": "5718c43e7343d5154ed94596b7ea19bf157a87c2c95992e2d3af30d36d55f1fa",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

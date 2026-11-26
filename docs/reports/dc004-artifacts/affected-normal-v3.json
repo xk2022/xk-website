@@ -1,0 +1,25 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "/tmp/xk-dc004/retest-affected-v3.cjs",
+    "normal",
+    "http://127.0.0.1:3242/",
+    "v3",
+    "/tmp/xk-dc004/source-final-v3.json",
+    "/tmp/xk-dc004/fixture-final.json",
+    "/tmp/xk-dc004/contract-final-v3.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:09:05.241988+00:00",
+  "finishedAt": "2026-11-26T05:09:50.542278+00:00",
+  "processId": 72769,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-dc004/affected-normal-v3.log",
+  "logSha256": "d778b39e382ec4fbcdea788c6f70bc1d1f703164e713cc5be9f3728aa9a07523",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

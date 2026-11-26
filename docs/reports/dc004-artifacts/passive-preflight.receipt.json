@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc004/preflight-passive.cjs"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T05:08:14.511919+00:00",
+  "finishedAt": "2026-11-26T05:08:14.615362+00:00",
+  "processId": 72602,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc004/passive-preflight.log",
+  "logSha256": "f6628f996b55de1f1e4be388ecec1445099ab49e5f9a51790e7dec67821bdb66",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Check, Clipboard, Printer, RotateCcw } from "lucide-react";
@@ -11,6 +11,7 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { quotationCatalog } from "@/config/quotation";
+import type { DesignStyleId } from "@/lib/design-collection/types";
 import { calculateQuotation, formatQuotationTotal, formatReferencePrice, sanitizeQuotationSelection } from "@/lib/quotation/calculation";
 import { createQuotationInquiry } from "@/lib/quotation/inquiry";
 import { useQuotationSelection } from "@/lib/quotation/storage";
@@ -19,7 +20,6 @@ import { cn } from "@/lib/utils";
 
 import { QuotationSummary } from "./quotation-summary";
 
-const catalog: QuotationCatalog = quotationCatalog;
 const addonGroups: readonly { id: QuotationAddon["group"]; name: string }[] = [
   { id: "visual", name: "視覺設計" },
   { id: "content", name: "內容製作" },
@@ -68,7 +68,13 @@ function TotalRow({ kind, label, total, annual = false }: {
   );
 }
 
-export function QuotationEstimator() {
+type QuotationEstimatorProps = {
+  styleId?: DesignStyleId;
+  catalog?: QuotationCatalog;
+  hrefMap?: Readonly<Record<string, string>>;
+};
+
+export function QuotationEstimator({ styleId = "modern", catalog = quotationCatalog, hrefMap }: QuotationEstimatorProps = {}) {
   const { selection, hydrated, persistence, storageMessage, setSelection, reset } = useQuotationSelection();
   const [customerName, setCustomerName] = useState("");
   const [projectName, setProjectName] = useState("");
@@ -76,7 +82,32 @@ export function QuotationEstimator() {
   const [copyStatus, setCopyStatus] = useState("");
   const [printing, setPrinting] = useState(false);
   const [printStatus, setPrintStatus] = useState("");
+  const estimatorRef = useRef<HTMLDivElement>(null);
   const summaryTextRef = useRef<HTMLTextAreaElement>(null);
+  const presentationHref = (href: string) => hrefMap?.[href] ?? href;
+
+  useEffect(() => {
+    const page = estimatorRef.current?.closest("[data-quotation-page]");
+    const activatePrintScope = () => page?.setAttribute("data-quotation-page", "true");
+    // Selection IDs remain in the original store; personal fields never do.
+    const clearPersonalMemory = () => {
+      page?.setAttribute("data-quotation-page", "inactive");
+      setCustomerName("");
+      setProjectName("");
+      setCopying(false);
+      setCopyStatus("");
+      setPrinting(false);
+      setPrintStatus("");
+    };
+    activatePrintScope();
+    window.addEventListener("pagehide", clearPersonalMemory);
+    window.addEventListener("pageshow", activatePrintScope);
+    return () => {
+      window.removeEventListener("pagehide", clearPersonalMemory);
+      window.removeEventListener("pageshow", activatePrintScope);
+      clearPersonalMemory();
+    };
+  }, [styleId]);
 
   const builds = catalog.builds.filter((build) => build.serviceId === selection.serviceId);
   const selectedBuild = builds.find((build) => build.id === selection.buildId);
@@ -157,7 +188,7 @@ export function QuotationEstimator() {
   }
 
   return (
-    <div id="quotation-estimator" data-quotation-ready={hydrated}>
+    <div ref={estimatorRef} id="quotation-estimator" data-quotation-ready={hydrated} data-quotation-style={styleId === "heritage" ? styleId : undefined} className={styleId === "heritage" ? "htg-quotation-estimator" : undefined}>
       <Section id="quotation-introduction" aria-labelledby="quotation-title" className={cn("quotation-screen-only", "border-b")}>
         <Container>
           <div className="grid min-w-0 items-start gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,.6fr)] lg:gap-12">
@@ -183,7 +214,7 @@ export function QuotationEstimator() {
             <p id="quotation-storage-status" className="type-body-sm max-w-3xl text-muted-foreground">{persistenceText}</p>
             <Button variant="outline" disabled={!hydrated} onClick={resetQuotation}><RotateCcw aria-hidden="true" />重設方案</Button>
           </div>
-          <noscript><p className="type-body mt-6 rounded-lg border bg-surface p-5">此試算工具需要 JavaScript。您仍可<Link href="/contact" className="inline-flex min-h-11 items-center rounded-sm text-secondary underline underline-offset-4">前往聯絡 XK SYSTEM</Link>說明需求與確認報價。</p></noscript>
+          <noscript><p className="type-body mt-6 rounded-lg border bg-surface p-5">此試算工具需要 JavaScript。您仍可<Link href={presentationHref("/contact")} className="inline-flex min-h-11 items-center rounded-sm text-secondary underline underline-offset-4">前往聯絡 XK SYSTEM</Link>說明需求與確認報價。</p></noscript>
         </Container>
       </Section>
 
@@ -240,11 +271,11 @@ export function QuotationEstimator() {
                       <p className="type-caption mt-3 font-medium text-secondary">{build.reference.label}</p>
                     </div>
                     <div className="type-body-sm flex min-w-0 flex-col items-start gap-2 border-t pt-4">
-                      <Link href={build.serviceLink.href} className="inline-flex min-h-11 max-w-full items-center gap-2 rounded-sm font-medium text-secondary underline underline-offset-4"><span className="min-w-0 break-words">{build.serviceLink.label}</span><ArrowUpRight aria-hidden="true" className="size-4 shrink-0" /></Link>
+                      <Link href={presentationHref(build.serviceLink.href)} className="inline-flex min-h-11 max-w-full items-center gap-2 rounded-sm font-medium text-secondary underline underline-offset-4"><span className="min-w-0 break-words">{build.serviceLink.label}</span><ArrowUpRight aria-hidden="true" className="size-4 shrink-0" /></Link>
                       {build.showcase ? (
                         <>
                           {build.showcase.status === "planned" && <p className="text-muted-foreground">Planned／規劃中，尚無同類完成展示。</p>}
-                          <Link href={build.showcase.href} className="inline-flex min-h-11 max-w-full items-center gap-2 rounded-sm font-medium text-secondary underline underline-offset-4"><span className="min-w-0 break-words">{build.showcase.label}</span><ArrowUpRight aria-hidden="true" className="size-4 shrink-0" /></Link>
+                          <Link href={presentationHref(build.showcase.href)} className="inline-flex min-h-11 max-w-full items-center gap-2 rounded-sm font-medium text-secondary underline underline-offset-4"><span className="min-w-0 break-words">{build.showcase.label}</span><ArrowUpRight aria-hidden="true" className="size-4 shrink-0" /></Link>
                         </>
                       ) : <p className="text-muted-foreground">尚無可公開的同類展示。</p>}
                     </div>
@@ -364,17 +395,17 @@ export function QuotationEstimator() {
         </Container>
       </Section>
 
-      <QuotationSummary selection={selection} estimate={estimate} customerName={customerName} projectName={projectName} />
+      <QuotationSummary selection={selection} estimate={estimate} customerName={customerName} projectName={projectName} catalog={catalog} />
 
       <Section id="quotation-next-step" background="surface" aria-labelledby="quotation-next-step-title" className={cn("quotation-screen-only", "border-t")}>
         <Container>
           <SectionHeading id="quotation-next-step-title" eyebrow="08 / DISCUSS YOUR PROJECT" title="從參考試算，走向實際方案" titleLang="zh-TW" description="確認目前選項後，可複製詢價摘要或開啟 Email 草稿。草稿仍須由您確認並寄出，本頁不會自動提交或確認信件送達。" />
           <p id="quotation-inquiry-note" className="type-body-sm mb-5 max-w-4xl text-foreground">{!hydrated ? "請等待方案載入。" : !selectedBuild ? "請先選擇建置種類，才能取得正式報價入口或複製摘要；您仍可直接前往聯絡頁說明需求。" : inquiry?.href ? "開啟草稿後，請自行核對收件地址、選項與內容再寄出。" : "摘要較長，請先複製，再至聯絡頁寄送。"}</p>
           <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
-            {inquiry?.href ? <Button asChild variant="secondary"><a href={inquiry.href} aria-describedby="quotation-inquiry-note">取得正式報價<ArrowUpRight aria-hidden="true" /></a></Button> : ready ? <Button asChild variant="secondary"><Link href="/contact#contact-channels" aria-describedby="quotation-inquiry-note">取得正式報價<ArrowUpRight aria-hidden="true" /></Link></Button> : <Button variant="secondary" disabled aria-describedby="quotation-inquiry-note">取得正式報價<ArrowUpRight aria-hidden="true" /></Button>}
+            {inquiry?.href ? <Button asChild variant="secondary"><a href={inquiry.href} aria-describedby="quotation-inquiry-note">取得正式報價<ArrowUpRight aria-hidden="true" /></a></Button> : ready ? <Button asChild variant="secondary"><Link href={presentationHref("/contact#contact-channels")} aria-describedby="quotation-inquiry-note">取得正式報價<ArrowUpRight aria-hidden="true" /></Link></Button> : <Button variant="secondary" disabled aria-describedby="quotation-inquiry-note">取得正式報價<ArrowUpRight aria-hidden="true" /></Button>}
             <Button variant="outline" disabled={!ready} aria-disabled={copying} aria-busy={copying} aria-describedby="quotation-inquiry-note" onClick={copyInquiry}><Clipboard aria-hidden="true" />複製詢價摘要</Button>
-            <Button asChild variant="outline"><Link href="/contact">聯繫 XK SYSTEM<ArrowUpRight aria-hidden="true" /></Link></Button>
-            <Button asChild variant="ghost"><Link href="/portfolio">相關作品<ArrowUpRight aria-hidden="true" /></Link></Button>
+            <Button asChild variant="outline"><Link href={presentationHref("/contact")}>聯繫 XK SYSTEM<ArrowUpRight aria-hidden="true" /></Link></Button>
+            <Button asChild variant="ghost"><Link href={presentationHref("/portfolio")}>相關作品<ArrowUpRight aria-hidden="true" /></Link></Button>
           </div>
           <p id="quotation-copy-status" role="status" aria-live="polite" aria-atomic="true" className="type-body-sm mt-4 min-h-6 text-foreground">{copyStatus}</p>
           <label htmlFor="quotation-inquiry-text" className="type-body mt-6 mb-3 block font-medium text-primary">完整詢價摘要（可手動選取複製）</label>

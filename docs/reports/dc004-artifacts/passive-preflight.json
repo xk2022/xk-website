@@ -1,0 +1,32 @@
+{
+  "testId": "DC004-PASSIVE-INSTRUMENTATION-PREFLIGHT",
+  "status": "PASS",
+  "checks": [
+    "No context.route installed",
+    "Own GET observed and not intercepted",
+    "POST/API observed as FAIL, not blocked",
+    "External request observed as FAIL, not blocked",
+    "Stylesheet abort and404 retained as strict failures"
+  ],
+  "tools": [
+    {
+      "file": "monitor-v2.cjs",
+      "sha256": "701a95c180f003f03753dca2a2ba9d6ba401f224f1c6a656caea4af17f1e00ac"
+    },
+    {
+      "file": "browser-v3-passive.cjs",
+      "sha256": "2e5a83502b590edf3e10835ab8ab695e302e35de2647cbd99212c317285c30cb"
+    },
+    {
+      "file": "retest-affected-v3.cjs",
+      "sha256": "70bbb86bebdc97de20ce5b71089657c03ad3be1067bf2fea591c8d476c3ee503"
+    },
+    {
+      "file": "verify-theme-runtime-v3-passive.cjs",
+      "sha256": "c209007b15c2b01dd032bd4fe58a39b23cd640f9ab50ce63ded1b1f30b0adc75"
+    }
+  ],
+  "browser": "NOT_EXECUTED",
+  "HTTP": "NOT_EXECUTED",
+  "scope": "Pure fake-context detector fixtures and syntax compilation; no real request or app/server mutation."
+}

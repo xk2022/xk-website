@@ -1,0 +1,41 @@
+{
+  "testId": "DC004-SOURCE-V4-BUILDER-ONLY-SEAL",
+  "status": "PASS",
+  "verifiedAt": "2026-11-26T05:24:17.587933+00:00",
+  "filesReadAndHashed": 197,
+  "unchangedFiles": 196,
+  "changedFiles": [
+    {
+      "path": "scripts/build-github-pages.mjs",
+      "before": "534ae70625cfcde778ab1999d52574c2758edf29418fa72fbdd0ab1775de663e",
+      "actual": "8e0ec10ae9d2fc1cd1ec0bbe4311152111e95610f0aa51effb8a0e39e6b0c847"
+    }
+  ],
+  "missingFiles": [],
+  "v3": {
+    "sourcePath": "/tmp/xk-dc004/source-final-v3.json",
+    "sourceFileSha256": "e20a0628e1b707bf452347ab37c2b32d125c4aa3991097366da50c323ada585e",
+    "contractPath": "/tmp/xk-dc004/contract-final-v3.json",
+    "contractFileSha256": "988d54c355bb8a16d0d92a4c54cfa50d5a9ba183bff4ba9869dd653a2a060f80",
+    "fingerprint": "fd868bec7bae4efe96e018e444cf725ced37ee4edaf87253f6a129719f4014e8",
+    "preserved": true
+  },
+  "v4": {
+    "sourcePath": "/tmp/xk-dc004/source-final-v4.json",
+    "sourceFileSha256": "7a9b083c1c0b47e9514bcceae617d83dcd74a3b214608d8dc2e4bc1cf84eeb27",
+    "contractPath": "/tmp/xk-dc004/contract-final-v4.json",
+    "contractFileSha256": "ae1d9109c38a60ba67d6e5f15d1b40a1a20a2ceceae15749dfb192b2dfb35c74",
+    "fingerprint": "5532906b72dc18e8b8b70d001bf98e63d06f8e1f6b842ab80428e439feadfe0a"
+  },
+  "unchangedInputs": [
+    {
+      "path": "/tmp/xk-dc004/fixture-final.json",
+      "sha256": "9b32d4877e9d0e8b9e698b6e4002bf9a6349ec07ffe2234c26bceab560b90eca"
+    },
+    {
+      "path": "/tmp/xk-dc004/catalog-final.json",
+      "sha256": "1c4ad0dc46e4d8efbce773fc630a4fc8c5bc57d0c29b0744a0608888c894dd63"
+    }
+  ],
+  "scope": "Read-only source hash verification and new temporary metadata files. No build/server/browser/Git operation or app edit."
+}

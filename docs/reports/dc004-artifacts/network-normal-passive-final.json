@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "/tmp/xk-dc004/probe-resource-passive.cjs",
+    "normal",
+    "http://127.0.0.1:3242/",
+    "final",
+    "/tmp/xk-dc004/source-final-v3.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:11:33.258117+00:00",
+  "finishedAt": "2026-11-26T05:12:04.992136+00:00",
+  "processId": 73323,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-dc004/network-normal-passive-final.log",
+  "logSha256": "88b859da823cfff466eb523fe797e385168df5faf29b83a3017325a11f059b0c",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

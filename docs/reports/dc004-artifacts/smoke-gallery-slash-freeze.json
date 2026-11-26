@@ -1,0 +1,6 @@
+{
+  "file": "scripts/smoke-website.py",
+  "sha256": "0b08202e4fa35fb4f1ee7837890ab2ec3323611f2c098d4de9e0b381c36378fc",
+  "scope": "Only Gallery implemented link comparison normalizes exact approved non-root path plus one trailing slash; raw href recorded; root and planned states unchanged.",
+  "helperReceipt": "/tmp/xk-dc004/smoke-gallery-slash-helper-v1.json"
+}

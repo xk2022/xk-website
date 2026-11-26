@@ -1,6 +1,6 @@
 # XK Website Roadmap｜開發進度總表
 
-核對日期：2026-11-26（Asia/Taipei），基準 main `aa100adfad24b74ccb39d2df811b613c4d6a15ef`；[該版本 CI／Pages 部署](https://github.com/xk2022/xk-website/actions/runs/45744458033) 成功。
+核對日期：2026-11-26（Asia/Taipei），本次整合基準為 `main@4500ccf`；正式 main 目前仍為 Modern 16 頁與 Gallery 共 17 頁。使用者已授權依序合併 PR #40／#42，之後執行 DC-006；本頁不預填尚未發生的合併或部署結果。
 
 本表彙整既有任務與實際合併事件，不新增工作範圍、規範或承諾。Task 規格、工作包與歷史報告仍保留原始內容；最新 GitHub／部署狀態應以對應 PR、實際 run 與公開驗證為準。合併不代表未核准的法律、索引、價格或業務項目已完成。
 
@@ -61,13 +61,13 @@ BF-009～016 以 [PR #24](https://github.com/xk2022/xk-website/pull/24)、[待�
 | --- | --- | --- |
 | DC-001 架構規格 | 已合併 [PR #30](https://github.com/xk2022/xk-website/pull/30)；[報告](../reports/dc001-architecture.md) | — |
 | DC-002 共用核心 | 已合併 [PR #33](https://github.com/xk2022/xk-website/pull/33)；[報告](../reports/dc002-implementation.md) | DC-001 |
-| DC-003 Modern／Gallery | 已合併 [PR #39](https://github.com/xk2022/xk-website/pull/39)；[規格](dc003.md)、[實作與驗證](../reports/dc003-implementation.md) | DC-002 |
-| DC-004 Heritage | [PR #40](https://github.com/xk2022/xk-website/pull/40) 已開放功能審閱、尚未合併；程式未整合至本分支 | DC-003 |
-| DC-005 Luxury | [v1 品牌審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、[本輪規格](dc005.md) 與 [驗證報告](../reports/dc005-brand-review.md)；完整實作等待 Owner 核准 | DC-003 |
-| DC-006 三系列整合 | 待執行 | DC-004、DC-005 |
+| DC-003 Modern／Gallery | 已合併 [PR #39](https://github.com/xk2022/xk-website/pull/39)；[規格](dc003.md)、[實作與驗證](../reports/dc003-implementation.md)，main CI／Pages 成功 | DC-002 |
+| DC-004 Heritage | [v1 已核准](../01_design/design-collection/reviews/heritage-v1-approval.md)；[完整規格](dc004.md)、[分支實作驗證](../reports/dc004-implementation.md) 保留；[PR #40](https://github.com/xk2022/xk-website/pull/40) 已獲合併授權，正在整合 main，交付清冊 33 頁 | DC-003 |
+| DC-005 Luxury | v1 已核准並由 [PR #41](https://github.com/xk2022/xk-website/pull/41) 合併；[審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、[品牌前置報告](../reports/dc005-brand-review.md) 保留；[完整規格](dc005.md) 的 [功能 PR #42](https://github.com/xk2022/xk-website/pull/42) 已獲授權，待 PR #40 後合併 | DC-003＋Luxury v1 品牌核准 |
+| DC-006 三系列整合 | 使用者已指示於 PR #40／#42 實際合併後接續執行 | DC-004、DC-005 |
 | DC-007 完整驗收與發布準備 | 待執行 | DC-006；發布依當次授權 |
 
-DC-004／005 可依現有工作包平行；未完成風格不提供假入口，Gallery 依 DC-003 的 17 頁階段驗收。
+DC-004／005 原依工作包平行實作；本次先整合已獲授權的 Heritage PR #40，交付 Modern 16＋Gallery＋Heritage 16 共 33 頁，再合併 Luxury PR #42。當前 main 仍為 17 頁；PR #42 的程式與功能報告未引入此 Heritage 分支。兩 PR 實際合併後才執行 DC-006，合併、CI、部署與公開驗證分開記錄。
 
 ## 4. 文件整理（DOC-001～006）
 
@@ -80,7 +80,7 @@ DC-004／005 可依現有工作包平行；未完成風格不提供假入口，G
 | DOC-005 Roadmap | 已合併 [PR #37](https://github.com/xk2022/xk-website/pull/37) |
 | DOC-006 文件一致性檢查 | 已合併 [PR #38](https://github.com/xk2022/xk-website/pull/38)；[檢查報告](../reports/doc006-consistency.md)；合併及 CI 以本次 PR 實際事件為準 |
 
-DOC-005／DOC-006 已分別由 PR #37／#38 合併；本輪 DC-003 功能開發與驗收完成，見 [PR #39](https://github.com/xk2022/xk-website/pull/39)，仍待審閱，不增加新的功能規格。
+DOC-005／DOC-006 已分別由 PR #37／#38 合併；DC-003 已由 [PR #39](https://github.com/xk2022/xk-website/pull/39) 合併，merge SHA `8ba299a5a48da41ca7f4d88d9b2149d7c83f6584`；[main CI／Pages #88](https://github.com/xk2022/xk-website/actions/runs/45750880906) 成功，正式站 17 頁 HTTP smoke 1,110 項 PASS。此為後續實際事件，不回寫原報告的 PR 前快照；[本次紀錄](../reports/dc004-brand-review.md) 保留驗證範圍。
 
 ## 5. 未結項與其他 PR
 

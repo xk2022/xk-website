@@ -1,0 +1,17 @@
+{
+  "status": "PENDING",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/artifact-checker-selftest.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:36:06.485354+00:00",
+  "finishedAt": null,
+  "processId": 80690,
+  "returnCode": null,
+  "exitCode": null,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc004/artifact-selftest.log",
+  "logSha256": null,
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code"
+}

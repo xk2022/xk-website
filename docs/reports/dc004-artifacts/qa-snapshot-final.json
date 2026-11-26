@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc004/snapshot-final.cjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:55:23.450283+00:00",
+  "finishedAt": "2026-11-26T04:55:23.754744+00:00",
+  "processId": 70198,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 90.0,
+  "logFile": "/tmp/xk-dc004/qa-snapshot-final.log",
+  "logSha256": "c7d8da5aa0bcd7b2447236ef65cabeeaa3aa6c946c609ca49101dab6e805f285",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

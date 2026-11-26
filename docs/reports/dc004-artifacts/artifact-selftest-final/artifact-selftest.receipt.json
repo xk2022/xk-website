@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/artifact-checker-selftest.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:36:06.485354+00:00",
+  "finishedAt": "2026-11-26T05:36:11.430255+00:00",
+  "processId": 80690,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc004/artifact-selftest.log",
+  "logSha256": "38a2e11de3cfb3b10c484c3ebfaf89613c7b53c8efe8a47d4a63704c6263bf1e",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,29 @@
+{
+  "reviewedAt": "2026-11-25",
+  "path": "/quotation",
+  "publication": "reference-awaiting-owner-review",
+  "serviceIds": ["website", "system-development", "system-optimization", "ai-integration"],
+  "buildIds": ["lp", "brand", "corp", "shop", "app", "app-optimization", "ai-chatbot", "ai-rag", "ai-custom"],
+  "initialBuildIds": ["lp", "brand", "corp", "shop"],
+  "addonIds": ["ai-images", "logo", "brand-visual", "copywriting", "product-content", "multilingual", "line-integration", "advanced-seo", "analytics", "inquiry-form", "booking", "payment", "membership", "content-cms", "domain", "hosting", "annual-maintenance"],
+  "complexityIds": ["basic", "standard", "advanced"],
+  "productCodes": ["LP", "BRAND", "CORP", "SHOP", "APP"],
+  "criticalPrices": {
+    "lp": {"kind": "range", "min": 15000, "max": 30000},
+    "app": {"kind": "from", "min": 80000}
+  },
+  "annualQuoteIds": ["domain", "hosting", "annual-maintenance"],
+  "initialCheckedIds": ["quotation-service-website", "quotation-complexity-basic"],
+  "personalInputs": {"quotation-customer": "40", "quotation-project": "60"},
+  "summaryId": "quotation-inquiry-text",
+  "requiredText": ["非正式報價", "參考"],
+  "qrImages": [
+    {"id": "quotation-website-qr", "src": "/images/quotation/website-qr.svg"},
+    {"id": "quotation-portfolio-qr", "src": "/images/quotation/portfolio-qr.svg"}
+  ],
+  "storageFile": "src/lib/quotation/storage.ts",
+  "storageKey": "xk:quotation:v1",
+  "sourceRoots": ["src/config/quotation.ts", "src/lib/quotation", "src/components/sections/quotation"],
+  "networkPatterns": ["\\b(?:fetch|XMLHttpRequest|WebSocket|EventSource)\\s*\\(", "\\bsendBeacon\\s*\\(", "\\bconsole\\s*\\.\\s*(?:log|info|debug|warn|error)\\s*\\("],
+  "forbiddenStoragePatterns": ["\\b(?:sessionStorage|indexedDB)\\b", "\\bdocument\\s*\\.\\s*cookie\\b", "\\bcaches\\s*\\.\\s*open\\s*\\("]
+}

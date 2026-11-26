@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "run",
+    "build:pages"
+  ],
+  "cwd": "/tmp/xk-merge-heritage",
+  "startedAt": "2026-11-26T09:45:08.813292+00:00",
+  "finishedAt": "2026-11-26T09:45:19.969416+00:00",
+  "processId": 100996,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-dc006-merge/heritage/build-pages.log",
+  "logSha256": "991321989f89c0ab0c5b08692fb3bd3e6bcf430b3dff538964a53b9a78b78815",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

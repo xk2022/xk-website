@@ -5,15 +5,15 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { quotationCatalog } from "@/config/quotation";
 import { formatQuotationTotal, formatReferencePrice } from "@/lib/quotation/calculation";
-import type { QuotationEstimate, QuotationSelection } from "@/lib/quotation/types";
+import type { QuotationCatalog, QuotationEstimate, QuotationSelection } from "@/lib/quotation/types";
 
-type Props = { selection: QuotationSelection; estimate: QuotationEstimate; customerName: string; projectName: string };
+type Props = { selection: QuotationSelection; estimate: QuotationEstimate; customerName: string; projectName: string; catalog?: QuotationCatalog };
 
-export function QuotationSummary({ selection, estimate, customerName, projectName }: Props) {
-  const build = quotationCatalog.builds.find(({ id }) => id === selection.buildId);
-  const service = quotationCatalog.services.find(({ id }) => id === selection.serviceId);
-  const complexity = quotationCatalog.complexities.find(({ id }) => id === selection.complexity);
-  const applicable = quotationCatalog.addons.filter(({ applicableBuildIds }) => build && applicableBuildIds.some((id) => id === build.id));
+export function QuotationSummary({ selection, estimate, customerName, projectName, catalog = quotationCatalog }: Props) {
+  const build = catalog.builds.find(({ id }) => id === selection.buildId);
+  const service = catalog.services.find(({ id }) => id === selection.serviceId);
+  const complexity = catalog.complexities.find(({ id }) => id === selection.complexity);
+  const applicable = catalog.addons.filter(({ applicableBuildIds }) => build && applicableBuildIds.some((id) => id === build.id));
 
   return (
     <Section id="quotation-print-summary" aria-labelledby="quotation-print-title" background="surface" className="quotation-preview-section">

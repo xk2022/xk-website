@@ -39,8 +39,11 @@
 | DC-001 | [規格](../task/dc001.md)、[架構報告](dc001-architecture.md) |
 | DC-002 | [規格](../task/dc002.md)、[共用核心](../03_engineering/design-collection-core.md)、[報告](dc002-implementation.md)、[證據](dc002-artifacts/README.md) |
 | DC-003 | [規格](../task/dc003.md)、[報告](dc003-implementation.md) |
-| DC-005 品牌前置 | [規格](../task/dc005.md)、[v1 審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、[驗證報告](dc005-brand-review.md)；完整實作等待品牌核准 |
-| DC-004／006～007 | [工作包](../01_design/design-collection/work-packages.md)，未完成工作不以計畫充當報告 |
+| DC-004 完整實作 | [規格](../task/dc004.md)、[驗證報告](dc004-implementation.md)；PR #40 已獲合併授權，合併後結果另依實際版本記錄 |
+| DC-004 品牌前置 | [審閱稿](../01_design/design-collection/reviews/heritage-v1.md)、[同版本核准](../01_design/design-collection/reviews/heritage-v1-approval.md)、[驗證紀錄](dc004-brand-review.md)；原型不代表完整系列驗收 |
+| DC-005 品牌前置 | [規格](../task/dc005.md)、[v1 審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、[歷史驗證報告](dc005-brand-review.md)；v1 已核准並由 [PR #41](https://github.com/xk2022/xk-website/pull/41) 合併 |
+| DC-005 完整實作 | [功能 PR #42](https://github.com/xk2022/xk-website/pull/42) 已獲合併授權，待 PR #40 後整合；其功能報告與程式尚未引入本次交付 |
+| DC-006～007 | [工作包](../01_design/design-collection/work-packages.md)；DC-006 於兩個功能 PR 實際合併後執行，不以計畫充當已完成報告 |
 
 ## 證據保存
 

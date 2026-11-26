@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "/tmp/xk-dc004/verify-theme-runtime.cjs",
+    "normal",
+    "http://127.0.0.1:3242/",
+    "final",
+    "/tmp/xk-dc004/normal-v1/result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:02:58.325743+00:00",
+  "finishedAt": "2026-11-26T05:03:14.380910+00:00",
+  "processId": 72056,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-dc004/theme-normal-final.log",
+  "logSha256": "a90b736785ff699648e0056bc71922a54523f7f8c438fed5b96206788ea1f120",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

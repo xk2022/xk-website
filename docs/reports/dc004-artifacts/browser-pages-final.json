@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc004/browser-v4-passive.cjs",
+    "pages",
+    "http://127.0.0.1:3243/",
+    "final",
+    "/tmp/xk-dc004/source-final-v5.json",
+    "/tmp/xk-dc004/fixture-final.json",
+    "/tmp/xk-dc004/contract-final-v5.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:25:46.412369+00:00",
+  "finishedAt": "2026-11-26T05:32:02.904220+00:00",
+  "processId": 75566,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 1200.0,
+  "logFile": "/tmp/xk-dc004/browser-pages-final.log",
+  "logSha256": "3dba7e1548a4f82c2166be0589c9276b47489d18e939720d140dcad6eb35418a",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

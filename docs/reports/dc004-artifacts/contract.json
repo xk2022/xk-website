@@ -1,0 +1,27 @@
+{
+  "status": "READY_ROOT_FREEZE",
+  "stylePrefix": "/design-collection/heritage",
+  "scopeSelector": "[data-design-style=\"heritage\"]",
+  "modernScopeSelector": "main",
+  "mainId": "main-content",
+  "skipHref": "#main-content",
+  "menuTriggerSelector": "header details.htg-mobile-navigation > summary",
+  "nativeMenuSelector": "header details.htg-mobile-navigation",
+  "mobileNavSelector": "header nav[aria-label=\"Heritage 手機導覽\"]",
+  "styleLinkSelector": "a[href]",
+  "heritageBackground": "#f4e9d8",
+  "heritageForeground": "#2d241e",
+  "modernPrimary": "#101a33",
+  "modernPDFRequired": true,
+  "modernPDFImpactReason": "Shared ContactInquiryForm(styleId), QuotationEstimator(styleId/catalog) and new scoped print/theme CSS affect integration; inspect/execute Modern actual A4 regression.",
+  "portfolioDisclosureSections": [
+    "website-samples",
+    "portfolio-projects"
+  ],
+  "portfolioDisclosuresDefaultClosed": true,
+  "representativeTechnicalSlug": "corporate-website",
+  "representativeBrandSlug": "qiangang-windows",
+  "sourceContract": "Source reviewed after Root freeze: HeritageFrame/Navigation native details and exact selectors; shared Contact/Quotation original IDs and standard A4 preserved; scope/palette from heritageThemeStyle and CSS. Browser observations remain NOT_EXECUTED.",
+  "sourceFreeze": "/tmp/xk-dc004/source-freeze.json",
+  "rootFingerprint": "5a2f3ff969af1cb6b5b530174fdd5d1da6c6b5ccac6f4d11601e0a7d3f99a3f0"
+}

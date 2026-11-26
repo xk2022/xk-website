@@ -149,6 +149,12 @@ def serialized_private_markers(html, private_markers):
     return [marker for marker in private_markers if marker and any(value in html for value in [marker, json.dumps(marker, ensure_ascii=False)[1:-1], json.dumps(marker, ensure_ascii=True)[1:-1]])]
 
 
+def gallery_style_links(links, expected_links):
+    if len(expected_links) == 1 and expected_links[0] != "/":
+        return [expected_links[0] if href == expected_links[0] + "/" else href for href in links]
+    return links
+
+
 def uses_gated_error_shell(path, doc):
     return path in GATED_PRIVATE_404_ROUTES and any(element.attrs.get("id") == "__next_error__" for element in doc.all("html"))
 
@@ -346,6 +352,7 @@ class Smoke:
         self.data = None
         self.external_destinations, self.unavailable_source_destinations = set(), set()
         self.gated_404_observations = []
+        self.content_parity_diagnostics = []
 
     def check(self, item, expected, actual, notes="", required=True):
         self.results.append({"testId": f"SMOKE-{len(self.results) + 1:04d}", "item": item, "testedAt": now(),
@@ -365,6 +372,17 @@ class Smoke:
 
     def route_url(self, path):
         return self.base + path.lstrip("/") + ("/" if path != "/" and not path.endswith("/") else "")
+
+    def design_identity(self, path):
+        return next((route for route in [*self.design_contract["modernRoutes"], *self.design_contract["heritageRoutes"]] if route["path"] == path), None)
+
+    def content_path(self, path):
+        return next((route["canonicalPath"] for route in self.design_contract["heritageRoutes"] if route["path"] == path), path)
+
+    def presentation_href(self, path, current_path):
+        if any(route["path"] == current_path for route in self.design_contract["heritageRoutes"]):
+            return next((route["path"] for route in self.design_contract["heritageRoutes"] if route["canonicalPath"] == path), path)
+        return path
 
     def uses_legacy_project_path(self, url):
         website_origins = {self.origin, ("https", "www.xplorekaleidoscope.com"), ("https", "xplorekaleidoscope.com"), ("https", "xk2022.github.io")}
@@ -410,6 +428,8 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check("Independent approved www root deployment", APPROVED_PAGES_DEPLOYMENT, self.data["pagesDeployment"])
         self.check("Independent approved brand metadata origin", APPROVED_PAGES_DEPLOYMENT["origin"], self.data["siteConfig"]["url"])
         self.check("Smoke target uses the deployment root", APPROVED_PAGES_DEPLOYMENT["basePath"], self.base_path)
+        for logo in self.design_contract["heritageLogos"].values():
+            self.check("Original Heritage Logo source asset " + logo["src"], logo["sha256"], hashlib.sha256((ROOT / "public" / logo["src"].lstrip("/")).read_bytes()).hexdigest())
         quotation = self.quotation_contract
         catalog = self.data["quotationCatalog"]
         self.check("Independent quotation reference-publication boundary", quotation["publication"], catalog["publication"])
@@ -443,6 +463,12 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         for source in draft["sourceFiles"]:
             content = (ROOT / source).read_text()
             self.check(f"{source} contains no network/persistent-storage API references", [], [match.group() for pattern in draft["forbiddenSourcePatterns"] for match in re.finditer(pattern, content)], "Supplemental source inspection; browser network/storage and no-JavaScript behavior require separate testing.")
+        for source in sorted((ROOT / "src/components/design-collection/heritage").rglob("*")):
+            if source.suffix not in {".ts", ".tsx"}:
+                continue
+            content = source.read_text()
+            patterns = [*quotation["networkPatterns"], *quotation["forbiddenStoragePatterns"], r"\blocalStorage\s*[.\[]"]
+            self.check(f"{source.relative_to(ROOT)} adds no receiving/network or persistence API", [], [match.group() for pattern in patterns for match in re.finditer(pattern, content)], "Supplemental source inspection; existing shared controllers still require browser PII/network verification.")
         self.check("Local draft does not add a receiving API route", [], [str(path.relative_to(ROOT)) for path in (ROOT / "src/app").rglob("route.*") if re.fullmatch(r"route\.[cm]?[jt]sx?", path.name)])
         action = self.data["inquiry"]["inquiryAction"]
         self.check("Independent owner-approved Email registry", ["mailto:" + approved["ownerEmail"]], [channel["href"] for channel in self.data["contact"]["verifiedContactChannels"]])
@@ -484,8 +510,8 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check("Protected SEO policy remains explicit", {"mode": "protected", "publishSitemap": False}, self.data["seoProtectionPolicy"])
         self.check("Privacy remains an unpublished draft", "draft", self.data["privacyPolicy"]["status"])
         self.public_pages = [page for page in self.data["seoPages"] if page["availability"] == "public"]
-        expected_paths = self.contract["existingPublicPaths"] + ["/portfolio/showcases/" + item for item in self.contract["brandOrder"]] + [self.quotation_contract["path"], self.design_contract["collectionRoute"]["path"]]
-        self.check("Independent DC-003 published route count", 17, len(self.design_contract["publishedPaths"]))
+        expected_paths = self.contract["existingPublicPaths"] + ["/portfolio/showcases/" + item for item in self.contract["brandOrder"]] + [self.quotation_contract["path"], self.design_contract["collectionRoute"]["path"]] + [route["path"] for route in self.design_contract["heritageRoutes"]]
+        self.check("Independent DC-004 published route count", 33, len(self.design_contract["publishedPaths"]))
         self.check("Independent publication and content inventories agree", sorted(self.design_contract["publishedPaths"]), sorted(expected_paths))
         self.check("Independent public route inventory", sorted(expected_paths), sorted(page["path"] for page in self.public_pages))
         gallery = self.design_contract["collectionRoute"]
@@ -503,9 +529,11 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check(f"{path} exact decoded head title", [page["title"]], [element.text() for element in head.all("title")])
         def metadata(key, value, target="content"):
             return [element.attrs.get(target) for element in head.all() if element.tag in {"meta", "link"} and element.attrs.get(key) == value]
-        canonical = self.data["siteConfig"]["url"].rstrip("/") + ("/" if path == "/" else path)
+        content_path = self.content_path(path)
+        canonical = self.data["siteConfig"]["url"].rstrip("/") + ("/" if content_path == "/" else content_path)
+        presentation_url = self.data["siteConfig"]["url"].rstrip("/") + ("/" if path == "/" else path)
         expected = [("name", "description", page["description"]), ("property", "og:title", page["title"]),
-                    ("property", "og:description", page["description"]), ("property", "og:url", canonical),
+                    ("property", "og:description", page["description"]), ("property", "og:url", presentation_url),
                     ("property", "og:site_name", self.data["siteConfig"]["name"]), ("property", "og:locale", "zh_TW"),
                     ("property", "og:type", "website"), ("name", "twitter:card", "summary"),
                     ("name", "twitter:title", page["title"]), ("name", "twitter:description", page["description"])]
@@ -513,8 +541,8 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             actual = metadata(key, name)
             raw_actual = actual
             if name == "og:url":
-                equivalent = {canonical, canonical[:-1] if canonical.endswith("/") else canonical + "/"}
-                actual = [canonical if item in equivalent else item for item in actual]
+                equivalent = {presentation_url, presentation_url[:-1] if presentation_url.endswith("/") else presentation_url + "/"}
+                actual = [presentation_url if item in equivalent else item for item in actual]
             self.check(f"{path} exact {name}", [value], actual,
                        notes=f"Next.js root/trailingSlash URL serialization; raw values: {raw_actual!r}" if actual != raw_actual else "")
         actual_canonical = metadata("rel", "canonical", "href")
@@ -541,11 +569,12 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check(f"{path} HTML language", ["zh-TW"], [element.attrs.get("lang") for element in doc.all("html")])
 
     def cards(self, path, doc):
+        content_path = self.content_path(path)
         config = self.data["showcases"]
         articles = [element for element in doc.all("article") if "data-showcase-id" in element.attrs]
-        expected_ids = self.contract["featuredIds"] if path == "/" else self.contract["brandOrder"] + self.contract["templateIds"]
+        expected_ids = self.contract["featuredIds"] if content_path == "/" else self.contract["brandOrder"] + self.contract["templateIds"]
         # Featured cards retain the approved brand order, independently of the selection-list order.
-        if path == "/":
+        if content_path == "/":
             expected_ids = [item for item in self.contract["brandOrder"] if item in expected_ids]
         self.check(f"{path} rendered card inventory/order", expected_ids, [element.attrs["data-showcase-id"] for element in articles])
         for card in articles:
@@ -566,13 +595,14 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
                 self.check(f"{path} {item_id} honest preview alternative", [entry["image"]["alt"]], [element.attrs.get("alt") for element in images])
             else:
                 self.check(f"{path} {item_id} no fabricated preview", 0, len(images))
-                allowed = {entry.get("attribution", {}).get("href"), self.base_path + "/portfolio/showcases/" + item_id, self.base_path + "/portfolio/showcases/" + item_id + "/"}
+                detail = self.base_path + self.presentation_href("/portfolio/showcases/" + item_id, path)
+                allowed = {entry.get("attribution", {}).get("href"), detail, detail + "/"}
                 self.check(f"{path} {item_id} no unavailable external button", [], [href for href in hrefs if href not in allowed])
             if entry["kind"] == "template":
                 self.check(f"{path} {item_id} publisher attribution link", True, entry["attribution"]["href"] in hrefs)
                 self.check(f"{path} {item_id} publisher attribution text", True, entry["attribution"]["label"] in card.text())
             else:
-                detail = self.base_path + "/portfolio/showcases/" + item_id
+                detail = self.base_path + self.presentation_href("/portfolio/showcases/" + item_id, path)
                 self.check(f"{path} {item_id} internal detail link", True, detail in hrefs or detail + "/" in hrefs)
 
     def links_and_resources(self, path, doc):
@@ -644,14 +674,15 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check(f"{path} real image bytes and natural header dimensions", [], [item for item in images if not item["valid"]], "Header inspection is not a full browser image-decoding check.")
 
     def enquiry_markup(self, path, doc):
+        content_path = self.content_path(path)
         approved = self.contact_contract
         draft_elements = []
-        if path == "/contact":
+        if content_path == "/contact":
             self.check("Contact contains only its approved pre-hydration local draft form", [], contact_draft_form_errors(doc, approved["draftForm"]), "Static SSR contract only; post-hydration validation, no-JavaScript behavior, network and storage are tested separately.")
             forms = doc.all("form")
             if len(forms) == 1:
                 draft_elements = [forms[0], *forms[0].all()]
-        elif path == self.quotation_contract["path"]:
+        elif content_path == self.quotation_contract["path"]:
             self.check("Quotation permits only its fixed local SSR controls", [], quotation_markup_errors(doc, self.quotation_contract, self.data["quotationCatalog"]), "Initial HTML only; post-hydration calculation, persistence, PII and printing require separate browser/native tests.")
             draft_elements = [*doc.all("input"), *doc.all("textarea")]
         controls = [element.tag for element in doc.all() if element not in draft_elements and (element.tag in {"form", "input", "textarea", "select"} or element.attrs.get("type") == "submit" or "formaction" in element.attrs or "onsubmit" in element.attrs)]
@@ -693,6 +724,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check("Contact explains draft, manual sending and delivery boundaries", [], [note for note in approved["requiredDataNotes"] if not notes or note not in notes[0]])
 
     def service_plans(self, path, doc):
+        content_path = self.content_path(path)
         approved = self.contact_contract
         sections = [element for element in doc.all("section") if element.attrs.get("id") == "service-plans"]
         self.check(f"{path} has one service-plans section", 1, len(sections))
@@ -707,7 +739,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             self.check(f"{path} {item_id} plan links to its own enquiry draft", [context], [anchor.attrs.get("data-inquiry-context") for anchor in card.all("a") if "data-inquiry-state" in anchor.attrs])
             self.check(f"{path} {item_id} retains scope-based pricing", True, "依需求報價" in card.text())
         pricing = [element for element in doc.all("section") if element.attrs.get("id") == "pricing-guide"]
-        if path == "/services":
+        if content_path == "/services":
             self.check("Services has one pricing-guide section", 1, len(pricing))
         text = plans.text() + "".join(element.text() for element in pricing)
         self.check(f"{path} plans/pricing guide contain no unapproved numerical prices", [], re.findall(approved["unapprovedPricePattern"], text, re.I), "Only monetary price patterns in these sections are checked; case numbers and technical versions remain valid.")
@@ -724,10 +756,24 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             if response["status"] == 200 and "text/html" in content_type:
                 self.documents[path] = Document(response["body"].decode("utf-8")).root
         for path, doc in self.documents.items():
+            content_path = self.content_path(path)
             self.metadata(path, doc)
             self.check(f"{path} has one complete Modern frame and skip destination", [], modern_frame_errors(doc))
             self.links_and_resources(path, doc)
             self.enquiry_markup(path, doc)
+            if any(route["path"] == path for route in self.design_contract["heritageRoutes"]):
+                for landmark, logo in self.design_contract["heritageLogos"].items():
+                    images = [image for element in doc.all(landmark) for image in element.all("img") if image.attrs.get("src") == logo["src"]]
+                    self.check(f"{path} uses the approved {landmark} Logo", 1, len(images))
+                    if len(images) == 1:
+                        self.check(f"{path} {landmark} Logo ratio/brand alternative", [logo["width"], logo["height"], self.data["siteConfig"]["name"]], [images[0].attrs.get("width"), images[0].attrs.get("height"), images[0].attrs.get("alt")])
+                    response = self.fetch(self.base + logo["src"].lstrip("/"))
+                    self.check(f"{path} {landmark} original Logo HTTP status", 200, response["status"])
+                    self.check(f"{path} {landmark} original SVG byte hash", logo["sha256"], hashlib.sha256(response["body"]).hexdigest(), "Preserves asset geometry/colors; CSS rendering and effects require separate browser checks.")
+            identity = self.design_identity(path)
+            if identity:
+                for anchor in self.design_contract["semanticAnchors"][identity["pageKey"]]:
+                    self.check(f"{path} retains exactly one semantic #{anchor} anchor", 1, len([element for element in doc.all() if element.attrs.get("id") == anchor]))
             footer = doc.all("footer")
             footer_urls = [urlsplit(urljoin(self.route_url(path), anchor.attrs.get("href", ""))) for element in footer for anchor in element.all("a")]
             footer_paths = {url.path.rstrip("/") or "/" for url in footer_urls if (url.scheme, url.netloc) == self.origin}
@@ -740,33 +786,48 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
                 for card in cards:
                     style_id = card.attrs["data-design-style-id"]
                     links = [anchor.attrs.get("href") for anchor in card.all("a")]
-                    expected_links = ["/"] if self.design_contract["styleStatus"].get(style_id) == "implemented" else []
-                    self.check(f"Gallery {style_id} has only its approved public entry", expected_links, links)
+                    expected_links = [self.design_contract["styleHomePaths"][style_id]] if self.design_contract["styleStatus"].get(style_id) == "implemented" else []
+                    self.check(f"Gallery {style_id} has only its approved public entry", expected_links, gallery_style_links(links, expected_links), f"Raw hrefs: {links!r}; only an approved non-root homepage's single Pages trailing slash is equivalent.")
                     if self.design_contract["styleStatus"].get(style_id) == "planned":
                         self.check(f"Gallery {style_id} has no fake button", 0, len(card.all("button")))
                         self.check(f"Gallery {style_id} states that it is planned", True, "規劃中" in card.text())
-            if path in {"/", "/portfolio"}:
+            if content_path in {"/", "/portfolio"}:
                 self.cards(path, doc)
-            if path in {"/", "/services"}:
+            if content_path in {"/", "/services"}:
                 self.service_plans(path, doc)
-            if path == "/portfolio":
+            if content_path == "/portfolio":
                 ids = {element.attrs["id"] for element in doc.all() if "id" in element.attrs}
                 self.check("Portfolio retains all existing category anchors", [], [item for item in self.contract["portfolioAnchors"] if item not in ids])
-            if path in {"/portfolio/" + slug for slug in self.contract["technicalPlanSlugs"]}:
+            if content_path in {"/portfolio/" + slug for slug in self.contract["technicalPlanSlugs"]}:
                 main = doc.all("main")
                 text = main[0].text() if main else ""
                 self.check(f"{path} technical plan remains Planned", True, "Planned／規劃中" in text)
                 self.check(f"{path} technical plan retains empty implementation/media", True, "尚無可驗證的系統畫面" in text and "尚未提供可核對的實作與測試證據。" in text)
                 self.check(f"{path} technical plan has no fabricated screenshot", 0, len(main[0].all("img")) if main else -1)
-            if path in {"/about", "/solutions"}:
+            if content_path in {"/about", "/solutions"}:
                 self.check(f"{path} revised visible operating-model copy", [], re.findall(r"一人全職|由一人|創辦人一人", doc.text()))
-            if path == "/contact":
+            if content_path == "/contact":
                 self.contact_page(doc)
             draft_markers = [self.data["privacyDraftMarker"]] + [text for section in self.data["privacyPolicy"]["sections"] for text in section["paragraphs"]]
             self.check(f"{path} contains no unpublished Privacy draft text", [], [marker for marker in draft_markers if marker and marker in doc.text()])
+        # Candidate omissions are retained for semantic review: editorial labels
+        # may change, while missing business facts still require correction.
+        for route in self.design_contract["heritageRoutes"]:
+            original = self.documents.get(route["canonicalPath"])
+            variant = self.documents.get(route["path"])
+            if original is None or variant is None:
+                continue
+            original_main, variant_main = original.all("main"), variant.all("main")
+            if len(original_main) != 1 or len(variant_main) != 1:
+                continue
+            normalized = re.sub(r"\s+", "", variant_main[0].text())
+            chunks = list(dict.fromkeys(element.text().strip() for element in original_main[0].all() if element.tag in {"p", "li"} and len(element.text().strip()) >= 12 and re.search(r"[\u4e00-\u9fff]", element.text())))
+            missing = [text for text in chunks if re.sub(r"\s+", "", text) not in normalized]
+            self.content_parity_diagnostics.append({"path": route["path"], "canonicalPath": route["canonicalPath"], "comparedChunks": len(chunks), "candidateMissingChunks": missing, "status": "REVIEW_REQUIRED" if missing else "NO_CANDIDATE_OMISSIONS", "notes": "Diagnostic only: distinguish missing DTO facts, limitations and prices from permitted editorial/UI changes. This does not prove that every source field is rendered."})
         negative = ["/privacy", "/dev/design-system", "/sitemap.xml", "/portfolio/unknown-smoke-route", "/portfolio/showcases/unknown-smoke-route", "/quotation/unknown-smoke-route", "/api/quotation", "/unknown-smoke-route"]
         negative.extend(["/modern", "/modern/about", "/design-collection/modern", "/design-collection/modern/about", "/design-collection/unknown-smoke-route", "/design-collection/heritage/privacy", "/design-collection/luxury/dev/design-system"])
-        for style_id in ["heritage", "luxury"]:
+        negative.extend(["/design-collection/heritage/dev/design-system", "/design-collection/heritage/portfolio/unknown-smoke-route", "/design-collection/heritage/portfolio/showcases/unknown-smoke-route", "/design-collection/heritage/quotation/unknown-smoke-route", "/design-collection/heritage/api/quotation", "/design-collection/heritage/sitemap.xml", "/design-collection/heritage/services/website-development"])
+        for style_id in ["luxury"]:
             negative.extend(self.design_contract["namespace"] + "/" + style_id + (route["path"] if route["path"] != "/" else "") for route in self.design_contract["modernRoutes"])
         for path in negative:
             url = self.base + path.lstrip("/")
@@ -817,6 +878,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
                   "httpObservations": [{"url": url, "status": item["status"], "finalUrl": item["finalUrl"], "bytes": len(item["body"]), "error": item.get("error")} for url, item in self.cache.items()],
                   "imageObservations": list(self.image_observations.values()),
                   "gatedPrivate404Observations": self.gated_404_observations,
+                  "contentParityDiagnostics": self.content_parity_diagnostics,
                   "scopeNotes": ["No browser rendering, keyboard, screen reader, responsive, axe or complete WCAG audit is performed.",
                                  "External source checks run only when requested; source-asset expected 404 is evidence of a limitation.",
                                  "Email checks parse the public recipient and static draft prompts only; no message, SMTP or delivery test is performed.",

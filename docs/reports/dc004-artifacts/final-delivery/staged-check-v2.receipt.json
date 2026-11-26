@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "git",
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:37:57.927407+00:00",
+  "finishedAt": "2026-11-26T05:37:57.945812+00:00",
+  "processId": 80814,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 30.0,
+  "logFile": "/tmp/xk-dc004-final/staged-check-v2.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

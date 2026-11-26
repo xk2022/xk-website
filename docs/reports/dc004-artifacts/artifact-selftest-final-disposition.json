@@ -1,0 +1,5 @@
+{
+  "reason": "An initial archive captured helper PENDING receipt and empty log before completion. Those exact archived bytes remain at original archive paths. Completed immutable receipt/log copied under artifact-selftest-final with unchanged raw command/time/logFile; this final receipt is the actual Exit0 evidence. No raw PENDING changed to PASS.",
+  "completedCopy": "/tmp/xk-dc004/artifact-selftest-final",
+  "sourceOrAppChanged": false
+}

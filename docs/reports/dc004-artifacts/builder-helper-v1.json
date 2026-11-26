@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "--import",
+    "./scripts/register-test-aliases.mjs",
+    "/tmp/xk-dc004/builder-selfcheck.mjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:40:17.877924+00:00",
+  "finishedAt": "2026-11-26T04:40:18.081766+00:00",
+  "processId": 67577,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc004/builder-helper-v1.log",
+  "logSha256": "a7054d20e0136079c6612d42be40e68f67ef7906d5fd971e1faee052ad555fbb",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,2171 @@
+{
+  "suite": "DC-004 final source, documentation and evidence checks",
+  "status": "PASS",
+  "exitCode": 0,
+  "startedAt": "2026-11-26T05:39:30.268219+00:00",
+  "finishedAt": "2026-11-26T05:39:32.644217+00:00",
+  "complete": true,
+  "root": "/workspace/xk-website",
+  "base": "8ba299a5a48da41ca7f4d88d9b2149d7c83f6584",
+  "sourceFingerprint": "daafeceb4aec69b766f70f5430687d82a11455a9ebc7579ea4f032da85db6a0f",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/tmp/xk-dc004/final-check.py",
+    "--output",
+    "/tmp/xk-dc004-final/check-v6-result.json"
+  ],
+  "changedFiles": [
+    "AGENTS.md",
+    "README.md",
+    "docs/01_design/README.md",
+    "docs/01_design/design-collection/reviews/heritage-v1-approval.md",
+    "docs/01_design/design-collection/reviews/heritage-v1.html",
+    "docs/01_design/design-collection/reviews/heritage-v1.md",
+    "docs/98_decisions/implementation-notes.md",
+    "docs/reports/README.md",
+    "docs/reports/dc004-artifacts/README.md",
+    "docs/reports/dc004-artifacts/SHA256SUMS",
+    "docs/reports/dc004-artifacts/affected-normal-final.json",
+    "docs/reports/dc004-artifacts/affected-normal-final.log.gz",
+    "docs/reports/dc004-artifacts/affected-normal-v3.json",
+    "docs/reports/dc004-artifacts/affected-normal-v3.log.gz",
+    "docs/reports/dc004-artifacts/archive-manifest.json",
+    "docs/reports/dc004-artifacts/artifact-baseline/baseline.json.gz",
+    "docs/reports/dc004-artifacts/artifact-baseline/scripts/fixtures/contact-contract.json.gz",
+    "docs/reports/dc004-artifacts/artifact-baseline/scripts/fixtures/design-collection-contract.json.gz",
+    "docs/reports/dc004-artifacts/artifact-baseline/scripts/fixtures/quotation-contract.json",
+    "docs/reports/dc004-artifacts/artifact-baseline/scripts/fixtures/showcase-contract.json",
+    "docs/reports/dc004-artifacts/artifact-checker-selftest.json",
+    "docs/reports/dc004-artifacts/artifact-local-check.json.gz",
+    "docs/reports/dc004-artifacts/artifact-local-check.log.gz",
+    "docs/reports/dc004-artifacts/artifact-local-check.receipt.json",
+    "docs/reports/dc004-artifacts/artifact-local-final.json.gz",
+    "docs/reports/dc004-artifacts/artifact-local-final.log.gz",
+    "docs/reports/dc004-artifacts/artifact-local-final.receipt.json",
+    "docs/reports/dc004-artifacts/artifact-prepare.log.gz",
+    "docs/reports/dc004-artifacts/artifact-prepare.receipt.json",
+    "docs/reports/dc004-artifacts/artifact-selftest-final-disposition.json",
+    "docs/reports/dc004-artifacts/artifact-selftest-final/artifact-selftest.log.gz",
+    "docs/reports/dc004-artifacts/artifact-selftest-final/artifact-selftest.receipt.json",
+    "docs/reports/dc004-artifacts/artifact-selftest.log.gz",
+    "docs/reports/dc004-artifacts/artifact-selftest.receipt.json",
+    "docs/reports/dc004-artifacts/baseline-output-files.json.gz",
+    "docs/reports/dc004-artifacts/browser-normal-v1.json",
+    "docs/reports/dc004-artifacts/browser-normal-v1.log.gz",
+    "docs/reports/dc004-artifacts/browser-pages-final.json",
+    "docs/reports/dc004-artifacts/browser-pages-final.log.gz",
+    "docs/reports/dc004-artifacts/build-normal-final.json",
+    "docs/reports/dc004-artifacts/build-normal-final.log.gz",
+    "docs/reports/dc004-artifacts/build-normal-v3.json",
+    "docs/reports/dc004-artifacts/build-normal-v3.log.gz",
+    "docs/reports/dc004-artifacts/build-normal.json",
+    "docs/reports/dc004-artifacts/build-normal.log.gz",
+    "docs/reports/dc004-artifacts/build-pages-v2.json",
+    "docs/reports/dc004-artifacts/build-pages-v2.log.gz",
+    "docs/reports/dc004-artifacts/build-pages.json",
+    "docs/reports/dc004-artifacts/build-pages.log.gz",
+    "docs/reports/dc004-artifacts/builder-helper-v1.json",
+    "docs/reports/dc004-artifacts/builder-helper-v1.log.gz",
+    "docs/reports/dc004-artifacts/builder-helper-v2.json",
+    "docs/reports/dc004-artifacts/builder-helper-v2.log.gz",
+    "docs/reports/dc004-artifacts/catalog-final.json.gz",
+    "docs/reports/dc004-artifacts/catalog.json.gz",
+    "docs/reports/dc004-artifacts/content-parity-review.json.gz",
+    "docs/reports/dc004-artifacts/contract-final-v3.json",
+    "docs/reports/dc004-artifacts/contract-final-v4.json",
+    "docs/reports/dc004-artifacts/contract-final-v5.json",
+    "docs/reports/dc004-artifacts/contract-final.json",
+    "docs/reports/dc004-artifacts/contract.json",
+    "docs/reports/dc004-artifacts/css-disabled-bridge-result.json",
+    "docs/reports/dc004-artifacts/css-disabled-bridge.json",
+    "docs/reports/dc004-artifacts/css-disabled-bridge.log.gz",
+    "docs/reports/dc004-artifacts/ds/contrast.json",
+    "docs/reports/dc004-artifacts/ds/lint-v1.json",
+    "docs/reports/dc004-artifacts/ds/lint-v1.log.gz",
+    "docs/reports/dc004-artifacts/ds/native-v1.json",
+    "docs/reports/dc004-artifacts/ds/native-v1.log.gz",
+    "docs/reports/dc004-artifacts/ds/tsconfig.json",
+    "docs/reports/dc004-artifacts/ds/types-v1.json",
+    "docs/reports/dc004-artifacts/ds/types-v1.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v1-result.json.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v1.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v1.receipt.json",
+    "docs/reports/dc004-artifacts/final-delivery/check-v2-result.json.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v2.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v2.receipt.json",
+    "docs/reports/dc004-artifacts/final-delivery/check-v3-result.json.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v3.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v3.receipt.json",
+    "docs/reports/dc004-artifacts/final-delivery/check-v4-result.json.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v4.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v4.receipt.json",
+    "docs/reports/dc004-artifacts/final-delivery/check-v5-result.json.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v5.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v5.receipt.json",
+    "docs/reports/dc004-artifacts/final-delivery/staged-check-v2.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/staged-check-v2.receipt.json",
+    "docs/reports/dc004-artifacts/fixture-final.json.gz",
+    "docs/reports/dc004-artifacts/fixture.json.gz",
+    "docs/reports/dc004-artifacts/gallery-slash-builder-freeze.json",
+    "docs/reports/dc004-artifacts/gallery-slash-eslint-v1.json",
+    "docs/reports/dc004-artifacts/gallery-slash-eslint-v1.log.gz",
+    "docs/reports/dc004-artifacts/gallery-slash-helper-v1.json",
+    "docs/reports/dc004-artifacts/gallery-slash-helper-v1.log.gz",
+    "docs/reports/dc004-artifacts/guide-scroll-v3.log.gz",
+    "docs/reports/dc004-artifacts/guide-scroll-v3.receipt.json",
+    "docs/reports/dc004-artifacts/guide-scroll-v3/result.json.gz",
+    "docs/reports/dc004-artifacts/http-normal-final-result.json.gz",
+    "docs/reports/dc004-artifacts/http-normal-final.json",
+    "docs/reports/dc004-artifacts/http-normal-final.log.gz",
+    "docs/reports/dc004-artifacts/http-normal-v1-result.json.gz",
+    "docs/reports/dc004-artifacts/http-normal-v1.json",
+    "docs/reports/dc004-artifacts/http-normal-v1.log.gz",
+    "docs/reports/dc004-artifacts/http-normal-v3-result.json.gz",
+    "docs/reports/dc004-artifacts/http-normal-v3.json",
+    "docs/reports/dc004-artifacts/http-normal-v3.log.gz",
+    "docs/reports/dc004-artifacts/http-pages-final-result.json.gz",
+    "docs/reports/dc004-artifacts/http-pages-final.json",
+    "docs/reports/dc004-artifacts/http-pages-final.log.gz",
+    "docs/reports/dc004-artifacts/http-pages-v2-result.json.gz",
+    "docs/reports/dc004-artifacts/http-pages-v2.json",
+    "docs/reports/dc004-artifacts/http-pages-v2.log.gz",
+    "docs/reports/dc004-artifacts/independent-review.json.gz",
+    "docs/reports/dc004-artifacts/independent-review.md.gz",
+    "docs/reports/dc004-artifacts/lint-final.json",
+    "docs/reports/dc004-artifacts/lint-final.log.gz",
+    "docs/reports/dc004-artifacts/lint.json",
+    "docs/reports/dc004-artifacts/lint.log.gz",
+    "docs/reports/dc004-artifacts/matrix.json.gz",
+    "docs/reports/dc004-artifacts/metadata-native-v1.json",
+    "docs/reports/dc004-artifacts/metadata-native-v1.log.gz",
+    "docs/reports/dc004-artifacts/negative-fixture-disposition.json",
+    "docs/reports/dc004-artifacts/network-normal-passive-final.json",
+    "docs/reports/dc004-artifacts/network-normal-passive-final.log.gz",
+    "docs/reports/dc004-artifacts/network-normal-probe-final.json",
+    "docs/reports/dc004-artifacts/network-normal-probe-final.log.gz",
+    "docs/reports/dc004-artifacts/network-v1-analysis-v2.json.gz",
+    "docs/reports/dc004-artifacts/network-v1-analysis-v2.log.gz",
+    "docs/reports/dc004-artifacts/network-v1-analysis-v2.receipt.json",
+    "docs/reports/dc004-artifacts/network-v1-analysis.json.gz",
+    "docs/reports/dc004-artifacts/network-v1-analysis.log.gz",
+    "docs/reports/dc004-artifacts/network-v1-analysis.receipt.json",
+    "docs/reports/dc004-artifacts/normal-affected-v2/modern-services-1440-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v2/modern-services-1920-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v2/modern-services-320-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v2/modern-services-375-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v2/modern-services-768-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v2/result.json.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/modern-services-1440-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/modern-services-1920-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/modern-services-320-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/modern-services-375-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/modern-services-768-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/result.json.gz",
+    "docs/reports/dc004-artifacts/normal-after-fix-result.json.gz",
+    "docs/reports/dc004-artifacts/normal-after-fix.json",
+    "docs/reports/dc004-artifacts/normal-after-fix.log.gz",
+    "docs/reports/dc004-artifacts/normal-before-fix-result.json.gz",
+    "docs/reports/dc004-artifacts/normal-before-fix.json",
+    "docs/reports/dc004-artifacts/normal-before-fix.log.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/about.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/contact.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__about.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__contact.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__corporate-website.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__enterprise-management.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__integration-hub.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__campaign-website-design.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__honest-diecut.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__hongjia-birdnest.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__march-tangbao.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__qiangang-windows.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__yupinyuan-bento.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__quotation.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__services.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__solutions.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/home.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/manifest.json.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__corporate-website.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__enterprise-management.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__integration-hub.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__campaign-website-design.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__honest-diecut.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__hongjia-birdnest.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__march-tangbao.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__qiangang-windows.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__yupinyuan-bento.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/quotation.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/services.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/solutions.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/about.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/contact.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__about.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__contact.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__corporate-website.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__enterprise-management.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__integration-hub.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__campaign-website-design.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__honest-diecut.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__hongjia-birdnest.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__march-tangbao.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__qiangang-windows.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__yupinyuan-bento.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__quotation.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__services.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__solutions.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/home.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__corporate-website.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__enterprise-management.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__integration-hub.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__campaign-website-design.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__honest-diecut.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__hongjia-birdnest.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__march-tangbao.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__qiangang-windows.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__yupinyuan-bento.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/quotation.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/services.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/solutions.html.gz",
+    "docs/reports/dc004-artifacts/normal-html-capture.json",
+    "docs/reports/dc004-artifacts/normal-html-capture.log.gz",
+    "docs/reports/dc004-artifacts/normal-output-bridge-result.json.gz",
+    "docs/reports/dc004-artifacts/normal-output-bridge-v2-result.json.gz",
+    "docs/reports/dc004-artifacts/normal-output-bridge-v2.json",
+    "docs/reports/dc004-artifacts/normal-output-bridge-v2.log.gz",
+    "docs/reports/dc004-artifacts/normal-output-bridge.json",
+    "docs/reports/dc004-artifacts/normal-output-bridge.log.gz",
+    "docs/reports/dc004-artifacts/normal-resource-passive-final/result.json.gz",
+    "docs/reports/dc004-artifacts/normal-resource-probe-final/result.json.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage.json",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage.log.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage/page-1-canvas-classification.json",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage/page-1-text-spans.json.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage/page-1-text.txt.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage/verification.json.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern.json",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern.log.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern/page-1-canvas-classification.json",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern/page-1-text-spans.json.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern/page-1-text.txt.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern/verification.json.gz",
+    "docs/reports/dc004-artifacts/normal-v1/result.json.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/0mr-7pbzposdm.css.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/1kxqb6a1wzj45.css.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/2kctg0wbp1k3n.css.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/2r1vqhkbbjgpm.css.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/2xzl34nqlhvok.css.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/manifest.json",
+    "docs/reports/dc004-artifacts/normal-v3-output-result.json.gz",
+    "docs/reports/dc004-artifacts/normal-v3-output.json",
+    "docs/reports/dc004-artifacts/normal-v3-output.log.gz",
+    "docs/reports/dc004-artifacts/npm-ci-final.json",
+    "docs/reports/dc004-artifacts/npm-ci-final.log.gz",
+    "docs/reports/dc004-artifacts/npm-ci.json",
+    "docs/reports/dc004-artifacts/npm-ci.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply-v2.json",
+    "docs/reports/dc004-artifacts/packaging/apply-v2.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply-v3.json",
+    "docs/reports/dc004-artifacts/packaging/apply-v3.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply-v4.json",
+    "docs/reports/dc004-artifacts/packaging/apply-v4.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply-v5.json",
+    "docs/reports/dc004-artifacts/packaging/apply-v5.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply-v6.json",
+    "docs/reports/dc004-artifacts/packaging/apply-v6.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply.json",
+    "docs/reports/dc004-artifacts/packaging/apply.log.gz",
+    "docs/reports/dc004-artifacts/packaging/dry-run.json",
+    "docs/reports/dc004-artifacts/packaging/dry-run.log.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage.json",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage.log.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage/page-1-canvas-classification.json",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage/page-1-text-spans.json.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage/page-1-text.txt.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage/verification.json.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern.json",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern.log.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern/page-1-canvas-classification.json",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern/page-1-text-spans.json.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern/page-1-text.txt.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern/verification.json.gz",
+    "docs/reports/dc004-artifacts/pages-final/result.json.gz",
+    "docs/reports/dc004-artifacts/passive-preflight.json",
+    "docs/reports/dc004-artifacts/passive-preflight.log.gz",
+    "docs/reports/dc004-artifacts/passive-preflight.receipt.json",
+    "docs/reports/dc004-artifacts/passive-resource-adjudication.json.gz",
+    "docs/reports/dc004-artifacts/passive-resource-adjudication.log.gz",
+    "docs/reports/dc004-artifacts/passive-resource-adjudication.receipt.json",
+    "docs/reports/dc004-artifacts/private-hosting-helper-v1.json",
+    "docs/reports/dc004-artifacts/private-hosting-helper-v1.log.gz",
+    "docs/reports/dc004-artifacts/qa-snapshot-final.json",
+    "docs/reports/dc004-artifacts/qa-snapshot-final.log.gz",
+    "docs/reports/dc004-artifacts/qa-snapshot.json",
+    "docs/reports/dc004-artifacts/qa-snapshot.log.gz",
+    "docs/reports/dc004-artifacts/routes-native-v1.json",
+    "docs/reports/dc004-artifacts/routes-native-v1.log.gz",
+    "docs/reports/dc004-artifacts/runner-nonzero.json",
+    "docs/reports/dc004-artifacts/runner-nonzero.log.gz",
+    "docs/reports/dc004-artifacts/runner-timeout.json",
+    "docs/reports/dc004-artifacts/runner-timeout.log.gz",
+    "docs/reports/dc004-artifacts/runner-zero.json",
+    "docs/reports/dc004-artifacts/runner-zero.log.gz",
+    "docs/reports/dc004-artifacts/scripts-eslint-v1.json",
+    "docs/reports/dc004-artifacts/scripts-eslint-v1.log.gz",
+    "docs/reports/dc004-artifacts/services-guide-fix.patch.gz",
+    "docs/reports/dc004-artifacts/smoke-gallery-slash-freeze.json",
+    "docs/reports/dc004-artifacts/smoke-gallery-slash-helper-v1.json",
+    "docs/reports/dc004-artifacts/smoke-gallery-slash-helper-v1.log.gz",
+    "docs/reports/dc004-artifacts/smoke-helper-v1.json",
+    "docs/reports/dc004-artifacts/smoke-helper-v1.log.gz",
+    "docs/reports/dc004-artifacts/source-final-v3.json.gz",
+    "docs/reports/dc004-artifacts/source-final-v4.json.gz",
+    "docs/reports/dc004-artifacts/source-final-v5.json.gz",
+    "docs/reports/dc004-artifacts/source-final.json.gz",
+    "docs/reports/dc004-artifacts/source-freeze.json.gz",
+    "docs/reports/dc004-artifacts/source-v4-seal.log.gz",
+    "docs/reports/dc004-artifacts/source-v4-seal.receipt.json",
+    "docs/reports/dc004-artifacts/source-v4-verification.json",
+    "docs/reports/dc004-artifacts/source-v5-seal.log.gz",
+    "docs/reports/dc004-artifacts/source-v5-seal.receipt.json",
+    "docs/reports/dc004-artifacts/source-v5-verification.json",
+    "docs/reports/dc004-artifacts/source.json.gz",
+    "docs/reports/dc004-artifacts/staged-log-format-review.json",
+    "docs/reports/dc004-artifacts/tests-final.json",
+    "docs/reports/dc004-artifacts/tests-final.log.gz",
+    "docs/reports/dc004-artifacts/tests.json",
+    "docs/reports/dc004-artifacts/tests.log.gz",
+    "docs/reports/dc004-artifacts/theme-normal-final.json",
+    "docs/reports/dc004-artifacts/theme-normal-final.log.gz",
+    "docs/reports/dc004-artifacts/theme-normal-final/result.json.gz",
+    "docs/reports/dc004-artifacts/theme-normal-v3.json",
+    "docs/reports/dc004-artifacts/theme-normal-v3.log.gz",
+    "docs/reports/dc004-artifacts/theme-normal-v3/result.json.gz",
+    "docs/reports/dc004-artifacts/theme-pages-final.json",
+    "docs/reports/dc004-artifacts/theme-pages-final.log.gz",
+    "docs/reports/dc004-artifacts/theme-pages-final/result.json.gz",
+    "docs/reports/dc004-artifacts/tool-preparation.json",
+    "docs/reports/dc004-artifacts/tools-preflight.log.gz",
+    "docs/reports/dc004-artifacts/tools-preflight.receipt.json",
+    "docs/reports/dc004-artifacts/tools/analyze-network-v1-v2.py",
+    "docs/reports/dc004-artifacts/tools/analyze-network-v1.py",
+    "docs/reports/dc004-artifacts/tools/artifact-baseline/smoke-website.py.gz",
+    "docs/reports/dc004-artifacts/tools/artifact-checker-selftest.py",
+    "docs/reports/dc004-artifacts/tools/browser-v2.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/browser-v3-passive.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/browser-v4-passive.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/browser.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/builder-selfcheck.mjs",
+    "docs/reports/dc004-artifacts/tools/business-v2.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/business.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/capture-normal-bridge.py",
+    "docs/reports/dc004-artifacts/tools/capture-normal-html.py",
+    "docs/reports/dc004-artifacts/tools/create-routes.py.gz",
+    "docs/reports/dc004-artifacts/tools/css-disabled-bridge.cjs",
+    "docs/reports/dc004-artifacts/tools/ds/check.mjs.gz",
+    "docs/reports/dc004-artifacts/tools/final-check.py.gz",
+    "docs/reports/dc004-artifacts/tools/gallery-slash-selfcheck.mjs",
+    "docs/reports/dc004-artifacts/tools/guide-scroll-probe.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/implementation-docs.py.gz",
+    "docs/reports/dc004-artifacts/tools/inspect-ci-artifact.py.gz",
+    "docs/reports/dc004-artifacts/tools/monitor-v2.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/monitor.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/package-evidence-v2.py.gz",
+    "docs/reports/dc004-artifacts/tools/package-evidence.py.gz",
+    "docs/reports/dc004-artifacts/tools/passive-resource-adjudication.py.gz",
+    "docs/reports/dc004-artifacts/tools/preflight-passive.cjs",
+    "docs/reports/dc004-artifacts/tools/preflight.cjs",
+    "docs/reports/dc004-artifacts/tools/prepare-docs.py.gz",
+    "docs/reports/dc004-artifacts/tools/prepare-source-v4.py",
+    "docs/reports/dc004-artifacts/tools/prepare-source-v5.py",
+    "docs/reports/dc004-artifacts/tools/probe-resource-lifecycle.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/probe-resource-passive.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/retest-affected-v3.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/retest-affected.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/smoke-gallery-slash-selfcheck.py",
+    "docs/reports/dc004-artifacts/tools/smoke-selfcheck.py",
+    "docs/reports/dc004-artifacts/tools/snapshot-final.cjs",
+    "docs/reports/dc004-artifacts/tools/snapshot.cjs",
+    "docs/reports/dc004-artifacts/tools/static-preview.py",
+    "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge-v2.py",
+    "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge.py",
+    "docs/reports/dc004-artifacts/tools/verify-pdf.py.gz",
+    "docs/reports/dc004-artifacts/tools/verify-theme-runtime-v3-passive.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/verify-theme-runtime.cjs.gz",
+    "docs/reports/dc004-artifacts/typecheck-final.json",
+    "docs/reports/dc004-artifacts/typecheck-final.log.gz",
+    "docs/reports/dc004-artifacts/typecheck.json",
+    "docs/reports/dc004-artifacts/typecheck.log.gz",
+    "docs/reports/dc004-artifacts/typegen.json",
+    "docs/reports/dc004-artifacts/typegen.log.gz",
+    "docs/reports/dc004-artifacts/validators-freeze-v1.json",
+    "docs/reports/dc004-artifacts/visual-review.json.gz",
+    "docs/reports/dc004-brand-review.md",
+    "docs/reports/dc004-implementation.md",
+    "docs/reports/dc004-review-artifacts/README.md",
+    "docs/reports/dc004-review-artifacts/SHA256SUMS",
+    "docs/reports/dc004-review-artifacts/adjudicate-prototype.cjs.gz",
+    "docs/reports/dc004-review-artifacts/build-pages.json.gz",
+    "docs/reports/dc004-review-artifacts/build-pages.log.gz",
+    "docs/reports/dc004-review-artifacts/check-prototype-v3.mjs.gz",
+    "docs/reports/dc004-review-artifacts/check-prototype.mjs.gz",
+    "docs/reports/dc004-review-artifacts/compare-output.py.gz",
+    "docs/reports/dc004-review-artifacts/final-check-result.json.gz",
+    "docs/reports/dc004-review-artifacts/final-check.json.gz",
+    "docs/reports/dc004-review-artifacts/final-check.log.gz",
+    "docs/reports/dc004-review-artifacts/final-check.py.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-result.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v2-result.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v2.cjs.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v2.log.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v3-result.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v3.cjs.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v3.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v3.log.gz",
+    "docs/reports/dc004-review-artifacts/live-browser.cjs.gz",
+    "docs/reports/dc004-review-artifacts/live-browser.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser.log.gz",
+    "docs/reports/dc004-review-artifacts/live-dc003-result.json.gz",
+    "docs/reports/dc004-review-artifacts/live-dc003.json.gz",
+    "docs/reports/dc004-review-artifacts/live-dc003.log.gz",
+    "docs/reports/dc004-review-artifacts/main-ci.json.gz",
+    "docs/reports/dc004-review-artifacts/main-ci.log.gz",
+    "docs/reports/dc004-review-artifacts/output-bridge-result.json.gz",
+    "docs/reports/dc004-review-artifacts/output-bridge.json.gz",
+    "docs/reports/dc004-review-artifacts/output-bridge.log.gz",
+    "docs/reports/dc004-review-artifacts/prototype-adjudication-receipt.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-adjudication.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-adjudication.log.gz",
+    "docs/reports/dc004-review-artifacts/prototype-axe-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-axe.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser-result-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser-result.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser-v2.cjs.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser-v2.log.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser.cjs.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser.log.gz",
+    "docs/reports/dc004-review-artifacts/prototype-contrast-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-contrast.json.gz",
+    "docs/reports/dc004-review-artifacts/source-review.json",
+    "docs/reports/dc004-review-artifacts/static-v1.json.gz",
+    "docs/reports/dc004-review-artifacts/static-v1.log.gz",
+    "docs/reports/dc004-review-artifacts/static-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/static-v2.log.gz",
+    "docs/reports/dc004-review-artifacts/static-v3.json.gz",
+    "docs/reports/dc004-review-artifacts/static-v3.log.gz",
+    "docs/screenshots/design-collection/dc004-review/README.md",
+    "docs/screenshots/design-collection/dc004-review/SHA256SUMS",
+    "docs/screenshots/design-collection/dc004-review/heritage-1440.png",
+    "docs/screenshots/design-collection/dc004-review/heritage-375.png",
+    "docs/screenshots/design-collection/dc004/README.md",
+    "docs/screenshots/design-collection/dc004/SHA256SUMS",
+    "docs/screenshots/design-collection/dc004/normal-v1/pdf-heritage/page-1-150dpi.png",
+    "docs/screenshots/design-collection/dc004/normal-v1/pdf-heritage/page-1-300dpi.png",
+    "docs/screenshots/design-collection/dc004/normal-v1/quotation-heritage-worstcase-a4.pdf",
+    "docs/screenshots/design-collection/dc004/normal-v1/quotation-modern-worstcase-a4.pdf",
+    "docs/screenshots/design-collection/dc004/pages-final/contact-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/contact-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/home-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/home-1920.png",
+    "docs/screenshots/design-collection/dc004/pages-final/home-320.png",
+    "docs/screenshots/design-collection/dc004/pages-final/home-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/home-768.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-corporate-website-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-corporate-website-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-showcases-qiangang-windows-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-showcases-qiangang-windows-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/quotation-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/quotation-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/quotation-heritage-worstcase-a4.pdf",
+    "docs/screenshots/design-collection/dc004/pages-final/quotation-modern-worstcase-a4.pdf",
+    "docs/screenshots/design-collection/dc004/pages-final/services-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/services-375.png",
+    "docs/task/README.md",
+    "docs/task/ROADMAP.md",
+    "docs/task/dc004.md",
+    "scripts/build-github-pages.mjs",
+    "scripts/fixtures/design-collection-contract.json",
+    "scripts/smoke-website.py",
+    "scripts/test-design-collection-metadata.mjs",
+    "scripts/test-design-collection-routes.mjs",
+    "src/app/(collection)/design-collection/[style]/about/page.tsx",
+    "src/app/(collection)/design-collection/[style]/contact/page.tsx",
+    "src/app/(collection)/design-collection/[style]/layout.tsx",
+    "src/app/(collection)/design-collection/[style]/page.tsx",
+    "src/app/(collection)/design-collection/[style]/portfolio/[slug]/page.tsx",
+    "src/app/(collection)/design-collection/[style]/portfolio/page.tsx",
+    "src/app/(collection)/design-collection/[style]/portfolio/showcases/[slug]/page.tsx",
+    "src/app/(collection)/design-collection/[style]/quotation/page.tsx",
+    "src/app/(collection)/design-collection/[style]/services/page.tsx",
+    "src/app/(collection)/design-collection/[style]/solutions/page.tsx",
+    "src/app/globals.css",
+    "src/components/design-collection/heritage/heritage-contact.tsx",
+    "src/components/design-collection/heritage/heritage-content-details.tsx",
+    "src/components/design-collection/heritage/heritage-content-shared.tsx",
+    "src/components/design-collection/heritage/heritage-frame.tsx",
+    "src/components/design-collection/heritage/heritage-links.ts",
+    "src/components/design-collection/heritage/heritage-navigation.tsx",
+    "src/components/design-collection/heritage/heritage-pages.tsx",
+    "src/components/design-collection/heritage/heritage-quotation.tsx",
+    "src/components/design-collection/heritage/heritage-route.ts",
+    "src/components/design-collection/heritage/heritage-ui.tsx",
+    "src/components/design-collection/shared/design-collection-gallery.tsx",
+    "src/components/layout/site-footer.tsx",
+    "src/components/sections/contact/contact-inquiry-form.tsx",
+    "src/components/sections/quotation/quotation-estimator.tsx",
+    "src/components/sections/quotation/quotation-summary.tsx",
+    "src/components/sections/quotation/quotation.css",
+    "src/components/sections/services/service-website.tsx",
+    "src/config/design-collection.ts",
+    "src/config/seo.ts",
+    "src/config/services.ts",
+    "src/design-systems/heritage/heritage.css",
+    "src/design-systems/heritage/index.ts"
+  ],
+  "newFiles": [
+    "docs/01_design/design-collection/reviews/heritage-v1-approval.md",
+    "docs/01_design/design-collection/reviews/heritage-v1.html",
+    "docs/01_design/design-collection/reviews/heritage-v1.md",
+    "docs/reports/dc004-artifacts/README.md",
+    "docs/reports/dc004-artifacts/SHA256SUMS",
+    "docs/reports/dc004-artifacts/affected-normal-final.json",
+    "docs/reports/dc004-artifacts/affected-normal-final.log.gz",
+    "docs/reports/dc004-artifacts/affected-normal-v3.json",
+    "docs/reports/dc004-artifacts/affected-normal-v3.log.gz",
+    "docs/reports/dc004-artifacts/archive-manifest.json",
+    "docs/reports/dc004-artifacts/artifact-baseline/baseline.json.gz",
+    "docs/reports/dc004-artifacts/artifact-baseline/scripts/fixtures/contact-contract.json.gz",
+    "docs/reports/dc004-artifacts/artifact-baseline/scripts/fixtures/design-collection-contract.json.gz",
+    "docs/reports/dc004-artifacts/artifact-baseline/scripts/fixtures/quotation-contract.json",
+    "docs/reports/dc004-artifacts/artifact-baseline/scripts/fixtures/showcase-contract.json",
+    "docs/reports/dc004-artifacts/artifact-checker-selftest.json",
+    "docs/reports/dc004-artifacts/artifact-local-check.json.gz",
+    "docs/reports/dc004-artifacts/artifact-local-check.log.gz",
+    "docs/reports/dc004-artifacts/artifact-local-check.receipt.json",
+    "docs/reports/dc004-artifacts/artifact-local-final.json.gz",
+    "docs/reports/dc004-artifacts/artifact-local-final.log.gz",
+    "docs/reports/dc004-artifacts/artifact-local-final.receipt.json",
+    "docs/reports/dc004-artifacts/artifact-prepare.log.gz",
+    "docs/reports/dc004-artifacts/artifact-prepare.receipt.json",
+    "docs/reports/dc004-artifacts/artifact-selftest-final-disposition.json",
+    "docs/reports/dc004-artifacts/artifact-selftest-final/artifact-selftest.log.gz",
+    "docs/reports/dc004-artifacts/artifact-selftest-final/artifact-selftest.receipt.json",
+    "docs/reports/dc004-artifacts/artifact-selftest.log.gz",
+    "docs/reports/dc004-artifacts/artifact-selftest.receipt.json",
+    "docs/reports/dc004-artifacts/baseline-output-files.json.gz",
+    "docs/reports/dc004-artifacts/browser-normal-v1.json",
+    "docs/reports/dc004-artifacts/browser-normal-v1.log.gz",
+    "docs/reports/dc004-artifacts/browser-pages-final.json",
+    "docs/reports/dc004-artifacts/browser-pages-final.log.gz",
+    "docs/reports/dc004-artifacts/build-normal-final.json",
+    "docs/reports/dc004-artifacts/build-normal-final.log.gz",
+    "docs/reports/dc004-artifacts/build-normal-v3.json",
+    "docs/reports/dc004-artifacts/build-normal-v3.log.gz",
+    "docs/reports/dc004-artifacts/build-normal.json",
+    "docs/reports/dc004-artifacts/build-normal.log.gz",
+    "docs/reports/dc004-artifacts/build-pages-v2.json",
+    "docs/reports/dc004-artifacts/build-pages-v2.log.gz",
+    "docs/reports/dc004-artifacts/build-pages.json",
+    "docs/reports/dc004-artifacts/build-pages.log.gz",
+    "docs/reports/dc004-artifacts/builder-helper-v1.json",
+    "docs/reports/dc004-artifacts/builder-helper-v1.log.gz",
+    "docs/reports/dc004-artifacts/builder-helper-v2.json",
+    "docs/reports/dc004-artifacts/builder-helper-v2.log.gz",
+    "docs/reports/dc004-artifacts/catalog-final.json.gz",
+    "docs/reports/dc004-artifacts/catalog.json.gz",
+    "docs/reports/dc004-artifacts/content-parity-review.json.gz",
+    "docs/reports/dc004-artifacts/contract-final-v3.json",
+    "docs/reports/dc004-artifacts/contract-final-v4.json",
+    "docs/reports/dc004-artifacts/contract-final-v5.json",
+    "docs/reports/dc004-artifacts/contract-final.json",
+    "docs/reports/dc004-artifacts/contract.json",
+    "docs/reports/dc004-artifacts/css-disabled-bridge-result.json",
+    "docs/reports/dc004-artifacts/css-disabled-bridge.json",
+    "docs/reports/dc004-artifacts/css-disabled-bridge.log.gz",
+    "docs/reports/dc004-artifacts/ds/contrast.json",
+    "docs/reports/dc004-artifacts/ds/lint-v1.json",
+    "docs/reports/dc004-artifacts/ds/lint-v1.log.gz",
+    "docs/reports/dc004-artifacts/ds/native-v1.json",
+    "docs/reports/dc004-artifacts/ds/native-v1.log.gz",
+    "docs/reports/dc004-artifacts/ds/tsconfig.json",
+    "docs/reports/dc004-artifacts/ds/types-v1.json",
+    "docs/reports/dc004-artifacts/ds/types-v1.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v1-result.json.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v1.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v1.receipt.json",
+    "docs/reports/dc004-artifacts/final-delivery/check-v2-result.json.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v2.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v2.receipt.json",
+    "docs/reports/dc004-artifacts/final-delivery/check-v3-result.json.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v3.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v3.receipt.json",
+    "docs/reports/dc004-artifacts/final-delivery/check-v4-result.json.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v4.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v4.receipt.json",
+    "docs/reports/dc004-artifacts/final-delivery/check-v5-result.json.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v5.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/check-v5.receipt.json",
+    "docs/reports/dc004-artifacts/final-delivery/staged-check-v2.log.gz",
+    "docs/reports/dc004-artifacts/final-delivery/staged-check-v2.receipt.json",
+    "docs/reports/dc004-artifacts/fixture-final.json.gz",
+    "docs/reports/dc004-artifacts/fixture.json.gz",
+    "docs/reports/dc004-artifacts/gallery-slash-builder-freeze.json",
+    "docs/reports/dc004-artifacts/gallery-slash-eslint-v1.json",
+    "docs/reports/dc004-artifacts/gallery-slash-eslint-v1.log.gz",
+    "docs/reports/dc004-artifacts/gallery-slash-helper-v1.json",
+    "docs/reports/dc004-artifacts/gallery-slash-helper-v1.log.gz",
+    "docs/reports/dc004-artifacts/guide-scroll-v3.log.gz",
+    "docs/reports/dc004-artifacts/guide-scroll-v3.receipt.json",
+    "docs/reports/dc004-artifacts/guide-scroll-v3/result.json.gz",
+    "docs/reports/dc004-artifacts/http-normal-final-result.json.gz",
+    "docs/reports/dc004-artifacts/http-normal-final.json",
+    "docs/reports/dc004-artifacts/http-normal-final.log.gz",
+    "docs/reports/dc004-artifacts/http-normal-v1-result.json.gz",
+    "docs/reports/dc004-artifacts/http-normal-v1.json",
+    "docs/reports/dc004-artifacts/http-normal-v1.log.gz",
+    "docs/reports/dc004-artifacts/http-normal-v3-result.json.gz",
+    "docs/reports/dc004-artifacts/http-normal-v3.json",
+    "docs/reports/dc004-artifacts/http-normal-v3.log.gz",
+    "docs/reports/dc004-artifacts/http-pages-final-result.json.gz",
+    "docs/reports/dc004-artifacts/http-pages-final.json",
+    "docs/reports/dc004-artifacts/http-pages-final.log.gz",
+    "docs/reports/dc004-artifacts/http-pages-v2-result.json.gz",
+    "docs/reports/dc004-artifacts/http-pages-v2.json",
+    "docs/reports/dc004-artifacts/http-pages-v2.log.gz",
+    "docs/reports/dc004-artifacts/independent-review.json.gz",
+    "docs/reports/dc004-artifacts/independent-review.md.gz",
+    "docs/reports/dc004-artifacts/lint-final.json",
+    "docs/reports/dc004-artifacts/lint-final.log.gz",
+    "docs/reports/dc004-artifacts/lint.json",
+    "docs/reports/dc004-artifacts/lint.log.gz",
+    "docs/reports/dc004-artifacts/matrix.json.gz",
+    "docs/reports/dc004-artifacts/metadata-native-v1.json",
+    "docs/reports/dc004-artifacts/metadata-native-v1.log.gz",
+    "docs/reports/dc004-artifacts/negative-fixture-disposition.json",
+    "docs/reports/dc004-artifacts/network-normal-passive-final.json",
+    "docs/reports/dc004-artifacts/network-normal-passive-final.log.gz",
+    "docs/reports/dc004-artifacts/network-normal-probe-final.json",
+    "docs/reports/dc004-artifacts/network-normal-probe-final.log.gz",
+    "docs/reports/dc004-artifacts/network-v1-analysis-v2.json.gz",
+    "docs/reports/dc004-artifacts/network-v1-analysis-v2.log.gz",
+    "docs/reports/dc004-artifacts/network-v1-analysis-v2.receipt.json",
+    "docs/reports/dc004-artifacts/network-v1-analysis.json.gz",
+    "docs/reports/dc004-artifacts/network-v1-analysis.log.gz",
+    "docs/reports/dc004-artifacts/network-v1-analysis.receipt.json",
+    "docs/reports/dc004-artifacts/normal-affected-v2/modern-services-1440-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v2/modern-services-1920-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v2/modern-services-320-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v2/modern-services-375-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v2/modern-services-768-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v2/result.json.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/modern-services-1440-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/modern-services-1920-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/modern-services-320-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/modern-services-375-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/modern-services-768-main.html.gz",
+    "docs/reports/dc004-artifacts/normal-affected-v3/result.json.gz",
+    "docs/reports/dc004-artifacts/normal-after-fix-result.json.gz",
+    "docs/reports/dc004-artifacts/normal-after-fix.json",
+    "docs/reports/dc004-artifacts/normal-after-fix.log.gz",
+    "docs/reports/dc004-artifacts/normal-before-fix-result.json.gz",
+    "docs/reports/dc004-artifacts/normal-before-fix.json",
+    "docs/reports/dc004-artifacts/normal-before-fix.log.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/about.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/contact.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__about.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__contact.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__corporate-website.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__enterprise-management.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__integration-hub.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__campaign-website-design.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__honest-diecut.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__hongjia-birdnest.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__march-tangbao.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__qiangang-windows.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__portfolio__showcases__yupinyuan-bento.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__quotation.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__services.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__solutions.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/home.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/manifest.json.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__corporate-website.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__enterprise-management.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__integration-hub.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__campaign-website-design.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__honest-diecut.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__hongjia-birdnest.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__march-tangbao.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__qiangang-windows.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__yupinyuan-bento.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/quotation.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/services.html.gz",
+    "docs/reports/dc004-artifacts/normal-before-html/solutions.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/about.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/contact.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__about.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__contact.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__corporate-website.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__enterprise-management.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__integration-hub.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__campaign-website-design.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__honest-diecut.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__hongjia-birdnest.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__march-tangbao.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__qiangang-windows.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__yupinyuan-bento.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__quotation.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__services.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__solutions.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/home.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__corporate-website.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__enterprise-management.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__integration-hub.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__campaign-website-design.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__honest-diecut.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__hongjia-birdnest.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__march-tangbao.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__qiangang-windows.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__yupinyuan-bento.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/quotation.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/services.html.gz",
+    "docs/reports/dc004-artifacts/normal-final-html/solutions.html.gz",
+    "docs/reports/dc004-artifacts/normal-html-capture.json",
+    "docs/reports/dc004-artifacts/normal-html-capture.log.gz",
+    "docs/reports/dc004-artifacts/normal-output-bridge-result.json.gz",
+    "docs/reports/dc004-artifacts/normal-output-bridge-v2-result.json.gz",
+    "docs/reports/dc004-artifacts/normal-output-bridge-v2.json",
+    "docs/reports/dc004-artifacts/normal-output-bridge-v2.log.gz",
+    "docs/reports/dc004-artifacts/normal-output-bridge.json",
+    "docs/reports/dc004-artifacts/normal-output-bridge.log.gz",
+    "docs/reports/dc004-artifacts/normal-resource-passive-final/result.json.gz",
+    "docs/reports/dc004-artifacts/normal-resource-probe-final/result.json.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage.json",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage.log.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage/page-1-canvas-classification.json",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage/page-1-text-spans.json.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage/page-1-text.txt.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-heritage/verification.json.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern.json",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern.log.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern/page-1-canvas-classification.json",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern/page-1-text-spans.json.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern/page-1-text.txt.gz",
+    "docs/reports/dc004-artifacts/normal-v1/pdf-modern/verification.json.gz",
+    "docs/reports/dc004-artifacts/normal-v1/result.json.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/0mr-7pbzposdm.css.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/1kxqb6a1wzj45.css.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/2kctg0wbp1k3n.css.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/2r1vqhkbbjgpm.css.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/2xzl34nqlhvok.css.gz",
+    "docs/reports/dc004-artifacts/normal-v2-css/manifest.json",
+    "docs/reports/dc004-artifacts/normal-v3-output-result.json.gz",
+    "docs/reports/dc004-artifacts/normal-v3-output.json",
+    "docs/reports/dc004-artifacts/normal-v3-output.log.gz",
+    "docs/reports/dc004-artifacts/npm-ci-final.json",
+    "docs/reports/dc004-artifacts/npm-ci-final.log.gz",
+    "docs/reports/dc004-artifacts/npm-ci.json",
+    "docs/reports/dc004-artifacts/npm-ci.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply-v2.json",
+    "docs/reports/dc004-artifacts/packaging/apply-v2.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply-v3.json",
+    "docs/reports/dc004-artifacts/packaging/apply-v3.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply-v4.json",
+    "docs/reports/dc004-artifacts/packaging/apply-v4.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply-v5.json",
+    "docs/reports/dc004-artifacts/packaging/apply-v5.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply-v6.json",
+    "docs/reports/dc004-artifacts/packaging/apply-v6.log.gz",
+    "docs/reports/dc004-artifacts/packaging/apply.json",
+    "docs/reports/dc004-artifacts/packaging/apply.log.gz",
+    "docs/reports/dc004-artifacts/packaging/dry-run.json",
+    "docs/reports/dc004-artifacts/packaging/dry-run.log.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage.json",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage.log.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage/page-1-canvas-classification.json",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage/page-1-text-spans.json.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage/page-1-text.txt.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-heritage/verification.json.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern.json",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern.log.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern/page-1-canvas-classification.json",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern/page-1-text-spans.json.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern/page-1-text.txt.gz",
+    "docs/reports/dc004-artifacts/pages-final/pdf-modern/verification.json.gz",
+    "docs/reports/dc004-artifacts/pages-final/result.json.gz",
+    "docs/reports/dc004-artifacts/passive-preflight.json",
+    "docs/reports/dc004-artifacts/passive-preflight.log.gz",
+    "docs/reports/dc004-artifacts/passive-preflight.receipt.json",
+    "docs/reports/dc004-artifacts/passive-resource-adjudication.json.gz",
+    "docs/reports/dc004-artifacts/passive-resource-adjudication.log.gz",
+    "docs/reports/dc004-artifacts/passive-resource-adjudication.receipt.json",
+    "docs/reports/dc004-artifacts/private-hosting-helper-v1.json",
+    "docs/reports/dc004-artifacts/private-hosting-helper-v1.log.gz",
+    "docs/reports/dc004-artifacts/qa-snapshot-final.json",
+    "docs/reports/dc004-artifacts/qa-snapshot-final.log.gz",
+    "docs/reports/dc004-artifacts/qa-snapshot.json",
+    "docs/reports/dc004-artifacts/qa-snapshot.log.gz",
+    "docs/reports/dc004-artifacts/routes-native-v1.json",
+    "docs/reports/dc004-artifacts/routes-native-v1.log.gz",
+    "docs/reports/dc004-artifacts/runner-nonzero.json",
+    "docs/reports/dc004-artifacts/runner-nonzero.log.gz",
+    "docs/reports/dc004-artifacts/runner-timeout.json",
+    "docs/reports/dc004-artifacts/runner-timeout.log.gz",
+    "docs/reports/dc004-artifacts/runner-zero.json",
+    "docs/reports/dc004-artifacts/runner-zero.log.gz",
+    "docs/reports/dc004-artifacts/scripts-eslint-v1.json",
+    "docs/reports/dc004-artifacts/scripts-eslint-v1.log.gz",
+    "docs/reports/dc004-artifacts/services-guide-fix.patch.gz",
+    "docs/reports/dc004-artifacts/smoke-gallery-slash-freeze.json",
+    "docs/reports/dc004-artifacts/smoke-gallery-slash-helper-v1.json",
+    "docs/reports/dc004-artifacts/smoke-gallery-slash-helper-v1.log.gz",
+    "docs/reports/dc004-artifacts/smoke-helper-v1.json",
+    "docs/reports/dc004-artifacts/smoke-helper-v1.log.gz",
+    "docs/reports/dc004-artifacts/source-final-v3.json.gz",
+    "docs/reports/dc004-artifacts/source-final-v4.json.gz",
+    "docs/reports/dc004-artifacts/source-final-v5.json.gz",
+    "docs/reports/dc004-artifacts/source-final.json.gz",
+    "docs/reports/dc004-artifacts/source-freeze.json.gz",
+    "docs/reports/dc004-artifacts/source-v4-seal.log.gz",
+    "docs/reports/dc004-artifacts/source-v4-seal.receipt.json",
+    "docs/reports/dc004-artifacts/source-v4-verification.json",
+    "docs/reports/dc004-artifacts/source-v5-seal.log.gz",
+    "docs/reports/dc004-artifacts/source-v5-seal.receipt.json",
+    "docs/reports/dc004-artifacts/source-v5-verification.json",
+    "docs/reports/dc004-artifacts/source.json.gz",
+    "docs/reports/dc004-artifacts/staged-log-format-review.json",
+    "docs/reports/dc004-artifacts/tests-final.json",
+    "docs/reports/dc004-artifacts/tests-final.log.gz",
+    "docs/reports/dc004-artifacts/tests.json",
+    "docs/reports/dc004-artifacts/tests.log.gz",
+    "docs/reports/dc004-artifacts/theme-normal-final.json",
+    "docs/reports/dc004-artifacts/theme-normal-final.log.gz",
+    "docs/reports/dc004-artifacts/theme-normal-final/result.json.gz",
+    "docs/reports/dc004-artifacts/theme-normal-v3.json",
+    "docs/reports/dc004-artifacts/theme-normal-v3.log.gz",
+    "docs/reports/dc004-artifacts/theme-normal-v3/result.json.gz",
+    "docs/reports/dc004-artifacts/theme-pages-final.json",
+    "docs/reports/dc004-artifacts/theme-pages-final.log.gz",
+    "docs/reports/dc004-artifacts/theme-pages-final/result.json.gz",
+    "docs/reports/dc004-artifacts/tool-preparation.json",
+    "docs/reports/dc004-artifacts/tools-preflight.log.gz",
+    "docs/reports/dc004-artifacts/tools-preflight.receipt.json",
+    "docs/reports/dc004-artifacts/tools/analyze-network-v1-v2.py",
+    "docs/reports/dc004-artifacts/tools/analyze-network-v1.py",
+    "docs/reports/dc004-artifacts/tools/artifact-baseline/smoke-website.py.gz",
+    "docs/reports/dc004-artifacts/tools/artifact-checker-selftest.py",
+    "docs/reports/dc004-artifacts/tools/browser-v2.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/browser-v3-passive.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/browser-v4-passive.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/browser.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/builder-selfcheck.mjs",
+    "docs/reports/dc004-artifacts/tools/business-v2.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/business.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/capture-normal-bridge.py",
+    "docs/reports/dc004-artifacts/tools/capture-normal-html.py",
+    "docs/reports/dc004-artifacts/tools/create-routes.py.gz",
+    "docs/reports/dc004-artifacts/tools/css-disabled-bridge.cjs",
+    "docs/reports/dc004-artifacts/tools/ds/check.mjs.gz",
+    "docs/reports/dc004-artifacts/tools/final-check.py.gz",
+    "docs/reports/dc004-artifacts/tools/gallery-slash-selfcheck.mjs",
+    "docs/reports/dc004-artifacts/tools/guide-scroll-probe.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/implementation-docs.py.gz",
+    "docs/reports/dc004-artifacts/tools/inspect-ci-artifact.py.gz",
+    "docs/reports/dc004-artifacts/tools/monitor-v2.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/monitor.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/package-evidence-v2.py.gz",
+    "docs/reports/dc004-artifacts/tools/package-evidence.py.gz",
+    "docs/reports/dc004-artifacts/tools/passive-resource-adjudication.py.gz",
+    "docs/reports/dc004-artifacts/tools/preflight-passive.cjs",
+    "docs/reports/dc004-artifacts/tools/preflight.cjs",
+    "docs/reports/dc004-artifacts/tools/prepare-docs.py.gz",
+    "docs/reports/dc004-artifacts/tools/prepare-source-v4.py",
+    "docs/reports/dc004-artifacts/tools/prepare-source-v5.py",
+    "docs/reports/dc004-artifacts/tools/probe-resource-lifecycle.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/probe-resource-passive.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/retest-affected-v3.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/retest-affected.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/smoke-gallery-slash-selfcheck.py",
+    "docs/reports/dc004-artifacts/tools/smoke-selfcheck.py",
+    "docs/reports/dc004-artifacts/tools/snapshot-final.cjs",
+    "docs/reports/dc004-artifacts/tools/snapshot.cjs",
+    "docs/reports/dc004-artifacts/tools/static-preview.py",
+    "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge-v2.py",
+    "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge.py",
+    "docs/reports/dc004-artifacts/tools/verify-pdf.py.gz",
+    "docs/reports/dc004-artifacts/tools/verify-theme-runtime-v3-passive.cjs.gz",
+    "docs/reports/dc004-artifacts/tools/verify-theme-runtime.cjs.gz",
+    "docs/reports/dc004-artifacts/typecheck-final.json",
+    "docs/reports/dc004-artifacts/typecheck-final.log.gz",
+    "docs/reports/dc004-artifacts/typecheck.json",
+    "docs/reports/dc004-artifacts/typecheck.log.gz",
+    "docs/reports/dc004-artifacts/typegen.json",
+    "docs/reports/dc004-artifacts/typegen.log.gz",
+    "docs/reports/dc004-artifacts/validators-freeze-v1.json",
+    "docs/reports/dc004-artifacts/visual-review.json.gz",
+    "docs/reports/dc004-brand-review.md",
+    "docs/reports/dc004-implementation.md",
+    "docs/reports/dc004-review-artifacts/README.md",
+    "docs/reports/dc004-review-artifacts/SHA256SUMS",
+    "docs/reports/dc004-review-artifacts/adjudicate-prototype.cjs.gz",
+    "docs/reports/dc004-review-artifacts/build-pages.json.gz",
+    "docs/reports/dc004-review-artifacts/build-pages.log.gz",
+    "docs/reports/dc004-review-artifacts/check-prototype-v3.mjs.gz",
+    "docs/reports/dc004-review-artifacts/check-prototype.mjs.gz",
+    "docs/reports/dc004-review-artifacts/compare-output.py.gz",
+    "docs/reports/dc004-review-artifacts/final-check-result.json.gz",
+    "docs/reports/dc004-review-artifacts/final-check.json.gz",
+    "docs/reports/dc004-review-artifacts/final-check.log.gz",
+    "docs/reports/dc004-review-artifacts/final-check.py.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-result.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v2-result.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v2.cjs.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v2.log.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v3-result.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v3.cjs.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v3.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser-v3.log.gz",
+    "docs/reports/dc004-review-artifacts/live-browser.cjs.gz",
+    "docs/reports/dc004-review-artifacts/live-browser.json.gz",
+    "docs/reports/dc004-review-artifacts/live-browser.log.gz",
+    "docs/reports/dc004-review-artifacts/live-dc003-result.json.gz",
+    "docs/reports/dc004-review-artifacts/live-dc003.json.gz",
+    "docs/reports/dc004-review-artifacts/live-dc003.log.gz",
+    "docs/reports/dc004-review-artifacts/main-ci.json.gz",
+    "docs/reports/dc004-review-artifacts/main-ci.log.gz",
+    "docs/reports/dc004-review-artifacts/output-bridge-result.json.gz",
+    "docs/reports/dc004-review-artifacts/output-bridge.json.gz",
+    "docs/reports/dc004-review-artifacts/output-bridge.log.gz",
+    "docs/reports/dc004-review-artifacts/prototype-adjudication-receipt.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-adjudication.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-adjudication.log.gz",
+    "docs/reports/dc004-review-artifacts/prototype-axe-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-axe.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser-result-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser-result.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser-v2.cjs.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser-v2.log.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser.cjs.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-browser.log.gz",
+    "docs/reports/dc004-review-artifacts/prototype-contrast-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/prototype-contrast.json.gz",
+    "docs/reports/dc004-review-artifacts/source-review.json",
+    "docs/reports/dc004-review-artifacts/static-v1.json.gz",
+    "docs/reports/dc004-review-artifacts/static-v1.log.gz",
+    "docs/reports/dc004-review-artifacts/static-v2.json.gz",
+    "docs/reports/dc004-review-artifacts/static-v2.log.gz",
+    "docs/reports/dc004-review-artifacts/static-v3.json.gz",
+    "docs/reports/dc004-review-artifacts/static-v3.log.gz",
+    "docs/screenshots/design-collection/dc004-review/README.md",
+    "docs/screenshots/design-collection/dc004-review/SHA256SUMS",
+    "docs/screenshots/design-collection/dc004-review/heritage-1440.png",
+    "docs/screenshots/design-collection/dc004-review/heritage-375.png",
+    "docs/screenshots/design-collection/dc004/README.md",
+    "docs/screenshots/design-collection/dc004/SHA256SUMS",
+    "docs/screenshots/design-collection/dc004/normal-v1/pdf-heritage/page-1-150dpi.png",
+    "docs/screenshots/design-collection/dc004/normal-v1/pdf-heritage/page-1-300dpi.png",
+    "docs/screenshots/design-collection/dc004/normal-v1/quotation-heritage-worstcase-a4.pdf",
+    "docs/screenshots/design-collection/dc004/normal-v1/quotation-modern-worstcase-a4.pdf",
+    "docs/screenshots/design-collection/dc004/pages-final/contact-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/contact-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/home-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/home-1920.png",
+    "docs/screenshots/design-collection/dc004/pages-final/home-320.png",
+    "docs/screenshots/design-collection/dc004/pages-final/home-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/home-768.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-corporate-website-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-corporate-website-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-showcases-qiangang-windows-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/portfolio-showcases-qiangang-windows-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/quotation-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/quotation-375.png",
+    "docs/screenshots/design-collection/dc004/pages-final/quotation-heritage-worstcase-a4.pdf",
+    "docs/screenshots/design-collection/dc004/pages-final/quotation-modern-worstcase-a4.pdf",
+    "docs/screenshots/design-collection/dc004/pages-final/services-1440.png",
+    "docs/screenshots/design-collection/dc004/pages-final/services-375.png",
+    "docs/task/dc004.md",
+    "src/app/(collection)/design-collection/[style]/about/page.tsx",
+    "src/app/(collection)/design-collection/[style]/contact/page.tsx",
+    "src/app/(collection)/design-collection/[style]/layout.tsx",
+    "src/app/(collection)/design-collection/[style]/page.tsx",
+    "src/app/(collection)/design-collection/[style]/portfolio/[slug]/page.tsx",
+    "src/app/(collection)/design-collection/[style]/portfolio/page.tsx",
+    "src/app/(collection)/design-collection/[style]/portfolio/showcases/[slug]/page.tsx",
+    "src/app/(collection)/design-collection/[style]/quotation/page.tsx",
+    "src/app/(collection)/design-collection/[style]/services/page.tsx",
+    "src/app/(collection)/design-collection/[style]/solutions/page.tsx",
+    "src/components/design-collection/heritage/heritage-contact.tsx",
+    "src/components/design-collection/heritage/heritage-content-details.tsx",
+    "src/components/design-collection/heritage/heritage-content-shared.tsx",
+    "src/components/design-collection/heritage/heritage-frame.tsx",
+    "src/components/design-collection/heritage/heritage-links.ts",
+    "src/components/design-collection/heritage/heritage-navigation.tsx",
+    "src/components/design-collection/heritage/heritage-pages.tsx",
+    "src/components/design-collection/heritage/heritage-quotation.tsx",
+    "src/components/design-collection/heritage/heritage-route.ts",
+    "src/components/design-collection/heritage/heritage-ui.tsx",
+    "src/design-systems/heritage/heritage.css",
+    "src/design-systems/heritage/index.ts"
+  ],
+  "checks": [
+    {
+      "testId": "DC4-FINAL-SOURCE-V5",
+      "testedAt": "2026-11-26T05:39:30.297725+00:00",
+      "environment": "/workspace/xk-website",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "source": "/tmp/xk-dc004/source-final-v5.json",
+        "sourceFileSha256": "514fb11d5d1a965f8f1ec4c2c5079f68983e83e5b3306d45c0d36bb0da4748cd",
+        "files": 197,
+        "fingerprint": "daafeceb4aec69b766f70f5430687d82a11455a9ebc7579ea4f032da85db6a0f",
+        "declaredFingerprint": "daafeceb4aec69b766f70f5430687d82a11455a9ebc7579ea4f032da85db6a0f",
+        "base": "8ba299a5a48da41ca7f4d88d9b2149d7c83f6584",
+        "mismatches": [],
+        "missingFromSourceInventory": [],
+        "absentFromWorkingInventory": []
+      },
+      "status": "PASS"
+    },
+    {
+      "testId": "DC4-FINAL-STACK-WORKFLOW-VERSION-LOCK",
+      "testedAt": "2026-11-26T05:39:30.315636+00:00",
+      "environment": "/workspace/xk-website",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "base": "8ba299a5a48da41ca7f4d88d9b2149d7c83f6584",
+        "files": [
+          "package.json",
+          "package-lock.json",
+          "next.config.ts",
+          "tsconfig.json",
+          ".github/workflows/ci.yml",
+          ".nvmrc"
+        ],
+        "changed": []
+      },
+      "status": "PASS"
+    },
+    {
+      "testId": "DC4-FINAL-DIFF-WHITESPACE",
+      "testedAt": "2026-11-26T05:39:30.330791+00:00",
+      "environment": "/workspace/xk-website",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "exitCode": 0,
+        "output": ""
+      },
+      "status": "PASS"
+    },
+    {
+      "testId": "DC4-FINAL-CHANGED-TEXT-FORMAT",
+      "testedAt": "2026-11-26T05:39:30.380176+00:00",
+      "environment": "/workspace/xk-website",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "inspectedTextFiles": 185,
+        "errors": []
+      },
+      "status": "PASS"
+    },
+    {
+      "testId": "DC4-FINAL-MARKDOWN-LINKS-ANCHORS",
+      "testedAt": "2026-11-26T05:39:30.434807+00:00",
+      "environment": "/workspace/xk-website",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "documents": [
+          "AGENTS.md",
+          "README.md",
+          "docs/01_design/README.md",
+          "docs/01_design/design-collection/reviews/heritage-v1-approval.md",
+          "docs/01_design/design-collection/reviews/heritage-v1.md",
+          "docs/98_decisions/implementation-notes.md",
+          "docs/reports/README.md",
+          "docs/reports/dc004-artifacts/README.md",
+          "docs/reports/dc004-brand-review.md",
+          "docs/reports/dc004-implementation.md",
+          "docs/reports/dc004-review-artifacts/README.md",
+          "docs/screenshots/design-collection/dc004-review/README.md",
+          "docs/screenshots/design-collection/dc004/README.md",
+          "docs/task/README.md",
+          "docs/task/ROADMAP.md",
+          "docs/task/dc004.md"
+        ],
+        "localLinks": 318,
+        "errors": [],
+        "scope": "Changed tracked and untracked Markdown only; target anchors are read without recursively auditing historical documents."
+      },
+      "status": "PASS"
+    },
+    {
+      "testId": "DC4-FINAL-ARTIFACT-MANIFEST",
+      "testedAt": "2026-11-26T05:39:30.476128+00:00",
+      "environment": "/workspace/xk-website",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "directory": "/workspace/xk-website/docs/reports/dc004-artifacts",
+        "listedFiles": 383,
+        "actualFiles": 383,
+        "omittedFiles": [],
+        "extraEntries": [],
+        "errors": []
+      },
+      "status": "PASS"
+    },
+    {
+      "testId": "DC4-FINAL-SCREENSHOT-MANIFEST",
+      "testedAt": "2026-11-26T05:39:30.509823+00:00",
+      "environment": "/workspace/xk-website",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "directory": "/workspace/xk-website/docs/screenshots/design-collection/dc004",
+        "listedFiles": 24,
+        "actualFiles": 24,
+        "omittedFiles": [],
+        "extraEntries": [],
+        "errors": []
+      },
+      "status": "PASS"
+    },
+    {
+      "testId": "DC4-FINAL-OS-RECEIPT-LOG-INTEGRITY",
+      "testedAt": "2026-11-26T05:39:31.216660+00:00",
+      "environment": "/workspace/xk-website",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "receipts": 82,
+        "records": [
+          {
+            "receipt": "affected-normal-final.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "e172736df3beb5772010a1b8024aaf499f73443affa0410ee3a9eb13c72e0014",
+            "matchedLogs": [
+              {
+                "path": "affected-normal-final.log.gz",
+                "sha256": "e172736df3beb5772010a1b8024aaf499f73443affa0410ee3a9eb13c72e0014"
+              }
+            ]
+          },
+          {
+            "receipt": "affected-normal-v3.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "d778b39e382ec4fbcdea788c6f70bc1d1f703164e713cc5be9f3728aa9a07523",
+            "matchedLogs": [
+              {
+                "path": "affected-normal-v3.log.gz",
+                "sha256": "d778b39e382ec4fbcdea788c6f70bc1d1f703164e713cc5be9f3728aa9a07523"
+              }
+            ]
+          },
+          {
+            "receipt": "artifact-local-check.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "8d37a1ee20d28d4f1daeeb9089b8f42d98740bcbc59e42096cf5c308d6ec8ce8",
+            "matchedLogs": [
+              {
+                "path": "artifact-local-check.log.gz",
+                "sha256": "8d37a1ee20d28d4f1daeeb9089b8f42d98740bcbc59e42096cf5c308d6ec8ce8"
+              }
+            ]
+          },
+          {
+            "receipt": "artifact-local-final.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "8d37a1ee20d28d4f1daeeb9089b8f42d98740bcbc59e42096cf5c308d6ec8ce8",
+            "matchedLogs": [
+              {
+                "path": "artifact-local-final.log.gz",
+                "sha256": "8d37a1ee20d28d4f1daeeb9089b8f42d98740bcbc59e42096cf5c308d6ec8ce8"
+              }
+            ]
+          },
+          {
+            "receipt": "artifact-prepare.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "e56d739476a4ffdd2cb388ff991b261b6bc5b11178120fd55836f129e661a4c9",
+            "matchedLogs": [
+              {
+                "path": "artifact-prepare.log.gz",
+                "sha256": "e56d739476a4ffdd2cb388ff991b261b6bc5b11178120fd55836f129e661a4c9"
+              }
+            ]
+          },
+          {
+            "receipt": "artifact-selftest-final/artifact-selftest.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "38a2e11de3cfb3b10c484c3ebfaf89613c7b53c8efe8a47d4a63704c6263bf1e",
+            "matchedLogs": [
+              {
+                "path": "artifact-selftest-final/artifact-selftest.log.gz",
+                "sha256": "38a2e11de3cfb3b10c484c3ebfaf89613c7b53c8efe8a47d4a63704c6263bf1e"
+              }
+            ]
+          },
+          {
+            "receipt": "browser-normal-v1.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "4220557710e66af9bd9f6b02c6bcbf971901e67482868bd0f9e39180f4ac904d",
+            "matchedLogs": [
+              {
+                "path": "browser-normal-v1.log.gz",
+                "sha256": "4220557710e66af9bd9f6b02c6bcbf971901e67482868bd0f9e39180f4ac904d"
+              }
+            ]
+          },
+          {
+            "receipt": "browser-pages-final.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "3dba7e1548a4f82c2166be0589c9276b47489d18e939720d140dcad6eb35418a",
+            "matchedLogs": [
+              {
+                "path": "browser-pages-final.log.gz",
+                "sha256": "3dba7e1548a4f82c2166be0589c9276b47489d18e939720d140dcad6eb35418a"
+              }
+            ]
+          },
+          {
+            "receipt": "build-normal-final.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "f422acb2359a0aaff1ab4711d8683e3542f5ce593d5300dd41f2da30eff8f642",
+            "matchedLogs": [
+              {
+                "path": "build-normal-final.log.gz",
+                "sha256": "f422acb2359a0aaff1ab4711d8683e3542f5ce593d5300dd41f2da30eff8f642"
+              }
+            ]
+          },
+          {
+            "receipt": "build-normal-v3.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "58a59f2885bd0f005b66c26dca1ec03ac4a30489f53997c6bdf236b8e0166622",
+            "matchedLogs": [
+              {
+                "path": "build-normal-v3.log.gz",
+                "sha256": "58a59f2885bd0f005b66c26dca1ec03ac4a30489f53997c6bdf236b8e0166622"
+              }
+            ]
+          },
+          {
+            "receipt": "build-normal.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "046643754381b6994f869aa5516daac70a6c5f6f723ffe8005a0f7f4d920fa9f",
+            "matchedLogs": [
+              {
+                "path": "build-normal.log.gz",
+                "sha256": "046643754381b6994f869aa5516daac70a6c5f6f723ffe8005a0f7f4d920fa9f"
+              }
+            ]
+          },
+          {
+            "receipt": "build-pages-v2.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "bf2e44eb380029b77afa8bc294ccf8325f21153a87dbc11e88ad0aa1f67e1dd7",
+            "matchedLogs": [
+              {
+                "path": "build-pages-v2.log.gz",
+                "sha256": "bf2e44eb380029b77afa8bc294ccf8325f21153a87dbc11e88ad0aa1f67e1dd7"
+              }
+            ]
+          },
+          {
+            "receipt": "build-pages.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "7c3c9068af5d889dac5c377a47659afb69fea75739197198a8a7067fc5e24be6",
+            "matchedLogs": [
+              {
+                "path": "build-pages.log.gz",
+                "sha256": "7c3c9068af5d889dac5c377a47659afb69fea75739197198a8a7067fc5e24be6"
+              }
+            ]
+          },
+          {
+            "receipt": "builder-helper-v1.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "a7054d20e0136079c6612d42be40e68f67ef7906d5fd971e1faee052ad555fbb",
+            "matchedLogs": [
+              {
+                "path": "builder-helper-v1.log.gz",
+                "sha256": "a7054d20e0136079c6612d42be40e68f67ef7906d5fd971e1faee052ad555fbb"
+              }
+            ]
+          },
+          {
+            "receipt": "builder-helper-v2.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "ee696a3e28c50b7c74c15e0e46d7343a0054873dcd34aa934d22505c719281bb",
+            "matchedLogs": [
+              {
+                "path": "builder-helper-v2.log.gz",
+                "sha256": "ee696a3e28c50b7c74c15e0e46d7343a0054873dcd34aa934d22505c719281bb"
+              }
+            ]
+          },
+          {
+            "receipt": "css-disabled-bridge.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "6152de6193b72c3a119b48d2b0264984019feae7e0716be9d06a416748388688",
+            "matchedLogs": [
+              {
+                "path": "css-disabled-bridge.log.gz",
+                "sha256": "6152de6193b72c3a119b48d2b0264984019feae7e0716be9d06a416748388688"
+              }
+            ]
+          },
+          {
+            "receipt": "ds/lint-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "matchedLogs": [
+              {
+                "path": "ds/lint-v1.log.gz",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          },
+          {
+            "receipt": "ds/native-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "96bdf99f7601e84cc496fd45415967cc94330da2b95871c68de369ed807b0f26",
+            "matchedLogs": [
+              {
+                "path": "ds/native-v1.log.gz",
+                "sha256": "96bdf99f7601e84cc496fd45415967cc94330da2b95871c68de369ed807b0f26"
+              }
+            ]
+          },
+          {
+            "receipt": "ds/types-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "matchedLogs": [
+              {
+                "path": "ds/types-v1.log.gz",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          },
+          {
+            "receipt": "final-delivery/check-v1.receipt.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "9bf1c4158f2668500c7b1fd318f87c88cc23fbea2ab9293d97735c0523a14b1e",
+            "matchedLogs": [
+              {
+                "path": "final-delivery/check-v1.log.gz",
+                "sha256": "9bf1c4158f2668500c7b1fd318f87c88cc23fbea2ab9293d97735c0523a14b1e"
+              }
+            ]
+          },
+          {
+            "receipt": "final-delivery/check-v2.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "1a7f7a457a71396b30bc0d9fc095a9af64f69dfaec6246e176505cd5bfeb21d2",
+            "matchedLogs": [
+              {
+                "path": "final-delivery/check-v2.log.gz",
+                "sha256": "1a7f7a457a71396b30bc0d9fc095a9af64f69dfaec6246e176505cd5bfeb21d2"
+              }
+            ]
+          },
+          {
+            "receipt": "final-delivery/check-v3.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "b6a15d7b621e4e04f19db2461e00fc7b4cacdf1c2e17413ab12f23cd1922ffb8",
+            "matchedLogs": [
+              {
+                "path": "final-delivery/check-v3.log.gz",
+                "sha256": "b6a15d7b621e4e04f19db2461e00fc7b4cacdf1c2e17413ab12f23cd1922ffb8"
+              }
+            ]
+          },
+          {
+            "receipt": "final-delivery/check-v4.receipt.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "a88e200ff701885407c570a82f20f9e543c375bbf8b87872e71dcd6f79f114b5",
+            "matchedLogs": [
+              {
+                "path": "final-delivery/check-v4.log.gz",
+                "sha256": "a88e200ff701885407c570a82f20f9e543c375bbf8b87872e71dcd6f79f114b5"
+              }
+            ]
+          },
+          {
+            "receipt": "final-delivery/check-v5.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "ea9417cc3d96311fa7e9e0a37a00528275fad864f4c3a372d0d0c97368934c90",
+            "matchedLogs": [
+              {
+                "path": "final-delivery/check-v5.log.gz",
+                "sha256": "ea9417cc3d96311fa7e9e0a37a00528275fad864f4c3a372d0d0c97368934c90"
+              }
+            ]
+          },
+          {
+            "receipt": "final-delivery/staged-check-v2.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "matchedLogs": [
+              {
+                "path": "final-delivery/staged-check-v2.log.gz",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          },
+          {
+            "receipt": "gallery-slash-eslint-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "matchedLogs": [
+              {
+                "path": "gallery-slash-eslint-v1.log.gz",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          },
+          {
+            "receipt": "gallery-slash-helper-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "398362db05a4a4f201ea80de3f03e3baefd2ec083a722f1ae0c36a4ac2f0acb4",
+            "matchedLogs": [
+              {
+                "path": "gallery-slash-helper-v1.log.gz",
+                "sha256": "398362db05a4a4f201ea80de3f03e3baefd2ec083a722f1ae0c36a4ac2f0acb4"
+              }
+            ]
+          },
+          {
+            "receipt": "guide-scroll-v3.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "4e81f566787109475d8f081921e5a22a2efb0ab8e3782c5f59be4ae632d4174b",
+            "matchedLogs": [
+              {
+                "path": "guide-scroll-v3.log.gz",
+                "sha256": "4e81f566787109475d8f081921e5a22a2efb0ab8e3782c5f59be4ae632d4174b"
+              }
+            ]
+          },
+          {
+            "receipt": "http-normal-final.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "b3df677bb8c285a141ce5984c506881aacec5e0cd122f2f5c78e4045b6b0f4ba",
+            "matchedLogs": [
+              {
+                "path": "http-normal-final.log.gz",
+                "sha256": "b3df677bb8c285a141ce5984c506881aacec5e0cd122f2f5c78e4045b6b0f4ba"
+              }
+            ]
+          },
+          {
+            "receipt": "http-normal-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "649190f1ce5e851cdff5424dadbbcd99d8ffb1853eb3c3a3a32bcd71f3fd1ee5",
+            "matchedLogs": [
+              {
+                "path": "http-normal-v1.log.gz",
+                "sha256": "649190f1ce5e851cdff5424dadbbcd99d8ffb1853eb3c3a3a32bcd71f3fd1ee5"
+              }
+            ]
+          },
+          {
+            "receipt": "http-normal-v3.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "96a8c5152422e878cbc1794b87b5a16fc7cff25c96da295a9de408b37fac0a13",
+            "matchedLogs": [
+              {
+                "path": "http-normal-v3.log.gz",
+                "sha256": "96a8c5152422e878cbc1794b87b5a16fc7cff25c96da295a9de408b37fac0a13"
+              }
+            ]
+          },
+          {
+            "receipt": "http-pages-final.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "350fc8d3eac0c6f07c35e15bb149233820151774997db84055320c1a80cda1fd",
+            "matchedLogs": [
+              {
+                "path": "http-pages-final.log.gz",
+                "sha256": "350fc8d3eac0c6f07c35e15bb149233820151774997db84055320c1a80cda1fd"
+              }
+            ]
+          },
+          {
+            "receipt": "http-pages-v2.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "0227c8c43807f4da6bde722f795e2878c52f98d422564e12c561fa477f1ed92f",
+            "matchedLogs": [
+              {
+                "path": "http-pages-v2.log.gz",
+                "sha256": "0227c8c43807f4da6bde722f795e2878c52f98d422564e12c561fa477f1ed92f"
+              }
+            ]
+          },
+          {
+            "receipt": "lint-final.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "4696703654c92426c8748b7837936df0036098577fdcb7af6f2ee9d9db2e79e6",
+            "matchedLogs": [
+              {
+                "path": "lint-final.log.gz",
+                "sha256": "4696703654c92426c8748b7837936df0036098577fdcb7af6f2ee9d9db2e79e6"
+              }
+            ]
+          },
+          {
+            "receipt": "lint.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "4696703654c92426c8748b7837936df0036098577fdcb7af6f2ee9d9db2e79e6",
+            "matchedLogs": [
+              {
+                "path": "lint.log.gz",
+                "sha256": "4696703654c92426c8748b7837936df0036098577fdcb7af6f2ee9d9db2e79e6"
+              }
+            ]
+          },
+          {
+            "receipt": "metadata-native-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "47814c1cccd66fa8997ad544f0b05b07df139fc13f1fa3ee1c0f1ecc37b80afa",
+            "matchedLogs": [
+              {
+                "path": "metadata-native-v1.log.gz",
+                "sha256": "47814c1cccd66fa8997ad544f0b05b07df139fc13f1fa3ee1c0f1ecc37b80afa"
+              }
+            ]
+          },
+          {
+            "receipt": "network-normal-passive-final.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "88b859da823cfff466eb523fe797e385168df5faf29b83a3017325a11f059b0c",
+            "matchedLogs": [
+              {
+                "path": "network-normal-passive-final.log.gz",
+                "sha256": "88b859da823cfff466eb523fe797e385168df5faf29b83a3017325a11f059b0c"
+              }
+            ]
+          },
+          {
+            "receipt": "network-normal-probe-final.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "2bb24e931a789ee766a4439bc9a09b1b623c4730e876dbdc6992ee8c56daedbb",
+            "matchedLogs": [
+              {
+                "path": "network-normal-probe-final.log.gz",
+                "sha256": "2bb24e931a789ee766a4439bc9a09b1b623c4730e876dbdc6992ee8c56daedbb"
+              }
+            ]
+          },
+          {
+            "receipt": "network-v1-analysis-v2.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "9fe3fb8579c96fc8601d24567a1f7ce93373440e073e7813dd7565092941ded1",
+            "matchedLogs": [
+              {
+                "path": "network-v1-analysis-v2.log.gz",
+                "sha256": "9fe3fb8579c96fc8601d24567a1f7ce93373440e073e7813dd7565092941ded1"
+              }
+            ]
+          },
+          {
+            "receipt": "network-v1-analysis.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "ff390c886b45a47b7e0f1c874ffa7bc2dc8684b8f4e08e6bd2b7d20427f1f631",
+            "matchedLogs": [
+              {
+                "path": "network-v1-analysis.log.gz",
+                "sha256": "ff390c886b45a47b7e0f1c874ffa7bc2dc8684b8f4e08e6bd2b7d20427f1f631"
+              }
+            ]
+          },
+          {
+            "receipt": "normal-after-fix.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "0b975e92b7e4305824bd0078183d2470d323325ce2bd8ef4f8f410a94587d1e4",
+            "matchedLogs": [
+              {
+                "path": "normal-after-fix.log.gz",
+                "sha256": "0b975e92b7e4305824bd0078183d2470d323325ce2bd8ef4f8f410a94587d1e4"
+              }
+            ]
+          },
+          {
+            "receipt": "normal-before-fix.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "354dab9a32347a27862695b2944fcb00e20de3a5cbc86fa64ce3cd7a6645f7e5",
+            "matchedLogs": [
+              {
+                "path": "normal-before-fix.log.gz",
+                "sha256": "354dab9a32347a27862695b2944fcb00e20de3a5cbc86fa64ce3cd7a6645f7e5"
+              }
+            ]
+          },
+          {
+            "receipt": "normal-html-capture.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "96984dffb141b78225f0b14c694a1797024d9cdd04ff43cf7f5f4bd0aeff83c8",
+            "matchedLogs": [
+              {
+                "path": "normal-html-capture.log.gz",
+                "sha256": "96984dffb141b78225f0b14c694a1797024d9cdd04ff43cf7f5f4bd0aeff83c8"
+              }
+            ]
+          },
+          {
+            "receipt": "normal-output-bridge-v2.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "aa1106724715d78ee7003b5c5f3ac9dcf5180e3f77008382be5948c76b36242c",
+            "matchedLogs": [
+              {
+                "path": "normal-output-bridge-v2.log.gz",
+                "sha256": "aa1106724715d78ee7003b5c5f3ac9dcf5180e3f77008382be5948c76b36242c"
+              }
+            ]
+          },
+          {
+            "receipt": "normal-output-bridge.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "d1877093f8fbb6bb2ffcb2243864937b4f2a20241d235662db12d2ca193a6e18",
+            "matchedLogs": [
+              {
+                "path": "normal-output-bridge.log.gz",
+                "sha256": "d1877093f8fbb6bb2ffcb2243864937b4f2a20241d235662db12d2ca193a6e18"
+              }
+            ]
+          },
+          {
+            "receipt": "normal-v1/pdf-heritage.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "20bdc5220a719aab34930bd443e8fa1676a31b61bb5665e0e4d52e52859096fe",
+            "matchedLogs": [
+              {
+                "path": "normal-v1/pdf-heritage.log.gz",
+                "sha256": "20bdc5220a719aab34930bd443e8fa1676a31b61bb5665e0e4d52e52859096fe"
+              }
+            ]
+          },
+          {
+            "receipt": "normal-v1/pdf-modern.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "03ae1107d578b65694b22958637e829ab9552f006be74586189f66439c2142de",
+            "matchedLogs": [
+              {
+                "path": "normal-v1/pdf-modern.log.gz",
+                "sha256": "03ae1107d578b65694b22958637e829ab9552f006be74586189f66439c2142de"
+              }
+            ]
+          },
+          {
+            "receipt": "normal-v3-output.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "017f015bda57589453b38275ba36bf93f15ea2f5af713d5f38e929823c253386",
+            "matchedLogs": [
+              {
+                "path": "normal-v3-output.log.gz",
+                "sha256": "017f015bda57589453b38275ba36bf93f15ea2f5af713d5f38e929823c253386"
+              }
+            ]
+          },
+          {
+            "receipt": "npm-ci-final.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "2a9652daf27ed042d018a045723ae9a8c68415b3b32ae58335f114834d34dda0",
+            "matchedLogs": [
+              {
+                "path": "npm-ci-final.log.gz",
+                "sha256": "2a9652daf27ed042d018a045723ae9a8c68415b3b32ae58335f114834d34dda0"
+              }
+            ]
+          },
+          {
+            "receipt": "npm-ci.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "d3f54cd9d4b744cf9a75d955f195e6a76c7db98de866e669e4d5cdddc3304b94",
+            "matchedLogs": [
+              {
+                "path": "npm-ci.log.gz",
+                "sha256": "d3f54cd9d4b744cf9a75d955f195e6a76c7db98de866e669e4d5cdddc3304b94"
+              }
+            ]
+          },
+          {
+            "receipt": "packaging/apply-v2.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "cd90ea68626a20c1d5138ace1574f02d4aa8fd94d4ff483e5b264224279e8d13",
+            "matchedLogs": [
+              {
+                "path": "packaging/apply-v2.log.gz",
+                "sha256": "cd90ea68626a20c1d5138ace1574f02d4aa8fd94d4ff483e5b264224279e8d13"
+              }
+            ]
+          },
+          {
+            "receipt": "packaging/apply-v3.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "82cb22af1ee5cde076d9f8bee3ffb59233786efc509bd3c876127e9e41c04d5f",
+            "matchedLogs": [
+              {
+                "path": "packaging/apply-v3.log.gz",
+                "sha256": "82cb22af1ee5cde076d9f8bee3ffb59233786efc509bd3c876127e9e41c04d5f"
+              }
+            ]
+          },
+          {
+            "receipt": "packaging/apply-v4.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "e7502c718f8b8b01a762c4009d73989882376dc1aa317517e3b66ef44904af2e",
+            "matchedLogs": [
+              {
+                "path": "packaging/apply-v4.log.gz",
+                "sha256": "e7502c718f8b8b01a762c4009d73989882376dc1aa317517e3b66ef44904af2e"
+              }
+            ]
+          },
+          {
+            "receipt": "packaging/apply-v5.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "77b05f80028516581d38d7becfd9460d7f34d01567e88d2fff6cdd1d6a9a6247",
+            "matchedLogs": [
+              {
+                "path": "packaging/apply-v5.log.gz",
+                "sha256": "77b05f80028516581d38d7becfd9460d7f34d01567e88d2fff6cdd1d6a9a6247"
+              }
+            ]
+          },
+          {
+            "receipt": "packaging/apply-v6.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "984c465a43b8dca0b00b10e718cd548f79741b6c5122b40620c694c4cd16aa02",
+            "matchedLogs": [
+              {
+                "path": "packaging/apply-v6.log.gz",
+                "sha256": "984c465a43b8dca0b00b10e718cd548f79741b6c5122b40620c694c4cd16aa02"
+              }
+            ]
+          },
+          {
+            "receipt": "packaging/apply.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "3788b41c92c10af47288e98b993c98964543cecabf0779a199fa04a6839415af",
+            "matchedLogs": [
+              {
+                "path": "packaging/apply.log.gz",
+                "sha256": "3788b41c92c10af47288e98b993c98964543cecabf0779a199fa04a6839415af"
+              }
+            ]
+          },
+          {
+            "receipt": "packaging/dry-run.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "f28227af5599caa6661f818d5faa259ed4a69977e8be19ffd8ebeb8b808e3b41",
+            "matchedLogs": [
+              {
+                "path": "packaging/dry-run.log.gz",
+                "sha256": "f28227af5599caa6661f818d5faa259ed4a69977e8be19ffd8ebeb8b808e3b41"
+              }
+            ]
+          },
+          {
+            "receipt": "pages-final/pdf-heritage.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "cd49344c2884173d46fd5885f55dcfd75de95afa3bb8ea45b9f83399205fec76",
+            "matchedLogs": [
+              {
+                "path": "pages-final/pdf-heritage.log.gz",
+                "sha256": "cd49344c2884173d46fd5885f55dcfd75de95afa3bb8ea45b9f83399205fec76"
+              }
+            ]
+          },
+          {
+            "receipt": "pages-final/pdf-modern.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "5af4d1568896b3081ca10c2ba6319c544a68c6ed2f108cbaf104c78a485f1d0a",
+            "matchedLogs": [
+              {
+                "path": "pages-final/pdf-modern.log.gz",
+                "sha256": "5af4d1568896b3081ca10c2ba6319c544a68c6ed2f108cbaf104c78a485f1d0a"
+              }
+            ]
+          },
+          {
+            "receipt": "passive-preflight.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "f6628f996b55de1f1e4be388ecec1445099ab49e5f9a51790e7dec67821bdb66",
+            "matchedLogs": [
+              {
+                "path": "passive-preflight.log.gz",
+                "sha256": "f6628f996b55de1f1e4be388ecec1445099ab49e5f9a51790e7dec67821bdb66"
+              }
+            ]
+          },
+          {
+            "receipt": "passive-resource-adjudication.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "39e8ef2526fe6efaeba36e6b769b662a52f79d58d119b2400717dcf313552603",
+            "matchedLogs": [
+              {
+                "path": "passive-resource-adjudication.log.gz",
+                "sha256": "39e8ef2526fe6efaeba36e6b769b662a52f79d58d119b2400717dcf313552603"
+              }
+            ]
+          },
+          {
+            "receipt": "private-hosting-helper-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "afb80afd6f06ab56ff7350b2d907abc335ae7e5ab1366ba871cd809c0994331a",
+            "matchedLogs": [
+              {
+                "path": "private-hosting-helper-v1.log.gz",
+                "sha256": "afb80afd6f06ab56ff7350b2d907abc335ae7e5ab1366ba871cd809c0994331a"
+              }
+            ]
+          },
+          {
+            "receipt": "qa-snapshot-final.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "c7d8da5aa0bcd7b2447236ef65cabeeaa3aa6c946c609ca49101dab6e805f285",
+            "matchedLogs": [
+              {
+                "path": "qa-snapshot-final.log.gz",
+                "sha256": "c7d8da5aa0bcd7b2447236ef65cabeeaa3aa6c946c609ca49101dab6e805f285"
+              }
+            ]
+          },
+          {
+            "receipt": "qa-snapshot.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "da4cb0d8f99b9f79620568ce0424c7cbb5f170ffb561cde14bcfc24be91fdee3",
+            "matchedLogs": [
+              {
+                "path": "qa-snapshot.log.gz",
+                "sha256": "da4cb0d8f99b9f79620568ce0424c7cbb5f170ffb561cde14bcfc24be91fdee3"
+              }
+            ]
+          },
+          {
+            "receipt": "routes-native-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "d3e659d94b120644682cb4ffb810a72fba2f4b0aec1604454ba58b0d299d5227",
+            "matchedLogs": [
+              {
+                "path": "routes-native-v1.log.gz",
+                "sha256": "d3e659d94b120644682cb4ffb810a72fba2f4b0aec1604454ba58b0d299d5227"
+              }
+            ]
+          },
+          {
+            "receipt": "runner-nonzero.json",
+            "status": "FAIL",
+            "exitCode": 7,
+            "logSha256": "1feb5f2183b85d80609d6df9aaceb45c579cfeff2b057ab5760dc975300b9343",
+            "matchedLogs": [
+              {
+                "path": "runner-nonzero.log.gz",
+                "sha256": "1feb5f2183b85d80609d6df9aaceb45c579cfeff2b057ab5760dc975300b9343"
+              }
+            ]
+          },
+          {
+            "receipt": "runner-timeout.json",
+            "status": "FAIL",
+            "exitCode": 124,
+            "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "matchedLogs": [
+              {
+                "path": "runner-timeout.log.gz",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          },
+          {
+            "receipt": "runner-zero.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "3e58e89e399d4dc3656056a932d6e0084d88dd9509397f01cb1fe51ed16b8f35",
+            "matchedLogs": [
+              {
+                "path": "runner-zero.log.gz",
+                "sha256": "3e58e89e399d4dc3656056a932d6e0084d88dd9509397f01cb1fe51ed16b8f35"
+              }
+            ]
+          },
+          {
+            "receipt": "scripts-eslint-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "matchedLogs": [
+              {
+                "path": "scripts-eslint-v1.log.gz",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          },
+          {
+            "receipt": "smoke-gallery-slash-helper-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "d4863b94478df3d762977ee7529e49ea6335f4a13afab843cd04092f8397dbed",
+            "matchedLogs": [
+              {
+                "path": "smoke-gallery-slash-helper-v1.log.gz",
+                "sha256": "d4863b94478df3d762977ee7529e49ea6335f4a13afab843cd04092f8397dbed"
+              }
+            ]
+          },
+          {
+            "receipt": "smoke-helper-v1.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "7793d26801e5388ece41ef9bc2475289d13874e1ee4a258e1d04f4db641a6307",
+            "matchedLogs": [
+              {
+                "path": "smoke-helper-v1.log.gz",
+                "sha256": "7793d26801e5388ece41ef9bc2475289d13874e1ee4a258e1d04f4db641a6307"
+              }
+            ]
+          },
+          {
+            "receipt": "source-v4-seal.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "374f51ce4a2bb559e38e32741b18d51f3c8716163777c3964d3d847f96b07f9c",
+            "matchedLogs": [
+              {
+                "path": "source-v4-seal.log.gz",
+                "sha256": "374f51ce4a2bb559e38e32741b18d51f3c8716163777c3964d3d847f96b07f9c"
+              }
+            ]
+          },
+          {
+            "receipt": "source-v5-seal.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "a5ab17bf0ce4bfeea8a51f4519ca6c783c3a1fee07f1841e7191cf2730c806df",
+            "matchedLogs": [
+              {
+                "path": "source-v5-seal.log.gz",
+                "sha256": "a5ab17bf0ce4bfeea8a51f4519ca6c783c3a1fee07f1841e7191cf2730c806df"
+              }
+            ]
+          },
+          {
+            "receipt": "tests-final.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "d4c44aa665f81706333bbfab3be63dcef4ecb9d73bf2ceb1e42120f897284a26",
+            "matchedLogs": [
+              {
+                "path": "tests-final.log.gz",
+                "sha256": "d4c44aa665f81706333bbfab3be63dcef4ecb9d73bf2ceb1e42120f897284a26"
+              }
+            ]
+          },
+          {
+            "receipt": "tests.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "66410d819cda4d8c94c59d3afe7db9bc26bbb99ee7e690b162b7eeded0fb2acd",
+            "matchedLogs": [
+              {
+                "path": "tests.log.gz",
+                "sha256": "66410d819cda4d8c94c59d3afe7db9bc26bbb99ee7e690b162b7eeded0fb2acd"
+              }
+            ]
+          },
+          {
+            "receipt": "theme-normal-final.json",
+            "status": "FAIL",
+            "exitCode": 1,
+            "logSha256": "a90b736785ff699648e0056bc71922a54523f7f8c438fed5b96206788ea1f120",
+            "matchedLogs": [
+              {
+                "path": "theme-normal-final.log.gz",
+                "sha256": "a90b736785ff699648e0056bc71922a54523f7f8c438fed5b96206788ea1f120"
+              }
+            ]
+          },
+          {
+            "receipt": "theme-normal-v3.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "3feb8a6abe9fea9fd5db29ba53ab07b08239a1ca83a002932b4cfc0cd7ce2d27",
+            "matchedLogs": [
+              {
+                "path": "theme-normal-v3.log.gz",
+                "sha256": "3feb8a6abe9fea9fd5db29ba53ab07b08239a1ca83a002932b4cfc0cd7ce2d27"
+              }
+            ]
+          },
+          {
+            "receipt": "theme-pages-final.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "23d77ffc5c8d96dc41c269945bf5ffbcbbe615e60e1fd04ca6dc3d12e40b92d2",
+            "matchedLogs": [
+              {
+                "path": "theme-pages-final.log.gz",
+                "sha256": "23d77ffc5c8d96dc41c269945bf5ffbcbbe615e60e1fd04ca6dc3d12e40b92d2"
+              }
+            ]
+          },
+          {
+            "receipt": "tools-preflight.receipt.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "3d98bbaff1ca00e85c96934ad276c50c28bb10d4778d9d48bdb6644a14a6f6ae",
+            "matchedLogs": [
+              {
+                "path": "tools-preflight.log.gz",
+                "sha256": "3d98bbaff1ca00e85c96934ad276c50c28bb10d4778d9d48bdb6644a14a6f6ae"
+              }
+            ]
+          },
+          {
+            "receipt": "typecheck-final.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "matchedLogs": [
+              {
+                "path": "typecheck-final.log.gz",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          },
+          {
+            "receipt": "typecheck.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "matchedLogs": [
+              {
+                "path": "typecheck.log.gz",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            ]
+          },
+          {
+            "receipt": "typegen.json",
+            "status": "PASS",
+            "exitCode": 0,
+            "logSha256": "adba4af9194e10e47dda75ff0fd0f8c2b756474896d0eba5612799c527ff372a",
+            "matchedLogs": [
+              {
+                "path": "typegen.log.gz",
+                "sha256": "adba4af9194e10e47dda75ff0fd0f8c2b756474896d0eba5612799c527ff372a"
+              }
+            ]
+          }
+        ],
+        "errors": [],
+        "notes": "Preserved FAIL/TIMEOUT receipts are allowed when complete and hash-verifiable; this check never reclassifies them as successful test runs."
+      },
+      "status": "PASS"
+    },
+    {
+      "testId": "DC4-FINAL-NO-SECRETS-OR-BUILD-DIRS",
+      "testedAt": "2026-11-26T05:39:32.644190+00:00",
+      "environment": "/workspace/xk-website",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "scannedFiles": 493,
+        "suspectedSecretFiles": [],
+        "forbiddenBuildOrEnvironmentPaths": [],
+        "notes": "Pattern scan of changed deliverables, including decompressed gzip evidence; not a claim of exhaustive secret detection."
+      },
+      "status": "PASS"
+    }
+  ],
+  "scopeNotes": [
+    "Read-only repository inspection with optional Git locks disabled. No build/server/browser, dependency installation or repository mutation.",
+    "Only current changed tracked/untracked deliverables are audited; historical Markdown is read only when resolving a current local link.",
+    "Quality and browser outcomes remain their original evidence; receipt integrity is not test acceptance."
+  ]
+}

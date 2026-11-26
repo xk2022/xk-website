@@ -7,13 +7,16 @@ import { services } from "@/config/homepage";
 import { contactNavigation, primaryNavigation, quotationNavigation } from "@/config/navigation";
 import { portfolioProjects } from "@/config/portfolio";
 import { siteConfig } from "@/config/site";
+import { getSeoPage } from "@/config/seo";
 import { brandWebsiteShowcases, showcaseDetailPath } from "@/config/website-showcases";
+import { getPublishedDesignRoutes } from "@/lib/design-collection/routes";
 import { isPrivacyPolicyPublished } from "@/lib/privacy-publication";
 
 const footerLinkStyles =
   "inline-flex min-h-11 items-center rounded-sm text-primary-foreground/80 transition-colors duration-brand ease-brand hover:text-primary-foreground motion-reduce:transition-none";
 
 export function SiteFooter() {
+  const heritageRoutes = getPublishedDesignRoutes().filter(({ styleId }) => styleId === "heritage");
   return (
     <footer className="bg-primary text-primary-foreground [&_a:focus-visible]:outline-primary-foreground">
       <Container className="py-14 sm:py-16">
@@ -80,6 +83,18 @@ export function SiteFooter() {
                 <li key={service.id}>
                   <Link href={`/#service-${service.anchor}`} className={footerLinkStyles}>
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <nav aria-label="Heritage 設計系列目錄" className="min-w-0 sm:col-span-2 lg:col-span-3">
+            <h2 className="type-body mb-4 font-semibold">Heritage 懷舊復古｜同內容設計展示</h2>
+            <ul className="type-body-sm grid gap-x-8 gap-y-1 sm:grid-cols-2 lg:grid-cols-3">
+              {heritageRoutes.map((route) => (
+                <li key={route.presentationPath} className="min-w-0">
+                  <Link href={route.presentationPath} className={`${footerLinkStyles} max-w-full break-words`}>
+                    {getSeoPage(route.canonicalPath).title.split("|")[0]?.trim()}
                   </Link>
                 </li>
               ))}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc004/css-disabled-bridge.cjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:09:06.637694+00:00",
+  "finishedAt": "2026-11-26T05:09:06.843974+00:00",
+  "processId": 72922,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 90.0,
+  "logFile": "/tmp/xk-dc004/css-disabled-bridge.log",
+  "logSha256": "6152de6193b72c3a119b48d2b0264984019feae7e0716be9d06a416748388688",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

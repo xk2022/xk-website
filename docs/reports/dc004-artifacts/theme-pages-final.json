@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc004/verify-theme-runtime-v3-passive.cjs",
+    "pages",
+    "http://127.0.0.1:3243/",
+    "final",
+    "/tmp/xk-dc004/pages-final/result.json",
+    "/tmp/xk-dc004/source-final-v5.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:32:19.378849+00:00",
+  "finishedAt": "2026-11-26T05:32:33.359392+00:00",
+  "processId": 79950,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-dc004/theme-pages-final.log",
+  "logSha256": "23d77ffc5c8d96dc41c269945bf5ffbcbbe615e60e1fd04ca6dc3d12e40b92d2",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

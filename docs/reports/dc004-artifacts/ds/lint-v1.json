@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "command": [
+    "node_modules/.bin/eslint",
+    "src/design-systems/heritage/index.ts",
+    "src/components/design-collection/heritage/heritage-frame.tsx",
+    "src/components/design-collection/heritage/heritage-navigation.tsx",
+    "src/components/design-collection/heritage/heritage-ui.tsx"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:41:02.808682+00:00",
+  "finishedAt": "2026-11-26T04:41:05.531627+00:00",
+  "processId": 67756,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc004/ds/lint-v1.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python",
+    "/tmp/xk-dc004/prepare-source-v4.py"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T05:24:17.552287+00:00",
+  "finishedAt": "2026-11-26T05:24:17.619649+00:00",
+  "processId": 75116,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc004/source-v4-seal.log",
+  "logSha256": "374f51ce4a2bb559e38e32741b18d51f3c8716163777c3964d3d847f96b07f9c",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,20 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/package-evidence-v2.py",
+    "--apply"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:37:46.234810+00:00",
+  "finishedAt": "2026-11-26T05:37:47.555288+00:00",
+  "processId": 80791,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc004-package/apply-v5.log",
+  "logSha256": "77b05f80028516581d38d7becfd9460d7f34d01567e88d2fff6cdd1d6a9a6247",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

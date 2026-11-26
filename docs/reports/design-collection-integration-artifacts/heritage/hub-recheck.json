@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "sourceMain": "4500ccf7c2b6c1bd4b906458f40e688a0fde5a4e",
+  "sourcePath": "src/config/website-showcases.ts",
+  "scope": "Fresh single GET of each five owner-main Hub destinations, normal verified TLS through managed environment proxy. No browser/content or form-submission claim. Previous subdomain404 results remain historical.",
+  "rows": [
+    {
+      "url": "https://showcase.xplorekaleidoscope.com/march-tangbao/",
+      "observedAt": "2026-11-26T09:24:06.890461+00:00",
+      "status": 200,
+      "finalUrl": "https://showcase.xplorekaleidoscope.com/march-tangbao/",
+      "title": "三月手工湯包｜中壢新明市場湯包與私房冷滷味",
+      "bytes": 40600,
+      "sha256": "c5f08404a3a62ad3d2744d6edda7f4e3a6c581f53ce46fc34ff498c892a1b9f0",
+      "headers": {
+        "server": "envoy",
+        "content-type": "text/html; charset=utf-8",
+        "x-github-request-id": "B76C:1297C3:34267:43496:6B07EB29",
+        "date": "Thu, 26 Nov 2026 09:24:07 GMT",
+        "x-cache": "HIT"
+      },
+      "githubPagesNotFound": false
+    },
+    {
+      "url": "https://showcase.xplorekaleidoscope.com/hongjia-birdnest/",
+      "observedAt": "2026-11-26T09:24:06.893278+00:00",
+      "status": 200,
+      "finalUrl": "https://showcase.xplorekaleidoscope.com/hongjia-birdnest/",
+      "title": "宏家燕窩｜親友送禮與企業贈禮｜XK 展示案例",
+      "bytes": 43923,
+      "sha256": "e356142499acaa16b6ec5305d6b2b689cb0691bd6c809885dccc7bce4f1b707a",
+      "headers": {
+        "server": "envoy",
+        "content-type": "text/html; charset=utf-8",
+        "x-github-request-id": "2E62:6582:26A746:29B0F6:6B07FAB6",
+        "date": "Thu, 26 Nov 2026 09:24:07 GMT",
+        "x-cache": "MISS"
+      },
+      "githubPagesNotFound": false
+    },
+    {
+      "url": "https://showcase.xplorekaleidoscope.com/yupinyuan-bento/",
+      "observedAt": "2026-11-26T09:24:06.894002+00:00",
+      "status": 200,
+      "finalUrl": "https://showcase.xplorekaleidoscope.com/yupinyuan-bento/",
+      "title": "御品園港式燒臘｜羅東南門路餐點與團體訂餐詢問｜XK 展示案例",
+      "bytes": 39308,
+      "sha256": "f94128cfe2ee8e429c072e8635a6a90b9edc2a9c4614636b0ad0372c5df16be5",
+      "headers": {
+        "server": "envoy",
+        "content-type": "text/html; charset=utf-8",
+        "x-github-request-id": "6D9C:36C42E:4980A:58CB1:6B07EB2A",
+        "date": "Thu, 26 Nov 2026 09:24:07 GMT",
+        "x-cache": "HIT"
+      },
+      "githubPagesNotFound": false
+    },
+    {
+      "url": "https://showcase.xplorekaleidoscope.com/honest/",
+      "observedAt": "2026-11-26T09:24:06.894729+00:00",
+      "status": 200,
+      "finalUrl": "https://showcase.xplorekaleidoscope.com/honest/",
+      "title": "宏能興業｜模切沖型、保護膜與工業標籤｜XK 展示案例",
+      "bytes": 30058,
+      "sha256": "5bc1f8b3982dd44f0e6137cc487a275f48bfd802ef643494b331eaf5a27b6c11",
+      "headers": {
+        "server": "envoy",
+        "content-type": "text/html; charset=utf-8",
+        "x-github-request-id": "804C:1B7B2A:85087:90149:6B07EB29",
+        "date": "Thu, 26 Nov 2026 09:24:07 GMT",
+        "x-cache": "HIT"
+      },
+      "githubPagesNotFound": false
+    },
+    {
+      "url": "https://showcase.xplorekaleidoscope.com/qiangang-windows/",
+      "observedAt": "2026-11-26T09:24:06.899319+00:00",
+      "status": 200,
+      "finalUrl": "https://showcase.xplorekaleidoscope.com/qiangang-windows/",
+      "title": "千剛實業｜桃園住宅換窗與大園看樣｜XK 提案展示",
+      "bytes": 57928,
+      "sha256": "1c2839a8531bec9fd98e6311fa59623890b0be4e483967c1099158c22b611b05",
+      "headers": {
+        "server": "envoy",
+        "content-type": "text/html; charset=utf-8",
+        "x-github-request-id": "4C2E:CA6FF:2FB53B:3335EF:6B07FAB6",
+        "date": "Thu, 26 Nov 2026 09:24:07 GMT",
+        "x-cache": "MISS"
+      },
+      "githubPagesNotFound": false
+    }
+  ]
+}

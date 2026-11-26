@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "item": "Unmodified frozen local output",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "rejectedAssertions": []
+    },
+    {
+      "item": "Reject Heritage canonical self instead of Modern",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "status": "PASS",
+      "rejectedAssertions": [
+        "/design-collection/heritage/about exact canonical"
+      ]
+    },
+    {
+      "item": "Reject Heritage OG Modern instead of presentation self",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "status": "PASS",
+      "rejectedAssertions": [
+        "/design-collection/heritage/about exact og:url"
+      ]
+    },
+    {
+      "item": "Reject duplicate landmark",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "status": "PASS",
+      "rejectedAssertions": [
+        "/design-collection/heritage/about single complete frame and skip destination"
+      ]
+    },
+    {
+      "item": "Reject extra planned Luxury HTML",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "status": "PASS",
+      "rejectedAssertions": [
+        "Actual HTML inventory is exactly 33 public pages plus known Next error pages",
+        "Entire artifact file inventory matches tested output; only three real BuildID manifest paths normalized",
+        "No private/planned/unknown or review-prototype output paths"
+      ]
+    },
+    {
+      "item": "Reject runtime byte drift",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "status": "PASS",
+      "rejectedAssertions": [
+        "Every runtime/static asset matches tested local raw bytes"
+      ]
+    },
+    {
+      "item": "Reject private draft leaked in JS",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "status": "PASS",
+      "rejectedAssertions": [
+        "Every runtime/static asset matches tested local raw bytes",
+        "All public text including JS/RSC contains no private draft/design-system payload"
+      ]
+    },
+    {
+      "item": "Reject missing referenced/font runtime asset",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "status": "PASS",
+      "rejectedAssertions": [
+        "Entire artifact file inventory matches tested output; only three real BuildID manifest paths normalized",
+        "Every runtime/static asset matches tested local raw bytes"
+      ]
+    },
+    {
+      "item": "Accept manifest directory change for actual BuildID only, with unchanged raw manifest bytes",
+      "expected": "PASS",
+      "actual": "PASS",
+      "status": "PASS",
+      "rejectedAssertions": []
+    },
+    {
+      "item": "Reject manifest byte drift despite permitted directory normalization",
+      "expected": "FAIL",
+      "actual": "FAIL",
+      "status": "PASS",
+      "rejectedAssertions": [
+        "Every runtime/static asset matches tested local raw bytes"
+      ]
+    },
+    {
+      "item": "Reject TAR traversal",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "status": "PASS"
+    },
+    {
+      "item": "Reject TAR symlink",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "status": "PASS"
+    }
+  ],
+  "caseCount": 12,
+  "checkerSha256": "f2ef29c21e89cf122ecbf0e2d044577ba565e74dfb88bc054df74a6ea616789c",
+  "scope": "Offline checker fixtures only; no app build/browser/HTTP/CI execution"
+}
