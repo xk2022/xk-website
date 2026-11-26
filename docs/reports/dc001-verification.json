@@ -1,0 +1,77 @@
+{
+  "testId": "DC001-DOCUMENT-ACCEPTANCE",
+  "status": "PASS",
+  "startedScope": "Documentation only; no runtime or visual test claims",
+  "checkedAt": "2026-11-26T01:07:16.130606+00:00",
+  "base": "8d7d97d33e4b6ee45f32cc75953c0e008c9951d7",
+  "branch": "docs/design-collection-dc001",
+  "environment": {
+    "os": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "node": "v24.22.1"
+  },
+  "counts": {
+    "markdownFiles": 9,
+    "localLinksAndAnchors": 164,
+    "tables": 23,
+    "mermaidStructuralChecks": 2,
+    "sourcePublicRoutes": 16
+  },
+  "plannedArithmetic": {
+    "original": 16,
+    "withGallery": 17,
+    "oneNewSeries": 33,
+    "complete": 49,
+    "layoutCasesPerMode": 245,
+    "websiteScreenshots": 47,
+    "PDFs": 6
+  },
+  "fileSha256": {
+    "AGENTS.md": "2c602c4827d355bea40ed842c23830abf70a5aa1cf711aaf793199abb7ce5564",
+    "README.md": "16403645117c7928060baef70e31f1f8fd407f0434bbc79076415cca0713c630",
+    "docs/design-collection/architecture.md": "144e9800612bad09b2a08bf3a9315e800d9042a16e3adee0e7c092c0cf43d2e7",
+    "docs/design-collection/design-systems.md": "0f32193446728c1b0f7981b34398e9b6cb89b10c70e1b24e6729f979b06a8c57",
+    "docs/design-collection/work-packages.md": "e9b489be04ad380b19cd2e5e76c6c66078df73bac8205416786ad26e16383d66",
+    "docs/implementation-notes.md": "acef29663ed0b587c352286479db1ad499e822ef65b78db8be13976606023fef",
+    "docs/reports/dc001-architecture.md": "852b2626561a29be790d725cb7949a30463e4682ab6c4e1d72ed2b4b267d3fe7",
+    "docs/task/README.md": "3a9ecc30b77103d26ab95b2516073366f9590222a75dd6fe2204138e42b1b26f",
+    "docs/task/dc001.md": "b85ed57a404e53b11388f6d332691c6d0ffe0f5a13510cba01bb8c64e9d2b155"
+  },
+  "gitDiffCheckExit": 0,
+  "nodeSourceImportExit": 0,
+  "issues": [],
+  "limitations": [
+    "Mermaid basic structure/manual review; not a full renderer",
+    "No current-task UI/axe/PDF/browser/performance execution",
+    "PR CI and final artifact evidence are separate stages"
+  ],
+  "receipt": {
+    "status": "PASS",
+    "command": [
+      "python3",
+      "/tmp/xk-dc001/check-docs.py",
+      "/tmp/xk-dc001/doc-check-v2.json"
+    ],
+    "cwd": "/workspace/xk-website",
+    "startedAt": "2026-11-26T01:07:15.949515+00:00",
+    "finishedAt": "2026-11-26T01:07:16.152736+00:00",
+    "processId": 35730,
+    "returnCode": 0,
+    "exitCode": 0,
+    "timeoutSeconds": 120.0,
+    "logFile": "/tmp/xk-dc001/doc-check-v2.log",
+    "logSha256": "605f0b4668d445a9ab62934e79412ae5f53b44dd63ef40c68927501e91c87560",
+    "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+    "terminationReason": "completed",
+    "signal": null
+  },
+  "log": "{\"testId\": \"DC001-DOCUMENT-ACCEPTANCE\", \"status\": \"PASS\", \"counts\": {\"markdownFiles\": 9, \"localLinksAndAnchors\": 164, \"tables\": 23, \"mermaidStructuralChecks\": 2, \"sourcePublicRoutes\": 16}, \"issues\": []}\n",
+  "checkerSha256": "1970a04202f168e1c502e3626ada00f227389634c4236720658b386de5d661ec",
+  "checkerSource": "from pathlib import Path\nfrom urllib.parse import unquote,urlsplit\nimport subprocess,re,json,hashlib,unicodedata,platform,datetime,sys\nroot=Path('/workspace/xk-website');base='8d7d97d33e4b6ee45f32cc75953c0e008c9951d7'\nallowed={'AGENTS.md','README.md','docs/task/README.md','docs/implementation-notes.md','docs/design-collection/architecture.md','docs/design-collection/design-systems.md','docs/design-collection/work-packages.md','docs/task/dc001.md','docs/reports/dc001-architecture.md'}\npaths=set(subprocess.check_output(['git','diff','--name-only',base],cwd=root,text=True).splitlines())|set(subprocess.check_output(['git','ls-files','--others','--exclude-standard'],cwd=root,text=True).splitlines())\nissues=[];link_count=0;tables=0;mermaids=0\nscope=allowed|{'docs/reports/dc001-verification.json'}\nif paths!=scope:issues.append(['scope',sorted(paths-scope),sorted(scope-paths)])\ndef slug(text):\n text=re.sub(r'<[^>]+>','',text).replace('`','').lower();text=''.join(c for c in text if c in '_-' or (not unicodedata.category(c).startswith(('P','S'))));return re.sub(r'\\s','-',text.strip())\ndef anchors(path):\n text=path.read_text();ids=set(re.findall(r'\\bid=\"([^\"]+)\"',text));seen={}\n for line in text.splitlines():\n  m=re.match(r'^#{1,6}\\s+(.+)',line)\n  if m:\n   value=slug(m[1]);i=seen.get(value,0);seen[value]=i+1;ids.add(value+('-'+str(i) if i else ''))\n return ids\nfor name in sorted(allowed):\n p=root/name\n if not p.exists():issues.append([name,'missing']);continue\n data=p.read_bytes();text=data.decode();fence=None;in_mermaid=False;cols=None;mermaid=[]\n if not data.endswith(b'\\n') or data.endswith(b'\\n\\n'):issues.append([name,'EOF'])\n for num,line in enumerate(text.splitlines(),1):\n  if line.rstrip()!=line:issues.append([name,num,'trailing whitespace'])\n  m=re.match(r'^\\s*(`{3,}|~{3,})(.*)',line)\n  if m:\n   if fence is None:fence=m[1];in_mermaid=m[2].strip()=='mermaid';mermaid=[]\n   elif m[1][0]==fence[0] and len(m[1])>=len(fence):\n    if in_mermaid:\n     mermaids+=1\n     if not mermaid or not re.match(r'flowchart (TD|LR)$',mermaid[0]):issues.append([name,'Mermaid header'])\n     source='\\n'.join(mermaid);defined=set(re.findall(r'\\b([A-Za-z][A-Za-z0-9]*)\\[',source));edges=re.findall(r'\\b([A-Za-z][A-Za-z0-9]*)\\s*-->',source)+re.findall(r'-->\\s*([A-Za-z][A-Za-z0-9]*)',source)\n     if not set(edges)<=defined or source.count('[')!=source.count(']') or source.count('\"')%2:issues.append([name,'Mermaid structure'])\n    fence=None;in_mermaid=False\n   continue\n  if fence:\n   if in_mermaid and line.strip():mermaid.append(line.strip())\n   continue\n  if line.startswith('|') and line.endswith('|'):\n   count=len(re.split(r'(?<!\\\\)\\|',line))-2\n   if cols is None:cols=count;tables+=1\n   elif cols!=count:issues.append([name,num,'table columns',cols,count])\n  else:cols=None\n  for link in re.findall(r'\\]\\(([^\\n)]+)\\)',line):\n   if re.match(r'^(https?:|mailto:)',link):continue\n   link_count+=1;target,_,fragment=link.strip('<>').partition('#');target=unquote(target);dest=(p.parent/target) if target else p\n   if not dest.exists():issues.append([name,num,'missing link',link])\n   elif fragment and dest.suffix=='.md' and unquote(fragment) not in anchors(dest):issues.append([name,num,'missing anchor',link])\n if fence:issues.append([name,'unclosed fence'])\narch=(root/'docs/design-collection/architecture.md').read_text();work=(root/'docs/design-collection/work-packages.md').read_text();ds=(root/'docs/design-collection/design-systems.md').read_text()\nfor f in ['src/config/site.ts','src/config/about.ts','src/config/homepage.ts','src/config/services.ts','src/config/service-plans.ts','src/config/solution-showcases.ts','src/config/portfolio.ts','src/config/website-showcases.ts','src/config/contact-inquiry.ts','src/lib/quotation/storage.ts','src/app/layout.tsx','next.config.ts']:\n if not(root/f).is_file():issues.append(['existing path',f])\nfor i in range(1,8):\n if f'id=\"dc00{i}\"' not in work:issues.append(['missing package',i])\nassertions={'original':7+3+6,'withGallery':16+1,'oneNewSeries':16+1+16,'complete':16+1+16+16,'layoutCasesPerMode':49*5,'websiteScreenshots':3*5+3*4*2+2+3*2,'PDFs':3*2}\nif list(assertions.values())!=[16,17,33,49,245,47,6]:issues.append(['count arithmetic'])\nfor s in ['canonicalPath','presentationPath','dynamicParams = false','noindex/nofollow','Sitemap','xk:quotation:v1','@page']:\n if s not in arch:issues.append(['missing contract',s])\nnode=subprocess.run(['node','--input-type=module','-e',\"import {seoPages} from './src/config/seo.ts'; console.log(JSON.stringify(seoPages.filter(p=>p.availability==='public').map(p=>p.path)))\"],cwd=root,capture_output=True,text=True)\nif node.returncode:issues.append(['source import exit',node.returncode])\nelse:\n public=json.loads(node.stdout)\n if len(public)!=16 or any(p.startswith('/design-collection') for p in public):issues.append(['public route inventory',public])\ncheck=subprocess.run(['git','diff','--check'],cwd=root,capture_output=True,text=True)\nif check.returncode:issues.append(['git diff check',check.stdout])\nresult={'testId':'DC001-DOCUMENT-ACCEPTANCE','status':'FAIL' if issues else 'PASS','startedScope':'Documentation only; no runtime or visual test claims','checkedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'base':base,'branch':subprocess.check_output(['git','branch','--show-current'],cwd=root,text=True).strip(),'environment':{'os':platform.platform(),'python':platform.python_version(),'node':subprocess.check_output(['node','--version'],text=True).strip()},'counts':{'markdownFiles':len(allowed),'localLinksAndAnchors':link_count,'tables':tables,'mermaidStructuralChecks':mermaids,'sourcePublicRoutes':len(public) if node.returncode==0 else None},'plannedArithmetic':assertions,'fileSha256':{n:hashlib.sha256((root/n).read_bytes()).hexdigest() for n in sorted(allowed)},'gitDiffCheckExit':check.returncode,'nodeSourceImportExit':node.returncode,'issues':issues,'limitations':['Mermaid basic structure/manual review; not a full renderer','No current-task UI/axe/PDF/browser/performance execution','PR CI and final artifact evidence are separate stages']}\nPath(sys.argv[1]).write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\\n');print(json.dumps({k:result[k] for k in ['testId','status','counts','issues']},ensure_ascii=False));raise SystemExit(1 if issues else 0)\n",
+  "peerReview": {
+    "technical": "PASS after three documented wording fixes; readonly scope",
+    "brand": "PASS; proposed palettes/fonts distinguished from approved company identity",
+    "manualExitCode": "N/A — document review, not process execution"
+  },
+  "scopeNote": "Evidence JSON is excluded from its own Markdown byte manifest to avoid self-referential hashes."
+}
