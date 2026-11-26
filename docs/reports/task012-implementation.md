@@ -189,7 +189,7 @@ Root 實看指定五張與 About 修正前後：焦點可辨、320 換行完整�
 
 - `AGENTS.md`
 - `README.md`
-- `docs/implementation-notes.md`
+- `docs/98_decisions/implementation-notes.md`
 - `docs/reports/about-implementation.md`
 - `docs/reports/brand-design-system.md`
 - `docs/reports/github-pages-deployment.md`

@@ -36,7 +36,7 @@
 
 ### 3.1 Website 來源
 
-完整閱讀 [AGENTS](../../AGENTS.md)、[README](../../README.md)、[任務索引](README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)、[Task 006](task006.md)、[Task 010](task010.md)、[Task 013](task013.md)、[歷史紀錄](../implementation-notes.md)、[Design System](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 指南](../reports/github-pages-deployment.md)。新規格連結不表示功能已執行；Task 013 報告必須於未來實際存在後再引用。
+完整閱讀 [AGENTS](../../AGENTS.md)、[README](../../README.md)、[任務索引](README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)、[Task 006](task006.md)、[Task 010](task010.md)、[Task 013](task013.md)、[歷史紀錄](../98_decisions/implementation-notes.md)、[Design System](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 指南](../reports/github-pages-deployment.md)。新規格連結不表示功能已執行；Task 013 報告必須於未來實際存在後再引用。
 
 下表 Website 來源 Branch 為 `main`，Commit 固定為上述研究基準，保留實際採用與歷史證據界線：
 
@@ -159,7 +159,7 @@ Task 013 提供健康 Vercel Production，Task 014 才處理品牌網域 binding
 | 類型 | 未來允許位置 | 邊界 |
 | --- | --- | --- |
 | 必須新增 | `docs/reports/task014-implementation.md` | 獨立 audit／changeset／授權／回復／DNS／TLS／HTTP／維運報告 |
-| 必要補充 | `README.md`、`docs/implementation-notes.md` | 實際正式網址及操作紀錄，追加歷史而非覆蓋 |
+| 必要補充 | `README.md`、`docs/98_decisions/implementation-notes.md` | 實際正式網址及操作紀錄，追加歷史而非覆蓋 |
 | 證據 | 報告引用的實際安全日誌／截圖位置 | 完整 zone export 與 private verification 資訊在受控位置，不提交 Secrets |
 | 條件式程式變更 | `src/config/site.ts`、既有 Metadata／URL 驗證 | 只有已核准 canonical 政策確需修正時最小調整，與 Task 010 協調，保留各平台回歸 |
 | 外部設定 | 指定 zone record、Vercel Project Domain／redirect | 僅逐筆已核准差異，記錄操作前後及授權；不以整區重建替代 |

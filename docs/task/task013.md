@@ -36,7 +36,7 @@
 
 ### 3.1 Website 來源與現況
 
-完整閱讀 [AGENTS](../../AGENTS.md)、[README](../../README.md)、[任務索引](README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)、[Task 006](task006.md)、[歷史紀錄](../implementation-notes.md)、[Design System](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 指南](../reports/github-pages-deployment.md)。舊報告的缺檔、待審／待部署與測試結果是當時快照，不複製為本次結論。
+完整閱讀 [AGENTS](../../AGENTS.md)、[README](../../README.md)、[任務索引](README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)、[Task 006](task006.md)、[歷史紀錄](../98_decisions/implementation-notes.md)、[Design System](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 指南](../reports/github-pages-deployment.md)。舊報告的缺檔、待審／待部署與測試結果是當時快照，不複製為本次結論。
 
 下表 Website 來源固定於上述研究基準；Branch 為 `main`。Blob 由實際檔案核對，未來執行重新核對版本與差異。
 
@@ -152,7 +152,7 @@ Repository：`xk2022/xplore-kaleidoscope`，Branch：`main`，固定 Commit：`9
 | 類型 | 路徑／位置 | 邊界 |
 | --- | --- | --- |
 | 必須新增 | `docs/reports/task013-implementation.md` | 本任務獨立報告、設定 inventory、授權／部署／回復證據 |
-| 必要補充 | `README.md`、`docs/implementation-notes.md` | 追加實際 Vercel 操作與歷史，不改寫舊結果 |
+| 必要補充 | `README.md`、`docs/98_decisions/implementation-notes.md` | 追加實際 Vercel 操作與歷史，不改寫舊結果 |
 | 必要截圖／日誌 | 報告採用的真實證據位置 | 產生後再建立連結，遮蔽機密；不提交整包 build output |
 | 外部設定 | 經確認的 Vercel Project | 第 6 節審核後的最小設定；不隱藏非 Git 變更 |
 | 條件式程式修復 | 僅實際阻擋部署的設定／程式 | 先記錄問題與必要差異，遵循已安裝文件，保留雙模式；不預設新增 `vercel.json` |

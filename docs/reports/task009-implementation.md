@@ -9,7 +9,7 @@
 - Repository：`xk2022/xk-website`，唯一可寫來源。初始 main 工作目錄乾淨，fresh fetch 後 Base 為 `4c6646fa7e54b1b1e2589615eee82926e9e54d7a`。
 - Feature Branch：`feature/website-privacy-policy`。Task 008 PR #12 已合併，Merge `e77cd8110e110b6405e6bf3ce354ffb041b34c41` 是 Base 祖先；Task 001–008 已合併的九個公開路由全數納入 fresh regression。
 - 本次使用者明確授權開發、驗證文件、Push、PR、CI 成功後合併 main 與確認部署；沒有法律正文核准或新個資蒐集授權。
-- 已完整閱讀當次 [Task 009](../task/task009.md)、根 AGENTS／README、[協作流程](../subagent-workflow.md) 及 implementation notes。Task 001–005、Design System、首頁／About／Services、Pages 指南與 Task 008 的相同 Blob 先前全文閱讀有來源清冊，本輪重新核對版本並重讀相關來源；不把舊測試當本輪驗收。
+- 已完整閱讀當次 [Task 009](../task/task009.md)、根 AGENTS／README、[協作流程](../03_engineering/subagent-workflow.md) 及 implementation notes。Task 001–005、Design System、首頁／About／Services、Pages 指南與 Task 008 的相同 Blob 先前全文閱讀有來源清冊，本輪重新核對版本並重讀相關來源；不把舊測試當本輪驗收。
 - 文件 Repository 僅讀。fresh API 於 `2026-11-19T05:38:23.529Z` 確認 main 仍為 `95ef1275a46ace76e11f668178ca881087483398`，Tree `8bba493a05911a11a7e29d7d01650e9d0e00f3e7`，51／51 Blob bytes 相符。沒有新核准政策、正式主體、權利管道、保存或跨境資料證據。
 
 八份內容來源的完整路徑、固定版本連結、Blob 與採用區段見本報告的結構化證據。它們是商業規劃／模板，不是獲准法律正文：
@@ -214,7 +214,7 @@ Root 以 view_image 實看上面三張及 320／768／1920 px 補圖共六張，
 | 修改 | `AGENTS.md` | Task 009 護欄與驗收範圍 |
 | 修改 | `README.md` | 草案狀態及安全本機預覽方式 |
 | 修改 | `docs/task/README.md` | 追加當前執行紀錄入口，不改歷史快照 |
-| 修改 | `docs/implementation-notes.md` | 追加本次來源、實作與核准界線 |
+| 修改 | `docs/98_decisions/implementation-notes.md` | 追加本次來源、實作與核准界線 |
 | 新增 | `docs/reports/task009-implementation.md` | 本報告 |
 | 新增 | `docs/reports/task009-verification.json` | 版本 map、命令／退出碼、來源、聚合及證據索引 |
 | 新增 | `docs/reports/task009-evidence.json.gz` | 唯一原始文字證據包，不含暫存工具或 build output |

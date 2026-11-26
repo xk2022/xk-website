@@ -2,7 +2,7 @@
 
 版本：DC-001 / v1.0。日期：2026-11-26。狀態：**架構提案，等待 PR 審閱；尚未實作或授權發布新系列**。
 
-本文件與 [三套 Design System](design-systems.md)、[DC-001～DC-007 工作包](work-packages.md) 構成同一份規格。當次交付範圍見 [DC-001 任務](../task/dc001.md)，實際檢查見 [驗證紀錄](../reports/dc001-architecture.md)。
+本文件與 [三套 Design System](design-systems.md)、[DC-001～DC-007 工作包](work-packages.md) 構成同一份規格。當次交付範圍見 [DC-001 任務](../../task/dc001.md)，實際檢查見 [驗證紀錄](../../reports/dc001-architecture.md)。
 
 ## 1. 基準與來源
 

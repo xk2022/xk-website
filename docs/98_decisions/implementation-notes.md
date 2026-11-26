@@ -193,12 +193,12 @@ Task 001 prepares the foundation for design-system work and the later content pa
 
 設計系統頁在 `npm run dev` 可用；production 預設 404，僅在明確設定伺服器端 `XK_DESIGN_SYSTEM_PREVIEW=1` 時開放驗收，且保持 `noindex, nofollow`，不加入網站導覽。
 
-完整 API、來源說明與驗收紀錄見 [品牌設計系統](reports/brand-design-system.md)。Task 002 最終 TypeScript、ESLint（零警告）與 Build 皆通過；五種寬度的首頁及展示頁皆無水平溢出或檢出的 axe WCAG A/AA 違規，鍵盤操作、真實連結、按鈕停用及 reduced-motion 皆通過。production 預設 404 與旗標啟用 200 均已實測；詳細結果與素材比對紀錄列於設計系統指南。
+完整 API、來源說明與驗收紀錄見 [品牌設計系統](../reports/brand-design-system.md)。Task 002 最終 TypeScript、ESLint（零警告）與 Build 皆通過；五種寬度的首頁及展示頁皆無水平溢出或檢出的 axe WCAG A/AA 違規，鍵盤操作、真實連結、按鈕停用及 reduced-motion 皆通過。production 預設 404 與旗標啟用 200 均已實測；詳細結果與素材比對紀錄列於設計系統指南。
 
 
 ## Task 003 歷史更新 — 企業首頁與 Pages 部署準備
 
-Task 003 以 `main` 的 `6feb400996e45e0e9bc285425a99e014f5381057` 為基準建立 `feature/website-homepage`；已實際確認 Task 002 合併成果是該版本祖先。網站目前的 [task003.md](task/task003.md) 明確要求完整企業首頁，優先於 README 舊里程碑表把 Task 003 僅列為 Header／Footer 的描述。原 Task 001 文件已更名為 [task001-implementation-notes.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md)，`task002.md` 是空檔，完整 Task 002 規格為 [task002.zh-TW.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)；本次僅修正引用，不改寫任務原稿或先前驗收紀錄。
+Task 003 以 `main` 的 `6feb400996e45e0e9bc285425a99e014f5381057` 為基準建立 `feature/website-homepage`；已實際確認 Task 002 合併成果是該版本祖先。網站目前的 [task003.md](../task/task003.md) 明確要求完整企業首頁，優先於 README 舊里程碑表把 Task 003 僅列為 Header／Footer 的描述。原 Task 001 文件已更名為 [task001-implementation-notes.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md)，`task002.md` 是空檔，完整 Task 002 規格為 [task002.zh-TW.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)；本次僅修正引用，不改寫任務原稿或先前驗收紀錄。
 
 本次完成七個首頁區塊、正式 Header／Footer、桌面及可操作的手機導覽，延用 Task 002 元件 API、原始 Logo 路徑及暫定狀態。首頁內容與已確認的聯絡管道分開集中管理；目前沒有確認可公開的管道，聯絡區塊保持待確認，服務、品牌介紹與解決方案以真實首頁錨點導覽。未建立完整內頁、Backend、假表單、假案例或統計。
 
@@ -206,12 +206,12 @@ Task 003 以 `main` 的 `6feb400996e45e0e9bc285425a99e014f5381057` 為基準建�
 
 使用者另明確選擇 GitHub Pages 靜態部署，取代本次原先的 Vercel 部署方向。一般 `npm run build` 仍保留 Vercel 相容設定；新增 `build:pages` 輸出已驗證路徑的 `out/`、`.nojekyll`，排除開發驗收路由，並保留 `noindex, nofollow`。Actions 在 PR 執行品質與 Pages 建置，部署僅限 `main`。目前公開 Pages 曾使用舊 Jekyll 工作流程；新工作流程與來源設定是否已啟用，必須以本次最終部署紀錄為準，不能僅因已存在公開網址而宣稱 Next.js 已部署成功。
 
-完整實作紀錄：[首頁實作指南](reports/homepage-implementation.md)；操作方式：[GitHub Pages 部署指南](reports/github-pages-deployment.md)。**Task 003 最終品質、瀏覽器、無障礙、Actions 與部署結果待補**，不得沿用前兩個任務的通過紀錄。
+完整實作紀錄：[首頁實作指南](../reports/homepage-implementation.md)；操作方式：[GitHub Pages 部署指南](../reports/github-pages-deployment.md)。**Task 003 最終品質、瀏覽器、無障礙、Actions 與部署結果待補**，不得沿用前兩個任務的通過紀錄。
 
 
 ## Task 004 歷史更新 — About Us 品牌介紹頁
 
-本次以最新 `main` 的 `833db52344b16a270ef0e9531f33ab1f09b58200` 建立 `feature/website-about-page`。Task 003 已由 PR #3 合併（`0ca0760`）；其 main Actions run `44257982809` 已成功發布，並實際確認公開首頁 HTTP 200 與企業首頁內容。此為前置狀態，不代表 Task 004 的 About 頁已合併或發布。本次依 [Task 004](task/task004.md) 實作，保留目前 GitHub Pages 架構，交付 PR 待審核，不自動合併。
+本次以最新 `main` 的 `833db52344b16a270ef0e9531f33ab1f09b58200` 建立 `feature/website-about-page`。Task 003 已由 PR #3 合併（`0ca0760`）；其 main Actions run `44257982809` 已成功發布，並實際確認公開首頁 HTTP 200 與企業首頁內容。此為前置狀態，不代表 Task 004 的 About 頁已合併或發布。本次依 [Task 004](../task/task004.md) 實作，保留目前 GitHub Pages 架構，交付 PR 待審核，不自動合併。
 
 新增 `/about` 與集中內容設定，呈現九個語意區塊：Hero、Who We Are、Mission、Vision、五類技術能力、五階段工作方式、匿名創辦人介紹、四項服務理念及 CTA。Task 004 明確允許描述創辦人一人全職經營；姓名與照片設定仍為 null，不新增未確認的身分、年資、證照、法人、辦公室或團隊。願景與 AI SaaS 仍以未來方向表達，CTA 回到真實首頁服務與聯絡錨點。
 
@@ -219,12 +219,12 @@ Header／Footer／手機導覽的 About 更新為 `/about`，原首頁 `#about` 
 
 文件 Repository 的最新 main 仍為 `3996730176e4ad7237c66f541d61405f2667934e`；Week 02 與 Logo Tree SHA 均未改變，且只讀不寫。網站 `docs/task/task002.md` 已恢復英文規格（4534 bytes），先前紀錄的空檔狀態僅描述當時版本；繁體中文規格仍保留，AGENTS 已更新目前狀態。Task 001 歷史檔名仍使用 `task001-implementation-notes.md`。
 
-完整內容、來源、檔案清單、截圖與本次品質檢查見 [About Us 實作紀錄](reports/about-implementation.md)。本次 npm ci、TypeScript、ESLint、一般 Build 與 Pages Build 皆 exit 0；加入原稿 `src/app/icon.svg` 後已重跑最終品質與瀏覽器 Suite，About／首頁均 HTTP 200、圖示 200、一般 production 開發頁 404。五種寬度、全部站內連結與錨點、Base Path、Metadata、九個區塊、五類能力、五階段流程及 axe A／AA（含展開的手機選單）全部通過，無水平溢出、JavaScript／Console／Runtime 錯誤或資源失敗；Skip Link、CTA 焦點與 Reduced Motion 0s 亦通過。圖示與提供的 symbol SVG 完全相同，未改畫 Logo 或修改全域 Layout。五份指定截圖已重拍，手機、核心能力、流程與頁尾已人工檢視。axe 結果只涵蓋本次頁面、狀態與自動化規則，不宣稱完成所有輔助科技或完整人工無障礙驗證。Commit 與 PR 以提交紀錄及最終交付報告為準，不預填識別碼，也不自動合併。
+完整內容、來源、檔案清單、截圖與本次品質檢查見 [About Us 實作紀錄](../reports/about-implementation.md)。本次 npm ci、TypeScript、ESLint、一般 Build 與 Pages Build 皆 exit 0；加入原稿 `src/app/icon.svg` 後已重跑最終品質與瀏覽器 Suite，About／首頁均 HTTP 200、圖示 200、一般 production 開發頁 404。五種寬度、全部站內連結與錨點、Base Path、Metadata、九個區塊、五類能力、五階段流程及 axe A／AA（含展開的手機選單）全部通過，無水平溢出、JavaScript／Console／Runtime 錯誤或資源失敗；Skip Link、CTA 焦點與 Reduced Motion 0s 亦通過。圖示與提供的 symbol SVG 完全相同，未改畫 Logo 或修改全域 Layout。五份指定截圖已重拍，手機、核心能力、流程與頁尾已人工檢視。axe 結果只涵蓋本次頁面、狀態與自動化規則，不宣稱完成所有輔助科技或完整人工無障礙驗證。Commit 與 PR 以提交紀錄及最終交付報告為準，不預填識別碼，也不自動合併。
 
 
 ## Task 005 歷史更新 — Services 服務介紹頁
 
-本次以最新 `main` 的 `7a8ea793608c7bec8fa212bfee4b2f24b5cf192e`（加入 Task 005 原稿）建立 `feature/website-services-page`。Task 004 已由 PR #4 合併（`57ad0f2`），其 main Actions run `44264779442` 的 quality、Pages build 與 deploy 均成功，並確認公開 About HTTP 200。這些是本次前置狀態，不代替 Task 005 驗收。[Task 005](task/task005.md) 多處明確要求 `feature/website-services-page`，結尾 `feature/website-task005` 僅為建議，因此採前者。
+本次以最新 `main` 的 `7a8ea793608c7bec8fa212bfee4b2f24b5cf192e`（加入 Task 005 原稿）建立 `feature/website-services-page`。Task 004 已由 PR #4 合併（`57ad0f2`），其 main Actions run `44264779442` 的 quality、Pages build 與 deploy 均成功，並確認公開 About HTTP 200。這些是本次前置狀態，不代替 Task 005 驗收。[Task 005](../task/task005.md) 多處明確要求 `feature/website-services-page`，結尾 `feature/website-task005` 僅為建議，因此採前者。
 
 本次 Services 內容以五類服務與十個區塊組成：Hero、Overview、Website、Java、Integration & Database、AI & Automation、Cloud & Infrastructure、服務組合、五階段合作流程與 CTA。文案及明確 TypeScript 型別集中於 `src/config/services.ts`，各區塊重用既有 Design System，預設為 Server Components。共用導覽更新為 `/services`；首頁既有 `/#services`、`/#service-{anchor}` 與 Maintenance 分類保留，服務明細內頁仍未公開。
 
@@ -232,7 +232,7 @@ Header／Footer／手機導覽的 About 更新為 `/about`，原首頁 `#about` 
 
 GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validator 以驗證 `out/services/index.html`、Base Path、Metadata、noindex／nofollow，同時保留首頁／About 及開發路由保護。正式聯絡方式仍待確認，不建立假表單、無效 mailto、服務價格或未確認的維運保證。
 
-完整來源、元件分工、檔案清單及驗收結果見 [Services 實作紀錄](reports/services-implementation.md)。320px 人工檢查發現 Hero 固定方形裁切標語，改為 sm:aspect-square 後已完整重驗；npm ci、TypeScript、ESLint（零警告）、一般 Build 與 Pages Build 均 exit 0。本次一般 Next.js 的三頁、開發頁保護、Disabled 與鍵盤計數／重設均實測正常。Fresh 靜態 Suite 結果 PASS：五寬三頁共 15 個 Responsive Case、18 次 axe（含三個展開選單）零 A／AA 違規，21 個站內目標與實際跨頁點擊正常，23 個 CSS／JS／字體／圖示全 200。十區塊、五類完整技術清單、五組合、五流程、Metadata、noindex／nofollow、Base Path、404、`.nojekyll` 與開發頁排除均通過；Skip Link、可見 Focus、Reduced Motion 0s、選單 Escape／焦點／外部點擊／斷點關閉亦通過，無非預期 Console／Runtime／Network Error。375px 觸控與 2x 裝置模式也已檢查，七張指定 PNG 已產出。人工視覺通過：320／375px Hero 全標語未裁切、Logo 192 × 192、CTA 不重疊，375px 概覽五卡／垂直流程與 Integration＋AI 圖均清楚、間距一致且標籤無溢出，1440px Hero／Website／組合／流程與 Integration＋AI 亦正常；axe 範圍與人工視覺範圍詳列於報告，不宣稱完整無障礙認證。以上為 Task 005 本次驗收，不沿用先前任務結果；遠端 run、Commit 與 PR 以本次 PR Checks、提交紀錄及最終交付報告為準，不預填識別碼、不自動合併或發布 main。
+完整來源、元件分工、檔案清單及驗收結果見 [Services 實作紀錄](../reports/services-implementation.md)。320px 人工檢查發現 Hero 固定方形裁切標語，改為 sm:aspect-square 後已完整重驗；npm ci、TypeScript、ESLint（零警告）、一般 Build 與 Pages Build 均 exit 0。本次一般 Next.js 的三頁、開發頁保護、Disabled 與鍵盤計數／重設均實測正常。Fresh 靜態 Suite 結果 PASS：五寬三頁共 15 個 Responsive Case、18 次 axe（含三個展開選單）零 A／AA 違規，21 個站內目標與實際跨頁點擊正常，23 個 CSS／JS／字體／圖示全 200。十區塊、五類完整技術清單、五組合、五流程、Metadata、noindex／nofollow、Base Path、404、`.nojekyll` 與開發頁排除均通過；Skip Link、可見 Focus、Reduced Motion 0s、選單 Escape／焦點／外部點擊／斷點關閉亦通過，無非預期 Console／Runtime／Network Error。375px 觸控與 2x 裝置模式也已檢查，七張指定 PNG 已產出。人工視覺通過：320／375px Hero 全標語未裁切、Logo 192 × 192、CTA 不重疊，375px 概覽五卡／垂直流程與 Integration＋AI 圖均清楚、間距一致且標籤無溢出，1440px Hero／Website／組合／流程與 Integration＋AI 亦正常；axe 範圍與人工視覺範圍詳列於報告，不宣稱完整無障礙認證。以上為 Task 005 本次驗收，不沿用先前任務結果；遠端 run、Commit 與 PR 以本次 PR Checks、提交紀錄及最終交付報告為準，不預填識別碼、不自動合併或發布 main。
 
 
 ## Task 006 歷史更新 — Solutions 解決方案介紹頁
@@ -247,7 +247,7 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 
 原兩次Pages 工具 FAIL 保留：logical href Base Path 預期錯判，以及 HEAD 事件分類器的空URL解析。以原始Promise／CDP／Next source／後續 tree GET 交叉證明 165 個 HEAD 實際成功 200；僅符合精確條件才分類，其他錯誤仍 FAIL。修工具後全套重驗 Exit 0；app 程式碼指紋全程相同，沒有以改產品 prefetch、跳過測試或刪除錯誤換取通過。安裝時既有 ESLint deprecated 提示保留，未升降級套件。
 
-正式實作／驗證與失敗重驗證據見 [Task 006 報告](reports/task006-implementation.md) 及 [結構化驗證紀錄](reports/task006-verification.json)。此紀錄截止於建立 PR 前；真實 Commit／PR／CI 與後續 main 部署／公開站結果須在實際發生後補入報告與同PR交付紀錄，不能由本機結果或過去任務推定。
+正式實作／驗證與失敗重驗證據見 [Task 006 報告](../reports/task006-implementation.md) 及 [結構化驗證紀錄](../reports/task006-verification.json)。此紀錄截止於建立 PR 前；真實 Commit／PR／CI 與後續 main 部署／公開站結果須在實際發生後補入報告與同PR交付紀錄，不能由本機結果或過去任務推定。
 
 
 ## Task 007 歷史更新 — Portfolio 技術作品集
@@ -264,7 +264,7 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 
 初輪一般模式的工具 lang 誤判及 favicon GET 失敗、初輪 Pages 的 3 GET＋1 HEAD 分類失敗均保留原 FAIL。favicon 首輪缺少足夠資料追認原因；新增實際圖示 body／SHA 與等待後，完整一般重驗零資源失敗。Pages 工具的 resize 後立即導航造成 prefetch 競態，另有跨 document 借用 tree 的配對缺陷；修正等待與嚴格來源邊界後完整重驗，沒有新增 GET 忽略清單、停用產品 prefetch 或改產品碼換取 PASS。啟動與停止伺服器的環境限制及真實退出碼亦單獨記錄。
 
-七張指定 PNG 與 320／375px 補充圖已實際人工檢視，最終 35 候選圖與首輪完全同 SHA，正式七圖依原 bytes 複製。完整報告：[Task 007 實作與驗證](reports/task007-implementation.md)；逐項結果：[驗證摘要](reports/task007-verification.json)；100 份原始 JSON：[壓縮證據](reports/task007-evidence.json.gz)，還原 SHA 100/100。此紀錄截止於 PR 前本機交付；真實 Commit／PR／CI、授權合併、main 部署及公開網址結果分階段於報告與同 PR 最新交付紀錄確認，不預填識別碼或推定已部署。
+七張指定 PNG 與 320／375px 補充圖已實際人工檢視，最終 35 候選圖與首輪完全同 SHA，正式七圖依原 bytes 複製。完整報告：[Task 007 實作與驗證](../reports/task007-implementation.md)；逐項結果：[驗證摘要](../reports/task007-verification.json)；100 份原始 JSON：[壓縮證據](../reports/task007-evidence.json.gz)，還原 SHA 100/100。此紀錄截止於 PR 前本機交付；真實 Commit／PR／CI、授權合併、main 部署及公開網址結果分階段於報告與同 PR 最新交付紀錄確認，不預填識別碼或推定已部署。
 
 
 ## Task 008 歷史更新 — Contact 聯絡資訊頁
@@ -277,7 +277,7 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 
 最終程式碼指紋為 `42c8e5bf5b069f643981fdef2741cd530cd55809123c744c24ded3d2c2a4c62b`。初次 npm ci 因預設 cache 路徑無法建立而 FAIL／Exit 254，原始紀錄保留；改用 `/tmp` npm cache 後重驗 Exit 0，後續 TypeScript、零警告 ESLint、一般 Build、Pages Build 均 Exit 0。一般 production 九頁 fresh 驗收 27/27 PASS，39 unique 站內目的地／345 link occurrences、28 資源 GET 200，沒有提交、外部收件、Cookie／Storage 寫入或 raw browser failures；未知路由與 dev 頁 404。Pages validator 只追加 Contact，原八頁／資源／404／.nojekyll／dev payload 保護完整保留。
 
-最終 Pages 全套重驗 148 項＝141 PASS＋7 有據 N/A、實際 Exit 0；九頁五寬45case、48次axe零違規、39個站內目的地／345個連結、147 個資源 GET 200、506 個原始 HEAD 事件依同document與來源嚴格分類，非預期錯誤0。首輪Pages在touch尚PENDING即提早結束，缺completion code，原snapshot、kernel觀察0與實際工具exit未知分開保存，不追認PASS；獨立touch診斷及加入keepalive／有界trace後全套重驗均Exit0，未改產品碼。七指定PNG與窄版／fixture補圖已產生，Root 實看前一 epoch 22 張，最終七張重新拍攝並以實際 bytes／SHA 橋接相同畫面，另有獨立視覺覆核；沒有把合成管道當公開或收件證據。完整本次來源、資料流、檔案清單、失敗修正及驗收紀錄見 [Task 008 實作與驗證報告](reports/task008-implementation.md)。本機、PR CI、Review、授權 merge、main CI、部署與公開網址分階段記錄，不以資訊頁 HTTP 200 或本機建置成功當作已能收件或已正式部署。
+最終 Pages 全套重驗 148 項＝141 PASS＋7 有據 N/A、實際 Exit 0；九頁五寬45case、48次axe零違規、39個站內目的地／345個連結、147 個資源 GET 200、506 個原始 HEAD 事件依同document與來源嚴格分類，非預期錯誤0。首輪Pages在touch尚PENDING即提早結束，缺completion code，原snapshot、kernel觀察0與實際工具exit未知分開保存，不追認PASS；獨立touch診斷及加入keepalive／有界trace後全套重驗均Exit0，未改產品碼。七指定PNG與窄版／fixture補圖已產生，Root 實看前一 epoch 22 張，最終七張重新拍攝並以實際 bytes／SHA 橋接相同畫面，另有獨立視覺覆核；沒有把合成管道當公開或收件證據。完整本次來源、資料流、檔案清單、失敗修正及驗收紀錄見 [Task 008 實作與驗證報告](../reports/task008-implementation.md)。本機、PR CI、Review、授權 merge、main CI、部署與公開網址分階段記錄，不以資訊頁 HTTP 200 或本機建置成功當作已能收件或已正式部署。
 
 最後完整 staged Diff 發現一個新元件 EOF 多餘空行，僅移除一個 LF；保留原 5dfa8be441c40d2c447a25fd05bce494e4d8ba0290bd21fb3e22630960c8c964 與新 42c8e5bf5b069f643981fdef2741cd530cd55809123c744c24ded3d2c2a4c62b 兩 epoch，不將舊結果改標新版本。最終五品質與普通／Pages 重新完整驗收均實際 Exit 0；文件檢查同步覆蓋 staged／unstaged 及完整 main 比較。
 
@@ -285,9 +285,9 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 
 使用者於 2026-11-19 要求檢視前次作業習慣、留下可沿用的 subagent 紀錄並優化後續任務，指定 `feature/subagent` 及完成後合併 main。本次從乾淨的 `main@e77cd8110e110b6405e6bf3ce354ffb041b34c41` 建立分支；授權只適用本次流程改善，不延伸為後續任務的發布許可。
 
-新增 [Subagent 協作與驗證流程](subagent-workflow.md)，記錄 Task 008 的真實 cache／退出紀錄／格式檢查／重驗與交接問題。後續以當次規格為準、按需要分工、Root 一次編排 build／server／交付、freeze 前收斂完整 Diff，再依變更影響選擇重驗；不靠 fingerprint 變動自動決定整套重跑。AGENTS 加入必讀入口與執行規則，README 增加導覽，不改舊 Task 規格或歷史報告。
+新增 [Subagent 協作與驗證流程](../03_engineering/subagent-workflow.md)，記錄 Task 008 的真實 cache／退出紀錄／格式檢查／重驗與交接問題。後續以當次規格為準、按需要分工、Root 一次編排 build／server／交付、freeze 前收斂完整 Diff，再依變更影響選擇重驗；不靠 fingerprint 變動自動決定整套重跑。AGENTS 加入必讀入口與執行規則，README 增加導覽，不改舊 Task 規格或歷史報告。
 
-新增 [run-with-evidence.py](../scripts/run-with-evidence.py)，僅用 Python 標準函式庫，將真實 OS wait 結果、命令、時間及 stdout／stderr SHA 寫入原子回執與獨立 log；保留 child returnCode 與 wrapper exitCode 的差異。拒絕覆寫現有證據，逾時／信號只清理本次建立的 process group。receipt 的 PASS 僅表示程序成功退出，驗收仍須核對 Required 項目、結束標記、數量與版本。
+新增 [run-with-evidence.py](../../scripts/run-with-evidence.py)，僅用 Python 標準函式庫，將真實 OS wait 結果、命令、時間及 stdout／stderr SHA 寫入原子回執與獨立 log；保留 child returnCode 與 wrapper exitCode 的差異。拒絕覆寫現有證據，逾時／信號只清理本次建立的 process group。receipt 的 PASS 僅表示程序成功退出，驗收仍須核對 Required 項目、結束標記、數量與版本。
 
 已實際執行 14 項工具檢查，整體 Exit 0：成功 0、真失敗 7、timeout 124／無存活子程序、覆寫拒絕 2、缺少 executable 127、wrapper 受信號 143（即使 child 自行 Exit 0 仍 FAIL）、child signal 原 returnCode -15，以及非法 timeout 拒絕。預期的非零退出是測試輸入，未將其原始 FAIL 回執改為 PASS；工具契約符合預期的測試才判 PASS。完整原始結果暫存於 `/tmp/xk-subagent-workflow/`，PR 記錄最終檢查與遠端實際結果。
 
@@ -303,7 +303,7 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 
 Pages builder 以既有 Node.js 24 原生讀取 typed data，強制停用預覽旗標、排除草案 HTML／payload，並掃描公開文字及 JS 的草案內容與轉義形式；保留全部九頁、資源、404、.nojekyll、noindex 與 dev 排除。核准狀態仍須同版本真實 Owner／法律審查；結構 guard 不能證明法律核准。package／lockfile、Next／Tailwind 設定、workflow、品牌素材及 DNS 未變。
 
-實際品質指令、一般／受控預覽／Pages 驗收、工具失敗與修正重驗、三張真實草案截圖、資料流清冊及 Owner／法律／Hosting 待確認責任見 [Task 009 實作與驗證](reports/task009-implementation.md)。測試使用本輪程式碼 map 指紋，沒有以舊任務結果代填；法律正式發布與核准正式頁持續 BLOCKED，不宣稱 Task 009 全部完成。PR CI、授權合併、main CI、部署與公開 URL 各階段實際結果於同 PR 紀錄補充，不增加只記錄自身 SHA 的循環提交。
+實際品質指令、一般／受控預覽／Pages 驗收、工具失敗與修正重驗、三張真實草案截圖、資料流清冊及 Owner／法律／Hosting 待確認責任見 [Task 009 實作與驗證](../reports/task009-implementation.md)。測試使用本輪程式碼 map 指紋，沒有以舊任務結果代填；法律正式發布與核准正式頁持續 BLOCKED，不宣稱 Task 009 全部完成。PR CI、授權合併、main CI、部署與公開 URL 各階段實際結果於同 PR 紀錄補充，不增加只記錄自身 SHA 的循環提交。
 
 ## Task 010 — SEO 保護模式
 
@@ -317,9 +317,9 @@ robots 允許讀取 public HTML 的 noindex，依 Base Path 排除 dev 與 draft
 
 審閱期間提早修正 robots helper 的 Base Path 相容性，保留既有 `. ~` unreserved 字元並拒絕純 dot segment，在正式 baseline 前完成。原文與可見渲染契約有獨立 source 比對；本輪十組 helper 測試實際 Exit 0，包含外站／Query／Fragment／traversal 拒絕、未知 route、不可覆蓋保護、robots 與 JSON-LD closing-script 安全。其餘實測依本次報告記錄，不沿用歷史 PASS。
 
-正式 Sitemap、index release 與 GSC 在前置不足時保持待辦／gate BLOCKED；這不阻擋規格指定的保護模式交付。Owner／期限／fallback、候選與排除、生成規則及操作界線見 [SEO 操作指南](seo-operations.md)。遠端 PR、CI、合併、main 部署與公開驗收只在實際發生後補同 PR，不做只記錄自身 SHA 的循環提交。
+正式 Sitemap、index release 與 GSC 在前置不足時保持待辦／gate BLOCKED；這不阻擋規格指定的保護模式交付。Owner／期限／fallback、候選與排除、生成規則及操作界線見 [SEO 操作指南](../04_deployment/seo-operations.md)。遠端 PR、CI、合併、main 部署與公開驗收只在實際發生後補同 PR，不做只記錄自身 SHA 的循環提交。
 
-本次五個品質指令、普通／隔離草案／Pages 網站驗收均首輪真 Exit 0；九頁五寬 45 case、48 次 axe、實際 HTTP／head／robots／Schema、完整 Context 前後快照與機器產物有本輪證據。沒有可見 UI 改動，不提交新正式截圖；Root 另實看本輪五寬代表頁 QA 圖。完整逐項結果、工具原始 EPERM 與修正、版本及限制見 [Task 010 實作與驗證](reports/task010-implementation.md)。
+本次五個品質指令、普通／隔離草案／Pages 網站驗收均首輪真 Exit 0；九頁五寬 45 case、48 次 axe、實際 HTTP／head／robots／Schema、完整 Context 前後快照與機器產物有本輪證據。沒有可見 UI 改動，不提交新正式截圖；Root 另實看本輪五寬代表頁 QA 圖。完整逐項結果、工具原始 EPERM 與修正、版本及限制見 [Task 010 實作與驗證](../reports/task010-implementation.md)。
 
 ## Task 011 — Performance 效能量測與字體 CSS 最佳化
 
@@ -331,7 +331,7 @@ robots 允許讀取 public HTML 的 noindex，依 Base Path 排除 dev 與 draft
 
 完成版本的 npm ci、TypeScript、ESLint、一般 Build、Pages Build 均真 Exit 0。普通 QA 18／18 PASS；Pages 33 PASS＋1 有據 Disabled N/A、45 responsive／48 axe 零違規，25 contexts 皆實際取得 after snapshot，159 資源成功、387 個 HEAD 原始事件嚴格分類、unexpected 0。兩張網站 PNG 與另外三種寬度視口已由 Root 實看；頁面圖不是效能 metric 或 DevTools UI。初輪 Header／gzip 與 nomodule checker 工具 FAIL、服務清理與環境探測限制均保留，修正僅定向重驗，沒有假 PASS 或無關網站重跑。
 
-獨立 [Task 011 實作與驗證](reports/task011-implementation.md)、[量測指南](performance-measurement.md) 與 [原始證據操作說明](reports/task011-artifacts/README.md) 記錄完整版本、全部 runs／範圍、來源、失敗／重驗與限制。19 個 Required 驗收通過，field CWV／真機仍 Optional PENDING；缺 field 資料不開放索引或新增資料蒐集。後續實際 Commit／PR／CI／merge／main 部署及公開網址結果依協作流程更新同 PR 說明，不從本機通過推定已部署。
+獨立 [Task 011 實作與驗證](../reports/task011-implementation.md)、[量測指南](../03_engineering/performance-measurement.md) 與 [原始證據操作說明](../reports/task011-artifacts/README.md) 記錄完整版本、全部 runs／範圍、來源、失敗／重驗與限制。19 個 Required 驗收通過，field CWV／真機仍 Optional PENDING；缺 field 資料不開放索引或新增資料蒐集。後續實際 Commit／PR／CI／merge／main 部署及公開網址結果依協作流程更新同 PR 說明，不從本機通過推定已部署。
 
 ### Task 011 CI artifact 來源修正
 
@@ -347,7 +347,7 @@ robots 允許讀取 public HTML 的 noindex，依 Base Path 排除 dev 與 draft
 
 最小修正為 MobileNavigation 的 wrapper focus-leave 關閉、Footer 九頁完整「網站目錄」、十二個 Hero／CTA 的既有 foreground Token，以及 About 品牌卡片移除比例高度限制、讓內容自然撐高。沒有更換色票／Logo／字體或增加依賴、表單、API、搜尋／Sitemap、追蹤及部署設定。
 
-九頁五寬、axe 2／2.1／實際 2.2 工具支援、所有 55 項 A／AA 適用性、真實 Orca／Chromium／Linux、原生 Chrome 200% 縮放、320 CSS px、文字間距、對比、指標取消與 Reduced Motion 各有當次證據。About 後續修正依明確影響重驗，原版本不改稱新版本；五個品質指令重新執行。完整數值、Exit Code、版本對應、最終結果、Known Issues 與五張真實截圖見 [Task 012 實作與驗證](reports/task012-implementation.md) 及 [證據說明](reports/task012-artifacts/README.md)，不宣稱完整無障礙認證。
+九頁五寬、axe 2／2.1／實際 2.2 工具支援、所有 55 項 A／AA 適用性、真實 Orca／Chromium／Linux、原生 Chrome 200% 縮放、320 CSS px、文字間距、對比、指標取消與 Reduced Motion 各有當次證據。About 後續修正依明確影響重驗，原版本不改稱新版本；五個品質指令重新執行。完整數值、Exit Code、版本對應、最終結果、Known Issues 與五張真實截圖見 [Task 012 實作與驗證](../reports/task012-implementation.md) 及 [證據說明](../reports/task012-artifacts/README.md)，不宣稱完整無障礙認證。
 
 main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Markdown 的 118 個 href，保留正文／標題／舊驗收紀錄。已刪除的 alternate originals 仍有 14 個歷史連結缺口，保留固定版本參考並列限制，不復原使用者移除的檔案；`docs/reports/implementation-notes.md` 是舊前綴快照，沒有覆蓋根目錄完整歷史。
 
@@ -357,7 +357,7 @@ main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Mark
 
 從 fresh fetch、乾淨的 `main@97886abba03d358fef7853eb85360f4a84c5d751` 建立 `feature/website-vercel-deployment`，Task 012 已合併。使用者本次授權開發、驗證、Push、PR、CI 通過後合併及確認部署；尚未指定 Vercel Team／Account／Project，因此依 Task 013 第 2、6 節完成本機相容性與可審閱設定，外部階段保留 PENDING，沒有探測管理員 session 或憑證。文案 PR #18 尚未合併，保持獨立，未把未核准變更當成 main。
 
-文件 Repository 最新 main 為 `9d0ed1282a6cf07bbaccdbf47f0220c37038080e`，僅唯讀。新 Week 03 文件區分官網現有 Pages 與 AI 產品前端的 Vercel 候選方向；本次明確 Task 013 指示可繼續官網 Vercel 相容性與設定準備，但不撤銷 Pages，也不建立 AI 產品或 Backend。來源版本及差異詳見 [Task 013 報告](reports/task013-implementation.md)。
+文件 Repository 最新 main 為 `9d0ed1282a6cf07bbaccdbf47f0220c37038080e`，僅唯讀。新 Week 03 文件區分官網現有 Pages 與 AI 產品前端的 Vercel 候選方向；本次明確 Task 013 指示可繼續官網 Vercel 相容性與設定準備，但不撤銷 Pages，也不建立 AI 產品或 Backend。來源版本及差異詳見 [Task 013 報告](../reports/task013-implementation.md)。
 
 既有普通 build 預設無 export／Base Path，Node 24.x、Next.js preset、root `.`、npm ci／一般 build／預設 output 已符合設定契約；沒有證據需要額外 vercel.json、新 dependencies、CLI 發布管線或套件／lockfile 變更。Env 審查補上 Task 009 後新增的 `XK_PRIVACY_PREVIEW`：Vercel Preview 與 Production 均不得啟用，預覽名稱不代表可公開法律草案。
 
@@ -371,35 +371,35 @@ main 的文件搬移造成相對連結失效，本次機械式校正 22 份 Mark
 
 本次改善首頁 Hero 的企業價值、技術作品入口、五服務卡的需求／方案／可規劃交付與真實服務連結、技術分類卡及 Why 整合價值。首頁三個方案連至現有 Solutions registry 的四篇詳解之一，詳解新增條件式交付方向與相關自製展示計畫；狀態讀 Portfolio registry，AI/n8n 後續方向明示尚未實作。沒有新增路由、Backend、依賴或假聯絡管道，也未整合獨立文案 PR #18。
 
-驗收與真實七張截圖見 [Bugfix 001–008 報告](reports/bugfix001-008-implementation.md)。Root 管 build／server／Git，首頁實作、來源audit與驗收工具分開 ownership，正式指令依序執行，失敗與人工候選不由 collector exit0 代填通過。PR／main CI／Pages 部署及公開 HTTP 的後續真實事件更新同一 PR，不用新提交記錄自身 SHA。
+驗收與真實七張截圖見 [Bugfix 001–008 報告](../reports/bugfix001-008-implementation.md)。Root 管 build／server／Git，首頁實作、來源audit與驗收工具分開 ownership，正式指令依序執行，失敗與人工候選不由 collector exit0 代填通過。PR／main CI／Pages 部署及公開 HTTP 的後續真實事件更新同一 PR，不用新提交記錄自身 SHA。
 
 ## 網站展示與範例整合
 
 以 main `614fb6dac0b170efd28f7441a6cf097a560d8f24` 建立 `feature/website-showcase-gallery`。依使用者提供八個網站與本次確認的資訊架構，擴充現有 Portfolio，新增四個品牌情境展示、四個第三方模板範例與八張實際 WebP 預覽；首頁精選三個產業案例，Services 與數位品牌 Solutions 導向兩個作品分類。既有九個公開路由、三個 Planned 技術專案、noindex/nofollow、Privacy/Contact 保護、套件與部署流程保持既有契約。
 
-來源頁面標示自製展示／模擬，不能因使用者口語稱「實際案例」就轉為客戶交付或成效宣稱。Demo002 背景與 Demo003 Logo 的上游缺圖於卡片提醒；Demo001 聯絡區背景缺圖記於報告。未修改其他 Repository；模板署名與真實截圖來源保留。完整驗收、限制與截圖見 [網站展示整合報告](reports/website-showcases-implementation.md)。
+來源頁面標示自製展示／模擬，不能因使用者口語稱「實際案例」就轉為客戶交付或成效宣稱。Demo002 背景與 Demo003 Logo 的上游缺圖於卡片提醒；Demo001 聯絡區背景缺圖記於報告。未修改其他 Repository；模板署名與真實截圖來源保留。完整驗收、限制與截圖見 [網站展示整合報告](../reports/website-showcases-implementation.md)。
 
 ## 品牌展示排序與新增
 
-依使用者順序調整六筆品牌展示，新增 XK 一頁式網站建置服務推廣預覽。門窗來源回應 404 且 main 僅 README，使用者確認先顯示準備中；採型別約束空連結／空圖片與純文字狀態，沒有虛構品牌或上線。既有四模板、首頁三精選、三 Planned 與保護政策保留。驗收與後續見 [品牌展示排序與新增紀錄](reports/brand-showcase-order-implementation.md)。
+依使用者順序調整六筆品牌展示，新增 XK 一頁式網站建置服務推廣預覽。門窗來源回應 404 且 main 僅 README，使用者確認先顯示準備中；採型別約束空連結／空圖片與純文字狀態，沒有虛構品牌或上線。既有四模板、首頁三精選、三 Planned 與保護政策保留。驗收與後續見 [品牌展示排序與新增紀錄](../reports/brand-showcase-order-implementation.md)。
 
 ## BF-009～BF-016 官網改善
 
 本次以 main f2c8091 為基準，納入尚未發布的清單文件後建立 bugfix/009-016-website-refinements。使用者明確授權實作、Push／PR／CI 後合併與部署確認。改善中性品牌文案、啟用千剛提案、六品牌站內詳頁、性質標籤與原生收合；問題模板只供參考，來源外站仍需另案修補。
 
-15 公開路由維持 protected SEO，原三個 Planned 專案資料未改；Contact 實際渠道與 Privacy／正式索引資料仍缺，分別記 BLOCKED，不以合併指示代填核准。共用 smoke 與獨立 fixture 供後續重跑，不加 npm 依賴。變更、工具失敗及人工候選的最終判定見 [本輪報告](reports/bf009-016-implementation.md)；發布缺口見 [正式發布前置清單](publication-readiness.md)。
+15 公開路由維持 protected SEO，原三個 Planned 專案資料未改；Contact 實際渠道與 Privacy／正式索引資料仍缺，分別記 BLOCKED，不以合併指示代填核准。共用 smoke 與獨立 fixture 供後續重跑，不加 npm 依賴。變更、工具失敗及人工候選的最終判定見 [本輪報告](../reports/bf009-016-implementation.md)；發布缺口見 [正式發布前置清單](../04_deployment/publication-readiness.md)。
 
 ## 2026-11-23 自訂網域根路徑修正
 
-使用者指定 https://www.xplorekaleidoscope.com/ 為對外網址，修正既有 /xk-website 資源 404。集中正式 Origin 與空 Base Path，Pages 明確空 Asset Prefix，圖片／robots 移除舊 Repo fallback；workflow 對 provider 網域與空路徑先驗證，不再把 Repo 路徑直接注入 build。維持普通 Next.js 與靜態匯出、原 UI／內容／依賴、noindex、草案與無收件表單；分享圖／Sitemap 尚未發布。操作見 [自訂網域部署指南](custom-domain-deployment.md)，實際測試／版本／限制見 [本輪報告](reports/custom-domain-assets-2026-11-23.md)。
+使用者指定 https://www.xplorekaleidoscope.com/ 為對外網址，修正既有 /xk-website 資源 404。集中正式 Origin 與空 Base Path，Pages 明確空 Asset Prefix，圖片／robots 移除舊 Repo fallback；workflow 對 provider 網域與空路徑先驗證，不再把 Repo 路徑直接注入 build。維持普通 Next.js 與靜態匯出、原 UI／內容／依賴、noindex、草案與無收件表單；分享圖／Sitemap 尚未發布。操作見 [自訂網域部署指南](../04_deployment/custom-domain-deployment.md)，實際測試／版本／限制見 [本輪報告](../reports/custom-domain-assets-2026-11-23.md)。
 
 ## 首頁詢價入口
 
-Hero、桌面導覽、手機選單與底部 CTA 共用依正式管道可用性派生的詢價入口。目前沒有可公開收件管道，按鈕清楚標為「詢價前準備」，導向既有三項準備指南；真實管道確認後才顯示「立即詢價」。使用者第 2 項尚未填寫，不自行擴張功能。來源、實際驗收與未完成條件見 [首頁詢價動線報告](reports/homepage-inquiry-cta.md)。
+Hero、桌面導覽、手機選單與底部 CTA 共用依正式管道可用性派生的詢價入口。目前沒有可公開收件管道，按鈕清楚標為「詢價前準備」，導向既有三項準備指南；真實管道確認後才顯示「立即詢價」。使用者第 2 項尚未填寫，不自行擴張功能。來源、實際驗收與未完成條件見 [首頁詢價動線報告](../reports/homepage-inquiry-cta.md)。
 
 ## Email 詢價、方案與展示子網域
 
-延續首頁詢價分支，由使用者提供 system.xk2022@gmail.com 作為公開商務聯絡，CTA 開啟靜態郵件需求範本，不代寄或宣稱送達。Contact改為寄出摘要、需求釐清、方案報價三步，另有人工回覆範本；未操作 Gmail 設定。新增三個網站方案方向與個別報價因素，未採未核准的建議價格。六品牌連結改用來源Pages設定與 HTTP 200 核對的各案子網域，沒有把NXDOMAIN 的 usecase 候選寫成有效連結。完整範圍與驗收見 [本輪報告](reports/contact-plans-usecase.md)。
+延續首頁詢價分支，由使用者提供 system.xk2022@gmail.com 作為公開商務聯絡，CTA 開啟靜態郵件需求範本，不代寄或宣稱送達。Contact改為寄出摘要、需求釐清、方案報價三步，另有人工回覆範本；未操作 Gmail 設定。新增三個網站方案方向與個別報價因素，未採未核准的建議價格。六品牌連結改用來源Pages設定與 HTTP 200 核對的各案子網域，沒有把NXDOMAIN 的 usecase 候選寫成有效連結。完整範圍與驗收見 [本輪報告](../reports/contact-plans-usecase.md)。
 
 ## Contact 需求整理表單
 
@@ -407,11 +407,11 @@ Hero、桌面導覽、手機選單與底部 CTA 共用依正式管道可用性�
 
 先完成可用的本地需求整理：四欄驗證、錯誤摘要、預覽、完整複製與郵件草稿，仍由訪客自行寄出。Hero 提供明確填寫入口，商務 Email 支援真實複製與手動 fallback；保留全站原詢價連結及六個 Contact 區塊錨點，另加入 `contact-form`。靜態守門僅對指定草稿表單開例外，其餘頁仍禁止收件表單；沒有新 Backend、第三方、依賴、儲存或公開法律政策。
 
-直接線上送出不是本地草稿流程的完成項目，端點／資料契約與真實驗收仍待確認。實際命令、瀏覽器、截圖、失敗／重驗與 Git 狀態見 [Contact 表單報告](reports/contact-inquiry-form.md)，不沿用前輪 merge 授權。
+直接線上送出不是本地草稿流程的完成項目，端點／資料契約與真實驗收仍待確認。實際命令、瀏覽器、截圖、失敗／重驗與 Git 狀態見 [Contact 表單報告](../reports/contact-inquiry-form.md)，不沿用前輪 merge 授權。
 
 ## 2026-11-25 XK-ESTIMATOR — 方案試算審閱版本
 
-本輪以 `main@eaadead716f9a277b93aedc10e6fe234f1cc813a` 為網站基準，在 `feature/quotation-estimator` 新增 `/quotation`，規格見 [XK-ESTIMATOR V1](task/quotation-estimator-v1.md)。功能供訪客整理服務、建置、附加項目與需求程度，區分一次性、年度、第三方費用及待估項目；摘要、郵件草稿與 A4 列印不構成正式報價、訂單、付款或送達證據。既有 Contact 的實際收件界線與未公開 Privacy 保護繼續適用。
+本輪以 `main@eaadead716f9a277b93aedc10e6fe234f1cc813a` 為網站基準，在 `feature/quotation-estimator` 新增 `/quotation`，規格見 [XK-ESTIMATOR V1](../task/quotation-estimator-v1.md)。功能供訪客整理服務、建置、附加項目與需求程度，區分一次性、年度、第三方費用及待估項目；摘要、郵件草稿與 A4 列印不構成正式報價、訂單、付款或送達證據。既有 Contact 的實際收件界線與未公開 Privacy 保護繼續適用。
 
 公司來源只讀固定於 `5be640ab11811b24706101ea13db73185e9ce4d8`，以正式 `doc/01_company`、`02_services`、`03_brand`、`04_engineering` 等路徑為準。公司根目錄 `AGENTS.md` 回應 404，完整 tree 亦無同名檔案，沒有建立替代文件或改動公司 Repository。公司／服務／定價等十二份指定文件全文與 Blob 已核對；來源重點集中於 quotation config 的最小 commit/blob/section 註記及本輪報告，不複製公司全文、內部時薪或營收模型。
 
@@ -421,14 +421,14 @@ Hero、桌面導覽、手機選單與底部 CTA 共用依正式管道可用性�
 
 本輪在 `/quotation` 範圍使用正式品牌色與既有 Logo 03，頁面標示 XK SYSTEM；公司正文仍保留 Xplore Kaleidoscope／XK，不推論法定名稱變更，也不全站換色。原生 radio／checkbox 是試算頁的限定控制項例外；唯一保存 key `xk:quotation:v1` 只存版本及選項 ID，稱呼／專案名留在頁面記憶體，不進入網址、紀錄、QR 或網路請求。
 
-此處記錄開發審閱快照：完整品質、一般／Pages 瀏覽器、A4 PDF 與 QR 驗收均以 [試算實作報告](reports/quotation-estimator-v1.md) 的實際證據為準，不由功能或測試指令存在推定通過。交付目標為 Draft PR 與 CI，待人工驗收及價格審閱；未發生的 PR 識別碼、最終 SHA、人工核准、合併與正式部署不預填，未發布本輪分支。
+此處記錄開發審閱快照：完整品質、一般／Pages 瀏覽器、A4 PDF 與 QR 驗收均以 [試算實作報告](../reports/quotation-estimator-v1.md) 的實際證據為準，不由功能或測試指令存在推定通過。交付目標為 Draft PR 與 CI，待人工驗收及價格審閱；未發生的 PR 識別碼、最終 SHA、人工核准、合併與正式部署不預填，未發布本輪分支。
 
 ## 2026-11-26 DC-001 — Design Collection 架構提案
 
 網站基準 `main@8d7d97d33e4b6ee45f32cc75953c0e008c9951d7` 已包含正式發布的試算頁；較早的待審文字保留為當時快照。公司 main 重新核對仍為 `5be640ab11811b24706101ea13db73185e9ce4d8`，正式品牌五文件補讀，工程／發布四文件核對；其餘同版本已讀來源沿用固定紀錄。公司 AGENTS 缺檔與三系列未有既定正式規範的限制如實記錄，不修改該 Repository。
 
-[DC-001](task/dc001.md) 僅提出架構、獨立設計規範及七個工作包，沒有改動 runtime、首頁、服務／試算價格、路由、資產、依賴、workflow 或 DNS。Modern 保留原 16 個公開頁面；Gallery 與 Heritage／Luxury 的完整同資訊架構以 17／33／49 頁分階段規劃，尚未實作，不提前放入公開導覽。
+[DC-001](../task/dc001.md) 僅提出架構、獨立設計規範及七個工作包，沒有改動 runtime、首頁、服務／試算價格、路由、資產、依賴、workflow 或 DNS。Modern 保留原 16 個公開頁面；Gallery 與 Heritage／Luxury 的完整同資訊架構以 17／33／49 頁分階段規劃，尚未實作，不提前放入公開導覽。
 
 新系列各自編排 shell、Hero、服務、作品與 CTA，資料及 Contact／Quotation 核心共用；參考／面議／年度費用及個資界線不因風格改變。正式 Logo／公司事實保持，新增 palette／字體及展示外框適用範圍明列為待審提案。單一技術 root layout、Modern route-group 相容搬移、同內容 Modern canonical 與展示版 OG URL 分離、風格 URL 切換、404／CSS／print／state 風險及驗收均列入後續工作包。
 
-文件及實際檢查見 [DC-001 驗證紀錄](reports/dc001-architecture.md)。此輪交付 PR 等待審閱，不沿用前輪 merge／deploy 授權；網站功能、視覺、47 張截圖與六份 PDF 是後續功能包的驗收要求，不當作這次已執行結果。
+文件及實際檢查見 [DC-001 驗證紀錄](../reports/dc001-architecture.md)。此輪交付 PR 等待審閱，不沿用前輪 merge／deploy 授權；網站功能、視覺、47 張截圖與六份 PDF 是後續功能包的驗收要求，不當作這次已執行結果。

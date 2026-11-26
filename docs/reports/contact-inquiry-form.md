@@ -73,8 +73,8 @@
 ```text
 AGENTS.md
 README.md
-docs/contact-response-workflow.md
-docs/implementation-notes.md
+docs/02_operations/contact-response-workflow.md
+docs/98_decisions/implementation-notes.md
 docs/reports/contact-inquiry-artifacts/README.md
 docs/reports/contact-inquiry-artifacts/evidence.json.gz
 docs/reports/contact-inquiry-artifacts/manifest.json

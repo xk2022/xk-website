@@ -1,6 +1,6 @@
 # Task 011 原始量測證據
 
-判讀、範圍與限制見 [實作報告](../task011-implementation.md) 與 [量測指南](../../performance-measurement.md)。數據及逐項測試見 `measurements.json`、`verification.json`；完整來源與 SHA 見 `manifest.json`。
+判讀、範圍與限制見 [實作報告](../task011-implementation.md) 與 [量測指南](../../03_engineering/performance-measurement.md)。數據及逐項測試見 `measurements.json`、`verification.json`；完整來源與 SHA 見 `manifest.json`。
 
 `evidence.json.xz` 使用 Python 標準函式庫 LZMA／XZ 無損壓縮，以 `xk-performance-evidence-v1` 保存本次工具、profile、全部已選取原始 runs、Lighthouse JSON／HTML、trace、Network、Coverage、Observer、回執與 Log。它不是部署產物，不包含 `.next/`、`out/`、node_modules、npm cache 或機密。
 
@@ -39,7 +39,7 @@ print("Verified", len(record["files"]), "members")
 
 ## 重現量測
 
-先讀還原的 `measure.cjs`、`serve-pages.py`、`profiles/`、原始 `*-process.json` 與 Lighthouse `*-receipt.json`，核對實際完整 command、工具 SHA／版本及 server 模型。依 [量測指南](../../performance-measurement.md) 在正確 baseline／after worktree 建置；新實驗使用全新證據目錄，更新工具的 workspace、暫存路徑與 loopback URL，不覆寫原始 runs。
+先讀還原的 `measure.cjs`、`serve-pages.py`、`profiles/`、原始 `*-process.json` 與 Lighthouse `*-receipt.json`，核對實際完整 command、工具 SHA／版本及 server 模型。依 [量測指南](../../03_engineering/performance-measurement.md) 在正確 baseline／after worktree 建置；新實驗使用全新證據目錄，更新工具的 workspace、暫存路徑與 loopback URL，不覆寫原始 runs。
 
 外部工具的鎖定版本及暫存 package manifest／lockfile 隨證據保存；它們沒有加入網站 Dependencies。既有 runner 自查的預期 Exit 7／124、工具失敗及重驗均保留原值，不能當成網站驗收失敗或偷偷改成 Exit 0。
 

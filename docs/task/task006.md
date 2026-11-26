@@ -58,7 +58,7 @@ Task 006 與 [Task 007 Portfolio](task007.md) 可在前置成果具備後平行�
 - [Task 002 正式規格](task002.md) 及 [繁體中文版本](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)。英文原稿已恢復，早期空檔描述屬歷史紀錄。
 - [Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)。
 - [任務索引與相依條件](README.md)、[Task 007 Portfolio](task007.md)、[Task 008 Contact](task008.md)、[Task 009 Privacy](task009.md)、[Task 010 SEO](task010.md)。後續 Task 的規格存在不代表其功能已完成。
-- [歷史實作紀錄](../implementation-notes.md)、[Design System](../reports/brand-design-system.md)、[首頁實作](../reports/homepage-implementation.md)、[About 實作](../reports/about-implementation.md)、[Services 實作](../reports/services-implementation.md)、[Pages 操作指南](../reports/github-pages-deployment.md)。
+- [歷史實作紀錄](../98_decisions/implementation-notes.md)、[Design System](../reports/brand-design-system.md)、[首頁實作](../reports/homepage-implementation.md)、[About 實作](../reports/about-implementation.md)、[Services 實作](../reports/services-implementation.md)、[Pages 操作指南](../reports/github-pages-deployment.md)。
 
 上述 Task 001 兩份替代原稿與 Task 002 繁體中文原稿已從目前 main 刪除；連結固定至歷史 Commit `895b9878b6c6244cf225772f6c4f8d3e5d97affe` 的快照，僅供來源查證，不復原刪檔。正式 canonical 入口仍是 `task001.md` 與 `task002.md`。
 
@@ -338,7 +338,7 @@ Pages 模式可依既有 `trailingSlash: true` 將 URL 正常化為 `/solutions/
 | 修改 | `src/components/sections/home-solutions.tsx` | 保留舊動線，新增完整 Solutions 入口 |
 | 修改 | `scripts/build-github-pages.mjs` | Solutions 產物與 Metadata 驗證 |
 | 修改 | `README.md`、`AGENTS.md` | Task 006 操作、分支與驗收要求 |
-| 追加 | `docs/implementation-notes.md` | 保留歷史前綴，追加 Task 006 實際紀錄 |
+| 追加 | `docs/98_decisions/implementation-notes.md` | 保留歷史前綴，追加 Task 006 實際紀錄 |
 
 本任務不重新建立或刪除其他任務成果。現有 `docs/task/task006.md` 是規格輸入，不應為了滿足清單再次新增／覆寫；若正式開發發現必須修正規格，先記錄差異，不以改規格取代完成驗收。部署指南僅在操作確實改變時補充，保留其歷史紀錄。
 

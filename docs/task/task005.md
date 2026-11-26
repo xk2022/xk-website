@@ -48,7 +48,7 @@
 完整閱讀以下文件，確認實際存在的路徑與內容，不得假設檔案存在：
 
 - [README.md](../../README.md)、[AGENTS.md](../../AGENTS.md)。
-- [歷史 Implementation Notes](../implementation-notes.md)。
+- [歷史 Implementation Notes](../98_decisions/implementation-notes.md)。
 - [品牌設計系統與元件 API](../reports/brand-design-system.md)。
 - [首頁實作紀錄](../reports/homepage-implementation.md)、[About 實作紀錄](../reports/about-implementation.md)。
 - [GitHub Pages 部署指南](../reports/github-pages-deployment.md)。
@@ -314,7 +314,7 @@ src/
 | 視現有結構必要修改 | `src/components/sections/home-services.tsx` | 保留原卡片、Maintenance 與所有錨點 |
 | 必要擴充 | `scripts/build-github-pages.mjs` | 不破壞首頁、About 或開發頁排除驗證 |
 | 實作報告 | `docs/services-implementation.md` | 獨立報告；保留既有歷史，新增實際執行證據 |
-| 指引與歷史 | `README.md`、`AGENTS.md`、`docs/implementation-notes.md` | 記錄實際本次範圍與結果，不覆寫前任務成果 |
+| 指引與歷史 | `README.md`、`AGENTS.md`、`docs/98_decisions/implementation-notes.md` | 記錄實際本次範圍與結果，不覆寫前任務成果 |
 | 實際截圖 | `docs/screenshots/task005-services-*.png` | 七個指定目標，見第 12 節 |
 
 不得任意修改文件 Repository、依賴／lockfile、全域 Design System、原始 Logo、字體或 workflow；其他部署或操作文件僅在確實必要且屬任務範圍時更新並說明原因。不得提交 `.next/`、`out/`、測試暫存檔、工具套件或機密資訊。

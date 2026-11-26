@@ -140,7 +140,7 @@ Pages 模式保持 `trailingSlash`，`/about` 應輸出為 `out/about/index.html
 | 修改 | `scripts/build-github-pages.mjs` | 增加 About 靜態產物與 Metadata 驗證 |
 | 修改 | `README.md` | 目前 About 里程碑、路徑與操作指引 |
 | 修改 | `AGENTS.md` | Task 004 規範、分支與 npm ci 驗收指令，修正已恢復的 Task 002 原稿狀態 |
-| 修改 | `docs/implementation-notes.md` | 保留既有歷史並追加 Task 004 |
+| 修改 | `docs/98_decisions/implementation-notes.md` | 保留既有歷史並追加 Task 004 |
 
 未變更 Dependencies、lockfile、字體、全域 Design Tokens、Logo 來源或 GitHub Actions workflow。沒有提交 `.next/` 或 `out/`。
 

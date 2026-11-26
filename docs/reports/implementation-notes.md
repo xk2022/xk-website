@@ -285,7 +285,7 @@ GitHub Actions workflow 與發布條件沿用；必要時只擴充 Pages validat
 
 使用者於 2026-11-19 要求檢視前次作業習慣、留下可沿用的 subagent 紀錄並優化後續任務，指定 `feature/subagent` 及完成後合併 main。本次從乾淨的 `main@e77cd8110e110b6405e6bf3ce354ffb041b34c41` 建立分支；授權只適用本次流程改善，不延伸為後續任務的發布許可。
 
-新增 [Subagent 協作與驗證流程](../subagent-workflow.md)，記錄 Task 008 的真實 cache／退出紀錄／格式檢查／重驗與交接問題。後續以當次規格為準、按需要分工、Root 一次編排 build／server／交付、freeze 前收斂完整 Diff，再依變更影響選擇重驗；不靠 fingerprint 變動自動決定整套重跑。AGENTS 加入必讀入口與執行規則，README 增加導覽，不改舊 Task 規格或歷史報告。
+新增 [Subagent 協作與驗證流程](../03_engineering/subagent-workflow.md)，記錄 Task 008 的真實 cache／退出紀錄／格式檢查／重驗與交接問題。後續以當次規格為準、按需要分工、Root 一次編排 build／server／交付、freeze 前收斂完整 Diff，再依變更影響選擇重驗；不靠 fingerprint 變動自動決定整套重跑。AGENTS 加入必讀入口與執行規則，README 增加導覽，不改舊 Task 規格或歷史報告。
 
 新增 [run-with-evidence.py](../../scripts/run-with-evidence.py)，僅用 Python 標準函式庫，將真實 OS wait 結果、命令、時間及 stdout／stderr SHA 寫入原子回執與獨立 log；保留 child returnCode 與 wrapper exitCode 的差異。拒絕覆寫現有證據，逾時／信號只清理本次建立的 process group。receipt 的 PASS 僅表示程序成功退出，驗收仍須核對 Required 項目、結束標記、數量與版本。
 

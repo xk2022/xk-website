@@ -32,7 +32,7 @@
 
 ## 3. Reference Documents
 
-先完整閱讀 [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)，以及 [歷史紀錄](../implementation-notes.md)、[Design System](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 指南](../reports/github-pages-deployment.md)。歷史替代原稿已刪除時，只使用原有固定歷史快照，不復原刪檔。
+先完整閱讀 [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)，以及 [歷史紀錄](../98_decisions/implementation-notes.md)、[Design System](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 指南](../reports/github-pages-deployment.md)。歷史替代原稿已刪除時，只使用原有固定歷史快照，不復原刪檔。
 
 檢查 `src/config/navigation.ts`、`contact.ts`、`services.ts`、`site.ts`，Header／Footer／Mobile Navigation、現有路由、素材、`scripts/build-github-pages.mjs`、Next 設定與 workflow。研究快照的 `verifiedContactChannels` 為空，Footer 的作品案例仍為規劃文字，不能當作已實作連結。
 
@@ -164,7 +164,7 @@ Overview Title／OG Title：`技術作品集 | Xplore Kaleidoscope`；Descriptio
 | 條件新增 | `src/lib/asset-path.ts`、`public/images/portfolio/` | 只在需要且沒有等效 helper 時處理合法素材／Base Path；無圖片不造空路徑 |
 | 必要修改 | `src/config/navigation.ts`、`src/components/layout/site-footer.tsx` | 正式 Portfolio 入口，移除重複規劃文字 |
 | 必要擴充 | `scripts/build-github-pages.mjs` | 四 Portfolio 輸出與既有規則保護 |
-| 正式實作文件 | `README.md`、`AGENTS.md`、`docs/implementation-notes.md` | 待授權開發時才更新／追加，不覆寫歷史 |
+| 正式實作文件 | `README.md`、`AGENTS.md`、`docs/98_decisions/implementation-notes.md` | 待授權開發時才更新／追加，不覆寫歷史 |
 | 未來新增 | `docs/reports/task007-implementation.md`、`docs/screenshots/task007-*.png` | 真實報告與驗收圖；本輪不建立 |
 
 不修改文件 Repository、案例系統／Backend Repository、依賴、lockfile、Next／Tailwind 設定、workflow、品牌原稿或帳號設定。不提交 `.next/`、`out/`、node_modules、臨時 QA 工具、秘密或未授權素材。檔案清單以未來完整 Diff 為準。

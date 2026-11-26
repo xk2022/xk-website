@@ -45,7 +45,7 @@ Task 001 建立 Next.js 基礎架構；Task 002 建立 Brand Tokens、Typography
 開始實作前完整閱讀並確認實際檔名：
 
 - [README.md](../../README.md)、[AGENTS.md](../../AGENTS.md)。
-- [implementation notes](../implementation-notes.md)、[品牌設計系統](../reports/brand-design-system.md)。
+- [implementation notes](../98_decisions/implementation-notes.md)、[品牌設計系統](../reports/brand-design-system.md)。
 - [Task 001 規格](task001.md)、[Task 002 規格](task002.md) 及必要的 [Task 002 繁體中文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)。
 - Task 001 的歷史替代來源 [task001-implementation-notes.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md)；不得假設所有原稿在當時或目前均存在。
 - [首頁實作紀錄](../reports/homepage-implementation.md)、[GitHub Pages 部署指南](../reports/github-pages-deployment.md)。
@@ -519,7 +519,7 @@ src/
 
 ## 12. Test Report & Evidence
 
-Task 003 的獨立實作與測試報告使用 [docs/homepage-implementation.md](../reports/homepage-implementation.md)；部署操作與模式差異參閱 [docs/github-pages-deployment.md](../reports/github-pages-deployment.md)。歷史總覽位於 [implementation notes](../implementation-notes.md)。
+Task 003 的獨立實作與測試報告使用 [docs/homepage-implementation.md](../reports/homepage-implementation.md)；部署操作與模式差異參閱 [docs/github-pages-deployment.md](../reports/github-pages-deployment.md)。歷史總覽位於 [implementation notes](../98_decisions/implementation-notes.md)。
 
 報告必須記錄：
 

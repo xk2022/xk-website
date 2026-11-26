@@ -49,7 +49,7 @@
 
 ## 操作文件與限制
 
-人工處理、回覆範本與證據界線見 [商務聯絡與回覆流程](../contact-response-workflow.md)。既有 Privacy 未核准、分享圖／Sitemap 未發布，不因加入 Email 自動解鎖。沒有 Backend、API、Analytics、付款或額外套件，不修改文件 Repository、DNS／Pages 設定。
+人工處理、回覆範本與證據界線見 [商務聯絡與回覆流程](../02_operations/contact-response-workflow.md)。既有 Privacy 未核准、分享圖／Sitemap 未發布，不因加入 Email 自動解鎖。沒有 Backend、API、Analytics、付款或額外套件，不修改文件 Repository、DNS／Pages 設定。
 
 本輪先更新同一 PR 供 review，沒有自動合併／部署指示；本機、PR CI、main 與公開驗證分開記錄。實測完成後補本節的結果、指紋與附件。
 

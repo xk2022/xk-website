@@ -63,7 +63,7 @@ P05 的 enterprise-integration-hub 與本規格 canonical integration-hub 有差
 | --- | --- |
 | 修改 | `AGENTS.md` |
 | 修改 | `README.md` |
-| 修改 | `docs/implementation-notes.md` |
+| 修改 | `docs/98_decisions/implementation-notes.md` |
 | 新增 | `docs/reports/task007-evidence.json.gz` |
 | 新增 | `docs/reports/task007-implementation.md` |
 | 新增 | `docs/reports/task007-verification.json` |

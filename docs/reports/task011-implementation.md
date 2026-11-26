@@ -6,7 +6,7 @@
 
 - 唯一修改 `xk2022/xk-website`，fresh fetch 後 main／origin main 同為 `633d135b50fe292368ab4479b9ae69af91b31928`，工作目錄乾淨；Task 010 PR #15 已合併。分支為 `feature/website-performance`。
 - 使用者明確授權本次開發、驗證、Push、PR、CI 通過後合併與確認部署；沒有變更索引、法律核准、資料蒐集、DNS／Vercel 或 Pages Source 的授權。本次不操作這些項目。
-- 完整閱讀 [Task 011](../task/task011.md)、AGENTS、README、[協作流程](../subagent-workflow.md)，核對架構、品牌、歷史紀錄及當前程式。17 份本機文件的閱讀／相同 Blob 全文共享紀錄見封存的 `source-audit.json`；歷史測試結果沒有充當本次 PASS。
+- 完整閱讀 [Task 011](../task/task011.md)、AGENTS、README、[協作流程](../03_engineering/subagent-workflow.md)，核對架構、品牌、歷史紀錄及當前程式。17 份本機文件的閱讀／相同 Blob 全文共享紀錄見封存的 `source-audit.json`；歷史測試結果沒有充當本次 PASS。
 - 文件 Repository 僅讀。`2026-11-19T07:27:02.372Z` fresh API 確認 main 仍為 `95ef1275a46ace76e11f668178ca881087483398`、Tree `8bba493a05911a11a7e29d7d01650e9d0e00f3e7`；51 個 Blob 全相符。Task 011 §3 的技術決策 ASK、品牌、色彩、字體、架構與 MVP 六份來源皆固定同版並記錄 Blob／章節／採用界線。
 - 已讀安裝版 Next Font／Images／Lazy Loading 文件；官方 [CWV](https://web.dev/articles/vitals) 與 [Lighthouse Performance](https://developer.chrome.com/docs/lighthouse/performance) 在本日實際 HTTP 200，正文與查閱紀錄封存於 `technical/`。不將舊 Lighthouse 評分權重當成本版工具實測。
 - baseline 公開 Pages deployment `7906539025` 為上述 main SHA，狀態 success；公開 HTML／CSS HTTP 200、實際 gzip／Cache-Control `max-age=600`。這是部署／Header 觀察，不是公開站三次效能比較。
@@ -191,7 +191,7 @@ Test ID 對應：PERF-M01–M07 為上述效能、Bundle／Fonts／Cache；PERF-
 
 ## 交付檔案與證據
 
-修改 `src/app/layout.tsx`、README、AGENTS、`docs/task/README.md`、`docs/implementation-notes.md`；新增本報告、[量測指南](../performance-measurement.md)、[artifact 操作說明](task011-artifacts/README.md)、[完整比較資料](task011-artifacts/measurements.json)、[逐項驗證](task011-artifacts/verification.json)、[SHA manifest](task011-artifacts/manifest.json)、[壓縮證據](task011-artifacts/evidence.json.xz) 與兩張 PNG。完整 Git Diff 檢查包含 staged／unstaged／untracked；沒有 `.next/`、`out/`、依賴目錄、暫存工具或機密提交。
+修改 `src/app/layout.tsx`、README、AGENTS、`docs/task/README.md`、`docs/98_decisions/implementation-notes.md`；新增本報告、[量測指南](../03_engineering/performance-measurement.md)、[artifact 操作說明](task011-artifacts/README.md)、[完整比較資料](task011-artifacts/measurements.json)、[逐項驗證](task011-artifacts/verification.json)、[SHA manifest](task011-artifacts/manifest.json)、[壓縮證據](task011-artifacts/evidence.json.xz) 與兩張 PNG。完整 Git Diff 檢查包含 staged／unstaged／untracked；沒有 `.next/`、`out/`、依賴目錄、暫存工具或機密提交。
 
 證據包含全 156 個 CDP runs、12 份可比較 Lighthouse 加單次 normal 診斷、失敗／重驗、工具／profile、trace、Network、Coverage 與 storage。壓縮前可去重相同內容，不能刪除不利結果；gzip 容器無損展開，原壓縮 SHA 與 payload SHA 均保留，還原驗證見 manifest。不把 raw 的 COMPLETE 狀態當成 target PASS。
 

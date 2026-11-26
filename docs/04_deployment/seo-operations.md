@@ -1,6 +1,6 @@
 # SEO 保護模式與後續發布
 
-依據 [Task 010](task/task010.md)。本階段交付 Metadata 與爬取規則的保護模式，保留全站 `noindex, nofollow`，不代表正式品牌網域已驗證、已提交 Search Console 或已被索引。
+依據 [Task 010](../task/task010.md)。本階段交付 Metadata 與爬取規則的保護模式，保留全站 `noindex, nofollow`，不代表正式品牌網域已驗證、已提交 Search Console 或已被索引。
 
 ## 目前的資料來源與界線
 

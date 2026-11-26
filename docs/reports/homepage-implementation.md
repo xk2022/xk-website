@@ -131,7 +131,7 @@ Logo 仍使用兩個原始 XK 路徑、18 個字標路徑與既有 Transform，�
 | 修改 | `package.json` | 加入 `build:pages`，不調整套件版本 |
 | 修改 | `README.md` | 目前里程碑、操作與部署指引 |
 | 修改 | `AGENTS.md` | 可用規格引用、Task 003 分支、使用者確認的 Pages 方向 |
-| 修改 | `docs/implementation-notes.md` | 保留歷史並追加 Task 003 |
+| 修改 | `docs/98_decisions/implementation-notes.md` | 保留歷史並追加 Task 003 |
 | 修改 | `docs/brand-design-system.md` | 僅修正更名／空白任務文件的引用 |
 
 ## 驗收與交付紀錄

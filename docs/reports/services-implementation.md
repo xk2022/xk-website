@@ -168,7 +168,7 @@ Pages 產物須以靜態伺服器掛載 `/xk-website` 路徑，不以 `npm run s
 | 修改 | `src/components/sections/home-services.tsx` | 保留首頁錨點並提供總覽入口 |
 | 修改 | `scripts/build-github-pages.mjs` | Services 靜態輸出與 Metadata 驗證 |
 | 修改 | `README.md`、`AGENTS.md` | 任務、分支、操作與驗收指引 |
-| 追加 | `docs/implementation-notes.md` | 保留既有前綴，追加 Task 005 歷史 |
+| 追加 | `docs/98_decisions/implementation-notes.md` | 保留既有前綴，追加 Task 005 歷史 |
 
 任務原稿、文件 Repository、Dependencies、lockfile、全域 Design System、字體、Logo 來源與 workflow 不在本次變更範圍。`.next/`、`out/` 與暫存驗收工具不得提交。
 
