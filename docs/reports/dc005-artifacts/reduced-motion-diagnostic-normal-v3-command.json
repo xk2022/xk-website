@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc005-full/reduced-motion-diagnostic.cjs"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T07:00:20.151361+00:00",
+  "finishedAt": "2026-11-26T07:00:23.292940+00:00",
+  "processId": 95794,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 90.0,
+  "logFile": "/tmp/xk-dc005-full/reduced-motion-diagnostic-normal-v3.log",
+  "logSha256": "7c9a4a222d61fae3774cd584ba8eb8e138b07de24ce64b1bd70cbb2e3d31baaa",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

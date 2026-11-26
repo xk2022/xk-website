@@ -45,6 +45,8 @@
 @source not "../../docs/task/dc005.md";
 @source not "../../docs/reports/dc005-brand-review.md";
 @source not "../../docs/reports/dc005-review-artifacts";
+@source not "../../docs/reports/dc005-implementation.md";
+@source not "../../docs/reports/dc005-artifacts";
 
 :root {
   color-scheme: light;

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc005-full/package-evidence.py",
+    "--apply",
+    "--report",
+    "/tmp/xk-dc005-full/package-applied-v2.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T07:08:01.706601+00:00",
+  "finishedAt": "2026-11-26T07:08:03.776542+00:00",
+  "processId": 97671,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc005-full/package-command-v2.log",
+  "logSha256": "b47ff1948e3b9c599ac271c5eaebfd0f621dafeedf45558f33a387ed054b4f97",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

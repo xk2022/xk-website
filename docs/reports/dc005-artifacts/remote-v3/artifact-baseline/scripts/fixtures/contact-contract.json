@@ -1,0 +1,64 @@
+{
+  "reviewedAt": "2026-11-25",
+  "scope": "Owner-approved public Email, static inquiry prompts and one Contact-only local draft form; previewing or opening a draft does not establish sending, delivery, automatic replies or a response SLA.",
+  "ownerEmail": "system.xk2022@gmail.com",
+  "availability": "channels-only",
+  "inquiryState": "direct",
+  "inquiryLabel": "立即詢價",
+  "planInquiryLabel": "詢問方案",
+  "mailtoSubject": "XK 專案詢價",
+  "mailtoFields": ["專案目標", "需求範圍", "目前網站或系統（選填）", "期望時程（選填）", "可討論預算（選填）", "參考網址（選填）"],
+  "mailtoBody": [
+    "您好，我想了解 XK 的服務，以下是需求概況：",
+    "",
+    "專案目標：",
+    "需求範圍：",
+    "目前網站或系統（選填）：",
+    "期望時程（選填）：",
+    "可討論預算（選填）：",
+    "參考網址（選填）：",
+    "",
+    "請勿提供帳號密碼、金鑰或敏感資料。",
+    "請依需求協助確認適合的方案與報價，謝謝。"
+  ],
+  "lineEnding": "\r\n",
+  "contactHeading": "從需求摘要開始，討論合適的方案。",
+  "processSteps": ["寄出需求摘要", "釐清需求與範圍", "確認方案與報價"],
+  "contactSectionIds": ["contact-hero", "contact-form", "contact-channels", "contact-preparation", "contact-process", "contact-data-note", "contact-next-step"],
+  "draftForm": {
+    "mode": "email-draft",
+    "sectionId": "contact-form",
+    "limits": {"name": 80, "email": 254, "messageMin": 10, "messageMax": 2000},
+    "controls": [
+      {"id": "contact-inquiry-name", "tag": "input", "type": "text", "maxlength": "80", "autocomplete": "name", "required": false},
+      {"id": "contact-inquiry-email", "tag": "input", "type": "email", "maxlength": "254", "autocomplete": "email", "required": true},
+      {"id": "contact-inquiry-service", "tag": "select", "required": false},
+      {"id": "contact-inquiry-message", "tag": "textarea", "minlength": "10", "maxlength": "2000", "required": true}
+    ],
+    "serviceIds": ["website-development", "java-enterprise", "system-integration", "ai-automation", "cloud-infrastructure"],
+    "forbiddenAttributes": ["action", "formaction", "formmethod", "method", "name", "onsubmit", "form"],
+    "noscriptText": "需求整理工具需要 JavaScript；您仍可使用下方商務 Email 直接聯絡。",
+    "sourceFiles": ["src/config/contact-inquiry.ts", "src/lib/contact-inquiry.ts", "src/components/sections/contact/contact-inquiry-form.tsx"],
+    "forbiddenSourcePatterns": ["\\b(?:fetch|XMLHttpRequest|WebSocket|EventSource)\\s*\\(", "\\bsendBeacon\\s*\\(", "\\b(?:localStorage|sessionStorage|indexedDB)\\b", "\\bdocument\\s*\\.\\s*cookie\\b", "\\bcaches\\s*\\.\\s*open\\s*\\("]
+  },
+  "requiredDataNotes": [
+    "本頁表單只整理與預覽內容，不會直接提交、寄信或確認送達；請在郵件程式中自行寄出。",
+    "表單內容只保留於目前頁面；重新整理或離開後需重新填寫，本站不會將輸入寫入瀏覽器持久儲存。",
+    "寄出前請確認收件地址、內容與附件；若沒有設定郵件程式，可自行複製信箱地址撰寫郵件。"
+  ],
+  "servicePlanIds": ["one-page", "corporate", "integration"],
+  "servicePlanContexts": {
+    "one-page": "一頁式服務推廣",
+    "corporate": "企業與品牌官網",
+    "integration": "網站功能與流程整合"
+  },
+  "numericPricesApproved": false,
+  "unapprovedPricePattern": "(?:NT\\$|NTD|TWD|新臺幣|新台幣|\\$)\\s*[0-9,]+|(?:[0-9,]+(?:\\.[0-9]+)?|[一二三四五六七八九十百千萬壹貳參肆伍陸柒捌玖拾佰仟]+)\\s*元|(?:售價|起價|價格|月費|年費|每月|每年)\\s*[:：]?\\s*[0-9,]+",
+  "forbiddenClaimPatterns": [
+    "(?:詢價|需求|信件|郵件)(?:已成功|已經成功|成功)(?:送出|寄出|送達|提交)",
+    "(?:本站|網站)(?:會|將)(?:自動)?(?:寄信|寄送郵件|回覆)",
+    "(?:[0-9]+|[一二三四五六七八九十]+)\\s*(?:分鐘|小時|天|工作日)\\s*內(?:即可|會|將)?(?:回覆|回應)",
+    "(?:24\\s*/\\s*7|全天候)(?:客服|回覆|支援)",
+    "自動回覆已(?:啟用|開啟)"
+  ]
+}

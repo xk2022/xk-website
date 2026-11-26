@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc005-full/native-autofill-probe.cjs",
+    "pages",
+    "http://127.0.0.1:3263/",
+    "final",
+    "/tmp/xk-dc005-full/source.json"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T06:50:27.196915+00:00",
+  "finishedAt": "2026-11-26T06:50:32.734915+00:00",
+  "processId": 90398,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 240.0,
+  "logFile": "/tmp/xk-dc005-full/native-autofill-pages-final.log",
+  "logSha256": "9601c8209585ca02e9e3b510b9c5252e2d25a51e79b4476f7b72a18dc349b5be",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

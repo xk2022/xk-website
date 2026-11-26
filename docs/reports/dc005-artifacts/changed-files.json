@@ -1,0 +1,1085 @@
+{
+  "scope": "Feature changes vs main74369376; inventory itself has no recursive content hash. All source/evidence/media included.",
+  "files": [
+    {
+      "status": "M",
+      "path": "AGENTS.md"
+    },
+    {
+      "status": "M",
+      "path": "README.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/01_design/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/01_design/design-collection/reviews/luxury-v1-approval.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/01_design/design-collection/reviews/luxury-v1.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/98_decisions/implementation-notes.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/reports/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/README.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/browser-normal.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/browser-normal.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/browser-pages.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/browser-pages.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/build-normal-v2.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/build-normal-v2.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/build-normal-v3.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/build-normal-v3.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/build-normal.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/build-normal.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/build-pages-v3.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/build-pages-v3.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/build-pages.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/build-pages.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/catalog.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/changed-files.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/contact-affected-normal-final/result.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/contact-affected-normal.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/contact-affected-normal.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/contact-affected-preflight-command.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/contact-affected-preflight.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/contract-v1.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/contract-v2.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/contract.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/delivery/final-review-v1-result.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/delivery/final-review-v1.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/delivery/final-review-v1.receipt.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/delivery/lint-final.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/delivery/lint-final.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/delivery/manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/delivery/package-applied-v2.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/delivery/package-command-v2.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/delivery/package-command-v2.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/ds/contrast-v3.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/ds/contrast.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/ds/native-v1.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/ds/native-v1.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/ds/native-v3.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/ds/native-v3.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/external/diagnostic-manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/external/external-diagnostic.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/external/external-diagnostic.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/external/external-diagnostic.receipt.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/external/http-external-v3.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/external/manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/external/smoke-external-v3.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/external/smoke-external-v3.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-review-v2-result.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-review-v2.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-review-v2.receipt.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-staged-check.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-staged-check.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/final-delivery/final-staged-result.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/final-delivery/manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/final-delivery/staged-files.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/fixes.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/fixture.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-affected-normal-v3-retest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-affected-normal-v3-retest.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-affected-normal-v3-retest/result.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-affected-normal-v3.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-affected-normal-v3.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-affected-normal-v3/result.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-affected-pages-v3-retest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-affected-pages-v3-retest.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-affected-pages-v3-retest/result.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-affected-v4-preflight-command.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-affected-v4-preflight.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-quote-affected-preflight-command.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/home-quote-affected-preflight.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/http-normal-v2.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/http-normal-v3.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/http-normal.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/http-pages-v3.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/http-pages.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/lint.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/lint.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/matrix.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/native-autofill-pages-final-command.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/native-autofill-pages-final.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/native-autofill-pages-final/result.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/normal-final/result.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/npm-ci.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/npm-ci.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/package-command.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/package-command.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/package-selection.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pages-final/home-375.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pages-final/quotation-375.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pages-final/result.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-luxury.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-luxury.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-luxury/page-1-canvas-classification.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-luxury/page-1-text-spans.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-luxury/page-1-text.txt.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-luxury/verification.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-modern.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-modern.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-modern/page-1-canvas-classification.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-modern/page-1-text-spans.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-modern/page-1-text.txt.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-normal-modern/verification.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-luxury.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-luxury.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-luxury/page-1-canvas-classification.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-luxury/page-1-text-spans.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-luxury/page-1-text.txt.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-luxury/verification.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-modern.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-modern.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-modern/page-1-canvas-classification.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-modern/page-1-text-spans.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-modern/page-1-text.txt.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-pages-modern/verification.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/pdf-visual-review.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/reduced-motion-diagnostic-normal-v3-command.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/reduced-motion-diagnostic-normal-v3.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/reduced-motion-diagnostic-normal-v3/result.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/baseline.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/scripts/fixtures/contact-contract.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/scripts/fixtures/design-collection-contract.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/scripts/fixtures/quotation-contract.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/scripts/fixtures/showcase-contract.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/smoke-website.py.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/inspect-ci-artifact.py.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/local-artifact-check.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/local-artifact-check.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/local-artifact-check.receipt.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/prepare-local-baseline.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/prepare-local-baseline.receipt.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/source-bridge.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/source-bridge.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/source-bridge.receipt.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/tested-source.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/v2-source.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/remote-v3/verify-source-bridge.py.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/smoke-normal-v2.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/smoke-normal-v2.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/smoke-normal-v3.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/smoke-normal-v3.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/smoke-normal.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/smoke-normal.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/smoke-pages-v3.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/smoke-pages-v3.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/smoke-pages.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/smoke-pages.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/source-bridge-v3.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/source-bridge.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/source-v1.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/source-v2.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/source.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/supplement-media-manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/test.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/test.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/theme-normal-final/result.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/theme-normal.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/theme-normal.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/theme-pages-final/result.json.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/theme-pages.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/theme-pages.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tool-preflight-command.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tool-preflight-result.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tool-preflight.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/browser.cjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/business.cjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/contact-affected.cjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/ds/check-v3.mjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/ds/check.mjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/final-review.py.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/finalize-tools.py.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/home-affected-v4.cjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/home-affected.cjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/monitor.cjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/native-autofill-probe.cjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/package-evidence.py.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/preflight.cjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/prepare-theme.py.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/reduced-motion-diagnostic.cjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/snapshot.cjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/sync-source.py.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/verify-pdf.py.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/tools/verify-theme-runtime.cjs.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/typegen.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/typegen.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/typescript-v2.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/typescript-v2.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/typescript-v3.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/typescript-v3.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/typescript.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/typescript.log.gz"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-artifacts/visual-review.json"
+    },
+    {
+      "status": "A",
+      "path": "docs/reports/dc005-implementation.md"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/contact-1440.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/contact-375.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/home-1440.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/home-1920.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/home-320.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/home-375.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/home-768.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/native-autofill-1440.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/native-autofill-375.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/normal-quotation-luxury-worstcase-a4-150dpi.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/normal-quotation-luxury-worstcase-a4.pdf"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/normal-quotation-modern-worstcase-a4-150dpi.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/normal-quotation-modern-worstcase-a4.pdf"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/pages-quotation-luxury-worstcase-a4-150dpi.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/pages-quotation-luxury-worstcase-a4.pdf"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/pages-quotation-modern-worstcase-a4-150dpi.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/pages-quotation-modern-worstcase-a4.pdf"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/portfolio-1440.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/portfolio-375.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/portfolio-corporate-website-1440.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/portfolio-corporate-website-375.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/portfolio-showcases-qiangang-windows-1440.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/portfolio-showcases-qiangang-windows-375.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/quotation-1440.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/quotation-375.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/services-1440.png"
+    },
+    {
+      "status": "A",
+      "path": "docs/screenshots/design-collection/dc005/services-375.png"
+    },
+    {
+      "status": "M",
+      "path": "docs/task/README.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/task/ROADMAP.md"
+    },
+    {
+      "status": "M",
+      "path": "docs/task/dc005.md"
+    },
+    {
+      "status": "M",
+      "path": "scripts/build-github-pages.mjs"
+    },
+    {
+      "status": "M",
+      "path": "scripts/fixtures/design-collection-contract.json"
+    },
+    {
+      "status": "M",
+      "path": "scripts/smoke-website.py"
+    },
+    {
+      "status": "M",
+      "path": "scripts/test-design-collection-metadata.mjs"
+    },
+    {
+      "status": "M",
+      "path": "scripts/test-design-collection-routes.mjs"
+    },
+    {
+      "status": "A",
+      "path": "src/app/(collection)/design-collection/[style]/about/page.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/app/(collection)/design-collection/[style]/contact/page.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/app/(collection)/design-collection/[style]/layout.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/app/(collection)/design-collection/[style]/page.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/app/(collection)/design-collection/[style]/portfolio/[slug]/page.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/app/(collection)/design-collection/[style]/portfolio/page.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/app/(collection)/design-collection/[style]/portfolio/showcases/[slug]/page.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/app/(collection)/design-collection/[style]/quotation/page.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/app/(collection)/design-collection/[style]/services/page.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/app/(collection)/design-collection/[style]/solutions/page.tsx"
+    },
+    {
+      "status": "M",
+      "path": "src/app/globals.css"
+    },
+    {
+      "status": "A",
+      "path": "src/components/design-collection/luxury/luxury-contact.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/components/design-collection/luxury/luxury-content-details.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/components/design-collection/luxury/luxury-content-shared.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/components/design-collection/luxury/luxury-frame.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/components/design-collection/luxury/luxury-links.ts"
+    },
+    {
+      "status": "A",
+      "path": "src/components/design-collection/luxury/luxury-navigation.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/components/design-collection/luxury/luxury-pages.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/components/design-collection/luxury/luxury-quotation.tsx"
+    },
+    {
+      "status": "A",
+      "path": "src/components/design-collection/luxury/luxury-route.ts"
+    },
+    {
+      "status": "A",
+      "path": "src/components/design-collection/luxury/luxury-ui.tsx"
+    },
+    {
+      "status": "M",
+      "path": "src/components/design-collection/shared/design-collection-gallery.tsx"
+    },
+    {
+      "status": "M",
+      "path": "src/components/layout/site-footer.tsx"
+    },
+    {
+      "status": "M",
+      "path": "src/components/sections/contact/contact-inquiry-form.tsx"
+    },
+    {
+      "status": "M",
+      "path": "src/components/sections/quotation/quotation-estimator.tsx"
+    },
+    {
+      "status": "M",
+      "path": "src/components/sections/quotation/quotation-summary.tsx"
+    },
+    {
+      "status": "M",
+      "path": "src/components/sections/quotation/quotation.css"
+    },
+    {
+      "status": "M",
+      "path": "src/components/sections/services/service-website.tsx"
+    },
+    {
+      "status": "M",
+      "path": "src/config/design-collection.ts"
+    },
+    {
+      "status": "M",
+      "path": "src/config/seo.ts"
+    },
+    {
+      "status": "M",
+      "path": "src/config/services.ts"
+    },
+    {
+      "status": "A",
+      "path": "src/design-systems/luxury/index.ts"
+    },
+    {
+      "status": "A",
+      "path": "src/design-systems/luxury/luxury.css"
+    }
+  ]
+}

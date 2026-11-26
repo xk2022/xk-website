@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc005-full-remote/external-diagnostic.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T07:14:52.381171+00:00",
+  "finishedAt": "2026-11-26T07:14:58.194918+00:00",
+  "processId": 98130,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 50.0,
+  "logFile": "/tmp/xk-dc005-full-remote/external-diagnostic.log",
+  "logSha256": "f6503c7ca3d24f87c849c3d5e9b1a7db0f2e8c8966e7539909c263e4fac56c0e",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

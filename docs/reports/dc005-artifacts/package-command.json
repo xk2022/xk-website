@@ -1,0 +1,22 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python3",
+    "/tmp/xk-dc005-full/package-evidence.py",
+    "--apply",
+    "--report",
+    "/tmp/xk-dc005-full/package-applied.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T07:06:59.409488+00:00",
+  "finishedAt": "2026-11-26T07:07:01.094634+00:00",
+  "processId": 97636,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc005-full/package-command.log",
+  "logSha256": "84a4e62af5c438b10e36b6f732b40e0c64530491664a6f5a0b30758289bf0be6",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

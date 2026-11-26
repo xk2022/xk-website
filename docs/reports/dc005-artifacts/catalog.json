@@ -1,0 +1,753 @@
+{
+  "version": 1,
+  "publication": "reference-awaiting-owner-review",
+  "services": [
+    {
+      "id": "website",
+      "name": "網站建置",
+      "description": "先依主要訪客與目的，比較一頁式、品牌、企業及電商網站。"
+    },
+    {
+      "id": "system-development",
+      "name": "系統開發",
+      "description": "從業務操作、角色與資料流程，討論客製 Web 應用。"
+    },
+    {
+      "id": "system-optimization",
+      "name": "系統優化",
+      "description": "先了解既有系統與限制，再評估重構及改善範圍。"
+    },
+    {
+      "id": "ai-integration",
+      "name": "AI 應用整合",
+      "description": "分開討論對話助理、文件知識庫與客製 AI，避免混用價格。"
+    }
+  ],
+  "builds": [
+    {
+      "id": "lp",
+      "serviceId": "website",
+      "code": "LP",
+      "name": "一頁式網站",
+      "positioning": "聚焦一項服務、商品或活動，引導訪客完成明確的下一步。",
+      "audience": "需要推廣單一主題、整理資訊及聯絡入口的店家或服務提供者。",
+      "price": {
+        "kind": "range",
+        "min": 15000,
+        "max": 30000
+      },
+      "reference": {
+        "kind": "company-reference",
+        "label": "公司建議參考",
+        "sourceId": "company-website-pricing"
+      },
+      "includedAddonIds": [],
+      "serviceLink": {
+        "href": "/services#website-development",
+        "label": "網站開發服務"
+      },
+      "showcase": {
+        "href": "/portfolio/showcases/campaign-website-design",
+        "label": "一頁式服務推廣預覽（自主展示）",
+        "status": "demonstration"
+      },
+      "thirdPartyNotes": [
+        "網域、主機、付費素材及第三方服務依實際方案另計。"
+      ]
+    },
+    {
+      "id": "brand",
+      "serviceId": "website",
+      "code": "BRAND",
+      "name": "品牌形象網站",
+      "positioning": "整理品牌故事、產品系列與通路，建立持續使用的品牌介紹。",
+      "audience": "希望完整介紹品牌及產品特色，並導向已確認通路的品牌。",
+      "price": {
+        "kind": "range",
+        "min": 25000,
+        "max": 60000
+      },
+      "reference": {
+        "kind": "task-provisional",
+        "label": "本輪暫定參考",
+        "sourceId": "task-provisional-pricing"
+      },
+      "includedAddonIds": [],
+      "serviceLink": {
+        "href": "/services#website-development",
+        "label": "網站開發服務"
+      },
+      "showcase": null,
+      "thirdPartyNotes": [
+        "網域、主機、付費素材及第三方服務依實際方案另計。"
+      ]
+    },
+    {
+      "id": "corp",
+      "serviceId": "website",
+      "code": "CORP",
+      "name": "企業形象官網",
+      "positioning": "以公司介紹、服務、案例與聯絡資訊，協助訪客評估合作。",
+      "audience": "需要長期對外說明企業資訊與服務能力的公司。",
+      "price": {
+        "kind": "range",
+        "min": 30000,
+        "max": 60000
+      },
+      "reference": {
+        "kind": "company-reference",
+        "label": "公司建議參考",
+        "sourceId": "company-website-pricing"
+      },
+      "includedAddonIds": [],
+      "serviceLink": {
+        "href": "/services#website-development",
+        "label": "網站開發服務"
+      },
+      "showcase": {
+        "href": "/portfolio/corporate-website",
+        "label": "企業網站技術規劃（Planned）",
+        "status": "planned"
+      },
+      "thirdPartyNotes": [
+        "網域、主機、付費素材及第三方服務依實際方案另計。"
+      ]
+    },
+    {
+      "id": "shop",
+      "serviceId": "website",
+      "code": "SHOP",
+      "name": "電商網站",
+      "positioning": "以站內商品選購與結帳為核心，先盤點商品、付款及訂單流程。",
+      "audience": "需要在網站內處理購物流程，並能確認商品與營運規則的品牌。",
+      "price": {
+        "kind": "range",
+        "min": 50000,
+        "max": 150000
+      },
+      "reference": {
+        "kind": "task-provisional",
+        "label": "本輪暫定參考",
+        "sourceId": "task-provisional-pricing"
+      },
+      "includedAddonIds": [],
+      "serviceLink": {
+        "href": "/services#website-development",
+        "label": "網站開發服務"
+      },
+      "showcase": null,
+      "thirdPartyNotes": [
+        "金流手續費、物流、電商平台、主機與第三方授權依實際方案另計。"
+      ]
+    },
+    {
+      "id": "app",
+      "serviceId": "system-development",
+      "code": "APP",
+      "name": "客製 Web 應用",
+      "positioning": "依角色、業務流程與資料需求，規劃可持續操作的系統。",
+      "audience": "需要管理資料、訂單、工作流程或內部業務的組織。",
+      "price": {
+        "kind": "from",
+        "min": 80000
+      },
+      "reference": {
+        "kind": "company-reference",
+        "label": "公司建議起價",
+        "sourceId": "company-website-pricing"
+      },
+      "includedAddonIds": [],
+      "serviceLink": {
+        "href": "/services#java-enterprise",
+        "label": "企業系統開發服務"
+      },
+      "showcase": {
+        "href": "/portfolio/enterprise-management",
+        "label": "企業管理系統規劃（Planned）",
+        "status": "planned"
+      },
+      "thirdPartyNotes": [
+        "正式主機、資料庫、授權與第三方服務依實際方案及用量另計。"
+      ]
+    },
+    {
+      "id": "app-optimization",
+      "serviceId": "system-optimization",
+      "code": "APP",
+      "name": "既有系統重構",
+      "positioning": "先核對現況、相依系統與驗收案例，再討論重構範圍。",
+      "audience": "已有企業系統，需要調整結構、升級或改善既有業務流程的組織。",
+      "price": {
+        "kind": "from",
+        "min": 60000
+      },
+      "reference": {
+        "kind": "company-reference",
+        "label": "舊系統重構建議起價",
+        "sourceId": "company-refactor-pricing"
+      },
+      "includedAddonIds": [],
+      "serviceLink": {
+        "href": "/services#system-integration",
+        "label": "系統整合與資料管理"
+      },
+      "showcase": null,
+      "thirdPartyNotes": [
+        "正式主機、資料庫、授權與第三方服務依實際方案及用量另計。"
+      ]
+    },
+    {
+      "id": "ai-chatbot",
+      "serviceId": "ai-integration",
+      "code": "APP",
+      "name": "AI 對話助理",
+      "positioning": "對應 AI Chatbot 的討論範圍，先確認問題、使用入口與回答界線。",
+      "audience": "需要對話式操作，且能提供明確使用情境與驗收問題的組織。",
+      "price": {
+        "kind": "range",
+        "min": 30000,
+        "max": 60000
+      },
+      "reference": {
+        "kind": "company-reference",
+        "label": "AI Chatbot 建議參考",
+        "sourceId": "company-ai-pricing"
+      },
+      "includedAddonIds": [],
+      "serviceLink": {
+        "href": "/services#ai-automation",
+        "label": "AI 應用與流程自動化"
+      },
+      "showcase": null,
+      "thirdPartyNotes": [
+        "模型 API、資料儲存、主機與第三方服務依實際用量另計。"
+      ]
+    },
+    {
+      "id": "ai-rag",
+      "serviceId": "ai-integration",
+      "code": "APP",
+      "name": "AI 文件知識庫",
+      "positioning": "對應 RAG 企業知識庫，先以文件、問題與答案來源界定驗收範圍。",
+      "audience": "有可合法使用的文件，需要探索文件查詢及來源引用的組織。",
+      "price": {
+        "kind": "range",
+        "min": 60000,
+        "max": 120000
+      },
+      "reference": {
+        "kind": "company-reference",
+        "label": "RAG 知識庫建議參考",
+        "sourceId": "company-ai-pricing"
+      },
+      "includedAddonIds": [],
+      "serviceLink": {
+        "href": "/services#ai-automation",
+        "label": "AI 應用與流程自動化"
+      },
+      "showcase": null,
+      "thirdPartyNotes": [
+        "模型 API、資料儲存、主機與第三方服務依實際用量另計。"
+      ]
+    },
+    {
+      "id": "ai-custom",
+      "serviceId": "ai-integration",
+      "code": "APP",
+      "name": "客製 AI 系統",
+      "positioning": "依特定流程、資料與系統整合需求評估，不套用單一 Chatbot 價格。",
+      "audience": "需要跨流程或既有系統整合，且能共同確認試用資料與限制的組織。",
+      "price": {
+        "kind": "from",
+        "min": 100000
+      },
+      "reference": {
+        "kind": "company-reference",
+        "label": "客製 AI 系統建議起價",
+        "sourceId": "company-ai-pricing"
+      },
+      "includedAddonIds": [],
+      "serviceLink": {
+        "href": "/services#ai-automation",
+        "label": "AI 應用與流程自動化"
+      },
+      "showcase": null,
+      "thirdPartyNotes": [
+        "模型 API、資料儲存、主機與第三方服務依實際用量另計。"
+      ]
+    }
+  ],
+  "addons": [
+    {
+      "id": "ai-images",
+      "group": "visual",
+      "name": "AI 商業生圖",
+      "billing": "one-time",
+      "description": "依議定用途、張數與修改範圍製作圖片，使用權及素材限制另確認。",
+      "price": {
+        "kind": "range",
+        "min": 1500,
+        "max": 5000
+      },
+      "reference": {
+        "kind": "task-provisional",
+        "label": "本輪暫定參考",
+        "sourceId": "task-provisional-pricing"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop"
+      ],
+      "thirdPartyNotes": [
+        "生圖模型、付費素材與授權費依實際使用另計。"
+      ]
+    },
+    {
+      "id": "logo",
+      "group": "visual",
+      "name": "Logo 設計",
+      "billing": "one-time",
+      "description": "先確認識別方向、提案與修改範圍，以及需交付的檔案格式。",
+      "price": {
+        "kind": "range",
+        "min": 3000,
+        "max": 12000
+      },
+      "reference": {
+        "kind": "task-provisional",
+        "label": "本輪暫定參考",
+        "sourceId": "task-provisional-pricing"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop",
+        "app"
+      ],
+      "thirdPartyNotes": [
+        "字型與素材授權、商標申請不由此項價格推定包含。"
+      ]
+    },
+    {
+      "id": "brand-visual",
+      "group": "visual",
+      "name": "品牌視覺延伸",
+      "billing": "one-time",
+      "description": "確認色彩、版面與視覺素材的延伸項目後，另行評估。",
+      "price": {
+        "kind": "quote",
+        "reason": "視覺項目、數量及交付格式待確認。"
+      },
+      "reference": {
+        "kind": "unpriced",
+        "label": "範圍待評估",
+        "sourceId": "task-unpriced-scope"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop",
+        "app"
+      ],
+      "thirdPartyNotes": [
+        "付費字型、圖片與其他素材授權依實際需求另計。"
+      ]
+    },
+    {
+      "id": "copywriting",
+      "group": "content",
+      "name": "文案整理與撰寫",
+      "billing": "one-time",
+      "description": "依頁面目的整理文案；篇幅、訪談、素材與修改輪次先行約定。",
+      "price": {
+        "kind": "range",
+        "min": 2000,
+        "max": 8000
+      },
+      "reference": {
+        "kind": "task-provisional",
+        "label": "本輪暫定參考",
+        "sourceId": "task-provisional-pricing"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop"
+      ],
+      "thirdPartyNotes": []
+    },
+    {
+      "id": "product-content",
+      "group": "content",
+      "name": "商品資料整理",
+      "billing": "one-time",
+      "description": "依商品數量、規格、來源格式與上架方式評估，實際資料由雙方核對。",
+      "price": {
+        "kind": "quote",
+        "reason": "商品數量與資料整理範圍待確認。"
+      },
+      "reference": {
+        "kind": "unpriced",
+        "label": "範圍待評估",
+        "sourceId": "task-unpriced-scope"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "shop"
+      ],
+      "thirdPartyNotes": [
+        "商品攝影、付費素材與平台上架費需另確認。"
+      ]
+    },
+    {
+      "id": "multilingual",
+      "group": "content",
+      "name": "多語系頁面",
+      "billing": "one-time",
+      "description": "對應頁面與介面語系功能；語言數、內容量及翻譯分工另確認。",
+      "price": {
+        "kind": "range",
+        "min": 8000,
+        "max": 20000
+      },
+      "reference": {
+        "kind": "company-reference",
+        "label": "公司建議參考",
+        "sourceId": "company-addon-pricing"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop",
+        "app"
+      ],
+      "thirdPartyNotes": [
+        "翻譯、校對與外部翻譯服務費不自動包含。"
+      ]
+    },
+    {
+      "id": "line-integration",
+      "group": "marketing",
+      "name": "LINE 進階整合",
+      "billing": "one-time",
+      "description": "先確認官方帳號入口與議定互動；自動訊息及外部 API 的範圍需另核對。",
+      "price": {
+        "kind": "range",
+        "min": 2000,
+        "max": 8000
+      },
+      "reference": {
+        "kind": "task-provisional",
+        "label": "本輪暫定參考",
+        "sourceId": "task-provisional-pricing"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop",
+        "app",
+        "ai-chatbot"
+      ],
+      "thirdPartyNotes": [
+        "LINE 官方帳號方案、訊息用量與外部服務費依實際條件另計。"
+      ]
+    },
+    {
+      "id": "advanced-seo",
+      "group": "marketing",
+      "name": "SEO 進階設定",
+      "billing": "one-time",
+      "description": "先盤點頁面與可處理項目，另定進階範圍；不承諾搜尋排名。",
+      "price": {
+        "kind": "range",
+        "min": 8000,
+        "max": 20000
+      },
+      "reference": {
+        "kind": "company-reference",
+        "label": "公司建議參考",
+        "sourceId": "company-addon-pricing"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop"
+      ],
+      "thirdPartyNotes": [
+        "付費 SEO 工具與持續內容服務依議定範圍另計。"
+      ]
+    },
+    {
+      "id": "analytics",
+      "group": "marketing",
+      "name": "流量分析整合",
+      "billing": "one-time",
+      "description": "限 Analytics 整合；先確認工具、事件與資料告知，不因試算而啟用追蹤。",
+      "price": {
+        "kind": "range",
+        "min": 3000,
+        "max": 8000
+      },
+      "reference": {
+        "kind": "company-reference",
+        "label": "公司建議參考",
+        "sourceId": "company-addon-pricing"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop"
+      ],
+      "thirdPartyNotes": [
+        "分析工具與資料平台費依實際方案另計。"
+      ]
+    },
+    {
+      "id": "inquiry-form",
+      "group": "integration",
+      "name": "詢價表單",
+      "billing": "one-time",
+      "description": "約定詢問欄位、收件管道及成功與失敗提示；不包含預約時段管理。",
+      "price": {
+        "kind": "range",
+        "min": 3000,
+        "max": 15000
+      },
+      "reference": {
+        "kind": "task-provisional",
+        "label": "本輪暫定參考",
+        "sourceId": "task-provisional-pricing"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop",
+        "app"
+      ],
+      "thirdPartyNotes": [
+        "表單、寄送與防濫用服務費另計，真實收件需獨立驗證。"
+      ]
+    },
+    {
+      "id": "booking",
+      "group": "integration",
+      "name": "預約功能",
+      "billing": "one-time",
+      "description": "確認日期、時段與預約規則；與一般詢價欄位分項，不推定包含完整排程後台。",
+      "price": {
+        "kind": "range",
+        "min": 3000,
+        "max": 15000
+      },
+      "reference": {
+        "kind": "task-provisional",
+        "label": "本輪暫定參考",
+        "sourceId": "task-provisional-pricing"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop",
+        "app"
+      ],
+      "thirdPartyNotes": [
+        "預約平台、通知及其他外部服務費依實際方案另計。"
+      ]
+    },
+    {
+      "id": "payment",
+      "group": "integration",
+      "name": "金流串接",
+      "billing": "one-time",
+      "description": "依付款服務商、交易流程與測試要求確認串接範圍。",
+      "price": {
+        "kind": "range",
+        "min": 8000,
+        "max": 25000
+      },
+      "reference": {
+        "kind": "task-provisional",
+        "label": "本輪暫定參考",
+        "sourceId": "task-provisional-pricing"
+      },
+      "applicableBuildIds": [
+        "shop",
+        "app"
+      ],
+      "thirdPartyNotes": [
+        "金流申請、交易手續費、退款及平台費不包含於串接參考費。"
+      ]
+    },
+    {
+      "id": "membership",
+      "group": "integration",
+      "name": "會員功能",
+      "billing": "one-time",
+      "description": "先確認登入、資料、角色與權限規則，不推定包含訂閱計費或多租戶。",
+      "price": {
+        "kind": "quote",
+        "reason": "帳號流程與權限範圍待確認。"
+      },
+      "reference": {
+        "kind": "unpriced",
+        "label": "範圍待評估",
+        "sourceId": "task-unpriced-scope"
+      },
+      "applicableBuildIds": [
+        "shop",
+        "app",
+        "ai-chatbot",
+        "ai-rag",
+        "ai-custom"
+      ],
+      "thirdPartyNotes": [
+        "外部身分驗證與通知服務費依方案及用量另計。"
+      ]
+    },
+    {
+      "id": "content-cms",
+      "group": "integration",
+      "name": "後台內容管理（CMS）",
+      "billing": "one-time",
+      "description": "限頁面、文章或商品介紹內容的 CMS 整合；訂單、庫存等業務後台需另評估。",
+      "price": {
+        "kind": "range",
+        "min": 10000,
+        "max": 30000
+      },
+      "reference": {
+        "kind": "company-reference",
+        "label": "CMS 整合建議參考",
+        "sourceId": "company-addon-pricing"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop"
+      ],
+      "thirdPartyNotes": [
+        "CMS 授權、儲存及主機費依實際方案另計。"
+      ]
+    },
+    {
+      "id": "domain",
+      "group": "maintenance",
+      "name": "網域與續約",
+      "billing": "annual",
+      "description": "確認網域名稱、持有人、註冊或移轉與續約管理分工後，再列明年費。",
+      "price": {
+        "kind": "quote",
+        "reason": "網域種類、註冊與管理範圍待確認。"
+      },
+      "reference": {
+        "kind": "unpriced",
+        "label": "年費待評估",
+        "sourceId": "task-unpriced-scope"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop",
+        "app",
+        "app-optimization",
+        "ai-chatbot",
+        "ai-rag",
+        "ai-custom"
+      ],
+      "thirdPartyNotes": [
+        "網域註冊與續約依註冊商實際價格另計，不假設首年與續約同價。"
+      ]
+    },
+    {
+      "id": "hosting",
+      "group": "maintenance",
+      "name": "主機與部署環境",
+      "billing": "annual",
+      "description": "依正式環境、容量與維運責任確認年約，不以免費展示額度估算正式費用。",
+      "price": {
+        "kind": "quote",
+        "reason": "部署環境、用量與服務範圍待確認。"
+      },
+      "reference": {
+        "kind": "unpriced",
+        "label": "年費待評估",
+        "sourceId": "task-unpriced-scope"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop",
+        "app",
+        "app-optimization",
+        "ai-chatbot",
+        "ai-rag",
+        "ai-custom"
+      ],
+      "thirdPartyNotes": [
+        "主機、資料庫、流量、儲存及備份依服務商方案或實際用量另計。"
+      ]
+    },
+    {
+      "id": "annual-maintenance",
+      "group": "maintenance",
+      "name": "年度維護與支援",
+      "billing": "annual",
+      "description": "公司另列網站、後端與 AI 維護月費參考；年約須依對應服務、支援時數與範圍另議。",
+      "price": {
+        "kind": "quote",
+        "reason": "年約範圍未定，不將月費直接換算成年價。"
+      },
+      "reference": {
+        "kind": "unpriced",
+        "label": "年約待評估",
+        "sourceId": "company-maintenance-scope"
+      },
+      "applicableBuildIds": [
+        "lp",
+        "brand",
+        "corp",
+        "shop",
+        "app",
+        "app-optimization",
+        "ai-chatbot",
+        "ai-rag",
+        "ai-custom"
+      ],
+      "thirdPartyNotes": [
+        "第三方續約與用量費另計；網站、系統與 AI 維護不共用同一費率。"
+      ]
+    }
+  ],
+  "complexities": [
+    {
+      "id": "basic",
+      "name": "Basic 基礎",
+      "description": "單一目標、較少內容或角色；用來說明需求，不調整參考區間。"
+    },
+    {
+      "id": "standard",
+      "name": "Standard 標準",
+      "description": "多個內容區塊或一般流程；用來說明需求，不調整參考區間。"
+    },
+    {
+      "id": "advanced",
+      "name": "Advanced 進階",
+      "description": "多角色、跨系統或較複雜規則；用來說明需求，不套用價格倍率。"
+    }
+  ]
+}

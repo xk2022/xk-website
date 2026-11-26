@@ -16,14 +16,16 @@ test("DC2-ROUTE-01: independent style, nine content keys and collection publicat
   assert.deepEqual(designCollectionRegistry.contentPages.map(({ pageKey }) => pageKey), fixture.contentPageKeys);
   assert.deepEqual(designCollectionRegistry.technicalProjectSlugs, fixture.technicalProjectSlugs);
   assert.deepEqual(designCollectionRegistry.brandShowcaseSlugs, fixture.brandShowcaseSlugs);
+  assert.deepEqual(designCollectionRegistry.anchors.modern, fixture.semanticAnchors);
+  assert.deepEqual(designCollectionRegistry.anchors.luxury, fixture.semanticAnchors);
 });
 
-test("DC3-ROUTE-01: independent exact 17-path publication with the original Modern 16", () => {
+test("DC5-ROUTE-01: independent exact 33-path publication with Modern 16 and Luxury 16", () => {
   const published = getPublishedDesignRoutes();
-  assert.equal(published.length, 17);
+  assert.equal(published.length, 33);
   assert.deepEqual(published.map(({ presentationPath }) => presentationPath).sort(), [...fixture.publishedPaths].sort());
   assert.deepEqual(published.filter(({ styleId }) => styleId === "modern").map(({ presentationPath }) => presentationPath), fixture.modernRoutes.map(({ path }) => path));
-  assert.ok(published.every(({ styleId, availability }) => (styleId === "modern" || styleId === null) && availability === "public"));
+  assert.ok(published.every(({ styleId, availability }) => ["modern", "luxury", null].includes(styleId) && availability === "public"));
   assert.deepEqual(published.map(({ presentationPath }) => presentationPath).sort(), seoPages.filter(({ availability }) => availability === "public").map(({ path }) => path).sort());
 });
 
@@ -39,7 +41,18 @@ for (const route of fixture.modernRoutes) {
   });
 }
 
-for (const styleId of ["heritage", "luxury"]) {
+for (const route of fixture.luxuryRoutes) {
+  test(`DC5-ROUTE-LUXURY: ${route.path} publishes only its independently approved identity`, () => {
+    const request = requestFor(route, "luxury");
+    const descriptor = describeDesignRoute(request);
+    assert.deepEqual(descriptor, { ...request, slug: route.slug ?? null, canonicalPath: route.canonicalPath, presentationPath: route.path, availability: "public", hash: null, hashPreserved: false });
+    assert.equal(resolveDesignHref(request), route.path);
+    assert.deepEqual(identifyDesignRoute(route.path), descriptor);
+    assert.deepEqual(identifyDesignRoute(route.path + "/"), descriptor);
+  });
+}
+
+for (const styleId of ["heritage"]) {
   test(`DC2-ROUTE-PLANNED: all ${styleId} 16 destinations have Modern canonicals but no hrefs`, () => {
     for (const route of fixture.modernRoutes) {
       const request = requestFor(route, styleId);
@@ -81,7 +94,7 @@ test("DC2-ROUTE-04: future 49-route formula is collision-free without publishing
   assert.equal(paths.size, 49);
   assert.deepEqual(fixture.stages.map(({ total }) => total), [16, 17, 33, 49]);
   for (const stage of fixture.stages) assert.equal(stage.modern + stage.collection + stage.heritage + stage.luxury, stage.total);
-  assert.equal(getPublishedDesignRoutes().length, fixture.stages[1].total);
+  assert.equal(getPublishedDesignRoutes().length, fixture.stages[2].total);
 });
 
 for (const example of fixture.anchorExamples) {
@@ -94,6 +107,13 @@ for (const example of fixture.anchorExamples) {
     assert.deepEqual(identifyDesignRoute(example.href), descriptor);
     assert.deepEqual(describeDesignRoute({ ...request, hash: "#" + example.hash }), descriptor);
     assert.ok(!descriptor.canonicalPath.includes("#") && !descriptor.presentationPath.includes("#"));
+  });
+  test(`DC5-ROUTE-ANCHOR: Luxury preserves the declared semantic ${example.hash}`, () => {
+    const request = { pageKey: example.pageKey, styleId: "luxury", ...(example.slug ? { slug: example.slug } : {}), hash: example.hash };
+    const expected = fixture.luxuryRoutes.find((route) => route.pageKey === example.pageKey && route.slug === example.slug).path + "#" + example.hash;
+    assert.equal(resolveDesignHref(request), expected);
+    assert.equal(describeDesignRoute(request).hashPreserved, true);
+    assert.deepEqual(identifyDesignRoute(expected), describeDesignRoute(request));
   });
 }
 

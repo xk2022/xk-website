@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "stage": "Independent v2\u2192v3 source hash bridge and current-syntax inspection; not browser acceptance",
+  "beforeFingerprint": "41c6ff4de2ebc88b1940aba4b53d6758931499dcafc66a566355352aa6b21ea5",
+  "afterFingerprint": "c45eda25642ef1a236c5cbcaa2acbca6a6c01d6b92870fd63e50e3aeda7db1e2",
+  "sourceFileCount": 202,
+  "unchangedFiles": 200,
+  "changes": [
+    {
+      "path": "src/components/design-collection/luxury/luxury-pages.tsx",
+      "before": "9405b51b289e9802e83236c4b303e01e3f767e39efa0f30818d841dffd620424",
+      "after": "99d97ea21378051bbcd47fdc5ad138fa72166c4b55973b4f5c2da01c5f7fd5b7"
+    },
+    {
+      "path": "src/design-systems/luxury/luxury.css",
+      "before": "4c0f2e9d797370ffe655ea2896ccf191296996c7b47effdeb1cf6a251956d606",
+      "after": "3492a5e70520dbd8f1236bf4a4130148104d3ce126a347bd827987a674aafbf4"
+    }
+  ],
+  "missing": [],
+  "extra": [],
+  "currentCopiesMismatch": [],
+  "currentSyntaxAssertions": {
+    "Home retains DTO-derived labels in the approved ul.lx-index": true,
+    "Quotation Logo white backplate is inside screen-only media": true
+  },
+  "limitation": "Old file bodies are not reconstructed. This proves the exact changed path/hash boundary; it does not relabel older full browser tests or assert output geometry equivalence."
+}

@@ -1,0 +1,37 @@
+{
+  "reviewedAt": "2026-11-22",
+  "scope": "BF-011 through BF-016 approved website inventory; changes require a reviewed content/route decision.",
+  "brandOrder": [
+    "march-tangbao",
+    "hongjia-birdnest",
+    "yupinyuan-bento",
+    "campaign-website-design",
+    "honest-diecut",
+    "qiangang-windows"
+  ],
+  "templateIds": ["demo-001", "demo-002", "demo-003", "demo-004"],
+  "featuredIds": ["march-tangbao", "hongjia-birdnest", "honest-diecut"],
+  "technicalPlanSlugs": ["corporate-website", "enterprise-management", "integration-hub"],
+  "existingPublicPaths": [
+    "/", "/about", "/services", "/solutions", "/portfolio", "/contact",
+    "/portfolio/corporate-website", "/portfolio/enterprise-management", "/portfolio/integration-hub"
+  ],
+  "portfolioAnchors": ["website-cases", "website-samples", "portfolio-projects"],
+  "referenceOnlyIds": ["demo-002", "demo-003"],
+  "presentationById": {
+    "march-tangbao": "brand-demo",
+    "hongjia-birdnest": "brand-demo",
+    "yupinyuan-bento": "brand-demo",
+    "campaign-website-design": "service-preview",
+    "honest-diecut": "brand-demo",
+    "qiangang-windows": "brand-proposal",
+    "demo-001": "template",
+    "demo-002": "template",
+    "demo-003": "template",
+    "demo-004": "template"
+  },
+  "sourceAssetChecks": [
+    {"id": "demo-002", "url": "https://xk2022.github.io/single-demo002/assets/assets/img/bg-masthead.jpg", "expectedStatus": 404},
+    {"id": "demo-003", "url": "https://xk2022.github.io/single-demo003/img/logo.png", "expectedStatus": 404}
+  ]
+}

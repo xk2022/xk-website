@@ -454,10 +454,18 @@ Native 測試透過 Node.js 24 的 test-only alias hook 解析既有 Next.js imp
 交付前同步已合併 PR #36／#37 的工程索引與 Roadmap 整理，最新 main 基準更新為 `aa100adfad24b74ccb39d2df811b613c4d6a15ef`。差異只有文件；保留集中 Roadmap／新索引與本輪說明，未引入其他功能，原 runtime source bytes 不變。搬移前 baseline 仍保留 `794b076` 版本邊界。
 
 
-## 2026-11-26 DC-005 — Luxury 品牌審閱前置
+## 2026-11-26 DC-005 — Luxury 品牌審閱前置（核准前快照）
 
 依已合併工作包，DC-005 與 DC-004 可從 DC-003 平行進行。最新 main `8ba299a5` 已含 DC-003／PR #39，17 頁；DC-004／PR #40 尚未合併。本輪建立 `feature/design-collection-luxury`，不整合未核准 Heritage 程式。公司最新正式規範與品牌來源唯讀重核，英文路徑及來源版本詳見 [本輪報告](../reports/dc005-brand-review.md)；不修改文件 Repository。
 
 Luxury palette／品牌外框／素材範圍須同版本 Owner 審閱；本輪先交付 [v1 審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、僅本機 HTML、桌面／手機實際截圖及 scoped 驗證。正式路由／registry／Gallery／業務資料／價格／標準 A4 不動，globals.css 只加精確文件掃描排除並驗 runtime 產物相同。不可將原型／技術通過或先前 Heritage 核准當成 Luxury 已批准、完整功能已完成或已部署。
 
 QA 工具及 log 一律 gzip 保存原 bytes／SHA，完整封存後才執行 Lint，避免再次讓證據內 CommonJS 工具進入 App 規則。品牌核准後按 [DC-005 完整規格](../task/dc005.md) 繼續；本輪僅 Push／Draft PR，不自動合併或部署。
+
+## 2026-11-26 DC-005 — 品牌核准後的完整 Luxury 實作
+
+使用者對 Luxury v1 回覆「批准合併」，形成 [同版本品牌核准](../01_design/design-collection/reviews/luxury-v1-approval.md) 及 [PR #41](https://github.com/xk2022/xk-website/pull/41) 合併授權；該 PR 已合併至 main `74369376a0dbeeb0a17b5ee34557059c8e2a9491`，正式 main 的 Modern 16 頁與 Gallery 共 17 頁已部署。原審閱稿、品牌前置報告及其 PENDING／BLOCKED 保留當時快照，不回寫為完整 Luxury 功能驗收。
+
+同一 `feature/design-collection-luxury` 分支已同步該 main，接續原 [DC-005 完整工作包](../task/dc005.md)，已加入 16 個 Luxury 頁面實作，分支清冊共 33 頁。內容、服務／作品狀態、參考價格與 Contact／Quotation 核心沿用主線；完整正式驗收、限制及後續交付以 [實作報告](../reports/dc005-implementation.md) 記錄，不預填測試通過或未發生的 PR 識別碼。
+
+Heritage 的 PR #40 仍未合併，未引入其程式或取代本分支基準。Luxury 完整功能後續另開 PR 待審；PR #41 只核准並合併品牌審閱，不預先授權新功能自動合併或發布，也不延伸為法律政策、索引、業務或價格核准。

@@ -1,13 +1,25 @@
 {
   "reviewedAt": "2026-11-26",
-  "baseline": "794b076",
-  "scope": "DC-003 independently approved Modern 16 plus Gallery. The remaining 32 style destinations stay planned.",
-  "styleStatus": {"modern": "implemented", "heritage": "planned", "luxury": "planned"},
+  "baseline": "74369376",
+  "scope": "DC-005 independently approved Modern 16 plus Gallery plus Luxury 16. Heritage remains planned; its unmerged implementation is not included.",
+  "styleStatus": {"modern": "implemented", "heritage": "planned", "luxury": "implemented"},
+  "styleHomePaths": {"modern": "/", "heritage": null, "luxury": "/design-collection/luxury"},
   "collectionStatus": "implemented",
   "namespace": "/design-collection",
   "technicalProjectSlugs": ["corporate-website", "enterprise-management", "integration-hub"],
   "brandShowcaseSlugs": ["march-tangbao", "hongjia-birdnest", "yupinyuan-bento", "campaign-website-design", "honest-diecut", "qiangang-windows"],
   "contentPageKeys": ["home", "about", "services", "solutions", "portfolio", "technical-project", "brand-showcase", "contact", "quotation"],
+  "semanticAnchors": {
+    "home": ["main-content", "about", "brand", "services", "service-plans", "featured-websites", "technologies", "why-xk", "solutions", "contact", "service-website-development", "service-java-enterprise", "service-system-integration", "service-ai-solutions", "service-maintenance"],
+    "about": ["main-content", "who-we-are", "mission", "vision", "capabilities", "approach", "founder", "commitment", "about-next-step"],
+    "services": ["main-content", "service-overview", "service-plans", "pricing-guide", "website-development", "java-enterprise", "system-integration", "ai-automation", "cloud-infrastructure", "service-combinations", "services-process", "services-next-step"],
+    "solutions": ["main-content", "solutions-hero", "business-challenges", "solutions-overview", "solution-details", "solution-digital-presence", "solution-enterprise-management", "solution-system-integration", "solution-ai-workflow", "solution-technology", "solution-combinations", "implementation-approach", "why-xk-solutions", "solutions-next-step"],
+    "portfolio": ["main-content", "portfolio-hero", "portfolio-introduction", "website-cases", "website-samples", "portfolio-projects", "portfolio-technology", "portfolio-transparency", "portfolio-next-step"],
+    "technical-project": ["main-content", "project-overview", "project-challenge", "project-solution", "project-technology", "project-evidence", "project-status", "project-services", "project-next-step"],
+    "brand-showcase": ["main-content", "showcase-overview", "showcase-context", "showcase-preview", "showcase-implementation", "showcase-limitations", "showcase-next-step"],
+    "contact": ["main-content", "contact-hero", "contact-form", "contact-channels", "contact-preparation", "contact-process", "contact-data-note", "contact-next-step"],
+    "quotation": ["main-content", "quotation-introduction", "quotation-services", "quotation-builds", "quotation-addons", "quotation-complexity", "quotation-results", "quotation-print-summary", "quotation-next-step"]
+  },
   "modernRoutes": [
     {"pageKey": "home", "path": "/"},
     {"pageKey": "about", "path": "/about"},
@@ -32,17 +44,40 @@
     "description": "比較 Modern、Heritage 與 Luxury 網站設計系列，了解同一份 XK 品牌內容的不同呈現方向。",
     "anchors": ["main-content", "design-styles"]
   },
+  "luxuryRoutes": [
+    {"pageKey": "home", "path": "/design-collection/luxury", "canonicalPath": "/"},
+    {"pageKey": "about", "path": "/design-collection/luxury/about", "canonicalPath": "/about"},
+    {"pageKey": "services", "path": "/design-collection/luxury/services", "canonicalPath": "/services"},
+    {"pageKey": "solutions", "path": "/design-collection/luxury/solutions", "canonicalPath": "/solutions"},
+    {"pageKey": "portfolio", "path": "/design-collection/luxury/portfolio", "canonicalPath": "/portfolio"},
+    {"pageKey": "technical-project", "slug": "corporate-website", "path": "/design-collection/luxury/portfolio/corporate-website", "canonicalPath": "/portfolio/corporate-website"},
+    {"pageKey": "technical-project", "slug": "enterprise-management", "path": "/design-collection/luxury/portfolio/enterprise-management", "canonicalPath": "/portfolio/enterprise-management"},
+    {"pageKey": "technical-project", "slug": "integration-hub", "path": "/design-collection/luxury/portfolio/integration-hub", "canonicalPath": "/portfolio/integration-hub"},
+    {"pageKey": "brand-showcase", "slug": "march-tangbao", "path": "/design-collection/luxury/portfolio/showcases/march-tangbao", "canonicalPath": "/portfolio/showcases/march-tangbao"},
+    {"pageKey": "brand-showcase", "slug": "hongjia-birdnest", "path": "/design-collection/luxury/portfolio/showcases/hongjia-birdnest", "canonicalPath": "/portfolio/showcases/hongjia-birdnest"},
+    {"pageKey": "brand-showcase", "slug": "yupinyuan-bento", "path": "/design-collection/luxury/portfolio/showcases/yupinyuan-bento", "canonicalPath": "/portfolio/showcases/yupinyuan-bento"},
+    {"pageKey": "brand-showcase", "slug": "campaign-website-design", "path": "/design-collection/luxury/portfolio/showcases/campaign-website-design", "canonicalPath": "/portfolio/showcases/campaign-website-design"},
+    {"pageKey": "brand-showcase", "slug": "honest-diecut", "path": "/design-collection/luxury/portfolio/showcases/honest-diecut", "canonicalPath": "/portfolio/showcases/honest-diecut"},
+    {"pageKey": "brand-showcase", "slug": "qiangang-windows", "path": "/design-collection/luxury/portfolio/showcases/qiangang-windows", "canonicalPath": "/portfolio/showcases/qiangang-windows"},
+    {"pageKey": "contact", "path": "/design-collection/luxury/contact", "canonicalPath": "/contact"},
+    {"pageKey": "quotation", "path": "/design-collection/luxury/quotation", "canonicalPath": "/quotation"}
+  ],
   "publishedPaths": [
     "/", "/about", "/services", "/solutions", "/portfolio",
     "/portfolio/corporate-website", "/portfolio/enterprise-management", "/portfolio/integration-hub",
     "/portfolio/showcases/march-tangbao", "/portfolio/showcases/hongjia-birdnest", "/portfolio/showcases/yupinyuan-bento",
     "/portfolio/showcases/campaign-website-design", "/portfolio/showcases/honest-diecut", "/portfolio/showcases/qiangang-windows",
-    "/contact", "/quotation", "/design-collection"
+    "/contact", "/quotation", "/design-collection",
+    "/design-collection/luxury", "/design-collection/luxury/about", "/design-collection/luxury/services", "/design-collection/luxury/solutions", "/design-collection/luxury/portfolio",
+    "/design-collection/luxury/portfolio/corporate-website", "/design-collection/luxury/portfolio/enterprise-management", "/design-collection/luxury/portfolio/integration-hub",
+    "/design-collection/luxury/portfolio/showcases/march-tangbao", "/design-collection/luxury/portfolio/showcases/hongjia-birdnest", "/design-collection/luxury/portfolio/showcases/yupinyuan-bento",
+    "/design-collection/luxury/portfolio/showcases/campaign-website-design", "/design-collection/luxury/portfolio/showcases/honest-diecut", "/design-collection/luxury/portfolio/showcases/qiangang-windows",
+    "/design-collection/luxury/contact", "/design-collection/luxury/quotation"
   ],
   "stages": [
     {"modern": 16, "collection": 0, "heritage": 0, "luxury": 0, "total": 16},
     {"modern": 16, "collection": 1, "heritage": 0, "luxury": 0, "total": 17},
-    {"modern": 16, "collection": 1, "heritage": 16, "luxury": 0, "total": 33},
+    {"modern": 16, "collection": 1, "heritage": 0, "luxury": 16, "total": 33},
     {"modern": 16, "collection": 1, "heritage": 16, "luxury": 16, "total": 49}
   ],
   "anchorExamples": [

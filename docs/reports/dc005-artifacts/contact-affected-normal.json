@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc005-full/contact-affected.cjs",
+    "normal",
+    "http://127.0.0.1:3262/",
+    "final",
+    "/tmp/xk-dc005-full/source.json",
+    "/tmp/xk-dc005-full/fixture.json",
+    "/tmp/xk-dc005-full/contract.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T06:47:02.122565+00:00",
+  "finishedAt": "2026-11-26T06:47:19.901852+00:00",
+  "processId": 88235,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-dc005-full/contact-affected-normal.log",
+  "logSha256": "b620ca3c075a77a7b0a3d43e57a401ac7a98fb6c68374a8c04ba28fc5144183f",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

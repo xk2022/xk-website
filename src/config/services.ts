@@ -65,6 +65,12 @@ export const serviceCategories = [
 ] as const satisfies readonly ServiceCategory[];
 
 export const servicesPage = {
+  websiteGuide: {
+    title: "一頁式網站，聚焦品牌與主題",
+    description: "適合品牌介紹、商品或活動焦點；頁面內容與呈現方式依實際需求確認。可先瀏覽網站範例與品牌展示，了解不同情境的網站安排。",
+    samplesLink: { label: "瀏覽網站範例", href: "/portfolio#website-samples" },
+    showcasesLink: { label: "查看展示案例", href: "/portfolio#website-cases" },
+  },
   hero: {
     titleLines: ["我們提供的", "數位技術服務"],
     englishTitle: "Our Services",

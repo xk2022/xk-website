@@ -18,9 +18,9 @@ function requestFor(route, styleId = route.styleId) {
 const published = seoPages.filter(({ availability }) => availability === "public");
 const fixture = JSON.parse(readFileSync(new URL("./fixtures/design-collection-contract.json", import.meta.url), "utf8"));
 const modern = fixture.modernRoutes.map(({ path }) => published.find((page) => page.path === path));
-test("Modern 16 and Gallery are the independent exact 17-page public inventory", () => {
-  assert.equal(published.length, 17);
-  assert.equal(getPublishedDesignRoutes().length, 17);
+test("Modern 16, Gallery and Luxury 16 are the independent exact 33-page public inventory", () => {
+  assert.equal(published.length, 33);
+  assert.equal(getPublishedDesignRoutes().length, 33);
   assert.equal(modern.length, 16);
   assert.ok(modern.every(Boolean));
   assert.deepEqual(published.map(({ path }) => path).sort(), [...fixture.publishedPaths].sort());
@@ -37,11 +37,11 @@ for (const page of modern) {
 
 for (const styleId of ["heritage", "luxury"]) {
   for (const page of modern) {
-    test(`${styleId} ${page.path}: Modern canonical, presentation OG, unpublished`, () => {
+    test(`${styleId} ${page.path}: Modern canonical, presentation OG and exact publication state`, () => {
       const modern = identifyDesignRoute(page.path);
       const request = requestFor(modern, styleId);
       const contract = describeDesignMetadata(request);
-      assert.equal(contract.availability, "planned");
+      assert.equal(contract.availability, styleId === "luxury" ? "public" : "planned");
       assert.equal(contract.canonicalPath, page.path);
       assert.equal(contract.presentationPath, `/design-collection/${styleId}${page.path === "/" ? "" : page.path}`);
       assert.equal(contract.metadata.alternates.canonical, new URL(page.path, "https://www.xplorekaleidoscope.com").href);
@@ -51,7 +51,14 @@ for (const styleId of ["heritage", "luxury"]) {
       assert(!("images" in contract.metadata.openGraph));
       assert(!("images" in contract.metadata.twitter));
       assert(!("languages" in contract.metadata.alternates));
-      assert.equal(createDesignPageMetadata(request), null);
+      if (styleId === "luxury") {
+        const expected = fixture.luxuryRoutes.find(({ canonicalPath }) => canonicalPath === page.path);
+        assert.equal(contract.presentationPath, expected.path);
+        const entry = published.find(({ path }) => path === expected.path);
+        assert(entry);
+        assert.deepEqual(createDesignPageMetadata(request), contract.metadata);
+        assert.deepEqual(contract.metadata, { ...createPageMetadata(entry, siteConfig), alternates: { canonical: new URL(expected.canonicalPath, siteConfig.url).href } });
+      } else assert.equal(createDesignPageMetadata(request), null);
     });
   }
 }
@@ -91,5 +98,5 @@ test("Metadata results do not mutate source or later calls", () => {
   first.description = "CHANGED_BY_CONSUMER";
   assert.deepEqual(createDesignPageMetadata({ styleId: "modern", pageKey: "home" }), createPageMetadata(published[0], siteConfig));
   assert.deepEqual(seoProtectionPolicy, { mode: "protected", publishSitemap: false });
-  assert.deepEqual(seoPages.filter(({ path }) => path.startsWith("/design-collection")).map(({ path }) => path), [fixture.collectionRoute.path]);
+  assert.deepEqual(seoPages.filter(({ path }) => path.startsWith("/design-collection")).map(({ path }) => path).sort(), [fixture.collectionRoute.path, ...fixture.luxuryRoutes.map(({ path }) => path)].sort());
 });

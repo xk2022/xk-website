@@ -8,10 +8,19 @@ import { contactNavigation, primaryNavigation, quotationNavigation } from "@/con
 import { portfolioProjects } from "@/config/portfolio";
 import { siteConfig } from "@/config/site";
 import { brandWebsiteShowcases, showcaseDetailPath } from "@/config/website-showcases";
+import type { DesignRouteDescriptor } from "@/lib/design-collection/types";
+import { getPublishedDesignRoutes } from "@/lib/design-collection/routes";
 import { isPrivacyPolicyPublished } from "@/lib/privacy-publication";
 
 const footerLinkStyles =
   "inline-flex min-h-11 items-center rounded-sm text-primary-foreground/80 transition-colors duration-brand ease-brand hover:text-primary-foreground motion-reduce:transition-none";
+
+function luxuryRouteLabel(route: DesignRouteDescriptor): string {
+  if (route.pageKey === "technical-project") return `${portfolioProjects.find((item) => item.slug === route.slug)?.title ?? route.slug}｜技術規劃`;
+  if (route.pageKey === "brand-showcase") return `${brandWebsiteShowcases.find((item) => item.id === route.slug)?.title ?? route.slug}｜作品介紹`;
+  const labels = { home: "Luxury 首頁", about: "關於 XK", services: "服務項目", solutions: "解決方案", portfolio: "作品展示", contact: "聯絡我們", quotation: "方案試算", collection: "設計系列" };
+  return labels[route.pageKey];
+}
 
 export function SiteFooter() {
   return (
@@ -69,6 +78,12 @@ export function SiteFooter() {
                     {showcase.title}｜作品介紹
                   </Link>
                 </li>
+              ))}
+            </ul>
+            <h2 className="type-body mt-8 mb-4 font-semibold">Luxury 網站目錄</h2>
+            <ul className="type-body-sm space-y-1">
+              {getPublishedDesignRoutes().filter((route) => route.styleId === "luxury").map((route) => (
+                <li key={route.presentationPath}><Link href={route.presentationPath} className={`${footerLinkStyles} max-w-full break-words`}>{luxuryRouteLabel(route)}</Link></li>
               ))}
             </ul>
           </nav>

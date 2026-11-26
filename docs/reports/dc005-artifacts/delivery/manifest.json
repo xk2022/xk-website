@@ -1,0 +1,61 @@
+{
+  "files": [
+    {
+      "source": "lint-final.json",
+      "path": "docs/reports/dc005-artifacts/delivery/lint-final.json",
+      "compression": "identity",
+      "rawSha256": "e1e5e494ac28890320cc5814130343b1c8e31934ee164e004f749587e97222a9",
+      "archiveSha256": "e1e5e494ac28890320cc5814130343b1c8e31934ee164e004f749587e97222a9"
+    },
+    {
+      "source": "lint-final.log",
+      "path": "docs/reports/dc005-artifacts/delivery/lint-final.log.gz",
+      "compression": "gzip",
+      "rawSha256": "4696703654c92426c8748b7837936df0036098577fdcb7af6f2ee9d9db2e79e6",
+      "archiveSha256": "26648289651d2bf6f47089d7579de380557f3bbff2880cddfdb6e802b03431d1"
+    },
+    {
+      "source": "final-review-v1.receipt.json",
+      "path": "docs/reports/dc005-artifacts/delivery/final-review-v1.receipt.json",
+      "compression": "identity",
+      "rawSha256": "ffeb9d833d4974e68abe3e2533ec4425c4f5a6e5255d52225b866a51e52e1f4c",
+      "archiveSha256": "ffeb9d833d4974e68abe3e2533ec4425c4f5a6e5255d52225b866a51e52e1f4c"
+    },
+    {
+      "source": "final-review-v1.log",
+      "path": "docs/reports/dc005-artifacts/delivery/final-review-v1.log.gz",
+      "compression": "gzip",
+      "rawSha256": "720dfeefdfea1e798243bbde8cf97cef9fc767d7acbe9cb9981899bbd90a1202",
+      "archiveSha256": "0e33163d05096c28f34d16cd50279ebda716751aff52ed5c32fe7443685528ee"
+    },
+    {
+      "source": "final-review-v1-result.json",
+      "path": "docs/reports/dc005-artifacts/delivery/final-review-v1-result.json",
+      "compression": "identity",
+      "rawSha256": "b906be7216b037243c326762995fc7967ffd08b721fee5a837ebf1e7c40ea96d",
+      "archiveSha256": "b906be7216b037243c326762995fc7967ffd08b721fee5a837ebf1e7c40ea96d"
+    },
+    {
+      "source": "package-command-v2.json",
+      "path": "docs/reports/dc005-artifacts/delivery/package-command-v2.json",
+      "compression": "identity",
+      "rawSha256": "9d43964e46dfef9e97e368f01f6e36df47d34db5ca7c86bbe48215767182b843",
+      "archiveSha256": "9d43964e46dfef9e97e368f01f6e36df47d34db5ca7c86bbe48215767182b843"
+    },
+    {
+      "source": "package-command-v2.log",
+      "path": "docs/reports/dc005-artifacts/delivery/package-command-v2.log.gz",
+      "compression": "gzip",
+      "rawSha256": "b47ff1948e3b9c599ac271c5eaebfd0f621dafeedf45558f33a387ed054b4f97",
+      "archiveSha256": "60ed4d595142ab9109dcb177680bf13c9c86ba7236b73bdb23af8d62914a8da8"
+    },
+    {
+      "source": "package-applied-v2.json",
+      "path": "docs/reports/dc005-artifacts/delivery/package-applied-v2.json",
+      "compression": "identity",
+      "rawSha256": "b47ff1948e3b9c599ac271c5eaebfd0f621dafeedf45558f33a387ed054b4f97",
+      "archiveSha256": "b47ff1948e3b9c599ac271c5eaebfd0f621dafeedf45558f33a387ed054b4f97"
+    }
+  ],
+  "scope": "Actual completed packaging/final lint/initial text and runtime bridge. Staged final check and remote events separate."
+}

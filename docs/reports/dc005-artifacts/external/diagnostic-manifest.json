@@ -1,0 +1,23 @@
+{
+  "files": [
+    {
+      "path": "docs/reports/dc005-artifacts/external/external-diagnostic.json",
+      "rawSha256": "83cad42661344fe3f37283f23d21c67df10c7a0476a2c34ff14e9e98248cb6d0",
+      "archiveSha256": "83cad42661344fe3f37283f23d21c67df10c7a0476a2c34ff14e9e98248cb6d0",
+      "compression": "identity"
+    },
+    {
+      "path": "docs/reports/dc005-artifacts/external/external-diagnostic.log.gz",
+      "rawSha256": "f6503c7ca3d24f87c849c3d5e9b1a7db0f2e8c8966e7539909c263e4fac56c0e",
+      "archiveSha256": "2ec907b3d7385bd09a42ab9758c2d3b9bb23e87280c39b09352a0873b0b8c9e1",
+      "compression": "gzip"
+    },
+    {
+      "path": "docs/reports/dc005-artifacts/external/external-diagnostic.receipt.json",
+      "rawSha256": "f238b260fda091bd367c4d46e08d3c839bc3a08be8c8e2765055c648c781c2bf",
+      "archiveSha256": "f238b260fda091bd367c4d46e08d3c839bc3a08be8c8e2765055c648c781c2bf",
+      "compression": "identity"
+    }
+  ],
+  "scope": "One independent read-only10GET+5DNS; GitHub Pages404 at this managed-proxy vantage. No remote mutations, no inferred account/global root cause."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc005-full/home-affected-v4.cjs",
+    "normal",
+    "http://127.0.0.1:3262/",
+    "v3-retest",
+    "/tmp/xk-dc005-full/source.json",
+    "/tmp/xk-dc005-full/fixture.json",
+    "/tmp/xk-dc005-full/contract.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T07:01:14.572050+00:00",
+  "finishedAt": "2026-11-26T07:01:41.569219+00:00",
+  "processId": 96024,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 360.0,
+  "logFile": "/tmp/xk-dc005-full/home-affected-normal-v3-retest.log",
+  "logSha256": "8a29bfea2917f8af49f6f0d2a9798b59d31830ef9e02e049f31100fb68de3588",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,285 @@
+{
+  "files": [
+    {
+      "source": "inspect-ci-artifact.py",
+      "path": "docs/reports/dc005-artifacts/remote-v3/inspect-ci-artifact.py.gz",
+      "compression": "gzip",
+      "rawSha256": "389d7748df3a637363031ca22ce5dc9f8a91c60237a583f9a1f5d5756c1f06b9",
+      "archiveSha256": "a5cc474a9cc5488a19fb3b4975ea4bd4168c7f4b09371ff03a54288086aafc0d",
+      "role": "reproducible offline checker"
+    },
+    {
+      "source": "artifact-baseline/baseline.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/baseline.json.gz",
+      "compression": "gzip",
+      "rawSha256": "ada9379d514a5cdd4637d3164e0a0e26c34e47e3b837fecfddfd428c47eca48d",
+      "archiveSha256": "134b1124f14ffa19543928cb2c273bc5947fb6843653b6db80bd74c5dedd64eb",
+      "role": "frozen tested v3 source data and complete output hashes"
+    },
+    {
+      "source": "artifact-baseline/smoke-website.py",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/smoke-website.py.gz",
+      "compression": "gzip",
+      "rawSha256": "450ec71303a3fe8d827913178021bfe660d29dc91db1ae054b6a5cc01d675ea0",
+      "archiveSha256": "8f88b2500f1f80ee3b0dfc79f234f676ec8dfeba74b2fea010723b7fe717f248",
+      "role": "frozen HTML/parser/metadata helper"
+    },
+    {
+      "source": "artifact-baseline/scripts/fixtures/showcase-contract.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/scripts/fixtures/showcase-contract.json",
+      "compression": "identity",
+      "rawSha256": "6a0e85f08bce359733a8c1fbe3a084ab04c93299e803ec51e1dab2709f82577d",
+      "archiveSha256": "6a0e85f08bce359733a8c1fbe3a084ab04c93299e803ec51e1dab2709f82577d",
+      "role": "independent approved fixture"
+    },
+    {
+      "source": "artifact-baseline/scripts/fixtures/contact-contract.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/scripts/fixtures/contact-contract.json",
+      "compression": "identity",
+      "rawSha256": "f7744592b2b7196fac01e0f5618e21150b4be9a5c3ea0a9cb6f10168f2b4e220",
+      "archiveSha256": "f7744592b2b7196fac01e0f5618e21150b4be9a5c3ea0a9cb6f10168f2b4e220",
+      "role": "independent approved fixture"
+    },
+    {
+      "source": "artifact-baseline/scripts/fixtures/quotation-contract.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/scripts/fixtures/quotation-contract.json",
+      "compression": "identity",
+      "rawSha256": "fe8659d9f54bbb35c056b234f64ccec57216a6ee59abea54adf209af6d3cba81",
+      "archiveSha256": "fe8659d9f54bbb35c056b234f64ccec57216a6ee59abea54adf209af6d3cba81",
+      "role": "independent approved fixture"
+    },
+    {
+      "source": "artifact-baseline/scripts/fixtures/design-collection-contract.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/artifact-baseline/scripts/fixtures/design-collection-contract.json",
+      "compression": "identity",
+      "rawSha256": "cc08c0454501fdb308362ee923e06b324e1f8ce3c84e8d10ce5531f7f0e392ea",
+      "archiveSha256": "cc08c0454501fdb308362ee923e06b324e1f8ce3c84e8d10ce5531f7f0e392ea",
+      "role": "independent approved fixture"
+    },
+    {
+      "source": "prepare-local-baseline.receipt.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/prepare-local-baseline.receipt.json",
+      "compression": "identity",
+      "rawSha256": "da7ca43cabab5ab9aac2e66ff66b6cee1009b97a6c2c50f32636223fb5c0fb8c",
+      "archiveSha256": "da7ca43cabab5ab9aac2e66ff66b6cee1009b97a6c2c50f32636223fb5c0fb8c",
+      "role": "actual local preparation/check evidence"
+    },
+    {
+      "source": "prepare-local-baseline.log",
+      "path": "docs/reports/dc005-artifacts/remote-v3/prepare-local-baseline.log.gz",
+      "compression": "gzip",
+      "rawSha256": "835b58e419eeeac9f449348a36ea0b674702c58454bc9dbf8fcb8a1946a23c33",
+      "archiveSha256": "323cd99303683e43b532a07d8937a036b708f75f72d823b75ad01cc3f9403da2",
+      "role": "actual local preparation/check evidence"
+    },
+    {
+      "source": "local-artifact-check.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/local-artifact-check.json.gz",
+      "compression": "gzip",
+      "rawSha256": "6092bc7f82a1daeceede06ed03a5ae92ee252e1aac5e0978966cc27a39bad6cb",
+      "archiveSha256": "ba526635426952ca3e5021db9718ed8c4df9c84f6cb773cfe1080c714f5e0d7f",
+      "role": "actual local preparation/check evidence"
+    },
+    {
+      "source": "local-artifact-check.receipt.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/local-artifact-check.receipt.json",
+      "compression": "identity",
+      "rawSha256": "4f84d6a96d00b56c8a8c0b06b599cba5b3be54307647342890f316ed0cde1d09",
+      "archiveSha256": "4f84d6a96d00b56c8a8c0b06b599cba5b3be54307647342890f316ed0cde1d09",
+      "role": "actual local preparation/check evidence"
+    },
+    {
+      "source": "local-artifact-check.log",
+      "path": "docs/reports/dc005-artifacts/remote-v3/local-artifact-check.log.gz",
+      "compression": "gzip",
+      "rawSha256": "68750e4ff554893b15845ed612f4f0e41c7dd0dc0f68c785d86b188eaf81f558",
+      "archiveSha256": "1dc7f1a45daf9b9e06cce7b3c2706866e2ce118b59a9297d6a4a0b95b90d2bfc",
+      "role": "actual local preparation/check evidence"
+    },
+    {
+      "source": "verify-source-bridge.py",
+      "path": "docs/reports/dc005-artifacts/remote-v3/verify-source-bridge.py.gz",
+      "compression": "gzip",
+      "rawSha256": "fb345d1ee810ac74c0a718ae9128e04b820e56f077bd84a215768a7a2f182160",
+      "archiveSha256": "7f335013a1e0a27282ae34cbac931d36ed10807d115563d42b3785eb1b6ea6b7",
+      "role": "source version bridge evidence"
+    },
+    {
+      "source": "source-bridge.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/source-bridge.json",
+      "compression": "identity",
+      "rawSha256": "fc02f0772ac891700f5cdb09a4ddc2fe3399e476b003b2e56c3b09f8497d0f2b",
+      "archiveSha256": "fc02f0772ac891700f5cdb09a4ddc2fe3399e476b003b2e56c3b09f8497d0f2b",
+      "role": "source version bridge evidence"
+    },
+    {
+      "source": "source-bridge.receipt.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/source-bridge.receipt.json",
+      "compression": "identity",
+      "rawSha256": "59ac9900e3ec8f7670880cd4155449813900e1553abfe07824a04627b237d523",
+      "archiveSha256": "59ac9900e3ec8f7670880cd4155449813900e1553abfe07824a04627b237d523",
+      "role": "source version bridge evidence"
+    },
+    {
+      "source": "source-bridge.log",
+      "path": "docs/reports/dc005-artifacts/remote-v3/source-bridge.log.gz",
+      "compression": "gzip",
+      "rawSha256": "94a259ff3dc20405b724b31bc7b3601bfe8ee5906b071adfcd19fcc9f2493ee0",
+      "archiveSha256": "9594d233a4c6561e253af9f1ec89b173841a24891100db1556bc3f36b0dbdc0e",
+      "role": "source version bridge evidence"
+    },
+    {
+      "source": "v2-source.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/v2-source.json",
+      "compression": "identity",
+      "rawSha256": "ff3c555d2583fa8f13e0d7ccdc230a58789d017a17daf886982896a1560c8bcf",
+      "archiveSha256": "ff3c555d2583fa8f13e0d7ccdc230a58789d017a17daf886982896a1560c8bcf",
+      "role": "source version bridge evidence"
+    },
+    {
+      "source": "tested-source.json",
+      "path": "docs/reports/dc005-artifacts/remote-v3/tested-source.json",
+      "compression": "identity",
+      "rawSha256": "4dab0b7c3c48a4237e0917cc254a4fa365fd8ad1035cb7a05ecf3d8f614221eb",
+      "archiveSha256": "4dab0b7c3c48a4237e0917cc254a4fa365fd8ad1035cb7a05ecf3d8f614221eb",
+      "role": "source version bridge evidence"
+    }
+  ],
+  "scope": "Frozen final v3 local output checker. Remote PR CI not inferred; original receipts/logs preserved with actual original absolute paths. Restore relative paths to temporary directory to run checker.",
+  "originalSelection": {
+    "status": "PASS",
+    "scope": "Selected v3 local artifact checker evidence only; final browser and remote CI evidence remain separate",
+    "sourceFingerprint": "c45eda25642ef1a236c5cbcaa2acbca6a6c01d6b92870fd63e50e3aeda7db1e2",
+    "root": "/tmp/xk-dc005-full-remote/v3",
+    "archivePolicy": "Store immutable tools/logs as gzip with original decoded SHA256; restore relative paths to reproduce. Existing v2 baseline remains untouched.",
+    "files": [
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/inspect-ci-artifact.py",
+        "relativePath": "inspect-ci-artifact.py",
+        "bytes": 16219,
+        "sha256": "389d7748df3a637363031ca22ce5dc9f8a91c60237a583f9a1f5d5756c1f06b9",
+        "role": "reproducible offline checker"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/artifact-baseline/baseline.json",
+        "relativePath": "artifact-baseline/baseline.json",
+        "bytes": 306333,
+        "sha256": "ada9379d514a5cdd4637d3164e0a0e26c34e47e3b837fecfddfd428c47eca48d",
+        "role": "frozen tested v3 source data and complete output hashes"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/artifact-baseline/smoke-website.py",
+        "relativePath": "artifact-baseline/smoke-website.py",
+        "bytes": 67252,
+        "sha256": "450ec71303a3fe8d827913178021bfe660d29dc91db1ae054b6a5cc01d675ea0",
+        "role": "frozen HTML/parser/metadata helper"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/artifact-baseline/scripts/fixtures/showcase-contract.json",
+        "relativePath": "artifact-baseline/scripts/fixtures/showcase-contract.json",
+        "bytes": 1527,
+        "sha256": "6a0e85f08bce359733a8c1fbe3a084ab04c93299e803ec51e1dab2709f82577d",
+        "role": "independent approved fixture"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/artifact-baseline/scripts/fixtures/contact-contract.json",
+        "relativePath": "artifact-baseline/scripts/fixtures/contact-contract.json",
+        "bytes": 4187,
+        "sha256": "f7744592b2b7196fac01e0f5618e21150b4be9a5c3ea0a9cb6f10168f2b4e220",
+        "role": "independent approved fixture"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/artifact-baseline/scripts/fixtures/quotation-contract.json",
+        "relativePath": "artifact-baseline/scripts/fixtures/quotation-contract.json",
+        "bytes": 1860,
+        "sha256": "fe8659d9f54bbb35c056b234f64ccec57216a6ee59abea54adf209af6d3cba81",
+        "role": "independent approved fixture"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/artifact-baseline/scripts/fixtures/design-collection-contract.json",
+        "relativePath": "artifact-baseline/scripts/fixtures/design-collection-contract.json",
+        "bytes": 9623,
+        "sha256": "cc08c0454501fdb308362ee923e06b324e1f8ce3c84e8d10ce5531f7f0e392ea",
+        "role": "independent approved fixture"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/prepare-local-baseline.receipt.json",
+        "relativePath": "prepare-local-baseline.receipt.json",
+        "bytes": 808,
+        "sha256": "da7ca43cabab5ab9aac2e66ff66b6cee1009b97a6c2c50f32636223fb5c0fb8c",
+        "role": "actual local preparation/check evidence"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/prepare-local-baseline.log",
+        "relativePath": "prepare-local-baseline.log",
+        "bytes": 151,
+        "sha256": "835b58e419eeeac9f449348a36ea0b674702c58454bc9dbf8fcb8a1946a23c33",
+        "role": "actual local preparation/check evidence"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/local-artifact-check.json",
+        "relativePath": "local-artifact-check.json",
+        "bytes": 680207,
+        "sha256": "6092bc7f82a1daeceede06ed03a5ae92ee252e1aac5e0978966cc27a39bad6cb",
+        "role": "actual local preparation/check evidence"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/local-artifact-check.receipt.json",
+        "relativePath": "local-artifact-check.receipt.json",
+        "bytes": 755,
+        "sha256": "4f84d6a96d00b56c8a8c0b06b599cba5b3be54307647342890f316ed0cde1d09",
+        "role": "actual local preparation/check evidence"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/local-artifact-check.log",
+        "relativePath": "local-artifact-check.log",
+        "bytes": 197,
+        "sha256": "68750e4ff554893b15845ed612f4f0e41c7dd0dc0f68c785d86b188eaf81f558",
+        "role": "actual local preparation/check evidence"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/verify-source-bridge.py",
+        "relativePath": "verify-source-bridge.py",
+        "bytes": 2628,
+        "sha256": "fb345d1ee810ac74c0a718ae9128e04b820e56f077bd84a215768a7a2f182160",
+        "role": "source version bridge evidence"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/source-bridge.json",
+        "relativePath": "source-bridge.json",
+        "bytes": 1305,
+        "sha256": "fc02f0772ac891700f5cdb09a4ddc2fe3399e476b003b2e56c3b09f8497d0f2b",
+        "role": "source version bridge evidence"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/source-bridge.receipt.json",
+        "relativePath": "source-bridge.receipt.json",
+        "bytes": 621,
+        "sha256": "59ac9900e3ec8f7670880cd4155449813900e1553abfe07824a04627b237d523",
+        "role": "source version bridge evidence"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/source-bridge.log",
+        "relativePath": "source-bridge.log",
+        "bytes": 1207,
+        "sha256": "94a259ff3dc20405b724b31bc7b3601bfe8ee5906b071adfcd19fcc9f2493ee0",
+        "role": "source version bridge evidence"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/v2-source.json",
+        "relativePath": "v2-source.json",
+        "bytes": 31639,
+        "sha256": "ff3c555d2583fa8f13e0d7ccdc230a58789d017a17daf886982896a1560c8bcf",
+        "role": "source version bridge evidence"
+      },
+      {
+        "path": "/tmp/xk-dc005-full-remote/v3/tested-source.json",
+        "relativePath": "tested-source.json",
+        "bytes": 31639,
+        "sha256": "4dab0b7c3c48a4237e0917cc254a4fa365fd8ad1035cb7a05ecf3d8f614221eb",
+        "role": "source version bridge evidence"
+      }
+    ],
+    "fileCount": 18
+  }
+}

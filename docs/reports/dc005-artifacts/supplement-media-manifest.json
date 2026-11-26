@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "path": "docs/screenshots/design-collection/dc005/native-autofill-375.png",
+      "source": "/tmp/xk-dc005-full/native-autofill-pages-final/contact-native-375.png",
+      "sha256": "01a78ae334175c730a567348249dd470163410ca21ed2052f2d55e8d665dfa2b",
+      "role": "supplementary real native Autofill viewport, outside primary17 count",
+      "actualView": "Root viewed both with view_image; PASS"
+    },
+    {
+      "path": "docs/screenshots/design-collection/dc005/native-autofill-1440.png",
+      "source": "/tmp/xk-dc005-full/native-autofill-pages-final/contact-native-1440.png",
+      "sha256": "c3ba495fccb58e7ed8f209e57fe2f443ab3c0345ef5ffd7cfcda5aea704b870d",
+      "role": "supplementary real native Autofill viewport, outside primary17 count",
+      "actualView": "Root viewed both with view_image; PASS"
+    }
+  ],
+  "primaryScreenshots": 17,
+  "supplementaryNativeScreenshots": 2
+}

@@ -287,4 +287,6 @@ docs(task): add XK website task specifications 006-014
 
 ## DC-005 執行入口
 
-依 [DC-005](dc005.md) 與既有工作包執行，先完成 [Luxury v1 品牌審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、本機原型／實際截圖及 [驗證報告](../reports/dc005-brand-review.md)。DC-003 已合併、DC-004 PR #40 未合併但不是本包前置；本分支從 main 獨立建立，不引入未核准程式。Luxury 同版本品牌核准尚缺，完整 16 頁工作包保持 BLOCKED，不能把原型驗收當正式功能通過。
+使用者以「批准合併」核准 [Luxury v1](../01_design/design-collection/reviews/luxury-v1-approval.md)，[PR #41](https://github.com/xk2022/xk-website/pull/41) 已合併至 main `74369376a0dbeeb0a17b5ee34557059c8e2a9491`；正式 main 的 Modern 16 頁與 Gallery 共 17 頁已部署。原 [品牌審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、原型／截圖與 [品牌前置報告](../reports/dc005-brand-review.md) 保留原時點，不回寫為完整功能驗收。
+
+同一 `feature/design-collection-luxury` 分支已同步該 main，接續原 [DC-005 完整工作包](dc005.md) 實作 16 個 Luxury 頁面；本分支清冊為 Modern 16＋Gallery＋Luxury 16，共 33 頁，本機核心驗收完成；5個既有外部展示網址404待處理，詳見 [實作報告](../reports/dc005-implementation.md)。後續另開功能 PR 待審，不自動合併或發布。DC-004 PR #40 仍未合併、不是本包前置，也未引入本分支。

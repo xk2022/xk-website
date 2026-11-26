@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc005-full-remote/v3/inspect-ci-artifact.py",
+    "--directory",
+    "/tmp/xk-dc005-build/out",
+    "--report",
+    "/tmp/xk-dc005-full-remote/v3/local-artifact-check.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T07:04:56.430673+00:00",
+  "finishedAt": "2026-11-26T07:04:57.035375+00:00",
+  "processId": 97507,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc005-full-remote/v3/local-artifact-check.log",
+  "logSha256": "68750e4ff554893b15845ed612f4f0e41c7dd0dc0f68c785d86b188eaf81f558",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

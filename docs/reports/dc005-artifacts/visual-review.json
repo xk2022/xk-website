@@ -1,0 +1,186 @@
+{
+  "reviewer": "Codex using view_image; not Owner final acceptance",
+  "status": "PASS",
+  "screenshots": [
+    {
+      "route": "/design-collection/luxury",
+      "width": 320,
+      "path": "/tmp/xk-dc005-full/home-affected-pages-v3-retest/luxury-home-320.png",
+      "sha256": "d5a83115a15ab1e5bfe22eae1f7dc29707fedffa2b8a77a6d674c1c8c4a6559a",
+      "source": "v3",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 375,
+      "path": "/tmp/xk-dc005-full/home-affected-pages-v3-retest/luxury-home-375.png",
+      "sha256": "20972888e906fe9620181cfb4b33ea16242b0863878a879dee7f4e14ba4cee63",
+      "source": "v3",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 768,
+      "path": "/tmp/xk-dc005-full/home-affected-pages-v3-retest/luxury-home-768.png",
+      "sha256": "c97c85af5b3483c0fbf47f12c590786d4f4d1f761e0f80c79ddfe48c8723376f",
+      "source": "v3",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 1440,
+      "path": "/tmp/xk-dc005-full/home-affected-pages-v3-retest/luxury-home-1440.png",
+      "sha256": "a2957e0e0ddad6809e9998e475684f4ccf392d289a8411d7be3e891690f9db7d",
+      "source": "v3",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 1920,
+      "path": "/tmp/xk-dc005-full/home-affected-pages-v3-retest/luxury-home-1920.png",
+      "sha256": "9bb211def047adc768f27652fc731fa19663479a3be4211d96034ed51c9ddc60",
+      "source": "v3",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/services",
+      "width": 375,
+      "path": "/tmp/xk-dc005-full/pages-final/services-375.png",
+      "sha256": "13a921d00056ab4bcb0cd46e466af6708479c505e084e657b008ed01f532a211",
+      "source": "v2",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/services",
+      "width": 1440,
+      "path": "/tmp/xk-dc005-full/pages-final/services-1440.png",
+      "sha256": "980cce1123ac30b43a5978b790f12e13fbb6ba4681b305fe5d42090dd1667181",
+      "source": "v2",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/portfolio",
+      "width": 375,
+      "path": "/tmp/xk-dc005-full/pages-final/portfolio-375.png",
+      "sha256": "ee4d31139115e55695e617f355979361a5a2e880483d38b552096d2b8848ccc4",
+      "source": "v2",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/portfolio",
+      "width": 1440,
+      "path": "/tmp/xk-dc005-full/pages-final/portfolio-1440.png",
+      "sha256": "10b95991ccc74914221562c7b6fdb86dca653e8ea5e97ec60421fdd6ce7f5390",
+      "source": "v2",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/portfolio/corporate-website",
+      "width": 375,
+      "path": "/tmp/xk-dc005-full/pages-final/portfolio-corporate-website-375.png",
+      "sha256": "3f54ee8457bc0687db883e98ba8cb15d6b5cafd4148f8a66feea2675c1831013",
+      "source": "v2",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/portfolio/corporate-website",
+      "width": 1440,
+      "path": "/tmp/xk-dc005-full/pages-final/portfolio-corporate-website-1440.png",
+      "sha256": "df9b100b7a4a836d1f34a82c4de416bffdac0245212781c0efecd29b652ea28e",
+      "source": "v2",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/portfolio/showcases/qiangang-windows",
+      "width": 375,
+      "path": "/tmp/xk-dc005-full/pages-final/portfolio-showcases-qiangang-windows-375.png",
+      "sha256": "04ff19b36cb8af7d1d5d8f00a55f85b7f5970f0ec629264e553209f61262cbac",
+      "source": "v2",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/portfolio/showcases/qiangang-windows",
+      "width": 1440,
+      "path": "/tmp/xk-dc005-full/pages-final/portfolio-showcases-qiangang-windows-1440.png",
+      "sha256": "e122fd193997181153123980e2ab3fb085fd54b607ae4800ea2bd720050ac73d",
+      "source": "v2",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/contact",
+      "width": 375,
+      "path": "/tmp/xk-dc005-full/pages-final/contact-375.png",
+      "sha256": "5a6fb5acc718ff1200372451826a88919004f5a8274723555ca17afbae69d26d",
+      "source": "v2",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/contact",
+      "width": 1440,
+      "path": "/tmp/xk-dc005-full/pages-final/contact-1440.png",
+      "sha256": "93db9588997dadc4e9dd9f59f1dcbbd440bc09ecc2ff952b1c37215a1f415798",
+      "source": "v2",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/quotation",
+      "width": 375,
+      "path": "/tmp/xk-dc005-full/home-affected-pages-v3-retest/luxury-quotation-375.png",
+      "sha256": "74c40d6f78b068bb9f6675102c7cda68ea2b4ce690f55a373fe2e531c001989b",
+      "source": "v3",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    },
+    {
+      "route": "/design-collection/luxury/quotation",
+      "width": 1440,
+      "path": "/tmp/xk-dc005-full/home-affected-pages-v3-retest/luxury-quotation-1440.png",
+      "sha256": "56471f547c51462417668f4cf4cac110fa103d85ca77f666e2685d7ad6382926",
+      "source": "v3",
+      "status": "PASS_VISUAL",
+      "note": "Viewed actual full-page PNG with view_image. Final Hero labels centered/wrapped and quotation original Logo visible on white backplate; no overlaps/cut content observed. Geometry/DTO/contrast additionally tested."
+    }
+  ],
+  "nativeAutofill": [
+    {
+      "width": 375,
+      "path": "/tmp/xk-dc005-full/native-autofill-pages-final/contact-native-375.png",
+      "sha256": "01a78ae334175c730a567348249dd470163410ca21ed2052f2d55e8d665dfa2b",
+      "status": "PASS_VISUAL",
+      "notes": "Viewed actual native autofilled name/email/focus; text readable; proper dark fields, cyan focus, labels not obscured."
+    },
+    {
+      "width": 1440,
+      "path": "/tmp/xk-dc005-full/native-autofill-pages-final/contact-native-1440.png",
+      "sha256": "c3ba495fccb58e7ed8f209e57fe2f443ab3c0345ef5ffd7cfcda5aea704b870d",
+      "status": "PASS_VISUAL",
+      "notes": "Viewed actual native autofilled name/email/focus; text readable; proper dark fields, cyan focus, labels not obscured."
+    }
+  ],
+  "earlierVisualFailures": [
+    {
+      "path": "pages-final/home-375.png",
+      "issue": "Outside markers detached; fixed v3 onlyHero list"
+    },
+    {
+      "path": "pages-final/quotation-375.png",
+      "issue": "Navy wordmark on dark intro; fixed v3 screen-only white backplate"
+    }
+  ],
+  "scope": "17 final screenshots viewed separately; original failures retained. Long image renderer scales to6000px high; high-res originals and separate CSS/HTML/axe evidence retained."
+}

@@ -1,0 +1,27 @@
+{
+  "status": "READY_ROOT_FREEZE",
+  "stylePrefix": "/design-collection/luxury",
+  "scopeSelector": "[data-design-style=\"luxury\"]",
+  "modernScopeSelector": "main",
+  "mainId": "main-content",
+  "skipHref": "#main-content",
+  "menuTriggerSelector": "header details.lx-mobile-menu > summary",
+  "nativeMenuSelector": "header details.lx-mobile-menu",
+  "mobileNavSelector": "header nav[aria-label=\"Luxury \u624b\u6a5f\u5c0e\u89bd\"]",
+  "styleLinkSelector": "a[href]",
+  "luxuryBackground": "#0c1017",
+  "luxuryForeground": "#f5f1e8",
+  "modernPrimary": "#101a33",
+  "modernPDFRequired": true,
+  "modernPDFImpactReason": "Shared controller styleId/hrefMap and named/active quotation print integration affect both styles, so real Modern and Luxury A4 each mode are required.",
+  "portfolioDisclosureSections": [
+    "website-samples",
+    "portfolio-projects"
+  ],
+  "portfolioDisclosuresDefaultClosed": true,
+  "representativeTechnicalSlug": "corporate-website",
+  "representativeBrandSlug": "qiangang-windows",
+  "sourceContract": "Pending final freeze; APIs agreed directly with UI/interaction owners: native Luxury details menu, original Contact/Quotation IDs and core controllers, same logical anchors and domainattrs. No Heritage app integration.",
+  "sourceFreeze": "/tmp/xk-dc005-full/source.json",
+  "rootFingerprint": "c45eda25642ef1a236c5cbcaa2acbca6a6c01d6b92870fd63e50e3aeda7db1e2"
+}

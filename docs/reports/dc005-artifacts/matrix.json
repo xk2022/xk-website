@@ -1,0 +1,302 @@
+{
+  "testId": "DC005-FULL-LUXURY-ACCEPTANCE-PLAN",
+  "status": "PENDING",
+  "runtime": "NOT_EXECUTED",
+  "owner": "Only /tmp/xk-dc005-full tools/evidence; Root owns app/build/server/Git and formal runner",
+  "servers": {
+    "normal": "http://127.0.0.1:3262/",
+    "pages": "http://127.0.0.1:3263/"
+  },
+  "plannedTestsPerMode": 262,
+  "plannedLayoutsPerMode": 165,
+  "plannedAxeScansPerMode": 58,
+  "plannedLuxuryPrimaryScreenshotsPages": 17,
+  "screenshots": {
+    "homeWidths": [
+      320,
+      375,
+      768,
+      1440,
+      1920
+    ],
+    "servicesPortfolioContactQuotationWidths": [
+      375,
+      1440
+    ],
+    "technicalDetail": "corporate-website375/1440",
+    "brandDetail": "qiangang-windows375/1440",
+    "manualReview": "PENDING actual view; screenshots are not generated prototypes"
+  },
+  "plans": [
+    {
+      "testGroup": "LAYOUT-METADATA-LANDMARKS",
+      "procedure": "33 routes×5 widths×2modes",
+      "casesPerMode": 165,
+      "expected": {
+        "viewport": [
+          320,
+          375,
+          768,
+          1440,
+          1920
+        ],
+        "requirements": [
+          "No horizontal overflow",
+          "Local visible and disclosed images decoded",
+          "One h1/main/skip/banner/contentinfo/WebSite JSON-LD",
+          "Luxury canonical=Modern counterpart; OG=self; exact mode-specific trailingSlash",
+          "Modern17 retain approved metadata/protection and scope palette"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "LUXURY-AXE-DEFAULT",
+      "procedure": "16new routes×375/1440",
+      "casesPerMode": 32,
+      "expected": {
+        "tags": [
+          "wcag2a",
+          "wcag2aa",
+          "wcag21a",
+          "wcag21aa"
+        ],
+        "scope": "Full page; no new UI exclusions"
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "LUXURY-AXE-MENU",
+      "procedure": "16new routes×375 actual menu expanded",
+      "casesPerMode": 16,
+      "expected": {
+        "requirements": [
+          "Real keyboard activation",
+          "Native details or actual trigger/panel contract",
+          "Full-page scan retains overlay incomplete nodes"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "LUXURY-AXE-DISCLOSURE",
+      "procedure": "Portfolio native details×375/1440",
+      "casesPerMode": 2,
+      "expected": {
+        "requirements": [
+          "Default state per frozen UI contract",
+          "Space and Enter actual toggle",
+          "Expanded images and full-page axe"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "LUXURY-AXE-FORM-STATES",
+      "procedure": "Contact error+preview×375/1440",
+      "casesPerMode": 4,
+      "expected": {
+        "requirements": [
+          "Actual error-summary focus",
+          "Actual valid preview; no send",
+          "Native disabled/error/focus styles included"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "LUXURY-AXE-QUOTATION-STATES",
+      "procedure": "Selected range+pending×375/1440",
+      "casesPerMode": 4,
+      "expected": {
+        "requirements": [
+          "Actual radio/checkbox selected state",
+          "Initial disabled state covered by default scan",
+          "Pending must not become0 or finite price"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "KEYBOARD-FOCUS-MOTION",
+      "procedure": "16new routes×375",
+      "casesPerMode": 16,
+      "expected": {
+        "requirements": [
+          "Skip→main",
+          "Real menu Tab/Escape or native summary contract",
+          "Visible focus not obscured",
+          "Reduced Motion actual match and computed styles"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "LUXURY-BUSINESS",
+      "procedure": "Reused focused Contact/Quotation module",
+      "casesPerMode": 14,
+      "expected": {
+        "requirements": [
+          "Contact4fields/error correction/preview/edit reset",
+          "Actual Clipboard readback; declared denial complete manual fallback",
+          "4services/9builds/compatibility/native checkbox/radio arrows/3complexities",
+          "26–58k/from/quote/annual separation",
+          "IDs restore/5keys/PII stays memory",
+          "Malformed/version/unknownIDs/blockedstorage",
+          "All mailto prevented; no external app or delivery claim",
+          "Actual Luxury worst17addons+40/60CJK PDF"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "MODERN-A4-REGRESSION",
+      "procedure": "Impact decision required before freeze",
+      "casesPerMode": 1,
+      "expected": {
+        "default": "Run actual worst-case Modern PDF if shared print/props/CSS affected",
+        "notApplicableRule": "Only Root may mark N/A with inspected diff rationale; no fabricated PASS"
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "CROSS-STYLE-CONTACT",
+      "procedure": "Actual Modern↔Luxury Contact and back/forward",
+      "casesPerMode": 1,
+      "expected": {
+        "requirements": [
+          "Use rendered real links, not injected anchors",
+          "Personal fields/errors/preview cleared",
+          "No PII URL/storage/request",
+          "Style restored"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "CROSS-STYLE-QUOTATION",
+      "procedure": "Actual counterpart and back/forward",
+      "casesPerMode": 1,
+      "expected": {
+        "requirements": [
+          "Selected IDs restore",
+          "Customer/project cleared",
+          "Price unchanged",
+          "Style restored"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "CROSS-STYLE-DEEP-DETAILS",
+      "procedure": "Technical+brand representative counterpart",
+      "casesPerMode": 2,
+      "expected": {
+        "requirements": [
+          "Same slug preserved",
+          "Canonical Modern/OGself",
+          "Back/forward and scoped CSS restored"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "CROSS-PAGE-STYLE-PRINT",
+      "procedure": "After real PDF and cross-style navigation",
+      "casesPerMode": 1,
+      "expected": {
+        "requirements": [
+          "A4 only visible at correct quotation print state",
+          "Services/Home still printable and no stale A4",
+          "Both styles return with correct scoped tokens"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "GALLERY-GATES",
+      "procedure": "Modern/Luxury active, Heritage planned",
+      "casesPerMode": 1,
+      "expected": {
+        "requirements": [
+          "Actual active links",
+          "No fake Heritage route/CTA",
+          "Directory integration"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "PROTECTED-404",
+      "procedure": "Unknown global/style/deep slug/private/dev/sitemap",
+      "casesPerMode": 1,
+      "expected": {
+        "requirements": [
+          "True404",
+          "Unique appropriate frame",
+          "Expected document404 records separate; all asset4xx strict"
+        ]
+      },
+      "status": "PENDING"
+    },
+    {
+      "testGroup": "FINAL-NETWORK-PRIVACY",
+      "procedure": "All owned pages/contexts",
+      "casesPerMode": 1,
+      "expected": {
+        "requirements": [
+          "0console/runtime/real resource errors/PII HTTP or persistence",
+          "Precise Next RSC headers and matched exportHEAD companion only",
+          "Every lifecycle drain bounded; raw cancellation records retained"
+        ]
+      },
+      "status": "PENDING"
+    }
+  ],
+  "externalRequired": {
+    "RootHTTPsmoke": "All33 routes/links/anchors/assets independent fixtures",
+    "pdfVerifier": "Actual14assertions per PDF incl1pageA4,allcontent bounds,2QR150/300dpi; exact known whitecanvas signature only",
+    "visualContrast": "Actual new palette surfaces/selected/error/disabled/focus and17screenshots manually reviewed",
+    "publication": "Not authorized by QA; no merge/deploy/email send"
+  },
+  "contractPending": [
+    "Root source freeze and final DTO fixture",
+    "Final LuxuryFrame/CSS/controls shape confirmation",
+    "Exact quotation active marker/named print page integration"
+  ],
+  "sourceContractStatus": "UI APIs agreed; Root freeze/source/DTO contract not yet supplied. No browser run.",
+  "runtimeTheme": {
+    "separateFocusedCasesPerMode": 12,
+    "requiredRoleObservationsPerMode": 144,
+    "requiredRoles": 72,
+    "decorationOnlyExtra": "--lx-decoration-gold #C8A96B, not a semantic/control/status role",
+    "autofill": "Query actual :-webkit-autofill only; clean-context non-triggered browser autofill is explicit N/A, never injectedvalue or forcedpseudo PASS."
+  },
+  "publication": "User approved Luxuryv1 review and mergedPR41; full16-page implementation remains separate acceptance, no implicit merge/deploy.",
+  "ownership": "Only /tmp/xk-dc005-full QA tools/evidence; no app/scripts/docs/Git/build/server changes. Root owns formal runner and server lifecycle.",
+  "themeRuntime": {
+    "expectedTests": 12,
+    "widths": [
+      375,
+      1440
+    ],
+    "requiredRolesPerWidth": 72,
+    "totalRequiredRoleObservations": 144,
+    "actualStates": [
+      "normal input",
+      "keyboard focus",
+      "error summary/invalid field",
+      "selected cards/native checkbox",
+      "disabled buttons",
+      "official header/footer"
+    ],
+    "autofill": "Bounded genuine CDP Autofill.setAddresses/trigger on isolated existing Contact fields, captured events/values/:-webkit-autofill/computed. No forced pseudo/value injection. Unsupported/non-autofillable is N/A with reason, triggered unknown paint is MANUAL_PENDING."
+  },
+  "actualPrintMarker": {
+    "selector": "[data-quotation-page=\"true\"]",
+    "inactiveValue": "inactive",
+    "nonQuotation": "active count0, visible A4count0; hidden retained DOM recorded",
+    "returnQuotation": "one active, white actual paper; fresh real PDF for each style/mode"
+  },
+  "afterReturnDraft": "Rebuild short Contact draft after cross-style/back-forward; mailto click captured/prevented. Preserved Quote IDs expose usable non-PII formalquote href."
+}

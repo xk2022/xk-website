@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "-B",
+    "/tmp/xk-dc005-full/verify-pdf.py",
+    "/tmp/xk-dc005-full/pages-final/quotation-luxury-worstcase-a4.pdf",
+    "--out",
+    "/tmp/xk-dc005-full/pdf-pages-luxury",
+    "--mode",
+    "pages",
+    "--catalog",
+    "/tmp/xk-dc005-full/catalog.json",
+    "--expected-catalog-sha",
+    "1c4ad0dc46e4d8efbce773fc630a4fc8c5bc57d0c29b0744a0608888c894dd63"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T06:55:52.714204+00:00",
+  "finishedAt": "2026-11-26T06:55:55.604833+00:00",
+  "processId": 94689,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc005-full/pdf-pages-luxury.log",
+  "logSha256": "c50efeb54961c59d5b1d998802a44208bc23c080e2eec13c01d9f6db502434fe",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,17 @@
+{
+  "old": "41c6ff4de2ebc88b1940aba4b53d6758931499dcafc66a566355352aa6b21ea5",
+  "new": "c45eda25642ef1a236c5cbcaa2acbca6a6c01d6b92870fd63e50e3aeda7db1e2",
+  "changes": [
+    {
+      "path": "src/components/design-collection/luxury/luxury-pages.tsx",
+      "before": "9405b51b289e9802e83236c4b303e01e3f767e39efa0f30818d841dffd620424",
+      "after": "99d97ea21378051bbcd47fdc5ad138fa72166c4b55973b4f5c2da01c5f7fd5b7"
+    },
+    {
+      "path": "src/design-systems/luxury/luxury.css",
+      "before": "4c0f2e9d797370ffe655ea2896ccf191296996c7b47effdeb1cf6a251956d606",
+      "after": "3492a5e70520dbd8f1236bf4a4130148104d3ce126a347bd827987a674aafbf4"
+    }
+  ],
+  "scope": "Only Home3label list and Luxury screen intro Logo backplate. All other source bytes unchanged. No colors/tokens, quote controller, catalog, printCSS/markup/logo/QR changes. Existing full matrix retained at original source; both modes Home+Quotation scoped acceptance, fresh fullHTTP/build/CI verify final."
+}
