@@ -8,7 +8,7 @@
 
 ## 目前功能任務
 
-- [DC-001 — XK Design Collection 架構規劃](dc001.md)：`docs/design-collection-dc001`，只交付架構與三套 Design System 規範，建立 PR 等待審閱；DC-002～DC-007 為後續工作，不改正式首頁、不實作或部署新系列。
+- [DC-001 — XK Design Collection 架構規劃](dc001.md)：`docs/design-collection-dc001`，只交付架構與三套 Design System 規範，[PR #30](https://github.com/xk2022/xk-website/pull/30) 已合併；DC-002 為下一步（共用內容、路由與互動契約），DC-003～DC-007 尚待後續工作，不改正式首頁、不實作或部署新系列。
 - [XK-ESTIMATOR V1 — 客戶方案試算](quotation-estimator-v1.md)：已於 2026-11-25 依後續授權合併及部署，見 [PR #28 的發布驗收](https://github.com/xk2022/xk-website/pull/28)。原規格及發布前報告保留當時快照；下方 Task 001–014 亦保留歷史規劃。
 
 ## 問題追蹤與後續 Bugfix
