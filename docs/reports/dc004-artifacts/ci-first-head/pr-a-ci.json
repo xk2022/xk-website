@@ -1,0 +1,193 @@
+{
+  "runId": 45763166193,
+  "runUrl": "https://github.com/xk2022/xk-website/actions/runs/45763166193",
+  "headSha": "cf4bb5d30a5708d10f95ad5f9ba0540339355526",
+  "expectedHeadSha": "cf4bb5d30a5708d10f95ad5f9ba0540339355526",
+  "event": "pull_request",
+  "status": "completed",
+  "conclusion": "failure",
+  "createdAt": "2026-11-26T05:40:50Z",
+  "updatedAt": "2026-11-26T05:41:35Z",
+  "jobs": [
+    {
+      "id": 139717701031,
+      "run_id": 45763166193,
+      "workflow_name": "Website CI and GitHub Pages",
+      "head_branch": "feature/design-collection-heritage",
+      "run_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/45763166193",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVymmos8AAAAgh9Ltpw",
+      "head_sha": "cf4bb5d30a5708d10f95ad5f9ba0540339355526",
+      "url": "https://api.github.com/repos/xk2022/xk-website/actions/jobs/139717701031",
+      "html_url": "https://github.com/xk2022/xk-website/actions/runs/45763166193/job/139717701031",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-26T05:40:51Z",
+      "started_at": "2026-11-26T05:40:53Z",
+      "completed_at": "2026-11-26T05:41:34Z",
+      "name": "Typecheck, lint and production build",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-26T05:40:54Z",
+          "completed_at": "2026-11-26T05:40:56Z"
+        },
+        {
+          "name": "Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-26T05:40:56Z",
+          "completed_at": "2026-11-26T05:41:09Z"
+        },
+        {
+          "name": "Set up Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-26T05:41:09Z",
+          "completed_at": "2026-11-26T05:41:16Z"
+        },
+        {
+          "name": "Install locked dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-26T05:41:16Z",
+          "completed_at": "2026-11-26T05:41:24Z"
+        },
+        {
+          "name": "Check TypeScript",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-26T05:41:24Z",
+          "completed_at": "2026-11-26T05:41:28Z"
+        },
+        {
+          "name": "Check ESLint",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 6,
+          "started_at": "2026-11-26T05:41:28Z",
+          "completed_at": "2026-11-26T05:41:33Z"
+        },
+        {
+          "name": "Test inquiry and quotation logic",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-11-26T05:41:33Z",
+          "completed_at": "2026-11-26T05:41:33Z"
+        },
+        {
+          "name": "Build production website",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8,
+          "started_at": "2026-11-26T05:41:33Z",
+          "completed_at": "2026-11-26T05:41:33Z"
+        },
+        {
+          "name": "Upload Next.js build output",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 9,
+          "started_at": "2026-11-26T05:41:33Z",
+          "completed_at": "2026-11-26T05:41:33Z"
+        },
+        {
+          "name": "Post Set up Node.js",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-11-26T05:41:33Z",
+          "completed_at": "2026-11-26T05:41:33Z"
+        },
+        {
+          "name": "Post Check out source",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-11-26T05:41:33Z",
+          "completed_at": "2026-11-26T05:41:33Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-11-26T05:41:33Z",
+          "completed_at": "2026-11-26T05:41:33Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/xk2022/xk-website/check-runs/139717701031",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000001932,
+      "runner_name": "GitHub Actions 1000001932",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 139717964323,
+      "run_id": 45763166193,
+      "workflow_name": "Website CI and GitHub Pages",
+      "head_branch": "feature/design-collection-heritage",
+      "run_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/45763166193",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVymmos8AAAAgh9byIw",
+      "head_sha": "cf4bb5d30a5708d10f95ad5f9ba0540339355526",
+      "url": "https://api.github.com/repos/xk2022/xk-website/actions/jobs/139717964323",
+      "html_url": "https://github.com/xk2022/xk-website/actions/runs/45763166193/job/139717964323",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-11-26T05:41:35Z",
+      "started_at": "2026-11-26T05:41:35Z",
+      "completed_at": "2026-11-26T05:41:35Z",
+      "name": "Build GitHub Pages artifact",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/xk2022/xk-website/check-runs/139717964323",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    },
+    {
+      "id": 139717965627,
+      "run_id": 45763166193,
+      "workflow_name": "Website CI and GitHub Pages",
+      "head_branch": "feature/design-collection-heritage",
+      "run_url": "https://api.github.com/repos/xk2022/xk-website/actions/runs/45763166193",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVymmos8AAAAgh9b3Ow",
+      "head_sha": "cf4bb5d30a5708d10f95ad5f9ba0540339355526",
+      "url": "https://api.github.com/repos/xk2022/xk-website/actions/jobs/139717965627",
+      "html_url": "https://github.com/xk2022/xk-website/actions/runs/45763166193/job/139717965627",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-11-26T05:41:35Z",
+      "started_at": "2026-11-26T05:41:35Z",
+      "completed_at": "2026-11-26T05:41:35Z",
+      "name": "Deploy GitHub Pages",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/xk2022/xk-website/check-runs/139717965627",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    }
+  ],
+  "artifactCheck": "NOT_RUN: pages-build skipped after archived .cjs evidence failed ESLint",
+  "failureCause": "25 no-require-imports errors and 1 unused path warning in docs/reports/dc004-artifacts/tools/*.cjs"
+}

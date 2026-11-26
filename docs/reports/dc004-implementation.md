@@ -42,7 +42,7 @@ Linux 6.18.57、Node.js 24.22.1、npm 11.9.0、Python 3.12.14、Chromium 156.0.8
 | `npm ci --cache /tmp/xk-npm-cache` | Exit 0，v2 完成 | `npm-ci-final.json` |
 | `npx next typegen` | Exit 0，重新產生忽略的 route types | `typegen.json` |
 | `npx tsc --noEmit` | Exit 0，v2；後續無 TS 修改 | `typecheck-final.json` |
-| `npm run lint` | Exit 0，v2；後續 builder 定向 ESLint Exit 0 | `lint-final.json`、`gallery-slash-eslint-v1.json` |
+| `npm run lint` | Exit 0，v2；後續 builder 定向 ESLint Exit 0 | `lint-final.json`、`gallery-slash-eslint-v1.json`；完整封存後另驗 `lint-archive-final.json` |
 | `npm test` | Exit 0，v2；包含 inquiry、quotation／storage、DC routes／metadata／content／contracts | `tests-final.json` |
 | `npm run build` | Exit 0，v3 最後普通 production build | `build-normal-v3.json` |
 | `npm run build:pages` | 首輪 Exit 1，修正驗證器後 Exit 0，33 頁靜態輸出 | `build-pages.json`、`build-pages-v2.json` |
@@ -80,7 +80,8 @@ Node 原有 typeless TypeScript module 提示與 npm 版本通知保留於 log�
 4. **版本橋接**：第一份較寬的 RSC bytes bridge 為 FAIL。縮小且明訂界線的 v2 bridge 才通過：142 runtime raw 相同、26 頁完整 HTML 僅實際 Build ID 不同；六品牌僅證明指定 aria-label 外的 SSR markup 相同，RSC 分段／bytes 不相同，另有新 hydration／axe。Services 獨立重驗。v2→v3 五 CSS 中四份 raw 相同；移除精確 old／new disabled screen rule 後第五份其餘 bytes 相同，因此保留未受影響 print／geometry 結果，不把 fingerprint 當功能判斷。
 5. **普通網路觀測**：原 262 項完整 suite Exit 1，19 個測項失敗（18 URL label 與最終網路 gate），當時 27 個資源取消保留未解釋。後續 affected suite 雖 34 個功能測項 PASS，仍因最終網路 gate 為 Exit 1；不可稱整套通過。移除工具主動全域 route／cache 干預後的 passive probe 15 案有 4 案／9 個 script 取消，各自同案、同 URL、current loader 200、body SHA／bytes、connected script、native load 與 ResourceTiming 證據足以確認可用；原 probe FAIL 保留，沒有通用取消白名單。Services→Portfolio 的兩張 lazy 圖另經實際 Enter／捲動／解碼與原圖 body SHA 驗證，Exit 0；該新程序未重現取消，不能證實先前取消原因。
 6. **交付格式**：最後 Markdown 初版漏加壓縮覆核文件的 `.gz`，修正後通過；staged Diff 發現原 build log 的 CR 進度列／lint 空白 EOF，改以 gzip 保留原 bytes 及 receipt SHA，沒有修剪原始紀錄。定向檢查及封存驗證重跑。離線 checker import 產生的 Python cache 已移除；封存工具負向 ZIP fixture 明確留在暫存測試目錄，原結果及位置／SHA 保留。初版封存的 self-test PENDING 另存歷史，完成回執放 `artifact-selftest-final/`，未覆寫成 PASS。
-7. **server／工具**：曾以外層 wrapper 終止推定 server 停止，後續 EADDRINUSE 證實實際 npm 仍在；已核對專屬 process group 終止後重新啟動正確 production server。沒有 browser 驗收與 build 同時覆寫工作區。工具 helper 初版缺少注入 deployment fixture 的 FAIL 及修正版 PASS 保留，沒有靠改 App 迎合工具。
+7. **首輪 PR CI**：精確 head `cf4bb5d` 的 [run 45763166193](https://github.com/xk2022/xk-website/actions/runs/45763166193) TypeScript PASS、Lint FAIL（25 errors／1 warning）：五個未壓縮 QA `.cjs` 被 ESLint 當 App 掃描，後續 build／Pages skipped。將唯讀驗證工具一律 gzip、逐一確認 decoded SHA，保留來源與原 CI；沒有變更 App／ESLint 規則或降低標準。完整封存後重新執行 Lint，下一個精確 head CI 與真正 artifact 另記 PR。
+8. **server／工具**：曾以外層 wrapper 終止推定 server 停止，後續 EADDRINUSE 證實實際 npm 仍在；已核對專屬 process group 終止後重新啟動正確 production server。沒有 browser 驗收與 build 同時覆寫工作區。工具 helper 初版缺少注入 deployment fixture 的 FAIL 及修正版 PASS 保留，沒有靠改 App 迎合工具。
 
 [獨立覆核](dc004-artifacts/independent-review.md.gz) 只確認來源與指定 bridge／資源證據範圍，不冒充重跑整站。其 Pages 尚待修正敘述為當時快照，後續依新版回執更新本表。正常模式採分段判讀；舊取消記錄的精確原因仍屬觀測限制，沒有宣稱全部舊 27 筆均證明無害。
 

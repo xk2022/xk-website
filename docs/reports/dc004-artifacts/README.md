@@ -13,3 +13,5 @@
 總結見 [實作報告](../dc004-implementation.md)。最終 Pages 為 `browser-pages-final.json`、`pages-final/result.json.gz`、`http-pages-v2-result.json.gz`、`theme-pages-final/result.json.gz`；實際退出碼在各 runner receipt。普通模式為首輪 suite、受影響重驗、嚴格版本 bridge 及精確資源裁定的分段結論，原整套 FAIL 保持不變。
 
 `source-final-v5.json.gz` 綁定最後 197 檔；`visual-review.json.gz` 記錄 17 張實際圖與 PDF 相同 bytes 的檢視界線。`final-delivery/` 保存最後文件檢查首輪連結 FAIL 與修正版 PASS。後續遠端 CI/artifact 證據置於同一 PR Description，這份本機快照不宣稱已部署。
+
+驗證工具一律 gzip 保存，避免被正式 ESLint 當網站原始碼。`ci-first-head/` 保留首輪 PR 真 CI 失敗，完整封存後 Lint 的真 Exit 0 位於 `final-delivery/lint-archive-final.json`。後續精確 head 依 PR Checks／Description。

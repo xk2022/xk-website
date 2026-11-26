@@ -9,8 +9,8 @@
     "screenshots": "docs/screenshots/design-collection/dc004"
   },
   "tool": {
-    "path": "/tmp/xk-dc004/package-evidence-v2.py",
-    "sha256": "3b25c36dcfedffa8e7a973825ada147e279738c85760d9bedd6ea49744865a58"
+    "path": "/tmp/xk-dc004/package-evidence-v3.py",
+    "sha256": "671c91ac468a42aaf5b89de7b45c78247e19c342802ccd9a12926639e99f0fd1"
   },
   "gzip": {
     "minimumSourceBytes": 4096,
@@ -18,12 +18,12 @@
     "mtime": 0,
     "originalGzip": "kept byte-identical"
   },
-  "sourceSnapshotSha256": "19dd616dea1b3270ddc17fec503eaa5c0ba799151eda83457200d76050f3a180",
+  "sourceSnapshotSha256": "ec29c33fc40f3695ef4fb6f33c765dba40e86518c94dda7808e391a74f121e9b",
   "counts": {
-    "originalFiles": 410,
-    "uniqueArchivedPayloads": 404,
-    "originalBytes": 95661986,
-    "uniqueArchivedPayloadBytes": 30469933,
+    "originalFiles": 411,
+    "uniqueArchivedPayloads": 405,
+    "originalBytes": 95682138,
+    "uniqueArchivedPayloadBytes": 30448310,
     "binaryOriginalFiles": 29,
     "binaryUniqueFiles": 23,
     "binaryOriginalBytes": 31176374,
@@ -31,14 +31,14 @@
     "binaryDuplicatesAvoided": 6,
     "filesByKind": {
       "data": 336,
-      "tool": 45,
+      "tool": 46,
       "binary": 29
     },
     "skippedEntries": 2
   },
   "originalSha256ToArchivePaths": {
     "003236ed9bc9ca92a094fcc4effcf7d1c0493950037129fb6d95335cbf87bdc3": [
-      "docs/reports/dc004-artifacts/tools/analyze-network-v1-v2.py"
+      "docs/reports/dc004-artifacts/tools/analyze-network-v1-v2.py.gz"
     ],
     "00c59729a8c92c5efd16652168e9a40340c52b0a004287f464c154094be02639": [
       "docs/reports/dc004-artifacts/normal-before-html/home.html.gz"
@@ -152,7 +152,7 @@
       "docs/reports/dc004-artifacts/routes-native-v1.json"
     ],
     "154e7d66b21137809b820c74123109ce0684c149bc10f483f79bcdab54763c7e": [
-      "docs/reports/dc004-artifacts/tools/prepare-source-v4.py"
+      "docs/reports/dc004-artifacts/tools/prepare-source-v4.py.gz"
     ],
     "1608627c20f603e26b9d27bb038c540f887a152b77286e58b5cdb05f3efe9793": [
       "docs/reports/dc004-artifacts/source-freeze.json.gz",
@@ -196,7 +196,7 @@
       "docs/reports/dc004-artifacts/npm-ci.json"
     ],
     "1f8093c44c4b58fb8194bca19afbf89ddd210871ebb9ba8e4602f2e3ef439ded": [
-      "docs/reports/dc004-artifacts/tools/gallery-slash-selfcheck.mjs"
+      "docs/reports/dc004-artifacts/tools/gallery-slash-selfcheck.mjs.gz"
     ],
     "1fdf7e99b90be1dc94fc8337696888dc796cb688266548e94b126a0865b99729": [
       "docs/reports/dc004-artifacts/metadata-native-v1.json"
@@ -319,7 +319,7 @@
       "docs/reports/dc004-artifacts/tools/browser-v4-passive.cjs.gz"
     ],
     "3a28824d8318c9ecd21e4275960857eaf59c00e503f23e2f7ed52ece76751af6": [
-      "docs/reports/dc004-artifacts/tools/smoke-selfcheck.py"
+      "docs/reports/dc004-artifacts/tools/smoke-selfcheck.py.gz"
     ],
     "3a8bc41656206167e145287305307f061a5b51b713107f36499badbd6b19b5fa": [
       "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__qiangang-windows.html.gz"
@@ -389,7 +389,7 @@
       "docs/reports/dc004-artifacts/normal-final-html/home.html.gz"
     ],
     "4ab3f660bbeef0633252eb346b214f946eb3a22eeafa919de56a4e0dcfacc5d5": [
-      "docs/reports/dc004-artifacts/tools/capture-normal-bridge.py"
+      "docs/reports/dc004-artifacts/tools/capture-normal-bridge.py.gz"
     ],
     "4b67a90fae1d74a417d3ce6b6b1dc8d05cb15ee18856c3303a8578c3ca2a20ae": [
       "docs/screenshots/design-collection/dc004/normal-v1/quotation-heritage-worstcase-a4.pdf"
@@ -431,7 +431,7 @@
       "docs/reports/dc004-artifacts/source-final-v5.json.gz"
     ],
     "517befb5aebc458e8ac572b19ee6a0cc5ae9f53f8b8992f006d27cbde7eea7a5": [
-      "docs/reports/dc004-artifacts/tools/builder-selfcheck.mjs"
+      "docs/reports/dc004-artifacts/tools/builder-selfcheck.mjs.gz"
     ],
     "523bfc8694a432b8622a9899fd88c80e6842096e9137c1a7dd9630f96d2dd769": [
       "docs/screenshots/design-collection/dc004/pages-final/contact-1440.png"
@@ -455,7 +455,7 @@
       "docs/reports/dc004-artifacts/tests-final.json"
     ],
     "5819b1354b8a82d1c3a91cc9be76a0e8bb5c6bec2400f052313a07ea7423bba1": [
-      "docs/reports/dc004-artifacts/tools/preflight.cjs"
+      "docs/reports/dc004-artifacts/tools/preflight.cjs.gz"
     ],
     "58a59f2885bd0f005b66c26dca1ec03ac4a30489f53997c6bdf236b8e0166622": [
       "docs/reports/dc004-artifacts/build-normal-v3.log.gz"
@@ -515,7 +515,10 @@
       "docs/reports/dc004-artifacts/tests.log.gz"
     ],
     "667064cb521f8424b35df8e6b18a4fd669e31ef96185a59268a4895f6a0e005c": [
-      "docs/reports/dc004-artifacts/tools/smoke-gallery-slash-selfcheck.py"
+      "docs/reports/dc004-artifacts/tools/smoke-gallery-slash-selfcheck.py.gz"
+    ],
+    "671c91ac468a42aaf5b89de7b45c78247e19c342802ccd9a12926639e99f0fd1": [
+      "docs/reports/dc004-artifacts/tools/package-evidence-v3.py.gz"
     ],
     "6807978c2124a9b62c06b4056287e2a019c19148f70677b6c00f8b4fa7eef7cc": [
       "docs/reports/dc004-artifacts/passive-preflight.json"
@@ -572,7 +575,7 @@
       "docs/reports/dc004-artifacts/http-normal-v3-result.json.gz"
     ],
     "739ffa12f0eeb1e460f77a3cae57709909957c70fe4cd86c4467e108df29c15e": [
-      "docs/reports/dc004-artifacts/tools/static-preview.py"
+      "docs/reports/dc004-artifacts/tools/static-preview.py.gz"
     ],
     "73e33a120925cf68d42537d831dd51b6fceeb432c30ae458c6a121b00476c4bc": [
       "docs/reports/dc004-artifacts/tools/verify-theme-runtime.cjs.gz"
@@ -653,19 +656,19 @@
       "docs/reports/dc004-artifacts/visual-review.json.gz"
     ],
     "86ae34e9b7bd7c8abad056a9dd723c4607f01a1c825b01ab75cc027dd7fb7f57": [
-      "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge-v2.py"
+      "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge-v2.py.gz"
     ],
     "88b859da823cfff466eb523fe797e385168df5faf29b83a3017325a11f059b0c": [
       "docs/reports/dc004-artifacts/network-normal-passive-final.log.gz"
     ],
     "896b1dd5ca33de0b8bfc5214a0938365d7734c4ad82456cba7e631050cecf3e6": [
-      "docs/reports/dc004-artifacts/tools/preflight-passive.cjs"
+      "docs/reports/dc004-artifacts/tools/preflight-passive.cjs.gz"
     ],
     "8a006ad54161661773762d6803709b427ebc0c824449bbbe500f51f30db5fc3e": [
       "docs/reports/dc004-artifacts/normal-before-html/portfolio__corporate-website.html.gz"
     ],
     "8bc465494bf65aaa6873dec98160b31319ffe3b1e84431d14bee9afdd9e80b05": [
-      "docs/reports/dc004-artifacts/tools/artifact-checker-selftest.py"
+      "docs/reports/dc004-artifacts/tools/artifact-checker-selftest.py.gz"
     ],
     "8c3e31cee967a9d6da2eb064743c425d059b704b9f1e472683d0c50a46ddfe4f": [
       "docs/reports/dc004-artifacts/network-v1-analysis.json.gz"
@@ -738,7 +741,7 @@
       "docs/reports/dc004-artifacts/packaging/apply-v5.json"
     ],
     "9b321b869e0169ff5d113c561f6221d175f3a21e74c28d190d607a324496e1b0": [
-      "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge.py"
+      "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge.py.gz"
     ],
     "9b32d4877e9d0e8b9e698b6e4002bf9a6349ec07ffe2234c26bceab560b90eca": [
       "docs/reports/dc004-artifacts/fixture-final.json.gz"
@@ -852,7 +855,7 @@
       "docs/reports/dc004-artifacts/normal-before-html/services.html.gz"
     ],
     "b6291d8f51f88691065950a46d3220f398e12acb8e0d2d9982b2efb57f4199da": [
-      "docs/reports/dc004-artifacts/tools/analyze-network-v1.py"
+      "docs/reports/dc004-artifacts/tools/analyze-network-v1.py.gz"
     ],
     "b63c252cf036b8eb543e4f8d4e06aed15484c5eec06863fefb6daabbc07e53b1": [
       "docs/screenshots/design-collection/dc004/pages-final/portfolio-corporate-website-375.png"
@@ -864,7 +867,7 @@
       "docs/reports/dc004-artifacts/final-delivery/check-v3.log.gz"
     ],
     "b6b5cb31f9e582559ed14077d5de05f5cbd83540e12b5834ad7b82777757f800": [
-      "docs/reports/dc004-artifacts/tools/snapshot.cjs"
+      "docs/reports/dc004-artifacts/tools/snapshot.cjs.gz"
     ],
     "b702814796e74910aa1f3a539f6cabe17f9d3db9658ad9dd48c540bcda23586b": [
       "docs/reports/dc004-artifacts/validators-freeze-v1.json"
@@ -873,7 +876,7 @@
       "docs/reports/dc004-artifacts/normal-v2-css/1kxqb6a1wzj45.css.gz"
     ],
     "b9fa79ad9f055c96242ef405b784f0399f077e7cb2f6e2dafdc7d8acfb1802f4": [
-      "docs/reports/dc004-artifacts/tools/snapshot-final.cjs"
+      "docs/reports/dc004-artifacts/tools/snapshot-final.cjs.gz"
     ],
     "ba2cdac382f516c49ccfa52be0c3d26f3f889f93a1a454bb43b8e0b2e074c57d": [
       "docs/reports/dc004-artifacts/http-pages-final-result.json.gz"
@@ -912,7 +915,7 @@
       "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__solutions.html.gz"
     ],
     "bfe55b4fc4f8743770f1421572037eca48bacf683758b5db592d6d6d3b65cccd": [
-      "docs/reports/dc004-artifacts/tools/prepare-source-v5.py"
+      "docs/reports/dc004-artifacts/tools/prepare-source-v5.py.gz"
     ],
     "c167b63a9c3d0ef94dbdcec17a7566fea190209e5b44fb12c79074004c421ab7": [
       "docs/reports/dc004-artifacts/tools/passive-resource-adjudication.py.gz"
@@ -1023,7 +1026,7 @@
       "docs/reports/dc004-artifacts/affected-normal-v3.log.gz"
     ],
     "d7d443d60bd2f7a4895f13d84bddbb91b4af46e4e5d2307efa8c23e330a0c624": [
-      "docs/reports/dc004-artifacts/tools/css-disabled-bridge.cjs"
+      "docs/reports/dc004-artifacts/tools/css-disabled-bridge.cjs.gz"
     ],
     "da4cb0d8f99b9f79620568ce0424c7cbb5f170ffb561cde14bcfc24be91fdee3": [
       "docs/reports/dc004-artifacts/qa-snapshot.log.gz"
@@ -1181,7 +1184,7 @@
       "docs/reports/dc004-artifacts/affected-normal-final.json"
     ],
     "feb8d6be6e505d17e52be5866987dc0d6b004d8c8af0106814d6122d9e800aec": [
-      "docs/reports/dc004-artifacts/tools/capture-normal-html.py"
+      "docs/reports/dc004-artifacts/tools/capture-normal-html.py.gz"
     ],
     "ff32d8575a030c532c4a46071ac5648f2ce6483c5963061615f4596b34332f57": [
       "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__honest-diecut.html.gz"
@@ -1195,7 +1198,7 @@
       "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage.html.gz"
     ],
     "003236ed9bc9ca92a094fcc4effcf7d1c0493950037129fb6d95335cbf87bdc3": [
-      "docs/reports/dc004-artifacts/tools/analyze-network-v1-v2.py"
+      "docs/reports/dc004-artifacts/tools/analyze-network-v1-v2.py.gz"
     ],
     "014eaa55fe7350667e7ce051a5955a9be06ee66c796e3df5c6227d717e1ceae1": [
       "docs/reports/dc004-artifacts/builder-helper-v2.json"
@@ -1288,7 +1291,7 @@
       "docs/reports/dc004-artifacts/routes-native-v1.json"
     ],
     "154e7d66b21137809b820c74123109ce0684c149bc10f483f79bcdab54763c7e": [
-      "docs/reports/dc004-artifacts/tools/prepare-source-v4.py"
+      "docs/reports/dc004-artifacts/tools/prepare-source-v4.py.gz"
     ],
     "1608627c20f603e26b9d27bb038c540f887a152b77286e58b5cdb05f3efe9793": [
       "docs/reports/dc004-artifacts/source-freeze.json.gz",
@@ -1338,7 +1341,7 @@
       "docs/reports/dc004-artifacts/npm-ci.json"
     ],
     "1f8093c44c4b58fb8194bca19afbf89ddd210871ebb9ba8e4602f2e3ef439ded": [
-      "docs/reports/dc004-artifacts/tools/gallery-slash-selfcheck.mjs"
+      "docs/reports/dc004-artifacts/tools/gallery-slash-selfcheck.mjs.gz"
     ],
     "1fdf7e99b90be1dc94fc8337696888dc796cb688266548e94b126a0865b99729": [
       "docs/reports/dc004-artifacts/metadata-native-v1.json"
@@ -1458,7 +1461,7 @@
       "docs/reports/dc004-artifacts/tools/browser-v4-passive.cjs.gz"
     ],
     "3a28824d8318c9ecd21e4275960857eaf59c00e503f23e2f7ed52ece76751af6": [
-      "docs/reports/dc004-artifacts/tools/smoke-selfcheck.py"
+      "docs/reports/dc004-artifacts/tools/smoke-selfcheck.py.gz"
     ],
     "3b25c36dcfedffa8e7a973825ada147e279738c85760d9bedd6ea49744865a58": [
       "docs/reports/dc004-artifacts/tools/package-evidence-v2.py.gz"
@@ -1522,7 +1525,7 @@
       "docs/reports/dc004-artifacts/normal-html-capture.json"
     ],
     "4ab3f660bbeef0633252eb346b214f946eb3a22eeafa919de56a4e0dcfacc5d5": [
-      "docs/reports/dc004-artifacts/tools/capture-normal-bridge.py"
+      "docs/reports/dc004-artifacts/tools/capture-normal-bridge.py.gz"
     ],
     "4b67a90fae1d74a417d3ce6b6b1dc8d05cb15ee18856c3303a8578c3ca2a20ae": [
       "docs/screenshots/design-collection/dc004/normal-v1/quotation-heritage-worstcase-a4.pdf"
@@ -1567,7 +1570,7 @@
       "docs/reports/dc004-artifacts/source-final-v5.json.gz"
     ],
     "517befb5aebc458e8ac572b19ee6a0cc5ae9f53f8b8992f006d27cbde7eea7a5": [
-      "docs/reports/dc004-artifacts/tools/builder-selfcheck.mjs"
+      "docs/reports/dc004-artifacts/tools/builder-selfcheck.mjs.gz"
     ],
     "523bfc8694a432b8622a9899fd88c80e6842096e9137c1a7dd9630f96d2dd769": [
       "docs/screenshots/design-collection/dc004/pages-final/contact-1440.png"
@@ -1591,7 +1594,7 @@
       "docs/reports/dc004-artifacts/tests-final.json"
     ],
     "5819b1354b8a82d1c3a91cc9be76a0e8bb5c6bec2400f052313a07ea7423bba1": [
-      "docs/reports/dc004-artifacts/tools/preflight.cjs"
+      "docs/reports/dc004-artifacts/tools/preflight.cjs.gz"
     ],
     "58a59f2885bd0f005b66c26dca1ec03ac4a30489f53997c6bdf236b8e0166622": [
       "docs/reports/dc004-artifacts/build-normal-v3.log.gz"
@@ -1645,7 +1648,10 @@
       "docs/reports/dc004-artifacts/tests.log.gz"
     ],
     "667064cb521f8424b35df8e6b18a4fd669e31ef96185a59268a4895f6a0e005c": [
-      "docs/reports/dc004-artifacts/tools/smoke-gallery-slash-selfcheck.py"
+      "docs/reports/dc004-artifacts/tools/smoke-gallery-slash-selfcheck.py.gz"
+    ],
+    "671c91ac468a42aaf5b89de7b45c78247e19c342802ccd9a12926639e99f0fd1": [
+      "docs/reports/dc004-artifacts/tools/package-evidence-v3.py.gz"
     ],
     "67a8515bc57f1ec904ca6df711597be517ef755f4984f4deec05b57d2e742a8c": [
       "docs/reports/dc004-artifacts/normal-final-html/contact.html.gz"
@@ -1708,7 +1714,7 @@
       "docs/reports/dc004-artifacts/http-normal-v3-result.json.gz"
     ],
     "739ffa12f0eeb1e460f77a3cae57709909957c70fe4cd86c4467e108df29c15e": [
-      "docs/reports/dc004-artifacts/tools/static-preview.py"
+      "docs/reports/dc004-artifacts/tools/static-preview.py.gz"
     ],
     "73e33a120925cf68d42537d831dd51b6fceeb432c30ae458c6a121b00476c4bc": [
       "docs/reports/dc004-artifacts/tools/verify-theme-runtime.cjs.gz"
@@ -1783,7 +1789,7 @@
       "docs/reports/dc004-artifacts/visual-review.json.gz"
     ],
     "86ae34e9b7bd7c8abad056a9dd723c4607f01a1c825b01ab75cc027dd7fb7f57": [
-      "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge-v2.py"
+      "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge-v2.py.gz"
     ],
     "87017c095a83cdd89f84f49bf4090309fb2763d33c49593f41b17a8377d194cb": [
       "docs/reports/dc004-artifacts/normal-final-html/design-collection__heritage__portfolio__showcases__march-tangbao.html.gz"
@@ -1792,10 +1798,10 @@
       "docs/reports/dc004-artifacts/network-normal-passive-final.log.gz"
     ],
     "896b1dd5ca33de0b8bfc5214a0938365d7734c4ad82456cba7e631050cecf3e6": [
-      "docs/reports/dc004-artifacts/tools/preflight-passive.cjs"
+      "docs/reports/dc004-artifacts/tools/preflight-passive.cjs.gz"
     ],
     "8bc465494bf65aaa6873dec98160b31319ffe3b1e84431d14bee9afdd9e80b05": [
-      "docs/reports/dc004-artifacts/tools/artifact-checker-selftest.py"
+      "docs/reports/dc004-artifacts/tools/artifact-checker-selftest.py.gz"
     ],
     "8bfc65de39cbacd48cea1437fd7abd1a10eca19739f982f283d4a92438e15943": [
       "docs/reports/dc004-artifacts/normal-before-html/design-collection__heritage__quotation.html.gz"
@@ -1874,7 +1880,7 @@
       "docs/reports/dc004-artifacts/packaging/apply-v5.json"
     ],
     "9b321b869e0169ff5d113c561f6221d175f3a21e74c28d190d607a324496e1b0": [
-      "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge.py"
+      "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge.py.gz"
     ],
     "9b32d4877e9d0e8b9e698b6e4002bf9a6349ec07ffe2234c26bceab560b90eca": [
       "docs/reports/dc004-artifacts/fixture-final.json.gz"
@@ -1991,7 +1997,7 @@
       "docs/reports/dc004-artifacts/normal-before-html/portfolio__showcases__march-tangbao.html.gz"
     ],
     "b6291d8f51f88691065950a46d3220f398e12acb8e0d2d9982b2efb57f4199da": [
-      "docs/reports/dc004-artifacts/tools/analyze-network-v1.py"
+      "docs/reports/dc004-artifacts/tools/analyze-network-v1.py.gz"
     ],
     "b63c252cf036b8eb543e4f8d4e06aed15484c5eec06863fefb6daabbc07e53b1": [
       "docs/screenshots/design-collection/dc004/pages-final/portfolio-corporate-website-375.png"
@@ -2003,7 +2009,7 @@
       "docs/reports/dc004-artifacts/final-delivery/check-v3.log.gz"
     ],
     "b6b5cb31f9e582559ed14077d5de05f5cbd83540e12b5834ad7b82777757f800": [
-      "docs/reports/dc004-artifacts/tools/snapshot.cjs"
+      "docs/reports/dc004-artifacts/tools/snapshot.cjs.gz"
     ],
     "b702814796e74910aa1f3a539f6cabe17f9d3db9658ad9dd48c540bcda23586b": [
       "docs/reports/dc004-artifacts/validators-freeze-v1.json"
@@ -2012,7 +2018,7 @@
       "docs/reports/dc004-artifacts/normal-v2-css/1kxqb6a1wzj45.css.gz"
     ],
     "b9fa79ad9f055c96242ef405b784f0399f077e7cb2f6e2dafdc7d8acfb1802f4": [
-      "docs/reports/dc004-artifacts/tools/snapshot-final.cjs"
+      "docs/reports/dc004-artifacts/tools/snapshot-final.cjs.gz"
     ],
     "ba2cdac382f516c49ccfa52be0c3d26f3f889f93a1a454bb43b8e0b2e074c57d": [
       "docs/reports/dc004-artifacts/http-pages-final-result.json.gz"
@@ -2042,7 +2048,7 @@
       "docs/reports/dc004-artifacts/build-pages-v2.log.gz"
     ],
     "bfe55b4fc4f8743770f1421572037eca48bacf683758b5db592d6d6d3b65cccd": [
-      "docs/reports/dc004-artifacts/tools/prepare-source-v5.py"
+      "docs/reports/dc004-artifacts/tools/prepare-source-v5.py.gz"
     ],
     "c167b63a9c3d0ef94dbdcec17a7566fea190209e5b44fb12c79074004c421ab7": [
       "docs/reports/dc004-artifacts/tools/passive-resource-adjudication.py.gz"
@@ -2153,7 +2159,7 @@
       "docs/reports/dc004-artifacts/affected-normal-v3.log.gz"
     ],
     "d7d443d60bd2f7a4895f13d84bddbb91b4af46e4e5d2307efa8c23e330a0c624": [
-      "docs/reports/dc004-artifacts/tools/css-disabled-bridge.cjs"
+      "docs/reports/dc004-artifacts/tools/css-disabled-bridge.cjs.gz"
     ],
     "d9c59fa470f23b373358bfcdad987684041570e42eda62f3b6b816455e2bb17b": [
       "docs/reports/dc004-artifacts/normal-final-html/portfolio__showcases__qiangang-windows.html.gz"
@@ -2338,7 +2344,7 @@
       "docs/reports/dc004-artifacts/affected-normal-final.json"
     ],
     "feb8d6be6e505d17e52be5866987dc0d6b004d8c8af0106814d6122d9e800aec": [
-      "docs/reports/dc004-artifacts/tools/capture-normal-html.py"
+      "docs/reports/dc004-artifacts/tools/capture-normal-html.py.gz"
     ],
     "ff390c886b45a47b7e0f1c874ffa7bc2dc8684b8f4e08e6bd2b7d20427f1f631": [
       "docs/reports/dc004-artifacts/network-v1-analysis.log.gz"
@@ -2404,11 +2410,11 @@
       "originalSha256": "003236ed9bc9ca92a094fcc4effcf7d1c0493950037129fb6d95335cbf87bdc3",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/analyze-network-v1-v2.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/analyze-network-v1-v2.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "003236ed9bc9ca92a094fcc4effcf7d1c0493950037129fb6d95335cbf87bdc3",
-      "archiveSizeBytes": 3347,
-      "archiveSha256": "003236ed9bc9ca92a094fcc4effcf7d1c0493950037129fb6d95335cbf87bdc3"
+      "archiveSizeBytes": 1621,
+      "archiveSha256": "fcc439c7734b92462cbb7e9cc6994f3a17afc662ffab1bbcea66a37cb7f7299f"
     },
     {
       "originalPath": "/tmp/xk-dc004/analyze-network-v1.py",
@@ -2417,11 +2423,11 @@
       "originalSha256": "b6291d8f51f88691065950a46d3220f398e12acb8e0d2d9982b2efb57f4199da",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/analyze-network-v1.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/analyze-network-v1.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "b6291d8f51f88691065950a46d3220f398e12acb8e0d2d9982b2efb57f4199da",
-      "archiveSizeBytes": 3222,
-      "archiveSha256": "b6291d8f51f88691065950a46d3220f398e12acb8e0d2d9982b2efb57f4199da"
+      "archiveSizeBytes": 1560,
+      "archiveSha256": "817f3eb675e9d071661c374f4bf233d100c7933b1d108ad3583936fd33e4448b"
     },
     {
       "originalPath": "/tmp/xk-dc004/artifact-baseline/baseline.json",
@@ -2521,11 +2527,11 @@
       "originalSha256": "8bc465494bf65aaa6873dec98160b31319ffe3b1e84431d14bee9afdd9e80b05",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/artifact-checker-selftest.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/artifact-checker-selftest.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "8bc465494bf65aaa6873dec98160b31319ffe3b1e84431d14bee9afdd9e80b05",
-      "archiveSizeBytes": 3913,
-      "archiveSha256": "8bc465494bf65aaa6873dec98160b31319ffe3b1e84431d14bee9afdd9e80b05"
+      "archiveSizeBytes": 1743,
+      "archiveSha256": "74a6dd320904fb7b57a4b2ddc2facbd960ddf314333c649695ea42c6c5da22c9"
     },
     {
       "originalPath": "/tmp/xk-dc004/artifact-local-check.json",
@@ -3002,11 +3008,11 @@
       "originalSha256": "517befb5aebc458e8ac572b19ee6a0cc5ae9f53f8b8992f006d27cbde7eea7a5",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/builder-selfcheck.mjs",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/builder-selfcheck.mjs.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "517befb5aebc458e8ac572b19ee6a0cc5ae9f53f8b8992f006d27cbde7eea7a5",
-      "archiveSizeBytes": 3829,
-      "archiveSha256": "517befb5aebc458e8ac572b19ee6a0cc5ae9f53f8b8992f006d27cbde7eea7a5"
+      "archiveSizeBytes": 1404,
+      "archiveSha256": "f3ad9ba03f0c62f74b5abcccdf7a5b59b9445bea306333a82c58655403053f83"
     },
     {
       "originalPath": "/tmp/xk-dc004/business-v2.cjs",
@@ -3041,11 +3047,11 @@
       "originalSha256": "4ab3f660bbeef0633252eb346b214f946eb3a22eeafa919de56a4e0dcfacc5d5",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/capture-normal-bridge.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/capture-normal-bridge.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "4ab3f660bbeef0633252eb346b214f946eb3a22eeafa919de56a4e0dcfacc5d5",
-      "archiveSizeBytes": 1084,
-      "archiveSha256": "4ab3f660bbeef0633252eb346b214f946eb3a22eeafa919de56a4e0dcfacc5d5"
+      "archiveSizeBytes": 670,
+      "archiveSha256": "c6b0161b015f41403a0e76c4b9f5aee3f38253ff2fee2c8b0db1986788aacabd"
     },
     {
       "originalPath": "/tmp/xk-dc004/capture-normal-html.py",
@@ -3054,11 +3060,11 @@
       "originalSha256": "feb8d6be6e505d17e52be5866987dc0d6b004d8c8af0106814d6122d9e800aec",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/capture-normal-html.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/capture-normal-html.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "feb8d6be6e505d17e52be5866987dc0d6b004d8c8af0106814d6122d9e800aec",
-      "archiveSizeBytes": 859,
-      "archiveSha256": "feb8d6be6e505d17e52be5866987dc0d6b004d8c8af0106814d6122d9e800aec"
+      "archiveSizeBytes": 524,
+      "archiveSha256": "69ffdb041af175f8528262b2d8d60f4eb895dd3f2fce3f625958589acc1de562"
     },
     {
       "originalPath": "/tmp/xk-dc004/catalog-final.json",
@@ -3197,11 +3203,11 @@
       "originalSha256": "d7d443d60bd2f7a4895f13d84bddbb91b4af46e4e5d2307efa8c23e330a0c624",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/css-disabled-bridge.cjs",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/css-disabled-bridge.cjs.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "d7d443d60bd2f7a4895f13d84bddbb91b4af46e4e5d2307efa8c23e330a0c624",
-      "archiveSizeBytes": 2326,
-      "archiveSha256": "d7d443d60bd2f7a4895f13d84bddbb91b4af46e4e5d2307efa8c23e330a0c624"
+      "archiveSizeBytes": 1115,
+      "archiveSha256": "7eae5ff2991d04554e227ff080aa37136ed22a606b0b09b105c6f75acdf8c655"
     },
     {
       "originalPath": "/tmp/xk-dc004/css-disabled-bridge.json",
@@ -3678,11 +3684,11 @@
       "originalSha256": "1f8093c44c4b58fb8194bca19afbf89ddd210871ebb9ba8e4602f2e3ef439ded",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/gallery-slash-selfcheck.mjs",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/gallery-slash-selfcheck.mjs.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "1f8093c44c4b58fb8194bca19afbf89ddd210871ebb9ba8e4602f2e3ef439ded",
-      "archiveSizeBytes": 1488,
-      "archiveSha256": "1f8093c44c4b58fb8194bca19afbf89ddd210871ebb9ba8e4602f2e3ef439ded"
+      "archiveSizeBytes": 647,
+      "archiveSha256": "8cb6acc94e1ee7287bb4c2ff3e8fd79fa7a44fe29ac3538dd2d56c882031e247"
     },
     {
       "originalPath": "/tmp/xk-dc004/guide-scroll-probe.cjs",
@@ -5910,6 +5916,19 @@
       "archiveSha256": "0ef8b0698ad2f0ec265d9396aab6783720a907faffff8a4031bcfc6178a4ff93"
     },
     {
+      "originalPath": "/tmp/xk-dc004/package-evidence-v3.py",
+      "sourceRelativePath": "package-evidence-v3.py",
+      "originalSizeBytes": 20152,
+      "originalSha256": "671c91ac468a42aaf5b89de7b45c78247e19c342802ccd9a12926639e99f0fd1",
+      "kind": "tool",
+      "deduplicatedBinary": false,
+      "archivePath": "docs/reports/dc004-artifacts/tools/package-evidence-v3.py.gz",
+      "compression": "deterministic-gzip-mtime0",
+      "decodedPayloadSha256": "671c91ac468a42aaf5b89de7b45c78247e19c342802ccd9a12926639e99f0fd1",
+      "archiveSizeBytes": 6797,
+      "archiveSha256": "125840707c3dfddc642f7446c29608162b7607fc32bc057083a33eee9adb027b"
+    },
+    {
       "originalPath": "/tmp/xk-dc004/package-evidence.py",
       "sourceRelativePath": "package-evidence.py",
       "originalSizeBytes": 20114,
@@ -6674,11 +6693,11 @@
       "originalSha256": "896b1dd5ca33de0b8bfc5214a0938365d7734c4ad82456cba7e631050cecf3e6",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/preflight-passive.cjs",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/preflight-passive.cjs.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "896b1dd5ca33de0b8bfc5214a0938365d7734c4ad82456cba7e631050cecf3e6",
-      "archiveSizeBytes": 2383,
-      "archiveSha256": "896b1dd5ca33de0b8bfc5214a0938365d7734c4ad82456cba7e631050cecf3e6"
+      "archiveSizeBytes": 1158,
+      "archiveSha256": "8fd46bc0e62dca486e69f8e18d3d0f15de36598787cb31135f888e91ffdc9175"
     },
     {
       "originalPath": "/tmp/xk-dc004/preflight.cjs",
@@ -6687,11 +6706,11 @@
       "originalSha256": "5819b1354b8a82d1c3a91cc9be76a0e8bb5c6bec2400f052313a07ea7423bba1",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/preflight.cjs",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/preflight.cjs.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "5819b1354b8a82d1c3a91cc9be76a0e8bb5c6bec2400f052313a07ea7423bba1",
-      "archiveSizeBytes": 2067,
-      "archiveSha256": "5819b1354b8a82d1c3a91cc9be76a0e8bb5c6bec2400f052313a07ea7423bba1"
+      "archiveSizeBytes": 986,
+      "archiveSha256": "1e303216ece1d5e51a94a46f4dc9cf4e4680069c3ea8baa260d68160ed481d41"
     },
     {
       "originalPath": "/tmp/xk-dc004/prepare-docs.py",
@@ -6713,11 +6732,11 @@
       "originalSha256": "154e7d66b21137809b820c74123109ce0684c149bc10f483f79bcdab54763c7e",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/prepare-source-v4.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/prepare-source-v4.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "154e7d66b21137809b820c74123109ce0684c149bc10f483f79bcdab54763c7e",
-      "archiveSizeBytes": 3279,
-      "archiveSha256": "154e7d66b21137809b820c74123109ce0684c149bc10f483f79bcdab54763c7e"
+      "archiveSizeBytes": 1443,
+      "archiveSha256": "9ecef924e06fc0635569e2c46550b9e9657185d780bf96bef3652ece0a4039f8"
     },
     {
       "originalPath": "/tmp/xk-dc004/prepare-source-v5.py",
@@ -6726,11 +6745,11 @@
       "originalSha256": "bfe55b4fc4f8743770f1421572037eca48bacf683758b5db592d6d6d3b65cccd",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/prepare-source-v5.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/prepare-source-v5.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "bfe55b4fc4f8743770f1421572037eca48bacf683758b5db592d6d6d3b65cccd",
-      "archiveSizeBytes": 3611,
-      "archiveSha256": "bfe55b4fc4f8743770f1421572037eca48bacf683758b5db592d6d6d3b65cccd"
+      "archiveSizeBytes": 1598,
+      "archiveSha256": "baa6671ce78bc1c100f5e318071c1ff97ef15531057f9c516cbb45e78c280769"
     },
     {
       "originalPath": "/tmp/xk-dc004/private-hosting-helper-v1.json",
@@ -7051,11 +7070,11 @@
       "originalSha256": "667064cb521f8424b35df8e6b18a4fd669e31ef96185a59268a4895f6a0e005c",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/smoke-gallery-slash-selfcheck.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/smoke-gallery-slash-selfcheck.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "667064cb521f8424b35df8e6b18a4fd669e31ef96185a59268a4895f6a0e005c",
-      "archiveSizeBytes": 1382,
-      "archiveSha256": "667064cb521f8424b35df8e6b18a4fd669e31ef96185a59268a4895f6a0e005c"
+      "archiveSizeBytes": 558,
+      "archiveSha256": "1c602614904c36cb99c89760d9c47f546f11e45612bd38437f26689e26d12b4e"
     },
     {
       "originalPath": "/tmp/xk-dc004/smoke-helper-v1.json",
@@ -7090,11 +7109,11 @@
       "originalSha256": "3a28824d8318c9ecd21e4275960857eaf59c00e503f23e2f7ed52ece76751af6",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/smoke-selfcheck.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/smoke-selfcheck.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "3a28824d8318c9ecd21e4275960857eaf59c00e503f23e2f7ed52ece76751af6",
-      "archiveSizeBytes": 3924,
-      "archiveSha256": "3a28824d8318c9ecd21e4275960857eaf59c00e503f23e2f7ed52ece76751af6"
+      "archiveSizeBytes": 1452,
+      "archiveSha256": "dbd58fe90655aa4275cd8e52de3cf671214ed7ee77a60d23d2b6b17bf1dc7547"
     },
     {
       "originalPath": "/tmp/xk-dc004/snapshot-final.cjs",
@@ -7103,11 +7122,11 @@
       "originalSha256": "b9fa79ad9f055c96242ef405b784f0399f077e7cb2f6e2dafdc7d8acfb1802f4",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/snapshot-final.cjs",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/snapshot-final.cjs.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "b9fa79ad9f055c96242ef405b784f0399f077e7cb2f6e2dafdc7d8acfb1802f4",
-      "archiveSizeBytes": 3360,
-      "archiveSha256": "b9fa79ad9f055c96242ef405b784f0399f077e7cb2f6e2dafdc7d8acfb1802f4"
+      "archiveSizeBytes": 1337,
+      "archiveSha256": "0326d7b1892ef260e4f56b6ec8bd7cd7931e71355905f4905c9dd9273fe53e86"
     },
     {
       "originalPath": "/tmp/xk-dc004/snapshot.cjs",
@@ -7116,11 +7135,11 @@
       "originalSha256": "b6b5cb31f9e582559ed14077d5de05f5cbd83540e12b5834ad7b82777757f800",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/snapshot.cjs",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/snapshot.cjs.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "b6b5cb31f9e582559ed14077d5de05f5cbd83540e12b5834ad7b82777757f800",
-      "archiveSizeBytes": 3348,
-      "archiveSha256": "b6b5cb31f9e582559ed14077d5de05f5cbd83540e12b5834ad7b82777757f800"
+      "archiveSizeBytes": 1332,
+      "archiveSha256": "17ba3e81b6828d98684e1db910528a9b12ae3fc2b533176426ee1b7f8ddc8177"
     },
     {
       "originalPath": "/tmp/xk-dc004/source-final-v3.json",
@@ -7298,11 +7317,11 @@
       "originalSha256": "739ffa12f0eeb1e460f77a3cae57709909957c70fe4cd86c4467e108df29c15e",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/static-preview.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/static-preview.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "739ffa12f0eeb1e460f77a3cae57709909957c70fe4cd86c4467e108df29c15e",
-      "archiveSizeBytes": 841,
-      "archiveSha256": "739ffa12f0eeb1e460f77a3cae57709909957c70fe4cd86c4467e108df29c15e"
+      "archiveSizeBytes": 473,
+      "archiveSha256": "0d09294ddb9567de1138b7277f2e3519fc153410d0aa80a4384e5160b09d4094"
     },
     {
       "originalPath": "/tmp/xk-dc004/tests-final.json",
@@ -7610,11 +7629,11 @@
       "originalSha256": "86ae34e9b7bd7c8abad056a9dd723c4607f01a1c825b01ab75cc027dd7fb7f57",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge-v2.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge-v2.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "86ae34e9b7bd7c8abad056a9dd723c4607f01a1c825b01ab75cc027dd7fb7f57",
-      "archiveSizeBytes": 3691,
-      "archiveSha256": "86ae34e9b7bd7c8abad056a9dd723c4607f01a1c825b01ab75cc027dd7fb7f57"
+      "archiveSizeBytes": 1809,
+      "archiveSha256": "6b82aeaa8b2a616b59a7a7e59d9209a92e69582bcc0efd1e6b3515a2233b2fdf"
     },
     {
       "originalPath": "/tmp/xk-dc004/verify-normal-output-bridge.py",
@@ -7623,11 +7642,11 @@
       "originalSha256": "9b321b869e0169ff5d113c561f6221d175f3a21e74c28d190d607a324496e1b0",
       "kind": "tool",
       "deduplicatedBinary": false,
-      "archivePath": "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge.py",
-      "compression": "none",
+      "archivePath": "docs/reports/dc004-artifacts/tools/verify-normal-output-bridge.py.gz",
+      "compression": "deterministic-gzip-mtime0",
       "decodedPayloadSha256": "9b321b869e0169ff5d113c561f6221d175f3a21e74c28d190d607a324496e1b0",
-      "archiveSizeBytes": 3613,
-      "archiveSha256": "9b321b869e0169ff5d113c561f6221d175f3a21e74c28d190d607a324496e1b0"
+      "archiveSizeBytes": 1717,
+      "archiveSha256": "e91c90900153930e6dd8072483b08a37ddda80f94cbc91c2a103c3eb08472fb6"
     },
     {
       "originalPath": "/tmp/xk-dc004/verify-pdf.py",
@@ -7699,5 +7718,5 @@
     "Only files actually present at scan time are included. Pages and visual completion must be established separately by Root.",
     "No environment variables, credential files, other-repository source directories or build output are collected. Unrecognized files need explicit disposition before apply."
   ],
-  "archivedAtUtc": "2026-11-26T05:39:09.109322+00:00"
+  "archivedAtUtc": "2026-11-26T05:42:41.863019+00:00"
 }
