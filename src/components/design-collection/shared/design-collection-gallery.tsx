@@ -14,7 +14,7 @@ const introduction = {
   eyebrow: "WEBSITE DESIGN SERIES",
   title: "XK Design Collection",
   description: "比較 Modern、Heritage 與 Luxury 網站設計系列，了解同一份 XK 品牌內容的不同呈現方向。",
-  availability: "目前可瀏覽 Modern；Heritage 與 Luxury 仍在規劃中，尚未提供展示頁面。",
+  availability: "目前可瀏覽 Modern 與 Heritage；Luxury 仍在規劃中，尚未提供展示頁面。",
   contentNote: "各系列共用品牌、服務與作品資料。系列名稱描述網站的呈現方向，服務範圍與參考價格不因風格改變。",
 } as const;
 
@@ -26,7 +26,7 @@ const stylePresentations = {
   },
   heritage: {
     icon: BookOpen,
-    description: "規劃以編輯式章節、圖說與紙本閱讀節奏，重新安排相同的品牌內容。",
+    description: "以編輯式章節、圖說與紙本閱讀節奏，重新安排相同的品牌內容。",
     directions: ["刊頭與章節索引", "編號服務目錄", "圖說與來源並列的作品清冊"],
   },
   luxury: {

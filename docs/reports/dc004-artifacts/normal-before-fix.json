@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/capture-normal-bridge.py",
+    "/tmp/xk-dc004/normal-before-fix-result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:47:35.765309+00:00",
+  "finishedAt": "2026-11-26T04:47:35.989065+00:00",
+  "processId": 68766,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 90.0,
+  "logFile": "/tmp/xk-dc004/normal-before-fix.log",
+  "logSha256": "354dab9a32347a27862695b2944fcb00e20de3a5cbc86fa64ce3cd7a6645f7e5",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -3,6 +3,7 @@ import { existsSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync 
 import { dirname, join, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const { pagesDeployment, assertPagesBasePath } = await import(new URL("../src/config/deployment.ts", import.meta.url));
@@ -17,6 +18,18 @@ const showcaseContract = JSON.parse(readFileSync(new URL("./fixtures/showcase-co
 const contactContract = JSON.parse(readFileSync(new URL("./fixtures/contact-contract.json", import.meta.url), "utf8"));
 const quotationContract = JSON.parse(readFileSync(new URL("./fixtures/quotation-contract.json", import.meta.url), "utf8"));
 const designContract = JSON.parse(readFileSync(new URL("./fixtures/design-collection-contract.json", import.meta.url), "utf8"));
+function contentPathFor(path) {
+  return designContract.heritageRoutes.find((route) => route.path === path)?.canonicalPath ?? (path || "/");
+}
+function presentationHref(path, currentPath) {
+  return designContract.heritageRoutes.some((route) => route.path === currentPath)
+    ? designContract.heritageRoutes.find((route) => route.canonicalPath === path)?.path ?? path : path;
+}
+for (const logo of Object.values(designContract.heritageLogos)) {
+  const source = readFileSync(join(root, "public", logo.src));
+  assert.equal(createHash("sha256").update(source).digest("hex"), logo.sha256, "Preserve the independently approved original Logo asset bytes.");
+  assert.ok(source.toString().includes(`viewBox="${logo.viewBox}"`), "Preserve the original Logo geometry.");
+}
 const { quotationCatalog, quotationSources } = await import(new URL("../src/config/quotation.ts", import.meta.url));
 const [{ verifiedContactChannels }, { inquiryAction, inquiryEmailTemplate }] = await Promise.all([
   import(new URL("../src/config/contact.ts", import.meta.url)),
@@ -136,6 +149,11 @@ function metadataAttribute(html, selectorAttribute, selectorValue, targetAttribu
   const tags = html.match(/<(?:meta|link)\b[^>]*>/g) ?? [];
   const tag = tags.find((value) => tagAttribute(value, selectorAttribute) === selectorValue);
   return tagAttribute(tag, targetAttribute);
+}
+
+function verifyStyleHomeLink(links, expectedPath) {
+  assert.equal(links.length, 1, "Implemented Gallery styles must have exactly one homepage link.");
+  assert.ok(links[0] === expectedPath || (expectedPath !== "/" && links[0] === `${expectedPath}/`), "Implemented Gallery styles must link only to the approved homepage, with at most its single Pages trailing slash.");
 }
 
 function verifyModernFrame(html, label) {
@@ -425,9 +443,9 @@ assert.deepEqual(showcaseSettings.brandOrder, showcaseContract.brandOrder, "The 
 assert.deepEqual(showcaseSettings.featuredIds, showcaseContract.featuredIds, "Featured showcases must match the independently reviewed selection.");
 assert.deepEqual(showcaseSeoPages.map(({ path }) => path), expectedShowcasePaths, "Brand detail SEO pages must match all approved brand IDs.");
 assert.deepEqual(portfolioPages.slice(1).map(({ pagePath }) => pagePath.split("/").at(-1)), showcaseContract.technicalPlanSlugs, "Retain the three original technical plan routes.");
-const expectedPublicPaths = [...showcaseContract.existingPublicPaths, ...expectedShowcasePaths, quotationContract.path, designContract.collectionRoute.path, ...(privacyApproved ? ["/privacy"] : [])];
+const expectedPublicPaths = [...showcaseContract.existingPublicPaths, ...expectedShowcasePaths, quotationContract.path, designContract.collectionRoute.path, ...designContract.heritageRoutes.map(({ path }) => path), ...(privacyApproved ? ["/privacy"] : [])];
 const publicSeoPages = seoPages.filter(({ availability }) => availability === "public");
-assert.equal(designContract.publishedPaths.length, 17, "DC-003 must approve exactly Modern 16 plus Gallery.");
+assert.equal(designContract.publishedPaths.length, 33, "DC-004 must approve exactly Modern 16, Gallery and Heritage 16.");
 assert.deepEqual([...expectedPublicPaths].sort(), [...designContract.publishedPaths, ...(privacyApproved ? ["/privacy"] : [])].sort(), "Design publication must match the independent route and content contracts.");
 assert.deepEqual(publicSeoPages.map(({ path }) => path).sort(), expectedPublicPaths.sort(), "Public SEO routes must match the independently reviewed route contract.");
 assert.deepEqual(getSeoPage(designContract.collectionRoute.path), { path: designContract.collectionRoute.path, title: designContract.collectionRoute.title, description: designContract.collectionRoute.description, availability: "public" }, "Gallery must retain its independently approved SEO copy.");
@@ -441,13 +459,15 @@ const exportedPages = [
   ["contact/index.html", "/contact", "Contact"],
   ["quotation/index.html", quotationContract.path, "Quotation"],
   ["design-collection/index.html", designContract.collectionRoute.path, "Design Collection"],
+  ...designContract.heritageRoutes.map(({ path }) => [`${path.slice(1)}/index.html`, path, `Heritage ${path}`]),
   ...(privacyApproved ? [["privacy/index.html", "/privacy", "Privacy"]] : []),
   ...portfolioPages.map(({ pagePath, label }) => [`${pagePath.slice(1)}/index.html`, pagePath, label]),
 ];
 
 for (const [relativePath, pagePath, label] of exportedPages) {
+  const contentPath = contentPathFor(pagePath);
   const html = verifyExportedPage(relativePath, `${label} page`);
-  verifyBrandUrl(metadataAttribute(html, "rel", "canonical", "href"), pagePath, `${label} canonical URL`);
+  verifyBrandUrl(metadataAttribute(html, "rel", "canonical", "href"), contentPath === "/" ? "" : contentPath, `${label} canonical URL`);
   verifyBrandUrl(metadataAttribute(html, "property", "og:url", "content"), pagePath, `${label} Open Graph URL`);
   const robots = metadataAttribute(html, "name", "robots", "content") ?? "";
   assert.match(robots, /noindex/, `${label} must retain noindex metadata.`);
@@ -456,7 +476,21 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   verifyReferencedAssets(html, pagePath, label);
   verifySeoMetadata(html, getSeoPage(pagePath || "/"), label);
   verifyModernFrame(html, label);
-  verifyEnquiryMarkup(html, label, pagePath);
+  verifyEnquiryMarkup(html, label, contentPath);
+  const identity = [...designContract.modernRoutes, ...designContract.heritageRoutes].find((route) => route.path === (pagePath || "/"));
+  if (designContract.heritageRoutes.some((route) => route.path === pagePath)) {
+    for (const [landmark, logo] of Object.entries(designContract.heritageLogos)) {
+      const section = html.match(new RegExp(`<${landmark}\\b[^>]*>[\\s\\S]*?</${landmark}>`))?.[0] ?? "";
+      const images = [...section.matchAll(/<img\b[^>]*>/g)].map(([tag]) => tag).filter((tag) => tagAttribute(tag, "src") === logo.src);
+      assert.equal(images.length, 1, `${label} must use the original ${landmark} Logo asset.`);
+      for (const dimension of ["width", "height"]) assert.equal(tagAttribute(images[0], dimension), logo[dimension], `${label} must preserve the original Logo ratio.`);
+      assert.equal(tagAttribute(images[0], "alt"), siteConfig.name, `${label} Logo must retain its brand alternative.`);
+      assert.equal(createHash("sha256").update(readFileSync(join(output, logo.src))).digest("hex"), logo.sha256, `${label} exported Logo geometry/colors must remain unchanged.`);
+    }
+  }
+  if (identity) for (const id of designContract.semanticAnchors[identity.pageKey]) {
+    assert.equal([...html.matchAll(/<[a-z][\w-]*\b[^>]*>/g)].filter(([tag]) => tagAttribute(tag, "id") === id).length, 1, `${label} must preserve exactly one declared #${id} anchor.`);
+  }
   const footer = html.match(/<footer\b[^>]*>([\s\S]*?)<\/footer>/)?.[1] ?? "";
   const footerUrls = [...footer.matchAll(/<a\b[^>]*>/g)].map(([tag]) => new URL(decodePublicText(tagAttribute(tag, "href") ?? ""), siteConfig.url));
   const footerPaths = new Set(footerUrls.filter(({ origin }) => origin === siteConfig.url).map(({ pathname }) => pathname.replace(/\/$/, "") || "/"));
@@ -471,7 +505,7 @@ for (const [relativePath, pagePath, label] of exportedPages) {
     for (const [index, card] of cards.entries()) {
       const markup = stylesSection.slice(card.index, cards[index + 1]?.index ?? stylesSection.length);
       const links = [...markup.matchAll(/<a\b[^>]*>/g)].map(([tag]) => decodePublicText(tagAttribute(tag, "href") ?? ""));
-      if (tagAttribute(card[0], "data-design-status") === "implemented") assert.deepEqual(links, ["/"], "The Modern Gallery card must link to the original homepage.");
+      if (tagAttribute(card[0], "data-design-status") === "implemented") verifyStyleHomeLink(links, designContract.styleHomePaths[tagAttribute(card[0], "data-design-style-id")]);
       else {
         assert.deepEqual(links, [], "Planned Gallery styles must not expose links.");
         assert.doesNotMatch(markup, /<button\b/i, "Planned Gallery styles must not expose fake actions.");
@@ -479,7 +513,7 @@ for (const [relativePath, pagePath, label] of exportedPages) {
       }
     }
   }
-  if (pagePath === "" || pagePath === "/services") verifyServicePlans(html, pagePath || "/");
+  if (contentPath === "/" || contentPath === "/services") verifyServicePlans(html, contentPath);
 
   if (pagePath === "/solutions") {
     const title = "解決方案 | Xplore Kaleidoscope";
@@ -491,12 +525,12 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   }
 
   const portfolioPage = portfolioPages.find((page) => page.pagePath === pagePath);
-  if (showcaseContract.technicalPlanSlugs.some((slug) => pagePath === `/portfolio/${slug}`)) {
+  if (showcaseContract.technicalPlanSlugs.some((slug) => contentPath === `/portfolio/${slug}`)) {
     const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? "";
     assert.ok(main.includes("Planned／規劃中") && main.includes("尚未提供可核對的實作與測試證據。") && main.includes("尚無可驗證的系統畫面"), `${label} must preserve the technical plan and evidence boundaries.`);
     assert.doesNotMatch(main, /<img\b/i, `${label} must not invent an implemented-system screenshot.`);
   }
-  if (pagePath === "/portfolio") {
+  if (contentPath === "/portfolio") {
     const visibleHtml = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
     const brandOrder = showcaseContract.brandOrder;
     let previousPosition = -1;
@@ -526,7 +560,8 @@ for (const [relativePath, pagePath, label] of exportedPages) {
         assert.doesNotMatch(card, /<img\b/i, `Unavailable card must not show a fake preview: ${showcase.id}.`);
         if (showcase.sourceHref) assert.ok(!card.includes(`href="${showcase.sourceHref}"`), `Unavailable source must not be an active showcase link: ${showcase.id}.`);
         const cardLinks = [...card.matchAll(/<a\b[^>]*>/g)].map(([tag]) => tagAttribute(tag, "href"));
-        assert.ok(cardLinks.every((href) => href === showcase.attribution?.href || href === `${basePath}${showcaseDetailPath(showcase.id)}` || href === `${basePath}${showcaseDetailPath(showcase.id)}/`), `Unavailable card exposes an unexpected link: ${showcase.id}.`);
+        const detailHref = presentationHref(showcaseDetailPath(showcase.id), pagePath);
+        assert.ok(cardLinks.every((href) => href === showcase.attribution?.href || href === `${basePath}${detailHref}` || href === `${basePath}${detailHref}/`), `Unavailable card exposes an unexpected link: ${showcase.id}.`);
       } else {
         assert.ok(card.includes(`href="${showcase.href}"`), `Missing public showcase link: ${showcase.id}.`);
         assert.ok(card.includes(`src="${basePath}${showcase.image.src}"`), `Incorrect showcase preview base path: ${showcase.id}.`);
@@ -535,7 +570,8 @@ for (const [relativePath, pagePath, label] of exportedPages) {
       if (showcase.kind === "template") {
         assert.ok(showcase.attribution?.href && card.includes(`href="${showcase.attribution.href}"`) && card.includes(showcase.attribution.label), `Missing template attribution: ${showcase.id}.`);
       } else {
-        assert.ok(card.includes(`href="${basePath}${showcaseDetailPath(showcase.id)}"`) || card.includes(`href="${basePath}${showcaseDetailPath(showcase.id)}/"`), `Missing brand detail link: ${showcase.id}.`);
+        const detailHref = presentationHref(showcaseDetailPath(showcase.id), pagePath);
+        assert.ok(card.includes(`href="${basePath}${detailHref}"`) || card.includes(`href="${basePath}${detailHref}/"`), `Missing brand detail link: ${showcase.id}.`);
       }
     }
     assert.deepEqual(websiteShowcases.filter(({ availability }) => availability === "reference-only").map(({ id }) => id), showcaseContract.referenceOnlyIds, "Reference-only templates must match the reviewed source limitations.");
@@ -550,16 +586,18 @@ for (const [relativePath, pagePath, label] of exportedPages) {
     assert.equal(metadataAttribute(html, "property", "og:type", "content"), "website", `${label} Open Graph type is incorrect.`);
   }
 
-  if (pagePath === "/contact") {
+  if (contentPath === "/contact") {
     const title = "聯絡我們 | Xplore Kaleidoscope";
     const description = "了解如何與 Xplore Kaleidoscope（XK）討論網站、Java 企業系統、系統整合與 AI 應用需求，查看已確認的聯絡資訊與合作準備事項。";
     const head = html.match(/<head\b[^>]*>([\s\S]*?)<\/head>/)?.[1] ?? "";
-    assert.equal(head.match(/<title>([^<]*)<\/title>/)?.[1], title, "Contact title is incorrect.");
-    assert.equal(metadataAttribute(html, "name", "description", "content"), description, "Contact description is incorrect.");
-    assert.equal(metadataAttribute(html, "property", "og:title", "content"), title, "Contact Open Graph title is incorrect.");
-    assert.equal(metadataAttribute(html, "property", "og:description", "content"), description, "Contact Open Graph description is incorrect.");
-    assert.equal(metadataAttribute(html, "property", "og:locale", "content"), "zh_TW", "Contact Open Graph locale is incorrect.");
-    assert.equal(metadataAttribute(html, "property", "og:type", "content"), "website", "Contact Open Graph type is incorrect.");
+    if (pagePath === "/contact") {
+      assert.equal(head.match(/<title>([^<]*)<\/title>/)?.[1], title, "Contact title is incorrect.");
+      assert.equal(metadataAttribute(html, "name", "description", "content"), description, "Contact description is incorrect.");
+      assert.equal(metadataAttribute(html, "property", "og:title", "content"), title, "Contact Open Graph title is incorrect.");
+      assert.equal(metadataAttribute(html, "property", "og:description", "content"), description, "Contact Open Graph description is incorrect.");
+      assert.equal(metadataAttribute(html, "property", "og:locale", "content"), "zh_TW", "Contact Open Graph locale is incorrect.");
+      assert.equal(metadataAttribute(html, "property", "og:type", "content"), "website", "Contact Open Graph type is incorrect.");
+    }
 
     const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? "";
     const headings = [...main.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/g)];
@@ -624,9 +662,9 @@ function verifySeoMetadata(html, page, label) {
   assert.equal(oneValue("name", "description"), page.description, `${label} exact SEO description is incorrect.`);
   const canonical = oneValue("rel", "canonical", "href");
   const openGraphUrl = oneValue("property", "og:url");
-  const expectedUrl = seo.getBrandUrl(page.path, siteConfig.url);
-  for (const url of [canonical, openGraphUrl]) {
-    verifyBrandUrl(url, page.path === "/" ? "" : page.path, `${label} SEO URL`);
+  for (const [url, path] of [[canonical, contentPathFor(page.path)], [openGraphUrl, page.path]]) {
+    const expectedUrl = seo.getBrandUrl(path, siteConfig.url);
+    verifyBrandUrl(url, path === "/" ? "" : path, `${label} SEO URL`);
     assert.equal(url.replace(/\/$/, ""), expectedUrl.replace(/\/$/, ""), `${label} SEO URL differs from the registry.`);
   }
   for (const [name, value] of [

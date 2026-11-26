@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/verify-pdf.py",
+    "/tmp/xk-dc004/pages-final/quotation-heritage-worstcase-a4.pdf",
+    "--mode",
+    "pages",
+    "--out",
+    "/tmp/xk-dc004/pages-final/pdf-heritage",
+    "--catalog",
+    "/tmp/xk-dc004/catalog-final.json",
+    "--expected-catalog-sha",
+    "1c4ad0dc46e4d8efbce773fc630a4fc8c5bc57d0c29b0744a0608888c894dd63"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:32:20.459120+00:00",
+  "finishedAt": "2026-11-26T05:32:23.151730+00:00",
+  "processId": 80107,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc004/pages-final/pdf-heritage.log",
+  "logSha256": "cd49344c2884173d46fd5885f55dcfd75de95afa3bb8ea45b9f83399205fec76",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

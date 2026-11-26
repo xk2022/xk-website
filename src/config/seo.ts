@@ -20,7 +20,7 @@ export const seoProtectionPolicy: SeoProtectionPolicy = {
 };
 
 /** Current approved page copy. Planned, development and error routes are deliberately absent. */
-export const seoPages = [
+const modernSeoPages = [
   {
     path: "/",
     title: "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
@@ -95,6 +95,20 @@ export const seoPages = [
   },
   ...showcaseSeoPages,
 ] as const satisfies readonly SeoPage[];
+
+// Presentation copies reuse the existing content metadata. Canonical is resolved
+// separately by the Design Collection adapter and remains the Modern URL.
+const heritageSeoPages: readonly SeoPage[] = modernSeoPages
+  .filter((page) => page.availability === "public" && page.path !== "/design-collection")
+  .map((page) => ({
+    ...page,
+    path: `/design-collection/heritage${page.path === "/" ? "" : page.path}` as const,
+    title: `${page.title}｜Heritage 懷舊復古 設計展示`,
+    description: `${page.description} 本頁為 Heritage 懷舊復古 設計展示，服務範圍與參考資料不因風格改變。`,
+    availability: "public",
+  }));
+
+export const seoPages: readonly SeoPage[] = [...modernSeoPages, ...heritageSeoPages];
 
 export function getSeoPage(path: string): SeoPage {
   const page = seoPages.find((entry) => entry.path === path);

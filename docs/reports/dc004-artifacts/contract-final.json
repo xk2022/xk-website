@@ -1,0 +1,27 @@
+{
+  "status": "READY_ROOT_FREEZE",
+  "stylePrefix": "/design-collection/heritage",
+  "scopeSelector": "[data-design-style=\"heritage\"]",
+  "modernScopeSelector": "main",
+  "mainId": "main-content",
+  "skipHref": "#main-content",
+  "menuTriggerSelector": "header details.htg-mobile-navigation > summary",
+  "nativeMenuSelector": "header details.htg-mobile-navigation",
+  "mobileNavSelector": "header nav[aria-label=\"Heritage \u624b\u6a5f\u5c0e\u89bd\"]",
+  "styleLinkSelector": "a[href]",
+  "heritageBackground": "#f4e9d8",
+  "heritageForeground": "#2d241e",
+  "modernPrimary": "#101a33",
+  "modernPDFRequired": true,
+  "modernPDFImpactReason": "Shared ContactInquiryForm(styleId), QuotationEstimator(styleId/catalog) and new scoped print/theme CSS affect integration; inspect/execute Modern actual A4 regression.",
+  "portfolioDisclosureSections": [
+    "website-samples",
+    "portfolio-projects"
+  ],
+  "portfolioDisclosuresDefaultClosed": true,
+  "representativeTechnicalSlug": "corporate-website",
+  "representativeBrandSlug": "qiangang-windows",
+  "sourceContract": "Source reviewed after Root freeze: HeritageFrame/Navigation native details and exact selectors; shared Contact/Quotation original IDs and standard A4 preserved; scope/palette from heritageThemeStyle and CSS. Browser observations remain NOT_EXECUTED. Final source adds the shared Services guide and exact visible-URL accessible labels; original v1 evidence is retained.",
+  "sourceFreeze": "/tmp/xk-dc004/source-final.json",
+  "rootFingerprint": "c95e118c905a6fd69a2d4e274642a08efc464cf98230c4c1a6675f67380abbd1"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/package-evidence.py",
+    "--dry-run"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:33:32.267264+00:00",
+  "finishedAt": "2026-11-26T05:33:33.688902+00:00",
+  "processId": 80438,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc004-package/dry-run.log",
+  "logSha256": "f28227af5599caa6661f818d5faa259ed4a69977e8be19ffd8ebeb8b808e3b41",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

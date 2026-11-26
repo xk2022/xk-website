@@ -1,0 +1,46 @@
+{
+  "testId": "DC004-SOURCE-V5-BUILDER-SMOKE-GATES-SEAL",
+  "status": "PASS",
+  "verifiedAt": "2026-11-26T05:25:22.271087+00:00",
+  "filesReadAndHashed": 197,
+  "unchangedFiles": 195,
+  "changedFiles": [
+    {
+      "path": "scripts/build-github-pages.mjs",
+      "before": "534ae70625cfcde778ab1999d52574c2758edf29418fa72fbdd0ab1775de663e",
+      "actual": "8e0ec10ae9d2fc1cd1ec0bbe4311152111e95610f0aa51effb8a0e39e6b0c847"
+    },
+    {
+      "path": "scripts/smoke-website.py",
+      "before": "43f236bf27aede10a068ff5a37a10e7474db06983e71c076503520edc3c778f9",
+      "actual": "0b08202e4fa35fb4f1ee7837890ab2ec3323611f2c098d4de9e0b381c36378fc"
+    }
+  ],
+  "missingFiles": [],
+  "v3": {
+    "sourcePath": "/tmp/xk-dc004/source-final-v3.json",
+    "sourceFileSha256": "e20a0628e1b707bf452347ab37c2b32d125c4aa3991097366da50c323ada585e",
+    "contractPath": "/tmp/xk-dc004/contract-final-v3.json",
+    "contractFileSha256": "988d54c355bb8a16d0d92a4c54cfa50d5a9ba183bff4ba9869dd653a2a060f80",
+    "fingerprint": "fd868bec7bae4efe96e018e444cf725ced37ee4edaf87253f6a129719f4014e8",
+    "preserved": true
+  },
+  "v5": {
+    "sourcePath": "/tmp/xk-dc004/source-final-v5.json",
+    "sourceFileSha256": "514fb11d5d1a965f8f1ec4c2c5079f68983e83e5b3306d45c0d36bb0da4748cd",
+    "contractPath": "/tmp/xk-dc004/contract-final-v5.json",
+    "contractFileSha256": "d20044cce110c0a87ec5259be57fac1fb8bb496990d44b4899a00486c753776e",
+    "fingerprint": "daafeceb4aec69b766f70f5430687d82a11455a9ebc7579ea4f032da85db6a0f"
+  },
+  "unchangedInputs": [
+    {
+      "path": "/tmp/xk-dc004/fixture-final.json",
+      "sha256": "9b32d4877e9d0e8b9e698b6e4002bf9a6349ec07ffe2234c26bceab560b90eca"
+    },
+    {
+      "path": "/tmp/xk-dc004/catalog-final.json",
+      "sha256": "1c4ad0dc46e4d8efbce773fc630a4fc8c5bc57d0c29b0744a0608888c894dd63"
+    }
+  ],
+  "scope": "Read-only source hash verification and new temporary metadata files. No build/server/browser/Git operation or app edit."
+}

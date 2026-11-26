@@ -4,6 +4,8 @@
 
 本稿把 [DC-004 工作包](../work-packages.md#dc004) 的品牌前置做成可審閱畫面，並非完整設計系列交付。公開網站仍是 Modern 16 頁加 Gallery 共 17 頁；Heritage 沒有公開入口或新路由，Gallery 的規劃狀態不變。
 
+本頁保留 PR 前待審快照；使用者後續已明確核准 v1，最新決定見 [同版本核准紀錄](heritage-v1-approval.md)。下方 PENDING 表示原始送審時點，不代表需要重複確認。
+
 ## 1. 審閱方式
 
 - [原型 HTML](heritage-v1.html)：只有本機文件預覽，不由 Next.js 或 Pages 匯出；從 Repository 根目錄以 `python3 -m http.server 3240 --bind 127.0.0.1` 啟動，開啟 <http://127.0.0.1:3240/docs/01_design/design-collection/reviews/heritage-v1.html>，審閱完停止服務。不要把 Repository 根目錄服務公開。

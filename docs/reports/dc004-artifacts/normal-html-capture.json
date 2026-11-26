@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/capture-normal-html.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:51:05.347220+00:00",
+  "finishedAt": "2026-11-26T04:51:05.755857+00:00",
+  "processId": 69827,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 90.0,
+  "logFile": "/tmp/xk-dc004/normal-html-capture.log",
+  "logSha256": "96984dffb141b78225f0b14c694a1797024d9cdd04ff43cf7f5f4bd0aeff83c8",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

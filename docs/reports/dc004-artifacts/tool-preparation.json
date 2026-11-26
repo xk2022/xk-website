@@ -1,0 +1,45 @@
+{
+  "testId": "DC004-TOOL-PREFLIGHT",
+  "status": "PASS",
+  "checkedAt": "2026-11-26T04:44:19.928Z",
+  "checks": [
+    {
+      "file": "browser.cjs",
+      "syntaxExit": 0,
+      "sha256": "8d9ac63d1d449257ec094944e7bc72cd79eff28bb618881b5fbf6a3b5e6e7d02"
+    },
+    {
+      "file": "business.cjs",
+      "syntaxExit": 0,
+      "sha256": "1d57e8eeea5545bb77312b447d61685133869683bb25fe39aa24e2521c66a3c3"
+    },
+    {
+      "file": "monitor.cjs",
+      "syntaxExit": 0,
+      "sha256": "69549f5c098c4ad6fbbf141bf905e3ec0cb77b79ae55327d48e9283c0cf3b11f"
+    },
+    {
+      "file": "snapshot.cjs",
+      "syntaxExit": 0,
+      "sha256": "b6b5cb31f9e582559ed14077d5de05f5cbd83540e12b5834ad7b82777757f800"
+    }
+  ],
+  "pdfVerifier": {
+    "path": "/tmp/xk-dc004/verify-pdf.py",
+    "sha256": "4f5cf213721f071c645dce887544ca1bfeb2a743d4b512f2fb390d09bf995ee8",
+    "helpExit": 0
+  },
+  "matrix": {
+    "path": "/tmp/xk-dc004/matrix.json",
+    "sha256": "377dfc5ca7bc57c6d274defe287d8aba02c0bbb9bd68ace56036718773087aaf",
+    "expectedTestsPerMode": 262,
+    "expectedLayouts": 165,
+    "expectedAxeScans": 58,
+    "expectedPagesPrimaryPNGs": 17,
+    "expectedPDFsPerMode": 2
+  },
+  "UIContractStatus": "READY_ROOT_FREEZE",
+  "formalQA": "NOT_EXECUTED",
+  "sourceFreeze": "Root source-freeze.json supplied; regenerate snapshot.cjs after final freeze and use explicit new runner paths for formal browser execution",
+  "publication": "No Git/build/server/deploy/email send performed"
+}

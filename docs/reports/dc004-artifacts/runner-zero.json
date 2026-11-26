@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "-c",
+    "print(\"runner zero\"); raise SystemExit(0)"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:34:24.703986+00:00",
+  "finishedAt": "2026-11-26T04:34:24.724581+00:00",
+  "processId": 66804,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 5.0,
+  "logFile": "/tmp/xk-dc004/runner-zero.log",
+  "logSha256": "3e58e89e399d4dc3656056a932d6e0084d88dd9509397f01cb1fe51ed16b8f35",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

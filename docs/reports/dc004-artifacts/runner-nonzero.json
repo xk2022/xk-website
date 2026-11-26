@@ -1,0 +1,20 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python3",
+    "-c",
+    "print(\"runner expected nonzero\"); raise SystemExit(7)"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:34:24.720251+00:00",
+  "finishedAt": "2026-11-26T04:34:24.738816+00:00",
+  "processId": 66810,
+  "returnCode": 7,
+  "exitCode": 7,
+  "timeoutSeconds": 5.0,
+  "logFile": "/tmp/xk-dc004/runner-nonzero.log",
+  "logSha256": "1feb5f2183b85d80609d6df9aaceb45c579cfeff2b057ab5760dc975300b9343",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

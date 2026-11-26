@@ -8,6 +8,7 @@ import { Card } from "@/components/ui/card";
 import { verifiedContactChannels } from "@/config/contact";
 import { contactInquiry, emptyContactInquiry, type ContactInquiryErrors, type ContactInquiryValues } from "@/config/contact-inquiry";
 import { createContactInquiryDraft, validateContactInquiry, type ContactInquiryDraft } from "@/lib/contact-inquiry";
+import type { DesignStyleId } from "@/lib/design-collection/types";
 
 const subscribe = () => () => {};
 const hydratedSnapshot = () => true;
@@ -15,7 +16,7 @@ const serverSnapshot = () => false;
 const labels: Record<keyof ContactInquiryValues, string> = { name: "稱呼", email: "回覆 Email", service: "服務方向", message: "需求摘要" };
 const fieldClass = "type-body w-full min-w-0 rounded-md border border-border bg-background px-4 py-3 text-foreground placeholder:text-muted-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring aria-invalid:border-destructive";
 
-export function ContactInquiryForm() {
+export function ContactInquiryForm({ styleId = "modern" }: { styleId?: DesignStyleId } = {}) {
   const hydrated = useSyncExternalStore(subscribe, hydratedSnapshot, serverSnapshot);
   const [values, setValues] = useState<ContactInquiryValues>(emptyContactInquiry);
   const [errors, setErrors] = useState<ContactInquiryErrors>({});
@@ -26,6 +27,22 @@ export function ContactInquiryForm() {
   const previewRef = useRef<HTMLTextAreaElement>(null);
   const firstFieldRef = useRef<HTMLInputElement>(null);
   const draftRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Also clear a retained Activity/bfcache instance before it is shown again.
+    const clearPersonalMemory = () => {
+      setValues(emptyContactInquiry);
+      setErrors({});
+      setDraft(null);
+      setCopyStatus("");
+      setCopying(false);
+    };
+    window.addEventListener("pagehide", clearPersonalMemory);
+    return () => {
+      window.removeEventListener("pagehide", clearPersonalMemory);
+      clearPersonalMemory();
+    };
+  }, [styleId]);
 
   useEffect(() => {
     if (Object.keys(errors).length) summaryRef.current?.focus();
@@ -81,7 +98,7 @@ export function ContactInquiryForm() {
   }
 
   return (
-    <Card className="mx-auto max-w-3xl gap-8 sm:p-8">
+    <Card className={styleId === "heritage" ? "htg-contact-form mx-auto max-w-3xl gap-8 sm:p-8" : "mx-auto max-w-3xl gap-8 sm:p-8"}>
       <div className="type-body-sm rounded-md border bg-surface p-4 text-foreground">
         <p className="font-semibold">填寫 → 預覽 → 自行寄信</p>
         <p className="mt-2">這是詢問內容整理工具，尚未提供站內直接送出。請勿填入帳號密碼、金鑰或敏感資料。</p>

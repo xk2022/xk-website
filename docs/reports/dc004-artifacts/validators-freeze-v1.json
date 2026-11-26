@@ -1,0 +1,7 @@
+{
+  "scripts/build-github-pages.mjs": "534ae70625cfcde778ab1999d52574c2758edf29418fa72fbdd0ab1775de663e",
+  "scripts/smoke-website.py": "43f236bf27aede10a068ff5a37a10e7474db06983e71c076503520edc3c778f9",
+  "scripts/fixtures/design-collection-contract.json": "64acaa1c973285322c294fbceb483125af44ddfd5b7076802a8b5a1cff753cb1",
+  "scripts/test-design-collection-routes.mjs": "719bb0da3faad294e87809ba9f0add8018c46ba160045c6c959a515a5c699fd8",
+  "scripts/test-design-collection-metadata.mjs": "cacc5a0629cacf54c8881314b172e9f3376eef8d0e57c81959d61bd37bd0a478"
+}

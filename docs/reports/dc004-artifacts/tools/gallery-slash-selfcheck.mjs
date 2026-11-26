@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+const source = readFileSync('/workspace/xk-website/scripts/build-github-pages.mjs', 'utf8');
+const definition = source.match(/^function verifyStyleHomeLink\([\s\S]*?^}/m)?.[0];
+assert(definition);
+const verify = new Function('assert', definition + '\nreturn verifyStyleHomeLink;')(assert);
+for (const [links, expected] of [[['/'], '/'], [['/design-collection/heritage'], '/design-collection/heritage'], [['/design-collection/heritage/'], '/design-collection/heritage']]) verify(links, expected);
+const invalid = [[], ['/','/'], ['//'], ['/?query=1'], ['/#hash'], ['/design-collection/heritage//'], ['/design-collection/heritage/?query=1'], ['/design-collection/heritage#hash'], ['https://www.xplorekaleidoscope.com/design-collection/heritage/'], ['https://invalid.example/design-collection/heritage/'], ['/design-collection/luxury/'], ['/design-collection/modern/'], ['/design-collection/heritage/extra'], ['//www.xplorekaleidoscope.com/design-collection/heritage/']];
+for (const links of invalid) assert.throws(() => verify(links, links[0]?.startsWith('/?') || links[0]?.startsWith('/#') || links[0] === '//' || links[0] === '/' ? '/' : '/design-collection/heritage'));
+console.log('PASS: 3 exact approved root/Heritage paths accepted; 14 count/query/hash/absolute-origin/double-slash/unknown-style/subpath negatives rejected. Only Gallery Pages single-trailing-slash semantics tested; no build/server.');

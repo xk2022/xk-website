@@ -283,3 +283,7 @@ docs(task): add XK website task specifications 006-014
 ## Bugfix 001–008 優化文件
 
 [bugfix001](bugfix001.md)、[bugfix002](bugfix002.md)、[bugfix003](bugfix003.md)、[bugfix004](bugfix004.md)、[bugfix005](bugfix005.md)、[bugfix006](bugfix006.md)、[bugfix007](bugfix007.md)、[bugfix008](bugfix008.md) 是本次使用者指定的八份改善輸入；原始內容保留，不把重複文字當成八套獨立功能。首頁價值主張／服務卡／技術分類／方案導覽與 Logo 建議的採用及後續界線見 [實作報告](../reports/bugfix001-008-implementation.md)。
+
+## DC-004 執行入口
+
+使用者已對 PR #40 的 v1 配色、品牌外框與桌面／手機版型明確核准；[同版本紀錄](../01_design/design-collection/reviews/heritage-v1-approval.md) 滿足品牌前置。完整 Heritage 16 頁依 [DC-004](dc004.md) 及既有工作包開發，與 Modern 16＋Gallery 合計 33 頁；Luxury 維持規劃中。功能、測試、PR／部署與尚未完成事項見 [實作報告](../reports/dc004-implementation.md)，不把品牌核准當作合併／部署授權。

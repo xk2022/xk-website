@@ -62,12 +62,12 @@ BF-009～016 以 [PR #24](https://github.com/xk2022/xk-website/pull/24)、[待�
 | DC-001 架構規格 | 已合併 [PR #30](https://github.com/xk2022/xk-website/pull/30)；[報告](../reports/dc001-architecture.md) | — |
 | DC-002 共用核心 | 已合併 [PR #33](https://github.com/xk2022/xk-website/pull/33)；[報告](../reports/dc002-implementation.md) | DC-001 |
 | DC-003 Modern／Gallery | 已合併 [PR #39](https://github.com/xk2022/xk-website/pull/39)；[規格](dc003.md)、[實作與驗證](../reports/dc003-implementation.md)，main CI／Pages 成功 | DC-002 |
-| DC-004 Heritage | [品牌審閱稿 v1](../01_design/design-collection/reviews/heritage-v1.md) 待審；完整 16 頁實作尚未開始 | DC-003 |
+| DC-004 Heritage | [v1 已核准](../01_design/design-collection/reviews/heritage-v1-approval.md)；[完整規格](dc004.md)、[分支實作驗證](../reports/dc004-implementation.md)，未合併發布 | DC-003 |
 | DC-005 Luxury | 待執行、品牌審閱 | DC-003 |
 | DC-006 三系列整合 | 待執行 | DC-004、DC-005 |
 | DC-007 完整驗收與發布準備 | 待執行 | DC-006；發布依當次授權 |
 
-DC-004／005 可依現有工作包平行；未完成風格不提供假入口，Gallery 依 DC-003 的 17 頁階段驗收。
+DC-004／005 可依現有工作包平行；未完成風格不提供假入口。正式 main 保持 DC-003 的 17 頁；DC-004 功能分支以 Modern 16＋Gallery＋Heritage 16，共 33 頁驗收，尚未合併發布。
 
 ## 4. 文件整理（DOC-001～006）
 

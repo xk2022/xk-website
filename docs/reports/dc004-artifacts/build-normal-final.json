@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "run",
+    "build"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:55:43.900213+00:00",
+  "finishedAt": "2026-11-26T04:55:52.246356+00:00",
+  "processId": 70235,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-dc004/build-normal-final.log",
+  "logSha256": "f422acb2359a0aaff1ab4711d8683e3542f5ce593d5300dd41f2da30eff8f642",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

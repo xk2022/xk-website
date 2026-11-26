@@ -1,0 +1,169 @@
+{
+  "recognized": true,
+  "checks": {
+    "firstPage": true,
+    "rotation0": true,
+    "exactMediaBox": true,
+    "exactCropBox": true,
+    "exactContentPrefix": true,
+    "opaqueNormalState": true,
+    "exactFirstClip": true,
+    "paint-0": true,
+    "paint-1": true,
+    "paint-2": true
+  },
+  "confirmedCanvasBackgrounds": [
+    {
+      "seqno": 0,
+      "classification": "CONFIRMED_OPAQUE_WHITE_CANVAS_BACKGROUND",
+      "type": "f",
+      "rawBBox": [
+        0.0,
+        0.0,
+        595.5,
+        842.25
+      ],
+      "fill": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fillOpacity": 1.0,
+      "strokeColor": null,
+      "strokeOpacity": null,
+      "level": 0,
+      "items": [
+        {
+          "operator": "re",
+          "rect": [
+            0.0,
+            0.0,
+            595.5,
+            842.25
+          ],
+          "orientation": -1
+        }
+      ],
+      "activeExplicitClip": null,
+      "implicitPageClip": [
+        0.0,
+        0.0,
+        594.9599609375,
+        841.9199829101562
+      ],
+      "effectivePaintBBox": [
+        0.0,
+        0.0,
+        594.9599609375,
+        841.9199829101562
+      ],
+      "note": "Raw spill remains recorded. Only the page canvas background is clipped for this classification; content is never excused by clipping."
+    },
+    {
+      "seqno": 1,
+      "classification": "CONFIRMED_OPAQUE_WHITE_CANVAS_BACKGROUND",
+      "type": "f",
+      "rawBBox": [
+        0.0,
+        0.0,
+        595.5,
+        839.25
+      ],
+      "fill": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fillOpacity": 1.0,
+      "strokeColor": null,
+      "strokeOpacity": null,
+      "level": 1,
+      "items": [
+        {
+          "operator": "re",
+          "rect": [
+            0.0,
+            0.0,
+            595.5,
+            839.25
+          ],
+          "orientation": -1
+        }
+      ],
+      "activeExplicitClip": [
+        0.0,
+        0.0,
+        595.2000122070312,
+        841.88671875
+      ],
+      "implicitPageClip": [
+        0.0,
+        0.0,
+        594.9599609375,
+        841.9199829101562
+      ],
+      "effectivePaintBBox": [
+        0.0,
+        0.0,
+        594.9599609375,
+        839.25
+      ],
+      "note": "Raw spill remains recorded. Only the page canvas background is clipped for this classification; content is never excused by clipping."
+    },
+    {
+      "seqno": 2,
+      "classification": "CONFIRMED_OPAQUE_WHITE_CANVAS_BACKGROUND",
+      "type": "f",
+      "rawBBox": [
+        0.0,
+        0.0,
+        595.5,
+        839.25
+      ],
+      "fill": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fillOpacity": 1.0,
+      "strokeColor": null,
+      "strokeOpacity": null,
+      "level": 1,
+      "items": [
+        {
+          "operator": "re",
+          "rect": [
+            0.0,
+            0.0,
+            595.5,
+            839.25
+          ],
+          "orientation": -1
+        }
+      ],
+      "activeExplicitClip": [
+        0.0,
+        0.0,
+        595.2000122070312,
+        841.88671875
+      ],
+      "implicitPageClip": [
+        0.0,
+        0.0,
+        594.9599609375,
+        841.9199829101562
+      ],
+      "effectivePaintBBox": [
+        0.0,
+        0.0,
+        594.9599609375,
+        839.25
+      ],
+      "note": "Raw spill remains recorded. Only the page canvas background is clipped for this classification; content is never excused by clipping."
+    }
+  ],
+  "contentPrefixSha256": "a3596b2745495d5d93f84286f256fed75b056d149e8319a81c3bfc32da687a52",
+  "expectedPrefixSha256": "a3596b2745495d5d93f84286f256fed75b056d149e8319a81c3bfc32da687a52",
+  "originalContentTolerancePt": 0.1,
+  "reason": "Exact observed3 initial opaque-white canvas rectangles; no generic background, color, seqno, clipping or tolerance exclusion."
+}

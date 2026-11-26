@@ -44,6 +44,9 @@
 @source not "../../docs/01_design/design-collection/reviews";
 @source not "../../docs/reports/dc004-brand-review.md";
 @source not "../../docs/reports/dc004-review-artifacts";
+@source not "../../docs/task/dc004.md";
+@source not "../../docs/reports/dc004-implementation.md";
+@source not "../../docs/reports/dc004-artifacts";
 
 :root {
   color-scheme: light;

@@ -460,3 +460,11 @@ Native 測試透過 Node.js 24 的 test-only alias hook 解析既有 Next.js imp
 DC-004 工作包要求先完成新增 palette／外框／素材品牌審閱，當前仍無核准紀錄；本輪先交付 [Heritage 品牌審閱稿](../01_design/design-collection/reviews/heritage-v1.md) 與本機原型、截圖和 [範圍驗證](../reports/dc004-brand-review.md)。公司最新 main 為 `d03cd673c10a8f7c0427c558c562112aa4d34a8c`，已出現根 AGENTS 與遷移後品牌／工程入口，但沒有 Heritage 例外核准。
 
 本稿不新增 Next 路由、品牌事實、收件、價格或依賴；Modern 及 Gallery 公開 17 頁不變。globals.css 僅限定排除審閱資料的掃描，runtime 產物另比較。完整 16 頁 Heritage、正式 Next 字體、Contact／Quotation／PII／A4 與兩模式全部驗收仍待品牌審閱；本次新審閱 PR 不自動合併或發布。
+
+## 2026-11-26 DC-004 — Heritage 完整實作
+
+使用者對 PR #40 審閱版本 `cfaab65` 明確回覆「核准」，已記錄 [v1 品牌適用範圍](../01_design/design-collection/reviews/heritage-v1-approval.md)，不重複要求同一審閱。公司最新 main 為 `e0229b97acb2bf6c2d83f8155665f68b11c27d71`；較前輪兩個知識庫 commits 未改 35 份相關規範 Blob，沒有修改公司 Repository。
+
+本輪延續 `feature/design-collection-heritage`／PR #40，實作獨立編輯式 Frame／語意 tokens／recipes、七主頁及九詳頁，消費共用 DTO；Modern 的資料／功能保留，Footer 可見新增完整 Heritage 目錄。Style layout 僅提供 static params 與 children，各頁各包一次 Frame，避免 root 404 雙框。公開驗收清冊為 33 頁，canonical 對 Modern、OG 為展示頁本身；Luxury／Privacy／dev／Sitemap 保護不變。
+
+Contact／Quotation 共用原控制器、驗證、計算與選項儲存；新離頁清理只針對記憶體個人欄位，試算 IDs 仍用原 key。內鏈對照由伺服器傳小型資料，避免 Modern client 引入完整頁面 registry。標準 A4 以具名 page 及實際啟用標記隔離，兩模式、跨頁與最壞內容以 [本輪報告](../reports/dc004-implementation.md) 的實際結果為準。完整 Required 驗收、失敗／重驗及精確 CI artifact 分開記錄，沒有自動合併、功能分支發布或 DNS 變更。

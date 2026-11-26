@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "V2 to V3 compiled CSS: only one Heritage Quotation disabled-button rule within @media screen changes; print, other palettes/layout rules and Modern are unchanged.",
+  "cssCount": 5,
+  "unchangedRawCssFiles": 4,
+  "changedCss": [
+    "1kxqb6a1wzj45.css",
+    "03-7hokmpem1r.css"
+  ],
+  "exactRules": {
+    "before": ".heritage-theme [data-heritage-interaction=quotation] .quotation-screen-only button:disabled{border-color:var(--htg-control);background:var(--htg-paper)}",
+    "after": ".heritage-theme [data-heritage-interaction=quotation] .quotation-screen-only [data-slot=button]:disabled{border-color:var(--htg-color-disabled-border);background:var(--htg-color-disabled);color:var(--htg-color-disabled-foreground);opacity:1}"
+  },
+  "allOtherCssRawEqualAfterRemovingThoseRules": true
+}
