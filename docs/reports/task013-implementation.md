@@ -1,6 +1,6 @@
 # Task 013 — Vercel 部署準備與驗證紀錄
 
-本報告是 2026-11-20 的準備階段交付，依 [Task 013](../task/task013.md)、[AGENTS](../../AGENTS.md) 與 [協作流程](../subagent-workflow.md) 執行。**尚無指定 Vercel Team／Account／Project，未建立或連結外部 Project，未產生 Vercel Preview／Production；不宣稱 Task 013 全部完成。** 本機結果、GitHub PR／main CI、Pages 與 Vercel 分別記錄，遠端後續證據更新同一 PR 說明，不循環提交自身 SHA。
+本報告是 2026-11-20 的準備階段交付，依 [Task 013](../task/task013.md)、[AGENTS](../../AGENTS.md) 與 [協作流程](../03_engineering/subagent-workflow.md) 執行。**尚無指定 Vercel Team／Account／Project，未建立或連結外部 Project，未產生 Vercel Preview／Production；不宣稱 Task 013 全部完成。** 本機結果、GitHub PR／main CI、Pages 與 Vercel 分別記錄，遠端後續證據更新同一 PR 說明，不循環提交自身 SHA。
 
 ## 1. 版本、範圍與授權
 

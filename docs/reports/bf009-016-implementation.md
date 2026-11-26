@@ -12,7 +12,7 @@
 | BF-012 | Demo002／003 重驗仍缺素材，官網改 reference-only，移除示範外連及缺素材預覽、保留出版社署名與原始來源紀錄 | PASS（官網側）；原站素材仍為 Known Issues |
 | BF-013 | 性質分為自製品牌展示、品牌提案、自家服務推廣、第三方模板；模板與 Planned 原生收合，數量由資料導出、錨點及順序保留 | PASS |
 | BF-014 | 六個品牌新增 `/portfolio/showcases/[slug]` 站內介紹，包含背景、對象、設計取捨、已實作範圍、限制、實圖、來源及相關服務 | PASS |
-| BF-015 | 新增 [正式發布前置清單](../publication-readiness.md)，核對 Contact／正式網址／索引與 Privacy 所需資料；保留 noindex、Sitemap 404 與草案隔離 | BLOCKED：正式發布資料及核准尚缺；前置文件已完成 |
+| BF-015 | 新增 [正式發布前置清單](../04_deployment/publication-readiness.md)，核對 Contact／正式網址／索引與 Privacy 所需資料；保留 noindex、Sitemap 404 與草案隔離 | BLOCKED：正式發布資料及核准尚缺；前置文件已完成 |
 | BF-016 | 集中展示設定與 labels、獨立核准 fixture、15 路由 Pages 守門及 `npm run test:smoke`；含反向案例與真實非零退出驗證 | PASS（本機／Pages）；公開網址於部署後另驗 |
 
 Blocked 項目未假裝修復；本次可交付的網站程式與營運／正式發布前置分開判定。外部來源 Repository、DNS、Domain、Pages Source、部署 workflow 與套件版本未修改，沒有 Backend、表單、Analytics 或額外 npm Dependencies。`allowImportingTsExtensions` 用於 noEmit／bundler 模式，讓相同型別資料同時支援 Next.js 與 Node.js 24 原生 `.ts` 匯入。

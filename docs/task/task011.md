@@ -25,7 +25,7 @@
 
 - [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)、[Task 清單](README.md)。
 - [Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)。
-- [歷史 implementation notes](../implementation-notes.md)、[品牌設計系統](../reports/brand-design-system.md)、[首頁實作紀錄](../reports/homepage-implementation.md)、[About 實作紀錄](../reports/about-implementation.md)、[Services 實作紀錄](../reports/services-implementation.md)。
+- [歷史 implementation notes](../98_decisions/implementation-notes.md)、[品牌設計系統](../reports/brand-design-system.md)、[首頁實作紀錄](../reports/homepage-implementation.md)、[About 實作紀錄](../reports/about-implementation.md)、[Services 實作紀錄](../reports/services-implementation.md)。
 - [GitHub Pages 部署指南](../reports/github-pages-deployment.md)、實際 `src/app/`、`src/components/`、`src/config/`、`public/`、`scripts/build-github-pages.mjs`、`.github/workflows/ci.yml`、`package.json`、lockfile 及 `next.config.ts`。
 
 規格優先順序為當次使用者明確指示、已合併且確認的網站架構／Design System、當次任務要求、已確認品牌決策，再參照舊規劃。歷史測試只證明當時版本與範圍，不作為本 Task 新結果。

@@ -35,7 +35,7 @@
 
 ## 3. Reference Documents
 
-閱讀 [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)、[歷史紀錄](../implementation-notes.md)、[品牌系統](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 指南](../reports/github-pages-deployment.md)。已刪的替代原稿只依既有歷史快照追溯，不復原或產生失效相對連結。
+閱讀 [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)、[Task 001](task001.md)、[Task 002](task002.md)、[Task 003](task003.md)、[Task 004](task004.md)、[Task 005](task005.md)、[歷史紀錄](../98_decisions/implementation-notes.md)、[品牌系統](../reports/brand-design-system.md)、[首頁](../reports/homepage-implementation.md)、[About](../reports/about-implementation.md)、[Services](../reports/services-implementation.md) 與 [Pages 指南](../reports/github-pages-deployment.md)。已刪的替代原稿只依既有歷史快照追溯，不復原或產生失效相對連結。
 
 必看 `src/config/contact.ts`（目前空）、`navigation.ts`（contact 入口目前 `/#contact`）、`services.ts`、`site.ts`、Header／Footer／Mobile Navigation、`HomeContactCta`、各頁 CTA、scripts 與 workflow。應用未寫 Analytics／表單，不表示託管供應商不保留存取紀錄，不能寫「完全不蒐集資料」之類法律承諾。
 
@@ -176,7 +176,7 @@ C04 含預算／專案描述，C05 另有 Subject 與 Message；不可把兩份�
 | 新增 | `src/components/sections/contact/` | hero、channels、preparation、process、data-note、cta，Server Components 優先 |
 | 必要修改 | `src/config/navigation.ts`、`src/components/sections/home-contact-cta.tsx` | 正式 Contact 入口及可用的首頁動線，保留原錨點與空狀態 |
 | 必要擴充 | `scripts/build-github-pages.mjs` | Contact 產物／Metadata／Base Path 與既有保護 |
-| 正式開發文件 | `README.md`、`AGENTS.md`、`docs/implementation-notes.md` | 實作時才更新／追加，不改寫歷史 |
+| 正式開發文件 | `README.md`、`AGENTS.md`、`docs/98_decisions/implementation-notes.md` | 實作時才更新／追加，不改寫歷史 |
 | 未來新增 | `docs/reports/task008-implementation.md`、`docs/screenshots/task008-*.png` | 真實報告及所選模式的證據 |
 | 額外授權後才評估 | Contact form 元件／schema／外部接收整合 | 先修訂範圍與契約，不自動生成、不建立 Route Handler 或 API |
 

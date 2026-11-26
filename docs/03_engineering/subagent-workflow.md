@@ -4,7 +4,7 @@
 
 ## 可追溯回顧
 
-依據：[Task 008 實作報告](reports/task008-implementation.md) 與 [PR #12](https://github.com/xk2022/xk-website/pull/12)。以下記錄已發生的問題，不推算個別 agent 工時或保證後續完成時限。
+依據：[Task 008 實作報告](../reports/task008-implementation.md) 與 [PR #12](https://github.com/xk2022/xk-website/pull/12)。以下記錄已發生的問題，不推算個別 agent 工時或保證後續完成時限。
 
 | 實際經驗 | 下次調整 |
 | --- | --- |
@@ -51,7 +51,7 @@ Root 先完成下列事項，再分派可平行工作：
 
 ### 1. 先驗證執行工具
 
-使用 [run-with-evidence.py](../scripts/run-with-evidence.py) 保存 log 與真實程序結果，例如：
+使用 [run-with-evidence.py](../../scripts/run-with-evidence.py) 保存 log 與真實程序結果，例如：
 
 ```sh
 python3 scripts/run-with-evidence.py \

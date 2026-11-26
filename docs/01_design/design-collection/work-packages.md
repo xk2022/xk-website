@@ -34,10 +34,10 @@ DC-004／DC-005 可平行設計；共用來源、registry、layout 及 fixtures 
 - 前置：最新公司及 Website 來源核對、現有 16 頁與 Quotation 已合併。
 - 輸入：本次使用者要求、根 AGENTS／README／workflow、固定版本公司文件、既有 root layout／SEO／部署／資料與 Next.js 文件。
 - 交付：三份規範、任務索引、來源／差異／風險、DC-001～007 分工、文件驗證報告；更新專案入口。
-- 限定檔案：`docs/design-collection/`、`docs/task/dc001.md`、`docs/reports/dc001-architecture.md`／`docs/reports/dc001-verification.json`、README／AGENTS／task index／implementation notes 的必要文件段落。
+- 限定檔案：`docs/01_design/design-collection/`、`docs/task/dc001.md`、`docs/reports/dc001-architecture.md`／`docs/reports/dc001-verification.json`、README／AGENTS／task index／implementation notes 的必要文件段落。
 - 排除：所有 runtime／public 資產／package／Next 設定／workflow 變更；不新增路由、不改正式首頁、不部署、不變更 DNS。
 - 驗收：路由與 49 頁目標算式明確；Modern 保留、三 DS 獨立、共用資料、canonical／OG 例外、static params、404、切換／PII、CSS／print 風險可執行；所有提案與核准資料有界線；Markdown／連結／格式／Diff 通過。PR CI 與 artifact 確認純文件沒有污染網站資源。
-- 實際狀態：依 [DC-001 驗證紀錄](../reports/dc001-architecture.md)；文件完成不表示其他六包完成。
+- 實際狀態：依 [DC-001 驗證紀錄](../../reports/dc001-architecture.md)；文件完成不表示其他六包完成。
 
 ## 4. DC-002 — 共用內容、路由與互動契約
 

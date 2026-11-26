@@ -44,7 +44,7 @@
 
 ## 操作與重現
 
-見 [自訂網域部署指南](../custom-domain-deployment.md)。本輪來源與原始證據封存在 `custom-domain-assets-artifacts/`，大型 JSON／log／工具無損壓縮；命令與 SHA 由 manifest 對應。
+見 [自訂網域部署指南](../04_deployment/custom-domain-deployment.md)。本輪來源與原始證據封存在 `custom-domain-assets-artifacts/`，大型 JSON／log／工具無損壓縮；命令與 SHA 由 manifest 對應。
 
 
 ## 版本與實際指令

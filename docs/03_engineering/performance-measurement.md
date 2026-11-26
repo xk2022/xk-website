@@ -1,6 +1,6 @@
 # 效能量測與重驗
 
-依 [Task 011](task/task011.md) 執行。數據、指令、原始 runs 與受測版本見 [本次報告](reports/task011-implementation.md)；本指南描述重現條件，不是跨裝置效能保證。
+依 [Task 011](../task/task011.md) 執行。數據、指令、原始 runs 與受測版本見 [本次報告](../reports/task011-implementation.md)；本指南描述重現條件，不是跨裝置效能保證。
 
 ## 準備與版本
 

@@ -15,7 +15,7 @@
 
 本規格由可確認的 [英文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md) 與 [繁體中文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.zh-TW.md) 整理。兩份原稿已自最新 main 刪除，可由上述固定版本的歷史快照追溯；`task001-implementation-notes.md` 是任務需求，不能因檔名誤認為實際驗收報告。
 
-本輪只統一文件骨架，**不重新執行 Task 001、不重新初始化網站、不改程式碼或歷史結果**。以下程序、驗收與 Checklist 供正式執行使用，初始狀態均為 PENDING。原 Task 001 實際結果仍以 [歷史實作紀錄](../implementation-notes.md) 為準，不能當作本輪新驗收。
+本輪只統一文件骨架，**不重新執行 Task 001、不重新初始化網站、不改程式碼或歷史結果**。以下程序、驗收與 Checklist 供正式執行使用，初始狀態均為 PENDING。原 Task 001 實際結果仍以 [歷史實作紀錄](../98_decisions/implementation-notes.md) 為準，不能當作本輪新驗收。
 
 ## 2. Repository & Prerequisites
 
@@ -37,7 +37,7 @@
 
 ## 3. Reference Documents
 
-先讀 [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)、上述兩份 Task 001 原稿及 [歷史實作紀錄](../implementation-notes.md)。已安裝 Next.js 的版本敏感行為查該版本 `node_modules/next/dist/docs/`，不照舊版慣例改設定。
+先讀 [AGENTS.md](../../AGENTS.md)、[README.md](../../README.md)、上述兩份 Task 001 原稿及 [歷史實作紀錄](../98_decisions/implementation-notes.md)。已安裝 Next.js 的版本敏感行為查該版本 `node_modules/next/dist/docs/`，不照舊版慣例改設定。
 
 文件標準路徑為 `doc/01_business-plan/week-02/`。初次已找到全部十份文件，短檔名需求對應如下；正式執行須重新核對 Tree、Commit、Blob SHA 與內容。
 
@@ -269,7 +269,7 @@ xk-website/
 
 ## 12. Test Report & Evidence
 
-正式執行後必須產出獨立 `docs/bootstrap-implementation.md`。這是未來報告路徑，目前不存在，本輪不新增也不建立假連結。Task 001 既有結果仍保留在 [歷史實作紀錄](../implementation-notes.md)，不回寫成新驗收。
+正式執行後必須產出獨立 `docs/bootstrap-implementation.md`。這是未來報告路徑，目前不存在，本輪不新增也不建立假連結。Task 001 既有結果仍保留在 [歷史實作紀錄](../98_decisions/implementation-notes.md)，不回寫成新驗收。
 
 報告至少包含 Repository／Git 狀態、找到與缺少文件、來源版本／Blob、衝突、真正建立結構、Next.js／React 版本、TS／Tailwind／shadcn 設定、依賴／警告、Base SHA／Branch 與未提交變更。
 

@@ -6,7 +6,7 @@
 
 - [Portfolio 策略](https://github.com/xk2022/xplore-kaleidoscope/blob/main/doc/01_business-plan/week-04/01_portfolio-strategy_XK%20%E6%8A%80%E8%A1%93%E4%BD%9C%E5%93%81%E5%B1%95%E7%A4%BA%E7%AD%96%E7%95%A5.md)：本次唯讀 latest main，Blob `98e69f79e65f3a599e32859cd574b437f6b86193`；依 W01 一頁式網站、Demo 與 Client 分別標示、實際畫面及可追溯來源原則實作。長期四大技術分類與六種網站類型仍屬來源規劃，本次三個瀏覽區塊是展示性質分組，不取代其長期分類。
 - 使用者指定八個公開網站；精確 URL、擷取時間、實際標題、頁尾聲明與每張圖片 SHA256 見 [素材紀錄](website-showcases-artifacts/asset-manifest.json)。四品牌來源均有自製展示／作品集標示，部分詢問操作明示模擬，沒有據此宣稱客戶委託、實際收件或商業成效。
-- 沿用 [AGENTS](../../AGENTS.md)、[Subagent 流程](../subagent-workflow.md)、既有 Portfolio／SEO／Pages 契約。閱讀 installed Next.js 16.4.6 Image 與 Static Exports 指南，使用 Server Components、明確圖片尺寸與靜態預覽。
+- 沿用 [AGENTS](../../AGENTS.md)、[Subagent 流程](../03_engineering/subagent-workflow.md)、既有 Portfolio／SEO／Pages 契約。閱讀 installed Next.js 16.4.6 Image 與 Static Exports 指南，使用 Server Components、明確圖片尺寸與靜態預覽。
 
 ## 實作內容
 

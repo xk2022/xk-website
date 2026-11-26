@@ -40,7 +40,7 @@ Metadata 精確依規格：Title「解決方案 | Xplore Kaleidoscope」、指�
 | 修改 | src/config/navigation.ts：共用導覽／plannedRoutes；src/components/sections/home-solutions.tsx：保留原三列、追加單一入口 |
 | 修改 | scripts/build-github-pages.mjs：Solutions、四頁 Metadata 與 HTML／CSS 資源驗證；原斷言保留 |
 | 修改 | README.md、AGENTS.md：Task 006 操作／標準及修正既有失效 canonical 入口 |
-| 追加 | docs/implementation-notes.md：保留歷史前綴，追加此次實際紀錄 |
+| 追加 | docs/98_decisions/implementation-notes.md：保留歷史前綴，追加此次實際紀錄 |
 | 新增 | docs/reports/task006-implementation.md、task006-verification.json、docs/screenshots/task006-solutions-*.png 七份 |
 
 以上為實際變更；未修改 package.json／lockfile／Next 設定／workflow／public 原素材或其他 Repository，未提交 .next／out／node_modules／測試暫存工具或機密。

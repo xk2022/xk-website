@@ -26,7 +26,7 @@
 - `src/components/sections/portfolio/website-showcase-gallery.tsx`：涵蓋服務推廣與準備中狀態的介紹。
 - `scripts/build-github-pages.mjs`：六品牌順序、十筆總資料、準備中空連結／空圖片與實際輸出守門檢查。
 - `public/images/showcases/campaign-website-design.webp`：實際首屏，59,484 bytes。
-- `AGENTS.md`、`README.md`、`docs/implementation-notes.md`：目前規則及紀錄。
+- `AGENTS.md`、`README.md`、`docs/98_decisions/implementation-notes.md`：目前規則及紀錄。
 - `src/app/globals.css`：只新增本報告及證據的掃描排除，避免文件污染 Tailwind。
 - 本報告、`brand-showcase-order-artifacts/` 與三張實際驗收截圖。
 

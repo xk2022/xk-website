@@ -247,7 +247,7 @@ B01 原始紀錄另有 **506 個 HEAD 完成事件**，全數保留，依精確�
 
 - `AGENTS.md`
 - `README.md`
-- `docs/implementation-notes.md`
+- `docs/98_decisions/implementation-notes.md`
 - `docs/reports/task008-evidence.json.gz`
 - `docs/reports/task008-implementation.md`
 - `docs/reports/task008-verification.json`

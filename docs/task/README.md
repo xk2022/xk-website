@@ -153,7 +153,7 @@ Task 001–005 既有獨立或歷史報告保留，不重新命名或覆寫：
 
 | Task | 現有紀錄 |
 | --- | --- |
-| 001 | [implementation notes](../implementation-notes.md) 的 Bootstrap 歷史；若重新執行，依 Task 001 的獨立報告要求 |
+| 001 | [implementation notes](../98_decisions/implementation-notes.md) 的 Bootstrap 歷史；若重新執行，依 Task 001 的獨立報告要求 |
 | 002 | [品牌設計系統](../reports/brand-design-system.md) |
 | 003 | [首頁實作](../reports/homepage-implementation.md) |
 | 004 | [About 實作](../reports/about-implementation.md) |
@@ -263,7 +263,7 @@ docs(task): add XK website task specifications 006-014
 
 ## Task 010 執行紀錄入口
 
-2026-11-19 的 Task 010 以已合併 Privacy 技術保護的 `main@b423b28` 為基準。工作範圍是 SEO 保護模式：九個公開頁與受控草案的 Metadata／Twitter、最小 WebSite、robots 及 Sitemap 不發布規則；保留全站 noindex／nofollow。上方歷史表格不回寫。正式索引、公開 Sitemap、GSC 與 DNS／Vercel 各依其獨立核准及驗收，不能因本次技術合併視為完成。操作規則見 [SEO 操作指南](../seo-operations.md)。
+2026-11-19 的 Task 010 以已合併 Privacy 技術保護的 `main@b423b28` 為基準。工作範圍是 SEO 保護模式：九個公開頁與受控草案的 Metadata／Twitter、最小 WebSite、robots 及 Sitemap 不發布規則；保留全站 noindex／nofollow。上方歷史表格不回寫。正式索引、公開 Sitemap、GSC 與 DNS／Vercel 各依其獨立核准及驗收，不能因本次技術合併視為完成。操作規則見 [SEO 操作指南](../04_deployment/seo-operations.md)。
 
 來源、受測版本、逐頁清冊及實際結果：[Task 010 實作與驗證](../reports/task010-implementation.md)。
 
@@ -271,7 +271,7 @@ docs(task): add XK website task specifications 006-014
 
 2026-11-19 的 Task 011 以已合併 SEO 保護模式的 `main@633d135` 為基準。依可重現 baseline 處理 Noto 可變字重的重複 CSS，保留品牌、內容、功能與一般／Pages 兩種建置。實驗室 LCP／CLS、TBT、受控互動與 field CWV 分開判讀；缺少 field／真機證據不冒作通過。上方原規格撰寫紀錄保留原時點。
 
-來源、完整 runs、實際驗收及限制見 [Task 011 實作與驗證](../reports/task011-implementation.md)；後續重驗方式見 [效能量測指南](../performance-measurement.md)。CI、使用者授權合併、main CI／部署與公開網址結果各以同 PR 的實際事件確認。
+來源、完整 runs、實際驗收及限制見 [Task 011 實作與驗證](../reports/task011-implementation.md)；後續重驗方式見 [效能量測指南](../03_engineering/performance-measurement.md)。CI、使用者授權合併、main CI／部署與公開網址結果各以同 PR 的實際事件確認。
 
 ## Task 012 執行紀錄入口
 

@@ -6,9 +6,9 @@
 
 網站 main `8d7d97d33e4b6ee45f32cc75953c0e008c9951d7`，初始工作樹乾淨；公司最新 main `5be640ab11811b24706101ea13db73185e9ce4d8`。根 AGENTS／README／協作流程、現有資料／Layout／SEO／Next／workflow 及已安裝 Next.js 16.4.6 相關文件已核對。公司五份品牌文件補讀、四份工程／官網文件核對；同版本其餘已讀來源沿用固定紀錄，沒有聲稱重新下載全部公司文件。
 
-公司根 AGENTS 缺檔、三系列未有既定正式定義、既有 Modern 與公司正式色票不同等限制，記於 [架構來源及差異](../design-collection/architecture.md#1-基準與來源)。沒有修改公司 Repository，沒有複製公司全文或內部價格資料。
+公司根 AGENTS 缺檔、三系列未有既定正式定義、既有 Modern 與公司正式色票不同等限制，記於 [架構來源及差異](../01_design/design-collection/architecture.md#1-基準與來源)。沒有修改公司 Repository，沒有複製公司全文或內部價格資料。
 
-新增 [DC-001 任務](../task/dc001.md)、[架構規格](../design-collection/architecture.md)、[三套 Design System 提案](../design-collection/design-systems.md)、[七個工作包](../design-collection/work-packages.md)；更新 README／AGENTS／任務索引／implementation notes 的必要入口。Modern 原 16 頁保留、完整目標 49 頁、單一技術 root／獨立 frame、共用資料及 Contact／Quotation 核心、Canonical／OG 分離、風格切換／PII／CSS／print 風險與驗收均明定。
+新增 [DC-001 任務](../task/dc001.md)、[架構規格](../01_design/design-collection/architecture.md)、[三套 Design System 提案](../01_design/design-collection/design-systems.md)、[七個工作包](../01_design/design-collection/work-packages.md)；更新 README／AGENTS／任務索引／implementation notes 的必要入口。Modern 原 16 頁保留、完整目標 49 頁、單一技術 root／獨立 frame、共用資料及 Contact／Quotation 核心、Canonical／OG 分離、風格切換／PII／CSS／print 風險與驗收均明定。
 
 ## 實際檢查
 

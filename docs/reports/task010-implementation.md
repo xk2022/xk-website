@@ -6,7 +6,7 @@
 
 - 唯一可寫 Repository：`xk2022/xk-website`。fresh fetch 後 Base 為 `b423b28fc98d82fe2269c8e486c9da22a112602b`，初始 main 工作目錄乾淨；Task 009 PR #14 的草案技術已合併，不等於正式政策核准。
 - Feature Branch：`feature/website-seo`。使用者明確授權本次開發、驗證文件、Push、PR、CI 成功後合併 main 及確認部署；沒有開放搜尋索引、GSC、DNS、Analytics 或法律正文核准授權。
-- 已完整閱讀 [Task 010](../task/task010.md)、AGENTS、README 與 [協作流程](../subagent-workflow.md)，核對任務索引、implementation notes、Task 001–005、Design System、首頁／About／Services／Pages 指南及已合併後續頁面。相同 Blob 的先前全文閱讀及本輪重核／相關章節重讀有 coverage 紀錄；不沿用歷史測試 PASS。
+- 已完整閱讀 [Task 010](../task/task010.md)、AGENTS、README 與 [協作流程](../03_engineering/subagent-workflow.md)，核對任務索引、implementation notes、Task 001–005、Design System、首頁／About／Services／Pages 指南及已合併後續頁面。相同 Blob 的先前全文閱讀及本輪重核／相關章節重讀有 coverage 紀錄；不沿用歷史測試 PASS。
 - 文件 Repository `xk2022/xplore-kaleidoscope` 僅讀。fresh API 於 `2026-11-19T06:28:21.823Z` 確認 main 仍為 `95ef1275a46ace76e11f668178ca881087483398`，Tree `8bba493a05911a11a7e29d7d01650e9d0e00f3e7`，51／51 Blob bytes 相符。
 
 | 來源 ID | 採用與排除界線 | 固定版本 Git Blob |
@@ -41,7 +41,7 @@ Pages validator 新增逐頁 Metadata／唯一 Canonical／OG／Twitter／安全
 
 九個公開內容頁是未來 release 可審查候選，目前仍全部 noindex／nofollow。Privacy 為 draft、不列正式候選；planned 服務詳頁、`/en`、舊 `/privacy-policy`、未知 slug、dev、404、query、fragment、Preview／localhost／Pages 複本不收錄。`robots.txt` 是機器端點，不當作內容頁候選。
 
-正式 Sitemap 生成規則與 Owner 待確認清單完整記於 [SEO 操作指南](../seo-operations.md)：只取獲准 release、已合併／內容核准、HTTP 200／Canonical 正確的路由，XML 正確編碼、唯一絕對 HTTPS 品牌 URL；未知 lastmod 省略，不用 build 日期。正式生成、索引修改、Validator、CI 與公開驗收需在同一後續 release PR 明確審查。
+正式 Sitemap 生成規則與 Owner 待確認清單完整記於 [SEO 操作指南](../04_deployment/seo-operations.md)：只取獲准 release、已合併／內容核准、HTTP 200／Canonical 正確的路由，XML 正確編碼、唯一絕對 HTTPS 品牌 URL；未知 lastmod 省略，不用 build 日期。正式生成、索引修改、Validator、CI 與公開驗收需在同一後續 release PR 明確審查。
 
 實際確認人是品牌／站點 Owner（本會話使用者），法律審閱者與 Task 013／014 實際負責人尚待其指定。本輪日期為 2026-11-19，期限使用「新增欄位前／正式 release 前／GSC 驗證提交前」里程碑，不編造姓名或日曆截止日。分享圖／handle 未核准時省略，法定資料未齊只輸出 WebSite；正式 origin／HTTPS／redirect／索引範圍與授權未齊，正式索引 gate BLOCKED，保護模式持續。
 
@@ -203,8 +203,8 @@ Root 實際以 view_image 檢視本輪 Pages 首頁五種寬度的完整 QA 暫�
 | 修改 | `README.md` | 目前進度、保護模式與驗收入口 |
 | 修改 | `AGENTS.md` | Task 010 操作與驗收護欄 |
 | 修改 | `docs/task/README.md` | 追加當前紀錄入口，保留歷史 |
-| 修改 | `docs/implementation-notes.md` | 追加來源、修正、實測與範圍 |
-| 新增 | `docs/seo-operations.md` | 候選／排除、生成規則、release／GSC 權責與 fallback |
+| 修改 | `docs/98_decisions/implementation-notes.md` | 追加來源、修正、實測與範圍 |
+| 新增 | `docs/04_deployment/seo-operations.md` | 候選／排除、生成規則、release／GSC 權責與 fallback |
 | 新增 | `docs/reports/task010-implementation.md` | 本報告與 exact Metadata／狀態矩陣 |
 | 新增 | `docs/reports/task010-verification.json` | 版本／退出碼／來源／機器資料與證據索引 |
 | 新增 | `docs/reports/task010-evidence.json.gz` | 唯一文字證據包，含真實 HTTP HTML／head／robots |

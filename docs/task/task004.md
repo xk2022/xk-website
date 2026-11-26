@@ -49,7 +49,7 @@
 - [README.md](../../README.md)、[AGENTS.md](../../AGENTS.md)。
 - [Task 001 統一規格](task001.md) 與原始需求／歷史替代文件 [task001-implementation-notes.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md)。
 - [Task 002](task002.md)、[Task 002 繁體中文版](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)、[Task 003](task003.md) 的實際規格、實作及紀錄。
-- [歷史實作紀錄](../implementation-notes.md)、[品牌設計系統](../reports/brand-design-system.md)。
+- [歷史實作紀錄](../98_decisions/implementation-notes.md)、[品牌設計系統](../reports/brand-design-system.md)。
 - [首頁實作紀錄](../reports/homepage-implementation.md)、[About Us 獨立實作與驗收報告](../reports/about-implementation.md)。
 - [GitHub Pages 部署指南](../reports/github-pages-deployment.md)。
 
@@ -353,7 +353,7 @@ src/
 | `src/components/sections/section-heading.tsx` | 僅必要、向後相容的 `titleLang` 擴充，不破壞首頁呼叫 |
 | `scripts/build-github-pages.mjs` | 必要的 About 靜態產物、Metadata、資源與 Base Path 驗證 |
 | `src/app/icon.svg`／既有 Logo 資產 | 沿用提供素材；若修正實際圖示載入問題，只作必要整合並保留原稿 |
-| `README.md`、`AGENTS.md`、`docs/implementation-notes.md` | 追加實際任務與操作紀錄，保留前置任務歷史 |
+| `README.md`、`AGENTS.md`、`docs/98_decisions/implementation-notes.md` | 追加實際任務與操作紀錄，保留前置任務歷史 |
 | `docs/about-implementation.md` | 本 Task 獨立實作與測試報告 |
 | `docs/screenshots/task004-about-*.png` | 本次實際網站截圖 |
 

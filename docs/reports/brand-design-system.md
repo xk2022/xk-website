@@ -255,7 +255,7 @@ Git 分支為 `feature/website-brand-design-system`；以 Conventional Commit �
 
 - `AGENTS.md`
 - `README.md`
-- `docs/implementation-notes.md`
+- `docs/98_decisions/implementation-notes.md`
 - `src/app/globals.css`
 - `src/components/layout/container.tsx`
 - `src/components/layout/site-footer.tsx`

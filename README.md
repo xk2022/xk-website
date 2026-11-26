@@ -1,18 +1,20 @@
 # xk-website
 
+文件導覽：[官方網站文件總索引](docs/README.md)。
+
 網站：[https://www.xplorekaleidoscope.com/](https://www.xplorekaleidoscope.com/)
 
 官方網站，獨立交給 Codex 開發。
 
 開發里程碑與完整規格請見 [Task 001–014 任務索引](docs/task/README.md)。Task 001–008 的技術基礎、Design System、首頁、About、Services、Solutions、Portfolio 與 Contact 已合併。Task 009 提供 Privacy 草案與發布保護；Task 010 提供 SEO 保護模式；Task 011 提供受控效能量測與字體 CSS 最佳化。正式法律政策、索引 release、GSC、field CWV、Accessibility、Vercel 與 Domain 仍依各自前置及獨立驗收，不因技術區塊存在而視為完成。
 
-開發協作與驗收請先讀 [Subagent 作業紀錄與執行流程](docs/subagent-workflow.md)，並依 [AGENTS.md](AGENTS.md) 與當次 Task 規格執行。流程包含分工責任、提早檢查完整 Diff、持久化退出碼及依變更影響決定重驗範圍。
+開發協作與驗收請先讀 [Subagent 作業紀錄與執行流程](docs/03_engineering/subagent-workflow.md)，並依 [AGENTS.md](AGENTS.md) 與當次 Task 規格執行。流程包含分工責任、提早檢查完整 Diff、持久化退出碼及依變更影響決定重驗範圍。
 
 ## XK Design Collection（架構審閱中）
 
 DC-001 規劃 Modern／Heritage／Luxury 三套獨立呈現，共用品牌、服務、作品與試算核心。Modern 的原 16 個公開頁面保留；新系列的路由、版型與 tokens 尚未實作。本輪只交付架構及設計文件，不改正式首頁、不部署、不變更 DNS。
 
-請從 [DC-001 任務](docs/task/dc001.md) 閱讀 [架構](docs/design-collection/architecture.md)、[三套 Design System 提案](docs/design-collection/design-systems.md)、[DC-001～DC-007 工作包](docs/design-collection/work-packages.md) 與 [文件驗證紀錄](docs/reports/dc001-architecture.md)。新系列的完整頁面範圍、色彩／版型及品牌適用界線等待 PR 審閱，不能把規格視為已上線功能。
+請從 [DC-001 任務](docs/task/dc001.md) 閱讀 [架構](docs/01_design/design-collection/architecture.md)、[三套 Design System 提案](docs/01_design/design-collection/design-systems.md)、[DC-001～DC-007 工作包](docs/01_design/design-collection/work-packages.md) 與 [文件驗證紀錄](docs/reports/dc001-architecture.md)。新系列的完整頁面範圍、色彩／版型及品牌適用界線等待 PR 審閱，不能把規格視為已上線功能。
 
 ## 作品展示
 
@@ -22,9 +24,9 @@ DC-001 規劃 Modern／Heritage／Luxury 三套獨立呈現，共用品牌、服
 
 ## 持續驗證與正式發布
 
-日常網站 smoke 使用方式見 [驗證指南](docs/website-smoke.md)；正式聯絡、索引、政策與網址的資料缺口見 [正式發布前置清單](docs/publication-readiness.md)。BF-009～BF-016 的實作與限制見 [本輪報告](docs/reports/bf009-016-implementation.md)。
+日常網站 smoke 使用方式見 [驗證指南](docs/03_engineering/website-smoke.md)；正式聯絡、索引、政策與網址的資料缺口見 [正式發布前置清單](docs/04_deployment/publication-readiness.md)。BF-009～BF-016 的實作與限制見 [本輪報告](docs/reports/bf009-016-implementation.md)。
 
-首頁與方案詢價入口使用品牌負責人提供的 `system.xk2022@gmail.com`，開啟郵件程式並帶入需求範本，由訪客自行確認寄出。Home／Services 提供三個方案方向與個別報價評估；展示案例連到已驗證的各案子網域。現況見 [Email、方案與展示連結報告](docs/reports/contact-plans-usecase.md)，人工回覆安排見 [聯絡與回覆流程](docs/contact-response-workflow.md)；未提供管道時的歷史驗收保留於 [前輪報告](docs/reports/homepage-inquiry-cta.md)。
+首頁與方案詢價入口使用品牌負責人提供的 `system.xk2022@gmail.com`，開啟郵件程式並帶入需求範本，由訪客自行確認寄出。Home／Services 提供三個方案方向與個別報價評估；展示案例連到已驗證的各案子網域。現況見 [Email、方案與展示連結報告](docs/reports/contact-plans-usecase.md)，人工回覆安排見 [聯絡與回覆流程](docs/02_operations/contact-response-workflow.md)；未提供管道時的歷史驗收保留於 [前輪報告](docs/reports/homepage-inquiry-cta.md)。
 
 ## Contact 需求整理表單
 
@@ -44,7 +46,7 @@ DC-001 規劃 Modern／Heritage／Luxury 三套獨立呈現，共用品牌、服
 
 使用者於 Task 003 選擇 **GitHub Actions → GitHub Pages 靜態網站**。正式模式仍保留一般 Next.js 建置，Vercel 相容設定使用 Next.js preset、Repository 根目錄 `.`、production branch `main`；實際連結及發布狀態以 Task 013 報告與當次部署證據為準，不需要在 Repository 新增 Vercel Secrets。
 
-Pages 建置使用 `npm run build:pages`，輸出 `out/`，使用自訂網域根路徑（`basePath: ""`、`assetPrefix: ""`）。Pull Request 執行品質檢查與靜態建置，只有 `main` 推送或手動選擇 `main` 時才進入部署工作，不會自動合併 PR。目前設定與操作見 [自訂網域部署指南](docs/custom-domain-deployment.md)，原 project-path 結果保留於 [歷史部署報告](docs/reports/github-pages-deployment.md)。不變更 DNS 或品牌正式網域設定。
+Pages 建置使用 `npm run build:pages`，輸出 `out/`，使用自訂網域根路徑（`basePath: ""`、`assetPrefix: ""`）。Pull Request 執行品質檢查與靜態建置，只有 `main` 推送或手動選擇 `main` 時才進入部署工作，不會自動合併 PR。目前設定與操作見 [自訂網域部署指南](docs/04_deployment/custom-domain-deployment.md)，原 project-path 結果保留於 [歷史部署報告](docs/reports/github-pages-deployment.md)。不變更 DNS 或品牌正式網域設定。
 
 ## 本機開發與 Task 002 驗收
 
@@ -72,7 +74,7 @@ XK_DESIGN_SYSTEM_PREVIEW=1 npm run start
 
 此頁僅供開發驗收，未列入正式導覽，並設為 `noindex, nofollow`。Task 002 僅建立品牌設計系統，沿用已提供的暫定 Logo，沒有提前開發完整首頁或 Backend。
 
-規格：[Task 001](docs/task/task001.md)、[Task 002](docs/task/task002.md)。使用方式與設計決策：[品牌設計系統](docs/reports/brand-design-system.md)；歷史紀錄：[implementation notes](docs/implementation-notes.md)。
+規格：[Task 001](docs/task/task001.md)、[Task 002](docs/task/task002.md)。使用方式與設計決策：[品牌設計系統](docs/reports/brand-design-system.md)；歷史紀錄：[implementation notes](docs/98_decisions/implementation-notes.md)。
 
 ## Task 003 企業首頁
 
@@ -174,7 +176,7 @@ XK_PRIVACY_PREVIEW=1 npm run start -- --hostname 127.0.0.1 --port 3062
 
 品質指令沿用 `npm ci`、`npx tsc --noEmit`、`npm run lint`、`npm run build`、`npm run build:pages`。普通與 Pages 建置／驗收分開；沒有新的依賴、Backend、Analytics、GSC token 或索引環境開關。Privacy 的公開 404／Pages 排除及 Contact 無收件狀態保留。
 
-規格：[Task 010](docs/task/task010.md)。候選／排除清冊、robots 範圍、正式 Sitemap 生成規則、Owner 權責及後續 release／Search Console 待辦：[SEO 操作指南](docs/seo-operations.md)。合併技術保護模式不代表正式索引、GSC 提交或品牌網域設定已完成。
+規格：[Task 010](docs/task/task010.md)。候選／排除清冊、robots 範圍、正式 Sitemap 生成規則、Owner 權責及後續 release／Search Console 待辦：[SEO 操作指南](docs/04_deployment/seo-operations.md)。合併技術保護模式不代表正式索引、GSC 提交或品牌網域設定已完成。
 
 本次來源、逐頁 exact Metadata、實測結果與階段界線見 [Task 010 實作與驗證](docs/reports/task010-implementation.md)。
 
@@ -184,7 +186,7 @@ XK_PRIVACY_PREVIEW=1 npm run start -- --hostname 127.0.0.1 --port 3062
 
 Pages 是主要受控量測模式；九個公開頁分別進行手機／桌面冷載入，Home 與最大內容風險頁補暖快取及實際互動，一般 Next.js production 另測代表頁。固定節流、至少三次 runs、中位數／範圍、Lighthouse JSON／HTML 與原始 trace 分開保存；本機模型不等於 CDN 或真機，沒有 field 資料時不能宣稱 CWV p75 通過。
 
-重現條件、Cache 與驗收界線見 [效能量測指南](docs/performance-measurement.md)，實際基準／after、測試結果與限制見 [Task 011 實作與驗證](docs/reports/task011-implementation.md)。沿用五個品質指令及 GitHub Pages 工作流程；Metadata／noindex／nofollow、Privacy 草案保護與 Contact 無收件狀態不變。
+重現條件、Cache 與驗收界線見 [效能量測指南](docs/03_engineering/performance-measurement.md)，實際基準／after、測試結果與限制見 [Task 011 實作與驗證](docs/reports/task011-implementation.md)。沿用五個品質指令及 GitHub Pages 工作流程；Metadata／noindex／nofollow、Privacy 草案保護與 Contact 無收件狀態不變。
 
 Task 011 另以明確的 Tailwind 掃描排除規則保護本次驗收資料／報告；CI artifact 曾揭露文件文字增加無用 utilities，已修正並以完整產物 bridge 與最終來源補驗確認受測 runtime 保持一致，詳細版本界線見實作報告。
 

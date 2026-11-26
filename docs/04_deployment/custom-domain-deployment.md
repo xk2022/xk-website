@@ -40,4 +40,4 @@ Base Path 會編入 HTML、CSS 與 JavaScript，修改 Pages 網域設定後須�
 
 若未來改回 GitHub project URL，需另以 PR 同步部署設定、圖片／robots／Metadata、workflow 契約與驗收，再重新 build；不能靠環境變數覆寫本輪批准的根路徑。DNS、憑證與 Pages Source 由平台設定管理，本次程式修正不修改它們。
 
-原里程碑與舊 project-path 部署結果保留在歷史報告；本輪實測及限制見 [資源路徑修正報告](reports/custom-domain-assets-2026-11-23.md)。
+原里程碑與舊 project-path 部署結果保留在歷史報告；本輪實測及限制見 [資源路徑修正報告](../reports/custom-domain-assets-2026-11-23.md)。
