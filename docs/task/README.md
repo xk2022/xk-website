@@ -281,3 +281,7 @@ docs(task): add XK website task specifications 006-014
 ## Bugfix 001–008 優化文件
 
 [bugfix001](bugfix001.md)、[bugfix002](bugfix002.md)、[bugfix003](bugfix003.md)、[bugfix004](bugfix004.md)、[bugfix005](bugfix005.md)、[bugfix006](bugfix006.md)、[bugfix007](bugfix007.md)、[bugfix008](bugfix008.md) 是本次使用者指定的八份改善輸入；原始內容保留，不把重複文字當成八套獨立功能。首頁價值主張／服務卡／技術分類／方案導覽與 Logo 建議的採用及後續界線見 [實作報告](../reports/bugfix001-008-implementation.md)。
+
+## XK Design Collection V1.0（提案規劃）
+
+2026-11-25～26 的官網評估、三風格設計討論、架構方向與 DC-001～DC-007 路線圖見 [討論紀錄與設計決策](../design-collection-v1.md)。各 DC 工作包仍待核准與實作；本索引連結不代表功能完成、部署或正式開放索引。
