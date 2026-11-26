@@ -30,15 +30,17 @@ Modern 目前保留 16 個公開頁面。展示及規劃不等於客戶交付；
 
 | 系列 | 入口方向 | 狀態 |
 | --- | --- | --- |
-| Modern 現代專業 | 現有根路徑 | 已運作；相容重構待 DC-002／003 |
-| Heritage 懷舊復古 | `/heritage/` | 設計提案，尚未實作 |
-| Luxury 奢華精品 | `/luxury/` | 設計提案，尚未實作 |
+| Modern 現代專業 | 現有根路徑 | 原 16 頁已運作；共用核心見 DC-002，版面整合待 DC-003 |
+| Heritage 懷舊復古 | `/design-collection/heritage/`（規劃） | 設計提案，尚未實作 |
+| Luxury 奢華精品 | `/design-collection/luxury/`（規劃） | 設計提案，尚未實作 |
 
 架構規格已合併（[PR #30](https://github.com/xk2022/xk-website/pull/30)），不代表新風格已核准上線。完整目標為三系列各 16 頁及 1 個 Gallery，共 49 頁；子網域及正式索引須另行授權。
 
 - [架構規格](docs/01_design/design-collection/architecture.md)
 - [三套 Design System](docs/01_design/design-collection/design-systems.md)
 - [DC-001～007 工作包](docs/01_design/design-collection/work-packages.md)
+
+DC-002 在 `feature/design-collection-core` 建立共用內容 DTO、路由／Metadata、Contact／Quotation 與 token 契約，尚未整合 UI。Gallery 與新系列仍 planned，沒有新公開網址。見 [DC-002 任務](docs/task/dc002.md)、[核心 API／限制](docs/03_engineering/design-collection-core.md) 及 [實作驗證](docs/reports/dc002-implementation.md)。版型、palette、portal／print 隔離與切換後個資重設須後續整合實測。
 
 ## 3. 技術架構
 
@@ -90,6 +92,7 @@ npm run build:pages
 一般 production 模式在完成 `npm run build` 後以 `npm run start` 驗收，停止服務後再建 Pages；兩者共用建置工作區。Pages 輸出於 `out/`，使用靜態 HTTP server 預覽，不使用 `npm run start` 提供 Pages 產物。
 
 - 試算定向測試：`npm run test:quotation`。
+- Design Collection 核心定向測試：`npm run test:design-collection`（亦納入 `npm test`）。
 - 網站 smoke、Responsive、Accessibility、Performance 等實際驗收依 [Smoke 指引](docs/03_engineering/website-smoke.md)、[效能量測](docs/03_engineering/performance-measurement.md) 與當次任務規格。
 - [CI 工作流程](.github/workflows/ci.yml) 負責品質及靜態建置；所有結果以實際 head/run 為準。
 

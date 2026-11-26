@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "node_modules/.bin/tsc",
+    "--project",
+    "/tmp/xk-dc002-interactions/tsconfig.core.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T01:35:17.168698+00:00",
+  "finishedAt": "2026-11-26T01:35:18.850685+00:00",
+  "processId": 37269,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc002-interactions/types-v2.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -6,7 +6,7 @@
 | --- | --- |
 | `01_design/` | 品牌與三風格設計：[架構](01_design/design-collection/architecture.md)、[Design System](01_design/design-collection/design-systems.md)、[工作包](01_design/design-collection/work-packages.md) |
 | `02_operations/` | 商務營運：[聯絡與回覆流程](02_operations/contact-response-workflow.md) |
-| `03_engineering/` | 工程協作與驗證：[協作流程](03_engineering/subagent-workflow.md)、[Smoke](03_engineering/website-smoke.md)、[效能量測](03_engineering/performance-measurement.md) |
+| `03_engineering/` | 工程協作與驗證：[協作流程](03_engineering/subagent-workflow.md)、[Smoke](03_engineering/website-smoke.md)、[效能量測](03_engineering/performance-measurement.md)、[Design Collection 核心](03_engineering/design-collection-core.md) |
 | `04_deployment/` | 發布與部署：[網域](04_deployment/custom-domain-deployment.md)、[發布前置](04_deployment/publication-readiness.md)、[SEO](04_deployment/seo-operations.md) |
 | `task/` | [任務索引](task/README.md)、正式規格、DC 工作包與 Bugfix backlog |
 | `reports/` | 實作報告、驗收結果與原始證據封存 |
