@@ -114,21 +114,7 @@ PR 執行品質檢查及 Pages artifact；main 的既有工作流程負責正式
 
 ## 7. Roadmap
 
-狀態基準：2026-11-26，main `c9481a0`；[對應 CI／Pages 部署成功](https://github.com/xk2022/xk-website/actions/runs/45739486842)。這是該版本的紀錄，不代表之後版本已發布或完成法律／價格／索引核准。
-
-| 工作 | 狀態 |
-| --- | --- |
-| Task 001～008 | 基礎、首頁、內頁與聯絡功能已合併，後續變更依最新報告 |
-| Task 009～012 | Privacy 保護、SEO 保護、效能及無障礙技術成果；正式政策、索引、field CWV 等依各自門檻 |
-| Task 013～014 | Vercel 相容準備、正式 www 網域；外部平台／發布條件依核准 |
-| 客戶試算 V1 | [PR #28](https://github.com/xk2022/xk-website/pull/28) 已合併，參考價格仍待 Owner 核准 |
-| DC-001 | 架構規格已合併 |
-| DC-002 | [PR #33](https://github.com/xk2022/xk-website/pull/33) 已合併；365 項測試、雙模式各 910 HTTP 驗收通過，未整合新 UI |
-| DC-003 | 下一步：Modern 相容重構與 Gallery |
-| DC-004／005 | Heritage／Luxury 完整系列 |
-| DC-006／007 | 三系列整合、完整驗收與發布準備 |
-
-詳細依 [任務索引](docs/task/README.md) 及 [DC 工作包](docs/01_design/design-collection/work-packages.md)，未完成項目不列為已提供功能。
+現行任務進度、依賴、已合併 PR 與發布證據集中於 [Roadmap](docs/task/ROADMAP.md)。詳細功能範圍依 [任務索引](docs/task/README.md) 與 [DC 工作包](docs/01_design/design-collection/work-packages.md)；未完成項目不列為已提供功能。
 
 ## 8. 文件與協作
 
