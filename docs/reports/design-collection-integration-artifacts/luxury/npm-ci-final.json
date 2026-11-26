@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "ci",
+    "--cache",
+    "/tmp/xk-npm-cache"
+  ],
+  "cwd": "/tmp/xk-merge-luxury",
+  "startedAt": "2026-11-26T10:03:26.486513+00:00",
+  "finishedAt": "2026-11-26T10:03:39.069861+00:00",
+  "processId": 104515,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-dc006-merge/luxury/npm-ci-final.log",
+  "logSha256": "935451eef6b9f7876ee3ce939397d6d3e7b46f7cc59806c0aa0fbe99e68509b7",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

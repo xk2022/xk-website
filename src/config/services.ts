@@ -65,12 +65,6 @@ export const serviceCategories = [
 ] as const satisfies readonly ServiceCategory[];
 
 export const servicesPage = {
-  websiteGuide: {
-    title: "一頁式網站，聚焦品牌與主題",
-    description: "適合品牌介紹、商品或活動焦點；頁面內容與呈現方式依實際需求確認。可先瀏覽網站範例與品牌展示，了解不同情境的網站安排。",
-    samplesLink: { label: "瀏覽網站範例", href: "/portfolio#website-samples" },
-    showcasesLink: { label: "查看展示案例", href: "/portfolio#website-cases" },
-  },
   hero: {
     titleLines: ["我們提供的", "數位技術服務"],
     englishTitle: "Our Services",
@@ -81,6 +75,12 @@ export const servicesPage = {
   overview: {
     title: "從需求出發，連結每一項技術。",
     description: "五類服務可獨立規劃，也能依企業需求組合。從使用者看見的介面，到系統、資料與部署流程，選擇適合當前階段的技術範圍。",
+  },
+  websiteGuide: {
+    title: "一頁式網站，聚焦品牌與主題",
+    description: "適合品牌介紹、商品或活動焦點；頁面內容與呈現方式依實際需求確認。可先瀏覽網站範例與品牌展示，了解不同情境的網站安排。",
+    samplesLink: { label: "瀏覽網站範例", href: "/portfolio#website-samples" },
+    showcasesLink: { label: "查看展示案例", href: "/portfolio#website-cases" },
   },
   integration: {
     title: "以需求組合服務，形成完整方案。",

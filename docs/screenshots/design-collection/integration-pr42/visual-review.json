@@ -1,0 +1,188 @@
+{
+  "reviewedAtUtc": "2026-11-26T10:22:43.691313+00:00",
+  "mode": "Pages static preview3275",
+  "sourceFingerprint": "a5d7003b1babc38b9a8525a750f1b957a810f71f5530361b0fb2e3c6becd2303",
+  "scope": "14 actual images:8fullpage plus6footer-top viewport. Long fullpage views assessed as page overviews; detailed Footer checks use real viewport images. Geometry, href49/metadata/assets separately asserted for all routes/widths. No normal PNG byte-equivalence claim.",
+  "files": [
+    {
+      "route": "/design-collection",
+      "width": 375,
+      "kind": "actual-fullpage",
+      "path": "gallery-375.png",
+      "sha256": "ab52870bd67e6125b68c26b79582e960c99281c213baf8eafde5e48d1d91b305",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/design-collection",
+      "width": 1440,
+      "kind": "actual-fullpage",
+      "path": "gallery-1440.png",
+      "sha256": "5e204d4ab73ba07189c6b9df2eb23ad9eab55080ca81dd162146ccd7dc7e4fd8",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/",
+      "width": 375,
+      "kind": "actual-fullpage",
+      "path": "modern-home-375.png",
+      "sha256": "f3cdf30fab1fb582864dd878f12286ffbd1852580a98a467dc142417ce87ba85",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/",
+      "width": 375,
+      "kind": "actual-footer-top-viewport-with-context",
+      "viewportHeight": 1000,
+      "footerRect": {
+        "x": 0,
+        "y": 23.5,
+        "width": 375,
+        "height": 3438.09375,
+        "scrollY": 15395
+      },
+      "path": "modern-footer-375.png",
+      "sha256": "7b4259b942a761442ab721c44a00c2f8d5c53c19995908bcf57a35dd5d456c90",
+      "scope": "Top viewport of actual49linkFooter; all49 hrefs and fullFooter layout separately asserted. This single viewport does not claim to display every mobileFooter row.",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "kind": "actual-fullpage",
+      "path": "modern-home-1440.png",
+      "sha256": "8a96ba58642860ed3fcc2776417e812f54460358130cc397a58df87cbf4b8fe8",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "kind": "actual-footer-top-viewport-with-context",
+      "viewportHeight": 1000,
+      "footerRect": {
+        "x": 0,
+        "y": 24.046875,
+        "width": 1440,
+        "height": 1894.359375,
+        "scrollY": 8059
+      },
+      "path": "modern-footer-1440.png",
+      "sha256": "0287f71673801658668fd2024b393ddee1e92092a6c768700bc4256b2ddd886b",
+      "scope": "Top viewport of actual49linkFooter; all49 hrefs and fullFooter layout separately asserted. This single viewport does not claim to display every mobileFooter row.",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/design-collection/heritage",
+      "width": 375,
+      "kind": "actual-fullpage",
+      "path": "heritage-home-375.png",
+      "sha256": "5913abc1209019723b405c91b979c65543711747d5757e1bb98168534fa4b75a",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/design-collection/heritage",
+      "width": 375,
+      "kind": "actual-footer-top-viewport-with-context",
+      "viewportHeight": 1000,
+      "footerRect": {
+        "x": 0,
+        "y": 23.5,
+        "width": 375,
+        "height": 2904.140625,
+        "scrollY": 16823
+      },
+      "path": "heritage-footer-375.png",
+      "sha256": "1bddbf00cc4622b01204cdbdfa58234971ef27152e7771aca8c3c307fc52a50e",
+      "scope": "Top viewport of actual49linkFooter; all49 hrefs and fullFooter layout separately asserted. This single viewport does not claim to display every mobileFooter row.",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/design-collection/heritage",
+      "width": 1440,
+      "kind": "actual-fullpage",
+      "path": "heritage-home-1440.png",
+      "sha256": "1e2875d5402033b0558a0ef7e65d85b4c2c7d3da5dc65102dd9d494d42aeb4f1",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/design-collection/heritage",
+      "width": 1440,
+      "kind": "actual-footer-top-viewport-with-context",
+      "viewportHeight": 1000,
+      "footerRect": {
+        "x": 0,
+        "y": 23.765625,
+        "width": 1440,
+        "height": 1303.75,
+        "scrollY": 11423
+      },
+      "path": "heritage-footer-1440.png",
+      "sha256": "8e3c48b8f9e831db92ba9d8c8439eab524989bb3a3f7e16ef507daee39ee9a8d",
+      "scope": "Top viewport of actual49linkFooter; all49 hrefs and fullFooter layout separately asserted. This single viewport does not claim to display every mobileFooter row.",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 375,
+      "kind": "actual-fullpage",
+      "path": "luxury-home-375.png",
+      "sha256": "74415e2854be25e6fd371f13344943d93d76cb8a05ffb4fb71dabf272d3eeafe",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 375,
+      "kind": "actual-footer-top-viewport-with-context",
+      "viewportHeight": 1000,
+      "footerRect": {
+        "x": 0,
+        "y": 24.15625,
+        "width": 375,
+        "height": 2811.125,
+        "scrollY": 14964
+      },
+      "path": "luxury-footer-375.png",
+      "sha256": "ce7f16bd153b3d985a36a9a0a2360c193275e2c9a960012150d3499ffdf0c8a0",
+      "scope": "Top viewport of actual49linkFooter; all49 hrefs and fullFooter layout separately asserted. This single viewport does not claim to display every mobileFooter row.",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 1440,
+      "kind": "actual-fullpage",
+      "path": "luxury-home-1440.png",
+      "sha256": "ceace68792c866a65f927f8e963634c9ce4a8bf393f927212ea76b3260785b7c",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 1440,
+      "kind": "actual-footer-top-viewport-with-context",
+      "viewportHeight": 1000,
+      "footerRect": {
+        "x": 0,
+        "y": 23.984375,
+        "width": 1440,
+        "height": 1249.6875,
+        "scrollY": 15874
+      },
+      "path": "luxury-footer-1440.png",
+      "sha256": "4db2110d19792a642a7f54d03b31825f2f9403ae7d4f71ee06b0c6bbe226ab62",
+      "scope": "Top viewport of actual49linkFooter; all49 hrefs and fullFooter layout separately asserted. This single viewport does not claim to display every mobileFooter row.",
+      "visuallyInspected": true,
+      "observation": "Root inspected actual PNG: established composition retained; Gallery3active links and Footer wrapping/brand contrast acceptable. Footer files show the recorded top viewport, not the whole directory."
+    }
+  ]
+}

@@ -210,7 +210,7 @@ export function QuotationEstimator({ styleId = "modern", catalog = quotationCata
   }
 
   return (
-    <div ref={estimatorRef} id="quotation-estimator" data-quotation-ready={hydrated} data-quotation-style={styleId === "luxury" ? styleId : undefined} className={styleId === "luxury" ? "lx-quotation-estimator" : undefined}>
+    <div ref={estimatorRef} id="quotation-estimator" data-quotation-ready={hydrated} data-quotation-style={styleId === "modern" ? undefined : styleId} className={styleId === "luxury" ? "lx-quotation-estimator" : styleId === "heritage" ? "htg-quotation-estimator" : undefined}>
       <Section id="quotation-introduction" aria-labelledby="quotation-title" className={cn("quotation-screen-only", "border-b")}>
         <Container>
           <div className="grid min-w-0 items-start gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,.6fr)] lg:gap-12">

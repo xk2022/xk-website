@@ -1,0 +1,23 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "/tmp/xk-dc004/probe-resource-lifecycle.cjs",
+    "normal",
+    "http://127.0.0.1:3242/",
+    "final",
+    "/tmp/xk-dc004/source-final.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:01:47.878137+00:00",
+  "finishedAt": "2026-11-26T05:02:20.972390+00:00",
+  "processId": 71296,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-dc004/network-normal-probe-final.log",
+  "logSha256": "2bb24e931a789ee766a4439bc9a09b1b623c4730e876dbdc6992ee8c56daedbb",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

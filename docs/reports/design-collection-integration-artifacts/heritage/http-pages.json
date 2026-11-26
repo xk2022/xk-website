@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "scripts/smoke-website.py",
+    "--base-url",
+    "http://127.0.0.1:3273/",
+    "--output",
+    "/tmp/xk-dc006-merge/heritage/http-pages-result.json"
+  ],
+  "cwd": "/tmp/xk-merge-heritage",
+  "startedAt": "2026-11-26T09:45:49.719439+00:00",
+  "finishedAt": "2026-11-26T09:45:51.053009+00:00",
+  "processId": 101169,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-dc006-merge/heritage/http-pages.log",
+  "logSha256": "5ed25147cd03ae02ddbc21de9c6c27c81da17c509adc8c1c3b9b4ffeb5e4fb07",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

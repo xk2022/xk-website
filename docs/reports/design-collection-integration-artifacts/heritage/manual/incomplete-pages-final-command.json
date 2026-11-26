@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc006/collect-incomplete.cjs",
+    "pages",
+    "http://127.0.0.1:3273/",
+    "/tmp/xk-dc006/merge1-pages-final/result.json",
+    "final",
+    "/tmp/xk-merge-heritage"
+  ],
+  "cwd": "/tmp/xk-merge-heritage",
+  "startedAt": "2026-11-26T09:46:43.181257+00:00",
+  "finishedAt": "2026-11-26T09:46:47.926294+00:00",
+  "processId": 102549,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc006/incomplete-pages-final.log",
+  "logSha256": "f6f0205f9b7e4bfe1784c205ed87839425294164fad9822fd78909b2cf726975",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

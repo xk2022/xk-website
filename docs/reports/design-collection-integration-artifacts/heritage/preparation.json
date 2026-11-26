@@ -1,0 +1,14 @@
+{
+  "status": "READY_FOR_ACTUAL_PAGES_BUILD",
+  "stage": "Preparation only; staged merge not committed and Pages not built",
+  "sourceRoot": "/tmp/xk-merge-heritage",
+  "expectedPublicRoutes": "Modern16+Gallery+Heritage16=33; full Luxury not merged",
+  "checkerSha256": "16035d03bc5c5507fae3324a68a652b7db705101c1ea908f0e7127eafd4dd3c2",
+  "reusedChecker": "/tmp/xk-dc005-full-remote/v3/inspect-ci-artifact.py",
+  "localBaselineStatus": "NOT_CREATED",
+  "requiredPreparationInputs": [
+    "actual Pages out from this integrated source",
+    "actual successful Pages build receipt"
+  ],
+  "normalization": "Exact known Next BuildID token in HTML/RSC and actual three manifest directory paths only; runtime asset bytes remain strict."
+}

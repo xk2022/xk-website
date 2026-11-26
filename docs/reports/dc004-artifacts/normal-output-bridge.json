@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/verify-normal-output-bridge.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:58:58.987924+00:00",
+  "finishedAt": "2026-11-26T04:58:59.356656+00:00",
+  "processId": 70703,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 90.0,
+  "logFile": "/tmp/xk-dc004/normal-output-bridge.log",
+  "logSha256": "d1877093f8fbb6bb2ffcb2243864937b4f2a20241d235662db12d2ca193a6e18",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

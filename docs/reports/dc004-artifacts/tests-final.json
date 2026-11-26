@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "test"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:55:22.048132+00:00",
+  "finishedAt": "2026-11-26T04:55:24.484535+00:00",
+  "processId": 70112,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 180.0,
+  "logFile": "/tmp/xk-dc004/tests-final.log",
+  "logSha256": "d4c44aa665f81706333bbfab3be63dcef4ecb9d73bf2ceb1e42120f897284a26",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

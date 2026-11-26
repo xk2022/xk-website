@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/verify-pdf.py",
+    "/tmp/xk-dc004/pages-final/quotation-modern-worstcase-a4.pdf",
+    "--mode",
+    "pages",
+    "--out",
+    "/tmp/xk-dc004/pages-final/pdf-modern",
+    "--catalog",
+    "/tmp/xk-dc004/catalog-final.json",
+    "--expected-catalog-sha",
+    "1c4ad0dc46e4d8efbce773fc630a4fc8c5bc57d0c29b0744a0608888c894dd63"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:32:20.541011+00:00",
+  "finishedAt": "2026-11-26T05:32:23.287085+00:00",
+  "processId": 80111,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc004/pages-final/pdf-modern.log",
+  "logSha256": "5af4d1568896b3081ca10c2ba6319c544a68c6ed2f108cbaf104c78a485f1d0a",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python",
+    "/tmp/xk-dc004/passive-resource-adjudication.py"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T05:17:25.101639+00:00",
+  "finishedAt": "2026-11-26T05:17:25.269685+00:00",
+  "processId": 74352,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc004/passive-resource-adjudication.log",
+  "logSha256": "39e8ef2526fe6efaeba36e6b769b662a52f79d58d119b2400717dcf313552603",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

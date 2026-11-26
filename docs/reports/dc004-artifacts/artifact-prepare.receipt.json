@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/inspect-ci-artifact.py",
+    "--prepare"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:35:11.630665+00:00",
+  "finishedAt": "2026-11-26T05:35:12.235736+00:00",
+  "processId": 80613,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc004/artifact-prepare.log",
+  "logSha256": "e56d739476a4ffdd2cb388ff991b261b6bc5b11178120fd55836f129e661a4c9",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

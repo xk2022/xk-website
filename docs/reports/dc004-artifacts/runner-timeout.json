@@ -1,0 +1,20 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python3",
+    "-c",
+    "import time; time.sleep(5)"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:34:24.673317+00:00",
+  "finishedAt": "2026-11-26T04:34:25.280592+00:00",
+  "processId": 66801,
+  "returnCode": -15,
+  "exitCode": 124,
+  "timeoutSeconds": 0.1,
+  "logFile": "/tmp/xk-dc004/runner-timeout.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "timeout",
+  "signal": null
+}

@@ -41,6 +41,7 @@ export function LuxuryFrame({ children, pageKey, slug }: Readonly<{ children: Re
   const groups = [
     { id: "luxury", name: "Luxury 網站目錄", entries: routes.filter((route) => route.styleId === "luxury") },
     { id: "modern", name: "Modern 網站目錄", entries: routes.filter((route) => route.styleId === "modern") },
+    { id: "heritage", name: "Heritage 網站目錄", entries: routes.filter((route) => route.styleId === "heritage") },
     { id: "collection", name: "設計系列", entries: routes.filter((route) => route.pageKey === "collection") },
   ];
 

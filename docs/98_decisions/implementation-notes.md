@@ -453,7 +453,21 @@ Native 測試透過 Node.js 24 的 test-only alias hook 解析既有 Next.js imp
 
 交付前同步已合併 PR #36／#37 的工程索引與 Roadmap 整理，最新 main 基準更新為 `aa100adfad24b74ccb39d2df811b613c4d6a15ef`。差異只有文件；保留集中 Roadmap／新索引與本輪說明，未引入其他功能，原 runtime source bytes 不變。搬移前 baseline 仍保留 `794b076` 版本邊界。
 
+## 2026-11-26 DC-003 合併與 Heritage 品牌前置（當時快照）
 
+使用者明確回覆「合併」後，PR #39 合併為 `8ba299a5a48da41ca7f4d88d9b2149d7c83f6584`；main CI／Pages #88 成功，正式站 17 頁 HTTP smoke 1,110 項 PASS。先前 DC-003 的未合併文字保留為當時快照，實際遠端事件更新同一 PR Description。
+
+DC-004 工作包要求先完成新增 palette／外框／素材品牌審閱，當前仍無核准紀錄；本輪先交付 [Heritage 品牌審閱稿](../01_design/design-collection/reviews/heritage-v1.md) 與本機原型、截圖和 [範圍驗證](../reports/dc004-brand-review.md)。公司最新 main 為 `d03cd673c10a8f7c0427c558c562112aa4d34a8c`，已出現根 AGENTS 與遷移後品牌／工程入口，但沒有 Heritage 例外核准。
+
+本稿不新增 Next 路由、品牌事實、收件、價格或依賴；Modern 及 Gallery 公開 17 頁不變。globals.css 僅限定排除審閱資料的掃描，runtime 產物另比較。完整 16 頁 Heritage、正式 Next 字體、Contact／Quotation／PII／A4 與兩模式全部驗收仍待品牌審閱；本次新審閱 PR 不自動合併或發布。
+
+## 2026-11-26 DC-004 — Heritage 完整實作（PR 前驗收快照）
+
+使用者對 PR #40 審閱版本 `cfaab65` 明確回覆「核准」，已記錄 [v1 品牌適用範圍](../01_design/design-collection/reviews/heritage-v1-approval.md)，不重複要求同一審閱。公司最新 main 為 `e0229b97acb2bf6c2d83f8155665f68b11c27d71`；較前輪兩個知識庫 commits 未改 35 份相關規範 Blob，沒有修改公司 Repository。
+
+本輪延續 `feature/design-collection-heritage`／PR #40，實作獨立編輯式 Frame／語意 tokens／recipes、七主頁及九詳頁，消費共用 DTO；Modern 的資料／功能保留，Footer 可見新增完整 Heritage 目錄。Style layout 僅提供 static params 與 children，各頁各包一次 Frame，避免 root 404 雙框。公開驗收清冊為 33 頁，canonical 對 Modern、OG 為展示頁本身；Luxury／Privacy／dev／Sitemap 保護不變。
+
+Contact／Quotation 共用原控制器、驗證、計算與選項儲存；新離頁清理只針對記憶體個人欄位，試算 IDs 仍用原 key。內鏈對照由伺服器傳小型資料，避免 Modern client 引入完整頁面 registry。標準 A4 以具名 page 及實際啟用標記隔離，兩模式、跨頁與最壞內容以 [本輪報告](../reports/dc004-implementation.md) 的實際結果為準。完整 Required 驗收、失敗／重驗及精確 CI artifact 分開記錄，沒有自動合併、功能分支發布或 DNS 變更。
 ## 2026-11-26 DC-005 — Luxury 品牌審閱前置（核准前快照）
 
 依已合併工作包，DC-005 與 DC-004 可從 DC-003 平行進行。最新 main `8ba299a5` 已含 DC-003／PR #39，17 頁；DC-004／PR #40 尚未合併。本輪建立 `feature/design-collection-luxury`，不整合未核准 Heritage 程式。公司最新正式規範與品牌來源唯讀重核，英文路徑及來源版本詳見 [本輪報告](../reports/dc005-brand-review.md)；不修改文件 Repository。
@@ -462,10 +476,26 @@ Luxury palette／品牌外框／素材範圍須同版本 Owner 審閱；本輪�
 
 QA 工具及 log 一律 gzip 保存原 bytes／SHA，完整封存後才執行 Lint，避免再次讓證據內 CommonJS 工具進入 App 規則。品牌核准後按 [DC-005 完整規格](../task/dc005.md) 繼續；本輪僅 Push／Draft PR，不自動合併或部署。
 
-## 2026-11-26 DC-005 — 品牌核准後的完整 Luxury 實作
+## 2026-11-26 DC-005 — 品牌核准後的完整 Luxury 實作（PR 前快照）
 
 使用者對 Luxury v1 回覆「批准合併」，形成 [同版本品牌核准](../01_design/design-collection/reviews/luxury-v1-approval.md) 及 [PR #41](https://github.com/xk2022/xk-website/pull/41) 合併授權；該 PR 已合併至 main `74369376a0dbeeb0a17b5ee34557059c8e2a9491`，正式 main 的 Modern 16 頁與 Gallery 共 17 頁已部署。原審閱稿、品牌前置報告及其 PENDING／BLOCKED 保留當時快照，不回寫為完整 Luxury 功能驗收。
 
 同一 `feature/design-collection-luxury` 分支已同步該 main，接續原 [DC-005 完整工作包](../task/dc005.md)，已加入 16 個 Luxury 頁面實作，分支清冊共 33 頁。內容、服務／作品狀態、參考價格與 Contact／Quotation 核心沿用主線；完整正式驗收、限制及後續交付以 [實作報告](../reports/dc005-implementation.md) 記錄，不預填測試通過或未發生的 PR 識別碼。
 
 Heritage 的 PR #40 仍未合併，未引入其程式或取代本分支基準。Luxury 完整功能後續另開 PR 待審；PR #41 只核准並合併品牌審閱，不預先授權新功能自動合併或發布，也不延伸為法律政策、索引、業務或價格核准。
+
+## 2026-11-26 — PR #40／#42 合併授權與順序（Heritage 整合時快照）
+
+使用者已用「批准合併」核准 Luxury v1 品牌審閱，PR #41 已合併；上方前置報告的未核准文字保留當時快照，不改寫為完整功能驗收。完整 Heritage 規格／報告及主線新增的 Luxury 品牌文件均保留。
+
+使用者後續明確指示「合併」，授權依序合併 Heritage PR #40、Luxury PR #42，再接續 DC-006，不再重複要求同一授權。本次先以 `main@4500ccf` 整合 PR #40；當前正式 main 仍為 17 頁，本次 Heritage 交付清冊為 Modern 16＋Gallery＋Heritage 16，共 33 頁。Luxury PR #42 尚未合併，未將其程式或功能報告複製進本次 Heritage 整合。
+
+衝突處理及合併後必要檢查由本次實際版本驗證；原分支測試、舊未授權聲明與失敗／重驗紀錄保留各自版本邊界。真正發生的合併、main CI、部署與公開驗證分開記錄，不預填結果。這項授權不擴張為新的業務／價格、法律政策、正式索引或 DNS 決策。
+
+## 2026-11-26 — Heritage 已合併與 Luxury 整合開始
+
+使用者已授權依序合併 PR #40／#42，再執行 DC-006。PR #40 已實際合併為 `main@0d41ecf495e55b792f966c9fe27bd07c27bc5647`，main 清冊為 Modern 16＋Gallery＋Heritage 16，共 33 頁；main CI、Pages 部署及正式 33 頁 HTTP 驗證已完成（run 45796333591）。
+
+本階段在 `feature/design-collection-luxury` 整合該已核准 main，保留 Heritage／Luxury 的完整規格、版本審閱核准與原實作報告，三系列清冊共 49 頁。原分支 33 頁驗收、外站 404 及未獲合併授權敘述均保留其歷史邊界，不代表新狀態；主線 PR #43 的五來源 Hub 修正已承接，仍依本階段實際驗收記錄。公司來源本階段重核未有新增適用規範變更，精確版本與依據依本階段來源證據保存。
+
+PR #42 合併授權已成立，仍須完成本次必要驗收、精確 head CI、實際 merge 與後續 main CI／部署／公開驗證；不可把原完整報告改稱本次重跑。DC-006 尚未開始，待兩功能 PR 實際合併後接續，另開新 PR 審閱、未授權自動合併。階段結果與原始退出碼統一追加 [整合報告](../reports/design-collection-integration.md)，不改寫 Heritage 原 Exit 2／人工補充或既有歷史。

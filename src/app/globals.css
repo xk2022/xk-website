@@ -47,6 +47,8 @@
 @source not "../../docs/reports/dc005-review-artifacts";
 @source not "../../docs/reports/dc005-implementation.md";
 @source not "../../docs/reports/dc005-artifacts";
+@source not "../../docs/reports/design-collection-integration.md";
+@source not "../../docs/reports/design-collection-integration-artifacts";
 
 :root {
   color-scheme: light;

@@ -1,0 +1,6 @@
+{
+  "file": "scripts/build-github-pages.mjs",
+  "sha256": "8e0ec10ae9d2fc1cd1ec0bbe4311152111e95610f0aa51effb8a0e39e6b0c847",
+  "scope": "Gallery implemented homepage link guard only: exact approved path or its single Pages trailing slash; Modern root remains exact slash.",
+  "helperReceipt": "/tmp/xk-dc004/gallery-slash-helper-v1.json"
+}

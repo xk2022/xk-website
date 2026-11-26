@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "--import",
+    "./scripts/register-test-aliases.mjs",
+    "/tmp/xk-dc004/ds/check.mjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T04:41:02.791213+00:00",
+  "finishedAt": "2026-11-26T04:41:03.027406+00:00",
+  "processId": 67749,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc004/ds/native-v1.log",
+  "logSha256": "96bdf99f7601e84cc496fd45415967cc94330da2b95871c68de369ed807b0f26",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

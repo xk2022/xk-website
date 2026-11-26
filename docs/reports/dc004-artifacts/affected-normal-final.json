@@ -1,0 +1,22 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "/tmp/xk-dc004/retest-affected.cjs",
+    "normal",
+    "http://127.0.0.1:3242/",
+    "v2"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:00:33.657576+00:00",
+  "finishedAt": "2026-11-26T05:01:21.229651+00:00",
+  "processId": 70789,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-dc004/affected-normal-final.log",
+  "logSha256": "e172736df3beb5772010a1b8024aaf499f73443affa0410ee3a9eb13c72e0014",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

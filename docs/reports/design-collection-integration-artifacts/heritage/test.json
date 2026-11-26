@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "test"
+  ],
+  "cwd": "/tmp/xk-merge-heritage",
+  "startedAt": "2026-11-26T09:29:06.316659+00:00",
+  "finishedAt": "2026-11-26T09:29:09.515973+00:00",
+  "processId": 99330,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 240.0,
+  "logFile": "/tmp/xk-dc006-merge/heritage/test.log",
+  "logSha256": "1a6ce1a0a98f360d2c1230755afbc41af7577a03bd615642578416f08f5b3a56",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

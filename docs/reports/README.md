@@ -39,10 +39,12 @@
 | DC-001 | [規格](../task/dc001.md)、[架構報告](dc001-architecture.md) |
 | DC-002 | [規格](../task/dc002.md)、[共用核心](../03_engineering/design-collection-core.md)、[報告](dc002-implementation.md)、[證據](dc002-artifacts/README.md) |
 | DC-003 | [規格](../task/dc003.md)、[報告](dc003-implementation.md) |
-| DC-005 品牌前置 | [v1 審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、[歷史驗證報告](dc005-brand-review.md)、[同版本品牌核准](../01_design/design-collection/reviews/luxury-v1-approval.md)；PR #41 已合併，正式 main 的 17 頁已部署 |
-| DC-005 完整 Luxury | [規格](../task/dc005.md)、[實作報告](dc005-implementation.md)；本分支新增 16 頁，總清冊 33 頁，本機核心驗收完成；5個既有外部展示網址404待處理，新的功能 PR 待審，未合併發布 |
-| DC-004 Heritage | [PR #40](https://github.com/xk2022/xk-website/pull/40) 尚未合併，未引入本分支；範圍見 [工作包](../01_design/design-collection/work-packages.md#dc004) |
-| DC-006～007 | [工作包](../01_design/design-collection/work-packages.md)，未完成工作不以計畫充當報告 |
+| DC-004 完整實作 | [規格](../task/dc004.md)、[驗證報告](dc004-implementation.md)；[PR #40](https://github.com/xk2022/xk-website/pull/40) 已合併為 `0d41ecf495e55b792f966c9fe27bd07c27bc5647`，main 33 頁；部署／公開驗證待確認 |
+| DC-004 品牌前置 | [審閱稿](../01_design/design-collection/reviews/heritage-v1.md)、[同版本核准](../01_design/design-collection/reviews/heritage-v1-approval.md)、[驗證紀錄](dc004-brand-review.md)；原型不代表完整系列驗收 |
+| DC-005 品牌前置 | [v1 審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、[歷史驗證報告](dc005-brand-review.md)、[同版本品牌核准](../01_design/design-collection/reviews/luxury-v1-approval.md)；PR #41 已核准合併 |
+| DC-005 完整 Luxury | [規格](../task/dc005.md)、[實作報告](dc005-implementation.md)；[PR #42](https://github.com/xk2022/xk-website/pull/42) 已獲合併授權，正整合 main，三系列清冊 49 頁待新驗收 |
+| 合併整合 | [整合報告](design-collection-integration.md)；保留 Heritage 原 Exit 2 與人工補充，Luxury 本階段結果另記，不冒稱舊 33 頁測試為新 49 頁驗收 |
+| DC-006～007 | [工作包](../01_design/design-collection/work-packages.md)；DC-006 尚未開始，須待 PR #42 實際合併，後續新 PR 審閱、不自動合併 |
 
 ## 證據保存
 

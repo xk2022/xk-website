@@ -1,0 +1,17 @@
+{
+  "fixtures": [
+    {
+      "original": "/tmp/xk-dc004/bad-link.zip",
+      "retainedOutsideReport": "/tmp/xk-dc004-negative-fixtures/bad-link.zip",
+      "sha256": "292469933283a284ac16fe4b7341130c529b5097bd9938c2577899fb54c1f884",
+      "reason": "Generated negative archive traversal/symlink fixture, reproducible by artifact checker self-test; not app output. Original self-test results/receipts retained."
+    },
+    {
+      "original": "/tmp/xk-dc004/.._escape.zip",
+      "retainedOutsideReport": "/tmp/xk-dc004-negative-fixtures/.._escape.zip",
+      "sha256": "34aac5de6dc0fb7b280a149bba9e0279c03e3149430413ec08c93fa9cf464da7",
+      "reason": "Generated negative archive traversal/symlink fixture, reproducible by artifact checker self-test; not app output. Original self-test results/receipts retained."
+    }
+  ],
+  "appSourceChanged": false
+}

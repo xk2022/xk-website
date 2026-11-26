@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc006-merge/check-heritage-docs.py"
+  ],
+  "cwd": "/tmp/xk-merge-heritage",
+  "startedAt": "2026-11-26T09:48:50.118585+00:00",
+  "finishedAt": "2026-11-26T09:48:50.222995+00:00",
+  "processId": 102965,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc006-merge/heritage/docs-final.log",
+  "logSha256": "241dbce90abcf7338045d68f8523963ff898f047afa605c295b4c9f19ac202e9",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

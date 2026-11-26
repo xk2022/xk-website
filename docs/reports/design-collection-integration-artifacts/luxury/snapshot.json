@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc006/merge2/snapshot.cjs"
+  ],
+  "cwd": "/tmp/xk-merge-luxury",
+  "startedAt": "2026-11-26T09:57:26.484157+00:00",
+  "finishedAt": "2026-11-26T09:57:26.788037+00:00",
+  "processId": 103722,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc006-merge/luxury/snapshot.log",
+  "logSha256": "49d2f0fb4a655e270ed1e787a2d1fde0210cc17863d4b92c00f73c82c0b68029",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

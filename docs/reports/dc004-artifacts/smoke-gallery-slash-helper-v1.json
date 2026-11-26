@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "-B",
+    "/tmp/xk-dc004/smoke-gallery-slash-selfcheck.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:24:43.598415+00:00",
+  "finishedAt": "2026-11-26T05:24:43.701440+00:00",
+  "processId": 75234,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc004/smoke-gallery-slash-helper-v1.log",
+  "logSha256": "d4863b94478df3d762977ee7529e49ea6335f4a13afab843cd04092f8397dbed",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

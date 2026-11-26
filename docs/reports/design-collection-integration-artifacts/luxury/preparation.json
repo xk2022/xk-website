@@ -1,0 +1,28 @@
+{
+  "createdAt": "2026-11-26T09:58:38.327361+00:00",
+  "luxuryOriginalHead": "efd098a9a79667b29d5f0a8e71d2752941c30a0d",
+  "mergedMain": "0d41ecf495e55b792f966c9fe27bd07c27bc5647",
+  "preflightEvents": [
+    {
+      "procedure": "Initial metadata/DTO snapshot before installing new worktree dependencies",
+      "exitCode": 1,
+      "actual": "ERR_MODULE_NOT_FOUND lucide-react",
+      "resolution": "npm ci real exit0; same snapshot runner thereafter exit0",
+      "classification": "environment preparation, not application regression"
+    },
+    {
+      "procedure": "node --check src/config/seo.ts",
+      "exitCode": 1,
+      "actual": "CJS syntax-check mode rejected export type in TypeScript module",
+      "resolution": "Do not change package type or source; use native alias-import snapshot and required npx tsc --noEmit after integration",
+      "classification": "wrong ad hoc syntax tool mode, not an application syntax verdict"
+    }
+  ],
+  "reviewFindings": [
+    {
+      "file": "src/config/services.ts",
+      "actual": "Auto merge inserted duplicate websiteGuide keys with identical public values",
+      "resolution": "Keep already merged main config bytes, no pricing/copy mutation"
+    }
+  ]
+}

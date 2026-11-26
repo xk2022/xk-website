@@ -1,0 +1,7 @@
+{
+  "testId": "DC4-STAGED-RAW-LOG-FORMAT",
+  "status": "FAIL",
+  "actual": "git diff --cached --check reported CR progress-line trailing whitespace in five raw build logs and blank EOF in two raw lint logs. Outer shell last-command exit was0, so no standalone check exit is claimed. Original log bytes and receipt SHAs must remain unchanged.",
+  "fix": "Gzip all original .log payloads with decoded SHA validation; do not trim or rewrite raw evidence. Repeat staged check with its own OS exit receipt.",
+  "observedAt": "2026-11-26T05:36:07.696314+00:00"
+}

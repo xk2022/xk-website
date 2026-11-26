@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/package-evidence.py",
+    "--apply"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:34:00.358645+00:00",
+  "finishedAt": "2026-11-26T05:34:02.028234+00:00",
+  "processId": 80489,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc004-package/apply.log",
+  "logSha256": "3788b41c92c10af47288e98b993c98964543cecabf0779a199fa04a6839415af",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

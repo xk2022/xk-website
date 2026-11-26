@@ -11,9 +11,13 @@
 | 5 | [實作報告索引](../reports/README.md#design-collection) | 規格與實際驗證證據 |
 | 6 | [Luxury v1 品牌核准](design-collection/reviews/luxury-v1-approval.md) | PR #41 的同版本 palette、外框、字階與版型核准範圍 |
 | 7 | [DC-005 完整實作報告](../reports/dc005-implementation.md) | 本功能分支 16 個 Luxury 頁面的實作、正式驗收與限制 |
+| 8 | [Heritage v1 品牌核准](design-collection/reviews/heritage-v1-approval.md)／[DC-004 完整實作報告](../reports/dc004-implementation.md) | 已合併系列的版本核准、功能驗收與限制 |
+| 9 | [合併整合報告](../reports/design-collection-integration.md) | 33→49 頁版本界線、此次新驗收與實際遠端事件 |
 
-Luxury v1 已獲使用者同版本核准，[PR #41](https://github.com/xk2022/xk-website/pull/41) 已合併至 main `74369376a0dbeeb0a17b5ee34557059c8e2a9491`；正式 main 仍為已部署的 Modern 16 頁與 Gallery，共 17 頁。原 [審閱稿](design-collection/reviews/luxury-v1.md) 及其測試保留歷史快照，原型 HTML 不作網站頁面輸出。
+目前正式 `main@0d41ecf495e55b792f966c9fe27bd07c27bc5647` 已合併 Heritage PR #40，清冊為 Modern 16＋Gallery＋Heritage 16，共 33 頁；main CI、Pages 部署及正式 33 頁 HTTP 驗證已完成（run 45796333591）。[Heritage v1 品牌核准](design-collection/reviews/heritage-v1-approval.md)、[完整 DC-004](../task/dc004.md) 與 [實作驗證](../reports/dc004-implementation.md) 均保留。
 
-本功能分支接續完整 DC-005，已實作 16 個 Luxury 頁面，分支清冊共 33 頁；本機核心驗收完成；5個既有外部展示網址404待處理，新功能 PR 尚待審閱，不自動合併或發布。Heritage PR #40 仍未合併，未引入本分支。最新進度以 [根 README](../../README.md)／[任務索引](../task/README.md) 為準。
+Luxury 的 [v1 品牌核准](design-collection/reviews/luxury-v1-approval.md) 與 [PR #41](https://github.com/xk2022/xk-website/pull/41) 已成立；原 [審閱稿](design-collection/reviews/luxury-v1.md) 與品牌前置證據保留歷史快照，原型 HTML 不作網站頁面輸出。本分支保留 [DC-005 完整規格](../task/dc005.md) 與 [實作報告](../reports/dc005-implementation.md)，正將 [PR #42](https://github.com/xk2022/xk-website/pull/42) 與已核准 main 整合，三系列清冊 49 頁，待新驗收。
+
+使用者已授權 PR #40／#42 依序合併，再執行 DC-006；PR #42 尚未合併，DC-006 尚未開始，其新 PR 不自動合併。各版本測試、合併、CI、部署與公開驗證分階段記錄於 [整合報告](../reports/design-collection-integration.md)。最新進度以 [根 README](../../README.md)／[任務索引](../task/README.md) 為準。
 
 技術資料夾、建置及測試入口見 [工程索引](../03_engineering/README.md)。公司正式品牌規範仍由 [公司文件](https://github.com/xk2022/xplore-kaleidoscope) 管理；不將風格提案視為已核准公司識別。

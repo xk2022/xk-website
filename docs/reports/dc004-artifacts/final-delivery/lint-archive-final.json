@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "run",
+    "lint"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:42:50.864318+00:00",
+  "finishedAt": "2026-11-26T05:42:57.723757+00:00",
+  "processId": 81161,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 180.0,
+  "logFile": "/tmp/xk-dc004-final/lint-archive-final.log",
+  "logSha256": "4696703654c92426c8748b7837936df0036098577fdcb7af6f2ee9d9db2e79e6",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

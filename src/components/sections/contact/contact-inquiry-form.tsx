@@ -110,7 +110,7 @@ export function ContactInquiryForm({ styleId = "modern" }: { styleId?: DesignSty
   }
 
   return (
-    <Card ref={controllerRef} className={styleId === "luxury" ? "lx-contact-form mx-auto max-w-3xl gap-8 sm:p-8" : "mx-auto max-w-3xl gap-8 sm:p-8"}>
+    <Card ref={controllerRef} className={styleId === "luxury" ? "lx-contact-form mx-auto max-w-3xl gap-8 sm:p-8" : styleId === "heritage" ? "htg-contact-form mx-auto max-w-3xl gap-8 sm:p-8" : "mx-auto max-w-3xl gap-8 sm:p-8"}>
       <div className="type-body-sm rounded-md border bg-surface p-4 text-foreground">
         <p className="font-semibold">填寫 → 預覽 → 自行寄信</p>
         <p className="mt-2">這是詢問內容整理工具，尚未提供站內直接送出。請勿填入帳號密碼、金鑰或敏感資料。</p>

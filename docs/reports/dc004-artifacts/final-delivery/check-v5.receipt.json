@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc004/final-check.py",
+    "--output",
+    "/tmp/xk-dc004-final/check-v5-result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T05:37:57.992793+00:00",
+  "finishedAt": "2026-11-26T05:38:00.500522+00:00",
+  "processId": 80815,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc004-final/check-v5.log",
+  "logSha256": "ea9417cc3d96311fa7e9e0a37a00528275fad864f4c3a372d0d0c97368934c90",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}
