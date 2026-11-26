@@ -1,0 +1,385 @@
+{
+  "date": "2026-11-26T06:14:47.379049+00:00",
+  "scope": "Local Luxury brand-review evidence only; preserves actual raw values and exits, not brand/full-series/deployment approval.",
+  "entries": [
+    {
+      "original": "/tmp/xk-dc005/archive.py",
+      "originalSha256": "e851136acf7f8a16c30eef2ad486ddee01574753d9eb9abc37c47d5098f3bc55",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/archive.py.gz",
+      "archiveSha256": "94e2c8f7f6bde958098932bd4876e6f960c34dc0955cb862cab22f2067d77886",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/browser.cjs",
+      "originalSha256": "36f5995a4b59a77e1a883a8fe17cb23389e6bd88c9bb7b1a4bfad1061fe7a4c4",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/browser.cjs.gz",
+      "archiveSha256": "98660c0b30f02aa1ffd9610fa01dfe2d445d8e9b4037f7438065f0599e5eb524",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/build-normal.json",
+      "originalSha256": "39fd628309b6cdae92f06aa97319dafc3901252ce93f502f3e03b0851166dd15",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/build-normal.json",
+      "archiveSha256": "39fd628309b6cdae92f06aa97319dafc3901252ce93f502f3e03b0851166dd15",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/build-normal.log",
+      "originalSha256": "8f9c3c576129b3da45cb08f8e6455f76a0b14e09b4d4a4e2e6ee70118e05bb18",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/build-normal.log.gz",
+      "archiveSha256": "bd0c4dcd6b6c32fbcdbaf479ed39262c4d3145f36bd49c373d16dfe2179f9448",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/build-pages.json",
+      "originalSha256": "77c877eada9236bb27c4f712090a45cefd1575ea96be3345a231741d2a56c6da",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/build-pages.json",
+      "archiveSha256": "77c877eada9236bb27c4f712090a45cefd1575ea96be3345a231741d2a56c6da",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/build-pages.log",
+      "originalSha256": "57ebc2f3cd738b683d0840ea6add96205e5e3f55ca92fa9944583f2baddbd96b",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/build-pages.log.gz",
+      "archiveSha256": "f7803d569d48826785941b6ec35c11138e77194c26e31d3d129b45192dd92416",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/build-source-sync.json",
+      "originalSha256": "07d46c565a6a721a379af2d5ebee87243b6e08c976ae71e5ba40030317ba9c7d",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/build-source-sync.json.gz",
+      "archiveSha256": "15a94a12990623de6e3176b26aa9caf4bd91236be8157893edc1cffc289874a0",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/matrix.json",
+      "originalSha256": "123e75b95635b7f6c3d74c1015c51db803d4b60c612e261fa45070587d0f8686",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/matrix.json",
+      "archiveSha256": "123e75b95635b7f6c3d74c1015c51db803d4b60c612e261fa45070587d0f8686",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/npm-ci-isolated.json",
+      "originalSha256": "23cc8b91bbcc57f88151bd3f59f1372bfa0bbc586adb61db9ac9c7982b31fb80",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/npm-ci-isolated.json",
+      "archiveSha256": "23cc8b91bbcc57f88151bd3f59f1372bfa0bbc586adb61db9ac9c7982b31fb80",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/npm-ci-isolated.log",
+      "originalSha256": "d3f54cd9d4b744cf9a75d955f195e6a76c7db98de866e669e4d5cdddc3304b94",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/npm-ci-isolated.log.gz",
+      "archiveSha256": "8190180fa308a4541ed36e69e6adb7486c35b9fd8cdb14826684652ed1d90879",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/npm-ci.json",
+      "originalSha256": "3f81d90517ab412f7204a7bd87e95fa744914730bc14c1e76a90fa00d0890631",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/npm-ci.json",
+      "archiveSha256": "3f81d90517ab412f7204a7bd87e95fa744914730bc14c1e76a90fa00d0890631",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/npm-ci.log",
+      "originalSha256": "d3f54cd9d4b744cf9a75d955f195e6a76c7db98de866e669e4d5cdddc3304b94",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/npm-ci.log.gz",
+      "archiveSha256": "8190180fa308a4541ed36e69e6adb7486c35b9fd8cdb14826684652ed1d90879",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/prototype-browser.log",
+      "originalSha256": "7c6d47b0c2d9b7c35e17d7a276cb57085b5342df2b5d15f155fcfe377fb2eb2d",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/prototype-browser.log.gz",
+      "archiveSha256": "31d2569605583b2acedbdb91535e31e9de51b0c98ee35d898d7240f0b9d1e7f2",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/prototype-browser.receipt.json",
+      "originalSha256": "1a9fde75a7336de7b9dee920cf82a2a28a9b160585fe522365ad0dadfd907ad5",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/prototype-browser.receipt.json",
+      "archiveSha256": "1a9fde75a7336de7b9dee920cf82a2a28a9b160585fe522365ad0dadfd907ad5",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/prototype-final/luxury-1440.png",
+      "originalSha256": "e76ef65b72c4cbf7fe22a027a4cd94df6992faa1a85f7fb0c8c86ae2c99ffaa7",
+      "repositoryPath": "docs/screenshots/design-collection/dc005-review/luxury-1440.png",
+      "archiveSha256": "e76ef65b72c4cbf7fe22a027a4cd94df6992faa1a85f7fb0c8c86ae2c99ffaa7",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/prototype-final/luxury-1920.png",
+      "originalSha256": "c4b9bf670f1b5988c35b55673507f0056c55f939279d4a1f4f2fce8d2ff1e4ed",
+      "repositoryPath": "docs/screenshots/design-collection/dc005-review/luxury-1920.png",
+      "archiveSha256": "c4b9bf670f1b5988c35b55673507f0056c55f939279d4a1f4f2fce8d2ff1e4ed",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/prototype-final/luxury-320.png",
+      "originalSha256": "37dd16442525f1efd5a180935507f51215fce5df32c4951ce7a41d88d575bfef",
+      "repositoryPath": "docs/screenshots/design-collection/dc005-review/luxury-320.png",
+      "archiveSha256": "37dd16442525f1efd5a180935507f51215fce5df32c4951ce7a41d88d575bfef",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/prototype-final/luxury-375.png",
+      "originalSha256": "88f84eb7dd8fa878ffb6cbfb25097c1b016493c290bdbc3b224f6a874e309503",
+      "repositoryPath": "docs/screenshots/design-collection/dc005-review/luxury-375.png",
+      "archiveSha256": "88f84eb7dd8fa878ffb6cbfb25097c1b016493c290bdbc3b224f6a874e309503",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/prototype-final/luxury-768.png",
+      "originalSha256": "7aa5c32aba7b5a4e7a5d53f4a4ab65a51142da448d618e4a48ea2e802863d78b",
+      "repositoryPath": "docs/screenshots/design-collection/dc005-review/luxury-768.png",
+      "archiveSha256": "7aa5c32aba7b5a4e7a5d53f4a4ab65a51142da448d618e4a48ea2e802863d78b",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/prototype-final/result.json",
+      "originalSha256": "68ef77984c3d9276547075a9e4c10e5e7a22cd2e8b249e05eee13052a76433b2",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/prototype-final/result.json.gz",
+      "archiveSha256": "b579b30a28f9c0c73bd2f80931c2b5f9e31f62b7d4b41ec03a29ca5d7d2cf6d7",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/prototype-server.log",
+      "originalSha256": "f9ed13ae01b44d6693819889fbbae411339ea3cc25e9a8f0002752a4a2ae21c0",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/prototype-server.log.gz",
+      "archiveSha256": "a2333ed44442a8234620a943728d33ebfcc8e71b02cc37b5f36e2bd3e29f6871",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/tests.json",
+      "originalSha256": "216ec950224ae6a2ad6356361b3e10e06aa7b1b14c6955e1ed3ee2b21a73649e",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/tests.json",
+      "archiveSha256": "216ec950224ae6a2ad6356361b3e10e06aa7b1b14c6955e1ed3ee2b21a73649e",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/tests.log",
+      "originalSha256": "d1cfee7ec92cbb33a504924bdc6cd8bfc5bef9fdda386d50fb72c74e42340354",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/tests.log.gz",
+      "archiveSha256": "ce2bb8997c41eb2a071ef9dbd91dd578325412ecc6264856cca850782cf47ca1",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/tool-syntax.log",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/tool-syntax.log.gz",
+      "archiveSha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/tool-syntax.receipt.json",
+      "originalSha256": "f7c0309a983928d6ae84b634a2b1699223cbaba7f938fde4a70f9e3af9ad1072",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/tool-syntax.receipt.json",
+      "archiveSha256": "f7c0309a983928d6ae84b634a2b1699223cbaba7f938fde4a70f9e3af9ad1072",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/typecheck.json",
+      "originalSha256": "9475ac0095da90a7644928e57a18bce89682464979491ec6d7a5b55c53ee5dda",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/typecheck.json",
+      "archiveSha256": "9475ac0095da90a7644928e57a18bce89682464979491ec6d7a5b55c53ee5dda",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/typecheck.log",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/typecheck.log.gz",
+      "archiveSha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/typegen-isolated.json",
+      "originalSha256": "82d75f449d960a8e74045c37ef079751958e7933cc916734183940d51964eb75",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/typegen-isolated.json",
+      "archiveSha256": "82d75f449d960a8e74045c37ef079751958e7933cc916734183940d51964eb75",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/typegen-isolated.log",
+      "originalSha256": "adba4af9194e10e47dda75ff0fd0f8c2b756474896d0eba5612799c527ff372a",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/typegen-isolated.log.gz",
+      "archiveSha256": "f09b7a88bdf0e01472645c87312b0b93979869e726d2059e974820a6862d19f7",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/typegen.json",
+      "originalSha256": "5cbad75e3e78734ea8c3d2a3913809ba39838f087a0f2f2231ec93dfc0e8ea5f",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/typegen.json",
+      "archiveSha256": "5cbad75e3e78734ea8c3d2a3913809ba39838f087a0f2f2231ec93dfc0e8ea5f",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005/typegen.log",
+      "originalSha256": "adba4af9194e10e47dda75ff0fd0f8c2b756474896d0eba5612799c527ff372a",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/typegen.log.gz",
+      "archiveSha256": "f09b7a88bdf0e01472645c87312b0b93979869e726d2059e974820a6862d19f7",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005/visual-review.json",
+      "originalSha256": "f14e3a7157c003d11d9b7b3e1c10b920d6a706c4f4afff7032254618453e5917",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/core/visual-review.json",
+      "archiveSha256": "f14e3a7157c003d11d9b7b3e1c10b920d6a706c4f4afff7032254618453e5917",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005-source/source-review.json",
+      "originalSha256": "5a5776a48d6ec469db4a8ac74833a8a1715ff1c873ac78f9477f1b2845b5b03a",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/source/source-review.json.gz",
+      "archiveSha256": "be2434fcb59c031a52662ea8ddec5b305605395c261803178e01570358842789",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-source/source-review.md",
+      "originalSha256": "b2d0f95a3b8ca95f466c39a0b68dd78b311be883ac024782882414ae0e3ff747",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/source/source-review.md.gz",
+      "archiveSha256": "767fe3430237484bde8f3f766494b8ad8a0ea4359c023ae49903f07817f0be28",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-validator/check-prototype.py",
+      "originalSha256": "dda658570e0d94d66bbae941fdec624f7fc734a1b0e778b88b48e166f830bdb9",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/validation/check-prototype.py.gz",
+      "archiveSha256": "d06825de44fbc49a11c8193d2f1352c9260094298437a73a9591eccc1ddb7ff3",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-validator/final-check.py",
+      "originalSha256": "883b9ef5ae0ebe57f84ed53888842560899b0ef7768979186120d21b017b8d56",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/validation/final-check.py.gz",
+      "archiveSha256": "13d50cc5daade7653ff129bcc63ad0e866d34e680181aae1925022afb1aa049e",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-validator/static-v1-result.json",
+      "originalSha256": "12798bba12e13e8371329d1acfe25842a552e0bb357165d06ab097180dacf1df",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/validation/static-v1-result.json.gz",
+      "archiveSha256": "5413c5eee5e45736d48f700177060edd20db4ad9908e06a64d986e9c64a2e338",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-validator/static-v1.log",
+      "originalSha256": "744f027444152e102b10909d2577342e859ba130c2be5965eaac4dddfa6c8649",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/validation/static-v1.log.gz",
+      "archiveSha256": "c928974727a3d42f794cba271c5cfb30ff7ddda18d9b795707bf19ca9bc2b6a7",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-validator/static-v1.receipt.json",
+      "originalSha256": "1cbd1ec4fc885f9d5cf391fc2a6e3cc2750115e22a0ad5213147ce2b3d867660",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/validation/static-v1.receipt.json",
+      "archiveSha256": "1cbd1ec4fc885f9d5cf391fc2a6e3cc2750115e22a0ad5213147ce2b3d867660",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/baseline-download.json",
+      "originalSha256": "85ad0d54acd2a781a9aac30f1c4dc756e3e49a410c16606f0d017b2f2b8a1bb8",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/baseline-download.json",
+      "archiveSha256": "85ad0d54acd2a781a9aac30f1c4dc756e3e49a410c16606f0d017b2f2b8a1bb8",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/baseline-download.log",
+      "originalSha256": "7e0d22f0c6983ea07c6e7af0856e9fc670750ffbc2d7646f738c113678279c3e",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/baseline-download.log.gz",
+      "archiveSha256": "58f3e27db1abbe0b16ab29a4fec72635cf6dd9b9046b737019bdde1c162bc133",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/baseline-download.receipt.json",
+      "originalSha256": "bbb2ff6e225bced7eda2419c8d6ab481419fb32890dc62b897ff878a411dc037",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/baseline-download.receipt.json",
+      "archiveSha256": "bbb2ff6e225bced7eda2419c8d6ab481419fb32890dc62b897ff878a411dc037",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/baseline-globals.css",
+      "originalSha256": "2b80a0ab678b10ad97d10b63aece0f585618024ec3c17be734d3a742ee1a3ee2",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/baseline-globals.css.gz",
+      "archiveSha256": "eeab5b78721b7239c126487cc953ae67c0c9a6fbe9a206c2665b9b12839d7166",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/baseline-metadata.json",
+      "originalSha256": "de1b63687ca265c35e0d8d85e7ed72f8734cc012432ee6c35e27199f2c460f93",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/baseline-metadata.json",
+      "archiveSha256": "de1b63687ca265c35e0d8d85e7ed72f8734cc012432ee6c35e27199f2c460f93",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/checker-baseline-selfcheck.json",
+      "originalSha256": "ea4e435eb4e4a6a147ff6ba24e134d16bf97fc354c0f65b9219d35b273b8429b",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/checker-baseline-selfcheck.json.gz",
+      "archiveSha256": "becc887d1f64d05326cd58fd836eda3a783905ac1c90383616a21f473b9733f2",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/checker-baseline-selfcheck.log",
+      "originalSha256": "144b66f0abd95f2eeee30b6de0f542f6aa376bb5d9109e29aae0c5c45e10e81b",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/checker-baseline-selfcheck.log.gz",
+      "archiveSha256": "b5c5dc362a00cef25c30a82a8a456f90a87ed81c2078950d4d946ab5c7d374ae",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/checker-baseline-selfcheck.receipt.json",
+      "originalSha256": "297873517e63f09a49f9d9d05855b152084cbae7dfdaca60afd2c9c93b62ba3e",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/checker-baseline-selfcheck.receipt.json",
+      "archiveSha256": "297873517e63f09a49f9d9d05855b152084cbae7dfdaca60afd2c9c93b62ba3e",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/compare-output.py",
+      "originalSha256": "7f90c6d0072c4fdde4a6146bc66c94c22732ce0d89a7ba127b5dcd01b1e6c90e",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/compare-output.py.gz",
+      "archiveSha256": "e1a32b310f2a40bb7303ac801569584ac2a255e91a4cbd5f4082b6349f38a61f",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/design-collection-contract.json",
+      "originalSha256": "af8bd02d236c726845afc0e05e0109e5303bd257716ab3fb2d22284890dbb755",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/design-collection-contract.json.gz",
+      "archiveSha256": "0bc5a1680eaef393728dcac20cc43774d9930a5b0cfa9f921ed4a4993ac4b0dc",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/local-output-check.json",
+      "originalSha256": "c9ce2f4197c44bcf3445a436a7c257705d5947a43986b91c1ce703ab7f90ea3b",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/local-output-check.json.gz",
+      "archiveSha256": "342238d54daa3f640505698c7eaef286adb478448987b5b2c2ac63cfdea9cee9",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/local-output-check.log",
+      "originalSha256": "43d0961660e8ae9fe7f6f0fed880ecad9241bc4dce4bc21a80e35784b08a6e06",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/local-output-check.log.gz",
+      "archiveSha256": "ba884efdb69dd44b8f69e78181018e426f44669fb1bc51bcf9eb60d6a72dd137",
+      "encoding": "gzip-mtime0"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/local-output-check.receipt.json",
+      "originalSha256": "883eb9a26d5fe3e4966feee2ff7b2884620f29409a590d056d25ef5d8cb87030",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/local-output-check.receipt.json",
+      "archiveSha256": "883eb9a26d5fe3e4966feee2ff7b2884620f29409a590d056d25ef5d8cb87030",
+      "encoding": "none"
+    },
+    {
+      "original": "/tmp/xk-dc005-actions/source-baseline.json",
+      "originalSha256": "f3d7ee0dc1ae18e44583904df5115f7316582c1710da1b1c33fca47934a345dd",
+      "repositoryPath": "docs/reports/dc005-review-artifacts/actions/source-baseline.json.gz",
+      "archiveSha256": "1097245da674c7f197e7de3bbe592f916a1706bb18146448ebfa9af3a9eb24fd",
+      "encoding": "gzip-mtime0"
+    }
+  ],
+  "notDuplicated": [
+    {
+      "original": "/tmp/xk-dc005-actions/baseline-main-pages.zip",
+      "sha256": "cc43318ca9b284e26dfa8d98da349e9f30f0579886307f4a62b29dd043a61cbe",
+      "bytes": 6137037,
+      "reason": "Downloaded GitHub main artifact; identifier/digest/download receipt retained, full ZIP remains in temporary directory and is reproducible from GitHub."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc005-actions/compare-output.py",
+    "--download-baseline"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T06:04:31.738750+00:00",
+  "finishedAt": "2026-11-26T06:04:51.982618+00:00",
+  "processId": 81972,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 90.0,
+  "logFile": "/tmp/xk-dc005-actions/baseline-download.log",
+  "logSha256": "7e0d22f0c6983ea07c6e7af0856e9fc670750ffbc2d7646f738c113678279c3e",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

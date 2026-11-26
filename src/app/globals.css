@@ -40,6 +40,11 @@
 @source not "../../docs/task/dc003.md";
 @source not "../../docs/reports/dc003-implementation.md";
 @source not "../../docs/reports/dc003-artifacts";
+/* Local design-review documents must not add production utilities. */
+@source not "../../docs/01_design/design-collection/reviews";
+@source not "../../docs/task/dc005.md";
+@source not "../../docs/reports/dc005-brand-review.md";
+@source not "../../docs/reports/dc005-review-artifacts";
 
 :root {
   color-scheme: light;
