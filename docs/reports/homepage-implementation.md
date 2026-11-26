@@ -14,7 +14,7 @@
 | 文件讀取版本 | `3996730176e4ad7237c66f541d61405f2667934e` |
 | Commit / Pull Request | 待最終交付填入 |
 
-閱讀 README、AGENTS、[歷史實作紀錄](implementation-notes.md)、[品牌設計系統](brand-design-system.md) 與目前可用的任務原稿。`docs/task/task001.md` 已不存在，原文位於 [task001-implementation-notes.md](task/task001-implementation-notes.md)，另有繁體中文版本；`task002.md` 是零位元組空檔，完整規格為 [task002.zh-TW.md](task/task002.zh-TW.md)。本次修正 README、AGENTS 及指南引用，保留實際任務原稿與歷史紀錄內容。
+閱讀 README、AGENTS、[歷史實作紀錄](implementation-notes.md)、[品牌設計系統](brand-design-system.md) 與目前可用的任務原稿。`docs/task/task001.md` 已不存在，原文位於 [task001-implementation-notes.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md)，另有繁體中文版本；`task002.md` 是零位元組空檔，完整規格為 [task002.zh-TW.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)。本次修正 README、AGENTS 及指南引用，保留實際任務原稿與歷史紀錄內容。
 
 以下八個 Week 02 主題均已讀取，實際位置為 `doc/01_business-plan/week-02/`：
 

@@ -43,6 +43,8 @@
 
 ## 證據保存
 
+文件整理收斂：[DOC-006 一致性與交叉引用檢查](doc006-consistency.md)。
+
 各報告旁的 JSON、壓縮檔、manifest 及原始工具依既有路徑保留；畫面見 [screenshots](../screenshots)。不可把不同版本的 PASS 改成當前版本；不得刪除原始失敗、重驗資料或以本索引代替實際記錄。
 
 早期 [implementation-notes.md](implementation-notes.md) 是 Task 001～008 及協作流程的歷史快照，與 [延續紀錄](../98_decisions/implementation-notes.md) 有重疊，原檔保留以支援來源追溯；後續不並行追加。完整閱讀順序見 [歷史與重複文件索引](../98_decisions/README.md)。

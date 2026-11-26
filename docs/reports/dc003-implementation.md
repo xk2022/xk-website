@@ -4,7 +4,7 @@
 
 ## 來源、版本與實作
 
-起始 main `794b076e2a0b11b05aaf86379d8387c02f6913b3` 已含 DC-002／PR #33 與 DOC-003／PR #35。交付前同步已合併 PR #36／#37，base 更新為 `aa100adfad24b74ccb39d2df811b613c4d6a15ef`，只含文件索引與集中 Roadmap；保留新版文件結構。Roadmap 的 DOC-006 仍未執行，本輪依當前使用者明確指示執行 DC-003，原工作包前置 DC-002 已滿足。
+起始 main `794b076e2a0b11b05aaf86379d8387c02f6913b3` 已含 DC-002／PR #33 與 DOC-003／PR #35。交付前同步已合併 PR #36／#37，PR 建立後 main 又合併 DOC-006／PR #38；將已核准的文件變更合入 feature 並解決 Roadmap 衝突，最終 base 為 `0991072feebb142f52393946d0f1fa93c6f22a77`。這些變更只含索引／歷史交叉連結／Roadmap，保留新版文件與原工作包前置 DC-002，未合併本功能 PR 或改動 main。
 
 公司 main `cdb1ec70f1fa641f3022f53994ab6da83c4333de`／tree `0a8ff0b2239e55c9f11dc556d3de31f1c9013dde`。與前輪 `5be640a` 比較僅三 commits／四檔文件變更，已補讀；品牌／正式命名與部署／服務／定價 Blob 未變，沿用同版審閱。新知識庫規劃不作 Gallery 業務內容。最新完整 tree 仍無 AGENTS.md；未修改該 Repository。細節見證據 `company-review.json`。
 
@@ -78,3 +78,5 @@ Root 實際查看了 10 組指定畫面的對照裁切／縮圖、兩寬共用 F
 Known Issues：沒有未修復的本輪功能 blocker。實機、Safari／Firefox、完整真人讀屏／WCAG 認證及場域效能不屬本包已執行項目，不宣稱通過。Heritage／Luxury、StyleSwitcher、跨系列 reset／portal／print 隔離與新品牌角色審閱仍待後續包；正式 Privacy、價格／收件／索引核准保留原門檻。沒有收到本輪 merge／deploy 授權；只有 PR CI 不代表已部署。
 
 最後 staged 檢查發現新 directory config 多一個 EOF LF；首次命令未單獨保存 exit，明記未知，沒有以外層後續命令的 0 推認通過。僅移除一個多餘 LF，前面所有 bytes 完全相同，附 eof-format-bridge；不因格式改動重跑無關網站 suite。交付 source 以 source-delivery-final 為準，原檢查與 source-final 保留。
+
+PR #39 建立後的 DOC-006 同步只有文件，所有 176 source bytes 仍等於交付 fingerprint。原六指令／兩模式驗收依已記錄 source 與 runtime bridge 適用，最新提交的 CI／artifact 另於 PR 核對，不因文件衝突重跑無關 UI。
