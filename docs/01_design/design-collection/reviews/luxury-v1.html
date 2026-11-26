@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="zh-TW" class="lx-document">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Luxury v1 本機品牌審閱原型。深色主體、版面與狀態角色尚未核准；不是公開系列網站。">
+  <link rel="icon" href="../../../../public/brand/source/xk-logo-symbol.svg" type="image/svg+xml">
+  <title>Luxury v1 — 未核准的本機品牌審閱原型</title>
+  <!-- Review-only, not an application entry point or public deployment asset.
+       Source baseline: xk-website main@8ba299a5a48da41ca7f4d88d9b2149d7c83f6584.
+       Public copy: src/config/homepage.ts, services.ts, website-showcases.ts, site.ts.
+       Proposal: docs/01_design/design-collection/design-systems.md, Luxury sections.
+       No Heritage implementation is a source. No script, storage, backend, remote font or new image. -->
+  <style>
+    .lx-document { scroll-padding-top: 24px; }
+    .lx-page {
+      --lx-background: #0C1017;
+      --lx-surface: #151B24;
+      --lx-foreground: #F5F1E8;
+      --lx-muted: #B8B1A5;
+      --lx-gold: #C8A96B;
+      --lx-cyan: #06B6D4;
+      --lx-rule: #3A404A;
+      --lx-control: #8B95A5;
+      --lx-error: #FDA4AF;
+      --lx-success: #86EFAC;
+      margin: 0;
+      background: var(--lx-background);
+      color: var(--lx-foreground);
+      color-scheme: dark;
+      font-family: Inter, 'Noto Sans TC', 'Noto Sans CJK TC', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-wrap: break-word;
+    }
+    .lx-page *, .lx-page *::before, .lx-page *::after { box-sizing: border-box; }
+    .lx-page :where(h1, h2, h3, h4, p, figure) { margin: 0; }
+    .lx-page a { color: inherit; text-underline-offset: 5px; }
+    .lx-page :where(a, summary, input, button, [tabindex]):focus-visible { outline: 3px solid var(--lx-cyan); outline-offset: 5px; }
+    .lx-page a:hover { text-decoration-thickness: 2px; }
+    .lx-container { width: 100%; max-width: 1376px; margin-inline: auto; padding-inline: clamp(20px, 4vw, 48px); }
+    .lx-reading { max-width: 46rem; margin-inline: auto; }
+    .lx-skip { position: absolute; top: 12px; left: 20px; z-index: 10; padding: 12px 20px; transform: translateY(-180%); background: #FFFFFF; color: #101828 !important; font-weight: 600; }
+    .lx-skip:focus { transform: translateY(0); outline-color: #2563EB !important; }
+    .lx-draft-notice { padding-block: 12px; background: #FFFFFF; color: #101828; border-bottom: 1px solid #101828; font-size: 13px; line-height: 1.7; }
+    .lx-draft-notice p { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+    .lx-draft-notice strong { letter-spacing: 0.08em; }
+    .lx-header { background: #FFFFFF; color: #101828; color-scheme: light; }
+    .lx-header :focus-visible { outline-color: #2563EB !important; }
+    .lx-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-block: 24px; }
+    .lx-brand { display: inline-flex; align-items: center; min-height: 44px; width: 260px; max-width: 100%; flex-shrink: 0; }
+    .lx-brand img { display: block; width: 100%; height: auto; }
+    .lx-desktop-nav { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
+    .lx-desktop-nav a { display: inline-flex; align-items: center; min-height: 44px; padding-block: 8px; font-size: 14px; text-decoration: none; }
+    .lx-desktop-nav a:hover { color: #2563EB; text-decoration: underline; }
+    .lx-mobile-menu { display: none; border-top: 1px solid #D0D5DD; }
+    .lx-mobile-menu summary { padding-block: 12px; min-height: 48px; cursor: pointer; font-size: 14px; font-weight: 600; }
+    .lx-mobile-menu ul { margin: 0; padding: 0 0 16px; list-style: none; }
+    .lx-mobile-menu a { display: flex; align-items: center; min-height: 44px; padding-block: 8px; text-decoration: underline; }
+    .lx-eyebrow { font-size: 12px; font-weight: 600; line-height: 1.7; letter-spacing: 0.14em; color: var(--lx-muted); }
+    .lx-accent-rule { display: block; width: 64px; height: 2px; margin-inline: auto; background: var(--lx-gold); }
+    .lx-hero { padding-block: 88px 96px; text-align: center; }
+    .lx-hero .lx-eyebrow { margin-top: 28px; }
+    .lx-hero h1 { max-width: 17ch; margin: 24px auto 0; font-size: clamp(36px, 5vw, 64px); font-weight: 600; line-height: 1.35; letter-spacing: -0.035em; }
+    .lx-hero-description { max-width: 44rem; margin: 28px auto 0 !important; color: var(--lx-muted); font-size: 18px; line-height: 1.8; }
+    .lx-hero-action { display: flex; justify-content: center; margin-top: 36px; }
+    .lx-button { display: inline-flex; align-items: center; justify-content: center; gap: 16px; min-height: 52px; max-width: 100%; padding: 14px 28px; border: 1px solid var(--lx-cyan); border-radius: 2px; background: var(--lx-cyan); color: var(--lx-background) !important; font-family: inherit; font-size: 15px; font-weight: 600; line-height: 1.6; text-align: center; text-decoration: none; }
+    .lx-button:hover { background: var(--lx-foreground); border-color: var(--lx-foreground); }
+    .lx-hero-note { max-width: 42rem; margin: 16px auto 0 !important; color: var(--lx-muted); font-size: 13px; }
+    .lx-section { padding-block: 88px; }
+    .lx-section-heading { max-width: 48rem; margin: 0 auto 48px; text-align: center; }
+    .lx-section-heading h2 { margin-top: 16px; font-size: clamp(28px, 3.5vw, 40px); font-weight: 500; line-height: 1.5; letter-spacing: -0.025em; }
+    .lx-section-heading > p:last-child { margin-top: 20px; color: var(--lx-muted); }
+    .lx-services { padding-top: 72px; border-top: 1px solid var(--lx-rule); }
+    .lx-service { padding: 40px 48px; border-top: 1px solid var(--lx-rule); }
+    .lx-service:nth-child(odd) { background: var(--lx-surface); }
+    .lx-service:last-child { border-bottom: 1px solid var(--lx-rule); }
+    .lx-service-heading { max-width: 48rem; margin-inline: auto; text-align: center; }
+    .lx-service-heading .lx-eyebrow { text-transform: uppercase; }
+    .lx-service-heading h3 { margin-top: 10px; font-size: clamp(24px, 2.5vw, 32px); font-weight: 500; line-height: 1.5; }
+    .lx-service-summary { margin-top: 14px !important; color: var(--lx-muted); }
+    .lx-service-details { max-width: 64rem; margin: 24px auto 0; border-top: 1px solid var(--lx-control); }
+    .lx-service-details > summary { min-height: 48px; padding-block: 12px; font-size: 14px; cursor: pointer; }
+    .lx-service-details[open] > summary { color: var(--lx-cyan); }
+    .lx-service-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; padding-block: 12px 20px; }
+    .lx-service-body h4 { margin-bottom: 12px; font-size: 16px; font-weight: 600; }
+    .lx-service-body p { color: var(--lx-muted); }
+    .lx-service-body ul { list-style: disc; padding-left: 20px; margin: 0; color: var(--lx-muted); }
+    .lx-service-body li + li { margin-top: 8px; }
+    .lx-service-body a { margin-top: 16px; }
+    .lx-link { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; max-width: 100%; padding-block: 8px; color: var(--lx-cyan) !important; font-weight: 500; overflow-wrap: anywhere; text-decoration: underline; }
+    .lx-link:hover { color: var(--lx-foreground) !important; }
+    .lx-works { padding-top: 8px; }
+    .lx-work { margin-top: 72px; }
+    .lx-work:first-of-type { margin-top: 0; }
+    .lx-work-image { display: block; width: 100%; height: auto; border: 1px solid var(--lx-rule); background: #FFFFFF; }
+    .lx-work-caption { margin-top: 12px; color: var(--lx-muted); font-size: 13px; }
+    .lx-work-information { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 48px; align-items: start; padding-top: 28px; }
+    .lx-work-information h3 { margin-top: 12px; font-size: 30px; font-weight: 500; line-height: 1.5; }
+    .lx-work-copy { min-width: 0; }
+    .lx-work-note { margin-top: 16px !important; color: var(--lx-muted); font-size: 14px; }
+    .lx-work-copy .lx-link { margin-top: 16px; }
+    .lx-work-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+    .lx-badge { display: inline-flex; max-width: 100%; padding: 4px 10px; border: 1px solid var(--lx-control); border-radius: 2px; color: var(--lx-muted); font-size: 12px; line-height: 1.7; }
+    .lx-portfolio-link { margin-top: 44px !important; text-align: center; }
+    .lx-cooperation { border-block: 1px solid var(--lx-rule); background: var(--lx-surface); }
+    .lx-process { max-width: 56rem; margin-inline: auto; }
+    .lx-process-details { border-top: 1px solid var(--lx-control); }
+    .lx-process-details:last-child { border-bottom: 1px solid var(--lx-control); }
+    .lx-process-details summary { min-height: 64px; padding-block: 18px; cursor: pointer; }
+    .lx-process-label { margin-left: 8px; font-size: 18px; font-weight: 500; }
+    .lx-process-english { margin-left: 16px; color: var(--lx-muted); font-size: 13px; }
+    .lx-process-details > p { padding: 0 24px 24px; color: var(--lx-muted); }
+    .lx-process-details[open] .lx-process-label { color: var(--lx-cyan); }
+    .lx-cta { padding-block: 96px; text-align: center; }
+    .lx-cta h2 { max-width: 18ch; margin: 24px auto 0; font-size: clamp(32px, 4vw, 48px); font-weight: 500; line-height: 1.5; }
+    .lx-cta-description { max-width: 44rem; margin: 24px auto 0 !important; color: var(--lx-muted); }
+    .lx-cta-action { margin-top: 32px; }
+    .lx-cta .lx-link { margin-top: 16px; }
+    .lx-cta-note { max-width: 42rem; margin: 20px auto 0 !important; color: var(--lx-muted); font-size: 13px; }
+    .lx-state-review { border-top: 1px solid var(--lx-rule); background: var(--lx-surface); }
+    .lx-review-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+    .lx-review-grid h3 { font-size: 20px; font-weight: 500; line-height: 1.6; }
+    .lx-review-grid p { margin-top: 16px; color: var(--lx-muted); }
+    .lx-review-list { margin: 20px 0 0; padding-left: 20px; color: var(--lx-muted); }
+    .lx-review-list li + li { margin-top: 12px; }
+    .lx-state-samples { min-width: 0; padding: 28px; border: 1px solid var(--lx-control); background: var(--lx-background); }
+    .lx-field { margin-top: 24px; }
+    .lx-field label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 500; }
+    .lx-field input { display: block; width: 100%; min-width: 0; min-height: 48px; padding: 12px; border: 1px solid var(--lx-control); border-radius: 2px; background: var(--lx-surface); color: var(--lx-foreground); font: inherit; line-height: 1.7; }
+    .lx-field input[aria-invalid="true"] { border: 2px solid var(--lx-error); }
+    .lx-field p { margin-top: 8px; font-size: 13px; }
+    .lx-field .lx-error { color: var(--lx-error); }
+    .lx-sample-choices { min-width: 0; padding: 0; margin: 28px 0 0; border: 0; }
+    .lx-sample-choices legend { margin-bottom: 12px; font-size: 14px; font-weight: 500; }
+    .lx-choice { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px; padding: 12px; min-height: 48px; border: 1px solid var(--lx-control); background: var(--lx-surface); }
+    .lx-choice + .lx-choice { margin-top: 12px; }
+    .lx-choice input { width: 20px; height: 20px; margin: 0; accent-color: var(--lx-cyan); }
+    .lx-choice label { display: inline-flex; align-items: center; min-height: 32px; font-size: 14px; }
+    .lx-selection-state { display: none; color: var(--lx-cyan); font-size: 13px; font-weight: 600; }
+    .lx-choice:has(input:checked) { border: 2px solid var(--lx-cyan); }
+    .lx-choice:has(input:checked) .lx-selection-state { display: inline; }
+    .lx-disabled-example { margin-top: 24px; }
+    .lx-button:disabled { opacity: 1; border-color: var(--lx-control); background: var(--lx-surface); color: var(--lx-muted) !important; cursor: not-allowed; }
+    .lx-disabled-example p { margin-top: 10px; font-size: 13px; }
+    .lx-state-success { margin-top: 20px !important; color: var(--lx-success) !important; font-size: 14px; }
+    .lx-sources { margin-top: 48px; padding-block: 24px; border-top: 1px solid var(--lx-control); }
+    .lx-sources summary { min-height: 44px; padding-block: 8px; cursor: pointer; font-weight: 500; }
+    .lx-sources ul { margin: 20px 0 0; padding-left: 20px; color: var(--lx-muted); font-size: 14px; }
+    .lx-sources li + li { margin-top: 12px; }
+    .lx-sources code { font-family: ui-monospace, monospace; font-size: 13px; overflow-wrap: anywhere; }
+    .lx-palette { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 24px; }
+    .lx-palette > div { min-width: 0; padding: 12px; border: 1px solid var(--lx-control); }
+    .lx-palette dt { font-size: 13px; }
+    .lx-palette dd { margin: 4px 0 0; color: var(--lx-muted); font-size: 13px; }
+    .lx-footer { padding-block: 48px 24px; background: #101828; color: #FFFFFF; border-top: 1px solid #8B95A5; }
+    .lx-footer :focus-visible { outline-color: #FFFFFF; }
+    .lx-footer-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; }
+    .lx-footer-brand { display: inline-flex; align-items: center; width: 180px; max-width: 100%; min-height: 44px; }
+    .lx-footer-brand img { display: block; width: 100%; height: auto; }
+    .lx-footer-slogan { max-width: 28rem; font-size: 24px; font-weight: 500; line-height: 1.6; }
+    .lx-footer-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; margin-top: 32px; padding-top: 32px; border-top: 1px solid #8B95A5; }
+    .lx-footer-directory h2 { font-size: 16px; font-weight: 500; }
+    .lx-footer-directory ul { display: flex; flex-wrap: wrap; gap: 4px 24px; margin: 12px 0 0; padding: 0; list-style: none; }
+    .lx-footer-directory a { display: inline-flex; align-items: center; min-height: 44px; padding-block: 8px; font-size: 14px; }
+    .lx-footer-note { margin-top: 28px !important; color: #FFFFFF; font-size: 13px; }
+    @media (max-width: 900px) {
+      .lx-header-inner { padding-block: 20px; }
+      .lx-brand { width: 230px; }
+      .lx-desktop-nav { gap: 8px 20px; }
+      .lx-work-information { gap: 28px; }
+      .lx-review-grid { gap: 28px; }
+    }
+    @media (max-width: 700px) {
+      .lx-header-inner { padding-block: 18px; }
+      .lx-brand { width: 220px; }
+      .lx-desktop-nav { display: none; }
+      .lx-mobile-menu { display: block; }
+      .lx-hero { padding-block: 40px 52px; }
+      .lx-hero .lx-eyebrow { margin-top: 20px; }
+      .lx-hero h1 { margin-top: 20px; font-size: 36px; line-height: 1.45; }
+      .lx-hero-description { margin-top: 24px !important; font-size: 16px; line-height: 1.7; }
+      .lx-hero-action { margin-top: 28px; }
+      .lx-hero-action .lx-button { width: 100%; }
+      .lx-hero-note { margin-top: 14px !important; }
+      .lx-section { padding-block: 48px; }
+      .lx-section-heading { margin-bottom: 28px; text-align: left; }
+      .lx-section-heading h2 { margin-top: 12px; font-size: 28px; }
+      .lx-section-heading > p:last-child { margin-top: 16px; }
+      .lx-service { padding: 28px 20px; }
+      .lx-service-heading { text-align: left; }
+      .lx-service-heading h3 { font-size: 24px; }
+      .lx-service-summary { margin-top: 12px !important; }
+      .lx-service-details { margin-top: 20px; }
+      .lx-service-body { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+      .lx-works { padding-top: 12px; }
+      .lx-work { margin-top: 40px; }
+      .lx-work-information { grid-template-columns: minmax(0, 1fr); gap: 20px; padding-top: 22px; }
+      .lx-work-information h3 { margin-top: 10px; font-size: 26px; }
+      .lx-work-note { margin-top: 12px !important; }
+      .lx-work-copy .lx-link { margin-top: 12px; }
+      .lx-portfolio-link { margin-top: 28px !important; text-align: left; }
+      .lx-process-details summary { min-height: 60px; padding-block: 16px; }
+      .lx-process-label { margin-left: 4px; font-size: 17px; }
+      .lx-process-english { display: block; margin: 4px 0 0 24px; }
+      .lx-process-details > p { padding: 0 16px 20px; }
+      .lx-cta { padding-block: 56px; }
+      .lx-cta h2 { font-size: 32px; }
+      .lx-cta-description { margin-top: 20px !important; }
+      .lx-cta-action { margin-top: 28px; }
+      .lx-cta-action .lx-button { width: 100%; }
+      .lx-review-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+      .lx-state-samples { padding: 20px; }
+      .lx-palette { grid-template-columns: minmax(0, 1fr); }
+      .lx-footer { padding-top: 32px; }
+      .lx-footer-intro, .lx-footer-directory { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+      .lx-footer-brand { width: 150px; }
+      .lx-footer-slogan { font-size: 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .lx-document { scroll-behavior: auto; }
+      .lx-page *, .lx-page *::before, .lx-page *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body class="lx-page">
+  <a class="lx-skip" href="#lx-main-content">跳至主要內容</a>
+  <div class="lx-draft-notice">
+    <div class="lx-container">
+      <p><strong lang="en">DRAFT / NOT APPROVED</strong><span>Luxury v1 本機品牌審閱原型；未核准、未公開，不是已完成的設計系列。</span></p>
+    </div>
+  </div>
+  <header class="lx-header">
+    <div class="lx-container lx-header-inner">
+      <a class="lx-brand" href="https://www.xplorekaleidoscope.com/" aria-label="Xplore Kaleidoscope 現有 Modern 官網首頁">
+        <img src="../../../../public/brand/source/xk-logo-horizontal.svg" width="850" height="204" alt="Xplore Kaleidoscope">
+      </a>
+      <nav class="lx-desktop-nav" aria-label="本機 Luxury 審閱章節">
+        <a href="#lx-services">服務</a><a href="#lx-works">作品</a><a href="#lx-cooperation">合作方式</a><a href="#lx-state-review">審閱範圍</a>
+      </nav>
+    </div>
+    <details class="lx-mobile-menu">
+      <summary class="lx-container">網站目錄（展開／收合）</summary>
+      <nav class="lx-container" aria-label="手機本機審閱目錄">
+        <ul><li><a href="#lx-services">服務</a></li><li><a href="#lx-works">作品</a></li><li><a href="#lx-cooperation">合作方式</a></li><li><a href="#lx-state-review">審閱範圍與狀態樣本</a></li><li><a href="https://www.xplorekaleidoscope.com/contact/">前往現有 Modern 聯絡頁</a></li></ul>
+      </nav>
+    </details>
+  </header>
+  <main id="lx-main-content" tabindex="-1">
+    <!-- Public copy: homepageHero. Single focal headline, no asymmetrical editorial aside. -->
+    <section class="lx-hero" aria-labelledby="lx-page-title" data-source="src/config/homepage.ts#homepageHero">
+      <div class="lx-container">
+        <span class="lx-accent-rule" aria-hidden="true"></span>
+        <p class="lx-eyebrow" lang="en">LUXURY / A PRESENTATION STUDY</p>
+        <h1 id="lx-page-title">整合網站、企業系統與 AI，打造真正有價值的數位解決方案。</h1>
+        <p class="lx-hero-description">從企業網站、Java 系統開發到 AI 應用整合，協助企業建立穩定、可擴充且符合實際營運需求的數位服務。</p>
+        <div class="lx-hero-action"><a class="lx-button" href="https://www.xplorekaleidoscope.com/contact/#contact-form">前往正式聯絡頁 <span aria-hidden="true">↗</span></a></div>
+        <p class="lx-hero-note">此入口前往既有 Modern 官網；本原型只供視覺審閱，不收集或傳送詢問內容。</p>
+      </div>
+    </section>
+    <!-- Five existing Services directions; narrative panels, with real native details. -->
+    <section id="lx-services" class="lx-section lx-services" aria-labelledby="lx-services-title" data-source="src/config/services.ts#serviceCategories">
+      <div class="lx-container">
+        <div class="lx-section-heading">
+          <p class="lx-eyebrow" lang="en">SERVICES / FROM NEED TO SCOPE</p>
+          <h2 id="lx-services-title">從需求出發，連結每一項技術。</h2>
+          <p>五類服務可獨立規劃，也能依企業需求組合。從使用者看見的介面，到系統、資料與部署流程，選擇適合當前階段的技術範圍。</p>
+        </div>
+        <article class="lx-service">
+          <div class="lx-service-heading"><p class="lx-eyebrow" lang="en">Website Development</p><h3>網站與數位產品開發</h3><p class="lx-service-summary">建立品牌入口，讓資訊與服務清楚呈現。</p></div>
+          <details class="lx-service-details" open>
+            <summary>服務範圍與適用情境</summary>
+            <div class="lx-service-body">
+              <div><h4>可討論範圍</h4><ul><li>官方網站與企業網站開發</li><li>Responsive Web Design</li><li>前端介面與互動設計</li><li>Next.js 與 React 網站開發</li><li>TypeScript 應用</li><li>SEO 基礎建置</li><li>網站效能與可及性改善</li></ul></div>
+              <div><h4>從使用情境開始</h4><p>從企業形象到網站應用，整合品牌內容、介面與前端技術，讓訪客在不同裝置上都能理解服務、找到所需資訊。</p><p>適合需要建立品牌形象、改善網站體驗，或開發網站應用的企業。</p><a class="lx-link" href="https://www.xplorekaleidoscope.com/services/#website-development" aria-label="查看完整服務：網站與數位產品開發（現有 Modern 官網）">查看完整服務 <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </details>
+        </article>
+        <article class="lx-service">
+          <div class="lx-service-heading"><p class="lx-eyebrow" lang="en">Java Enterprise Development</p><h3>Java 企業系統開發</h3><p class="lx-service-summary">以可維護的商業邏輯，支援企業日常營運。</p></div>
+          <details class="lx-service-details">
+            <summary>服務範圍與適用情境</summary>
+            <div class="lx-service-body">
+              <div><h4>可討論範圍</h4><ul><li>Java 應用程式開發</li><li>Spring Boot 系統開發</li><li>REST API 設計與整合</li><li>企業應用系統</li><li>後端商業邏輯</li><li>系統維護與功能擴充</li></ul></div>
+              <div><h4>從使用情境開始</h4><p>依業務流程與系統需求，規劃 Java 應用、後端邏輯及 API，兼顧既有系統維護與後續功能擴充。</p><p>適合需要企業後端開發、Java 系統維護，或既有系統升級的企業。</p><a class="lx-link" href="https://www.xplorekaleidoscope.com/services/#java-enterprise" aria-label="查看完整服務：Java 企業系統開發（現有 Modern 官網）">查看完整服務 <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </details>
+        </article>
+        <article class="lx-service">
+          <div class="lx-service-heading"><p class="lx-eyebrow" lang="en">System Integration &amp; Database</p><h3>系統整合與資料管理</h3><p class="lx-service-summary">連結系統與資料，讓跨系統流程更清楚。</p></div>
+          <details class="lx-service-details">
+            <summary>服務範圍與適用情境</summary>
+            <div class="lx-service-body">
+              <div><h4>可討論範圍</h4><ul><li>系統整合</li><li>API 串接</li><li>資料庫規劃與整合</li><li>資料交換與處理</li><li>既有系統現代化</li><li>跨系統工作流程整合</li></ul></div>
+              <div><h4>從使用情境開始</h4><p>從資料流向與系統邊界出發，規劃 API 串接、資料交換及資料庫整合，協助既有系統逐步演進。</p><p>適合有多套系統需要串接、資料分散，或需要重新規劃資訊架構的企業。</p><a class="lx-link" href="https://www.xplorekaleidoscope.com/services/#system-integration" aria-label="查看完整服務：系統整合與資料管理（現有 Modern 官網）">查看完整服務 <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </details>
+        </article>
+        <article class="lx-service">
+          <div class="lx-service-heading"><p class="lx-eyebrow" lang="en">AI &amp; Automation</p><h3>AI 應用與流程自動化</h3><p class="lx-service-summary">將 AI 連結實際需求，探索流程改善的可能。</p></div>
+          <details class="lx-service-details">
+            <summary>服務範圍與適用情境</summary>
+            <div class="lx-service-body">
+              <div><h4>可討論範圍</h4><ul><li>AI 應用開發</li><li>LLM 應用整合</li><li>AI 輔助工作流程</li><li>智慧資料處理</li><li>企業流程自動化</li><li>AI 與既有系統整合</li></ul></div>
+              <div><h4>從使用情境開始</h4><p>評估 AI 與既有工作流程的結合方式，從資訊處理、LLM 應用到自動化整合，依使用情境規劃合適方案。</p><p>適合希望運用 AI 改善資訊搜尋、文件處理及內部工作流程的企業。</p><a class="lx-link" href="https://www.xplorekaleidoscope.com/services/#ai-automation" aria-label="查看完整服務：AI 應用與流程自動化（現有 Modern 官網）">查看完整服務 <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </details>
+        </article>
+        <article class="lx-service">
+          <div class="lx-service-heading"><p class="lx-eyebrow" lang="en">Cloud &amp; Infrastructure</p><h3>雲端與基礎架構</h3><p class="lx-service-summary">從開發延伸至部署，規劃適合專案的運行環境。</p></div>
+          <details class="lx-service-details">
+            <summary>服務範圍與適用情境</summary>
+            <div class="lx-service-body">
+              <div><h4>可討論範圍</h4><ul><li>Docker 容器化</li><li>應用程式部署規劃</li><li>雲端架構整合</li><li>CI/CD 工作流程</li><li>基礎架構與部署維護</li><li>系統可擴充性規劃</li></ul></div>
+              <div><h4>從使用情境開始</h4><p>依應用需求規劃容器化、部署與交付流程，並確認維護範圍及支援條件，為後續擴充建立基礎。</p><p>適合需要部署應用、整理交付流程，或規劃雲端運行環境的企業。</p><a class="lx-link" href="https://www.xplorekaleidoscope.com/services/#cloud-infrastructure" aria-label="查看完整服務：雲端與基礎架構（現有 Modern 官網）">查看完整服務 <span aria-hidden="true">↗</span></a></div>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+    <!-- Real preview images remain uncropped, unfiltered and at their original aspect ratio. -->
+    <section id="lx-works" class="lx-section lx-works" aria-labelledby="lx-works-title" data-source="src/config/website-showcases.ts#showcaseSettings.featuredIds">
+      <div class="lx-container">
+        <div class="lx-section-heading"><p class="lx-eyebrow" lang="en">SELECTED WEBSITE PRESENTATIONS</p><h2 id="lx-works-title">讓作品成為閱讀的主焦點。</h2><p>探索品牌網站展示、網站範例與技術規劃，了解不同情境的網站呈現方式。以下保留原有精選順序與展示性質，不代表客戶委託或交付成果。</p></div>
+        <article class="lx-work" aria-labelledby="lx-march-title" data-showcase-id="march-tangbao">
+          <figure><img class="lx-work-image" src="../../../../public/images/showcases/march-tangbao.webp" width="1280" height="800" loading="lazy" alt="三月手工湯包展示網站的桌面版首頁畫面"><figcaption class="lx-work-caption">三月手工湯包 · 現有本地網站預覽，餐點素材為示意。</figcaption></figure>
+          <div class="lx-work-information">
+            <div><div class="lx-work-meta"><span class="lx-badge">自製品牌展示</span><span class="lx-badge">可瀏覽</span></div><h3 id="lx-march-title">三月手工湯包</h3></div>
+            <div class="lx-work-copy"><p>以湯包、冷滷味與門市資訊串起餐飲內容，展示餐點瀏覽與預留訊息整理。</p><p class="lx-work-note">自製品牌展示案例；餐點素材為示意，非客戶交付紀錄。</p><a class="lx-link" href="https://www.xplorekaleidoscope.com/portfolio/showcases/march-tangbao/" aria-label="查看作品介紹：三月手工湯包（現有 Modern 官網）">查看作品介紹 <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="lx-work" aria-labelledby="lx-hongjia-title" data-showcase-id="hongjia-birdnest">
+          <figure><img class="lx-work-image" src="../../../../public/images/showcases/hongjia-birdnest.webp" width="1280" height="800" loading="lazy" alt="宏家燕窩展示網站的桌面版首頁畫面"><figcaption class="lx-work-caption">宏家燕窩 · 現有本地網站預覽，送禮與洽詢情境為模擬。</figcaption></figure>
+          <div class="lx-work-information">
+            <div><div class="lx-work-meta"><span class="lx-badge">自製品牌展示</span><span class="lx-badge">可瀏覽</span></div><h3 id="lx-hongjia-title">宏家燕窩</h3></div>
+            <div class="lx-work-copy"><p>從親友送禮與企業贈禮情境出發，展示送禮資訊引導與模擬洽詢摘要。</p><p class="lx-work-note">自製品牌展示案例；洽詢摘要僅供模擬，實際品項、價格與配送待品牌確認。</p><a class="lx-link" href="https://www.xplorekaleidoscope.com/portfolio/showcases/hongjia-birdnest/" aria-label="查看作品介紹：宏家燕窩（現有 Modern 官網）">查看作品介紹 <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="lx-work" aria-labelledby="lx-honest-title" data-showcase-id="honest-diecut">
+          <figure><img class="lx-work-image" src="../../../../public/images/showcases/honest-diecut.webp" width="1280" height="800" loading="lazy" alt="宏能興業展示網站的桌面版首頁畫面"><figcaption class="lx-work-caption">宏能興業 · 現有本地網站預覽，加工樣本與詢價為示意。</figcaption></figure>
+          <div class="lx-work-information">
+            <div><div class="lx-work-meta"><span class="lx-badge">自製品牌展示</span><span class="lx-badge">可瀏覽</span></div><h3 id="lx-honest-title">宏能興業</h3></div>
+            <div class="lx-work-copy"><p>整理模切沖型、保護膜與工業標籤等服務，展示製造業網站的資訊與需求引導。</p><p class="lx-work-note">自製品牌展示案例；詢價摘要僅供模擬，不會寄送或收件。</p><a class="lx-link" href="https://www.xplorekaleidoscope.com/portfolio/showcases/honest-diecut/" aria-label="查看作品介紹：宏能興業（現有 Modern 官網）">查看作品介紹 <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <p class="lx-portfolio-link"><a class="lx-link" href="https://www.xplorekaleidoscope.com/portfolio/">前往現有 Modern 作品展示 <span aria-hidden="true">↗</span></a></p>
+      </div>
+    </section>
+    <!-- Existing five process steps, disclosed individually rather than a numbered editorial timeline. -->
+    <section id="lx-cooperation" class="lx-section lx-cooperation" aria-labelledby="lx-cooperation-title" data-source="src/config/services.ts#serviceProcessSteps">
+      <div class="lx-container">
+        <div class="lx-section-heading"><p class="lx-eyebrow" lang="en">WORKING TOGETHER</p><h2 id="lx-cooperation-title">讓合作的每一步，都有清楚的方向。</h2><p>先理解需求，再確認方案與交付範圍，從開發、測試到後續改善持續溝通。工期、報價與合作條件依個別專案確認。</p></div>
+        <div class="lx-process">
+          <details class="lx-process-details" open><summary><span class="lx-process-label">需求了解</span><span class="lx-process-english" lang="en">Discovery</span></summary><p>了解商業目標、使用情境與目前需要解決的問題。</p></details>
+          <details class="lx-process-details"><summary><span class="lx-process-label">方案規劃</span><span class="lx-process-english" lang="en">Planning</span></summary><p>討論技術選擇、實作範圍與合作方式。</p></details>
+          <details class="lx-process-details"><summary><span class="lx-process-label">技術開發</span><span class="lx-process-english" lang="en">Development</span></summary><p>依確認的方向進行開發，持續溝通實作進度。</p></details>
+          <details class="lx-process-details"><summary><span class="lx-process-label">測試與交付</span><span class="lx-process-english" lang="en">Testing &amp; Delivery</span></summary><p>驗證約定範圍內的功能，整理交付與使用資訊。</p></details>
+          <details class="lx-process-details"><summary><span class="lx-process-label">後續改善</span><span class="lx-process-english" lang="en">Continuous Improvement</span></summary><p>依實際需求，討論後續維護、優化與擴充。</p></details>
+        </div>
+      </div>
+    </section>
+    <!-- One independent action area. The prototype never prepares or sends an enquiry. -->
+    <section id="lx-next-step" class="lx-cta" aria-labelledby="lx-next-step-title" data-source="src/config/services.ts#servicesPage.cta">
+      <div class="lx-container">
+        <span class="lx-accent-rule" aria-hidden="true"></span>
+        <p class="lx-eyebrow" lang="en">NEXT CONVERSATION</p>
+        <h2 id="lx-next-step-title">從一個需求，開始探索數位可能。</h2>
+        <p class="lx-cta-description">無論是企業網站、Java 系統、系統整合、AI 應用或部署規劃，都可以從理解問題與目標開始。</p>
+        <div class="lx-cta-action"><a class="lx-button" href="https://www.xplorekaleidoscope.com/contact/#contact-form">前往正式聯絡頁 <span aria-hidden="true">↗</span></a></div>
+        <a class="lx-link" href="https://www.xplorekaleidoscope.com/quotation/">先查看現有 Modern 方案試算 <span aria-hidden="true">↗</span></a>
+        <p class="lx-cta-note">連結會前往現有官網。參考試算不是正式報價；Luxury 名稱只描述呈現方向，不代表不同價格級距或服務承諾。</p>
+      </div>
+    </section>
+    <!-- Clearly separate review apparatus, not a proposed working Contact/Estimator. -->
+    <section id="lx-state-review" class="lx-section lx-state-review" aria-labelledby="lx-state-review-title">
+      <div class="lx-container">
+        <div class="lx-section-heading"><p class="lx-eyebrow" lang="en">REVIEW APPENDIX / NOT A WORKING FORM</p><h2 id="lx-state-review-title">品牌與深色狀態的審閱界線</h2><p>這份原型只示範首頁構圖與可辨識的深色角色，沒有建立 Luxury 路由、Contact 或 Estimator。以下控制項是明示的視覺樣本，不會提交、記錄或傳送資料。</p></div>
+        <div class="lx-review-grid">
+          <div>
+            <h3>呈現提案，不是新的公司或價格。</h3>
+            <ul class="lx-review-list"><li>Header 白底與 Footer 正式深色維持公司身份。Logo 使用既有原始 SVG，不染金、不加濾鏡、不重畫。</li><li>深色主體、有限金色裝飾與 64px／36px 主標都是待本版本品牌審閱的提案，尚未取得公開核准。</li><li>指定 Inter／Noto Sans TC；本機缺字型時用 Noto Sans CJK TC 或系統 sans-serif。正式交付仍須沿用既有 next/font 自託管字型，不能由此稿推論字形等價。</li><li>未實作路由切換、驗證、試算、Clipboard、送件、後端或持久化；原生目錄與 details 是本頁唯一展開操作。</li><li>原型可協助量測有限的實際文字與控制配色，不能代替正式全頁、autofill、讀屏、PII、A4 或 16 頁驗收。</li></ul>
+            <dl class="lx-palette"><div><dt>展示背景／表面</dt><dd>#0C1017 / #151B24</dd></div><div><dt>主要／次要文字</dt><dd>#F5F1E8 / #B8B1A5</dd></div><div><dt>互動／必要控制邊界</dt><dd>#06B6D4 / #8B95A5</dd></div><div><dt>裝飾線／有限金色</dt><dd>#3A404A / #C8A96B</dd></div><div><dt>錯誤／正向狀態候選</dt><dd>#FDA4AF / #86EFAC</dd></div><div><dt>官方身份外框</dt><dd>白色 / #101828；原 Logo 色值不變</dd></div></dl>
+          </div>
+          <div class="lx-state-samples" role="group" aria-labelledby="lx-samples-title">
+            <h3 id="lx-samples-title">僅供視覺審閱的控制樣本</h3>
+            <p>以下不是詢問表單。文字不可編輯；選項只展示瀏覽器當頁的原生選取狀態。</p>
+            <div class="lx-field"><label for="lx-input-sample">唯讀文字／控制邊界樣本</label><input id="lx-input-sample" type="text" value="這是色彩與邊界樣本" readonly autocomplete="off" aria-describedby="lx-input-hint"><p id="lx-input-hint">可聚焦與選取文字，不是需求輸入欄位。</p></div>
+            <div class="lx-field"><label for="lx-error-sample">唯讀錯誤狀態樣本</label><input id="lx-error-sample" type="text" value="靜態錯誤狀態示意" readonly autocomplete="off" aria-invalid="true" aria-describedby="lx-error-hint"><p id="lx-error-hint" class="lx-error">錯誤樣本：此處僅示意邊界與說明，沒有執行驗證。</p></div>
+            <fieldset class="lx-sample-choices"><legend>原生選取樣本（不儲存、不提交）</legend><div class="lx-choice"><input id="lx-choice-a" type="radio" name="luxury-review-choice" value="sample-a" checked><label for="lx-choice-a">選項樣本 A</label><span class="lx-selection-state" aria-hidden="true">✓ 已選取</span></div><div class="lx-choice"><input id="lx-choice-b" type="radio" name="luxury-review-choice" value="sample-b"><label for="lx-choice-b">選項樣本 B</label><span class="lx-selection-state" aria-hidden="true">✓ 已選取</span></div></fieldset>
+            <div class="lx-disabled-example"><button id="lx-disabled-sample" class="lx-button" type="button" disabled aria-describedby="lx-disabled-hint">停用狀態樣本</button><p id="lx-disabled-hint">此按鈕刻意停用，沒有可執行的動作，也沒有送出功能。</p></div>
+            <p class="lx-state-success">正向狀態文字樣本：只示意可讀性，不代表已寄出或已收件。</p>
+          </div>
+        </div>
+        <details class="lx-sources">
+          <summary>內容來源、版本與審閱範圍</summary>
+          <ul>
+            <li>網站基準：<code>xk-website main@8ba299a5a48da41ca7f4d88d9b2149d7c83f6584</code>；不依賴或整合尚未合併的 Heritage 程式。</li>
+            <li>公司品牌邊界核對：<code>xplore-kaleidoscope main@9213a3d8dacb8774d87c26cb736c4a4315779e95</code>（tree <code>195c5c8100b74513985e040f3ee6fc642571285e</code>）。本稿的 Luxury 色彩、字階與展示外框例外仍待本版本審閱，不以來源查核代替品牌核准。</li>
+            <li>Hero 原文與作品導讀：<code>src/config/homepage.ts → homepageHero</code>。五類服務的名稱、摘要、範圍及情境：<code>src/config/services.ts → serviceCategories / servicesPage.overview</code>。</li>
+            <li>合作五步驟、合作條件及 CTA 文案：<code>src/config/services.ts → serviceProcessSteps / servicesPage.process / servicesPage.cta</code>。</li>
+            <li>三筆精選順序、作品摘要、原 note 與圖片 alt：<code>src/config/website-showcases.ts → showcaseSettings.featuredIds / websiteShowcases</code>。均保留自製品牌展示／可瀏覽狀態，非客戶成果。</li>
+            <li>品牌名稱與標語：<code>src/config/site.ts</code>。原圖：<code>public/images/showcases/{march-tangbao,hongjia-birdnest,honest-diecut}.webp</code>。</li>
+            <li>原始 Logo：<code>public/brand/source/xk-logo-horizontal.svg / xk-logo-white.svg</code>。所有圖片使用相對路徑，未複製、重製、裁切或下載新素材。</li>
+            <li>版面與色彩提案：<code>docs/01_design/design-collection/design-systems.md → Luxury</code>。其餘構圖標題、審閱提示與圖說為本原型的編排性文案，不建立新的品牌事實。</li>
+            <li>這是固定版本的審閱文件，不是新的業務資料來源；正式實作須使用共用內容與互動核心。品牌核准、完整系列交付、合併與部署是不同階段。</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+  </main>
+  <footer class="lx-footer">
+    <div class="lx-container">
+      <div class="lx-footer-intro">
+        <a class="lx-footer-brand" href="https://www.xplorekaleidoscope.com/" aria-label="Xplore Kaleidoscope 現有 Modern 官網首頁"><img src="../../../../public/brand/source/xk-logo-white.svg" width="620" height="410" loading="lazy" alt="Xplore Kaleidoscope"></a>
+        <p class="lx-footer-slogan" lang="en">Explore Possibilities. Create Digital Value.</p>
+      </div>
+      <div class="lx-footer-directory">
+        <nav aria-label="現有 Modern 官網目錄"><h2>現有 Modern 官網</h2><ul><li><a href="https://www.xplorekaleidoscope.com/about/">關於 XK</a></li><li><a href="https://www.xplorekaleidoscope.com/services/">服務項目</a></li><li><a href="https://www.xplorekaleidoscope.com/solutions/">解決方案</a></li><li><a href="https://www.xplorekaleidoscope.com/portfolio/">作品展示</a></li></ul></nav>
+        <nav aria-label="現有官網聯絡與審閱資料"><h2>繼續了解</h2><ul><li><a href="https://www.xplorekaleidoscope.com/contact/">聯絡資訊</a></li><li><a href="https://www.xplorekaleidoscope.com/quotation/">方案試算</a></li><li><a href="https://www.xplorekaleidoscope.com/design-collection/">設計系列</a></li><li><a href="#lx-state-review">本稿審閱範圍</a></li></ul></nav>
+      </div>
+      <p class="lx-footer-note">Luxury v1 / 本機審閱原型 / 未核准、未公開。正式網站連結均前往 www.xplorekaleidoscope.com。</p>
+    </div>
+  </footer>
+</body>
+</html>

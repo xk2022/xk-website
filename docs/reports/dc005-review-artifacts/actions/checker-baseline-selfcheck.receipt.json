@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc005-actions/compare-output.py",
+    "--zip",
+    "/tmp/xk-dc005-actions/baseline-main-pages.zip",
+    "--metadata",
+    "/tmp/xk-dc005-actions/baseline-metadata.json",
+    "--source-css",
+    "/workspace/xk-website/src/app/globals.css",
+    "--report",
+    "/tmp/xk-dc005-actions/checker-baseline-selfcheck.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T06:05:51.446632+00:00",
+  "finishedAt": "2026-11-26T06:05:51.951253+00:00",
+  "processId": 82105,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc005-actions/checker-baseline-selfcheck.log",
+  "logSha256": "144b66f0abd95f2eeee30b6de0f542f6aa376bb5d9109e29aae0c5c45e10e81b",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc005-validator/final-check.py",
+    "--output",
+    "/tmp/xk-dc005-final/final-v2-result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T06:15:33.692655+00:00",
+  "finishedAt": "2026-11-26T06:15:34.565878+00:00",
+  "processId": 83762,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc005-final/final-v2.log",
+  "logSha256": "32637cf452808d8d34e04c9aec1d97377a77a1de6ae0f01f654a997af430afdf",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

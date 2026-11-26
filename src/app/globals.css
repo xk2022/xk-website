@@ -40,13 +40,18 @@
 @source not "../../docs/task/dc003.md";
 @source not "../../docs/reports/dc003-implementation.md";
 @source not "../../docs/reports/dc003-artifacts";
-/* Local brand-review prototypes and evidence must not generate website utilities. */
+/* Local design reviews and task evidence must not add website utilities. */
 @source not "../../docs/01_design/design-collection/reviews";
 @source not "../../docs/reports/dc004-brand-review.md";
 @source not "../../docs/reports/dc004-review-artifacts";
 @source not "../../docs/task/dc004.md";
 @source not "../../docs/reports/dc004-implementation.md";
 @source not "../../docs/reports/dc004-artifacts";
+@source not "../../docs/task/dc005.md";
+@source not "../../docs/reports/dc005-brand-review.md";
+@source not "../../docs/reports/dc005-review-artifacts";
+@source not "../../docs/reports/design-collection-integration.md";
+@source not "../../docs/reports/design-collection-integration-artifacts";
 
 :root {
   color-scheme: light;

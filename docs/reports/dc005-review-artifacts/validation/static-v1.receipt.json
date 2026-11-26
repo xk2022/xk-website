@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc005-validator/check-prototype.py",
+    "--output",
+    "/tmp/xk-dc005-validator/static-v1-result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T06:10:42.409256+00:00",
+  "finishedAt": "2026-11-26T06:10:42.957724+00:00",
+  "processId": 82969,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc005-validator/static-v1.log",
+  "logSha256": "744f027444152e102b10909d2577342e859ba130c2be5965eaac4dddfa6c8649",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

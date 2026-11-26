@@ -1,0 +1,60 @@
+{
+  "testId": "LR-03-ACTUAL-VISUAL",
+  "status": "PASS",
+  "exitCode": null,
+  "exitCodeReason": "Human visual review, no process exit claimed",
+  "reviewedAt": "2026-11-26T06:13:22.841680+00:00",
+  "prototypeSha256": "c7809ec2e8ec31713828aa2913175b73e41af56ad2d97f8e3bd95e6d354b9f4b",
+  "screenshots": [
+    {
+      "width": 320,
+      "path": "/tmp/xk-dc005/prototype-final/luxury-320.png",
+      "sha256": "37dd16442525f1efd5a180935507f51215fce5df32c4951ce7a41d88d575bfef",
+      "bytes": 844504,
+      "status": "PASS",
+      "method": "Root viewed original full-page PNG in image tool.",
+      "observed": "Clear official logo/frame; centered Hero, separate narrative services/details, large existing work images with status/notes, cooperation details and independent CTA; native sample controls recognizable; no overlap/cutoff observed."
+    },
+    {
+      "width": 375,
+      "path": "/tmp/xk-dc005/prototype-final/luxury-375.png",
+      "sha256": "88f84eb7dd8fa878ffb6cbfb25097c1b016493c290bdbc3b224f6a874e309503",
+      "bytes": 890445,
+      "status": "PASS",
+      "method": "Root viewed original full-page PNG in image tool.",
+      "observed": "Clear official logo/frame; centered Hero, separate narrative services/details, large existing work images with status/notes, cooperation details and independent CTA; native sample controls recognizable; no overlap/cutoff observed."
+    },
+    {
+      "width": 768,
+      "path": "/tmp/xk-dc005/prototype-final/luxury-768.png",
+      "sha256": "7aa5c32aba7b5a4e7a5d53f4a4ab65a51142da448d618e4a48ea2e802863d78b",
+      "bytes": 1335576,
+      "status": "PASS",
+      "method": "Root viewed original full-page PNG in image tool.",
+      "observed": "Clear official logo/frame; centered Hero, separate narrative services/details, large existing work images with status/notes, cooperation details and independent CTA; native sample controls recognizable; no overlap/cutoff observed."
+    },
+    {
+      "width": 1440,
+      "path": "/tmp/xk-dc005/prototype-final/luxury-1440.png",
+      "sha256": "e76ef65b72c4cbf7fe22a027a4cd94df6992faa1a85f7fb0c8c86ae2c99ffaa7",
+      "bytes": 2312062,
+      "status": "PASS",
+      "method": "Root viewed original full-page PNG in image tool.",
+      "observed": "Clear official logo/frame; centered Hero, separate narrative services/details, large existing work images with status/notes, cooperation details and independent CTA; native sample controls recognizable; no overlap/cutoff observed."
+    },
+    {
+      "width": 1920,
+      "path": "/tmp/xk-dc005/prototype-final/luxury-1920.png",
+      "sha256": "c4b9bf670f1b5988c35b55673507f0056c55f939279d4a1f4f2fce8d2ff1e4ed",
+      "bytes": 2357771,
+      "status": "PASS",
+      "method": "Root viewed original full-page PNG in image tool.",
+      "observed": "Clear official logo/frame; centered Hero, separate narrative services/details, large existing work images with status/notes, cooperation details and independent CTA; native sample controls recognizable; no overlap/cutoff observed."
+    }
+  ],
+  "limitations": [
+    "Only local prototype; font fallback, desktop Chromium emulation, not formal production font/16-page/real device/Safari/full AT acceptance.",
+    "Full-page originals scaled by image tool; original CSS-pixel geometry is separately checked.",
+    "Native radio glyph visual recognition is recorded; no complete browser native-glyph contrast certification."
+  ]
+}

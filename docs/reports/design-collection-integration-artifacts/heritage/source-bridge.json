@@ -1,0 +1,22 @@
+{
+  "oldHead": "504dca10a4abe2eec9ab7bd607c6b91c8e63e293",
+  "approvedMain": "4500ccf7c2b6c1bd4b906458f40e688a0fde5a4e",
+  "changedRuntime": [
+    {
+      "path": "scripts/test-design-collection-content.mjs",
+      "beforeSha256": "9464da152f6b79971517e22a915533e33e00bce2af70401d70e81d400c2e812b",
+      "afterSha256": "642d684a586f54e2676ecb09ffdc29e15db4207d17aaccdf47a6cafc6d482e44"
+    },
+    {
+      "path": "src/app/globals.css",
+      "beforeSha256": "735e102561f66821fbb66bf7574217e5d05c7f3f0f0ab53a68a3fa4b58575469",
+      "afterSha256": "d626a70d78b78639c89e594430cc6e3fbace7a481139ed535065d1406402eeb5"
+    },
+    {
+      "path": "src/config/website-showcases.ts",
+      "beforeSha256": "806057415b29ba0756829aaf81e9a88b52d3425506304acfe33e7b614c67db9e",
+      "afterSha256": "76242fb4d7a7602b96fd2618cce2067b7805fc4ddb166c5e38143d37ea7e7360"
+    }
+  ],
+  "impact": "Five source URLs and corresponding independent content-test expectations from already mergedPR43; globalCSS onlysource exclusions/comments. All other runtime/public bytes match acceptedHeritagehead, including Contact/Quote/print/tokens/frames."
+}

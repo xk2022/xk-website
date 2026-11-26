@@ -286,4 +286,12 @@ docs(task): add XK website task specifications 006-014
 
 ## DC-004 執行入口
 
-使用者已對 PR #40 的 v1 配色、品牌外框與桌面／手機版型明確核准；[同版本紀錄](../01_design/design-collection/reviews/heritage-v1-approval.md) 滿足品牌前置。完整 Heritage 16 頁依 [DC-004](dc004.md) 及既有工作包開發，與 Modern 16＋Gallery 合計 33 頁；Luxury 維持規劃中。功能、測試、PR／部署與尚未完成事項見 [實作報告](../reports/dc004-implementation.md)，不把品牌核准當作合併／部署授權。
+使用者已對 PR #40 的 v1 配色、品牌外框與桌面／手機版型明確核准；[同版本紀錄](../01_design/design-collection/reviews/heritage-v1-approval.md) 滿足品牌前置。完整 Heritage 16 頁依 [DC-004](dc004.md) 及既有工作包實作，與 Modern 16＋Gallery 合計 33 頁。功能、分支驗收與限制見 [實作報告](../reports/dc004-implementation.md)，保留原始失敗與版本邊界。
+
+使用者最新「合併」已授權 PR #40 與 PR #42 依序合併，不重複要求同一確認。當前先整合 PR #40 與 `main@4500ccf`；正式 main 仍為 17 頁，合併後的 CI／部署／公開驗證依實際事件更新。
+
+## DC-005 執行入口
+
+[Luxury v1 品牌審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、本機原型／截圖及 [品牌前置報告](../reports/dc005-brand-review.md) 保留核准前快照；使用者「批准合併」已核准該版本並合併 [PR #41](https://github.com/xk2022/xk-website/pull/41)。品牌前置已滿足，不能再以舊 PENDING／BLOCKED 阻擋同版本完整實作。
+
+原 [DC-005 完整工作包](dc005.md) 的功能交付在 [PR #42](https://github.com/xk2022/xk-website/pull/42)，已獲最新合併授權，待 PR #40 後整合；未複製進本次 Heritage 程式。兩個功能 PR 實際合併後接續 DC-006，保留各自必要驗收、報告與發布事件。

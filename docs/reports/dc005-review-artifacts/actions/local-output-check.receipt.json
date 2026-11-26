@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc005-actions/compare-output.py",
+    "--directory",
+    "/tmp/xk-dc005-build/out",
+    "--source-css",
+    "/workspace/xk-website/src/app/globals.css",
+    "--report",
+    "/tmp/xk-dc005-actions/local-output-check.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T06:12:14.009702+00:00",
+  "finishedAt": "2026-11-26T06:12:14.430032+00:00",
+  "processId": 83413,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc005-actions/local-output-check.log",
+  "logSha256": "43d0961660e8ae9fe7f6f0fed880ecad9241bc4dce4bc21a80e35784b08a6e06",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

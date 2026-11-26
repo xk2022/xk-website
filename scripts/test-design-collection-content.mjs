@@ -165,7 +165,7 @@ test("DC-CONTENT-13: the windows proposal is available without becoming client d
   const proposal = getDesignWebsiteShowcase("qiangang-windows");
   assert.equal(proposal.presentation, "brand-proposal");
   assert.equal(proposal.availability, "available");
-  assert.equal(proposal.href, "https://qiangang.xplorekaleidoscope.com/");
+  assert.equal(proposal.href, "https://showcase.xplorekaleidoscope.com/qiangang-windows/");
   assert.ok(proposal.note.includes("模擬操作"));
   assert.ok(proposal.detail.limitations.some((line) => line.includes("品牌提案展示")));
   assert.deepEqual([proposal.image.width, proposal.image.height], [1280, 800]);
@@ -193,7 +193,17 @@ test("DC-CONTENT-15: public showcase fields, optional absence and external hrefs
     assert.deepEqual(showcase, original);
   }
   assert.equal(Object.hasOwn(getDesignWebsiteShowcase("march-tangbao"), "availability"), false);
-  assert.equal(getDesignWebsiteShowcase("march-tangbao").href, "https://march.xplorekaleidoscope.com/");
+  const expectedHrefs = {
+    "march-tangbao": "https://showcase.xplorekaleidoscope.com/march-tangbao/",
+    "hongjia-birdnest": "https://showcase.xplorekaleidoscope.com/hongjia-birdnest/",
+    "yupinyuan-bento": "https://showcase.xplorekaleidoscope.com/yupinyuan-bento/",
+    "campaign-website-design": "https://web.xplorekaleidoscope.com/",
+    "honest-diecut": "https://showcase.xplorekaleidoscope.com/honest/",
+    "qiangang-windows": "https://showcase.xplorekaleidoscope.com/qiangang-windows/",
+  };
+  for (const [id, href] of Object.entries(expectedHrefs)) {
+    assert.equal(getDesignWebsiteShowcase(id).href, href);
+  }
 });
 
 test("DC-CONTENT-16: Contact exposes only the established channel and local-draft contract", () => {

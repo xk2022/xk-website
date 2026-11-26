@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "metadata": {
+    "id": 15085955305,
+    "name": "github-pages",
+    "size_in_bytes": 6137037,
+    "url": "https://api.github.com/repos/xk2022/xk-website/actions/artifacts/15085955305",
+    "archive_download_url": "https://api.github.com/repos/xk2022/xk-website/actions/artifacts/15085955305/zip",
+    "expired": false,
+    "created_at": "2026-11-26T03:46:43Z",
+    "expires_at": "2026-12-03T03:46:42Z",
+    "updated_at": "2026-11-26T03:46:43Z",
+    "digest": "sha256:cc43318ca9b284e26dfa8d98da349e9f30f0579886307f4a62b29dd043a61cbe",
+    "workflow_run": {
+      "id": 45750880906,
+      "repository_id": 1462347426,
+      "head_repository_id": 1462347426,
+      "head_branch": "main",
+      "head_sha": "8ba299a5a48da41ca7f4d88d9b2149d7c83f6584"
+    }
+  },
+  "fileCount": 286,
+  "zipSha256": "cc43318ca9b284e26dfa8d98da349e9f30f0579886307f4a62b29dd043a61cbe",
+  "tarSha256": "1c73c30a6937902bf0447dc4dc344ce381f83356892a07f3eadd0dd3796d1b5c",
+  "downloadedBytes": 6137037
+}

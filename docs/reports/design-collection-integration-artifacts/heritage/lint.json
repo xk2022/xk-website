@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "run",
+    "lint"
+  ],
+  "cwd": "/tmp/xk-merge-heritage",
+  "startedAt": "2026-11-26T09:29:06.373969+00:00",
+  "finishedAt": "2026-11-26T09:29:14.100185+00:00",
+  "processId": 99340,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 240.0,
+  "logFile": "/tmp/xk-dc006-merge/heritage/lint.log",
+  "logSha256": "4696703654c92426c8748b7837936df0036098577fdcb7af6f2ee9d9db2e79e6",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

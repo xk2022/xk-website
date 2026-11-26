@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "file": "AGENTS.md",
+      "markers": 0,
+      "missingLocalPaths": []
+    },
+    {
+      "file": "README.md",
+      "markers": 0,
+      "missingLocalPaths": []
+    },
+    {
+      "file": "docs/01_design/README.md",
+      "markers": 0,
+      "missingLocalPaths": []
+    },
+    {
+      "file": "docs/98_decisions/implementation-notes.md",
+      "markers": 0,
+      "missingLocalPaths": []
+    },
+    {
+      "file": "docs/reports/README.md",
+      "markers": 0,
+      "missingLocalPaths": []
+    },
+    {
+      "file": "docs/task/README.md",
+      "markers": 0,
+      "missingLocalPaths": []
+    },
+    {
+      "file": "docs/task/ROADMAP.md",
+      "markers": 0,
+      "missingLocalPaths": []
+    }
+  ]
+}

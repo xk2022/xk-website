@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc006-merge/heritage/inspect-ci-artifact.py",
+    "--prepare",
+    "--repo",
+    "/tmp/xk-merge-heritage",
+    "--directory",
+    "/tmp/xk-merge-heritage/out",
+    "--build-receipt",
+    "/tmp/xk-dc006-merge/heritage/build-pages.json"
+  ],
+  "cwd": "/tmp/xk-merge-heritage",
+  "startedAt": "2026-11-26T09:46:21.381601+00:00",
+  "finishedAt": "2026-11-26T09:46:22.052882+00:00",
+  "processId": 102211,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc006-merge/heritage/prepare-local-baseline.log",
+  "logSha256": "bb5012b311acbdf43185f7f28a1d78fcf0f0032328d38a5c14824fdc8130a41e",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

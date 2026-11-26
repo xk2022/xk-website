@@ -1,0 +1,132 @@
+{
+  "status": "PASS",
+  "testedAt": "2026-11-26T06:15:09.445685+00:00",
+  "base": "8ba299a5a48da41ca7f4d88d9b2149d7c83f6584",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/tmp/xk-dc005-validator/final-check.py",
+    "--output",
+    "/tmp/xk-dc005-validator/final-v1-result.json"
+  ],
+  "checks": [
+    {
+      "testId": "LR-FINAL-REVIEW-ONLY-SCOPE",
+      "status": "PASS",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "trackedChanges": 8,
+        "untrackedFiles": 62,
+        "stagedChanges": 0,
+        "unexpected": []
+      }
+    },
+    {
+      "testId": "LR-FINAL-DIFF-WORKTREE",
+      "status": "PASS",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "exitCode": 0,
+        "output": ""
+      }
+    },
+    {
+      "testId": "LR-FINAL-DIFF-STAGED",
+      "status": "PASS",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "exitCode": 0,
+        "output": ""
+      }
+    },
+    {
+      "testId": "LR-FINAL-RUNTIME-ONLY-EXACT-DISCOVERY-EXCLUSION",
+      "status": "PASS",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "base": "8ba299a5a48da41ca7f4d88d9b2149d7c83f6584",
+        "files": 178,
+        "invalidChanges": [],
+        "extra": [],
+        "missing": [],
+        "allowedCssAddition": "/* Local design-review documents must not add production utilities. */\n@source not \"../../docs/01_design/design-collection/reviews\";\n@source not \"../../docs/task/dc005.md\";\n@source not \"../../docs/reports/dc005-brand-review.md\";\n@source not \"../../docs/reports/dc005-review-artifacts\";\n"
+      }
+    },
+    {
+      "testId": "LR-FINAL-STACK-LOCK-DEPS-WORKFLOW",
+      "status": "PASS",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "changed": [],
+        "byteEquality": true
+      }
+    },
+    {
+      "testId": "LR-FINAL-MARKDOWN-LINKS-FENCES-EOF",
+      "status": "PASS",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "documents": [
+          "AGENTS.md",
+          "README.md",
+          "docs/01_design/README.md",
+          "docs/01_design/design-collection/reviews/luxury-v1.md",
+          "docs/98_decisions/implementation-notes.md",
+          "docs/reports/README.md",
+          "docs/reports/dc005-brand-review.md",
+          "docs/reports/dc005-review-artifacts/README.md",
+          "docs/screenshots/design-collection/dc005-review/README.md",
+          "docs/task/README.md",
+          "docs/task/ROADMAP.md",
+          "docs/task/dc005.md"
+        ],
+        "localLinks": 280,
+        "broken": [],
+        "formatErrors": [],
+        "scope": "Only current changed Markdown/HTML; no full historical document audit."
+      }
+    },
+    {
+      "testId": "LR-FINAL-MANIFEST-ARTIFACTS",
+      "status": "PASS",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "files": 50,
+        "errors": [],
+        "unlisted": [],
+        "missing": []
+      }
+    },
+    {
+      "testId": "LR-FINAL-MANIFEST-SCREENSHOTS",
+      "status": "PASS",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "files": 6,
+        "errors": [],
+        "unlisted": [],
+        "missing": []
+      }
+    },
+    {
+      "testId": "LR-FINAL-RECEIPT-LOG-SHA-AND-GZIP-TOOLS",
+      "status": "PASS",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "receipts": 14,
+        "mismatches": [],
+        "uncompressedToolsOrLogs": [],
+        "notes": "Original FAIL/TIMEOUT receipts remain failures; integrity does not imply successful tests."
+      }
+    },
+    {
+      "testId": "LR-FINAL-NO-SECRETS-BUILD-CACHE",
+      "status": "PASS",
+      "expected": "all declared checks satisfied",
+      "actual": {
+        "suspectedSecretFiles": [],
+        "forbiddenPaths": []
+      }
+    }
+  ],
+  "scope": "Read-only review delivery checks. No build/server/browser/dependency install/Git mutation; no brand or full-series acceptance."
+}
