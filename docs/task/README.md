@@ -8,10 +8,7 @@
 
 ## 目前功能任務
 
-- [DC-002 — Design Collection 共用核心](dc002.md)：`feature/design-collection-core`，依已合併 DC-001 建立資料／路由／Metadata／互動及 token 契約，保留現行 16 頁，不提前發布 Gallery 或新系列，[PR #33](https://github.com/xk2022/xk-website/pull/33) 已合併（`c9481a0`）；[main CI 與 Pages 部署](https://github.com/xk2022/xk-website/actions/runs/45739486842) 成功。新 UI 尚未整合，下一步為 DC-003。
-
-- [DC-001 — XK Design Collection 架構規劃](dc001.md)：`docs/design-collection-dc001`，只交付架構與三套 Design System 規範，[PR #30](https://github.com/xk2022/xk-website/pull/30) 已合併；DC-002 已合併（共用內容、路由與互動契約），DC-003 為下一步、DC-004～DC-007 尚待後續工作，不改正式首頁、不實作或部署新系列。
-- [XK-ESTIMATOR V1 — 客戶方案試算](quotation-estimator-v1.md)：已於 2026-11-25 依後續授權合併及部署，見 [PR #28 的發布驗收](https://github.com/xk2022/xk-website/pull/28)。原規格及發布前報告保留當時快照；下方 Task 001–014 亦保留歷史規劃。
+最新功能任務、Bugfix、Design Collection 與文件整理進度以 [Roadmap](ROADMAP.md) 為集中入口。原始規格、工作包及下方歷史進度快照保留，避免重複維護最新狀態。
 
 ## 問題追蹤與後續 Bugfix
 
@@ -223,6 +220,8 @@ Required／Optional／Not Applicable 是適用性，不是執行結果。Optiona
 008 的無表單模式不因 009 尚未審核而虛構提交功能；若正式啟用表單，必須先協調 009 的資料內容並取得核准。009 的盤點也不要求先公開未核准的 008 表單。013 可以先處理獲授權的 Preview／平台 Production 驗證，014 再接正式網域；未完成 014 不宣稱品牌網域已生效。
 
 ## 9. 目前任務進度
+
+> 以下為原規格整理時點的歷史紀錄；最新狀態請見 [Roadmap](ROADMAP.md)。
 
 以下為 `main@e2a8f5a` 的可查證歷史與本輪規格狀態，**不代表本輪重新驗收或發布網站**。Task 001–005 的實作、報告與既有路由已存在；下列 Merge 為本輪基準的祖先：
 
