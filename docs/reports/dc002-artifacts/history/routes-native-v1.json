@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "--import",
+    "./scripts/register-test-aliases.mjs",
+    "scripts/test-design-collection-routes.mjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T01:29:06.369068+00:00",
+  "finishedAt": "2026-11-26T01:29:30.326860+00:00",
+  "processId": 36880,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc002/routes-native-v1.log",
+  "logSha256": "332dabc32197b89ff01a49eaa737caf5ffa0e618155d306e77cd739fa14cf3da",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

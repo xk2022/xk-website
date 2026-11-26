@@ -1,0 +1,74 @@
+{
+  "status": "FAIL",
+  "testedAt": "2026-11-26T01:56:14.139275+00:00",
+  "base": "eeb04b3ae89e2740ae104b92399be2a450511f37",
+  "checks": [
+    {
+      "testId": "SOURCE-FREEZE",
+      "status": "PASS",
+      "expected": true,
+      "actual": {
+        "files": 167,
+        "changed": [],
+        "sha256": "b55a5e78f1b22022713838c59f76c454c5b4e363d047001528a7e3163ad353ec"
+      }
+    },
+    {
+      "testId": "TRACKED-SCOPE",
+      "status": "PASS",
+      "expected": true,
+      "actual": [
+        "AGENTS.md",
+        "README.md",
+        "docs/98_decisions/implementation-notes.md",
+        "docs/README.md",
+        "docs/task/README.md",
+        "package.json",
+        "src/app/globals.css"
+      ]
+    },
+    {
+      "testId": "PACKAGE-SCRIPTS-ONLY",
+      "status": "PASS",
+      "expected": true,
+      "actual": "Only scripts may change"
+    },
+    {
+      "testId": "NO-PRESENTATION-CSS-CHANGE",
+      "status": "FAIL",
+      "expected": true,
+      "actual": "Only bounded @source not block removed for exact comparison"
+    },
+    {
+      "testId": "MARKDOWN-AND-LINKS",
+      "status": "PASS",
+      "expected": true,
+      "actual": {
+        "checkedLinks": 147,
+        "broken": [],
+        "format": []
+      }
+    },
+    {
+      "testId": "NO-SECRETS",
+      "status": "PASS",
+      "expected": true,
+      "actual": []
+    },
+    {
+      "testId": "NO-BUILD-OR-TEMP-SUBMISSIONS",
+      "status": "PASS",
+      "expected": true,
+      "actual": []
+    },
+    {
+      "testId": "RAW-RECEIPT-LOG-INTEGRITY",
+      "status": "PASS",
+      "expected": true,
+      "actual": {
+        "receipts": 30,
+        "errors": []
+      }
+    }
+  ]
+}

@@ -24,6 +24,20 @@
 @source not "../../docs/reports/quotation-estimator-v1.md";
 @source not "../../docs/reports/quotation-estimator-artifacts";
 
+/* Pure DC-002 contracts and evidence contain no rendered utility classes. */
+@source not "../lib/design-collection";
+@source not "../config/design-collection.ts";
+@source not "../../scripts/register-test-aliases.mjs";
+@source not "../../scripts/test-design-collection-routes.mjs";
+@source not "../../scripts/test-design-collection-metadata.mjs";
+@source not "../../scripts/test-design-collection-content.mjs";
+@source not "../../scripts/test-design-collection-contracts.mjs";
+@source not "../../scripts/fixtures/design-collection-contract.json";
+@source not "../../docs/task/dc002.md";
+@source not "../../docs/03_engineering/design-collection-core.md";
+@source not "../../docs/reports/dc002-implementation.md";
+@source not "../../docs/reports/dc002-artifacts";
+
 :root {
   color-scheme: light;
 

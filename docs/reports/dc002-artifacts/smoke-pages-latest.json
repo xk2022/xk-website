@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "scripts/smoke-website.py",
+    "--base-url",
+    "http://127.0.0.1:3221/",
+    "--output",
+    "/tmp/xk-dc002/smoke-pages-latest-result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T01:53:52.146473+00:00",
+  "finishedAt": "2026-11-26T01:53:53.064790+00:00",
+  "processId": 41342,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-dc002/smoke-pages-latest.log",
+  "logSha256": "95d841f9f459a9b8084b2ca67b671e9df60ea8acfe67095fe493cb2ddd686116",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

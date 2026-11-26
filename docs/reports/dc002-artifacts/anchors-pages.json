@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc002/check-anchor-contracts.py",
+    "--repo",
+    "/workspace/xk-website",
+    "--mode",
+    "pages",
+    "--base-url",
+    "http://127.0.0.1:3221/",
+    "--output",
+    "/tmp/xk-dc002/anchors-pages-result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T01:45:24.596926+00:00",
+  "finishedAt": "2026-11-26T01:45:25.065909+00:00",
+  "processId": 38388,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-dc002/anchors-pages.log",
+  "logSha256": "f425081c87cf434c100f9d353a9885b68dc65cf8613a7394e2557a483e7d6b59",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

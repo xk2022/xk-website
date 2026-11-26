@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python3",
+    "/tmp/xk-dc002/final-review.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T01:56:13.999566+00:00",
+  "finishedAt": "2026-11-26T01:56:14.167009+00:00",
+  "processId": 42344,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc002/final-review.log",
+  "logSha256": "324f032bc46a7af8288f83dacd5cd23827d4e4449732d96b1f87c762ce3f7862",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

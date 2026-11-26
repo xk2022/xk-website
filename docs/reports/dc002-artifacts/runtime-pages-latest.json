@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc002/compare-runtime-assets.py",
+    "--reference",
+    "/tmp/xk-dc002/latest-base-runtime-assets.json",
+    "--site-dir",
+    "out",
+    "--output",
+    "/tmp/xk-dc002/runtime-pages-latest-result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T01:53:38.678884+00:00",
+  "finishedAt": "2026-11-26T01:53:38.746225+00:00",
+  "processId": 41136,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc002/runtime-pages-latest.log",
+  "logSha256": "506ce11f6b0c1aa2ecd96d890f2aa56bbed9b6b678a96067979df2cb31771aac",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

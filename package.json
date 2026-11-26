@@ -8,10 +8,11 @@
     "start": "next start",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit",
-    "test": "node scripts/test-contact-inquiry.mjs && node scripts/test-quotation.mjs && node scripts/test-quotation-storage.mjs",
+    "test": "node scripts/test-contact-inquiry.mjs && node scripts/test-quotation.mjs && node scripts/test-quotation-storage.mjs && npm run test:design-collection",
     "test:quotation": "node scripts/test-quotation.mjs && node scripts/test-quotation-storage.mjs",
     "build:pages": "node scripts/build-github-pages.mjs",
-    "test:smoke": "python3 scripts/smoke-website.py"
+    "test:smoke": "python3 scripts/smoke-website.py",
+    "test:design-collection": "node --import ./scripts/register-test-aliases.mjs scripts/test-design-collection-routes.mjs && node --import ./scripts/register-test-aliases.mjs scripts/test-design-collection-metadata.mjs && node --import ./scripts/register-test-aliases.mjs scripts/test-design-collection-content.mjs && node --import ./scripts/register-test-aliases.mjs scripts/test-design-collection-contracts.mjs"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

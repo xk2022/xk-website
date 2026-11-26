@@ -432,3 +432,11 @@ Hero、桌面導覽、手機選單與底部 CTA 共用依正式管道可用性�
 新系列各自編排 shell、Hero、服務、作品與 CTA，資料及 Contact／Quotation 核心共用；參考／面議／年度費用及個資界線不因風格改變。正式 Logo／公司事實保持，新增 palette／字體及展示外框適用範圍明列為待審提案。單一技術 root layout、Modern route-group 相容搬移、同內容 Modern canonical 與展示版 OG URL 分離、風格 URL 切換、404／CSS／print／state 風險及驗收均列入後續工作包。
 
 文件及實際檢查見 [DC-001 驗證紀錄](../reports/dc001-architecture.md)。此輪交付 PR 等待審閱，不沿用前輪 merge／deploy 授權；網站功能、視覺、47 張截圖與六份 PDF 是後續功能包的驗收要求，不當作這次已執行結果。
+
+## 2026-11-26 DC-002 — Design Collection 共用核心
+
+開始時重新 fetch 發現 main 已合併 PR #31 的文件目錄整理，安全保留新核心檔案並以最新 `9a7ca8ebef026b6be49e8fe51f3afa1057a3768b` 建立 `feature/design-collection-core`。交付前再同步 PR #32 README 整理後的最新 main `eeb04b3ae89e2740ae104b92399be2a450511f37`，保留其結構並整合本輪說明；DC-001／PR #30 前置已合併；公司 main 仍為 `5be640ab11811b24706101ea13db73185e9ce4d8`，同版正式來源與缺 AGENTS 的紀錄沿用，不重抓或修改公司 Repository。
+
+本輪建立唯讀 plain DTO、style／page registry、嚴格路由及 metadata adapter、Contact／Quotation 純行為 facade、token schema 與 portal／print／reset 整合契約。新系列及 Gallery 只可描述規劃；公開 href／metadata 預設只允許原 Modern 16 頁。資料權威、價格／狀態、個資與實際收件界線不變，原 UI、呈現 CSS、route、storage、A4 與部署不動；globals.css 僅追加本輪純核心／測試／文件與證據的限定掃描排除，確保 runtime CSS 不被資料文字擴張。
+
+Native 測試透過 Node.js 24 的 test-only alias hook 解析既有 Next.js imports，不修改 production config imports、package type、依賴或 lockfile。所有 required quality checks、普通／Pages HTTP 及 focused regression／anchor 驗證與 asset bridge 以 [DC-002 報告](../reports/dc002-implementation.md) 的實際結果為準。後續 frame、畫面、palette、portal 與列印隔離不因存在契約就視為完成；此輪建立 PR 等待審閱，不自動 merge 或部署。
