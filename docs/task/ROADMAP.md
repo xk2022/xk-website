@@ -1,6 +1,6 @@
 # XK Website Roadmap｜開發進度總表
 
-核對日期：2026-11-26（Asia/Taipei），基準 main `4febdcd9d5f5b7e4f344c68e4ea9a5ea840b2851`；[該版本 CI／Pages 部署](https://github.com/xk2022/xk-website/actions/runs/45743541400) 成功。
+核對日期：2026-11-26（Asia/Taipei），基準 main `aa100adfad24b74ccb39d2df811b613c4d6a15ef`；[該版本 CI／Pages 部署](https://github.com/xk2022/xk-website/actions/runs/45744458033) 成功。
 
 本表彙整既有任務與實際合併事件，不新增工作範圍、規範或承諾。Task 規格、工作包與歷史報告仍保留原始內容；最新 GitHub／部署狀態應以對應 PR、實際 run 與公開驗證為準。合併不代表未核准的法律、索引、價格或業務項目已完成。
 
@@ -77,10 +77,10 @@ DC-004／005 可依現有工作包平行；未完成風格與 Gallery 不提供�
 | DOC-002 狀態核對 | 已合併 [PR #34](https://github.com/xk2022/xk-website/pull/34) |
 | DOC-003 歷史與重複文件 | 已合併 [PR #35](https://github.com/xk2022/xk-website/pull/35)；[歷史索引](../98_decisions/README.md) |
 | DOC-004 架構與結構 | 已合併 [PR #36](https://github.com/xk2022/xk-website/pull/36)；[工程索引](../03_engineering/README.md)、[設計索引](../01_design/README.md) |
-| DOC-005 Roadmap | 本文件交付；合併及 CI 以本次 PR 實際事件為準 |
-| DOC-006 文件一致性檢查 | 下一個文件整理任務 |
+| DOC-005 Roadmap | 已合併 [PR #37](https://github.com/xk2022/xk-website/pull/37) |
+| DOC-006 文件一致性檢查 | [檢查報告](../reports/doc006-consistency.md)；合併及 CI 以本次 PR 實際事件為準 |
 
-先完成 DOC-005／006，再恢復 DC-003 功能開發；不因此增加新的功能規格。
+本輪文件整理以 DOC-006 收斂；合併完成後，下一個功能工作包為 DC-003。不因此增加新的功能規格。
 
 ## 5. 未結項與其他 PR
 

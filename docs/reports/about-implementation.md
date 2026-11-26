@@ -18,7 +18,7 @@
 
 已閱讀根目錄 README、AGENTS、Task 001／002／003 原稿與實作紀錄、[首頁實作紀錄](homepage-implementation.md)、[品牌設計系統](brand-design-system.md) 及 [歷史紀錄](implementation-notes.md)。Task 003 的既有合併與發布只證明 About 開發的前置條件成立，不代表本次 About 功能已通過驗收或已公開發布。
 
-`docs/task/task001.md` 仍不存在，Task 001 原稿位於 [task001-implementation-notes.md](task/task001-implementation-notes.md)，另有繁體中文版本。Task 002 英文原稿 [task002.md](../task/task002.md) 已恢復為 4534 bytes 的完整規格，[繁體中文版本](task/task002.zh-TW.md) 仍保留；本次修正 AGENTS 目前狀態，先前實作文件的空檔描述維持歷史快照。
+`docs/task/task001.md` 仍不存在，Task 001 原稿位於 [task001-implementation-notes.md](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md)，另有繁體中文版本。Task 002 英文原稿 [task002.md](../task/task002.md) 已恢復為 4534 bytes 的完整規格，[繁體中文版本](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md) 仍保留；本次修正 AGENTS 目前狀態，先前實作文件的空檔描述維持歷史快照。
 
 ## 文件檢查與規格優先順序
 
