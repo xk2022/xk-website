@@ -49,6 +49,10 @@
 @source not "../../docs/reports/dc005-artifacts";
 @source not "../../docs/reports/design-collection-integration.md";
 @source not "../../docs/reports/design-collection-integration-artifacts";
+@source not "../../docs/task/dc006.md";
+@source not "../../docs/reports/dc006-implementation.md";
+@source not "../../docs/reports/dc006-artifacts";
+@source not "../../scripts/test-design-collection-navigation.mjs";
 
 :root {
   color-scheme: light;

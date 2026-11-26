@@ -1,0 +1,36 @@
+.design-style-switcher {
+  flex-shrink: 0;
+  border-block: 1px solid #E4E8F0;
+  background: #FFFFFF;
+  color: #101828;
+  color-scheme: light;
+  font-family: var(--font-inter), var(--font-noto-sans-tc), "Microsoft JhengHei", "PingFang TC", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.design-style-switcher .design-style-switcher-inner { width: 100%; max-width: 86rem; margin-inline: auto; padding: 1rem clamp(1.25rem, 4vw, 3rem); display: grid; grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.4fr); align-items: start; gap: 0.75rem 1.5rem; }
+.design-style-switcher .design-style-switcher-heading p { margin: 0; font-size: 0.875rem; font-weight: 600; }
+.design-style-switcher .design-style-switcher-heading p + p { margin-top: 0.25rem; color: #667085; font-size: 0.8125rem; font-weight: 400; }
+.design-style-switcher .design-style-switcher-collection-link { display: inline-flex; align-items: center; min-height: 2.75rem; max-width: 100%; padding-block: 0.5rem; color: #2563EB; font-size: 0.875rem; font-weight: 600; text-decoration: underline; text-underline-offset: 0.25rem; overflow-wrap: anywhere; }
+.design-style-switcher .design-style-switcher-collection-link:focus-visible { outline: 3px solid #2563EB; outline-offset: 4px; }
+.design-style-switcher .design-style-switcher-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; min-width: 0; margin: 0; padding: 0; list-style: none; }
+.design-style-switcher .design-style-switcher-options li { min-width: 0; }
+.design-style-switcher .design-style-switcher-item { display: flex; flex-direction: column; justify-content: center; gap: 0.25rem; min-height: 3.5rem; height: 100%; max-width: 100%; padding: 0.625rem 0.75rem; border: 1px solid #2563EB; border-radius: 0.25rem; background: #FFFFFF; color: #101828; font-size: 0.875rem; font-weight: 600; line-height: 1.6; text-decoration: underline; text-underline-offset: 0.25rem; overflow-wrap: anywhere; }
+.design-style-switcher .design-style-switcher-item:hover { background: #F5F7FB; text-decoration-thickness: 2px; }
+.design-style-switcher .design-style-switcher-item:focus-visible { outline: 3px solid #2563EB; outline-offset: 4px; }
+.design-style-switcher .design-style-switcher-current { border-color: #101828; background: #101828; color: #FFFFFF; text-decoration: none; }
+.design-style-switcher .design-style-switcher-current:hover { background: #101828; }
+.design-style-switcher .design-style-switcher-state { display: block; font-size: 0.75rem; font-weight: 400; }
+.design-style-switcher .design-style-switcher-note { grid-column: 1 / -1; margin: 0; color: #101828; font-size: 0.8125rem; line-height: 1.7; }
+.lx-theme .design-switcher-inquiry-only { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 43.75rem) {
+  .design-style-switcher .design-style-switcher-inner { grid-template-columns: minmax(0, 1fr); }
+  .design-style-switcher .design-style-switcher-options { gap: 0.5rem; }
+  .design-style-switcher .design-style-switcher-item { padding: 0.625rem 0.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .design-style-switcher .design-style-switcher-item { transition: none; }
+}
+@media print {
+  .design-style-switcher { display: none !important; }
+}

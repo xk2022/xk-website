@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "scripts/smoke-website.py",
+    "--base-url",
+    "http://127.0.0.1:3276/",
+    "--output",
+    "/tmp/xk-dc006-final/http-normal-v2-result.json"
+  ],
+  "cwd": "/tmp/xk-dc006-build",
+  "startedAt": "2026-11-26T11:12:11.975601+00:00",
+  "finishedAt": "2026-11-26T11:12:14.704099+00:00",
+  "processId": 115596,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-dc006-final/http-normal-v2.log",
+  "logSha256": "a955990812be11b114a1dd7b307324bb976943620fcd227a0c6e96ade0d14cd5",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

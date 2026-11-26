@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc006-final/check-final-docs.py"
+  ],
+  "cwd": "/tmp/xk-dc006-build",
+  "startedAt": "2026-11-26T11:46:04.552514+00:00",
+  "finishedAt": "2026-11-26T11:46:05.520461+00:00",
+  "processId": 123136,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc006-final/final-doc-check.log",
+  "logSha256": "1fc462f4a9dbdcd305d106647b7177090ed6c59f114341ce0024540686d0ffa8",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc006-final/browser-v5-focused.cjs",
+    "pages",
+    "http://127.0.0.1:3277/",
+    "query-v5",
+    "/tmp/xk-dc006-final/source-bridge-v2.json",
+    "/tmp/xk-dc006-final/fixture.json",
+    "/tmp/xk-dc006-final/catalog.json",
+    "--neutral-query-retest"
+  ],
+  "cwd": "/tmp/xk-dc006-build",
+  "startedAt": "2026-11-26T11:42:12.520607+00:00",
+  "finishedAt": "2026-11-26T11:42:16.807120+00:00",
+  "processId": 122660,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 180.0,
+  "logFile": "/tmp/xk-dc006-final/neutral-query-retest-v5.log",
+  "logSha256": "50eea2cebd5076be2c71080f2fcce2b4bcb7b9c873cf7c764b311deaf812b3d1",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

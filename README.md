@@ -19,9 +19,11 @@ Xplore Kaleidoscope 的品牌官網（BRAND），展示數位品牌、Java 企�
 | 作品詳頁 | `/portfolio/[slug]/`、`/portfolio/showcases/[slug]/` | 僅輸出已定義的 slug |
 | 聯絡我們 | `/contact/` | 需求摘要、複製與 Email 草稿；由訪客自行寄出 |
 | 方案試算 | `/quotation/` | 建置與加購參考金額、A4 摘要及 Email 詢價草稿 |
-| 設計系列 | `/design-collection/` | main 已合併 Modern／Heritage；本分支整合完整 Luxury，部署與公開狀態分開查證 |
+| 設計系列 | `/design-collection/` | Modern／Heritage／Luxury 三套完整系列已合併與發布；本分支續作跨風格切換與導航整合 |
 
-正式 main 已由 PR #40 合併為 Modern 16＋Gallery＋Heritage 16，共 33 頁，main CI、Pages 部署及正式 33 頁 HTTP 驗證已完成（run 45796333591）；本次 Luxury 整合分支清冊為三系列各 16 頁＋Gallery，共 49 頁，待重新驗收。展示及規劃不等於客戶交付；試算不是正式報價、訂單或付款。聯絡與試算均沒有站內直接收件端點；聯絡資料只留在頁面記憶體，試算僅保存選項 ID，不保存客戶稱呼及專案名稱。
+正式 main `9322810f27e74e5ed4faa35a3b3931b3719f0c9a` 已合併 Heritage PR #40 與 Luxury PR #42，清冊為三系列各 16 頁＋Gallery，共 49 頁；[main CI／Pages 部署](https://github.com/xk2022/xk-website/actions/runs/45802200429) 與正式站 HTTP 驗證已完成。DC-006 本分支的本機功能與版面驗收已完成；原始 incomplete／網路診斷及限定重驗詳見本輪報告，最終 CI／artifact 待新 PR，不以既有部署結果替代。
+
+展示及規劃不等於客戶交付；試算不是正式報價、訂單或付款。聯絡與試算均沒有站內直接收件端點；聯絡資料只留在頁面記憶體，試算僅保存選項 ID，不保存客戶稱呼及專案名稱。
 
 更多：[Contact 報告](docs/reports/contact-inquiry-form.md)、[試算規格](docs/task/quotation-estimator-v1.md)、[試算報告](docs/reports/quotation-estimator-v1.md)。
 
@@ -32,22 +34,21 @@ Xplore Kaleidoscope 的品牌官網（BRAND），展示數位品牌、Java 企�
 | 系列 | 入口方向 | 狀態 |
 | --- | --- | --- |
 | Modern 現代專業 | 現有根路徑 | 原 16 頁已發布；DC-002 共用核心、DC-003 相容整合已合併 |
-| Heritage 懷舊復古 | `/design-collection/heritage/` | v1 品牌已核准，完整功能由 PR #40 合併至 main；main CI、Pages 部署及正式 33 頁 HTTP 驗證已完成（run 45796333591） |
-| Luxury 奢華精品 | `/design-collection/luxury/`（PR #42） | PR #41 的 v1 品牌審閱已核准合併；完整 PR #42 已獲合併授權，本分支整合為 49 頁，待新驗收 |
+| Heritage 懷舊復古 | `/design-collection/heritage/` | v1 已核准；完整功能 PR #40 已合併、部署並完成公開驗證 |
+| Luxury 奢華精品 | `/design-collection/luxury/` | v1 已由 PR #41 核准；完整功能 PR #42 已合併、部署並完成公開驗證 |
 
-架構規格已合併（[PR #30](https://github.com/xk2022/xk-website/pull/30)），不代表新風格已核准上線。完整目標為三系列各 16 頁及 1 個 Gallery，共 49 頁；子網域及正式索引須另行授權。
+三系列各 16 頁與 Gallery 的 49 頁已發布；跨風格切換及共用導航整合屬本分支 [DC-006](docs/task/dc006.md)，本機功能與版面驗收已完成，完整診斷與遠端階段分開記錄。子網域及正式索引仍須另行授權。
 
 - [架構規格](docs/01_design/design-collection/architecture.md)
 - [三套 Design System](docs/01_design/design-collection/design-systems.md)
 - [DC-001～007 工作包](docs/01_design/design-collection/work-packages.md)
+- [DC-006 實作與驗收報告](docs/reports/dc006-implementation.md)／[本輪截圖](docs/screenshots/design-collection/dc006/)（18 張實際 Pages 畫面，已逐張檢視）
 
-DC-002 共用核心已合併。DC-003 已由 [PR #39](https://github.com/xk2022/xk-website/pull/39) 合併；當時 Modern 16＋Gallery 共 17 頁及其他系列規劃狀態保留為歷史。範圍與驗收見 [規格](docs/task/dc003.md)、[核心 API](docs/03_engineering/design-collection-core.md) 與 [實作驗證](docs/reports/dc003-implementation.md)。
+DC-003 的 Modern 16＋Gallery 17 頁驗收保留歷史版本，見 [規格](docs/task/dc003.md)、[核心 API](docs/03_engineering/design-collection-core.md) 與 [報告](docs/reports/dc003-implementation.md)。Heritage 的 [品牌核准](docs/01_design/design-collection/reviews/heritage-v1-approval.md)、[完整規格](docs/task/dc004.md)／[報告](docs/reports/dc004-implementation.md)，以及 Luxury 的 [品牌核准](docs/01_design/design-collection/reviews/luxury-v1-approval.md)、[審閱稿](docs/01_design/design-collection/reviews/luxury-v1.md)、[完整規格](docs/task/dc005.md)／[報告](docs/reports/dc005-implementation.md) 均保留原時點。
 
-Heritage 的 [v1 品牌核准](docs/01_design/design-collection/reviews/heritage-v1-approval.md)、[DC-004 完整規格](docs/task/dc004.md) 與 [實作驗證](docs/reports/dc004-implementation.md) 均保留。[PR #40](https://github.com/xk2022/xk-website/pull/40) 已實際合併為 `main@0d41ecf495e55b792f966c9fe27bd07c27bc5647`，main 清冊 33 頁；main CI、Pages 部署及正式 33 頁 HTTP 驗證已完成（run 45796333591）。
+[PR #40](https://github.com/xk2022/xk-website/pull/40) 合併為 `0d41ecf495e55b792f966c9fe27bd07c27bc5647`，其 [main CI／Pages](https://github.com/xk2022/xk-website/actions/runs/45796333591) 與公開 33 頁驗證完成；[PR #42](https://github.com/xk2022/xk-website/pull/42) 合併為 `9322810f27e74e5ed4faa35a3b3931b3719f0c9a`，49 頁的部署及公開驗證見 [整合報告](docs/reports/design-collection-integration.md)。這些是 DC-006 的已發布基準，不能改稱本輪新驗收。
 
-Luxury 的 [v1 品牌核准](docs/01_design/design-collection/reviews/luxury-v1-approval.md) 已由使用者「批准合併」及 [PR #41](https://github.com/xk2022/xk-website/pull/41) 成立；原 [審閱稿](docs/01_design/design-collection/reviews/luxury-v1.md) 與 [品牌前置報告](docs/reports/dc005-brand-review.md) 保留原時點。[完整 DC-005](docs/task/dc005.md) 與 [功能實作報告](docs/reports/dc005-implementation.md) 的原 33 頁驗收不改寫為新結果；[PR #42](https://github.com/xk2022/xk-website/pull/42) 現在整合已合併 Heritage，分支清冊共 49 頁，待新驗收。
-
-使用者最新「合併」已授權依序合併 PR #40、PR #42，之後執行 DC-006，不重複要求同一授權。PR #42 尚待完成此次必要驗收及實際合併，DC-006 尚未開始；DC-006 後續須另開 PR 審閱，未授權該新 PR 自動合併。版本橋接、原始退出碼與新驗收／遠端事件見 [整合報告](docs/reports/design-collection-integration.md)。不預填 49 頁已發布，也不延伸為法律、索引、價格或 DNS 核准。
+本分支 `feature/design-collection-navigation-seo` 續作 DC-006：共用輕量導航模型、Header 後的 StyleSwitcher、49 頁 Footer／CTA 映射與 Gallery 七頁比較。本機功能與版面驗收已完成，原始 incomplete／網路診斷與限定重驗保留於報告；最終 CI／artifact 待新 PR，交付審閱、不自動合併，舊 PR #40／#42 授權不延伸。DC-007 尚未開始，法律、索引、價格與 DNS 核准邊界不變。
 
 ## 3. 技術架構
 

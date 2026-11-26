@@ -492,10 +492,30 @@ Heritage 的 PR #40 仍未合併，未引入其程式或取代本分支基準。
 
 衝突處理及合併後必要檢查由本次實際版本驗證；原分支測試、舊未授權聲明與失敗／重驗紀錄保留各自版本邊界。真正發生的合併、main CI、部署與公開驗證分開記錄，不預填結果。這項授權不擴張為新的業務／價格、法律政策、正式索引或 DNS 決策。
 
-## 2026-11-26 — Heritage 已合併與 Luxury 整合開始
+## 2026-11-26 — Heritage 已合併與 Luxury 整合開始（當時快照）
 
 使用者已授權依序合併 PR #40／#42，再執行 DC-006。PR #40 已實際合併為 `main@0d41ecf495e55b792f966c9fe27bd07c27bc5647`，main 清冊為 Modern 16＋Gallery＋Heritage 16，共 33 頁；main CI、Pages 部署及正式 33 頁 HTTP 驗證已完成（run 45796333591）。
 
 本階段在 `feature/design-collection-luxury` 整合該已核准 main，保留 Heritage／Luxury 的完整規格、版本審閱核准與原實作報告，三系列清冊共 49 頁。原分支 33 頁驗收、外站 404 及未獲合併授權敘述均保留其歷史邊界，不代表新狀態；主線 PR #43 的五來源 Hub 修正已承接，仍依本階段實際驗收記錄。公司來源本階段重核未有新增適用規範變更，精確版本與依據依本階段來源證據保存。
 
 PR #42 合併授權已成立，仍須完成本次必要驗收、精確 head CI、實際 merge 與後續 main CI／部署／公開驗證；不可把原完整報告改稱本次重跑。DC-006 尚未開始，待兩功能 PR 實際合併後接續，另開新 PR 審閱、未授權自動合併。階段結果與原始退出碼統一追加 [整合報告](../reports/design-collection-integration.md)，不改寫 Heritage 原 Exit 2／人工補充或既有歷史。
+
+
+## 2026-11-26 — 兩系列發布完成與 DC-006 開始（啟動時快照）
+
+PR #40 已合併為 `0d41ecf495e55b792f966c9fe27bd07c27bc5647`，main CI／Pages run 45796333591 及當時公開 33 頁 HTTP 2,329 PASS 完成。PR #42 後續已合併為 `9322810f27e74e5ed4faa35a3b3931b3719f0c9a`，main CI／Pages run 45802200429 成功，2026-11-26 10:33:48Z 部署完成；公開 49 頁／36 assets／29 negatives HTTP 3,273 PASS。實際合併／部署證據見 [整合報告](../reports/design-collection-integration.md)；上方待合併、33 頁與未開始敘述保留當時快照，不回寫原 spec／report／退出碼。
+
+使用者要求後續 DC-006 現在正式開始，分支 `feature/design-collection-navigation-seo`，base 為上述已發布 main。公司 main `9213a3d8dacb8774d87c26cb736c4a4315779e95` 與前置整合所核讀版本相同，沒有新規範或業務衝突，維持唯讀；沿用兩套同版本品牌核准，不新增品牌／價格事實。
+
+[DC-006 規格](../task/dc006.md) 控制本輪範圍：純導航模型與 server-only 模型生成器已落盤，URL 為唯一風格來源，Client 僅收公開路由／anchor 輕量 DTO；同內容切換只保留共同合法 hash，不攜帶 query 或個人資料。三套 Frame 的 Header 後、main 前加入列印隱藏 band，Header／Footer／CTA 收斂同 resolver；Gallery 保留三首頁卡並增加七主頁比較，49 頁清冊及 SEO／Privacy／A4 邊界保持。
+
+完整接入與必要驗收仍在進行，未預填 PASS、PR 號或 CI；實際命令、失敗／修正／重驗與畫面由 [本輪報告](../reports/dc006-implementation.md) 及 [截圖](../screenshots/design-collection/dc006/) 後續保存。交付新 PR 待審，不自動合併，先前 PR #40／#42 合併授權不延伸。DC-007 尚未開始，不把已發布 49 頁視為最終整套發布驗收完成。
+
+
+## 2026-11-26 — DC-006 本機功能與版面驗收完成
+
+本機功能與版面驗收已完成。最終 v2 六品質指令及 typegen 均 Exit 0；normal／Pages HTTP 各 3,274 項，兩模式各完成 49 頁×五寬 245 layouts、20 axe 及 96 個切換方向，0 violations。18 張實際 Pages 截圖已拍攝，並由 Root 逐張檢視。
+
+原 normal suite Exit 2 保留 10 項 overlap incomplete；原 Pages suite Exit 1 保留同 10 項與三筆帶 `source=qa` 的 HEAD canceled，僅 final network gate FAIL。10 項逐筆人工判讀皆 PASS；三筆 query 的限定重驗與原始網路診斷由 [本輪報告](../reports/dc006-implementation.md) 保存，不預填其結果，不把原 suite 改成 Exit 0 或籠統宣稱所有測試 PASS。[本輪截圖](../screenshots/design-collection/dc006/) 已有真實畫面；既有啟動時 PENDING 與舊歷史退出碼不回寫。
+
+最終 exact-head CI／artifact 待新 PR；交付審閱、不自動合併，PR #40／#42 舊合併授權不延伸，DC-007 尚未開始。法律、索引、價格、收件、DNS 與既有公開 main 的版本界線保持。

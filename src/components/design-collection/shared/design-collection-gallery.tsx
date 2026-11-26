@@ -7,6 +7,7 @@ import { SectionHeading } from "@/components/sections/section-heading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardIcon, CardTitle } from "@/components/ui/card";
 import { designCollectionRegistry } from "@/config/design-collection";
+import { getDesignHeaderItems } from "@/lib/design-collection/navigation-model";
 import { resolveDesignHref } from "@/lib/design-collection/routes";
 import type { DesignStyleId } from "@/lib/design-collection/types";
 
@@ -104,6 +105,22 @@ export function DesignCollectionGallery() {
               );
             })}
           </div>
+        </Container>
+      </Section>
+
+      <Section id="compare-pages" background="surface" aria-labelledby="compare-pages-title">
+        <Container>
+          <SectionHeading id="compare-pages-title" eyebrow="COMPARE THE SAME CONTENT" title="從同一頁，比較三種呈現" titleLang="zh-TW" description="選擇相同內容，直接比較版面與閱讀方式；設計風格不改變服務範圍或參考價格。" />
+          <table className="w-full table-fixed border-collapse text-left text-sm text-foreground">
+            <caption className="sr-only">七個主要頁面的三風格對照入口</caption>
+            <thead><tr><th scope="col" className="w-1/4 border-b border-border p-2 font-semibold sm:p-4">頁面</th>{designCollectionRegistry.styles.map((style) => <th key={style.id} scope="col" className="break-words border-b border-border p-2 text-center text-xs font-semibold sm:p-4 sm:text-sm"><span lang="en">{style.id === "modern" ? "Modern" : style.id === "heritage" ? "Heritage" : "Luxury"}</span></th>)}</tr></thead>
+            <tbody>{getDesignHeaderItems("modern", undefined, undefined, false).map((page) => <tr key={page.pageKey}><th scope="row" className="break-words border-b border-border p-2 font-medium sm:p-4">{page.label}</th>{designCollectionRegistry.styles.map((style) => {
+              if (page.pageKey === "collection") return null;
+              const href = resolveDesignHref({ styleId: style.id, pageKey: page.pageKey });
+              if (!href) throw new Error("Comparison requires a published same-content destination");
+              return <td key={style.id} className="border-b border-border p-2 sm:p-4"><Link href={href} className="inline-flex min-h-11 w-full max-w-full items-center justify-center rounded-sm font-medium text-secondary underline underline-offset-4"><span>查看<span className="sr-only"> {style.name} 的{page.label}</span></span></Link></td>;
+            })}</tr>)}</tbody>
+          </table>
         </Container>
       </Section>
     </>

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "npx",
+    "next",
+    "typegen"
+  ],
+  "cwd": "/tmp/xk-dc006-build",
+  "startedAt": "2026-11-26T10:51:47.089133+00:00",
+  "finishedAt": "2026-11-26T10:51:47.901881+00:00",
+  "processId": 113135,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc006-final/typegen.log",
+  "logSha256": "adba4af9194e10e47dda75ff0fd0f8c2b756474896d0eba5612799c527ff372a",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

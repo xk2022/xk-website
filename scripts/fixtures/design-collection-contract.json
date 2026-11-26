@@ -46,7 +46,7 @@
     "path": "/design-collection",
     "title": "XK Design Collection | Xplore Kaleidoscope",
     "description": "比較 Modern、Heritage 與 Luxury 網站設計系列，了解同一份 XK 品牌內容的不同呈現方向。",
-    "anchors": ["main-content", "design-styles"]
+    "anchors": ["main-content", "design-styles", "compare-pages"]
   },
   "heritageRoutes": [
     {"pageKey": "home", "path": "/design-collection/heritage", "canonicalPath": "/"},

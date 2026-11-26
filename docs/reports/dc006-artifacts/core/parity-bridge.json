@@ -1,0 +1,24 @@
+{
+  "testId": "DC6-CONTENT-PARITY-DECISION-BRIDGE",
+  "status": "PASS",
+  "at": "2026-11-26T11:04:24.696806+00:00",
+  "comparison": "Fresh32 HTTP diagnostics rows are byte-for-byte equivalent as decoded JSON (including90 candidate chunks, paths/counts/notes); no new semantic candidate. Reuse only earlier90-target decision, not whole content/visibility acceptance. Fresh245 layouts/20axe/Switcher/links remain required.",
+  "rows": 32,
+  "candidates": 90,
+  "files": [
+    {
+      "path": "/tmp/xk-dc006-merge/luxury/http-normal-result.json",
+      "sha256": "4f944b94d0609c773ffc7150b1b2899341ef948407d8a64abd18289090aef9d4"
+    },
+    {
+      "path": "/tmp/xk-dc006-final/http-normal-result.json",
+      "sha256": "6f4ce23520c168e98877ad853745a76315f15f2ef1f1104a9ea5e881cbb534ea"
+    },
+    {
+      "path": "/tmp/xk-dc006-merge/luxury-parity/adjudication-final.json",
+      "sha256": "0bae9f647eae8793d86c75813415f262630546c0621ce5eb7ca466ed8d33e813"
+    }
+  ],
+  "existingRepoEvidence": "docs/reports/design-collection-integration-artifacts/luxury/parity/adjudication-final.json.gz",
+  "originalDecision": "87 numbered/parent concatenation reorder;3 UI label renames with matching service IDs/title/hrefs. Original Exit2 and subsequent exact scoped Exit0 are preserved."
+}

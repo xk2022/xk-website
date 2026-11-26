@@ -39,12 +39,13 @@
 | DC-001 | [規格](../task/dc001.md)、[架構報告](dc001-architecture.md) |
 | DC-002 | [規格](../task/dc002.md)、[共用核心](../03_engineering/design-collection-core.md)、[報告](dc002-implementation.md)、[證據](dc002-artifacts/README.md) |
 | DC-003 | [規格](../task/dc003.md)、[報告](dc003-implementation.md) |
-| DC-004 完整實作 | [規格](../task/dc004.md)、[驗證報告](dc004-implementation.md)；[PR #40](https://github.com/xk2022/xk-website/pull/40) 已合併為 `0d41ecf495e55b792f966c9fe27bd07c27bc5647`，main 33 頁；部署／公開驗證待確認 |
+| DC-004 完整實作 | [規格](../task/dc004.md)、[驗證報告](dc004-implementation.md)；[PR #40](https://github.com/xk2022/xk-website/pull/40) 已合併／部署，當時公開 33 頁 HTTP 2,329 PASS（main run 45796333591） |
 | DC-004 品牌前置 | [審閱稿](../01_design/design-collection/reviews/heritage-v1.md)、[同版本核准](../01_design/design-collection/reviews/heritage-v1-approval.md)、[驗證紀錄](dc004-brand-review.md)；原型不代表完整系列驗收 |
 | DC-005 品牌前置 | [v1 審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、[歷史驗證報告](dc005-brand-review.md)、[同版本品牌核准](../01_design/design-collection/reviews/luxury-v1-approval.md)；PR #41 已核准合併 |
-| DC-005 完整 Luxury | [規格](../task/dc005.md)、[實作報告](dc005-implementation.md)；[PR #42](https://github.com/xk2022/xk-website/pull/42) 已獲合併授權，正整合 main，三系列清冊 49 頁待新驗收 |
-| 合併整合 | [整合報告](design-collection-integration.md)；保留 Heritage 原 Exit 2 與人工補充，Luxury 本階段結果另記，不冒稱舊 33 頁測試為新 49 頁驗收 |
-| DC-006～007 | [工作包](../01_design/design-collection/work-packages.md)；DC-006 尚未開始，須待 PR #42 實際合併，後續新 PR 審閱、不自動合併 |
+| DC-005 完整 Luxury | [規格](../task/dc005.md)、[實作報告](dc005-implementation.md)；[PR #42](https://github.com/xk2022/xk-website/pull/42) 已合併為 `9322810f27e74e5ed4faa35a3b3931b3719f0c9a`，main 49 頁已部署／公開驗證（run 45802200429） |
+| 合併整合 | [整合報告](design-collection-integration.md)；33→49 頁版本、真實 merge／CI／部署／公開驗證及原始失敗，獨立於 DC-006 新功能驗收 |
+| DC-006 三系列切換與導航 | [規格](../task/dc006.md)、[本輪報告](dc006-implementation.md)、[18 張已檢視 Pages 截圖](../screenshots/design-collection/dc006/)；本機功能與版面驗收已完成，原始 incomplete／網路診斷及限定重驗詳報告；最終 CI／artifact 待新 PR，交付審閱、不自動合併 |
+| DC-007 完整驗收與發布準備 | [工作包](../01_design/design-collection/work-packages.md#dc007)；尚未開始，前置為 DC-006 合併，不以既有 49 頁已發布推定完成 |
 
 ## 證據保存
 

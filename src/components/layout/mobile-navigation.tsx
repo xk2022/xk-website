@@ -7,10 +7,11 @@ import { Menu, X } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { InquiryButton } from "@/components/layout/inquiry-button";
 import { Button } from "@/components/ui/button";
-import { primaryNavigation } from "@/config/navigation";
+
+type MobileNavigationItem = Readonly<{ href: string; label: string; current: boolean }>;
 
 /** A disclosure, not a modal: the rest of the page remains available. */
-export function MobileNavigation() {
+export function MobileNavigation({ items }: { items: readonly MobileNavigationItem[] }) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -85,10 +86,11 @@ export function MobileNavigation() {
         <Container className="py-6">
           <nav aria-label="手機導覽">
             <ul className="space-y-1">
-              {primaryNavigation.map(({ href, label }) => (
+              {items.map(({ href, label, current }) => (
                 <li key={href}>
                   <Link
                     href={href}
+                    aria-current={current ? "page" : undefined}
                     onClick={() => setOpen(false)}
                     className="type-body inline-flex min-h-11 w-full items-center rounded-md px-3 font-medium text-foreground hover:bg-surface hover:text-secondary"
                   >

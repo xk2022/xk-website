@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "command": [
+    "python",
+    "/tmp/xk-dc006-final/adjudicate-band-overlap-v2.py",
+    "--evidence",
+    "/tmp/xk-dc006-final/incomplete-pages-v2/evidence.json",
+    "--output",
+    "/tmp/xk-dc006-final/band-overlap-pages-adjudication.json"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T11:36:22.907924+00:00",
+  "finishedAt": "2026-11-26T11:36:23.829504+00:00",
+  "processId": 122417,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 30.0,
+  "logFile": "/tmp/xk-dc006-final/band-overlap-pages-adjudication-v2.log",
+  "logSha256": "f5f26528deb58bd6badf2aeacce157258c8f0055b8ab07affb29986f32e504ae",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}
