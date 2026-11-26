@@ -1,0 +1,29 @@
+{
+  "testId": "DC003-PDF-VERIFIER-CANVAS-CORRECTION",
+  "oldVerifier": {
+    "path": "/tmp/xk-dc003/verify-pdf.py",
+    "sha256": "ed1c56550f9abd050ecbf6a0ca4a0b7156cbfaf4975121be4bda618f426f8649"
+  },
+  "newVerifier": {
+    "path": "/tmp/xk-dc003/verify-pdf-v2.py",
+    "sha256": "5a5ad457a1851754c98df334f5246cd4ef9d78e40084e9abb1dc77c3e158b043"
+  },
+  "preservedFailure": {
+    "path": "/tmp/xk-dc003/normal-v2/pdf-verification/verification.json",
+    "sha256": "126dd0366a9eb0c05c83b333710af6f98261552b61a8a2bcddff3176a66ff102"
+  },
+  "sourcePDF": {
+    "path": "/tmp/xk-dc003/normal-v2/quotation-worstcase-a4.pdf",
+    "sha256": "46ed4a1af68229f18f7cafece46b08351a4ce7515ced9c3847ca8a3b3af82695"
+  },
+  "diagnosis": "/tmp/xk-dc003/pdf-canvas-diagnostic/diagnostic.json",
+  "change": "Classify only complete exact observed canvas signature (prefix bytes, MediaBox/CropBox, first clip, seq0/1/2 single opaque-white fill rectangles and bboxlog). Raw spill properties remain recorded. No tolerance change; all other vector/raster bounds stay strict, and all non-background actual paint bboxlog bounds are additionally checked at original0.1pt.",
+  "preflight": {
+    "pythonCompile": 0,
+    "cliHelp": 0
+  },
+  "newVerifierAcceptance": "NOT_EXECUTED",
+  "expectedAssertionsWhenOnePage": 14,
+  "manualVisibility": "Root previously viewed original150dpi page; v2 does not fabricate a new manual view.",
+  "retryOutput": "Use NEW pdf-verification-v2 directory, original output unchanged."
+}

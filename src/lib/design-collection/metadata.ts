@@ -14,19 +14,14 @@ export type DesignMetadataContract = Readonly<{
   metadata: Metadata;
 }>;
 
-/** Describes a known plan, without adding it to the public SEO registry. */
+/** Describes known destinations without granting publication to planned styles. */
 export function describeDesignMetadata(request: DesignRouteRequest): DesignMetadataContract | null {
   const route = describeDesignRoute(request);
   if (!route) return null;
 
   let page: SeoPage;
   if (route.pageKey === "collection") {
-    page = {
-      path: route.presentationPath,
-      title: "XK Design Collection | Xplore Kaleidoscope",
-      description: "比較 Modern、Heritage 與 Luxury 網站設計系列，了解同一份 XK 品牌內容的不同呈現方向。",
-      availability: route.availability === "public" ? "public" : "draft",
-    };
+    page = getSeoPage(route.presentationPath);
   } else {
     const original = getSeoPage(route.canonicalPath);
     const style = designCollectionRegistry.styles.find(({ id }) => id === route.styleId);
@@ -53,7 +48,7 @@ export function describeDesignMetadata(request: DesignRouteRequest): DesignMetad
   });
 }
 
-/** Safe future route entry point: planned styles and Gallery never emit public metadata. */
+/** Safe route entry point: planned styles never emit public metadata. */
 export function createDesignPageMetadata(request: DesignRouteRequest): Metadata | null {
   const contract = describeDesignMetadata(request);
   return contract?.availability === "public" ? contract.metadata : null;

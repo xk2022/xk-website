@@ -1,0 +1,573 @@
+{
+  "status": "PASS",
+  "routes": 17,
+  "declaredAnchors": 147,
+  "results": [
+    {
+      "testId": "ANCHOR-/design-collection",
+      "url": "http://127.0.0.1:3230/design-collection/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "design-styles"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "design-styles": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/",
+      "url": "http://127.0.0.1:3230/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "about",
+          "brand",
+          "services",
+          "service-plans",
+          "featured-websites",
+          "technologies",
+          "why-xk",
+          "solutions",
+          "contact",
+          "service-website-development",
+          "service-java-enterprise",
+          "service-system-integration",
+          "service-ai-solutions",
+          "service-maintenance"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "about": 1,
+          "brand": 1,
+          "services": 1,
+          "service-plans": 1,
+          "featured-websites": 1,
+          "technologies": 1,
+          "why-xk": 1,
+          "solutions": 1,
+          "contact": 1,
+          "service-website-development": 1,
+          "service-java-enterprise": 1,
+          "service-system-integration": 1,
+          "service-ai-solutions": 1,
+          "service-maintenance": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/about",
+      "url": "http://127.0.0.1:3230/about/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "who-we-are",
+          "mission",
+          "vision",
+          "capabilities",
+          "approach",
+          "founder",
+          "commitment",
+          "about-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "who-we-are": 1,
+          "mission": 1,
+          "vision": 1,
+          "capabilities": 1,
+          "approach": 1,
+          "founder": 1,
+          "commitment": 1,
+          "about-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/services",
+      "url": "http://127.0.0.1:3230/services/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "service-overview",
+          "service-plans",
+          "pricing-guide",
+          "website-development",
+          "java-enterprise",
+          "system-integration",
+          "ai-automation",
+          "cloud-infrastructure",
+          "service-combinations",
+          "services-process",
+          "services-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "service-overview": 1,
+          "service-plans": 1,
+          "pricing-guide": 1,
+          "website-development": 1,
+          "java-enterprise": 1,
+          "system-integration": 1,
+          "ai-automation": 1,
+          "cloud-infrastructure": 1,
+          "service-combinations": 1,
+          "services-process": 1,
+          "services-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/solutions",
+      "url": "http://127.0.0.1:3230/solutions/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "solutions-hero",
+          "business-challenges",
+          "solutions-overview",
+          "solution-details",
+          "solution-digital-presence",
+          "solution-enterprise-management",
+          "solution-system-integration",
+          "solution-ai-workflow",
+          "solution-technology",
+          "solution-combinations",
+          "implementation-approach",
+          "why-xk-solutions",
+          "solutions-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "solutions-hero": 1,
+          "business-challenges": 1,
+          "solutions-overview": 1,
+          "solution-details": 1,
+          "solution-digital-presence": 1,
+          "solution-enterprise-management": 1,
+          "solution-system-integration": 1,
+          "solution-ai-workflow": 1,
+          "solution-technology": 1,
+          "solution-combinations": 1,
+          "implementation-approach": 1,
+          "why-xk-solutions": 1,
+          "solutions-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/portfolio",
+      "url": "http://127.0.0.1:3230/portfolio/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "portfolio-hero",
+          "portfolio-introduction",
+          "website-cases",
+          "website-samples",
+          "portfolio-projects",
+          "portfolio-technology",
+          "portfolio-transparency",
+          "portfolio-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "portfolio-hero": 1,
+          "portfolio-introduction": 1,
+          "website-cases": 1,
+          "website-samples": 1,
+          "portfolio-projects": 1,
+          "portfolio-technology": 1,
+          "portfolio-transparency": 1,
+          "portfolio-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/portfolio/corporate-website",
+      "url": "http://127.0.0.1:3230/portfolio/corporate-website/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "project-overview",
+          "project-challenge",
+          "project-solution",
+          "project-technology",
+          "project-evidence",
+          "project-status",
+          "project-services",
+          "project-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "project-overview": 1,
+          "project-challenge": 1,
+          "project-solution": 1,
+          "project-technology": 1,
+          "project-evidence": 1,
+          "project-status": 1,
+          "project-services": 1,
+          "project-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/portfolio/enterprise-management",
+      "url": "http://127.0.0.1:3230/portfolio/enterprise-management/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "project-overview",
+          "project-challenge",
+          "project-solution",
+          "project-technology",
+          "project-evidence",
+          "project-status",
+          "project-services",
+          "project-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "project-overview": 1,
+          "project-challenge": 1,
+          "project-solution": 1,
+          "project-technology": 1,
+          "project-evidence": 1,
+          "project-status": 1,
+          "project-services": 1,
+          "project-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/portfolio/integration-hub",
+      "url": "http://127.0.0.1:3230/portfolio/integration-hub/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "project-overview",
+          "project-challenge",
+          "project-solution",
+          "project-technology",
+          "project-evidence",
+          "project-status",
+          "project-services",
+          "project-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "project-overview": 1,
+          "project-challenge": 1,
+          "project-solution": 1,
+          "project-technology": 1,
+          "project-evidence": 1,
+          "project-status": 1,
+          "project-services": 1,
+          "project-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/portfolio/showcases/march-tangbao",
+      "url": "http://127.0.0.1:3230/portfolio/showcases/march-tangbao/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "showcase-overview",
+          "showcase-context",
+          "showcase-preview",
+          "showcase-implementation",
+          "showcase-limitations",
+          "showcase-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "showcase-overview": 1,
+          "showcase-context": 1,
+          "showcase-preview": 1,
+          "showcase-implementation": 1,
+          "showcase-limitations": 1,
+          "showcase-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/portfolio/showcases/hongjia-birdnest",
+      "url": "http://127.0.0.1:3230/portfolio/showcases/hongjia-birdnest/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "showcase-overview",
+          "showcase-context",
+          "showcase-preview",
+          "showcase-implementation",
+          "showcase-limitations",
+          "showcase-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "showcase-overview": 1,
+          "showcase-context": 1,
+          "showcase-preview": 1,
+          "showcase-implementation": 1,
+          "showcase-limitations": 1,
+          "showcase-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/portfolio/showcases/yupinyuan-bento",
+      "url": "http://127.0.0.1:3230/portfolio/showcases/yupinyuan-bento/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "showcase-overview",
+          "showcase-context",
+          "showcase-preview",
+          "showcase-implementation",
+          "showcase-limitations",
+          "showcase-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "showcase-overview": 1,
+          "showcase-context": 1,
+          "showcase-preview": 1,
+          "showcase-implementation": 1,
+          "showcase-limitations": 1,
+          "showcase-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/portfolio/showcases/campaign-website-design",
+      "url": "http://127.0.0.1:3230/portfolio/showcases/campaign-website-design/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "showcase-overview",
+          "showcase-context",
+          "showcase-preview",
+          "showcase-implementation",
+          "showcase-limitations",
+          "showcase-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "showcase-overview": 1,
+          "showcase-context": 1,
+          "showcase-preview": 1,
+          "showcase-implementation": 1,
+          "showcase-limitations": 1,
+          "showcase-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/portfolio/showcases/honest-diecut",
+      "url": "http://127.0.0.1:3230/portfolio/showcases/honest-diecut/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "showcase-overview",
+          "showcase-context",
+          "showcase-preview",
+          "showcase-implementation",
+          "showcase-limitations",
+          "showcase-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "showcase-overview": 1,
+          "showcase-context": 1,
+          "showcase-preview": 1,
+          "showcase-implementation": 1,
+          "showcase-limitations": 1,
+          "showcase-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/portfolio/showcases/qiangang-windows",
+      "url": "http://127.0.0.1:3230/portfolio/showcases/qiangang-windows/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "showcase-overview",
+          "showcase-context",
+          "showcase-preview",
+          "showcase-implementation",
+          "showcase-limitations",
+          "showcase-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "showcase-overview": 1,
+          "showcase-context": 1,
+          "showcase-preview": 1,
+          "showcase-implementation": 1,
+          "showcase-limitations": 1,
+          "showcase-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/contact",
+      "url": "http://127.0.0.1:3230/contact/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "contact-hero",
+          "contact-form",
+          "contact-channels",
+          "contact-preparation",
+          "contact-process",
+          "contact-data-note",
+          "contact-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "contact-hero": 1,
+          "contact-form": 1,
+          "contact-channels": 1,
+          "contact-preparation": 1,
+          "contact-process": 1,
+          "contact-data-note": 1,
+          "contact-next-step": 1
+        },
+        "bad": {}
+      }
+    },
+    {
+      "testId": "ANCHOR-/quotation",
+      "url": "http://127.0.0.1:3230/quotation/",
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "declaredIDsExactlyOnce": [
+          "main-content",
+          "quotation-introduction",
+          "quotation-services",
+          "quotation-builds",
+          "quotation-addons",
+          "quotation-complexity",
+          "quotation-results",
+          "quotation-print-summary",
+          "quotation-next-step"
+        ]
+      },
+      "actual": {
+        "httpStatus": 200,
+        "counts": {
+          "main-content": 1,
+          "quotation-introduction": 1,
+          "quotation-services": 1,
+          "quotation-builds": 1,
+          "quotation-addons": 1,
+          "quotation-complexity": 1,
+          "quotation-results": 1,
+          "quotation-print-summary": 1,
+          "quotation-next-step": 1
+        },
+        "bad": {}
+      }
+    }
+  ]
+}

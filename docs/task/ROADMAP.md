@@ -61,13 +61,13 @@ BF-009～016 以 [PR #24](https://github.com/xk2022/xk-website/pull/24)、[待�
 | --- | --- | --- |
 | DC-001 架構規格 | 已合併 [PR #30](https://github.com/xk2022/xk-website/pull/30)；[報告](../reports/dc001-architecture.md) | — |
 | DC-002 共用核心 | 已合併 [PR #33](https://github.com/xk2022/xk-website/pull/33)；[報告](../reports/dc002-implementation.md) | DC-001 |
-| DC-003 Modern／Gallery | 待執行 | DC-002 |
+| DC-003 Modern／Gallery | 本輪執行：[規格](dc003.md)、[實作與驗證](../reports/dc003-implementation.md)，PR 待審 | DC-002 |
 | DC-004 Heritage | 待執行、品牌審閱 | DC-003 |
 | DC-005 Luxury | 待執行、品牌審閱 | DC-003 |
 | DC-006 三系列整合 | 待執行 | DC-004、DC-005 |
 | DC-007 完整驗收與發布準備 | 待執行 | DC-006；發布依當次授權 |
 
-DC-004／005 可依現有工作包平行；未完成風格與 Gallery 不提供公開入口。
+DC-004／005 可依現有工作包平行；未完成風格不提供假入口，Gallery 依 DC-003 的 17 頁階段驗收。
 
 ## 4. 文件整理（DOC-001～006）
 
@@ -78,9 +78,9 @@ DC-004／005 可依現有工作包平行；未完成風格與 Gallery 不提供�
 | DOC-003 歷史與重複文件 | 已合併 [PR #35](https://github.com/xk2022/xk-website/pull/35)；[歷史索引](../98_decisions/README.md) |
 | DOC-004 架構與結構 | 已合併 [PR #36](https://github.com/xk2022/xk-website/pull/36)；[工程索引](../03_engineering/README.md)、[設計索引](../01_design/README.md) |
 | DOC-005 Roadmap | 已合併 [PR #37](https://github.com/xk2022/xk-website/pull/37) |
-| DOC-006 文件一致性檢查 | [檢查報告](../reports/doc006-consistency.md)；合併及 CI 以本次 PR 實際事件為準 |
+| DOC-006 文件一致性檢查 | 已合併 [PR #38](https://github.com/xk2022/xk-website/pull/38)；[檢查報告](../reports/doc006-consistency.md)；合併及 CI 以本次 PR 實際事件為準 |
 
-本輪文件整理以 DOC-006 收斂；合併完成後，下一個功能工作包為 DC-003。不因此增加新的功能規格。
+DOC-005／DOC-006 已分別由 PR #37／#38 合併；本輪 DC-003 功能開發與驗收完成，見 [PR #39](https://github.com/xk2022/xk-website/pull/39)，仍待審閱，不增加新的功能規格。
 
 ## 5. 未結項與其他 PR
 

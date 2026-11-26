@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { test } from "node:test";
 
 import { seoPages, seoProtectionPolicy } from "../src/config/seo.ts";
@@ -15,12 +16,17 @@ function requestFor(route, styleId = route.styleId) {
 }
 
 const published = seoPages.filter(({ availability }) => availability === "public");
-test("Modern public inventory remains the independent 16-page baseline", () => {
-  assert.equal(published.length, 16);
-  assert.equal(getPublishedDesignRoutes().length, 16);
+const fixture = JSON.parse(readFileSync(new URL("./fixtures/design-collection-contract.json", import.meta.url), "utf8"));
+const modern = fixture.modernRoutes.map(({ path }) => published.find((page) => page.path === path));
+test("Modern 16 and Gallery are the independent exact 17-page public inventory", () => {
+  assert.equal(published.length, 17);
+  assert.equal(getPublishedDesignRoutes().length, 17);
+  assert.equal(modern.length, 16);
+  assert.ok(modern.every(Boolean));
+  assert.deepEqual(published.map(({ path }) => path).sort(), [...fixture.publishedPaths].sort());
 });
 
-for (const page of published) {
+for (const page of modern) {
   test(`Modern metadata is exactly unchanged: ${page.path}`, () => {
     const route = identifyDesignRoute(page.path);
     assert(route);
@@ -30,7 +36,7 @@ for (const page of published) {
 }
 
 for (const styleId of ["heritage", "luxury"]) {
-  for (const page of published) {
+  for (const page of modern) {
     test(`${styleId} ${page.path}: Modern canonical, presentation OG, unpublished`, () => {
       const modern = identifyDesignRoute(page.path);
       const request = requestFor(modern, styleId);
@@ -50,12 +56,16 @@ for (const styleId of ["heritage", "luxury"]) {
   }
 }
 
-test("Gallery metadata stays a plan with its own canonical and OG URL", () => {
+test("Gallery publishes its independently approved copy and self canonical/OG through the shared SEO helper", () => {
   const value = describeDesignMetadata({ pageKey: "collection" });
-  assert.equal(value.availability, "planned");
+  assert.equal(value.availability, "public");
   assert.equal(value.metadata.alternates.canonical, "https://www.xplorekaleidoscope.com/design-collection");
   assert.equal(value.metadata.openGraph.url, "https://www.xplorekaleidoscope.com/design-collection");
-  assert.equal(createDesignPageMetadata({ pageKey: "collection" }), null);
+  const page = published.find(({ path }) => path === fixture.collectionRoute.path);
+  assert.deepEqual(page, { path: fixture.collectionRoute.path, title: fixture.collectionRoute.title, description: fixture.collectionRoute.description, availability: "public" });
+  assert.deepEqual(createDesignPageMetadata({ pageKey: "collection" }), createPageMetadata(page, siteConfig));
+  assert.deepEqual(value.metadata.robots, { index: false, follow: false });
+  assert.deepEqual(createDesignPageMetadata({ pageKey: "collection", hash: "design-styles" }), value.metadata);
 });
 
 test("Fragments never enter canonical or sharing metadata", () => {
@@ -81,5 +91,5 @@ test("Metadata results do not mutate source or later calls", () => {
   first.description = "CHANGED_BY_CONSUMER";
   assert.deepEqual(createDesignPageMetadata({ styleId: "modern", pageKey: "home" }), createPageMetadata(published[0], siteConfig));
   assert.deepEqual(seoProtectionPolicy, { mode: "protected", publishSitemap: false });
-  assert(!seoPages.some(({ path }) => path.startsWith("/design-collection")));
+  assert.deepEqual(seoPages.filter(({ path }) => path.startsWith("/design-collection")).map(({ path }) => path), [fixture.collectionRoute.path]);
 });

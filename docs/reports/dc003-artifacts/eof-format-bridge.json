@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "change": "Remove exactly one redundant final LF; all preceding source bytes identical",
+  "path": "src/config/design-collection-navigation.ts",
+  "beforeSha256": "d6982addee52298bb7ec465c271c9e325437ee077b29bb377600f81a82e96c43",
+  "afterSha256": "764f9502aa72f2eecc8f739a7f285cd1b31f3715206c94864361e6da97f8bd82",
+  "sameContentExceptEOF": true,
+  "originalFinding": {
+    "status": "FAIL",
+    "command": "git diff --cached --check",
+    "exitCode": null,
+    "actual": "src/config/design-collection-navigation.ts:7: new blank line at EOF",
+    "notes": "Initial check output was observed, but a multi-command shell returned a later command status; no false exit is assigned."
+  }
+}

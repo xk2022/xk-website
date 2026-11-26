@@ -18,10 +18,12 @@ test("DC2-ROUTE-01: independent style, nine content keys and collection publicat
   assert.deepEqual(designCollectionRegistry.brandShowcaseSlugs, fixture.brandShowcaseSlugs);
 });
 
-test("DC2-ROUTE-02: independent exact Modern 16-path public inventory", () => {
+test("DC3-ROUTE-01: independent exact 17-path publication with the original Modern 16", () => {
   const published = getPublishedDesignRoutes();
-  assert.deepEqual(published.map(({ presentationPath }) => presentationPath), fixture.modernRoutes.map(({ path }) => path));
-  assert.ok(published.every(({ styleId, availability }) => styleId === "modern" && availability === "public"));
+  assert.equal(published.length, 17);
+  assert.deepEqual(published.map(({ presentationPath }) => presentationPath).sort(), [...fixture.publishedPaths].sort());
+  assert.deepEqual(published.filter(({ styleId }) => styleId === "modern").map(({ presentationPath }) => presentationPath), fixture.modernRoutes.map(({ path }) => path));
+  assert.ok(published.every(({ styleId, availability }) => (styleId === "modern" || styleId === null) && availability === "public"));
   assert.deepEqual(published.map(({ presentationPath }) => presentationPath).sort(), seoPages.filter(({ availability }) => availability === "public").map(({ path }) => path).sort());
 });
 
@@ -53,12 +55,24 @@ for (const styleId of ["heritage", "luxury"]) {
   });
 }
 
-test("DC2-ROUTE-03: collection is independent, known and planned, without a style", () => {
+test("DC3-ROUTE-02: Gallery is public without a style and only preserves its two declared anchors", () => {
   const descriptor = describeDesignRoute({ pageKey: "collection" });
-  assert.deepEqual(descriptor, { pageKey: "collection", styleId: null, slug: null, canonicalPath: "/design-collection", presentationPath: "/design-collection", availability: "planned", hash: null, hashPreserved: false });
+  assert.deepEqual(descriptor, { pageKey: "collection", styleId: null, slug: null, canonicalPath: "/design-collection", presentationPath: "/design-collection", availability: "public", hash: null, hashPreserved: false });
   assert.deepEqual(describeDesignRoute({ pageKey: "collection", styleId: null }), descriptor);
   assert.deepEqual(identifyDesignRoute("/design-collection/"), descriptor);
-  assert.equal(resolveDesignHref({ pageKey: "collection" }), null);
+  assert.equal(resolveDesignHref({ pageKey: "collection" }), fixture.collectionRoute.path);
+  assert.deepEqual(designCollectionRegistry.collectionAnchors, fixture.collectionRoute.anchors);
+  for (const hash of fixture.collectionRoute.anchors) {
+    const request = { pageKey: "collection", hash };
+    const expected = { ...descriptor, hash, hashPreserved: true };
+    assert.deepEqual(describeDesignRoute(request), expected);
+    assert.equal(resolveDesignHref(request), `${fixture.collectionRoute.path}#${hash}`);
+    assert.deepEqual(identifyDesignRoute(`${fixture.collectionRoute.path}#${hash}`), expected);
+  }
+  for (const hash of ["contact-form", "quotation-results", "PRIVATE_CUSTOMER", "design-styles%2Fprivate"]) {
+    assert.deepEqual(describeDesignRoute({ pageKey: "collection", hash }), descriptor);
+    assert.equal(resolveDesignHref({ pageKey: "collection", hash }), fixture.collectionRoute.path);
+  }
 });
 
 test("DC2-ROUTE-04: future 49-route formula is collision-free without publishing plans", () => {
@@ -67,7 +81,7 @@ test("DC2-ROUTE-04: future 49-route formula is collision-free without publishing
   assert.equal(paths.size, 49);
   assert.deepEqual(fixture.stages.map(({ total }) => total), [16, 17, 33, 49]);
   for (const stage of fixture.stages) assert.equal(stage.modern + stage.collection + stage.heritage + stage.luxury, stage.total);
-  assert.equal(getPublishedDesignRoutes().length, fixture.stages[0].total);
+  assert.equal(getPublishedDesignRoutes().length, fixture.stages[1].total);
 });
 
 for (const example of fixture.anchorExamples) {

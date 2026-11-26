@@ -1,0 +1,19 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python3",
+    "/tmp/xk-dc003/adjudicate-visual.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T03:02:28.638564+00:00",
+  "finishedAt": "2026-11-26T03:02:28.706109+00:00",
+  "processId": 59964,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc003/visual-adjudication.log",
+  "logSha256": "4260e41e8c5006eac44bd17364231a8b32f0873bba6ca79da3274dfd460b5f94",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

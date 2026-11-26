@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "-B",
+    "/tmp/xk-dc003/private-error-shell-selfcheck.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:46:30.597259+00:00",
+  "finishedAt": "2026-11-26T02:46:30.715981+00:00",
+  "processId": 48507,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc003/private-error-shell-helper-v1.log",
+  "logSha256": "6c858bedbb0f55b76d0b8bd19c45e74deeacc9cd8a5f97ec432b00665057d587",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

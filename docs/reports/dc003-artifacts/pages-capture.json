@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc003/capture.cjs",
+    "pages",
+    "http://127.0.0.1:3231/",
+    "final"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:56:39.278668+00:00",
+  "finishedAt": "2026-11-26T02:57:02.594424+00:00",
+  "processId": 50270,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 900.0,
+  "logFile": "/tmp/xk-dc003/pages-capture.log",
+  "logSha256": "857b4084e1809764601c12e57f3ae036a1233deface75a8dbd75425e2937dced",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

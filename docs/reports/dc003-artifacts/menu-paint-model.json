@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "basis": "DC003 current source read-only paint review; fresh menu snapshot must match its own axe input and this source pin. Historical Task012 is not used.",
+  "sources": {
+    "src/app/globals.css": "2b80a0ab678b10ad97d10b63aece0f585618024ec3c17be734d3a742ee1a3ee2",
+    "src/components/brand/brand-pattern.tsx": "240173588bfcadb6760e6ef19984e6c96e148613871e85eaf516854f18b8226e",
+    "src/components/layout/section.tsx": "4b4b5bdb67808188eccb1a44dcdf3369c16b13e745cd127a2cb46da2031c7720",
+    "src/components/sections/home-hero.tsx": "b4e8d6a3d3bb8a9786187d709547b9218a33181fe64cb16383ac6d425d723c84",
+    "src/components/sections/home-contact-cta.tsx": "1705ad4a0ec6866634aaae6780ab44bf4a1a169194ab68b8e39d6205ae201d82",
+    "src/components/sections/services/services-hero.tsx": "ed909a8de11f4bc99b698cb74953cad302d6a88bc0399a925acd3afb4652f56d",
+    "src/components/sections/portfolio/portfolio-hero.tsx": "d72784651a948d1758b5993965e15ae8b100f60541d626b028555af8b3ef2b8e",
+    "src/components/sections/portfolio/portfolio-cta.tsx": "f2cba9a7c198f421d963373d02a810f1a198f5033becf91347f55ef6f54a6403",
+    "src/components/sections/contact/contact-hero.tsx": "96c7280c535f461fee451fe9a90b1eacde05e1badfeac3c83946255b7e80b1cb",
+    "src/components/sections/contact/contact-cta.tsx": "ea2fb9830cb4217c49de6e9aa83cf026d19ec57c3d7e26c1d82c77240c75ccdb",
+    "src/components/layout/site-header.tsx": "1e685bef18282fdf2e81038f1f315e4759c9dc027c8bb28e736449ed67092900",
+    "src/components/layout/mobile-navigation.tsx": "daf7397767b6711078795a3790a50ad19f67b2bc69d707f1b0b113df6ae5e2a2",
+    "src/components/design-collection/shared/design-collection-gallery.tsx": "68546e3b5492806aadd3c6dd1f98b32df0f7968a6a211e275631502fc1f057fd",
+    "src/components/design-collection/modern/modern-not-found.tsx": "7b9ee70a4e20e1d8a52f8445edc792788b4fe098bdabeae69c0cd43f62462108",
+    "src/components/sections/quotation/quotation-estimator.tsx": "3b1775d7a7fedd05e7922ac6f77e19bc8f07ba8b4d4a11232ce1d52a8f063656",
+    "src/components/sections/quotation/quotation.css": "0df2956168554c2c9eef8b481badb79553e75a22620a67a6a5e7323c9fdb143b",
+    "src/components/ui/button.tsx": "289bb592fc7a8c4a71533e04466e436f892cb8e49dca87db0cf93c8fd9924991"
+  },
+  "routes": [
+    "/",
+    "/services",
+    "/portfolio",
+    "/contact",
+    "/quotation",
+    "/design-collection",
+    "/__dc003_unknown__"
+  ],
+  "paintProof": [
+    "BrandPattern is an aria-hidden positioned span, before the relative text content in the same parent. Recorded related spans have opacity1.",
+    "Only normal alpha gradients are used by these related spans. CSS masks can only reduce their alpha. No source filter/mix-blend or recoloring is applied.",
+    "Light section/conic figure text has only the recorded decorative related layer; its transparent stop gives alpha0 and its maximum-alpha stop bounds all samples.",
+    "The Home dark figure has two 9%-alpha blue grid layers under the12%-alpha cyan radial layer. Both line crossings and mask attenuation are covered by independent alpha ranges0..0.09,0..0.09,0..0.12.",
+    "Source layer/paint assumptions are valid only while all listed file SHA match both input manifest and current source. Any change requires renewed source review.",
+    "The native menu is a rectangular solid-background div under header relative z40; no mask, clip, transform, filter, blend or group opacity is declared. Snapshot must independently confirm these facts, each ancestor and hit-stack geometry.",
+    "globals.css shadow-default is one navy 8%-alpha outer shadow (0 4px 16px). Partial/uncovered glyph contrast is conservatively bounded by applying an independent 0..8% shadow layer to both background and foreground RGB extrema. Blurring cannot exceed its source alpha.",
+    "Quotation introduction, Gallery introduction and ModernNotFound have source-inspected normal text over a solid Section or primary Button background, with no decorative layer. Their actual computed ancestry/owner paint must confirm this on every fresh run.",
+    "An opaque rectangular panel plus glyph-box containment and all 9 interior hit-stack points above the target proves that glyph hidden. Offscreen or partly covered glyphs are not N/A; uncovered text must meet the analytic bound or remain NEED_MANUAL.",
+    "All bgGradient nodes in expanded-menu state also receive the actual navy8% menu-shadow bound, regardless of distance. The shared shadow alpha is partitioned into32 covering intervals so background/foreground bounds preserve enough alpha correlation without guessing a spatial blur cutoff."
+  ]
+}

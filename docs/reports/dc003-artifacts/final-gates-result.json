@@ -1,0 +1,134 @@
+{
+  "status": "PASS",
+  "source": "/tmp/xk-dc003/source-v3.json",
+  "cases": [
+    {
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 404,
+        "h1Includes": "找不到此頁面",
+        "oneFrame": true
+      },
+      "actual": {
+        "url": "http://127.0.0.1:3230/privacy",
+        "httpStatus": 404,
+        "h1": [
+          "找不到此頁面"
+        ],
+        "landmarks": {
+          "header": 1,
+          "main": 1,
+          "footer": 1,
+          "skip": 1,
+          "jsonLd": 1
+        },
+        "robots": [
+          "noindex, nofollow",
+          "noindex"
+        ]
+      }
+    },
+    {
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 404,
+        "h1Includes": "找不到此頁面",
+        "oneFrame": true
+      },
+      "actual": {
+        "url": "http://127.0.0.1:3230/dev/design-system",
+        "httpStatus": 404,
+        "h1": [
+          "找不到此頁面"
+        ],
+        "landmarks": {
+          "header": 1,
+          "main": 1,
+          "footer": 1,
+          "skip": 1,
+          "jsonLd": 1
+        },
+        "robots": [
+          "noindex, nofollow",
+          "noindex"
+        ]
+      }
+    },
+    {
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 404,
+        "h1Includes": "找不到此頁面",
+        "oneFrame": true
+      },
+      "actual": {
+        "url": "http://127.0.0.1:3230/__dc003_unknown__",
+        "httpStatus": 404,
+        "h1": [
+          "找不到此頁面"
+        ],
+        "landmarks": {
+          "header": 1,
+          "main": 1,
+          "footer": 1,
+          "skip": 1,
+          "jsonLd": 1
+        },
+        "robots": [
+          "noindex",
+          "noindex, nofollow"
+        ]
+      }
+    },
+    {
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "h1Includes": "隱私權政策",
+        "oneFrame": true
+      },
+      "actual": {
+        "url": "http://127.0.0.1:3234/privacy",
+        "httpStatus": 200,
+        "h1": [
+          "隱私權政策"
+        ],
+        "landmarks": {
+          "header": 1,
+          "main": 1,
+          "footer": 1,
+          "skip": 1,
+          "jsonLd": 1
+        },
+        "robots": [
+          "noindex, nofollow"
+        ]
+      }
+    },
+    {
+      "status": "PASS",
+      "expected": {
+        "httpStatus": 200,
+        "h1Includes": "讓每一個介面",
+        "oneFrame": true
+      },
+      "actual": {
+        "url": "http://127.0.0.1:3234/dev/design-system",
+        "httpStatus": 200,
+        "h1": [
+          "讓每一個介面，說同一種品牌語言。"
+        ],
+        "landmarks": {
+          "header": 1,
+          "main": 1,
+          "footer": 1,
+          "skip": 1,
+          "jsonLd": 1
+        },
+        "robots": [
+          "noindex, nofollow"
+        ]
+      }
+    }
+  ]
+}

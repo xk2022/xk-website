@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc003/gates.cjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:53:37.426558+00:00",
+  "finishedAt": "2026-11-26T02:53:44.038253+00:00",
+  "processId": 49405,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-dc003/normal-gates-final.log",
+  "logSha256": "e41a280699955e6e9f4c2ab2ec01abbedc262a4cda99c11b34e77240531bc778",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

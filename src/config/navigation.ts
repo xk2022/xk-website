@@ -28,5 +28,6 @@ export const plannedRoutes = [
   { path: "/portfolio", label: "作品展示", status: "implemented" },
   { path: "/contact", label: "聯絡我們", status: "implemented" },
   { path: "/quotation", label: "方案試算", status: "implemented" },
+  { path: "/design-collection", label: "設計系列", status: "implemented" },
   { path: "/privacy", label: "隱私權政策", status: "planned" },
 ] as const;

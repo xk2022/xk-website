@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc003/collect-menu-overlap.cjs",
+    "--input",
+    "/tmp/xk-dc003/normal-v2/result.json",
+    "--base-url",
+    "http://127.0.0.1:3230/",
+    "--mode",
+    "normal",
+    "--output-dir",
+    "/tmp/xk-dc003/normal-v2/menu-overlap"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:53:36.979576+00:00",
+  "finishedAt": "2026-11-26T02:54:42.935798+00:00",
+  "processId": 49390,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-dc003/normal-menu-overlap.log",
+  "logSha256": "fa6894e55bcc1fcd9b45d5f7299fe520291500d62e736711dfc0a8d1b847f821",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

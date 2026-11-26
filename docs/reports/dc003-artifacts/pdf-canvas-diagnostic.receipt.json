@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "python",
+    "/tmp/xk-dc003/diagnose-pdf-canvas.py",
+    "/tmp/xk-dc003/normal-v2/quotation-worstcase-a4.pdf",
+    "/tmp/xk-dc003/pdf-canvas-diagnostic"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T02:49:38.205251+00:00",
+  "finishedAt": "2026-11-26T02:49:39.279784+00:00",
+  "processId": 48931,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc003/pdf-canvas-diagnostic.log",
+  "logSha256": "90cc842726f5e00bc8c260eae6f51f25d13cfb0d9dec1280349573ceceefd25f",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

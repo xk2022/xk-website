@@ -1,0 +1,7 @@
+{
+  "file": "scripts/smoke-website.py",
+  "sha256": "5db0a3df857a51f8b6fe2ccf915c1fca1bac0e8c3e96b9a385d49a64ef512579",
+  "helperReceipt": "/tmp/xk-dc003/private-hosting-helper-v1.json",
+  "candidateReceipt": "/tmp/xk-dc003/smoke-hosting-candidates-v1.json",
+  "notes": "Exact two private route AND actual Next shell only; Pages fallback strict SSR frame one plus private payload exclusion. Prior FAIL receipts retained."
+}

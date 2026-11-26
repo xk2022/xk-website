@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "testId": "SOURCE-FINAL",
+      "status": "PASS",
+      "actual": {
+        "files": 176,
+        "sha256": "b50c4fbc4e852042bad936183f1c0c20099998c1dd245da10552bc9ca294ec84",
+        "changed": []
+      }
+    },
+    {
+      "testId": "GIT-DIFF-WHITESPACE",
+      "status": "PASS",
+      "actual": ""
+    },
+    {
+      "testId": "STACK-AND-DEPLOYMENT-UNCHANGED",
+      "status": "PASS",
+      "actual": []
+    },
+    {
+      "testId": "ELEVEN-PAGES-EXACT-MOVE",
+      "status": "PASS",
+      "actual": []
+    },
+    {
+      "testId": "MARKDOWN-LINKS",
+      "status": "PASS",
+      "actual": {
+        "documents": 14,
+        "links": 244,
+        "broken": [],
+        "formatErrors": []
+      }
+    },
+    {
+      "testId": "MANIFEST-dc003-artifacts",
+      "status": "PASS",
+      "actual": []
+    },
+    {
+      "testId": "MANIFEST-dc003",
+      "status": "PASS",
+      "actual": []
+    },
+    {
+      "testId": "OS-RECEIPT-LOG-INTEGRITY",
+      "status": "PASS",
+      "actual": {
+        "receipts": 65,
+        "errors": []
+      }
+    },
+    {
+      "testId": "NO-SECRETS-OR-BUILD-DIRS",
+      "status": "PASS",
+      "actual": {
+        "secrets": [],
+        "banned": []
+      }
+    }
+  ]
+}

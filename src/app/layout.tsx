@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Noto_Sans_TC } from "next/font/google";
 import type { ReactNode } from "react";
 
-import { SiteFooter } from "@/components/layout/site-footer";
-import { SiteHeader } from "@/components/layout/site-header";
 import { siteConfig } from "@/config/site";
 import { createWebsiteJsonLd, serializeJsonLd } from "@/lib/seo";
 
@@ -39,17 +37,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       className={`${inter.variable} ${notoSansTC.variable} antialiased`}
     >
       <body className="flex min-h-dvh flex-col">
-        <a
-          href="#main-content"
-          className="sr-only fixed top-4 left-4 z-50 rounded-md bg-primary px-5 py-3 text-primary-foreground focus:not-sr-only"
-        >
-          跳至主要內容
-        </a>
-        <SiteHeader />
-        <main id="main-content" tabIndex={-1} className="flex-1">
-          {children}
-        </main>
-        <SiteFooter />
+        {children}
         <script
           id="website-structured-data"
           type="application/ld+json"

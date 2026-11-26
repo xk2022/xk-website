@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc003/builder-selfcheck.mjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:29:58.351039+00:00",
+  "finishedAt": "2026-11-26T02:29:58.424103+00:00",
+  "processId": 45594,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc003/builder-helper-v2.log",
+  "logSha256": "09fd0a982a11f1886ade3d73deb095308c1d8b192b0befabd8d8c170881005e5",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

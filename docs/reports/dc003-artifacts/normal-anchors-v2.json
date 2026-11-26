@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc003/check-anchors.py",
+    "--base",
+    "http://127.0.0.1:3230/",
+    "--output",
+    "/tmp/xk-dc003/normal-anchors-v2-result.json"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:41:51.244896+00:00",
+  "finishedAt": "2026-11-26T02:41:51.812773+00:00",
+  "processId": 47900,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 180.0,
+  "logFile": "/tmp/xk-dc003/normal-anchors-v2.log",
+  "logSha256": "f82a67b7e2c0303d62d46c3ce47d506278de19fca39bd92af6bcb7484951fabf",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

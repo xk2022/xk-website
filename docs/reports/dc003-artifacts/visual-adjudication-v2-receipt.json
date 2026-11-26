@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "/tmp/xk-dc003/adjudicate-visual-v2.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T03:03:45.330537+00:00",
+  "finishedAt": "2026-11-26T03:03:45.498845+00:00",
+  "processId": 60002,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc003/visual-adjudication-v2.log",
+  "logSha256": "f843ead7f38ee31078a464f71f644501bab343d2102fa6f8bb537458dee9fd31",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

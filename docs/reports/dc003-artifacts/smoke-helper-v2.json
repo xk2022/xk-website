@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "-B",
+    "/tmp/xk-dc003/validator-selfcheck.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:27:48.359700+00:00",
+  "finishedAt": "2026-11-26T02:27:48.764124+00:00",
+  "processId": 45212,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc003/smoke-helper-v2.log",
+  "logSha256": "f908ed4fdb037a9fd5ffca6a182b33c0a8dd10fcdd9ddbf6385dba62204e99bf",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

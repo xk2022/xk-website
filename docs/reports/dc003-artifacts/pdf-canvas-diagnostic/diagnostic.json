@@ -1,0 +1,627 @@
+{
+  "testId": "DC003-PDF-CANVAS-READONLY-DIAGNOSIS",
+  "status": "OBSERVED_NOT_ACCEPTANCE_RERUN",
+  "observedAt": "2026-11-26T02:49:39.086447+00:00",
+  "source": {
+    "path": "/tmp/xk-dc003/normal-v2/quotation-worstcase-a4.pdf",
+    "sha256": "46ed4a1af68229f18f7cafece46b08351a4ce7515ced9c3847ca8a3b3af82695"
+  },
+  "pageCount": 1,
+  "mediaBox": [
+    0.0,
+    0.0,
+    594.9599609375,
+    841.9199829101562
+  ],
+  "cropBox": [
+    0.0,
+    0.0,
+    594.9599609375,
+    841.9199829101562
+  ],
+  "bleedBox": [
+    0.0,
+    0.0,
+    594.9599609375,
+    841.9199829101562
+  ],
+  "pageRect": [
+    0.0,
+    0.0,
+    594.9599609375,
+    841.9199829101562
+  ],
+  "rotation": 0,
+  "pageXref": "<<\n  /Type /Page\n  /Resources <<\n    /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]\n    /ExtGState <<\n      /G3 3 0 R\n      /G4 4 0 R\n      /G32 32 0 R\n    >>\n    /Font <<\n      /F5 5 0 R\n      /F6 6 0 R\n      /F7 7 0 R\n      /F8 8 0 R\n      /F9 9 0 R\n      /F10 10 0 R\n      /F11 11 0 R\n      /F12 12 0 R\n      /F13 13 0 R\n      /F14 14 0 R\n      /F15 15 0 R\n      /F16 16 0 R\n      /F17 17 0 R\n      /F18 18 0 R\n      /F19 19 0 R\n      /F20 20 0 R\n      /F21 21 0 R\n      /F22 22 0 R\n      /F23 23 0 R\n      /F24 24 0 R\n      /F25 25 0 R\n      /F26 26 0 R\n      /F27 27 0 R\n      /F28 28 0 R\n      /F29 29 0 R\n      /F30 30 0 R\n      /F31 31 0 R\n      /F33 33 0 R\n      /F34 34 0 R\n      /F35 35 0 R\n      /F36 36 0 R\n      /F37 37 0 R\n      /F38 38 0 R\n      /F39 39 0 R\n      /F40 40 0 R\n      /F41 41 0 R\n      /F42 42 0 R\n      /F43 43 0 R\n      /F44 44 0 R\n      /F45 45 0 R\n      /F46 46 0 R\n      /F47 47 0 R\n      /F48 48 0 R\n      /F49 49 0 R\n      /F50 50 0 R\n      /F51 51 0 R\n      /F52 52 0 R\n      /F53 53 0 R\n      /F54 54 0 R\n      /F55 55 0 R\n      /F56 56 0 R\n      /F57 57 0 R\n      /F58 58 0 R\n      /F59 59 0 R\n      /F60 60 0 R\n      /F61 61 0 R\n      /F62 62 0 R\n      /F63 63 0 R\n      /F64 64 0 R\n      /F65 65 0 R\n      /F66 66 0 R\n    >>\n  >>\n  /MediaBox [ 0 0 594.95999 841.92 ]\n  /Contents 67 0 R\n  /Tabs /S\n  /Parent 68 0 R\n>>",
+  "contentXrefs": [
+    67
+  ],
+  "contentSha256": "18ba13464007ec918a1c2a395b93bf9a241ece70715a1f955a27051131fb6f81",
+  "exactContentPrefix": ".23999999 0 0 -.23999999 0 841.91998 cm\nq\n3.125 0 0 3.125 0 0 cm\n1 1 1 RG 1 1 1 rg\n/G3 gs\n0 0 794 1123 re\nf\nQ\nq\n0 0 2480 3507.8613 re\nW* n\nq\n3.125 0 0 3.125 0 0 cm\n1 1 1 RG 1 1 1 rg\n/G3 gs\n0 0 794 1119 re\nf\n0 0 794 1119 re\nf\n",
+  "extendedGraphicsFirst9": [
+    {
+      "items": [
+        [
+          "re",
+          [
+            0.0,
+            0.0,
+            595.5,
+            842.25
+          ],
+          -1
+        ]
+      ],
+      "type": "f",
+      "even_odd": false,
+      "fill_opacity": 1.0,
+      "fill": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rect": [
+        0.0,
+        0.0,
+        595.5,
+        842.25
+      ],
+      "seqno": 0,
+      "layer": "",
+      "level": 0,
+      "closePath": null,
+      "color": null,
+      "width": null,
+      "lineCap": null,
+      "lineJoin": null,
+      "dashes": null,
+      "stroke_opacity": null
+    },
+    {
+      "items": [
+        [
+          "re",
+          [
+            0.0,
+            0.0,
+            595.2000122070312,
+            841.88671875
+          ],
+          -1
+        ]
+      ],
+      "type": "clip",
+      "even_odd": true,
+      "closePath": false,
+      "scissor": [
+        0.0,
+        0.0,
+        595.2000122070312,
+        841.88671875
+      ],
+      "level": 0,
+      "layer": ""
+    },
+    {
+      "items": [
+        [
+          "re",
+          [
+            0.0,
+            0.0,
+            595.5,
+            839.25
+          ],
+          -1
+        ]
+      ],
+      "type": "f",
+      "even_odd": false,
+      "fill_opacity": 1.0,
+      "fill": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rect": [
+        0.0,
+        0.0,
+        595.5,
+        839.25
+      ],
+      "seqno": 1,
+      "layer": "",
+      "level": 1,
+      "closePath": null,
+      "color": null,
+      "width": null,
+      "lineCap": null,
+      "lineJoin": null,
+      "dashes": null,
+      "stroke_opacity": null
+    },
+    {
+      "items": [
+        [
+          "re",
+          [
+            0.0,
+            0.0,
+            595.5,
+            839.25
+          ],
+          -1
+        ]
+      ],
+      "type": "f",
+      "even_odd": false,
+      "fill_opacity": 1.0,
+      "fill": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rect": [
+        0.0,
+        0.0,
+        595.5,
+        839.25
+      ],
+      "seqno": 2,
+      "layer": "",
+      "level": 1,
+      "closePath": null,
+      "color": null,
+      "width": null,
+      "lineCap": null,
+      "lineJoin": null,
+      "dashes": null,
+      "stroke_opacity": null
+    },
+    {
+      "items": [
+        [
+          "re",
+          [
+            28.5,
+            78.0,
+            567.0,
+            78.75
+          ],
+          -1
+        ]
+      ],
+      "type": "f",
+      "even_odd": false,
+      "fill_opacity": 1.0,
+      "fill": [
+        0.14509999752044678,
+        0.3882000148296356,
+        0.9215999841690063
+      ],
+      "rect": [
+        28.5,
+        78.0,
+        567.0,
+        78.75
+      ],
+      "seqno": 3,
+      "layer": "",
+      "level": 1,
+      "closePath": null,
+      "color": null,
+      "width": null,
+      "lineCap": null,
+      "lineJoin": null,
+      "dashes": null,
+      "stroke_opacity": null
+    },
+    {
+      "items": [
+        [
+          "re",
+          [
+            28.5,
+            174.75,
+            567.0,
+            221.25
+          ],
+          -1
+        ]
+      ],
+      "type": "f",
+      "even_odd": false,
+      "fill_opacity": 1.0,
+      "fill": [
+        0.9373000264167786,
+        0.9646999835968018,
+        1.0
+      ],
+      "rect": [
+        28.5,
+        174.75,
+        567.0,
+        221.25
+      ],
+      "seqno": 4,
+      "layer": "",
+      "level": 1,
+      "closePath": null,
+      "color": null,
+      "width": null,
+      "lineCap": null,
+      "lineJoin": null,
+      "dashes": null,
+      "stroke_opacity": null
+    },
+    {
+      "items": [
+        [
+          "re",
+          [
+            28.875,
+            175.125,
+            566.625,
+            220.875
+          ],
+          -1
+        ]
+      ],
+      "type": "s",
+      "stroke_opacity": 1.0,
+      "color": [
+        0.14509999752044678,
+        0.3882000148296356,
+        0.9215999841690063
+      ],
+      "width": 0.75,
+      "lineCap": [
+        0,
+        0,
+        0
+      ],
+      "lineJoin": 0.0,
+      "closePath": false,
+      "dashes": "[] 0",
+      "rect": [
+        28.875,
+        175.125,
+        566.625,
+        220.875
+      ],
+      "layer": "",
+      "seqno": 5,
+      "level": 1,
+      "fill": null,
+      "fill_opacity": null,
+      "even_odd": null
+    },
+    {
+      "items": [
+        [
+          "re",
+          [
+            28.875,
+            497.625,
+            566.625,
+            595.875
+          ],
+          -1
+        ]
+      ],
+      "type": "s",
+      "stroke_opacity": 1.0,
+      "color": [
+        0.8863000273704529,
+        0.9097999930381775,
+        0.9412000179290771
+      ],
+      "width": 0.75,
+      "lineCap": [
+        0,
+        0,
+        0
+      ],
+      "lineJoin": 0.0,
+      "closePath": false,
+      "dashes": "[] 0",
+      "rect": [
+        28.875,
+        497.625,
+        566.625,
+        595.875
+      ],
+      "layer": "",
+      "seqno": 6,
+      "level": 1,
+      "fill": null,
+      "fill_opacity": null,
+      "even_odd": null
+    },
+    {
+      "items": [
+        [
+          "re",
+          [
+            28.5,
+            723.75,
+            567.0,
+            724.5
+          ],
+          -1
+        ]
+      ],
+      "type": "f",
+      "even_odd": false,
+      "fill_opacity": 1.0,
+      "fill": [
+        0.8863000273704529,
+        0.9097999930381775,
+        0.9412000179290771
+      ],
+      "rect": [
+        28.5,
+        723.75,
+        567.0,
+        724.5
+      ],
+      "seqno": 7,
+      "layer": "",
+      "level": 1,
+      "closePath": null,
+      "color": null,
+      "width": null,
+      "lineCap": null,
+      "lineJoin": null,
+      "dashes": null,
+      "stroke_opacity": null
+    }
+  ],
+  "originalOutOfBoundsVectors": [
+    {
+      "items": [
+        [
+          "re",
+          [
+            0.0,
+            0.0,
+            595.5,
+            842.25
+          ],
+          -1
+        ]
+      ],
+      "type": "f",
+      "even_odd": false,
+      "fill_opacity": 1.0,
+      "fill": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rect": [
+        0.0,
+        0.0,
+        595.5,
+        842.25
+      ],
+      "seqno": 0,
+      "layer": "",
+      "level": 0,
+      "closePath": null,
+      "color": null,
+      "width": null,
+      "lineCap": null,
+      "lineJoin": null,
+      "dashes": null,
+      "stroke_opacity": null
+    },
+    {
+      "items": [
+        [
+          "re",
+          [
+            0.0,
+            0.0,
+            595.5,
+            839.25
+          ],
+          -1
+        ]
+      ],
+      "type": "f",
+      "even_odd": false,
+      "fill_opacity": 1.0,
+      "fill": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rect": [
+        0.0,
+        0.0,
+        595.5,
+        839.25
+      ],
+      "seqno": 1,
+      "layer": "",
+      "level": 1,
+      "closePath": null,
+      "color": null,
+      "width": null,
+      "lineCap": null,
+      "lineJoin": null,
+      "dashes": null,
+      "stroke_opacity": null
+    },
+    {
+      "items": [
+        [
+          "re",
+          [
+            0.0,
+            0.0,
+            595.5,
+            839.25
+          ],
+          -1
+        ]
+      ],
+      "type": "f",
+      "even_odd": false,
+      "fill_opacity": 1.0,
+      "fill": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "rect": [
+        0.0,
+        0.0,
+        595.5,
+        839.25
+      ],
+      "seqno": 2,
+      "layer": "",
+      "level": 1,
+      "closePath": null,
+      "color": null,
+      "width": null,
+      "lineCap": null,
+      "lineJoin": null,
+      "dashes": null,
+      "stroke_opacity": null
+    }
+  ],
+  "allOutOfBoundsActualPaint": [
+    {
+      "seqno": 0,
+      "type": "fill-path",
+      "bbox": [
+        0.0,
+        0.0,
+        595.5,
+        842.25
+      ]
+    },
+    {
+      "seqno": 1,
+      "type": "fill-path",
+      "bbox": [
+        0.0,
+        0.0,
+        595.5,
+        839.25
+      ]
+    },
+    {
+      "seqno": 2,
+      "type": "fill-path",
+      "bbox": [
+        0.0,
+        0.0,
+        595.5,
+        839.25
+      ]
+    }
+  ],
+  "bboxLogFirst8": [
+    [
+      "fill-path",
+      [
+        0.0,
+        0.0,
+        595.5,
+        842.25
+      ],
+      ""
+    ],
+    [
+      "fill-path",
+      [
+        0.0,
+        0.0,
+        595.5,
+        839.25
+      ],
+      ""
+    ],
+    [
+      "fill-path",
+      [
+        0.0,
+        0.0,
+        595.5,
+        839.25
+      ],
+      ""
+    ],
+    [
+      "fill-path",
+      [
+        28.5,
+        78.0,
+        567.0,
+        78.75
+      ],
+      ""
+    ],
+    [
+      "fill-path",
+      [
+        28.5,
+        174.75,
+        567.0,
+        221.25
+      ],
+      ""
+    ],
+    [
+      "stroke-path",
+      [
+        28.5,
+        174.75,
+        567.0,
+        221.25
+      ],
+      ""
+    ],
+    [
+      "stroke-path",
+      [
+        28.5,
+        497.25,
+        567.0,
+        596.25
+      ],
+      ""
+    ],
+    [
+      "fill-path",
+      [
+        28.5,
+        723.75,
+        567.0,
+        724.5
+      ],
+      ""
+    ]
+  ],
+  "opaqueBackgroundState": {
+    "xref": 3,
+    "rawObject": "<<\n  /ca 1\n  /BM /Normal\n>>",
+    "ca": [
+      "int",
+      "1"
+    ],
+    "BM": [
+      "name",
+      "/Normal"
+    ],
+    "SMask": [
+      "null",
+      "null"
+    ]
+  },
+  "interpretation": "Only the first3 opaque white fill-only axis-aligned origin rectangles exceed MediaBox. They precede every non-white path, text, logo and QR. Prefix confirms printer scale .23999999 times3.125 (~0.75pt per CSSpx) and integer CSS rectangles794x1123/794x1119. CropBox/MediaBox impose page canvas clipping; subsequent two backgrounds additionally have the recorded page-origin clip. This is not content acceptance: original strict failure remains; verifier v2 must classify only this exact observed signature, retain spill properties, and keep all other paint/text/content strict at original0.1pt."
+}

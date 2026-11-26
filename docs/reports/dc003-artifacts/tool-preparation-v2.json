@@ -1,0 +1,44 @@
+{
+  "testId": "DC003-TOOLS-PREFLIGHT",
+  "status": "PASS",
+  "checkedAt": "2026-11-26T02:30:15.065Z",
+  "checks": [
+    {
+      "file": "browser.cjs",
+      "syntaxExitCode": 0,
+      "sha256": "385470dc98dd2b5c89c0015977d559b240a19e8bd9badf43bfb9d4801b6f9a06"
+    },
+    {
+      "file": "capture.cjs",
+      "syntaxExitCode": 0,
+      "sha256": "a90718c096c3147a3b91b6901ba9befc4106f030d41f4afdb308de8cd3282567"
+    },
+    {
+      "file": "monitor.cjs",
+      "syntaxExitCode": 0,
+      "sha256": "7e85b4f04b9e14b0f92d706ec4adbab0c1d8bdf714f697fd104b3950edd81fa5"
+    },
+    {
+      "file": "business.cjs",
+      "syntaxExitCode": 0,
+      "sha256": "193126c200a810547c48755622567e448c277bd516fdfabce2cab51608b76f74"
+    },
+    {
+      "file": "snapshot.cjs",
+      "syntaxExitCode": 0,
+      "sha256": "15abc90fadb3a7255259cfe6db5d42a20c7024a32f2debc9814c419dcb8a5821"
+    }
+  ],
+  "businessCases": 14,
+  "finalExpected": {
+    "testsPerMode": 132,
+    "layouts": 85,
+    "axeScans": 23,
+    "actualPDF": 1,
+    "galleryScreenshotsPagesOnly": 2,
+    "physicalPdfAssertionsWhenOnePage": 14
+  },
+  "browserQA": "NOT_EXECUTED_BY_PREFLIGHT",
+  "manualVisual": "PENDING",
+  "sourceFingerprint": "Root must supply /tmp/xk-dc003/source.json before final execution"
+}

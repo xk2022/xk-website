@@ -1,0 +1,14 @@
+{
+  "testId": "DC003-VISUAL-COMPARE-TOOL-PREFLIGHT",
+  "status": "PASS",
+  "checks": [
+    "identical exact pixels",
+    "one RGB component delta retained at strict zero threshold",
+    "extra image-height row recorded",
+    "exact authorized single Gallery li only",
+    "extra Gallery li content rejected",
+    "generated IDs retained, no inferred equivalence"
+  ],
+  "websiteComparison": "NOT_EXECUTED",
+  "toolSha256": "d6d30f433d8bdda4075ce2e86ccb4aac3bd7b9ffe7efcbe6ef009c0d6260fb01"
+}
