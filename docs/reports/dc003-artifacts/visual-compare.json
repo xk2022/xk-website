@@ -1,0 +1,31 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python",
+    "/tmp/xk-dc003/compare-visual.py",
+    "--baseline",
+    "/tmp/xk-dc003/baseline-capture-final/result.json",
+    "--final",
+    "/tmp/xk-dc003/pages-capture-final/result.json",
+    "--baseline-site",
+    "/tmp/xk-dc003/baseline-site",
+    "--final-site",
+    "/workspace/xk-website/out",
+    "--gallery-result",
+    "/tmp/xk-dc003/pages-final/result.json",
+    "--out",
+    "/tmp/xk-dc003/visual-comparison-final"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:59:54.244729+00:00",
+  "finishedAt": "2026-11-26T03:00:08.332466+00:00",
+  "processId": 58918,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 300.0,
+  "logFile": "/tmp/xk-dc003/visual-compare.log",
+  "logSha256": "eabe8d60e9eef783a03772a915a23b105ecccfb1d0f1652a99309c328d8f2ae2",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

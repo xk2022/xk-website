@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { XkLogo } from "@/components/brand/xk-logo";
 import { Container } from "@/components/layout/container";
+import { collectionNavigation } from "@/config/design-collection-navigation";
 import { services } from "@/config/homepage";
 import { contactNavigation, primaryNavigation, quotationNavigation } from "@/config/navigation";
 import { portfolioProjects } from "@/config/portfolio";
@@ -50,6 +51,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li><Link href={quotationNavigation.href} className={footerLinkStyles}>{quotationNavigation.label}</Link></li>
+              <li><Link href={collectionNavigation.href} className={footerLinkStyles}>{collectionNavigation.label}</Link></li>
               {portfolioProjects.map((project) => (
                 <li key={project.slug}>
                   <Link

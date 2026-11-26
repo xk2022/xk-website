@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "node_modules/.bin/eslint",
+    "src/components/design-collection/shared/design-collection-gallery.tsx",
+    "src/app/(collection)/design-collection/page.tsx"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:28:16.360682+00:00",
+  "finishedAt": "2026-11-26T02:28:19.273592+00:00",
+  "processId": 45343,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc003/gallery/lint-v1.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

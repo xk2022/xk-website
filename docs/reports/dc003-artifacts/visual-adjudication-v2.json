@@ -1,0 +1,607 @@
+{
+  "status": "PASS",
+  "method": "Resolve only the two linked React-generated menu identifiers, with exact uniqueness/reference checks and no other token normalization; retain original failed strict comparison. Pixel threshold remains zero. Human visual review is separately required.",
+  "originalComparisonSha256": "3f9dcb15dfd52a75611414451ff9b53740968770dc084a18447944d080941af1",
+  "cases": [
+    {
+      "testId": "COMPARE-home-375",
+      "status": "PASS",
+      "allowedNonVisualDelta": {
+        "baselineMenuId": "_R_25b_",
+        "finalMenuId": "_R_4abrb_",
+        "uniqueTriggerAndPanel": true,
+        "allOtherHeaderTokensEqual": true
+      },
+      "preFooterDifferentPixels": 0,
+      "mainDOMEqual": true,
+      "approvedFooterDelta": "Only exact Gallery li; initial full comparison already verified remaining Footer DOM equality",
+      "sheets": [
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/home-375-top-sheet.png",
+          "sha256": "07a67f0918310f3071c0676b1d0b349a143d9a505b25b035df1285eebbd31d6a",
+          "dimensions": [
+            1173,
+            1068
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/home-375-main-sheet.png",
+          "sha256": "85c5b3c15e9c1a356f1865bdbd46becc94fa81e7cd2412bc5a92f3c41c51c065",
+          "dimensions": [
+            1173,
+            968
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/home-375-footer-sheet.png",
+          "sha256": "67871d8b919cee8b43539bb475b853fdeb7b1d7861d786f26fa27fb2f3fcf02c",
+          "dimensions": [
+            1173,
+            1733
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "testId": "COMPARE-home-1440",
+      "status": "PASS",
+      "allowedNonVisualDelta": {
+        "baselineMenuId": "_R_25b_",
+        "finalMenuId": "_R_4abrb_",
+        "uniqueTriggerAndPanel": true,
+        "allOtherHeaderTokensEqual": true
+      },
+      "preFooterDifferentPixels": 0,
+      "mainDOMEqual": true,
+      "approvedFooterDelta": "Only exact Gallery li; initial full comparison already verified remaining Footer DOM equality",
+      "sheets": [
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/home-1440-top-sheet.png",
+          "sha256": "debf018e441a49e66caebf3bdb721bc8416c95602e8a925837d354cdef8c766d",
+          "dimensions": [
+            1848,
+            485
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/home-1440-main-sheet.png",
+          "sha256": "8ee4cabc322473cb3092cf7a6ccc04ef99c1ec81f06f5e0d2435bb1446521535",
+          "dimensions": [
+            1848,
+            443
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/home-1440-footer-sheet.png",
+          "sha256": "bfec1d71398b41e007dcbce3c61e2eb5ec2f901c987f2cf82a560338315a3e59",
+          "dimensions": [
+            1848,
+            518
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        }
+      ]
+    },
+    {
+      "testId": "COMPARE-services-375",
+      "status": "PASS",
+      "allowedNonVisualDelta": {
+        "baselineMenuId": "_R_25b_",
+        "finalMenuId": "_R_4abrb_",
+        "uniqueTriggerAndPanel": true,
+        "allOtherHeaderTokensEqual": true
+      },
+      "preFooterDifferentPixels": 0,
+      "mainDOMEqual": true,
+      "approvedFooterDelta": "Only exact Gallery li; initial full comparison already verified remaining Footer DOM equality",
+      "sheets": [
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/services-375-top-sheet.png",
+          "sha256": "665c9649c86d3b4ea4a8b96c1127290a3b0dacb60f0e23d1b840ca5b47100e0f",
+          "dimensions": [
+            1173,
+            1068
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/services-375-main-sheet.png",
+          "sha256": "495d09375eb43c213381704dd518d890e17ca0af9df0d265538cbc9a23abde2d",
+          "dimensions": [
+            1173,
+            968
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/services-375-footer-sheet.png",
+          "sha256": "26150cf8e335946a1ff1f547502b3522a693c12b971d788d01548a92ea453933",
+          "dimensions": [
+            1173,
+            1733
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "testId": "COMPARE-services-1440",
+      "status": "PASS",
+      "allowedNonVisualDelta": {
+        "baselineMenuId": "_R_25b_",
+        "finalMenuId": "_R_4abrb_",
+        "uniqueTriggerAndPanel": true,
+        "allOtherHeaderTokensEqual": true
+      },
+      "preFooterDifferentPixels": 0,
+      "mainDOMEqual": true,
+      "approvedFooterDelta": "Only exact Gallery li; initial full comparison already verified remaining Footer DOM equality",
+      "sheets": [
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/services-1440-top-sheet.png",
+          "sha256": "24005e7c68ac310c54ee02a8886593df69a0277bbc5f014fd7e18ff6f606c6aa",
+          "dimensions": [
+            1848,
+            485
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/services-1440-main-sheet.png",
+          "sha256": "12411221ef021a849c3b54fcb555dee99913273607659b90bddbeb26d7edec0e",
+          "dimensions": [
+            1848,
+            443
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/services-1440-footer-sheet.png",
+          "sha256": "782d05dc55aafc9b4fa0673a3b06578781408eb6d320127831be692cbf57a22a",
+          "dimensions": [
+            1848,
+            518
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        }
+      ]
+    },
+    {
+      "testId": "COMPARE-portfolio-375",
+      "status": "PASS",
+      "allowedNonVisualDelta": {
+        "baselineMenuId": "_R_25b_",
+        "finalMenuId": "_R_4abrb_",
+        "uniqueTriggerAndPanel": true,
+        "allOtherHeaderTokensEqual": true
+      },
+      "preFooterDifferentPixels": 0,
+      "mainDOMEqual": true,
+      "approvedFooterDelta": "Only exact Gallery li; initial full comparison already verified remaining Footer DOM equality",
+      "sheets": [
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/portfolio-375-top-sheet.png",
+          "sha256": "bccd3af075662b550e53fa37c4264fdf743e315e7b2313f59d30b600f7426e31",
+          "dimensions": [
+            1173,
+            1068
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/portfolio-375-main-sheet.png",
+          "sha256": "99a0b4c3e29ace970dd5e45c1a80eecb7de107dfea80a052013911665042aa23",
+          "dimensions": [
+            1173,
+            968
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/portfolio-375-footer-sheet.png",
+          "sha256": "7ab0237e5be77a35c1726af3fcf7499b3a1595e44f587df8114ee329c89bf1ae",
+          "dimensions": [
+            1173,
+            1733
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "testId": "COMPARE-portfolio-1440",
+      "status": "PASS",
+      "allowedNonVisualDelta": {
+        "baselineMenuId": "_R_25b_",
+        "finalMenuId": "_R_4abrb_",
+        "uniqueTriggerAndPanel": true,
+        "allOtherHeaderTokensEqual": true
+      },
+      "preFooterDifferentPixels": 0,
+      "mainDOMEqual": true,
+      "approvedFooterDelta": "Only exact Gallery li; initial full comparison already verified remaining Footer DOM equality",
+      "sheets": [
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/portfolio-1440-top-sheet.png",
+          "sha256": "9c5083e32576eb062ca916a1fc1fac5e30dff175c4a9a3403e32ea69358b56f3",
+          "dimensions": [
+            1848,
+            485
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/portfolio-1440-main-sheet.png",
+          "sha256": "a6c0b88999f310a81b0a5d48df5f2108947d87ba5c457f28415e1d6ae40df97c",
+          "dimensions": [
+            1848,
+            443
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/portfolio-1440-footer-sheet.png",
+          "sha256": "906779672d65d725f4556438d8631334561cd44b088d53d4a1ecd0de5575227b",
+          "dimensions": [
+            1848,
+            518
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        }
+      ]
+    },
+    {
+      "testId": "COMPARE-contact-375",
+      "status": "PASS",
+      "allowedNonVisualDelta": {
+        "baselineMenuId": "_R_25b_",
+        "finalMenuId": "_R_4abrb_",
+        "uniqueTriggerAndPanel": true,
+        "allOtherHeaderTokensEqual": true
+      },
+      "preFooterDifferentPixels": 0,
+      "mainDOMEqual": true,
+      "approvedFooterDelta": "Only exact Gallery li; initial full comparison already verified remaining Footer DOM equality",
+      "sheets": [
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/contact-375-top-sheet.png",
+          "sha256": "41774b395746f4eed2852bc352a07e33c4013d9b64bd4a15f208f39bdf75fda6",
+          "dimensions": [
+            1173,
+            1068
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/contact-375-main-sheet.png",
+          "sha256": "00c24bf7058bdcfd1bc4ea6fd36e60e6fd51ae039497d0b4a73eb18cf3b56408",
+          "dimensions": [
+            1173,
+            968
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/contact-375-footer-sheet.png",
+          "sha256": "1cff2543fc899af30e0d90c6762b87fcb47e2bef0c88518d59530c3a962c6410",
+          "dimensions": [
+            1173,
+            1733
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "testId": "COMPARE-contact-1440",
+      "status": "PASS",
+      "allowedNonVisualDelta": {
+        "baselineMenuId": "_R_25b_",
+        "finalMenuId": "_R_4abrb_",
+        "uniqueTriggerAndPanel": true,
+        "allOtherHeaderTokensEqual": true
+      },
+      "preFooterDifferentPixels": 0,
+      "mainDOMEqual": true,
+      "approvedFooterDelta": "Only exact Gallery li; initial full comparison already verified remaining Footer DOM equality",
+      "sheets": [
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/contact-1440-top-sheet.png",
+          "sha256": "438a9fce23e773774e618feac9b8c2ab0b9187e5aa4b3dab86e17e86c1122470",
+          "dimensions": [
+            1848,
+            485
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/contact-1440-main-sheet.png",
+          "sha256": "d80da4f4b78c25543c3f170509536bcdc937b2122da8e9899b94f3f5a065b914",
+          "dimensions": [
+            1848,
+            443
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/contact-1440-footer-sheet.png",
+          "sha256": "3bd8934ee25d11873eac85cf982d9033a1bb2753acd56f34ab6d434b3f2dcf62",
+          "dimensions": [
+            1848,
+            518
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        }
+      ]
+    },
+    {
+      "testId": "COMPARE-quotation-375",
+      "status": "PASS",
+      "allowedNonVisualDelta": {
+        "baselineMenuId": "_R_25b_",
+        "finalMenuId": "_R_4abrb_",
+        "uniqueTriggerAndPanel": true,
+        "allOtherHeaderTokensEqual": true
+      },
+      "preFooterDifferentPixels": 0,
+      "mainDOMEqual": true,
+      "approvedFooterDelta": "Only exact Gallery li; initial full comparison already verified remaining Footer DOM equality",
+      "sheets": [
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/quotation-375-top-sheet.png",
+          "sha256": "84c220e3a140b7660ddbce6221beeb6aa36c30b8b4f8815721e342249c6edd6d",
+          "dimensions": [
+            1173,
+            1068
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/quotation-375-main-sheet.png",
+          "sha256": "06952e83b64b6afcdeb371ec80ac2e65fa53f1c81b4c9a51e9d01b2db83474bd",
+          "dimensions": [
+            1173,
+            968
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/quotation-375-footer-sheet.png",
+          "sha256": "43e895e174c2d0dbbba8352f2fa9725f3e06e90d0f50140eba32eb2365348065",
+          "dimensions": [
+            1173,
+            1733
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 1
+        }
+      ]
+    },
+    {
+      "testId": "COMPARE-quotation-1440",
+      "status": "PASS",
+      "allowedNonVisualDelta": {
+        "baselineMenuId": "_R_25b_",
+        "finalMenuId": "_R_4abrb_",
+        "uniqueTriggerAndPanel": true,
+        "allOtherHeaderTokensEqual": true
+      },
+      "preFooterDifferentPixels": 0,
+      "mainDOMEqual": true,
+      "approvedFooterDelta": "Only exact Gallery li; initial full comparison already verified remaining Footer DOM equality",
+      "sheets": [
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/quotation-1440-top-sheet.png",
+          "sha256": "b9b3775b699c642a4fa7596b1163f12248f0a32e586359efb387f23b8ebdd5ea",
+          "dimensions": [
+            1848,
+            485
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/quotation-1440-main-sheet.png",
+          "sha256": "d4414255655b0dcb1bd88185298db7fb9a7277ee53037ad60f15026310ff35f0",
+          "dimensions": [
+            1848,
+            443
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        },
+        {
+          "path": "/tmp/xk-dc003/visual-comparison-final/quotation-1440-footer-sheet.png",
+          "sha256": "02ad4432bf648aaceea4bc8d842df804eaecacdc6ed7008b61d46f12d6a0f53a",
+          "dimensions": [
+            1848,
+            518
+          ],
+          "derived": true,
+          "sourceCrops": [
+            "baseline original crop",
+            "final original crop",
+            "strict delta (red)"
+          ],
+          "scale": 0.4166666666666667
+        }
+      ]
+    }
+  ]
+}

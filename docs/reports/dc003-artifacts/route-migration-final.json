@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "before": "src/app/about/page.tsx",
+      "after": "src/app/(modern)/about/page.tsx",
+      "sha256": "e759b5c53d78b8cc1bde3c16deb6e8de3a3b7758cc1c44d522e98fceb8b3d7b3",
+      "byteIdentical": true
+    },
+    {
+      "before": "src/app/contact/page.tsx",
+      "after": "src/app/(modern)/contact/page.tsx",
+      "sha256": "ca29b696499d151c704faf5d1802a05b6fc9669beb44cc89e11cadf6c696a087",
+      "byteIdentical": true
+    },
+    {
+      "before": "src/app/dev/design-system/page.tsx",
+      "after": "src/app/(modern)/dev/design-system/page.tsx",
+      "sha256": "4524563debbc08a4455760d18a42d9a33b7a2a8f88196affa7021890b95a8037",
+      "byteIdentical": true
+    },
+    {
+      "before": "src/app/page.tsx",
+      "after": "src/app/(modern)/page.tsx",
+      "sha256": "9fa09907d1485da6cf9c7b7a400c092ab3aa8d93b364a3e87809e4478068c1e1",
+      "byteIdentical": true
+    },
+    {
+      "before": "src/app/portfolio/[slug]/page.tsx",
+      "after": "src/app/(modern)/portfolio/[slug]/page.tsx",
+      "sha256": "fc39589c149a4e7c796068af1d854ca2fc82e33a15cf0f9d44d1be604531a643",
+      "byteIdentical": true
+    },
+    {
+      "before": "src/app/portfolio/page.tsx",
+      "after": "src/app/(modern)/portfolio/page.tsx",
+      "sha256": "9dc4f7f3e5029bce2750ea00154f532967482353eb46e03d0a80dee32a93a031",
+      "byteIdentical": true
+    },
+    {
+      "before": "src/app/portfolio/showcases/[slug]/page.tsx",
+      "after": "src/app/(modern)/portfolio/showcases/[slug]/page.tsx",
+      "sha256": "cf7b76e31a718dcc6d4cc73634d4d923817d645329d24af3e3f176d2aa1cbf15",
+      "byteIdentical": true
+    },
+    {
+      "before": "src/app/privacy/page.tsx",
+      "after": "src/app/(modern)/privacy/page.tsx",
+      "sha256": "c946b95171bdc23fdc8b241673ca3a302910d68e52d7224a6807010eb974a52f",
+      "byteIdentical": true
+    },
+    {
+      "before": "src/app/quotation/page.tsx",
+      "after": "src/app/(modern)/quotation/page.tsx",
+      "sha256": "3eac9bd06d879a24e8b18868d85c6038cefc25c237bba7443e1dbec612ceb5ab",
+      "byteIdentical": true
+    },
+    {
+      "before": "src/app/services/page.tsx",
+      "after": "src/app/(modern)/services/page.tsx",
+      "sha256": "e5361f7a09d8ebf0e4362c31899859188da3504b27cd6e6b90a0223d70eb5a23",
+      "byteIdentical": true
+    },
+    {
+      "before": "src/app/solutions/page.tsx",
+      "after": "src/app/(modern)/solutions/page.tsx",
+      "sha256": "0b3c472ac0cccbcd9061e2d2d5d1428ebeaa7185b92d69f43361d170d3b25147",
+      "byteIdentical": true
+    }
+  ]
+}

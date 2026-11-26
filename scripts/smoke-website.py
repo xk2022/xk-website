@@ -23,6 +23,8 @@ ROOT = Path(__file__).resolve().parent.parent
 CONTRACT_PATH = ROOT / "scripts/fixtures/showcase-contract.json"
 APPROVED_PAGES_DEPLOYMENT = {"origin": "https://www.xplorekaleidoscope.com", "basePath": ""}
 VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
+GATED_PRIVATE_404_ROUTES = frozenset({"/privacy", "/dev/design-system"})
+PRIVATE_DESIGN_SYSTEM_MARKERS = ("讓每一個介面，說同一種品牌語言。", "XK / DESIGN SYSTEM / TASK 002")
 
 
 def now():
@@ -126,6 +128,50 @@ class Document(HTMLParser):
 
     def handle_data(self, data):
         self.stack[-1].children.append(data)
+
+
+def modern_frame_errors(doc):
+    errors = []
+    for tag in ["header", "main", "footer", "h1"]:
+        if len(doc.all(tag)) != 1:
+            errors.append(f"expected exactly one {tag}")
+    mains = doc.all("main")
+    if len(mains) != 1 or mains[0].attrs.get("id") != "main-content":
+        errors.append("main must be the #main-content skip-link destination")
+    if len([anchor for anchor in doc.all("a") if anchor.attrs.get("href") == "#main-content"]) != 1:
+        errors.append("expected exactly one skip link")
+    if len([element for element in doc.all() if element.attrs.get("id") == "main-content"]) != 1:
+        errors.append("expected exactly one #main-content ID")
+    return errors
+
+
+def serialized_private_markers(html, private_markers):
+    return [marker for marker in private_markers if marker and any(value in html for value in [marker, json.dumps(marker, ensure_ascii=False)[1:-1], json.dumps(marker, ensure_ascii=True)[1:-1]])]
+
+
+def uses_gated_error_shell(path, doc):
+    return path in GATED_PRIVATE_404_ROUTES and any(element.attrs.get("id") == "__next_error__" for element in doc.all("html"))
+
+
+def gated_private_404_observation(path, html, private_markers):
+    """Describe only the two known Next.js error shells, never browser recovery."""
+    doc = Document(html).root
+    landmarks = {tag: len(doc.all(tag)) for tag in ["header", "main", "footer", "h1"]}
+    landmarks["skipLink"] = len([anchor for anchor in doc.all("a") if anchor.attrs.get("href") == "#main-content"])
+    landmarks["mainContentId"] = len([element for element in doc.all() if element.attrs.get("id") == "main-content"])
+    shell_ids = [element.attrs.get("id") for element in doc.all("html")]
+    leaked = serialized_private_markers(html, private_markers)
+    errors = []
+    if path not in GATED_PRIVATE_404_ROUTES:
+        errors.append("route is not one of the two approved gated private destinations")
+    if shell_ids != ["__next_error__"]:
+        errors.append("expected the observed Next.js private-route error shell")
+    if any(landmarks.values()):
+        errors.append("expected zero raw frame landmarks in the Next.js error shell")
+    if leaked:
+        errors.append("private page content was serialized into the raw response")
+    return {"path": path, "rawHtmlIds": shell_ids, "rawLandmarks": landmarks, "leakedPrivateMarkers": leaked,
+            "ssrCompleteFrame": "N/A: Next.js error shell", "browserRecoveredFrame": "REQUIRED; not evaluated by HTTP smoke", "errors": errors}
 
 
 def contact_draft_form_errors(doc, contract):
@@ -296,8 +342,10 @@ class Smoke:
         self.contract = json.loads(CONTRACT_PATH.read_text())
         self.contact_contract = json.loads((ROOT / "scripts/fixtures/contact-contract.json").read_text())
         self.quotation_contract = json.loads((ROOT / "scripts/fixtures/quotation-contract.json").read_text())
+        self.design_contract = json.loads((ROOT / "scripts/fixtures/design-collection-contract.json").read_text())
         self.data = None
         self.external_destinations, self.unavailable_source_destinations = set(), set()
+        self.gated_404_observations = []
 
     def check(self, item, expected, actual, notes="", required=True):
         self.results.append({"testId": f"SMOKE-{len(self.results) + 1:04d}", "item": item, "testedAt": now(),
@@ -349,6 +397,13 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             path = ROOT / source
             quotation_files.extend([path] if path.is_file() else sorted(item for item in path.rglob("*") if item.suffix in {".ts", ".tsx", ".css"}))
         sources.extend(["scripts/fixtures/quotation-contract.json", *(str(path.relative_to(ROOT)) for path in quotation_files)])
+        # Inventory moved route entries from the actual app tree; never keep an
+        # obsolete pre-group path or silently omit a newly introduced boundary.
+        sources.extend(str(path.relative_to(ROOT)) for path in sorted((ROOT / "src/app").rglob("*")) if path.suffix in {".ts", ".tsx", ".css"})
+        sources.extend(["scripts/fixtures/design-collection-contract.json", "src/config/design-collection.ts", "src/lib/design-collection/routes.ts", "src/lib/design-collection/metadata.ts"])
+        sources.extend(str(path.relative_to(ROOT)) for path in sorted((ROOT / "src/components/design-collection").rglob("*")) if path.suffix in {".ts", ".tsx", ".css"})
+        sources.extend(str(path.relative_to(ROOT)) for path in sorted((ROOT / "src/design-systems").rglob("*")) if path.suffix in {".ts", ".tsx", ".css"})
+        sources.extend(["src/config/navigation.ts", "src/components/layout/site-footer.tsx"])
         self.environment["sourceSha256"] = {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in sources}
         config = self.data["showcases"]
         entries = config["websiteShowcases"]
@@ -429,8 +484,12 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check("Protected SEO policy remains explicit", {"mode": "protected", "publishSitemap": False}, self.data["seoProtectionPolicy"])
         self.check("Privacy remains an unpublished draft", "draft", self.data["privacyPolicy"]["status"])
         self.public_pages = [page for page in self.data["seoPages"] if page["availability"] == "public"]
-        expected_paths = self.contract["existingPublicPaths"] + ["/portfolio/showcases/" + item for item in self.contract["brandOrder"]] + [self.quotation_contract["path"]]
+        expected_paths = self.contract["existingPublicPaths"] + ["/portfolio/showcases/" + item for item in self.contract["brandOrder"]] + [self.quotation_contract["path"], self.design_contract["collectionRoute"]["path"]]
+        self.check("Independent DC-003 published route count", 17, len(self.design_contract["publishedPaths"]))
+        self.check("Independent publication and content inventories agree", sorted(self.design_contract["publishedPaths"]), sorted(expected_paths))
         self.check("Independent public route inventory", sorted(expected_paths), sorted(page["path"] for page in self.public_pages))
+        gallery = self.design_contract["collectionRoute"]
+        self.check("Gallery retains its independently approved SEO copy", {"path": gallery["path"], "title": gallery["title"], "description": gallery["description"], "availability": "public"}, next((page for page in self.public_pages if page["path"] == gallery["path"]), None))
         self.check("SEO route paths are unique", len(self.data["seoPages"]), len({page["path"] for page in self.data["seoPages"]}))
         return True
 
@@ -666,12 +725,26 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
                 self.documents[path] = Document(response["body"].decode("utf-8")).root
         for path, doc in self.documents.items():
             self.metadata(path, doc)
+            self.check(f"{path} has one complete Modern frame and skip destination", [], modern_frame_errors(doc))
             self.links_and_resources(path, doc)
             self.enquiry_markup(path, doc)
             footer = doc.all("footer")
             footer_urls = [urlsplit(urljoin(self.route_url(path), anchor.attrs.get("href", ""))) for element in footer for anchor in element.all("a")]
             footer_paths = {url.path.rstrip("/") or "/" for url in footer_urls if (url.scheme, url.netloc) == self.origin}
-            self.check(f"{path} Footer lists every published route including Quotation", [], [page["path"] for page in self.public_pages if page["path"] not in footer_paths])
+            self.check(f"{path} Footer lists every published route including Quotation and Design Collection", [], [page["path"] for page in self.public_pages if page["path"] not in footer_paths])
+            if path == self.design_contract["collectionRoute"]["path"]:
+                for anchor in self.design_contract["collectionRoute"]["anchors"]:
+                    self.check(f"Gallery has exactly one declared #{anchor} landmark", 1, len([element for element in doc.all() if element.attrs.get("id") == anchor]))
+                cards = [element for element in doc.all() if "data-design-style-id" in element.attrs]
+                self.check("Gallery renders exactly the three independently approved style states", list(self.design_contract["styleStatus"].items()), [(card.attrs.get("data-design-style-id"), card.attrs.get("data-design-status")) for card in cards])
+                for card in cards:
+                    style_id = card.attrs["data-design-style-id"]
+                    links = [anchor.attrs.get("href") for anchor in card.all("a")]
+                    expected_links = ["/"] if self.design_contract["styleStatus"].get(style_id) == "implemented" else []
+                    self.check(f"Gallery {style_id} has only its approved public entry", expected_links, links)
+                    if self.design_contract["styleStatus"].get(style_id) == "planned":
+                        self.check(f"Gallery {style_id} has no fake button", 0, len(card.all("button")))
+                        self.check(f"Gallery {style_id} states that it is planned", True, "規劃中" in card.text())
             if path in {"/", "/portfolio"}:
                 self.cards(path, doc)
             if path in {"/", "/services"}:
@@ -692,9 +765,32 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             draft_markers = [self.data["privacyDraftMarker"]] + [text for section in self.data["privacyPolicy"]["sections"] for text in section["paragraphs"]]
             self.check(f"{path} contains no unpublished Privacy draft text", [], [marker for marker in draft_markers if marker and marker in doc.text()])
         negative = ["/privacy", "/dev/design-system", "/sitemap.xml", "/portfolio/unknown-smoke-route", "/portfolio/showcases/unknown-smoke-route", "/quotation/unknown-smoke-route", "/api/quotation", "/unknown-smoke-route"]
+        negative.extend(["/modern", "/modern/about", "/design-collection/modern", "/design-collection/modern/about", "/design-collection/unknown-smoke-route", "/design-collection/heritage/privacy", "/design-collection/luxury/dev/design-system"])
+        for style_id in ["heritage", "luxury"]:
+            negative.extend(self.design_contract["namespace"] + "/" + style_id + (route["path"] if route["path"] != "/" else "") for route in self.design_contract["modernRoutes"])
         for path in negative:
             url = self.base + path.lstrip("/")
-            self.check(f"{path} unpublished/unknown route returns real HTTP 404", 404, self.fetch(url)["status"], "A soft 404 or redirect to Home is a failure.")
+            response = self.fetch(url)
+            self.check(f"{path} unpublished/unknown route returns real HTTP 404", 404, response["status"], "A soft 404 or redirect to Home is a failure.")
+            if path not in {"/sitemap.xml", "/api/quotation"}:
+                content_type = next((value for key, value in response["headers"].items() if key.lower() == "content-type"), "")
+                self.check(f"{path} 404 response is HTML", True, "text/html" in content_type)
+                if response["status"] == 404 and "text/html" in content_type:
+                    html = response["body"].decode("utf-8")
+                    doc = Document(html).root
+                    if path in GATED_PRIVATE_404_ROUTES:
+                        private_markers = [self.data["privacyDraftMarker"], *PRIVATE_DESIGN_SYSTEM_MARKERS, *(text for section in self.data["privacyPolicy"]["sections"] for text in section["paragraphs"])]
+                        self.check(f"{path} raw 404 contains no private page payload", [], serialized_private_markers(html, private_markers))
+                    if uses_gated_error_shell(path, doc):
+                        observation = gated_private_404_observation(path, html, private_markers)
+                        self.gated_404_observations.append(observation)
+                        self.check(f"{path} gated raw 404 preserves the Next error shell without private payload or duplicate landmarks", [], observation["errors"], "Expected raw landmarks are zero, not a server-rendered site frame. The browser must separately recover exactly one complete frame.")
+                        self.results.append({"testId": f"SMOKE-{len(self.results) + 1:04d}", "item": f"{path} complete SSR frame acceptance",
+                                             "testedAt": now(), "environment": self.base, "expected": "N/A: known private-route Next.js error shell",
+                                             "actual": observation["rawLandmarks"], "status": "N/A", "required": False,
+                                             "notes": "This is not browser acceptance. Separate browser tests must verify one Header, main, Footer, h1 and skip link after recovery, with no runtime/console errors."})
+                    else:
+                        self.check(f"{path} 404 has one frame without nested Header/Footer", [], modern_frame_errors(doc))
         robots = self.fetch(self.base + "robots.txt")
         self.check("Protected robots HTTP status", 200, robots["status"])
         lines = [re.sub(r"^([^:]+):\s*", lambda match: match[1].lower() + ": ", line.split("#")[0].strip()) for line in robots["body"].decode("utf-8").splitlines() if line.split("#")[0].strip()]
@@ -720,10 +816,12 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
                   "counts": dict(counts), "complete": self.completed, "checks": self.results,
                   "httpObservations": [{"url": url, "status": item["status"], "finalUrl": item["finalUrl"], "bytes": len(item["body"]), "error": item.get("error")} for url, item in self.cache.items()],
                   "imageObservations": list(self.image_observations.values()),
+                  "gatedPrivate404Observations": self.gated_404_observations,
                   "scopeNotes": ["No browser rendering, keyboard, screen reader, responsive, axe or complete WCAG audit is performed.",
                                  "External source checks run only when requested; source-asset expected 404 is evidence of a limitation.",
                                  "Email checks parse the public recipient and static draft prompts only; no message, SMTP or delivery test is performed.",
                                  "Contact form checks inspect initial server HTML and source references; browser interactions, persistent-storage behavior and network flows require separate tests.",
+                                 "Only /privacy and /dev/design-system may use the observed Next.js raw error-shell contract when their HTML actually identifies that shell: zero SSR landmarks, no private page payload, and complete SSR frame marked N/A. Browser recovery to exactly one complete frame is required separately. Their Pages fallback and every other unknown route retain strict complete SSR frame checks; both private response modes must exclude private page payload.",
                                  "Image headers/bytes are inspected; full browser decoding is a separate check."]}
         output = Path(self.args.output).expanduser()
         output.parent.mkdir(parents=True, exist_ok=True)
@@ -731,7 +829,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         for item in self.results:
             if item["status"] == "FAIL":
                 print(f"{item['testId']} FAIL {item['item']}: expected {item['expected']!r}; actual {item['actual']!r}", file=sys.stderr)
-        print(f"{report['result']}: {counts['PASS']} passed, {counts['FAIL']} failed. JSON: {output}")
+        print(f"{report['result']}: {counts['PASS']} passed, {counts['FAIL']} failed, {counts['N/A']} N/A. JSON: {output}")
         return report["exitCode"]
 
 

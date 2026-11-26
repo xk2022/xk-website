@@ -52,7 +52,7 @@ export function describeDesignRoute(request: DesignRouteRequest): DesignRouteDes
   return null;
 }
 
-/** No opt-in flag exists for creating links to planned Gallery or styles. */
+/** No opt-in flag exists for creating links to planned styles. */
 export function resolveDesignHref(request: DesignRouteRequest): string | null {
   const route = describeDesignRoute(request);
   return route?.availability === "public" ? `${route.presentationPath}${route.hash ? `#${route.hash}` : ""}` : null;

@@ -1,0 +1,75 @@
+{
+  "testId": "DC003-QA-LIFECYCLE-CORRECTION",
+  "originalResult": {
+    "path": "/tmp/xk-dc003/normal-final/result.json",
+    "sha256": "f5584ea579716d833989a6a2a397eea52414c3ff3044c923b6c576b6664c804e",
+    "status": "FAIL",
+    "networkErrors": [
+      {
+        "url": "http://127.0.0.1:3230/_next/static/chunks/0on1tc_vzycw1.css",
+        "method": "GET",
+        "type": "stylesheet",
+        "headers": {
+          "accept": "text/css,*/*;q=0.1",
+          "referer": "http://127.0.0.1:3230/portfolio",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Linux\""
+        },
+        "error": "net::ERR_ABORTED"
+      }
+    ]
+  },
+  "findings": [
+    "Original404 loop and every document goto already used networkidle. No domcontentloaded-only goto was found.",
+    "The aborted0on1tc_vzycw1.css is Quotation scoped CSS, requested with Portfolio referer. Old records lack timestamps/test IDs, so the exact cancellation stage cannot be proven.",
+    "Portfolio image traversal exposes Footer links, then closes disclosures/scrolls to top. Test completion and the next goto had no observer-flush/networkidle boundary; other keyboard/menu transitions also ended immediately."
+  ],
+  "changes": [
+    "After each test, including failure, bring owned page foreground, wait two actual animation frames with30000ms watchdog, then wait networkidle with30000ms timeout. Preserve lifecycle success/failure/timestamps.",
+    "Before every document navigation and each protected404 step, use the same bounded lifecycle drain. Original goto networkidle remains.",
+    "After every real SPA navigation, drain before next click/navigation. Temporary storage-test pages drain before close, with actual errors preserved and guaranteed closure.",
+    "Request traces now record requestId/startTime/testID and failedTime/testID. Stylesheet, script, image, font and nonprefetchGET failure classification remains strict and unchanged."
+  ],
+  "tools": [
+    {
+      "browser": {
+        "path": "/tmp/xk-dc003/browser.cjs",
+        "sha256": "4b2d76dcf137ee188974f48d3b2a06c4d189102a79a0709bec8567426ecd2616"
+      },
+      "previous": {
+        "path": "/tmp/xk-dc003/browser-before-lifecycle.cjs",
+        "sha256": "53830bf1180435c22276e8429c5d9f429e7c625ec515b870d4f0495587751498"
+      }
+    },
+    {
+      "business": {
+        "path": "/tmp/xk-dc003/business.cjs",
+        "sha256": "124de80931b38cfdc7da4d5078a1f84a966ac8cd84d553530e200807829405da"
+      },
+      "previous": {
+        "path": "/tmp/xk-dc003/business-before-lifecycle.cjs",
+        "sha256": "193126c200a810547c48755622567e448c277bd516fdfabce2cab51608b76f74"
+      }
+    },
+    {
+      "monitor": {
+        "path": "/tmp/xk-dc003/monitor.cjs",
+        "sha256": "2f7c78c5f8f72bdf93bee778d5f039bb0abac681bec272e9ba7dde7fcc3f3733"
+      },
+      "previous": {
+        "path": "/tmp/xk-dc003/monitor-before-lifecycle.cjs",
+        "sha256": "8bb0a6b84d91cceddbd29595022236196344b3de41ec448b1cfbbfe4c39ba8ee"
+      }
+    }
+  ],
+  "expectedCountsUnchanged": {
+    "testsPerMode": 132,
+    "layouts": 85,
+    "axeScans": 23,
+    "actualPDFs": 1
+  },
+  "qa": "NOT_EXECUTED_BY_CORRECTION",
+  "retry": "normal v2 and Pages final use new directories/receipts; original normal-final remains immutable."
+}

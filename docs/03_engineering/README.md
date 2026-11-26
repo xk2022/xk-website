@@ -1,13 +1,13 @@
 # 官網技術架構與工程入口
 
-本文件整理已存在的程式與工程文件，核對基準：2026-11-26，main `90cee00534bf30c9820cd314746880ff95b625a8`。不新增架構決策或開發需求。版本以 [package.json](../../package.json)／[package-lock.json](../../package-lock.json) 為準，公司層級規範見 [XK SYSTEM 文件](https://github.com/xk2022/xplore-kaleidoscope)。
+本文件整理已存在的程式與工程文件，核對基準：2026-11-26，DC-003 分支（main `aa100ad` 為 base）。不新增架構決策或開發需求。版本以 [package.json](../../package.json)／[package-lock.json](../../package-lock.json) 為準，公司層級規範見 [XK SYSTEM 文件](https://github.com/xk2022/xplore-kaleidoscope)。
 
 ## 現行架構
 
 | 層級 | 實際來源與職責 |
 | --- | --- |
-| 網頁與 Layout | [src/app](../../src/app) — Next.js App Router、Metadata、現行 Modern Layout |
-| 呈現與共用元件 | [src/components](../../src/components) — brand、layout、sections、ui 與 dev |
+| 網頁與 Layout | [src/app](../../src/app) — Next.js 技術 root（font／Metadata／JSON-LD）、`(modern)` 群組與 Gallery |
+| 呈現與共用元件 | [src/components](../../src/components) — brand、layout、sections、ui、dev 與 design-collection |
 | 內容設定 | [src/config](../../src/config) — 品牌、服務、作品、聯絡、試算與 SEO 的單一來源 |
 | 共用邏輯 | [src/lib](../../src/lib) — SEO、聯絡草稿、試算及三風格核心 |
 | 靜態素材 | [public](../../public) — 品牌、圖示、案例、試算 QR |
@@ -26,14 +26,15 @@ flowchart TD
   D --> E
 ```
 
-DC-002 核心已建立但尚未接入既有頁面的新呈現層；圖中的核心依賴共用來源，不代表現行頁面已使用三系列容器。
+DC-003 將原 Modern 外框搬入 group 並新增 Gallery，消費 DC-002 路由／Metadata 核心；Heritage／Luxury 容器仍未實作。Modern facade 位於 [src/design-systems/modern](../../src/design-systems/modern)，引用原 tokens／recipes。
 
 ## 三風格架構對照
 
 | 項目 | 現況 | 權威來源 |
 | --- | --- | --- |
-| Modern 16 頁 | 現行根路徑、既有 Layout | [根 README](../../README.md)、[核心契約](design-collection-core.md) |
-| Gallery、Heritage、Luxury | 規劃中，未輸出新路由 | [架構規格](../01_design/design-collection/architecture.md) |
+| Modern 16 頁 | 原 URL、ModernFrame 與 `(modern)` group | [根 README](../../README.md)、[核心契約](design-collection-core.md) |
+| Gallery | 本輪新增 `/design-collection/`，合計 17 頁；[任務／驗收](../task/dc003.md) | [架構規格](../01_design/design-collection/architecture.md) |
+| Heritage、Luxury | 規劃中，未輸出新路由 | [架構規格](../01_design/design-collection/architecture.md) |
 | 共用內容及路由 | DC-002 已合併 | [registry](../../src/config/design-collection.ts)、[核心模組](../../src/lib/design-collection) |
 | 各系列 Token／版面 | 契約已定義；視覺實作及核准待後續 | [設計索引](../01_design/README.md) |
 | 聯絡與試算 | 既有本機草稿及參考計算；無站內收件 | [核心 API](design-collection-core.md)、[回覆流程](../02_operations/contact-response-workflow.md) |
@@ -55,3 +56,5 @@ DC-002 核心已建立但尚未接入既有頁面的新呈現層；圖中的核�
 ## DOC-004 整理範圍
 
 核對現有 Git tree、manifest、DC-001 規格與 DC-002 核心使用契約；集中入口並引用既有詳文。原始設計規格、資料、頁面、驗收報告、依賴與部署設定均未變更。
+
+DC-003 依當次使用者指示同步更新本索引的實際程式分工；DOC-004 首次整理的歷史範圍不代表本輪未改程式。

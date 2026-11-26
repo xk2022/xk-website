@@ -1,0 +1,237 @@
+{
+  "checkedAt": "2026-11-26T02:23:21.591Z",
+  "task": "DC-003 company source delta audit",
+  "repository": "xk2022/xplore-kaleidoscope",
+  "base": "5be640ab11811b24706101ea13db73185e9ce4d8",
+  "head": "cdb1ec70f1fa641f3022f53994ab6da83c4333de",
+  "tree": "0a8ff0b2239e55c9f11dc556d3de31f1c9013dde",
+  "comparison": {
+    "status": "ahead",
+    "aheadBy": 3,
+    "totalCommits": 3,
+    "url": "https://github.com/xk2022/xplore-kaleidoscope/compare/5be640ab11811b24706101ea13db73185e9ce4d8...cdb1ec70f1fa641f3022f53994ab6da83c4333de",
+    "files": [
+      {
+        "path": "README.md",
+        "status": "modified",
+        "blob": "d23ff1ed6f65d9b12479bb6a26144d3986dcc956",
+        "blobRole": "head blob"
+      },
+      {
+        "path": "doc/05_projects/products/ai-assistant.md",
+        "status": "modified",
+        "blob": "3c2518db9b681cc5d31f6817554280e4d91845b9",
+        "blobRole": "head blob"
+      },
+      {
+        "path": "doc/README.md",
+        "status": "modified",
+        "blob": "c5b41b9a2126b4e8270634d6765d0883a4a5b624",
+        "blobRole": "head blob"
+      },
+      {
+        "path": "doc/website-repository-naming.md",
+        "status": "removed",
+        "blob": "941b5ee8d7908b9c880d939168c99b8ab5e9b6fd",
+        "blobRole": "last existing blob, not a file at head"
+      }
+    ]
+  },
+  "freshReads": [
+    {
+      "path": "README.md",
+      "blob": "d23ff1ed6f65d9b12479bb6a26144d3986dcc956",
+      "sections": [
+        "工作入口表",
+        "XK-KS-M1專案目標／執行原則",
+        "工作項目A–F",
+        "驗收及最終回報"
+      ],
+      "finding": "新增公司知識庫Git-first骨架、Schema與遷移計畫任務；不改R01–R06、不搬客戶實作、不得將待確認升為正式決議、未人工確認不全面遷移。沒有新品牌配色/字體/分類或網站部署批准。"
+    },
+    {
+      "path": "doc/README.md",
+      "blob": "c5b41b9a2126b4e8270634d6765d0883a4a5b624",
+      "sections": [
+        "公司文件工作索引"
+      ],
+      "finding": "修復索引到現存繁中檔案，區分產品驗收與對外展示；不改規範正文。"
+    },
+    {
+      "path": "doc/05_projects/products/ai-assistant.md",
+      "blob": "3c2518db9b681cc5d31f6817554280e4d91845b9",
+      "sections": [
+        "首次試用",
+        "實作進度與試用結果"
+      ],
+      "finding": "本次差異僅修公司里程碑連結。既有產品驗證紀錄不能升為已完成文件問答/首位客戶試用，亦與DC-003 Gallery無關。"
+    }
+  ],
+  "removed": {
+    "path": "doc/website-repository-naming.md",
+    "finding": "刪除3行舊導引檔，不是刪除命名規範。正式來源仍為doc/04_engineering/website-repository-naming.md。"
+  },
+  "unchangedReusableSources": [
+    {
+      "path": "doc/03_brand/README.md",
+      "blob": "ad60667527239356db541becefe823fe754304a6",
+      "sections": [
+        "XK 品牌與設計交付"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/03_brand/品牌識別.md",
+      "blob": "5457641828bfe448a4fcf0018fa616003879062d",
+      "sections": [
+        "品牌識別／核定文字"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/03_brand/品牌色票與介面用途.md",
+      "blob": "c8d5746b8d1f146f51893ce092429c1ae4c009c5",
+      "sections": [
+        "角色與 HEX 表",
+        "對比要求"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/03_brand/字體與排版.md",
+      "blob": "ea2a6799641f9a0089eef0d349088b9f1cb8c833",
+      "sections": [
+        "字體",
+        "桌面／手機字階表"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/03_brand/logo-guidelines.md",
+      "blob": "4f5f405f991e24984b1d8f0582ef72074359ed90",
+      "sections": [
+        "正式素材",
+        "比例與配色"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/02_services/README.md",
+      "blob": "f15c71d7901946a9ba28048c3ef0260e337a0e2f",
+      "sections": [
+        "服務目錄 R01–R06"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/02_services/網站建置方案.md",
+      "blob": "02a2685b81f23988fe49d6d0ea03f71fd8c40c43",
+      "sections": [
+        "方案對照表",
+        "報價與交付"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/02_services/定價策略.md",
+      "blob": "59fea2a9d9805bbbfa7407a01ce5ce275a737a77",
+      "sections": [
+        "§4 網站建置報價",
+        "§8 維護服務月費",
+        "§12 報價與付款政策"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/04_engineering/website-repository-naming.md",
+      "blob": "2e3488d10194bb12c151c9e7eb16a722f015a2c5",
+      "sections": [
+        "§2.1 類型前綴",
+        "§3 網站類型判斷原則",
+        "§10 規範適用邊界"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/04_engineering/architecture.md",
+      "blob": "6149c6c5efaf169aa5ea2c8551f08379f5509457",
+      "sections": [
+        "whole file — unchanged from prior reviewed source"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/04_engineering/testing-and-release.md",
+      "blob": "044cc3bda0195f88abafd4d43dcf9801cf9b67f3",
+      "sections": [
+        "whole file — unchanged from prior reviewed source"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/04_engineering/development-workflow.md",
+      "blob": "551a5c5fd45f25f480351b036545c1c022678973",
+      "sections": [
+        "whole file — unchanged from prior reviewed source"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/05_projects/official-website/README.md",
+      "blob": "cf34ae02e039357ebef6048525f8944ec2520d4b",
+      "sections": [
+        "正式網站及實作 Repo",
+        "路徑與部署以實作庫為準"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    },
+    {
+      "path": "doc/98_decisions/2026-11-25.md",
+      "blob": "bb1946534130876aede2e5afb278babbec197d36",
+      "sections": [
+        "APP工程方向",
+        "DEMO免費部署補充決議"
+      ],
+      "readMode": "unchanged blob; reuse prior task review rather than re-download full text"
+    }
+  ],
+  "agents": {
+    "rootPresent": false,
+    "allMatches": [],
+    "treeTruncated": false,
+    "basis": "Fresh complete recursive tree at head; README says to create AGENTS as future XK-KS-M1 work, but it is not present. Earlier root-404 evidence is not relabeled as a new HTTP probe."
+  },
+  "knowledgeBasePlanArtifacts": [
+    {
+      "path": "AGENTS.md",
+      "presentAtHead": false
+    },
+    {
+      "path": "00_governance/README.md",
+      "presentAtHead": false
+    },
+    {
+      "path": "12_data/schemas/document.schema.json",
+      "presentAtHead": false
+    },
+    {
+      "path": "migration-plan.md",
+      "presentAtHead": false
+    },
+    {
+      "path": "migration-inventory.csv",
+      "presentAtHead": false
+    }
+  ],
+  "decision": {
+    "status": "NO_BLOCKING_COMPANY_RULE_CONFLICT_FOR_DC003",
+    "scope": "Continue existing Modern preservation, shared content/core, Gallery planning/publication gates and company brand-scope rules. Do not perform company knowledge-base work or import its product/business details into the website Gallery.",
+    "guardrails": [
+      "Use actual doc/03_brand and doc/04_engineering sources; the README-listed future root skeleton is not an already completed migration.",
+      "Keep Modern existing palette/layout and quotation-scoped formal tokens; the delta does not approve recoloring or new Heritage/Luxury palettes/fonts.",
+      "Service/product codes and suggested-price/public-approval boundaries are unchanged; knowledge-base names do not create website product classes or new gallery services.",
+      "No authorization to create company files/AGENTS/schema, migrate documents, deploy, change DNS or merge the website is inferred from these source instructions."
+    ]
+  },
+  "limitations": "Read-only GitHub comparison and fixed-head source inspection; no company or website changes, Git CLI, app build/server, live website/visual checks or new product validation."
+}

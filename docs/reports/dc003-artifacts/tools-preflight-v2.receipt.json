@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc003/preflight.cjs"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T02:30:14.306637+00:00",
+  "finishedAt": "2026-11-26T02:30:15.113788+00:00",
+  "processId": 45655,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc003/tools-preflight-v2.log",
+  "logSha256": "fff343b6b5be7e8d9555c14366afce82541cc467b843a9267de573169ff78102",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

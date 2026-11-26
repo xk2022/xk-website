@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "python3",
+    "-B",
+    "/tmp/xk-dc003/private-hosting-branch-selfcheck.py"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T03:00:11.455426+00:00",
+  "finishedAt": "2026-11-26T03:00:11.590523+00:00",
+  "processId": 58959,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc003/private-hosting-helper-v1.log",
+  "logSha256": "afb80afd6f06ab56ff7350b2d907abc335ae7e5ab1366ba871cd809c0994331a",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

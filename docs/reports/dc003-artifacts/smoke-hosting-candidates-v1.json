@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc003/smoke-candidate-diff.mjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T03:00:11.448617+00:00",
+  "finishedAt": "2026-11-26T03:00:11.616959+00:00",
+  "processId": 58958,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc003/smoke-hosting-candidates-v1.log",
+  "logSha256": "06c58f223a95b393603587cc952fe4da5b649590a710fd765442c5d31f7d4f7a",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

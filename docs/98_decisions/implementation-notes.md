@@ -440,3 +440,15 @@ Hero、桌面導覽、手機選單與底部 CTA 共用依正式管道可用性�
 本輪建立唯讀 plain DTO、style／page registry、嚴格路由及 metadata adapter、Contact／Quotation 純行為 facade、token schema 與 portal／print／reset 整合契約。新系列及 Gallery 只可描述規劃；公開 href／metadata 預設只允許原 Modern 16 頁。資料權威、價格／狀態、個資與實際收件界線不變，原 UI、呈現 CSS、route、storage、A4 與部署不動；globals.css 僅追加本輪純核心／測試／文件與證據的限定掃描排除，確保 runtime CSS 不被資料文字擴張。
 
 Native 測試透過 Node.js 24 的 test-only alias hook 解析既有 Next.js imports，不修改 production config imports、package type、依賴或 lockfile。所有 required quality checks、普通／Pages HTTP 及 focused regression／anchor 驗證與 asset bridge 以 [DC-002 報告](../reports/dc002-implementation.md) 的實際結果為準。後續 frame、畫面、palette、portal 與列印隔離不因存在契約就視為完成；此輪建立 PR 等待審閱，不自動 merge 或部署。
+
+
+## 2026-11-26 DC-003 — Modern 相容整合與集合入口
+
+網站基準 main `794b076` 已合併 DC-002／PR #33 與文件歷史索引 PR #35；公司 main 重核為 `cdb1ec70f1fa641f3022f53994ab6da83c4333de`，正式品牌／工程／部署／分類／定價來源 Blob 未變，補讀的知識庫規劃不引入 Gallery。公司仍缺 AGENTS，未修改其 Repository。
+
+本輪以 `feature/design-collection-modern` 將原 pages 與 shell 分離到 `(modern)`；唯一 root 保留字體／SEO／JSON-LD，Frame fragment 保持既有 DOM，404 按 root／group 分工。新增一個 Gallery 與 Footer 真入口，Modern 可瀏覽、其他兩系列規劃中；不更換 DS 或業務資料。保持 root Pages、一般 build、17 頁 exact guard 與 noindex/nofollow、Privacy／dev／Sitemap 保護。
+
+搬移前固定同環境 Pages baseline 及五頁十張畫面，後續六品質、兩模式 17 頁／五寬、a11y／行為／A4 與視覺差異見 [DC-003 報告](../reports/dc003-implementation.md)。本輪僅提交／Push／PR，遠端 CI 記於同 PR，不繼承前輪合併或部署授權。
+
+
+交付前同步已合併 PR #36／#37 的工程索引與 Roadmap 整理，最新 main 基準更新為 `aa100adfad24b74ccb39d2df811b613c4d6a15ef`。差異只有文件；保留集中 Roadmap／新索引與本輪說明，未引入其他功能，原 runtime source bytes 不變。搬移前 baseline 仍保留 `794b076` 版本邊界。

@@ -38,7 +38,8 @@
 | --- | --- |
 | DC-001 | [規格](../task/dc001.md)、[架構報告](dc001-architecture.md) |
 | DC-002 | [規格](../task/dc002.md)、[共用核心](../03_engineering/design-collection-core.md)、[報告](dc002-implementation.md)、[證據](dc002-artifacts/README.md) |
-| DC-003～007 | [工作包](../01_design/design-collection/work-packages.md)，未完成工作不以計畫充當報告 |
+| DC-003 | [規格](../task/dc003.md)、[報告](dc003-implementation.md) |
+| DC-004～007 | [工作包](../01_design/design-collection/work-packages.md)，未完成工作不以計畫充當報告 |
 
 ## 證據保存
 

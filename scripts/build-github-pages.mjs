@@ -16,6 +16,7 @@ const { websiteShowcases, showcaseSettings, showcaseDetailPath, showcaseSeoPages
 const showcaseContract = JSON.parse(readFileSync(new URL("./fixtures/showcase-contract.json", import.meta.url), "utf8"));
 const contactContract = JSON.parse(readFileSync(new URL("./fixtures/contact-contract.json", import.meta.url), "utf8"));
 const quotationContract = JSON.parse(readFileSync(new URL("./fixtures/quotation-contract.json", import.meta.url), "utf8"));
+const designContract = JSON.parse(readFileSync(new URL("./fixtures/design-collection-contract.json", import.meta.url), "utf8"));
 const { quotationCatalog, quotationSources } = await import(new URL("../src/config/quotation.ts", import.meta.url));
 const [{ verifiedContactChannels }, { inquiryAction, inquiryEmailTemplate }] = await Promise.all([
   import(new URL("../src/config/contact.ts", import.meta.url)),
@@ -135,6 +136,19 @@ function metadataAttribute(html, selectorAttribute, selectorValue, targetAttribu
   const tags = html.match(/<(?:meta|link)\b[^>]*>/g) ?? [];
   const tag = tags.find((value) => tagAttribute(value, selectorAttribute) === selectorValue);
   return tagAttribute(tag, targetAttribute);
+}
+
+function verifyModernFrame(html, label) {
+  const markup = html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, "");
+  for (const tag of ["header", "main", "footer", "h1"]) {
+    assert.equal([...markup.matchAll(new RegExp(`<${tag}\\b[^>]*>`, "g"))].length, 1, `${label} must render exactly one ${tag}, without duplicate frames.`);
+  }
+  const main = markup.match(/<main\b[^>]*>/)?.[0];
+  assert.equal(tagAttribute(main, "id"), "main-content", `${label} main must remain the skip-link destination.`);
+  const skipLinks = [...markup.matchAll(/<a\b[^>]*>/g)].filter(([tag]) => tagAttribute(tag, "href") === "#main-content");
+  assert.equal(skipLinks.length, 1, `${label} must render exactly one skip link.`);
+  const destinations = [...markup.matchAll(/<[a-z][\w-]*\b[^>]*>/g)].filter(([tag]) => tagAttribute(tag, "id") === "main-content");
+  assert.equal(destinations.length, 1, `${label} must render exactly one #main-content ID.`);
 }
 
 function verifyMailtoHref(href, label) {
@@ -411,9 +425,12 @@ assert.deepEqual(showcaseSettings.brandOrder, showcaseContract.brandOrder, "The 
 assert.deepEqual(showcaseSettings.featuredIds, showcaseContract.featuredIds, "Featured showcases must match the independently reviewed selection.");
 assert.deepEqual(showcaseSeoPages.map(({ path }) => path), expectedShowcasePaths, "Brand detail SEO pages must match all approved brand IDs.");
 assert.deepEqual(portfolioPages.slice(1).map(({ pagePath }) => pagePath.split("/").at(-1)), showcaseContract.technicalPlanSlugs, "Retain the three original technical plan routes.");
-const expectedPublicPaths = [...showcaseContract.existingPublicPaths, ...expectedShowcasePaths, quotationContract.path, ...(privacyApproved ? ["/privacy"] : [])];
+const expectedPublicPaths = [...showcaseContract.existingPublicPaths, ...expectedShowcasePaths, quotationContract.path, designContract.collectionRoute.path, ...(privacyApproved ? ["/privacy"] : [])];
 const publicSeoPages = seoPages.filter(({ availability }) => availability === "public");
+assert.equal(designContract.publishedPaths.length, 17, "DC-003 must approve exactly Modern 16 plus Gallery.");
+assert.deepEqual([...expectedPublicPaths].sort(), [...designContract.publishedPaths, ...(privacyApproved ? ["/privacy"] : [])].sort(), "Design publication must match the independent route and content contracts.");
 assert.deepEqual(publicSeoPages.map(({ path }) => path).sort(), expectedPublicPaths.sort(), "Public SEO routes must match the independently reviewed route contract.");
+assert.deepEqual(getSeoPage(designContract.collectionRoute.path), { path: designContract.collectionRoute.path, title: designContract.collectionRoute.title, description: designContract.collectionRoute.description, availability: "public" }, "Gallery must retain its independently approved SEO copy.");
 portfolioPages.push(...showcaseSeoPages.map(({ path, title, description }) => ({ pagePath: path, label: `Showcase ${path.split("/").at(-1)}`, title, description })));
 
 const exportedPages = [
@@ -423,6 +440,7 @@ const exportedPages = [
   ["solutions/index.html", "/solutions", "Solutions"],
   ["contact/index.html", "/contact", "Contact"],
   ["quotation/index.html", quotationContract.path, "Quotation"],
+  ["design-collection/index.html", designContract.collectionRoute.path, "Design Collection"],
   ...(privacyApproved ? [["privacy/index.html", "/privacy", "Privacy"]] : []),
   ...portfolioPages.map(({ pagePath, label }) => [`${pagePath.slice(1)}/index.html`, pagePath, label]),
 ];
@@ -437,11 +455,30 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   assert.equal(tagAttribute(html.match(/<html\b[^>]*>/)?.[0], "lang"), "zh-TW", `${label} HTML language is incorrect.`);
   verifyReferencedAssets(html, pagePath, label);
   verifySeoMetadata(html, getSeoPage(pagePath || "/"), label);
+  verifyModernFrame(html, label);
   verifyEnquiryMarkup(html, label, pagePath);
   const footer = html.match(/<footer\b[^>]*>([\s\S]*?)<\/footer>/)?.[1] ?? "";
   const footerUrls = [...footer.matchAll(/<a\b[^>]*>/g)].map(([tag]) => new URL(decodePublicText(tagAttribute(tag, "href") ?? ""), siteConfig.url));
   const footerPaths = new Set(footerUrls.filter(({ origin }) => origin === siteConfig.url).map(({ pathname }) => pathname.replace(/\/$/, "") || "/"));
-  assert.ok(publicSeoPages.every(({ path }) => footerPaths.has(path)), `${label} Footer must list all published routes, including Quotation.`);
+  assert.ok(publicSeoPages.every(({ path }) => footerPaths.has(path)), `${label} Footer must list all published routes, including Quotation and Design Collection.`);
+  if (pagePath === designContract.collectionRoute.path) {
+    for (const id of designContract.collectionRoute.anchors) {
+      assert.equal([...html.matchAll(/<[a-z][\w-]*\b[^>]*>/g)].filter(([tag]) => tagAttribute(tag, "id") === id).length, 1, `Gallery must render exactly one declared #${id} landmark.`);
+    }
+    const stylesSection = html.match(/<section\b[^>]*\bid="design-styles"[^>]*>[\s\S]*?<\/section>/)?.[0] ?? "";
+    const cards = [...stylesSection.matchAll(/<[a-z][\w-]*\b[^>]*\bdata-design-style-id="[^"]*"[^>]*>/g)];
+    assert.deepEqual(cards.map(([tag]) => [tagAttribute(tag, "data-design-style-id"), tagAttribute(tag, "data-design-status")]), Object.entries(designContract.styleStatus), "Gallery must render exactly the three independently approved style states.");
+    for (const [index, card] of cards.entries()) {
+      const markup = stylesSection.slice(card.index, cards[index + 1]?.index ?? stylesSection.length);
+      const links = [...markup.matchAll(/<a\b[^>]*>/g)].map(([tag]) => decodePublicText(tagAttribute(tag, "href") ?? ""));
+      if (tagAttribute(card[0], "data-design-status") === "implemented") assert.deepEqual(links, ["/"], "The Modern Gallery card must link to the original homepage.");
+      else {
+        assert.deepEqual(links, [], "Planned Gallery styles must not expose links.");
+        assert.doesNotMatch(markup, /<button\b/i, "Planned Gallery styles must not expose fake actions.");
+        assert.ok(decodePublicText(markup).includes("規劃中"), "Planned Gallery cards must state their availability.");
+      }
+    }
+  }
   if (pagePath === "" || pagePath === "/services") verifyServicePlans(html, pagePath || "/");
 
   if (pagePath === "/solutions") {
@@ -645,6 +682,7 @@ assert.equal(new Set(seoPages.map(({ path }) => path)).size, seoPages.length, "S
 assert.deepEqual([...publicPaths].sort(), exportedPages.map(([, path]) => path || "/").sort(), "SEO public paths must match every required exported page.");
 assert.equal(getSeoPage("/privacy").availability, privacyApproved ? "public" : "draft", "Privacy SEO availability must match its publication state.");
 const errorHtml = new Set(["404.html", "404/index.html", "_not-found/index.html"]);
+for (const path of errorHtml) if (existsSync(join(output, path))) verifyModernFrame(readFileSync(join(output, path), "utf8"), path);
 assert.deepEqual(
   collectHtmlFiles(output, "").filter((path) => !errorHtml.has(path)).sort(),
   exportedPages.map(([path]) => path).sort(),

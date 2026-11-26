@@ -1,0 +1,28 @@
+{
+  "status": "FAIL",
+  "command": [
+    "python",
+    "/tmp/xk-dc003/verify-pdf.py",
+    "/tmp/xk-dc003/normal-v2/quotation-worstcase-a4.pdf",
+    "--mode",
+    "normal",
+    "--out",
+    "/tmp/xk-dc003/normal-v2/pdf-verification",
+    "--catalog",
+    "/tmp/xk-dc003/catalog.json",
+    "--expected-catalog-sha",
+    "1c4ad0dc46e4d8efbce773fc630a4fc8c5bc57d0c29b0744a0608888c894dd63"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:46:06.219070+00:00",
+  "finishedAt": "2026-11-26T02:46:08.326878+00:00",
+  "processId": 48484,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 180.0,
+  "logFile": "/tmp/xk-dc003/normal-pdf.log",
+  "logSha256": "edd305545b4791808eb9c9301543300c9ae8e58b09626ecd46e8c14cf48c7064",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

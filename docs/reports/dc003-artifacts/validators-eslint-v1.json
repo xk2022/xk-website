@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "node_modules/eslint/bin/eslint.js",
+    "src/config/design-collection.ts",
+    "src/config/seo.ts",
+    "src/lib/design-collection/routes.ts",
+    "src/lib/design-collection/metadata.ts",
+    "scripts/test-design-collection-routes.mjs",
+    "scripts/test-design-collection-metadata.mjs",
+    "scripts/build-github-pages.mjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:26:39.382334+00:00",
+  "finishedAt": "2026-11-26T02:26:42.094928+00:00",
+  "processId": 45028,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc003/validators-eslint-v1.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

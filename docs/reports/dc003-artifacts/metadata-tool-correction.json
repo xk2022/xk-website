@@ -1,0 +1,98 @@
+{
+  "testId": "DC003-QA-METADATA-MODE-CORRECTION",
+  "classification": "Tool expectation defect; no app/source changes",
+  "oldTool": {
+    "path": "/tmp/xk-dc003/browser-before-metadata-mode-correction.cjs",
+    "sha256": "385470dc98dd2b5c89c0015977d559b240a19e8bd9badf43bfb9d4801b6f9a06"
+  },
+  "newTool": {
+    "path": "/tmp/xk-dc003/browser.cjs",
+    "sha256": "53830bf1180435c22276e8429c5d9f429e7c625ec515b870d4f0495587751498"
+  },
+  "observations": [
+    {
+      "path": "/tmp/xk-dc003/baseline-site/index.html",
+      "sha256": "832fe73996135768b6d7df4fc48c8e28c7accdede57b36ee0a5c51c0d6ca95ae",
+      "canonicalRaw": [
+        "https://www.xplorekaleidoscope.com/"
+      ],
+      "ogURLRaw": [
+        "https://www.xplorekaleidoscope.com/"
+      ],
+      "websiteJSONLD": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Xplore Kaleidoscope",
+          "url": "https://www.xplorekaleidoscope.com/",
+          "inLanguage": "zh-TW"
+        }
+      ]
+    },
+    {
+      "path": "/tmp/xk-dc003/baseline-site/services/index.html",
+      "sha256": "9058c70e5a04a2cff7ef5993c6dc59e31995634e9fdff7940d1833d5b72a955e",
+      "canonicalRaw": [
+        "https://www.xplorekaleidoscope.com/services/"
+      ],
+      "ogURLRaw": [
+        "https://www.xplorekaleidoscope.com/services/"
+      ],
+      "websiteJSONLD": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Xplore Kaleidoscope",
+          "url": "https://www.xplorekaleidoscope.com/",
+          "inLanguage": "zh-TW"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/xk-website/.next/server/app/index.html",
+      "sha256": "3f8f87c9c98388f3dea78795b6477bc9b2d871a884b88ffea148cc2faae98245",
+      "canonicalRaw": [
+        "https://www.xplorekaleidoscope.com"
+      ],
+      "ogURLRaw": [
+        "https://www.xplorekaleidoscope.com"
+      ],
+      "websiteJSONLD": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Xplore Kaleidoscope",
+          "url": "https://www.xplorekaleidoscope.com/",
+          "inLanguage": "zh-TW"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/xk-website/.next/server/app/services.html",
+      "sha256": "102837c1e25440f234df6ccb799bd05e77361d1b8e9a1968b2bb21f534eedf36",
+      "canonicalRaw": [
+        "https://www.xplorekaleidoscope.com/services"
+      ],
+      "ogURLRaw": [
+        "https://www.xplorekaleidoscope.com/services"
+      ],
+      "websiteJSONLD": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Xplore Kaleidoscope",
+          "url": "https://www.xplorekaleidoscope.com/",
+          "inLanguage": "zh-TW"
+        }
+      ]
+    }
+  ],
+  "exactChange": [
+    "Read canonical raw getAttribute instead of URL-normalizing DOM.href; retain resolved URL separately.",
+    "Normal canonical and OG must equal approved www origin plus exact page path, with no trailing slash including origin root. Pages must have trailing slash on root and every published path. No generic URL normalization applied.",
+    "Only Pages compares URL fields literally against Pages baseline. Normal retains exact independent mode URL assertions and baseline title/protection/copy comparisons.",
+    "WebSite JSON-LD not modified: both observed builds retain original root URL with slash."
+  ],
+  "originalSuite": "normal-final/result.json remains unchanged by this correction and must finish with its actual outcome. Retry must use normal-v2, not overwrite original.",
+  "QA": "NOT_EXECUTED_BY_CORRECTION"
+}

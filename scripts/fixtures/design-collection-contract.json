@@ -1,9 +1,9 @@
 {
   "reviewedAt": "2026-11-26",
-  "baseline": "9a7ca8ebef026b6be49e8fe51f3afa1057a3768b",
-  "scope": "DC-002 independent route contract. Future inventories are descriptions, never publication permission.",
+  "baseline": "794b076",
+  "scope": "DC-003 independently approved Modern 16 plus Gallery. The remaining 32 style destinations stay planned.",
   "styleStatus": {"modern": "implemented", "heritage": "planned", "luxury": "planned"},
-  "collectionStatus": "planned",
+  "collectionStatus": "implemented",
   "namespace": "/design-collection",
   "technicalProjectSlugs": ["corporate-website", "enterprise-management", "integration-hub"],
   "brandShowcaseSlugs": ["march-tangbao", "hongjia-birdnest", "yupinyuan-bento", "campaign-website-design", "honest-diecut", "qiangang-windows"],
@@ -25,6 +25,19 @@
     {"pageKey": "brand-showcase", "slug": "qiangang-windows", "path": "/portfolio/showcases/qiangang-windows"},
     {"pageKey": "contact", "path": "/contact"},
     {"pageKey": "quotation", "path": "/quotation"}
+  ],
+  "collectionRoute": {
+    "path": "/design-collection",
+    "title": "XK Design Collection | Xplore Kaleidoscope",
+    "description": "比較 Modern、Heritage 與 Luxury 網站設計系列，了解同一份 XK 品牌內容的不同呈現方向。",
+    "anchors": ["main-content", "design-styles"]
+  },
+  "publishedPaths": [
+    "/", "/about", "/services", "/solutions", "/portfolio",
+    "/portfolio/corporate-website", "/portfolio/enterprise-management", "/portfolio/integration-hub",
+    "/portfolio/showcases/march-tangbao", "/portfolio/showcases/hongjia-birdnest", "/portfolio/showcases/yupinyuan-bento",
+    "/portfolio/showcases/campaign-website-design", "/portfolio/showcases/honest-diecut", "/portfolio/showcases/qiangang-windows",
+    "/contact", "/quotation", "/design-collection"
   ],
   "stages": [
     {"modern": 16, "collection": 0, "heritage": 0, "luxury": 0, "total": 16},

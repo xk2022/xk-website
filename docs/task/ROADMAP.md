@@ -61,13 +61,13 @@ BF-009～016 以 [PR #24](https://github.com/xk2022/xk-website/pull/24)、[待�
 | --- | --- | --- |
 | DC-001 架構規格 | 已合併 [PR #30](https://github.com/xk2022/xk-website/pull/30)；[報告](../reports/dc001-architecture.md) | — |
 | DC-002 共用核心 | 已合併 [PR #33](https://github.com/xk2022/xk-website/pull/33)；[報告](../reports/dc002-implementation.md) | DC-001 |
-| DC-003 Modern／Gallery | 待執行 | DC-002 |
+| DC-003 Modern／Gallery | 本輪執行：[規格](dc003.md)、[實作與驗證](../reports/dc003-implementation.md)，PR 待審 | DC-002 |
 | DC-004 Heritage | 待執行、品牌審閱 | DC-003 |
 | DC-005 Luxury | 待執行、品牌審閱 | DC-003 |
 | DC-006 三系列整合 | 待執行 | DC-004、DC-005 |
 | DC-007 完整驗收與發布準備 | 待執行 | DC-006；發布依當次授權 |
 
-DC-004／005 可依現有工作包平行；未完成風格與 Gallery 不提供公開入口。
+DC-004／005 可依現有工作包平行；未完成風格不提供假入口，Gallery 依 DC-003 的 17 頁階段驗收。
 
 ## 4. 文件整理（DOC-001～006）
 
@@ -80,7 +80,7 @@ DC-004／005 可依現有工作包平行；未完成風格與 Gallery 不提供�
 | DOC-005 Roadmap | 本文件交付；合併及 CI 以本次 PR 實際事件為準 |
 | DOC-006 文件一致性檢查 | 下一個文件整理任務 |
 
-先完成 DOC-005／006，再恢復 DC-003 功能開發；不因此增加新的功能規格。
+文件整理原建議先完成 DOC-005／006 再恢復 DC-003；本輪依目前使用者明確指示執行 DC-003，原工作包前置 DC-002 已合併。DOC-006 仍待執行，不視為已完成，也不因此增加新功能規格。
 
 ## 5. 未結項與其他 PR
 

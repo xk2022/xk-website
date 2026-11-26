@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc003/capture.cjs",
+    "baseline",
+    "http://127.0.0.1:3232/",
+    "final"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:25:26.417983+00:00",
+  "finishedAt": "2026-11-26T02:25:45.241726+00:00",
+  "processId": 43854,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-dc003/baseline-capture.log",
+  "logSha256": "a8476b1a8c1e703002ecf85cc984db980fe0974be8cfa3372a5a511eab5150fb",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

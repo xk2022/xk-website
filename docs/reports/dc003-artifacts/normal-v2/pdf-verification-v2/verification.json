@@ -1,0 +1,454 @@
+{
+  "schemaVersion": 1,
+  "testId": "DC003-ACTUAL-PDF-PHYSICAL-QR",
+  "checkerSha256": "5a5ad457a1851754c98df334f5246cd4ef9d78e40084e9abb1dc77c3e158b043",
+  "mode": "normal",
+  "startedAt": "2026-11-26T02:52:06.068289+00:00",
+  "sourcePdf": "/tmp/xk-dc003/normal-v2/quotation-worstcase-a4.pdf",
+  "sourceSha256": "46ed4a1af68229f18f7cafece46b08351a4ce7515ced9c3847ca8a3b3af82695",
+  "sourceBytes": 776412,
+  "catalog": {
+    "path": "/tmp/xk-dc003/catalog.json",
+    "sha256": "1c4ad0dc46e4d8efbce773fc630a4fc8c5bc57d0c29b0744a0608888c894dd63"
+  },
+  "tools": {
+    "PyMuPDF": "1.26.6",
+    "Pillow": "13.0.0",
+    "zxing-cpp": "2.3.0"
+  },
+  "verifierVersion": 2,
+  "canvasPolicy": "Exact observed DC003 background signature only; original verifier/results preserved. All content remains strict at0.1pt.",
+  "method": "Inspect original app-generated PDF without modifying its content, page count or dimensions. Rasterize full original page at 150/300dpi; no crop, content rescaling or content deletion. Validate extracted PDF text and every text span against frozen independent expectations.",
+  "tests": [
+    {
+      "id": "PDF-ONE-PAGE",
+      "result": "PASS",
+      "expected": 1,
+      "actual": 1
+    },
+    {
+      "id": "PDF-A4-PORTRAIT-1",
+      "result": "PASS",
+      "actualPt": [
+        594.9599609375,
+        841.9199829101562
+      ],
+      "actualMm": [
+        209.88865288628472,
+        297.01066063774954
+      ],
+      "tolerancePt": 1
+    },
+    {
+      "id": "PDF-ALL-TEXT-SPANS-IN-PAGE-1",
+      "result": "PASS",
+      "totalSpans": 203,
+      "outsideSpans": [],
+      "tolerancePt": 0.1,
+      "spanEvidence": "/tmp/xk-dc003/normal-v2/pdf-verification-v2/page-1-text-spans.json"
+    },
+    {
+      "id": "PDF-ALL-GRAPHICS-IN-PAGE-1",
+      "result": "PASS",
+      "totalGraphics": 1487,
+      "rawOutsideGraphics": [
+        {
+          "kind": "vector",
+          "seqno": 0,
+          "bbox": [
+            0.0,
+            0.0,
+            595.5,
+            842.25
+          ],
+          "classifiedCanvasBackground": true
+        },
+        {
+          "kind": "vector",
+          "seqno": 1,
+          "bbox": [
+            0.0,
+            0.0,
+            595.5,
+            839.25
+          ],
+          "classifiedCanvasBackground": true
+        },
+        {
+          "kind": "vector",
+          "seqno": 2,
+          "bbox": [
+            0.0,
+            0.0,
+            595.5,
+            839.25
+          ],
+          "classifiedCanvasBackground": true
+        }
+      ],
+      "outsideGraphics": [],
+      "actualPaintCount": 1549,
+      "outsideActualPaint": [],
+      "classifiedCanvasBackgroundCount": 3,
+      "canvasClassification": "/tmp/xk-dc003/normal-v2/pdf-verification-v2/page-1-canvas-classification.json",
+      "tolerancePt": 0.1,
+      "tolerancePolicy": "Original0.1pt unchanged for every text span, vector, raster and non-background actual paint. Exact3 white canvas fills are separately identified with full raw spill/clip evidence."
+    },
+    {
+      "id": "PDF-QR-DECODE-DOCUMENT-150",
+      "result": "PASS",
+      "expectedUrls": [
+        "https://www.xplorekaleidoscope.com/",
+        "https://www.xplorekaleidoscope.com/portfolio/"
+      ],
+      "actualUrls": [
+        "https://www.xplorekaleidoscope.com/",
+        "https://www.xplorekaleidoscope.com/portfolio/"
+      ]
+    },
+    {
+      "id": "PDF-QR-DECODE-DOCUMENT-300",
+      "result": "PASS",
+      "expectedUrls": [
+        "https://www.xplorekaleidoscope.com/",
+        "https://www.xplorekaleidoscope.com/portfolio/"
+      ],
+      "actualUrls": [
+        "https://www.xplorekaleidoscope.com/",
+        "https://www.xplorekaleidoscope.com/portfolio/"
+      ]
+    },
+    {
+      "id": "PDF-TEXT-EXTRACTABLE",
+      "result": "PASS",
+      "nonWhitespaceCharacters": 1387,
+      "replacementGlyphs": 0,
+      "nullCharacters": 0
+    },
+    {
+      "id": "PDF-CUSTOMER-40-CJK",
+      "result": "PASS",
+      "expectedCharacters": 40,
+      "expected": "測試客戶測試客戶測試客戶測試客戶測試客戶測試客戶測試客戶測試客戶測試客戶測試客戶",
+      "extractionMethod": "Original PDF content order, normalized whitespace; layout-sorted extraction may interleave customer/project columns"
+    },
+    {
+      "id": "PDF-PROJECT-60-CJK",
+      "result": "PASS",
+      "expectedCharacters": 60,
+      "expected": "測試專案測試專案測試專案測試專案測試專案測試專案測試專案測試專案測試專案測試專案測試專案測試專案測試專案測試專案測試專案",
+      "extractionMethod": "Original PDF content order, normalized whitespace; layout-sorted extraction may interleave customer/project columns"
+    },
+    {
+      "id": "PDF-BASE-NAME",
+      "result": "PASS",
+      "expected": "電商網站"
+    },
+    {
+      "id": "PDF-ALL-17-ADDON-NAMES",
+      "result": "PASS",
+      "expectedCount": 17,
+      "matched": [
+        {
+          "id": "ai-images",
+          "name": "AI 商業生圖",
+          "found": true
+        },
+        {
+          "id": "logo",
+          "name": "Logo 設計",
+          "found": true
+        },
+        {
+          "id": "brand-visual",
+          "name": "品牌視覺延伸",
+          "found": true
+        },
+        {
+          "id": "copywriting",
+          "name": "文案整理與撰寫",
+          "found": true
+        },
+        {
+          "id": "product-content",
+          "name": "商品資料整理",
+          "found": true
+        },
+        {
+          "id": "multilingual",
+          "name": "多語系頁面",
+          "found": true
+        },
+        {
+          "id": "line-integration",
+          "name": "LINE 進階整合",
+          "found": true
+        },
+        {
+          "id": "advanced-seo",
+          "name": "SEO 進階設定",
+          "found": true
+        },
+        {
+          "id": "analytics",
+          "name": "流量分析整合",
+          "found": true
+        },
+        {
+          "id": "inquiry-form",
+          "name": "詢價表單",
+          "found": true
+        },
+        {
+          "id": "booking",
+          "name": "預約功能",
+          "found": true
+        },
+        {
+          "id": "payment",
+          "name": "金流串接",
+          "found": true
+        },
+        {
+          "id": "membership",
+          "name": "會員功能",
+          "found": true
+        },
+        {
+          "id": "content-cms",
+          "name": "後台內容管理（CMS）",
+          "found": true
+        },
+        {
+          "id": "domain",
+          "name": "網域與續約",
+          "found": true
+        },
+        {
+          "id": "hosting",
+          "name": "主機與部署環境",
+          "found": true
+        },
+        {
+          "id": "annual-maintenance",
+          "name": "年度維護與支援",
+          "found": true
+        }
+      ]
+    },
+    {
+      "id": "PDF-17-SELECTED-ADDON-MARKERS",
+      "result": "PASS",
+      "expected": 17,
+      "actual": 17
+    },
+    {
+      "id": "PDF-BASE-PLUS-17-COUNT",
+      "result": "PASS",
+      "expected": "18 項"
+    },
+    {
+      "id": "PDF-REQUIRED-BODY-AND-FOOTER",
+      "result": "PASS",
+      "expected": [
+        {
+          "text": "數位服務方案摘要",
+          "found": true
+        },
+        {
+          "text": "V1 參考試算 · 非正式報價單",
+          "found": true
+        },
+        {
+          "text": "本次預估費用",
+          "found": true
+        },
+        {
+          "text": "年度維護／服務費",
+          "found": true
+        },
+        {
+          "text": "第三方服務費",
+          "found": true
+        },
+        {
+          "text": "本摘要不是正式報價、訂單或合約",
+          "found": true
+        },
+        {
+          "text": "Explore Possibilities. Create Digital Value.",
+          "found": true
+        },
+        {
+          "text": "www.xplorekaleidoscope.com",
+          "found": true
+        },
+        {
+          "text": "官網",
+          "found": true
+        },
+        {
+          "text": "作品集",
+          "found": true
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "sizePt": [
+        594.9599609375,
+        841.9199829101562
+      ],
+      "sizeMm": [
+        209.88865288628472,
+        297.01066063774954
+      ],
+      "textCharacters": 2303,
+      "textSpans": 203,
+      "text": "/tmp/xk-dc003/normal-v2/pdf-verification-v2/page-1-text.txt",
+      "spans": "/tmp/xk-dc003/normal-v2/pdf-verification-v2/page-1-text-spans.json",
+      "rasterImageCount": 0,
+      "vectorDrawingCount": 1487
+    }
+  ],
+  "renders": [
+    {
+      "page": 1,
+      "dpi": 150,
+      "path": "/tmp/xk-dc003/normal-v2/pdf-verification-v2/page-1-150dpi.png",
+      "widthPx": 1240,
+      "heightPx": 1754,
+      "sha256": "2f7a97d8c248b89241fbaf01e5e4d6d6b5439f052982a724ebc429cad664ea84",
+      "decodedUrls": [
+        "https://www.xplorekaleidoscope.com/",
+        "https://www.xplorekaleidoscope.com/portfolio/"
+      ]
+    },
+    {
+      "page": 1,
+      "dpi": 300,
+      "path": "/tmp/xk-dc003/normal-v2/pdf-verification-v2/page-1-300dpi.png",
+      "widthPx": 2479,
+      "heightPx": 3508,
+      "sha256": "0d5066b668a5c2958a3049f431062f4fe7b95b8b826b7b37386e8add5d00f589",
+      "decodedUrls": [
+        "https://www.xplorekaleidoscope.com/",
+        "https://www.xplorekaleidoscope.com/portfolio/"
+      ]
+    }
+  ],
+  "manualVisibility": "PENDING_VIEW_IMAGE",
+  "pageCount": 1,
+  "qrPageObservations": [
+    {
+      "page": 1,
+      "dpi": 150,
+      "decodedUrls": [
+        "https://www.xplorekaleidoscope.com/",
+        "https://www.xplorekaleidoscope.com/portfolio/"
+      ],
+      "decodedPositions": [
+        {
+          "text": "https://www.xplorekaleidoscope.com/",
+          "cornersPx": [
+            [
+              887,
+              1542
+            ],
+            [
+              1001,
+              1542
+            ],
+            [
+              1000,
+              1656
+            ],
+            [
+              887,
+              1657
+            ]
+          ]
+        },
+        {
+          "text": "https://www.xplorekaleidoscope.com/portfolio/",
+          "cornersPx": [
+            [
+              1053,
+              1542
+            ],
+            [
+              1167,
+              1542
+            ],
+            [
+              1168,
+              1657
+            ],
+            [
+              1053,
+              1657
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "page": 1,
+      "dpi": 300,
+      "decodedUrls": [
+        "https://www.xplorekaleidoscope.com/",
+        "https://www.xplorekaleidoscope.com/portfolio/"
+      ],
+      "decodedPositions": [
+        {
+          "text": "https://www.xplorekaleidoscope.com/",
+          "cornersPx": [
+            [
+              1774,
+              3084
+            ],
+            [
+              2000,
+              3084
+            ],
+            [
+              2001,
+              3312
+            ],
+            [
+              1774,
+              3313
+            ]
+          ]
+        },
+        {
+          "text": "https://www.xplorekaleidoscope.com/portfolio/",
+          "cornersPx": [
+            [
+              2106,
+              3084
+            ],
+            [
+              2335,
+              3084
+            ],
+            [
+              2334,
+              3312
+            ],
+            [
+              2106,
+              3313
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "finishedAt": "2026-11-26T02:52:08.464329+00:00",
+  "automatedResult": "PASS",
+  "status": "AUTOMATED_PASS_MANUAL_PENDING",
+  "failureCount": 0
+}

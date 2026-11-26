@@ -43,7 +43,7 @@ const anchors: Readonly<Record<DesignStyleId, PageAnchors>> = {
   luxury: {},
 };
 
-/** DC-002 planning inventory. It does not create routes or authorize publication. */
+/** Approved publication inventory; planned styles do not create public routes. */
 export const designCollectionRegistry = freeze({
   version: 1,
   namespace: "/design-collection",
@@ -52,10 +52,10 @@ export const designCollectionRegistry = freeze({
     { id: "heritage", name: "Heritage 懷舊復古", status: "planned" },
     { id: "luxury", name: "Luxury 奢華精品", status: "planned" },
   ] as const satisfies readonly DesignStyleDefinition[],
-  collection: { path: "/design-collection", status: "planned" } as const,
+  collection: { path: "/design-collection", status: "implemented" } as const,
   contentPages,
   technicalProjectSlugs: portfolioProjects.map(({ slug }) => slug),
   brandShowcaseSlugs: brandWebsiteShowcases.flatMap(({ id }) => getBrandShowcase(id) ? [id] : []),
   anchors,
-  collectionAnchors: [] as readonly string[],
+  collectionAnchors: ["main-content", "design-styles"] as const,
 });

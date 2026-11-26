@@ -19,6 +19,7 @@ Xplore Kaleidoscope 的品牌官網（BRAND），展示數位品牌、Java 企�
 | 作品詳頁 | `/portfolio/[slug]/`、`/portfolio/showcases/[slug]/` | 僅輸出已定義的 slug |
 | 聯絡我們 | `/contact/` | 需求摘要、複製與 Email 草稿；由訪客自行寄出 |
 | 方案試算 | `/quotation/` | 建置與加購參考金額、A4 摘要及 Email 詢價草稿 |
+| 設計系列 | `/design-collection/` | 本輪 Gallery；Modern 可瀏覽，其餘規劃中 |
 
 Modern 目前保留 16 個公開頁面。展示及規劃不等於客戶交付；試算不是正式報價、訂單或付款。聯絡與試算均沒有站內直接收件端點；聯絡資料只留在頁面記憶體，試算僅保存選項 ID，不保存客戶稱呼及專案名稱。
 
@@ -30,7 +31,7 @@ Modern 目前保留 16 個公開頁面。展示及規劃不等於客戶交付；
 
 | 系列 | 入口方向 | 狀態 |
 | --- | --- | --- |
-| Modern 現代專業 | 現有根路徑 | 原 16 頁已運作；共用核心見 DC-002，版面整合待 DC-003 |
+| Modern 現代專業 | 現有根路徑 | 原 16 頁已運作；共用核心見 DC-002，本輪 DC-003 相容整合 |
 | Heritage 懷舊復古 | `/design-collection/heritage/`（規劃） | 設計提案，尚未實作 |
 | Luxury 奢華精品 | `/design-collection/luxury/`（規劃） | 設計提案，尚未實作 |
 
@@ -40,7 +41,7 @@ Modern 目前保留 16 個公開頁面。展示及規劃不等於客戶交付；
 - [三套 Design System](docs/01_design/design-collection/design-systems.md)
 - [DC-001～007 工作包](docs/01_design/design-collection/work-packages.md)
 
-DC-002 已透過 [PR #33](https://github.com/xk2022/xk-website/pull/33) 合併，建立共用內容 DTO、路由／Metadata、Contact／Quotation 與 token 契約，尚未整合 UI。Gallery 與新系列仍 planned，沒有新公開網址。見 [DC-002 任務](docs/task/dc002.md)、[核心 API／限制](docs/03_engineering/design-collection-core.md) 及 [實作驗證](docs/reports/dc002-implementation.md)。版型、palette、portal／print 隔離與切換後個資重設須後續整合實測。
+DC-002 共用核心已合併。DC-003 本輪保留 Modern 16 頁並新增 `/design-collection/` Gallery（共 17 頁），僅 Modern 可瀏覽，Heritage／Luxury 仍規劃中。見 [本輪規格](docs/task/dc003.md)、[核心 API](docs/03_engineering/design-collection-core.md) 與 [實作驗證](docs/reports/dc003-implementation.md)。新系列版型、palette、portal／跨系列 print 隔離與個資重設仍待後續工作包。
 
 ## 3. 技術架構
 

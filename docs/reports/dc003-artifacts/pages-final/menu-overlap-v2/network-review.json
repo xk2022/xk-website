@@ -1,0 +1,83 @@
+{
+  "testId": "DC003-PAGES-MENU-READONLY-NETWORK-REVIEW",
+  "source": "/tmp/xk-dc003/pages-final/menu-overlap-v2/result.json",
+  "sourceSha256": "2687daae5f2f3b1870f648c9d5d9b9526ecbef0da1a7b0086b271621cd5f0ca4",
+  "status": "PASS",
+  "requestMethodCounts": {
+    "GET": 310,
+    "HEAD": 41
+  },
+  "records": [
+    {
+      "route": "/",
+      "headCount": 5,
+      "allHead": true,
+      "bodyNullAndZeroBytes": true,
+      "allPolicyAllowed": true,
+      "rawFileSha256": "f59212311517e494b85ea89456dd98d76f98d168a106e98e681831065066f068",
+      "dataSha256": "b0d8e51daedd04abce68bb41d1c75f6f2aa7536a422bb17baf238766b67de30f",
+      "pngSha256": "4b3e76c3f4916ca2f7b540db4fae8b00137f8ce6623539de563b95422d830fac"
+    },
+    {
+      "route": "/services",
+      "headCount": 6,
+      "allHead": true,
+      "bodyNullAndZeroBytes": true,
+      "allPolicyAllowed": true,
+      "rawFileSha256": "e984209bd83a472531eb9569958455fa43c5501034347663c40b97522665da80",
+      "dataSha256": "a22d64e036ce7b201124e1d3fa36ef8df231654247eaf5a474dd3011d1955ab7",
+      "pngSha256": "28e51c9fa012b1ecde3b92d9b87c0f5dd44fce466a1e30c5412bb759e1ac8b6b"
+    },
+    {
+      "route": "/portfolio",
+      "headCount": 5,
+      "allHead": true,
+      "bodyNullAndZeroBytes": true,
+      "allPolicyAllowed": true,
+      "rawFileSha256": "45a747f524b6b5b19090e508eb7d6837ee7216aadb8955d00437c750e8ea5b74",
+      "dataSha256": "950325640982392c007e3a58b3180c7361945206636c3b4f44adfe38dc335541",
+      "pngSha256": "72ad9e6257855fe85cc7270f5993231ad81391c42a12693e0ac8c7200eb02383"
+    },
+    {
+      "route": "/contact",
+      "headCount": 6,
+      "allHead": true,
+      "bodyNullAndZeroBytes": true,
+      "allPolicyAllowed": true,
+      "rawFileSha256": "8a4a103654d7a871c89d8325e611efa2ff0e15a4f974a034d79492edb94fa36f",
+      "dataSha256": "60ac147c2018b14a6cf930657000404e9b97135da25678a6bf1c3777890eb77d",
+      "pngSha256": "c459ca76c03b01756bb115cc2ef2c3c3caa9395d30f84fade6c5d7d89cef443e"
+    },
+    {
+      "route": "/quotation",
+      "headCount": 5,
+      "allHead": true,
+      "bodyNullAndZeroBytes": true,
+      "allPolicyAllowed": true,
+      "rawFileSha256": "84ea54bc01d77556f9c9a4ff635c278ac039477121224a4b5ad18263545acbb7",
+      "dataSha256": "0dd1653b6f4cba3368f4c366ed6ec864ca698b2dbb6d6a365a5491ebfda2379a",
+      "pngSha256": "fbaa862e5acf2e3ed7d1fa52f59f1d85c211f399703394029637df2bb0ecfb5d"
+    },
+    {
+      "route": "/design-collection",
+      "headCount": 5,
+      "allHead": true,
+      "bodyNullAndZeroBytes": true,
+      "allPolicyAllowed": true,
+      "rawFileSha256": "35c1fda5a4d115426153d26ab71147cd5a8edd6a6d448e67395ea7c7ab202012",
+      "dataSha256": "c42f9f28792278a43d99c84604735ed2061f718cd10aa9b4d0183bc37fdc0fc3",
+      "pngSha256": "f95162d8651d770e5a94b74d0a9d6088ecad5e48c68a29402366c7c6e6d6d882"
+    },
+    {
+      "route": "/__dc003_unknown__",
+      "headCount": 9,
+      "allHead": true,
+      "bodyNullAndZeroBytes": true,
+      "allPolicyAllowed": true,
+      "rawFileSha256": "fe8fb0b62192895339e4eef3c8fde152c4d35b33f3f95024a48a2417c46e76dc",
+      "dataSha256": "5ac839034ed0f2ef4836146e2bc7429b42dac9bbfd2b5d9c8ed7fef24f818b27",
+      "pngSha256": "ddee982c6bc6314bee92c70016687bdd2b1b749008b9f75e88e00243a6a1bcbe"
+    }
+  ],
+  "review": "All fresh non-GET requests are exact permitted same-origin published-route HEAD fetches, with recorded null body,0 bytes,no query/hash,no credentials or PII-canary flag,and no transfer encoding. Original failed collector is separate and remains FAIL."
+}

@@ -1,0 +1,11 @@
+{
+  "src/config/design-collection.ts": "54890b765834affe98861ad868d42e6160e91dd0a6ee11bb64f46ba4b3f86540",
+  "src/config/seo.ts": "562044423a5caeecaaa40092f1683daf8073ca4f586b26a7ff76374243a49763",
+  "src/lib/design-collection/routes.ts": "19523d7660046829620ed4b9ba9ace4d524b4f2b71cf0516e9f2f9d82c7b9ca8",
+  "src/lib/design-collection/metadata.ts": "305f712880fa4c989bdff93ab2f39897c1cc7b096d6c9f5e30265a61b06f0827",
+  "scripts/fixtures/design-collection-contract.json": "af8bd02d236c726845afc0e05e0109e5303bd257716ab3fb2d22284890dbb755",
+  "scripts/test-design-collection-routes.mjs": "9013fce5552a9fcce0fcff2c3f7a095118cc4f572642cced99077702e062cce5",
+  "scripts/test-design-collection-metadata.mjs": "69d39898849d14aec51ceae9729b04957f09d36c53a22dbcf96501eb6c1eedd4",
+  "scripts/build-github-pages.mjs": "2fea1f3d37232147fcd1dfa8b8e32c5edb6e3decbadc373ce12fa2c387f02e1f",
+  "scripts/smoke-website.py": "e409c88cc1787bfdd7dce8b39149df2427ddf9c3f77bf4960f7cb85d77c2c827"
+}

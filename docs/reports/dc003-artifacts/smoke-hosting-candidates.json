@@ -1,0 +1,17 @@
+{
+  "beforeCandidates": 885,
+  "afterCandidates": 889,
+  "added": [
+    "actually",
+    "both",
+    "exclude",
+    "identifies",
+    "modes"
+  ],
+  "removed": [
+    "routes"
+  ],
+  "addedCss": [],
+  "removedCss": [],
+  "notes": "Installed Oxide scanner and current global CSS design system only; no website build/server."
+}

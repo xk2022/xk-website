@@ -87,6 +87,12 @@ export const seoPages = [
     description: "了解 Xplore Kaleidoscope 網站的個人資料處理、第三方服務與隱私權相關資訊。",
     availability: "draft",
   },
+  {
+    path: "/design-collection",
+    title: "XK Design Collection | Xplore Kaleidoscope",
+    description: "比較 Modern、Heritage 與 Luxury 網站設計系列，了解同一份 XK 品牌內容的不同呈現方向。",
+    availability: "public",
+  },
   ...showcaseSeoPages,
 ] as const satisfies readonly SeoPage[];
 

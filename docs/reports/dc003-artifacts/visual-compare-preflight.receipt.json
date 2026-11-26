@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "python",
+    "/tmp/xk-dc003/compare-visual-preflight.py"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T02:36:03.555900+00:00",
+  "finishedAt": "2026-11-26T02:36:03.779363+00:00",
+  "processId": 46757,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc003/visual-compare-preflight.log",
+  "logSha256": "ea2279ad8a2f3241cae011362d082228ec6850eadbc48a1d5223613b10264121",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

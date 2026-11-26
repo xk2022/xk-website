@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "source": "source-final.json",
+  "scope": "DC-003 local acceptance, prior to commit/PR",
+  "requiredFunctionalAssertions": {
+    "normal": 132,
+    "pages": 132,
+    "failed": 0
+  },
+  "layouts": {
+    "normal": 85,
+    "pages": 85
+  },
+  "rawBrowserExitCodes": {
+    "normal": 2,
+    "pages": 2
+  },
+  "rawBrowserState": "MANUAL_PENDING retained, not rewritten to PASS or Exit0",
+  "postReviewEvidence": {
+    "normalAxe": {
+      "path": "normal-v2/axe-adjudication-with-menu-v3.json",
+      "pass": 165,
+      "notApplicable": 26,
+      "coverage": 191
+    },
+    "pagesAxe": {
+      "path": "pages-final/axe-adjudication-with-menu-v2.json",
+      "pass": 165,
+      "notApplicable": 26,
+      "coverage": 191
+    },
+    "physicalPdf": {
+      "normal": 14,
+      "pages": 14,
+      "status": "PASS"
+    },
+    "visual": "10 exact preFooter pixel comparisons plus unique menu-reference-pair adjudication and actual Root visual review"
+  },
+  "normalVersionApplicability": "Final gate order is restored to original source. Actual 136-resource runtime identity and unchanged public sources bridge the full normal matrix; final 17-route HTTP plus five gate/preview browser cases reverify affected behavior. Final script-only hosting correction adds no compilable CSS candidate and is separately tested.",
+  "deployment": "NOT_PERFORMED",
+  "prCi": "PENDING"
+}

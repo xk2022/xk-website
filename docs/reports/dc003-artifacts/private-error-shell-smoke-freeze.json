@@ -1,0 +1,6 @@
+{
+  "file": "scripts/smoke-website.py",
+  "sha256": "f1f40425e5d1187af32c9a4898575d26e31dde2b8e5e02a3d84ee9b4af97cf6b",
+  "helperReceipt": "/tmp/xk-dc003/private-error-shell-helper-v1.json",
+  "notes": "Exact two private gates only; original raw FAIL evidence retained; public/unknown SSR frame guard unchanged."
+}

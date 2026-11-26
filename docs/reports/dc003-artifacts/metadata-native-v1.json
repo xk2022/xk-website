@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "--import",
+    "./scripts/register-test-aliases.mjs",
+    "scripts/test-design-collection-metadata.mjs"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T02:26:07.311642+00:00",
+  "finishedAt": "2026-11-26T02:26:07.685334+00:00",
+  "processId": 44939,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc003/metadata-native-v1.log",
+  "logSha256": "795581085b3c494128bab6b7922dc6e5c0ea3bd61ec2e1021a08ea94dfbf39f7",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}
