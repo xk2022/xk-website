@@ -79,6 +79,13 @@
       "decodedBytes": 752
     },
     {
+      "path": "download-artifact.py.gz",
+      "sha256": "fda1c88eb64fc944855695bc0837cdfeea9fb3363e5010e6f7a2e116c73c942f",
+      "decodedSha256": "92828f9888e7bf18d041897ef79b75bb2e35012452f3454601de85834abeb7a4",
+      "bytes": 653,
+      "decodedBytes": 1147
+    },
+    {
       "path": "http-normal-result.json.gz",
       "sha256": "b2dbff05b910340eb9f540f8fa2d693a2ea1306106749619ebd3758f7382fc54",
       "decodedSha256": "b05d019b17576885ce5df0ff8a1bb441d35b99d3da182d68c6a283ccd498495a",
@@ -476,6 +483,34 @@
       "decodedSha256": "a647f4a9eea43301b38dbce969a8dccb1a2527cbfcf613f43c5ee80a55a26422",
       "bytes": 4081,
       "decodedBytes": 10111
+    },
+    {
+      "path": "manual/merge1-incomplete-supplement.json.gz",
+      "sha256": "9f2e4a18027d00747fe1d0f75b705c6e5cf11eb41af7171c2c7a774c4f02939f",
+      "decodedSha256": "53e3511155f91b6679175a7e89293d5196261980663309f331d3d48fc255d496",
+      "bytes": 4033,
+      "decodedBytes": 42945
+    },
+    {
+      "path": "manual/merge1-incomplete-supplement.md.gz",
+      "sha256": "2030022d2113f9f1b45be80b4c97ae82965d154413785df5f0457b6117a6cce8",
+      "decodedSha256": "e7cf73152401d1af9fb2a37608ebdc243c4bec0a3852554b4c5e17d6055e8c46",
+      "bytes": 1079,
+      "decodedBytes": 1604
+    },
+    {
+      "path": "manual/incomplete-supplement-command.json.gz",
+      "sha256": "ed71aebe771f6aaa72fb2016f4a03091e4d5535ed338e889ac057ac66851f477",
+      "decodedSha256": "5148512afd799138798fda4e264a607e50c07516a0f2082ef9bc8c9b5ae9d3c8",
+      "bytes": 378,
+      "decodedBytes": 588
+    },
+    {
+      "path": "manual/incomplete-supplement.log.gz",
+      "sha256": "d3373cc737b36b8f03e7f5d3df5113706f97b68f09f7470e44b03d7796eded30",
+      "decodedSha256": "f179542c87636a43a07c640076a00e7624e203536d301e46629ba15d382c86d0",
+      "bytes": 195,
+      "decodedBytes": 273
     },
     {
       "path": "hub-recheck.json",
