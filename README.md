@@ -40,7 +40,7 @@ Modern 目前保留 16 個公開頁面。展示及規劃不等於客戶交付；
 - [三套 Design System](docs/01_design/design-collection/design-systems.md)
 - [DC-001～007 工作包](docs/01_design/design-collection/work-packages.md)
 
-DC-002 在 `feature/design-collection-core` 建立共用內容 DTO、路由／Metadata、Contact／Quotation 與 token 契約，尚未整合 UI。Gallery 與新系列仍 planned，沒有新公開網址。見 [DC-002 任務](docs/task/dc002.md)、[核心 API／限制](docs/03_engineering/design-collection-core.md) 及 [實作驗證](docs/reports/dc002-implementation.md)。版型、palette、portal／print 隔離與切換後個資重設須後續整合實測。
+DC-002 已透過 [PR #33](https://github.com/xk2022/xk-website/pull/33) 合併，建立共用內容 DTO、路由／Metadata、Contact／Quotation 與 token 契約，尚未整合 UI。Gallery 與新系列仍 planned，沒有新公開網址。見 [DC-002 任務](docs/task/dc002.md)、[核心 API／限制](docs/03_engineering/design-collection-core.md) 及 [實作驗證](docs/reports/dc002-implementation.md)。版型、palette、portal／print 隔離與切換後個資重設須後續整合實測。
 
 ## 3. 技術架構
 
@@ -52,7 +52,7 @@ DC-002 在 `feature/design-collection-core` 建立共用內容 DTO、路由／Me
 | Hosting | GitHub Actions → GitHub Pages；保留一般 Next.js production build |
 | Data | 集中式 TypeScript 設定，不依賴 Backend、資料庫或 CMS |
 
-現有網站以共用 Layout、UI 元件與資料設定組成。三風格後續依 DC 規格抽取共用核心，各自實作呈現層；尚未落地的架構不能視為現有程式。
+現有網站以共用 Layout、UI 元件與資料設定組成。DC-002 已抽取共用核心；三風格後續依 DC 規格各自實作呈現層；尚未落地的架構不能視為現有程式。
 
 | 路徑 | 職責 |
 | --- | --- |
@@ -112,7 +112,7 @@ PR 執行品質檢查及 Pages artifact；main 的既有工作流程負責正式
 
 ## 7. Roadmap
 
-狀態基準：2026-11-26，main `9a7ca8e`；[對應 CI／Pages 部署成功](https://github.com/xk2022/xk-website/actions/runs/45735065418)。這是該版本的紀錄，不代表之後版本已發布或完成法律／價格／索引核准。
+狀態基準：2026-11-26，main `c9481a0`；[對應 CI／Pages 部署成功](https://github.com/xk2022/xk-website/actions/runs/45739486842)。這是該版本的紀錄，不代表之後版本已發布或完成法律／價格／索引核准。
 
 | 工作 | 狀態 |
 | --- | --- |
@@ -121,8 +121,8 @@ PR 執行品質檢查及 Pages artifact；main 的既有工作流程負責正式
 | Task 013～014 | Vercel 相容準備、正式 www 網域；外部平台／發布條件依核准 |
 | 客戶試算 V1 | [PR #28](https://github.com/xk2022/xk-website/pull/28) 已合併，參考價格仍待 Owner 核准 |
 | DC-001 | 架構規格已合併 |
-| DC-002 | 下一步：共用內容、路由及互動契約 |
-| DC-003 | Modern 相容重構與 Gallery |
+| DC-002 | [PR #33](https://github.com/xk2022/xk-website/pull/33) 已合併；365 項測試、雙模式各 910 HTTP 驗收通過，未整合新 UI |
+| DC-003 | 下一步：Modern 相容重構與 Gallery |
 | DC-004／005 | Heritage／Luxury 完整系列 |
 | DC-006／007 | 三系列整合、完整驗收與發布準備 |
 
