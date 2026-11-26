@@ -41,7 +41,9 @@ Modern 目前保留 16 個公開頁面。展示及規劃不等於客戶交付；
 - [三套 Design System](docs/01_design/design-collection/design-systems.md)
 - [DC-001～007 工作包](docs/01_design/design-collection/work-packages.md)
 
-DC-002 共用核心已合併。DC-003 本輪保留 Modern 16 頁並新增 `/design-collection/` Gallery（共 17 頁），僅 Modern 可瀏覽，Heritage／Luxury 仍規劃中。見 [本輪規格](docs/task/dc003.md)、[核心 API](docs/03_engineering/design-collection-core.md) 與 [實作驗證](docs/reports/dc003-implementation.md)。新系列版型、palette、portal／跨系列 print 隔離與個資重設仍待後續工作包。
+DC-002 共用核心已合併。DC-003 已由 [PR #39](https://github.com/xk2022/xk-website/pull/39) 合併，保留 Modern 16 頁並新增 `/design-collection/` Gallery（共 17 頁），僅 Modern 可瀏覽，Heritage／Luxury 仍規劃中。見 [本輪規格](docs/task/dc003.md)、[核心 API](docs/03_engineering/design-collection-core.md) 與 [實作驗證](docs/reports/dc003-implementation.md)。新系列版型、palette、portal／跨系列 print 隔離與個資重設仍待後續工作包。
+
+Heritage 先提供 [品牌審閱稿 v1](docs/01_design/design-collection/reviews/heritage-v1.md) 與本機視覺原型，等待配色、品牌外框及版型確認；它不是已公開的新系列。
 
 ## 3. 技術架構
 

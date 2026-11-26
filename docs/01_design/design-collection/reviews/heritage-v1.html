@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="zh-TW" class="hr-document">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../../../public/brand/source/xk-logo-symbol.svg" type="image/svg+xml">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Heritage 編輯式版面本機審閱稿。新增視覺角色未經品牌核准，不是公開網站或新服務。">
+  <title>Heritage v1 — 未核准的本機設計審閱稿</title>
+  <!-- Review-only snapshot of xk-website main@8ba299a5a48da41ca7f4d88d9b2149d7c83f6584.
+       Content: src/config/homepage.ts, services.ts, website-showcases.ts, site.ts.
+       Proposal: docs/01_design/design-collection/design-systems.md.
+       No JavaScript, receiving form, storage, remote font or application integration. -->
+  <style>
+    .hr-document { scroll-padding-top: 24px; }
+    .hr-page {
+      --hr-paper: #F4E9D8;
+      --hr-surface: #FFF9F0;
+      --hr-text: #2D241E;
+      --hr-muted: #705D4A;
+      --hr-rule: #D5C7B1;
+      --hr-control: #806B55;
+      --hr-blue: #2563EB;
+      --hr-official: #101828;
+      margin: 0;
+      background: var(--hr-paper);
+      color: var(--hr-text);
+      font-family: Inter, 'Noto Sans TC', 'Noto Sans CJK TC', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      overflow-wrap: break-word;
+    }
+    .hr-page *, .hr-page *::before, .hr-page *::after { box-sizing: border-box; }
+    .hr-page h1, .hr-page h2, .hr-page h3, .hr-page p, .hr-page figure { margin: 0; }
+    .hr-page a { color: inherit; text-underline-offset: 5px; }
+    .hr-page a:hover { text-decoration-thickness: 2px; }
+    .hr-page :focus-visible { outline: 3px solid var(--hr-blue); outline-offset: 5px; }
+    .hr-container { width: 100%; max-width: 1276px; margin-inline: auto; padding-inline: clamp(20px, 4vw, 48px); }
+    .hr-skip { position: absolute; z-index: 10; top: 12px; left: 20px; transform: translateY(-180%); padding: 12px 20px; background: #FFFFFF; color: #101828; font-weight: 700; }
+    .hr-skip:focus { transform: translateY(0); }
+    .hr-review-banner { padding-block: 14px; background: #FFFFFF; color: #101828; border-bottom: 1px solid #101828; }
+    .hr-review-banner p { display: flex; flex-wrap: wrap; column-gap: 16px; row-gap: 4px; font-size: 14px; line-height: 1.7; }
+    .hr-review-banner strong { letter-spacing: 0.06em; }
+    .hr-header { background: #FFFFFF; color: #101828; }
+    .hr-masthead { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 26px; }
+    .hr-brand { display: inline-flex; max-width: 260px; align-items: center; min-height: 44px; }
+    .hr-brand img { display: block; width: 100%; height: auto; }
+    .hr-brand-note { max-width: 310px; text-align: right; font-size: 14px; line-height: 1.7; }
+    .hr-brand-note span { display: block; font-weight: 600; letter-spacing: 0.1em; }
+    .hr-nav-line { border-top: 1px solid #E5E7EB; border-bottom: 1px solid #101828; }
+    .hr-desktop-nav { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 24px; }
+    .hr-desktop-nav a, .hr-mobile-nav a { display: inline-flex; align-items: center; min-height: 48px; padding-block: 10px; text-decoration: none; font-size: 14px; font-weight: 600; }
+    .hr-desktop-nav a:hover, .hr-mobile-nav a:hover { color: var(--hr-blue); text-decoration: underline; }
+    .hr-mobile-nav { display: none; }
+    .hr-hero { padding-block: 64px 72px; }
+    .hr-kicker { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; line-height: 1.7; color: var(--hr-muted); }
+    .hr-hero-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 0.8fr); gap: 60px; align-items: start; margin-top: 28px; }
+    .hr-hero-main, .hr-hero-aside { min-width: 0; }
+    .hr-hero h1 { max-width: 15ch; font-size: clamp(36px, 4.2vw, 52px); font-weight: 700; line-height: 1.4; letter-spacing: -0.035em; }
+    .hr-lead { max-width: 39em; margin-top: 26px !important; font-size: 18px; }
+    .hr-actions { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; margin-top: 30px; }
+    .hr-button { display: inline-flex; min-height: 48px; min-width: 0; max-width: 100%; align-items: center; justify-content: center; gap: 16px; padding: 12px 20px; border: 1px solid var(--hr-blue); background: var(--hr-blue); color: #FFFFFF !important; font-weight: 600; line-height: 1.6; text-align: center; text-decoration: none; }
+    .hr-button:hover { background: var(--hr-official); border-color: var(--hr-official); }
+    .hr-text-link { display: inline-flex; align-items: center; min-height: 44px; gap: 12px; padding-block: 8px; font-weight: 600; }
+    .hr-action-note { margin-top: 12px !important; font-size: 14px; color: var(--hr-muted); }
+    .hr-hero-aside { margin-top: 12px; padding: 24px; background: var(--hr-surface); border-top: 3px solid var(--hr-text); }
+    .hr-hero-aside h2 { font-size: 20px; line-height: 1.5; font-weight: 600; }
+    .hr-hero-aside p { margin-top: 18px; }
+    .hr-index { list-style: none; margin: 22px 0 0; padding: 0; border-top: 1px solid var(--hr-rule); }
+    .hr-index li { border-bottom: 1px solid var(--hr-rule); }
+    .hr-index a { display: flex; align-items: baseline; gap: 16px; min-height: 48px; padding-block: 12px; font-size: 14px; text-decoration: none; }
+    .hr-index a:hover { text-decoration: underline; }
+    .hr-index span { color: var(--hr-muted); font-variant-numeric: tabular-nums; }
+    .hr-section { padding-block: 64px; border-top: 1px solid var(--hr-control); }
+    .hr-section-heading { display: grid; grid-template-columns: minmax(0, 0.45fr) minmax(0, 1fr); gap: 48px; align-items: start; margin-bottom: 36px; }
+    .hr-section-heading h2 { margin-top: 12px; font-size: clamp(28px, 3vw, 36px); line-height: 1.5; letter-spacing: -0.025em; }
+    .hr-section-heading > p { max-width: 41em; padding-top: 28px; color: var(--hr-muted); }
+    .hr-service-list { border-top: 2px solid var(--hr-text); }
+    .hr-service { display: grid; grid-template-columns: 48px minmax(0, 0.9fr) minmax(0, 1.15fr); gap: 24px; padding-block: 28px; border-bottom: 1px solid var(--hr-control); }
+    .hr-number { font-size: 16px; color: var(--hr-muted); font-variant-numeric: tabular-nums; }
+    .hr-service h3 { font-size: 21px; line-height: 1.5; font-weight: 600; }
+    .hr-english { display: block; margin-top: 8px; color: var(--hr-muted); font-size: 13px; line-height: 1.7; }
+    .hr-service-copy { min-width: 0; }
+    .hr-service-copy p { color: var(--hr-muted); }
+    .hr-service-copy a { margin-top: 8px; font-size: 14px; }
+    .hr-works { background: var(--hr-surface); }
+    .hr-work { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 36px; padding-block: 32px; border-top: 1px solid var(--hr-control); align-items: start; }
+    .hr-work:last-child { padding-bottom: 0; }
+    .hr-work-image { display: block; width: 100%; height: auto; border: 1px solid var(--hr-rule); background: #FFFFFF; }
+    .hr-figure-caption { margin-top: 10px; color: var(--hr-muted); font-size: 13px; line-height: 1.8; }
+    .hr-work-info { min-width: 0; }
+    .hr-work-meta { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; margin-bottom: 14px; }
+    .hr-status { display: inline-flex; padding: 3px 10px; border: 1px solid var(--hr-control); font-size: 13px; line-height: 1.8; }
+    .hr-work h3 { font-size: 28px; line-height: 1.5; font-weight: 600; }
+    .hr-work-summary { margin-top: 16px !important; }
+    .hr-work-note { margin-top: 18px !important; padding-left: 16px; border-left: 2px solid var(--hr-control); color: var(--hr-muted); font-size: 14px; }
+    .hr-work-info .hr-text-link { margin-top: 20px; }
+    .hr-process-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr); align-items: start; gap: 64px; }
+    .hr-process-list { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--hr-text); }
+    .hr-process-step { display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 16px; padding-block: 20px; border-bottom: 1px solid var(--hr-rule); }
+    .hr-process-step h3 { font-size: 19px; line-height: 1.6; }
+    .hr-process-step p { margin-top: 6px; color: var(--hr-muted); }
+    .hr-cooperation-note { margin-top: 20px !important; font-size: 14px; color: var(--hr-muted); }
+    .hr-cta { background: var(--hr-surface); padding: 28px; border-top: 3px solid var(--hr-blue); }
+    .hr-cta h3 { font-size: 25px; line-height: 1.6; }
+    .hr-cta p { margin-top: 18px; }
+    .hr-cta .hr-actions { flex-direction: column; align-items: stretch; margin-top: 24px; }
+    .hr-cta .hr-text-link { justify-content: center; text-align: center; }
+    .hr-review { background: #FFFFFF; color: #101828; border-top: 1px solid #101828; }
+    .hr-review .hr-kicker { color: #101828; }
+    .hr-review-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; }
+    .hr-review h3 { font-size: 18px; line-height: 1.6; }
+    .hr-review p { margin-top: 12px; }
+    .hr-review ul { margin: 12px 0 0; padding-left: 22px; }
+    .hr-review .hr-palette { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 18px; padding: 0; list-style: none; font-size: 13px; }
+    .hr-palette li { min-width: 0; padding: 10px 12px; border: 1px solid #CBD0D8; }
+    .hr-palette b { display: block; font-size: 14px; }
+    .hr-source-details { margin-top: 30px; border-block: 1px solid #CBD0D8; }
+    .hr-source-details summary { min-height: 48px; padding-block: 12px; font-weight: 600; cursor: pointer; }
+    .hr-source-details ul { margin: 0 0 20px; }
+    .hr-source-details code { font-family: ui-monospace, monospace; font-size: 13px; overflow-wrap: anywhere; }
+    .hr-footer { padding-block: 48px 24px; background: #101828; color: #FFFFFF; }
+    .hr-footer-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+    .hr-footer-brand { display: inline-flex; max-width: 190px; min-height: 44px; }
+    .hr-footer-brand img { width: 100%; height: auto; }
+    .hr-footer-tagline { margin-top: 16px !important; max-width: 24em; font-size: 14px; }
+    .hr-footer h2 { font-size: 16px; line-height: 1.8; margin-bottom: 12px; }
+    .hr-footer ul { list-style: none; margin: 0; padding: 0; }
+    .hr-footer li a { display: inline-flex; align-items: center; min-height: 44px; padding-block: 6px; font-size: 14px; }
+    .hr-footer :focus-visible { outline-color: #FFFFFF; }
+    .hr-footer-note { margin-top: 32px !important; padding-top: 20px; border-top: 1px solid #FFFFFF; font-size: 13px; }
+    @media (max-width: 900px) {
+      .hr-hero-grid { grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.9fr); gap: 30px; }
+      .hr-hero-aside { padding: 20px; }
+      .hr-service { grid-template-columns: 36px minmax(0, 0.9fr) minmax(0, 1fr); gap: 18px; }
+      .hr-process-grid { gap: 30px; }
+    }
+    @media (max-width: 700px) {
+      .hr-review-banner { padding-block: 12px; }
+      .hr-review-banner p { font-size: 13px; }
+      .hr-masthead { padding-block: 20px; gap: 18px; }
+      .hr-brand { max-width: 220px; }
+      .hr-brand-note { display: none; }
+      .hr-desktop-nav { display: none; }
+      .hr-mobile-nav { display: block; }
+      .hr-mobile-nav summary { min-height: 48px; padding-block: 12px; font-size: 14px; font-weight: 600; cursor: pointer; }
+      .hr-mobile-nav ul { list-style: none; padding: 0 0 12px; margin: 0; }
+      .hr-mobile-nav a { width: 100%; }
+      .hr-hero { padding-block: 40px 44px; }
+      .hr-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; margin-top: 20px; }
+      .hr-hero h1 { max-width: 16ch; font-size: 36px; line-height: 1.45; }
+      .hr-lead { margin-top: 20px !important; font-size: 16px; }
+      .hr-actions { margin-top: 24px; align-items: stretch; flex-direction: column; gap: 8px; }
+      .hr-actions .hr-text-link { justify-content: center; text-align: center; }
+      .hr-hero-aside { margin-top: 0; padding: 20px; }
+      .hr-hero-aside h2 { font-size: 18px; }
+      .hr-hero-aside p { margin-top: 12px; font-size: 14px; }
+      .hr-index { margin-top: 16px; }
+      .hr-section { padding-block: 44px; }
+      .hr-section-heading { grid-template-columns: minmax(0, 1fr); gap: 16px; margin-bottom: 28px; }
+      .hr-section-heading h2 { font-size: 28px; margin-top: 8px; }
+      .hr-section-heading > p { padding-top: 0; }
+      .hr-service { grid-template-columns: 32px minmax(0, 1fr); gap: 10px 14px; padding-block: 24px; }
+      .hr-service h3 { font-size: 20px; }
+      .hr-service-copy { grid-column: 2; }
+      .hr-service-copy p { font-size: 16px; }
+      .hr-work { grid-template-columns: minmax(0, 1fr); gap: 22px; padding-block: 28px; }
+      .hr-work h3 { font-size: 26px; }
+      .hr-work-meta { margin-bottom: 10px; }
+      .hr-work-summary { margin-top: 12px !important; }
+      .hr-work-info .hr-text-link { margin-top: 12px; }
+      .hr-process-grid, .hr-review-grid, .hr-footer-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+      .hr-cta { padding: 22px; }
+      .hr-cta h3 { font-size: 23px; }
+      .hr-review .hr-palette { grid-template-columns: minmax(0, 1fr); }
+      .hr-footer { padding-top: 32px; }
+      .hr-footer-brand { max-width: 160px; }
+      .hr-footer h2 { margin-bottom: 6px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hr-document { scroll-behavior: auto; }
+      .hr-page *, .hr-page *::before, .hr-page *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body class="hr-page">
+  <a class="hr-skip" href="#hr-main-content">跳至主要內容</a>
+  <div class="hr-review-banner">
+    <div class="hr-container"><p><strong lang="en">DRAFT — NOT APPROVED</strong><span>僅供本機品牌審閱。Heritage 尚未核准，這不是公開的新系列網站。</span></p></div>
+  </div>
+  <header class="hr-header">
+    <div class="hr-container hr-masthead">
+      <a class="hr-brand" href="https://www.xplorekaleidoscope.com/" aria-label="Xplore Kaleidoscope 現有官網首頁">
+        <img src="../../../../public/brand/source/xk-logo-horizontal.svg" width="850" height="204" alt="Xplore Kaleidoscope">
+      </a>
+      <p class="hr-brand-note"><span lang="en">XK DESIGN COLLECTION</span>Heritage 編輯式版面提案<br>品牌身份外框保持正式原色</p>
+    </div>
+    <div class="hr-nav-line">
+      <div class="hr-container">
+        <nav class="hr-desktop-nav" aria-label="本機原型章節與正式網站">
+          <a href="#hr-services">01　服務目錄</a><a href="#hr-works">02　展示清冊</a><a href="#hr-process">03　合作方式</a><a href="#hr-review">審閱範圍與來源</a><a href="https://www.xplorekaleidoscope.com/design-collection/">現有官網設計系列 ↗</a>
+        </nav>
+        <details class="hr-mobile-nav">
+          <summary>本頁目錄（展開／收合）</summary>
+          <nav aria-label="手機本機原型目錄"><ul><li><a href="#hr-services">01　服務目錄</a></li><li><a href="#hr-works">02　展示清冊</a></li><li><a href="#hr-process">03　合作方式</a></li><li><a href="#hr-review">審閱範圍與來源</a></li><li><a href="https://www.xplorekaleidoscope.com/design-collection/">前往現有官網設計系列 ↗</a></li></ul></nav>
+        </details>
+      </div>
+    </div>
+  </header>
+  <main id="hr-main-content" tabindex="-1">
+    <!-- 1 / Homepage editorial composition; exact hero copy from homepageHero. -->
+    <section class="hr-hero" aria-labelledby="hr-page-title" data-source="src/config/homepage.ts#homepageHero">
+      <div class="hr-container">
+        <p class="hr-kicker"><span lang="en">HERITAGE / EDITORIAL DIRECTION</span>　·　版面提案，非公司歷史敘事</p>
+        <div class="hr-hero-grid">
+          <div class="hr-hero-main">
+            <h1 id="hr-page-title">整合網站、企業系統與 AI，打造真正有價值的數位解決方案。</h1>
+            <p class="hr-lead">從企業網站、Java 系統開發到 AI 應用整合，協助企業建立穩定、可擴充且符合實際營運需求的數位服務。</p>
+            <div class="hr-actions"><a class="hr-button" href="https://www.xplorekaleidoscope.com/contact/#contact-form">前往正式聯絡頁 <span aria-hidden="true">↗</span></a><a class="hr-text-link" href="#hr-services">閱讀服務目錄 <span aria-hidden="true">↓</span></a></div>
+            <p class="hr-action-note">正式聯絡入口會離開本機原型，前往現有官網。</p>
+          </div>
+          <aside class="hr-hero-aside" aria-labelledby="hr-index-title">
+            <p class="hr-kicker" lang="en">READING INDEX</p>
+            <h2 id="hr-index-title">從需求出發，<br>連結每一項技術。</h2>
+            <p>探索品牌網站展示、網站範例與技術規劃，了解不同情境的網站呈現方式。</p>
+            <ol class="hr-index"><li><a href="#hr-services"><span>01</span>五類服務，依需求組合</a></li><li><a href="#hr-works"><span>02</span>作品圖說，保留來源與性質</a></li><li><a href="#hr-process"><span>03</span>合作步驟，先確認範圍</a></li></ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <!-- 2 / Five unchanged Services categories. Summaries only; full scopes remain on the real website. -->
+    <section id="hr-services" class="hr-section" aria-labelledby="hr-services-title" data-source="src/config/services.ts#serviceCategories">
+      <div class="hr-container">
+        <div class="hr-section-heading"><div><p class="hr-kicker" lang="en">01 / SERVICE DIRECTORY</p><h2 id="hr-services-title">從需求出發，<br>連結每一項技術。</h2></div><p>五類服務可獨立規劃，也能依企業需求組合。從使用者看見的介面，到系統、資料與部署流程，選擇適合當前階段的技術範圍。</p></div>
+        <div class="hr-service-list">
+          <article class="hr-service"><p class="hr-number">01</p><div><h3>網站與數位產品開發</h3><span class="hr-english" lang="en">Website Development</span></div><div class="hr-service-copy"><p>建立品牌入口，讓資訊與服務清楚呈現。</p><a class="hr-text-link" href="https://www.xplorekaleidoscope.com/services/#website-development" aria-label="查看服務內容：網站與數位產品開發（現有官網）">查看服務內容 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="hr-service"><p class="hr-number">02</p><div><h3>Java 企業系統開發</h3><span class="hr-english" lang="en">Java Enterprise Development</span></div><div class="hr-service-copy"><p>以可維護的商業邏輯，支援企業日常營運。</p><a class="hr-text-link" href="https://www.xplorekaleidoscope.com/services/#java-enterprise" aria-label="查看服務內容：Java 企業系統開發（現有官網）">查看服務內容 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="hr-service"><p class="hr-number">03</p><div><h3>系統整合與資料管理</h3><span class="hr-english" lang="en">System Integration &amp; Database</span></div><div class="hr-service-copy"><p>連結系統與資料，讓跨系統流程更清楚。</p><a class="hr-text-link" href="https://www.xplorekaleidoscope.com/services/#system-integration" aria-label="查看服務內容：系統整合與資料管理（現有官網）">查看服務內容 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="hr-service"><p class="hr-number">04</p><div><h3>AI 應用與流程自動化</h3><span class="hr-english" lang="en">AI &amp; Automation</span></div><div class="hr-service-copy"><p>將 AI 連結實際需求，探索流程改善的可能。</p><a class="hr-text-link" href="https://www.xplorekaleidoscope.com/services/#ai-automation" aria-label="查看服務內容：AI 應用與流程自動化（現有官網）">查看服務內容 <span aria-hidden="true">↗</span></a></div></article>
+          <article class="hr-service"><p class="hr-number">05</p><div><h3>雲端與基礎架構</h3><span class="hr-english" lang="en">Cloud &amp; Infrastructure</span></div><div class="hr-service-copy"><p>從開發延伸至部署，規劃適合專案的運行環境。</p><a class="hr-text-link" href="https://www.xplorekaleidoscope.com/services/#cloud-infrastructure" aria-label="查看服務內容：雲端與基礎架構（現有官網）">查看服務內容 <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+      </div>
+    </section>
+    <!-- 3 / Exactly the existing featuredIds, in source order. Images are existing, unaltered local previews. -->
+    <section id="hr-works" class="hr-section hr-works" aria-labelledby="hr-works-title" data-source="src/config/website-showcases.ts#showcaseSettings.featuredIds">
+      <div class="hr-container">
+        <div class="hr-section-heading"><div><p class="hr-kicker" lang="en">02 / SHOWCASE REGISTER</p><h2 id="hr-works-title">品牌展示，<br>以圖說保留脈絡。</h2></div><p>以下為現有官網的三個精選自製品牌展示，皆可瀏覽；它們不是客戶委託、成交或交付成果的證明。圖片與原有案例說明維持不變。</p></div>
+        <article class="hr-work" aria-labelledby="hr-march-title" data-showcase-id="march-tangbao">
+          <figure><img class="hr-work-image" src="../../../../public/images/showcases/march-tangbao.webp" width="1280" height="800" loading="lazy" alt="三月手工湯包展示網站的桌面版首頁畫面"><figcaption class="hr-figure-caption">圖 01 — 三月手工湯包／既有本地預覽。餐點素材為示意。</figcaption></figure>
+          <div class="hr-work-info"><div class="hr-work-meta"><p class="hr-number">01 / 餐飲品牌</p><span class="hr-status">自製品牌展示 · 可瀏覽</span></div><h3 id="hr-march-title">三月手工湯包</h3><p class="hr-work-summary">以湯包、冷滷味與門市資訊串起餐飲內容，展示餐點瀏覽與預留訊息整理。</p><p class="hr-work-note">自製品牌展示案例；餐點素材為示意，非客戶交付紀錄。</p><a class="hr-text-link" href="https://www.xplorekaleidoscope.com/portfolio/showcases/march-tangbao/" aria-label="查看作品介紹：三月手工湯包（現有官網）">查看作品介紹 <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="hr-work" aria-labelledby="hr-hongjia-title" data-showcase-id="hongjia-birdnest">
+          <figure><img class="hr-work-image" src="../../../../public/images/showcases/hongjia-birdnest.webp" width="1280" height="800" loading="lazy" alt="宏家燕窩展示網站的桌面版首頁畫面"><figcaption class="hr-figure-caption">圖 02 — 宏家燕窩／既有本地預覽。送禮情境與洽詢摘要為模擬。</figcaption></figure>
+          <div class="hr-work-info"><div class="hr-work-meta"><p class="hr-number">02 / 禮品品牌</p><span class="hr-status">自製品牌展示 · 可瀏覽</span></div><h3 id="hr-hongjia-title">宏家燕窩</h3><p class="hr-work-summary">從親友送禮與企業贈禮情境出發，展示送禮資訊引導與模擬洽詢摘要。</p><p class="hr-work-note">自製品牌展示案例；洽詢摘要僅供模擬，實際品項、價格與配送待品牌確認。</p><a class="hr-text-link" href="https://www.xplorekaleidoscope.com/portfolio/showcases/hongjia-birdnest/" aria-label="查看作品介紹：宏家燕窩（現有官網）">查看作品介紹 <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="hr-work" aria-labelledby="hr-honest-title" data-showcase-id="honest-diecut">
+          <figure><img class="hr-work-image" src="../../../../public/images/showcases/honest-diecut.webp" width="1280" height="800" loading="lazy" alt="宏能興業展示網站的桌面版首頁畫面"><figcaption class="hr-figure-caption">圖 03 — 宏能興業／既有本地預覽。加工樣本與詢價為示意。</figcaption></figure>
+          <div class="hr-work-info"><div class="hr-work-meta"><p class="hr-number">03 / 工業製造</p><span class="hr-status">自製品牌展示 · 可瀏覽</span></div><h3 id="hr-honest-title">宏能興業</h3><p class="hr-work-summary">整理模切沖型、保護膜與工業標籤等服務，展示製造業網站的資訊與需求引導。</p><p class="hr-work-note">自製品牌展示案例；詢價摘要僅供模擬，不會寄送或收件。</p><a class="hr-text-link" href="https://www.xplorekaleidoscope.com/portfolio/showcases/honest-diecut/" aria-label="查看作品介紹：宏能興業（現有官網）">查看作品介紹 <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+    <!-- 4 / Original serviceProcessSteps. Numbers indicate process sequence, not company history. -->
+    <section id="hr-process" class="hr-section" aria-labelledby="hr-process-title" data-source="src/config/services.ts#serviceProcessSteps">
+      <div class="hr-container">
+        <div class="hr-section-heading"><div><p class="hr-kicker" lang="en">03 / WORKING TOGETHER</p><h2 id="hr-process-title">讓合作的每一步，<br>都有清楚的方向。</h2></div><p>先理解需求，再確認方案與交付範圍，從開發、測試到後續改善持續溝通。工期、報價與合作條件依個別專案確認。</p></div>
+        <div class="hr-process-grid">
+          <div><ol class="hr-process-list"><li class="hr-process-step"><span class="hr-number" aria-hidden="true">01</span><div><h3>需求了解</h3><p>了解商業目標、使用情境與目前需要解決的問題。</p></div></li><li class="hr-process-step"><span class="hr-number" aria-hidden="true">02</span><div><h3>方案規劃</h3><p>討論技術選擇、實作範圍與合作方式。</p></div></li><li class="hr-process-step"><span class="hr-number" aria-hidden="true">03</span><div><h3>技術開發</h3><p>依確認的方向進行開發，持續溝通實作進度。</p></div></li><li class="hr-process-step"><span class="hr-number" aria-hidden="true">04</span><div><h3>測試與交付</h3><p>驗證約定範圍內的功能，整理交付與使用資訊。</p></div></li><li class="hr-process-step"><span class="hr-number" aria-hidden="true">05</span><div><h3>後續改善</h3><p>依實際需求，討論後續維護、優化與擴充。</p></div></li></ol><p class="hr-cooperation-note">編號只表示合作流程，不代表公司成立年份或歷史沿革。</p></div>
+          <aside class="hr-cta" aria-labelledby="hr-cta-title"><p class="hr-kicker" lang="en">NEXT CONVERSATION</p><h3 id="hr-cta-title">從一個需求，<br>開始探索數位可能。</h3><p>無論是企業網站、Java 系統、系統整合、AI 應用或部署規劃，都可以從理解問題與目標開始。</p><div class="hr-actions"><a class="hr-button" href="https://www.xplorekaleidoscope.com/contact/#contact-form">前往正式聯絡頁 <span aria-hidden="true">↗</span></a><a class="hr-text-link" href="https://www.xplorekaleidoscope.com/quotation/">前往現有方案試算 <span aria-hidden="true">↗</span></a></div><p class="hr-action-note">此處僅連到現有官網；本機原型不收集或傳送詢問內容。</p></aside>
+        </div>
+      </div>
+    </section>
+    <!-- 5 / Visible review boundary. This section is review documentation, not proposed homepage business copy. -->
+    <section id="hr-review" class="hr-section hr-review" aria-labelledby="hr-review-title">
+      <div class="hr-container">
+        <div class="hr-section-heading"><div><p class="hr-kicker" lang="en">REVIEW ONLY / V1</p><h2 id="hr-review-title">這份稿件的審閱範圍</h2></div><p>待審閱的是展示主體的配色與編排；品牌身份、公司事實與服務能力沒有另創版本。這份 HTML 不代表 Heritage 已核准、已發布或已完成 16 頁。</p></div>
+        <div class="hr-review-grid">
+          <div><h3>新增視覺角色：全部仍為提案</h3><ul class="hr-palette"><li><b>紙色背景</b>#F4E9D8</li><li><b>內容表面</b>#FFF9F0</li><li><b>主文字</b>#2D241E</li><li><b>次要文字</b>#705D4A</li><li><b>裝飾分隔線</b>#D5C7B1</li><li><b>控制邊界候選</b>#806B55</li></ul><p>互動沿用正式 Electric Blue #2563EB。Header 白色與 Footer #101828 保留正式品牌身份外框；原始 SVG 沒有改色、濾鏡、拉伸或重繪。</p></div>
+          <div><h3>字型、功能與驗收界線</h3><ul><li>CSS 指定 Inter／Noto Sans TC；本機未安裝時使用 Noto Sans CJK TC 或系統 sans-serif，未下載遠端字型。此稿不證明正式字型載入結果。</li><li>Hero 桌面 52px／手機 36px 為待審字階提案，不是公司桌面 H1 56px 規範的已核准例外。</li><li>手機採單欄、章節圖說與原生目錄；沒有 JavaScript、表單、持久化、風格切換或試算實作。</li><li>正式 16 頁仍須沿用既有 next/font、共享資料與行為，另做完整可及性、互動、對比、字型及列印驗收。</li><li>本稿不宣稱品牌核准、讀屏測試或全站驗收已完成。</li></ul></div>
+        </div>
+        <details class="hr-source-details"><summary>展開內容來源與版本</summary><ul><li>網站內容快照：<code>xk-website main@8ba299a5a48da41ca7f4d88d9b2149d7c83f6584</code>。</li><li>公司品牌邊界核對：<code>xplore-kaleidoscope main@d03cd673c10a8f7c0427c558c562112aa4d34a8c</code>。此版本未提供 Heritage 品牌例外，詳見同目錄的 <a href="heritage-v1.md">Heritage 品牌審閱稿 v1</a>。</li><li>Hero：<code>src/config/homepage.ts → homepageHero</code>；服務名稱與摘要：<code>src/config/services.ts → serviceCategories / servicesPage.overview</code>。</li><li>合作文案與五步驟：<code>src/config/services.ts → servicesPage.process / servicesPage.cta / serviceProcessSteps</code>。</li><li>精選順序、作品性質、摘要、原 note 與圖片 alt：<code>src/config/website-showcases.ts → showcaseSettings.featuredIds / websiteShowcases</code>。</li><li>正式 Logo：<code>public/brand/source/xk-logo-horizontal.svg / xk-logo-white.svg</code>；既有圖檔：<code>public/images/showcases/{march-tangbao,hongjia-birdnest,honest-diecut}.webp</code>。</li><li>Heritage 版面與提案角色：<code>docs/01_design/design-collection/design-systems.md</code>。所有頁面標題、編輯索引與圖說的編排性補充僅屬這份審閱原型。</li></ul></details>
+      </div>
+    </section>
+  </main>
+  <footer class="hr-footer">
+    <div class="hr-container">
+      <div class="hr-footer-grid">
+        <div><a class="hr-footer-brand" href="https://www.xplorekaleidoscope.com/" aria-label="Xplore Kaleidoscope 現有官網首頁"><img src="../../../../public/brand/source/xk-logo-white.svg" width="620" height="410" loading="lazy" alt="Xplore Kaleidoscope"></a><p class="hr-footer-tagline" lang="en">Explore Possibilities.<br>Create Digital Value.</p></div>
+        <nav aria-label="現有官網主要目錄"><h2>現有官網</h2><ul><li><a href="https://www.xplorekaleidoscope.com/about/">關於 XK</a></li><li><a href="https://www.xplorekaleidoscope.com/services/">服務內容</a></li><li><a href="https://www.xplorekaleidoscope.com/solutions/">解決方案</a></li><li><a href="https://www.xplorekaleidoscope.com/portfolio/">作品展示</a></li></ul></nav>
+        <nav aria-label="現有官網聯絡與設計目錄"><h2>繼續了解</h2><ul><li><a href="https://www.xplorekaleidoscope.com/contact/">聯絡資訊與需求整理</a></li><li><a href="https://www.xplorekaleidoscope.com/quotation/">方案試算</a></li><li><a href="https://www.xplorekaleidoscope.com/design-collection/">設計系列</a></li><li><a href="#hr-review">本稿審閱範圍與來源</a></li></ul></nav>
+      </div>
+      <p class="hr-footer-note">Heritage v1 / 本機審閱稿 / 未核准、未公開。所有正式網站連結均前往 www.xplorekaleidoscope.com。</p>
+    </div>
+  </footer>
+</body>
+</html>

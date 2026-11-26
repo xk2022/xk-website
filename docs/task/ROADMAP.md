@@ -61,8 +61,8 @@ BF-009～016 以 [PR #24](https://github.com/xk2022/xk-website/pull/24)、[待�
 | --- | --- | --- |
 | DC-001 架構規格 | 已合併 [PR #30](https://github.com/xk2022/xk-website/pull/30)；[報告](../reports/dc001-architecture.md) | — |
 | DC-002 共用核心 | 已合併 [PR #33](https://github.com/xk2022/xk-website/pull/33)；[報告](../reports/dc002-implementation.md) | DC-001 |
-| DC-003 Modern／Gallery | 本輪執行：[規格](dc003.md)、[實作與驗證](../reports/dc003-implementation.md)，PR 待審 | DC-002 |
-| DC-004 Heritage | 待執行、品牌審閱 | DC-003 |
+| DC-003 Modern／Gallery | 已合併 [PR #39](https://github.com/xk2022/xk-website/pull/39)；[規格](dc003.md)、[實作與驗證](../reports/dc003-implementation.md)，main CI／Pages 成功 | DC-002 |
+| DC-004 Heritage | [品牌審閱稿 v1](../01_design/design-collection/reviews/heritage-v1.md) 待審；完整 16 頁實作尚未開始 | DC-003 |
 | DC-005 Luxury | 待執行、品牌審閱 | DC-003 |
 | DC-006 三系列整合 | 待執行 | DC-004、DC-005 |
 | DC-007 完整驗收與發布準備 | 待執行 | DC-006；發布依當次授權 |
@@ -80,7 +80,7 @@ DC-004／005 可依現有工作包平行；未完成風格不提供假入口，G
 | DOC-005 Roadmap | 已合併 [PR #37](https://github.com/xk2022/xk-website/pull/37) |
 | DOC-006 文件一致性檢查 | 已合併 [PR #38](https://github.com/xk2022/xk-website/pull/38)；[檢查報告](../reports/doc006-consistency.md)；合併及 CI 以本次 PR 實際事件為準 |
 
-DOC-005／DOC-006 已分別由 PR #37／#38 合併；本輪 DC-003 功能開發與驗收完成，見 [PR #39](https://github.com/xk2022/xk-website/pull/39)，仍待審閱，不增加新的功能規格。
+DOC-005／DOC-006 已分別由 PR #37／#38 合併；DC-003 已由 [PR #39](https://github.com/xk2022/xk-website/pull/39) 合併，merge SHA `8ba299a5a48da41ca7f4d88d9b2149d7c83f6584`；[main CI／Pages #88](https://github.com/xk2022/xk-website/actions/runs/45750880906) 成功，正式站 17 頁 HTTP smoke 1,110 項 PASS。此為後續實際事件，不回寫原報告的 PR 前快照；[本次紀錄](../reports/dc004-brand-review.md) 保留驗證範圍。
 
 ## 5. 未結項與其他 PR
 

@@ -452,3 +452,11 @@ Native 測試透過 Node.js 24 的 test-only alias hook 解析既有 Next.js imp
 
 
 交付前同步已合併 PR #36／#37 的工程索引與 Roadmap 整理，最新 main 基準更新為 `aa100adfad24b74ccb39d2df811b613c4d6a15ef`。差異只有文件；保留集中 Roadmap／新索引與本輪說明，未引入其他功能，原 runtime source bytes 不變。搬移前 baseline 仍保留 `794b076` 版本邊界。
+
+## 2026-11-26 DC-003 合併與 Heritage 品牌前置
+
+使用者明確回覆「合併」後，PR #39 合併為 `8ba299a5a48da41ca7f4d88d9b2149d7c83f6584`；main CI／Pages #88 成功，正式站 17 頁 HTTP smoke 1,110 項 PASS。先前 DC-003 的未合併文字保留為當時快照，實際遠端事件更新同一 PR Description。
+
+DC-004 工作包要求先完成新增 palette／外框／素材品牌審閱，當前仍無核准紀錄；本輪先交付 [Heritage 品牌審閱稿](../01_design/design-collection/reviews/heritage-v1.md) 與本機原型、截圖和 [範圍驗證](../reports/dc004-brand-review.md)。公司最新 main 為 `d03cd673c10a8f7c0427c558c562112aa4d34a8c`，已出現根 AGENTS 與遷移後品牌／工程入口，但沒有 Heritage 例外核准。
+
+本稿不新增 Next 路由、品牌事實、收件、價格或依賴；Modern 及 Gallery 公開 17 頁不變。globals.css 僅限定排除審閱資料的掃描，runtime 產物另比較。完整 16 頁 Heritage、正式 Next 字體、Contact／Quotation／PII／A4 與兩模式全部驗收仍待品牌審閱；本次新審閱 PR 不自動合併或發布。
