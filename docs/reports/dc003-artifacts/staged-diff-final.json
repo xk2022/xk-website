@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "git",
+    "diff",
+    "--cached",
+    "--check"
+  ],
+  "cwd": "/workspace/xk-website",
+  "startedAt": "2026-11-26T03:21:15.391807+00:00",
+  "finishedAt": "2026-11-26T03:21:15.397813+00:00",
+  "processId": 61276,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 30.0,
+  "logFile": "/tmp/xk-dc003/staged-diff-final.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

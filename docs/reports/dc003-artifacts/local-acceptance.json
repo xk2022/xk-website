@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "source": "source-final.json",
+  "source": "source-delivery-final.json",
   "scope": "DC-003 local acceptance, prior to commit/PR",
   "requiredFunctionalAssertions": {
     "normal": 132,
@@ -34,7 +34,8 @@
       "pages": 14,
       "status": "PASS"
     },
-    "visual": "10 exact preFooter pixel comparisons plus unique menu-reference-pair adjudication and actual Root visual review"
+    "visual": "10 exact preFooter pixel comparisons plus unique menu-reference-pair adjudication and actual Root visual review",
+    "finalEOF": "eof-format-bridge.json; staged-diff-final OS exit 0"
   },
   "normalVersionApplicability": "Final gate order is restored to original source. Actual 136-resource runtime identity and unchanged public sources bridge the full normal matrix; final 17-route HTTP plus five gate/preview browser cases reverify affected behavior. Final script-only hosting correction adds no compilable CSS candidate and is separately tested.",
   "deployment": "NOT_PERFORMED",

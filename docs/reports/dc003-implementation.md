@@ -18,7 +18,7 @@ Linux 6.18.57 x86_64、Node.js 24.22.1、npm 11.9.0、Python 3.12.14；Next.js 1
 
 必要 [原始證據](dc003-artifacts/README.md) 包含真實 OS receipt、不可變 log／JSON、工具、來源、修正與重驗；大型資料 gzip 保留原內容／hash。[實際截圖與 PDF](../screenshots/design-collection/dc003/README.md) 與證據 SHA 清冊可交叉核對。JSON 中測試時間／預期／實際／Test ID／環境／命令與未完成狀態保留原值；不只依 JSON PASS 推認程序成功。
 
-最終 176 個 source／scripts／public／設定檔 fingerprint：`b50c4fbc4e852042bad936183f1c0c20099998c1dd245da10552bc9ca294ec84`。source-v1／v2／v3 及 final 分別保存，不用最終版本回寫初次失敗。
+最終 176 個 source／scripts／public／設定檔 fingerprint：`93117cfc014af7672cdeedc8f2128e67913d04ae0486eba569e0f602cb92d263`。source-v1／v2／v3／source-final 及 source-delivery-final 分別保存，不用最終版本回寫初次失敗。
 
 ## 實際驗收
 
@@ -76,3 +76,5 @@ Root 實際查看了 10 組指定畫面的對照裁切／縮圖、兩寬共用 F
 - README／AGENTS／工程與報告索引、集中 Roadmap、核心契約、實作紀錄及本輪規格／報告／證據／實際截圖。
 
 Known Issues：沒有未修復的本輪功能 blocker。實機、Safari／Firefox、完整真人讀屏／WCAG 認證及場域效能不屬本包已執行項目，不宣稱通過。Heritage／Luxury、StyleSwitcher、跨系列 reset／portal／print 隔離與新品牌角色審閱仍待後續包；正式 Privacy、價格／收件／索引核准保留原門檻。沒有收到本輪 merge／deploy 授權；只有 PR CI 不代表已部署。
+
+最後 staged 檢查發現新 directory config 多一個 EOF LF；首次命令未單獨保存 exit，明記未知，沒有以外層後續命令的 0 推認通過。僅移除一個多餘 LF，前面所有 bytes 完全相同，附 eof-format-bridge；不因格式改動重跑無關網站 suite。交付 source 以 source-delivery-final 為準，原檢查與 source-final 保留。

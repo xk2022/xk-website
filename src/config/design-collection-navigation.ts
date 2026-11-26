@@ -4,4 +4,3 @@ import { resolveDesignHref } from "@/lib/design-collection/routes";
 const collectionHref = resolveDesignHref({ pageKey: "collection" });
 if (!collectionHref) throw new Error("The implemented Design Collection must have a public route");
 export const collectionNavigation = { href: collectionHref, label: "設計系列" } as const;
-
