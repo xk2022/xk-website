@@ -1,0 +1,70 @@
+{
+  "testId": "DC005-PROTOTYPE-ACCEPTANCE-PLAN",
+  "status": "PENDING",
+  "prototypeSHA256": "c7809ec2e8ec31713828aa2913175b73e41af56ad2d97f8e3bd95e6d354b9f4b",
+  "url": "http://127.0.0.1:3254/docs/01_design/design-collection/reviews/luxury-v1.html",
+  "CLI": "node /tmp/xk-dc005/browser.cjs http://127.0.0.1:3254/ final",
+  "expected": {
+    "testRows": 20,
+    "layouts": 5,
+    "widths": [
+      320,
+      375,
+      768,
+      1440,
+      1920
+    ],
+    "realFullpagePNGs": 5,
+    "axeScans": 5,
+    "axeTags": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21a",
+      "wcag21aa"
+    ],
+    "contrastMeasurementsAt": [
+      375,
+      1440
+    ]
+  },
+  "groups": [
+    {
+      "id": "LAYOUT",
+      "cases": 5,
+      "scope": "HTTP200/nooverflow/oneh1-main-header-footer/real decoded local images/unchanged official SVG path+shape/screenshots"
+    },
+    {
+      "id": "KEYBOARD-MOTION",
+      "cases": 5,
+      "scope": "Skip-main/native visible details Space+Enter/focus/reducedmotion; Escape N/A because noJS contract"
+    },
+    {
+      "id": "AXE",
+      "cases": 5,
+      "scope": "375/1440 default+allmain details expanded,375 menu+content expanded; violations and incomplete retained separately"
+    },
+    {
+      "id": "CONTRAST",
+      "cases": 2,
+      "scope": "Fresh allvisibletext+readonlyinput/error/selected/nativecontrols/disabled/focus; standard WCAG luminance/no threshold rounding, unknown backgrounds stay pending; inactive controls marked exempt and review-only"
+    },
+    {
+      "id": "LINKS",
+      "cases": 1,
+      "scope": "All local links/assets actualHTTP200 and localanchors exist; official/source externalhref allowlist only, no externalnetwork or delivery claim"
+    },
+    {
+      "id": "NETWORK-STORAGE",
+      "cases": 1,
+      "scope": "0external/API/POST/HTTPerror/console/runtime and fresh emptylocal/session/cookie before+after eachwidth"
+    },
+    {
+      "id": "UNIMPLEMENTED-FLOWS",
+      "cases": 1,
+      "status": "N/A",
+      "reason": "Readonly/error/radio/disabled are visual samples, no realContact/Estimator/receiving/A4/16Luxury pages."
+    }
+  ],
+  "manual": "PENDING actual Root view and owner brand review; prototype QA cannot grant publication or16page acceptance.",
+  "evidence": "All tools/raw JSON/logs/PNGs under/tmp/xk-dc005; any later repository packaging must gzip all tools/logs. No app/server/build/Git operation by this harness preparation."
+}

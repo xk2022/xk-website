@@ -283,3 +283,8 @@ docs(task): add XK website task specifications 006-014
 ## Bugfix 001–008 優化文件
 
 [bugfix001](bugfix001.md)、[bugfix002](bugfix002.md)、[bugfix003](bugfix003.md)、[bugfix004](bugfix004.md)、[bugfix005](bugfix005.md)、[bugfix006](bugfix006.md)、[bugfix007](bugfix007.md)、[bugfix008](bugfix008.md) 是本次使用者指定的八份改善輸入；原始內容保留，不把重複文字當成八套獨立功能。首頁價值主張／服務卡／技術分類／方案導覽與 Logo 建議的採用及後續界線見 [實作報告](../reports/bugfix001-008-implementation.md)。
+
+
+## DC-005 執行入口
+
+依 [DC-005](dc005.md) 與既有工作包執行，先完成 [Luxury v1 品牌審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、本機原型／實際截圖及 [驗證報告](../reports/dc005-brand-review.md)。DC-003 已合併、DC-004 PR #40 未合併但不是本包前置；本分支從 main 獨立建立，不引入未核准程式。Luxury 同版本品牌核准尚缺，完整 16 頁工作包保持 BLOCKED，不能把原型驗收當正式功能通過。

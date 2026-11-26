@@ -61,9 +61,9 @@ BF-009～016 以 [PR #24](https://github.com/xk2022/xk-website/pull/24)、[待�
 | --- | --- | --- |
 | DC-001 架構規格 | 已合併 [PR #30](https://github.com/xk2022/xk-website/pull/30)；[報告](../reports/dc001-architecture.md) | — |
 | DC-002 共用核心 | 已合併 [PR #33](https://github.com/xk2022/xk-website/pull/33)；[報告](../reports/dc002-implementation.md) | DC-001 |
-| DC-003 Modern／Gallery | 本輪執行：[規格](dc003.md)、[實作與驗證](../reports/dc003-implementation.md)，PR 待審 | DC-002 |
-| DC-004 Heritage | 待執行、品牌審閱 | DC-003 |
-| DC-005 Luxury | 待執行、品牌審閱 | DC-003 |
+| DC-003 Modern／Gallery | 已合併 [PR #39](https://github.com/xk2022/xk-website/pull/39)；[規格](dc003.md)、[實作與驗證](../reports/dc003-implementation.md) | DC-002 |
+| DC-004 Heritage | [PR #40](https://github.com/xk2022/xk-website/pull/40) 已開放功能審閱、尚未合併；程式未整合至本分支 | DC-003 |
+| DC-005 Luxury | [v1 品牌審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、[本輪規格](dc005.md) 與 [驗證報告](../reports/dc005-brand-review.md)；完整實作等待 Owner 核准 | DC-003 |
 | DC-006 三系列整合 | 待執行 | DC-004、DC-005 |
 | DC-007 完整驗收與發布準備 | 待執行 | DC-006；發布依當次授權 |
 

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "run",
+    "build:pages"
+  ],
+  "cwd": "/tmp/xk-dc005-build",
+  "startedAt": "2026-11-26T06:11:28.474676+00:00",
+  "finishedAt": "2026-11-26T06:11:36.822749+00:00",
+  "processId": 83268,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-dc005/build-pages.log",
+  "logSha256": "57ebc2f3cd738b683d0840ea6add96205e5e3f55ca92fa9944583f2baddbd96b",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

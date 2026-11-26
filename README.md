@@ -33,7 +33,7 @@ Modern 目前保留 16 個公開頁面。展示及規劃不等於客戶交付；
 | --- | --- | --- |
 | Modern 現代專業 | 現有根路徑 | 原 16 頁已運作；共用核心見 DC-002，本輪 DC-003 相容整合 |
 | Heritage 懷舊復古 | `/design-collection/heritage/`（規劃） | 設計提案，尚未實作 |
-| Luxury 奢華精品 | `/design-collection/luxury/`（規劃） | 設計提案，尚未實作 |
+| Luxury 奢華精品 | `/design-collection/luxury/`（規劃） | 本分支準備 v1 品牌審閱，尚無正式頁面／公開入口 |
 
 架構規格已合併（[PR #30](https://github.com/xk2022/xk-website/pull/30)），不代表新風格已核准上線。完整目標為三系列各 16 頁及 1 個 Gallery，共 49 頁；子網域及正式索引須另行授權。
 
@@ -41,7 +41,9 @@ Modern 目前保留 16 個公開頁面。展示及規劃不等於客戶交付；
 - [三套 Design System](docs/01_design/design-collection/design-systems.md)
 - [DC-001～007 工作包](docs/01_design/design-collection/work-packages.md)
 
-DC-002 共用核心已合併。DC-003 本輪保留 Modern 16 頁並新增 `/design-collection/` Gallery（共 17 頁），僅 Modern 可瀏覽，Heritage／Luxury 仍規劃中。見 [本輪規格](docs/task/dc003.md)、[核心 API](docs/03_engineering/design-collection-core.md) 與 [實作驗證](docs/reports/dc003-implementation.md)。新系列版型、palette、portal／跨系列 print 隔離與個資重設仍待後續工作包。
+DC-002 共用核心已合併。DC-003 已由 [PR #39](https://github.com/xk2022/xk-website/pull/39) 合併，保留 Modern 16 頁並新增 `/design-collection/` Gallery（共 17 頁），僅 Modern 可瀏覽，Heritage／Luxury 仍規劃中。見 [本輪規格](docs/task/dc003.md)、[核心 API](docs/03_engineering/design-collection-core.md) 與 [實作驗證](docs/reports/dc003-implementation.md)。新系列版型、palette、portal／跨系列 print 隔離與個資重設仍待後續工作包。
+
+DC-005 在獨立分支準備 [Luxury v1 品牌審閱稿](docs/01_design/design-collection/reviews/luxury-v1.md) 與 [驗證報告](docs/reports/dc005-brand-review.md)；原型只供本機審閱，正式網站仍為 17 頁。Heritage 的 [PR #40](https://github.com/xk2022/xk-website/pull/40) 尚未合併；本分支不整合該程式，也不沿用其品牌核准。Luxury 核准後依 [完整工作包](docs/task/dc005.md) 繼續，沒有本次合併或部署授權。
 
 ## 3. 技術架構
 
