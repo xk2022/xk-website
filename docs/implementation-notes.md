@@ -422,3 +422,13 @@ Hero、桌面導覽、手機選單與底部 CTA 共用依正式管道可用性�
 本輪在 `/quotation` 範圍使用正式品牌色與既有 Logo 03，頁面標示 XK SYSTEM；公司正文仍保留 Xplore Kaleidoscope／XK，不推論法定名稱變更，也不全站換色。原生 radio／checkbox 是試算頁的限定控制項例外；唯一保存 key `xk:quotation:v1` 只存版本及選項 ID，稱呼／專案名留在頁面記憶體，不進入網址、紀錄、QR 或網路請求。
 
 此處記錄開發審閱快照：完整品質、一般／Pages 瀏覽器、A4 PDF 與 QR 驗收均以 [試算實作報告](reports/quotation-estimator-v1.md) 的實際證據為準，不由功能或測試指令存在推定通過。交付目標為 Draft PR 與 CI，待人工驗收及價格審閱；未發生的 PR 識別碼、最終 SHA、人工核准、合併與正式部署不預填，未發布本輪分支。
+
+## 2026-11-26 DC-001 — Design Collection 架構提案
+
+網站基準 `main@8d7d97d33e4b6ee45f32cc75953c0e008c9951d7` 已包含正式發布的試算頁；較早的待審文字保留為當時快照。公司 main 重新核對仍為 `5be640ab11811b24706101ea13db73185e9ce4d8`，正式品牌五文件補讀，工程／發布四文件核對；其餘同版本已讀來源沿用固定紀錄。公司 AGENTS 缺檔與三系列未有既定正式規範的限制如實記錄，不修改該 Repository。
+
+[DC-001](task/dc001.md) 僅提出架構、獨立設計規範及七個工作包，沒有改動 runtime、首頁、服務／試算價格、路由、資產、依賴、workflow 或 DNS。Modern 保留原 16 個公開頁面；Gallery 與 Heritage／Luxury 的完整同資訊架構以 17／33／49 頁分階段規劃，尚未實作，不提前放入公開導覽。
+
+新系列各自編排 shell、Hero、服務、作品與 CTA，資料及 Contact／Quotation 核心共用；參考／面議／年度費用及個資界線不因風格改變。正式 Logo／公司事實保持，新增 palette／字體及展示外框適用範圍明列為待審提案。單一技術 root layout、Modern route-group 相容搬移、同內容 Modern canonical 與展示版 OG URL 分離、風格 URL 切換、404／CSS／print／state 風險及驗收均列入後續工作包。
+
+文件及實際檢查見 [DC-001 驗證紀錄](reports/dc001-architecture.md)。此輪交付 PR 等待審閱，不沿用前輪 merge／deploy 授權；網站功能、視覺、47 張截圖與六份 PDF 是後續功能包的驗收要求，不當作這次已執行結果。

@@ -8,6 +8,12 @@
 
 開發協作與驗收請先讀 [Subagent 作業紀錄與執行流程](docs/subagent-workflow.md)，並依 [AGENTS.md](AGENTS.md) 與當次 Task 規格執行。流程包含分工責任、提早檢查完整 Diff、持久化退出碼及依變更影響決定重驗範圍。
 
+## XK Design Collection（架構審閱中）
+
+DC-001 規劃 Modern／Heritage／Luxury 三套獨立呈現，共用品牌、服務、作品與試算核心。Modern 的原 16 個公開頁面保留；新系列的路由、版型與 tokens 尚未實作。本輪只交付架構及設計文件，不改正式首頁、不部署、不變更 DNS。
+
+請從 [DC-001 任務](docs/task/dc001.md) 閱讀 [架構](docs/design-collection/architecture.md)、[三套 Design System 提案](docs/design-collection/design-systems.md)、[DC-001～DC-007 工作包](docs/design-collection/work-packages.md) 與 [文件驗證紀錄](docs/reports/dc001-architecture.md)。新系列的完整頁面範圍、色彩／版型及品牌適用界線等待 PR 審閱，不能把規格視為已上線功能。
+
 ## 作品展示
 
 [作品展示頁](https://www.xplorekaleidoscope.com/portfolio/) 收錄品牌網站展示、第三方模板範例及獨立的技術規劃。資料集中於 `src/config/website-showcases.ts`，預覽圖為來源網站的實際首屏；新增作品時應同步確認來源、展示性質、素材與外部連結。實作與驗收見 [網站展示整合報告](docs/reports/website-showcases-implementation.md)。
