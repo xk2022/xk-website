@@ -9,12 +9,13 @@
 | `03_engineering/` | 工程協作與驗證：[協作流程](03_engineering/subagent-workflow.md)、[Smoke](03_engineering/website-smoke.md)、[效能量測](03_engineering/performance-measurement.md)、[Design Collection 核心](03_engineering/design-collection-core.md) |
 | `04_deployment/` | 發布與部署：[網域](04_deployment/custom-domain-deployment.md)、[發布前置](04_deployment/publication-readiness.md)、[SEO](04_deployment/seo-operations.md) |
 | `task/` | [任務索引](task/README.md)、正式規格、DC 工作包與 Bugfix backlog |
-| `reports/` | 實作報告、驗收結果與原始證據封存 |
+| `reports/` | [實作與驗收索引](reports/README.md)、原始證據封存 |
 | `screenshots/` | 各任務實際畫面證據 |
-| `98_decisions/` | [歷史實作與決策](98_decisions/implementation-notes.md) |
+| `98_decisions/` | [歷史與重複文件索引](98_decisions/README.md)、[歷史實作與決策](98_decisions/implementation-notes.md) |
 
 ## 維護規則
 
+- 歷史報告及重複原稿集中於上述索引；保留真實快照，不再維護重複的現行入口。
 - 根 [README](../README.md) 作為現行專案入口；歷史完整內容留在既有規格、報告及 Git 固定版本，不重複追加。
 
 - 新規格放 `task/`，設計決策放 `01_design/`，實作完成另於 `reports/` 記錄真實結果。
