@@ -1,12 +1,12 @@
 # Design Collection 共用核心使用契約
 
-日期：2026-11-26。已合併基準：DC-002～DC-005，main `9322810f27e74e5ed4faa35a3b3931b3719f0c9a`；當前分支為 [DC-006](../task/dc006.md) `feature/design-collection-navigation-seo`，本機功能與版面驗收已完成，最終 CI／artifact 待新 PR。架構依據：[DC-001](../task/dc001.md)、[架構](../01_design/design-collection/architecture.md) 與 [工作包](../01_design/design-collection/work-packages.md)。
+日期：2026-11-26。已合併基準含 DC-006 PR #44，main `ee4b4709a9f8daa755e2595a46c158b3c92d8229`；目前 [DC-007](../task/dc007.md) 在 `test/design-collection-release` 執行完整驗收，結果見[本輪報告](../reports/dc007-implementation.md)。架構依據：[DC-001](../task/dc001.md)、[架構](../01_design/design-collection/architecture.md) 與 [工作包](../01_design/design-collection/work-packages.md)。
 
 ## 當前邊界
 
-Modern、Heritage、Luxury 各 16 頁及 `/design-collection/` Gallery 共 49 個目的地已實際合併、部署與公開驗證；先前 DC-003 的 17 頁／兩系列 planned 是歷史階段。系列規格／原驗收及實際遠端事件分別見 [DC-004](../reports/dc004-implementation.md)、[DC-005](../reports/dc005-implementation.md) 與 [合併整合報告](../reports/design-collection-integration.md)，不能改稱本輪 DC-006 測試。
+Modern、Heritage、Luxury 各 16 頁及 `/design-collection/` Gallery 共 49 個目的地已實際合併、部署與公開驗證；先前 DC-003 的 17 頁／兩系列 planned 是歷史階段。系列規格／原驗收及實際遠端事件分別見 [DC-004](../reports/dc004-implementation.md)、[DC-005](../reports/dc005-implementation.md) 與 [合併整合報告](../reports/design-collection-integration.md)，不能改稱後續任務的新測試。
 
-DC-006 的純導航 API、server-only 導航模型、內容 href adapter 與三套 Frame／Header／Footer／CTA 的共用切換及比較已接入，本機功能與版面驗收已完成。URL 為唯一風格來源，Client 不以 pathname 套用全站 theme，也不引入完整 server 內容。原始 incomplete／網路診斷及限定重驗見 [DC-006 報告](../reports/dc006-implementation.md)；[本輪截圖](../screenshots/design-collection/dc006/) 為 18 張實際 Pages 畫面，已逐張檢視。最終 CI／artifact 待新 PR；DC-007 尚未開始。
+DC-006 的純導航 API、server-only 導航模型、內容 href adapter 與三套 Frame／Header／Footer／CTA 的共用切換及比較已接入，本機功能與版面驗收已完成。URL 為唯一風格來源，Client 不以 pathname 套用全站 theme，也不引入完整 server 內容。原始 incomplete／網路診斷及限定重驗見 [DC-006 報告](../reports/dc006-implementation.md)；[DC-006 截圖](../screenshots/design-collection/dc006/) 為 18 張實際 Pages 畫面，已逐張檢視。PR #44 的精確 CI／artifact、合併及 main 部署均已完成；DC-007 另依其當次規格驗收。
 
 原有品牌、服務、作品與報價 config 仍為權威資料；不維護三份 catalog，不為風格建立價格倍率。核心位於 `src/config/design-collection.ts` 與 `src/lib/design-collection/`，普通 Next.js 與 Pages 共用。純核心／測試／文件／證據以限定 `@source not` 排除 Tailwind discovery；三套正式呈現樣式由各 Frame 與 scoped design system 管理，不由 DTO 文字生成。
 
@@ -85,9 +85,9 @@ Quotation 仍只有原 `xk:quotation:v1` 保存方案 IDs，個人欄位只在�
 npm run test:design-collection
 ```
 
-既有 Node.js 24 測試涵蓋獨立 route fixture、Metadata、不可變內容、純行為／PII 與 token 契約；本輪新增 navigation 決策的獨立預期與必要整合驗證，最終 v2 六品質與 typegen 均 Exit 0。本機功能與版面驗收已完成；normal／Pages 的原始 incomplete／網路診斷、人工判讀及限定重驗詳見 [本輪報告](../reports/dc006-implementation.md)，不將原 suite Exit 2／1 概稱為全數測試 PASS。`scripts/register-test-aliases.mjs` 只供 Node tests 解析既有 Next.js alias 與來源 `.ts`，不由 app 引用，不改 package type／production config 或依賴。
+既有 Node.js 24 測試涵蓋獨立 route fixture、Metadata、不可變內容、純行為／PII 與 token 契約；DC-006 新增 navigation 決策的獨立預期與必要整合驗證，最終 v2 六品質與 typegen 均 Exit 0。本機功能與版面驗收已完成；normal／Pages 的原始 incomplete／網路診斷、人工判讀及限定重驗詳見 [DC-006 報告](../reports/dc006-implementation.md)，不將原 suite Exit 2／1 概稱為全數測試 PASS。`scripts/register-test-aliases.mjs` 只供 Node tests 解析既有 Next.js alias 與來源 `.ts`，不由 app 引用，不改 package type／production config 或依賴。
 
-不得從 adapter 反產生全部 expected。兩模式須以實際 49 頁 HTML／HTTP、所有內鏈與宣告 anchor、五寬各 245 layouts、真實切換／鍵盤／axe／個資／列印與 artifact 補足純模型無法證明 DOM／事件可用的限制；保存全部原 FAIL／Exit／incomplete 與必要人工判讀。本輪新增 spec／report／artifacts／截圖均有版本邊界，舊 DC-002～005 證據不改稱本輪重跑。完成後新 PR 待審、不自動合併；DC-007 尚未開始。
+不得從 adapter 反產生全部 expected。兩模式須以實際 49 頁 HTML／HTTP、所有內鏈與宣告 anchor、五寬各 245 layouts、真實切換／鍵盤／axe／個資／列印與 artifact 補足純模型無法證明 DOM／事件可用的限制；保存全部原 FAIL／Exit／incomplete 與必要人工判讀。各任務新增 spec／report／artifacts／截圖均有版本邊界，舊證據不改稱本輪重跑。DC-006 已由 PR #44 合併；DC-007 另依其當次規格及授權驗收、交付新 PR，不自動合併。
 
 ## DC-003 路由外框與隔離預覽
 

@@ -294,10 +294,16 @@ docs(task): add XK website task specifications 006-014
 
 PR #42 已實際合併為 `main@9322810f27e74e5ed4faa35a3b3931b3719f0c9a`；main run 45802200429 於 2026-11-26 10:33:48Z 完成 Pages 部署，獨立公開 HTTP 驗證 3,273 PASS，包含 49 頁、36 assets 與 29 negatives。兩次合併與公開事件依 [整合報告](../reports/design-collection-integration.md) 追溯，不冒稱 DC-006 驗收。
 
-## DC-006 執行入口
+## DC-006 已合併實作入口
 
-[DC-006 規格](dc006.md) 與 [工作包 §8](../01_design/design-collection/work-packages.md#dc006) 已開始在 `feature/design-collection-navigation-seo` 執行，基準為上述已發布 49 頁 main。公司 main `9213a3d8dacb8774d87c26cb736c4a4315779e95` 與前置整合同版，已核讀、無新增適用規範衝突，維持唯讀。
+[DC-006 規格](dc006.md) 與 [工作包 §8](../01_design/design-collection/work-packages.md#dc006) 已在 `feature/design-collection-navigation-seo` 完成並由 PR #44 合併，基準為上述已發布 49 頁 main。公司 main `9213a3d8dacb8774d87c26cb736c4a4315779e95` 與前置整合同版，已核讀、無新增適用規範衝突，維持唯讀。
 
-本輪實作共用導航模型／resolver、Header 後且列印隱藏的風格 band、同內容／slug／共同合法 hash 切換、三套 Header／Footer／CTA 同源導覽與 Gallery 七主頁比較。URL 決定風格，Client 僅接輕量公開 DTO；不帶 query／個資，不增加偏好儲存，Quotation 只還原既有 IDs。本機功能與版面驗收已完成；原始 incomplete／網路診斷及限定重驗詳見本輪報告，未把原 suite 退出碼改寫成全數 PASS。
+DC-006 實作共用導航模型／resolver、Header 後且列印隱藏的風格 band、同內容／slug／共同合法 hash 切換、三套 Header／Footer／CTA 同源導覽與 Gallery 七主頁比較。URL 決定風格，Client 僅接輕量公開 DTO；不帶 query／個資，不增加偏好儲存，Quotation 只還原既有 IDs。本機功能與版面驗收已完成；原始 incomplete／網路診斷及限定重驗詳見本輪報告，未把原 suite 退出碼改寫成全數 PASS。
 
-[本輪報告](../reports/dc006-implementation.md) 記錄實際結果、原失敗與限定重驗；[截圖](../screenshots/design-collection/dc006/) 共 18 張實際 Pages 畫面，已逐張檢視。最終 CI／artifact 待新 PR，commit／push feature 後交付審閱，不自動合併；PR #40／#42 的舊合併授權不延伸至此新 PR。DC-007 尚未開始，既有法律、索引、價格、收件與 DNS 邊界保持。
+[本輪報告](../reports/dc006-implementation.md) 記錄實際結果、原失敗與限定重驗；[截圖](../screenshots/design-collection/dc006/) 共 18 張實際 Pages 畫面，已逐張檢視。PR #44 的精確 CI／artifact、合併與 main 部署已完成；實際 merge 依使用者對 PR #44 的另次授權，沒有挪用 PR #40／#42 舊授權。DC-007 依下列執行紀錄進行，既有法律、索引、價格、收件與 DNS 邊界保持。
+
+## DC-007 執行紀錄｜2026-11-26
+
+DC-006 [PR #44](https://github.com/xk2022/xk-website/pull/44) 已合併並部署，滿足前置。本輪 `test/design-collection-release` 保存49頁雙模式驗收、47張實圖、8份實體PDF、18個cold樣本、維護與rollback文件。完整發布門檻仍有TBT目標FAIL、原始網路取消未解及真人讀屏BLOCKED；詳本輪報告，不改寫原FAIL，不自動合併或部署。
+
+本輪入口：[規格](../task/dc007.md)／[實作與驗收](../reports/dc007-implementation.md)／[維護與 rollback](../03_engineering/design-collection-maintenance.md)。

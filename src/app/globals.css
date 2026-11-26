@@ -53,6 +53,10 @@
 @source not "../../docs/reports/dc006-implementation.md";
 @source not "../../docs/reports/dc006-artifacts";
 @source not "../../scripts/test-design-collection-navigation.mjs";
+@source not "../../docs/task/dc007.md";
+@source not "../../docs/reports/dc007-implementation.md";
+@source not "../../docs/reports/dc007-artifacts";
+@source not "../../docs/03_engineering/design-collection-maintenance.md";
 
 :root {
   color-scheme: light;

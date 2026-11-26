@@ -1,6 +1,6 @@
 # XK Website Roadmap｜開發進度總表
 
-核對日期：2026-11-26（Asia/Taipei）。正式 main `9322810f27e74e5ed4faa35a3b3931b3719f0c9a` 已合併 PR #40／#42；Modern／Heritage／Luxury 各 16＋Gallery 共 49 頁已部署並完成公開 HTTP 驗證。DC-006 在 `feature/design-collection-navigation-seo` 的本機功能與版面驗收已完成；原始 incomplete／網路診斷及限定重驗詳報告，最終 CI／artifact 待新 PR，交付審閱、不自動合併；DC-007 尚未開始。
+核對日期：2026-11-26（UTC）。正式 main `ee4b4709a9f8daa755e2595a46c158b3c92d8229` 已合併 DC-006 PR #44；49 頁與跨風格切換已部署。本輪 `test/design-collection-release` 執行 DC-007 完整驗收與維護文件，實際結果及 Required 外部缺口依本輪報告；不自動合併或部署。
 
 本表彙整既有任務與實際合併事件，不新增工作範圍、規範或承諾。Task 規格、工作包與歷史報告仍保留原始內容；最新 GitHub／部署狀態應以對應 PR、實際 run 與公開驗證為準。合併不代表未核准的法律、索引、價格或業務項目已完成。
 
@@ -64,8 +64,8 @@ BF-009～016 以 [PR #24](https://github.com/xk2022/xk-website/pull/24)、[待�
 | DC-003 Modern／Gallery | 已合併 [PR #39](https://github.com/xk2022/xk-website/pull/39)；[規格](dc003.md)、[報告](../reports/dc003-implementation.md)，其 17 頁驗收保留歷史版本 | DC-002 |
 | DC-004 Heritage | [v1 核准](../01_design/design-collection/reviews/heritage-v1-approval.md)、[完整規格](dc004.md)／[報告](../reports/dc004-implementation.md)；[PR #40](https://github.com/xk2022/xk-website/pull/40) 已合併 `0d41ecf495e55b792f966c9fe27bd07c27bc5647`；[main CI／Pages](https://github.com/xk2022/xk-website/actions/runs/45796333591) 及公開 33 頁 HTTP 2,329 PASS | DC-003 |
 | DC-005 Luxury | [v1 核准](../01_design/design-collection/reviews/luxury-v1-approval.md)、[完整規格](dc005.md)／[報告](../reports/dc005-implementation.md)；[PR #42](https://github.com/xk2022/xk-website/pull/42) 已合併 `9322810f27e74e5ed4faa35a3b3931b3719f0c9a`，49 頁已部署與公開驗證 | DC-003＋同版本 Luxury 品牌核准 |
-| DC-006 三系列切換／導航／SEO | [規格](dc006.md)、[本輪報告](../reports/dc006-implementation.md)、[18 張已檢視 Pages 截圖](../screenshots/design-collection/dc006/)；本機功能與版面驗收完成，原始 incomplete／網路診斷及限定重驗詳報告；最終 CI／artifact 待新 PR，交付審閱、不自動合併 | DC-004、DC-005 已合併 |
-| DC-007 完整驗收與發布準備 | 尚未開始；[工作包](../01_design/design-collection/work-packages.md#dc007)，不由現有公開 49 頁推定完成 | DC-006 合併 |
+| DC-006 三系列切換／導航／SEO | [規格](dc006.md)、[本輪報告](../reports/dc006-implementation.md)、[18 張已檢視 Pages 截圖](../screenshots/design-collection/dc006/)；本機功能與版面驗收完成，原始 incomplete／網路診斷及限定重驗詳報告；PR #44 已合併並完成精確 CI／artifact／main 部署；原始測試界線保留 | DC-004、DC-005 已合併 |
+| DC-007 完整驗收與發布準備 | 發布FAIL／BLOCKED；[規格](dc007.md)／[本輪報告](../reports/dc007-implementation.md)；Required 外部證據缺少不算完成 | DC-006 PR #44 已合併 |
 
 DC-006 最終 v2 六品質指令及 typegen 均 Exit 0；normal／Pages HTTP 各 3,274 項，兩模式各完成 49 頁×五寬 245 layouts、20 axe 與 96 個切換方向，0 violations。normal 原 suite Exit 2（10 overlap incomplete）；Pages 原 Exit 1（同 10 項及三筆帶 `source=qa` 的 HEAD canceled，僅 final network gate FAIL）。10 項逐筆人工判讀皆 PASS，三筆 query 的限定重驗與原始紀錄詳見本輪報告，不能概稱原完整 suite Exit 0。
 
@@ -90,3 +90,9 @@ DOC-005／DOC-006 已分別由 PR #37／#38 合併；DC-003 已由 [PR #39](http
 - 核對時 [PR #18](https://github.com/xk2022/xk-website/pull/18)（人員文案）及 [PR #29](https://github.com/xk2022/xk-website/pull/29)（早期三風格討論紀錄）仍為 open，未視為已合併；相關後續成果各見 [PR #24](https://github.com/xk2022/xk-website/pull/24)／[PR #30](https://github.com/xk2022/xk-website/pull/30)。本文件不關閉或重複合併這些 PR。
 
 完整驗收與歷史資料見 [報告索引](../reports/README.md)、[歷史索引](../98_decisions/README.md)。每次狀態更新核對精確 PR、main SHA、CI 與實際發布結果，不在其他文件另維護一份完整進度表。
+
+## DC-007 執行紀錄｜2026-11-26
+
+DC-006 [PR #44](https://github.com/xk2022/xk-website/pull/44) 已合併並部署，滿足前置。本輪 `test/design-collection-release` 保存49頁雙模式驗收、47張實圖、8份實體PDF、18個cold樣本、維護與rollback文件。完整發布門檻仍有TBT目標FAIL、原始網路取消未解及真人讀屏BLOCKED；詳本輪報告，不改寫原FAIL，不自動合併或部署。
+
+本輪入口：[規格](../task/dc007.md)／[實作與驗收](../reports/dc007-implementation.md)／[維護與 rollback](../03_engineering/design-collection-maintenance.md)。

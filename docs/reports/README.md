@@ -44,8 +44,8 @@
 | DC-005 品牌前置 | [v1 審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、[歷史驗證報告](dc005-brand-review.md)、[同版本品牌核准](../01_design/design-collection/reviews/luxury-v1-approval.md)；PR #41 已核准合併 |
 | DC-005 完整 Luxury | [規格](../task/dc005.md)、[實作報告](dc005-implementation.md)；[PR #42](https://github.com/xk2022/xk-website/pull/42) 已合併為 `9322810f27e74e5ed4faa35a3b3931b3719f0c9a`，main 49 頁已部署／公開驗證（run 45802200429） |
 | 合併整合 | [整合報告](design-collection-integration.md)；33→49 頁版本、真實 merge／CI／部署／公開驗證及原始失敗，獨立於 DC-006 新功能驗收 |
-| DC-006 三系列切換與導航 | [規格](../task/dc006.md)、[本輪報告](dc006-implementation.md)、[18 張已檢視 Pages 截圖](../screenshots/design-collection/dc006/)；本機功能與版面驗收已完成，原始 incomplete／網路診斷及限定重驗詳報告；最終 CI／artifact 待新 PR，交付審閱、不自動合併 |
-| DC-007 完整驗收與發布準備 | [工作包](../01_design/design-collection/work-packages.md#dc007)；尚未開始，前置為 DC-006 合併，不以既有 49 頁已發布推定完成 |
+| DC-006 三系列切換與導航 | [規格](../task/dc006.md)、[本輪報告](dc006-implementation.md)、[18 張已檢視 Pages 截圖](../screenshots/design-collection/dc006/)；本機功能與版面驗收已完成，原始 incomplete／網路診斷及限定重驗詳報告；PR #44 已合併並完成精確 CI／artifact／main 部署；原始測試界線保留 |
+| DC-007 完整驗收與發布準備 | [工作包](../01_design/design-collection/work-packages.md#dc007)；[規格](../task/dc007.md)／[本輪報告](dc007-implementation.md) 驗收紀錄已建立；發布FAIL／BLOCKED，不以既有49頁推定通過 |
 
 ## 證據保存
 
@@ -54,3 +54,9 @@
 各報告旁的 JSON、壓縮檔、manifest 及原始工具依既有路徑保留；畫面見 [screenshots](../screenshots)。不可把不同版本的 PASS 改成當前版本；不得刪除原始失敗、重驗資料或以本索引代替實際記錄。
 
 早期 [implementation-notes.md](implementation-notes.md) 是 Task 001～008 及協作流程的歷史快照，與 [延續紀錄](../98_decisions/implementation-notes.md) 有重疊，原檔保留以支援來源追溯；後續不並行追加。完整閱讀順序見 [歷史與重複文件索引](../98_decisions/README.md)。
+
+## DC-007 執行紀錄｜2026-11-26
+
+DC-006 [PR #44](https://github.com/xk2022/xk-website/pull/44) 已合併並部署，滿足前置。本輪 `test/design-collection-release` 保存49頁雙模式驗收、47張實圖、8份實體PDF、18個cold樣本、維護與rollback文件。完整發布門檻仍有TBT目標FAIL、原始網路取消未解及真人讀屏BLOCKED；詳本輪報告，不改寫原FAIL，不自動合併或部署。
+
+本輪入口：[規格](../task/dc007.md)／[驗收報告](dc007-implementation.md)／[維護與 rollback](../03_engineering/design-collection-maintenance.md)。
