@@ -57,5 +57,5 @@ export const designCollectionRegistry = freeze({
   technicalProjectSlugs: portfolioProjects.map(({ slug }) => slug),
   brandShowcaseSlugs: brandWebsiteShowcases.flatMap(({ id }) => getBrandShowcase(id) ? [id] : []),
   anchors,
-  collectionAnchors: ["main-content", "design-styles"] as const,
+  collectionAnchors: ["main-content", "design-styles", "compare-pages"] as const,
 });

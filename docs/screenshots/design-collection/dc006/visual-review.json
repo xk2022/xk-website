@@ -1,0 +1,242 @@
+{
+  "testId": "DC6-VISUAL",
+  "status": "PASS_SCOPED_VISUAL_REVIEW",
+  "date": "2026-11-26",
+  "sourceFingerprint": "fa0e21576322d94fa7565c61a0b8ef36a1eba6bc3a3dd058f082e4ebe02decac",
+  "mode": "Pages, Chromium156, viewport height1000, deviceScaleFactor1",
+  "observations": [
+    "Three current-style states visibly distinguish current text/check and real alternative links. Desktop three columns and mobile wrapping remain readable.",
+    "Three brand home compositions and images retained; new white navigation band sits between Header and main without overlap.",
+    "Gallery seven-row comparison table remains readable in 375px viewport; three cards and long grouped Footer retain normal flow.",
+    "Heritage/Luxury deep-page mobile menus, visible focus and current band are in document flow with no clipped controls.",
+    "Full-page overviews support section order/overall composition only. Automated245 layouts in each mode independently cover320/375/768/1440/1920."
+  ],
+  "images": [
+    {
+      "route": "/design-collection",
+      "width": 375,
+      "kind": "actual-fullpage",
+      "path": "gallery-375.png",
+      "sha256": "b315d99fcd9b2301b226e38bed37af8d891c71367f815693891155eaabf53ebf",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/gallery-375.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection",
+      "width": 1440,
+      "kind": "actual-fullpage",
+      "path": "gallery-1440.png",
+      "sha256": "5870c6182dbd80aedbea0349c3afe4b0843db3c97a038784849a77a1d9e63a61",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/gallery-1440.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/",
+      "width": 375,
+      "kind": "actual-fullpage",
+      "path": "modern-home-375.png",
+      "sha256": "f4dfd5ecf318b3200dc4bf139447388fb1968dc6b3d3245b1c95b418459174b1",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/modern-home-375.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/",
+      "width": 375,
+      "kind": "actual-switcher-band-element-closeup",
+      "bandRect": {
+        "x": 0,
+        "y": 81,
+        "width": 375,
+        "height": 283.34375
+      },
+      "path": "modern-switcher-band-375.png",
+      "sha256": "0a144fcee9b3e5716fcad4fbe88230fc999c92be6c1ce2add4fd2f6448c51566",
+      "scope": "Readable actual component screenshot; internal padding preserves link focus-outline context. Footer geometry/hrefs separately asserted on245layouts; priorFooterimages remain historical.",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/modern-switcher-band-375.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "kind": "actual-fullpage",
+      "path": "modern-home-1440.png",
+      "sha256": "c3de4a2683f35a1077d3ecd3ee92c63fc25727d47970c66bdcf0dc46cdf7f629",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/modern-home-1440.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "kind": "actual-switcher-band-element-closeup",
+      "bandRect": {
+        "x": 0,
+        "y": 81,
+        "width": 1440,
+        "height": 159.28125
+      },
+      "path": "modern-switcher-band-1440.png",
+      "sha256": "006ad4146e6aa62f6479cd1192e17db7168135782237a2ef516c9509b0077bbb",
+      "scope": "Readable actual component screenshot; internal padding preserves link focus-outline context. Footer geometry/hrefs separately asserted on245layouts; priorFooterimages remain historical.",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/modern-switcher-band-1440.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection/heritage",
+      "width": 375,
+      "kind": "actual-fullpage",
+      "path": "heritage-home-375.png",
+      "sha256": "ba1112817080bc9ea39a612283c0f4ec834fab7493371967c89da06c18475811",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/heritage-home-375.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection/heritage",
+      "width": 375,
+      "kind": "actual-switcher-band-element-closeup",
+      "bandRect": {
+        "x": 0,
+        "y": 271.375,
+        "width": 375,
+        "height": 283.34375
+      },
+      "path": "heritage-switcher-band-375.png",
+      "sha256": "e1e2475fefe54dbd5b3b60476f7607e55c0d94b85f23622690171c5f978b8b4a",
+      "scope": "Readable actual component screenshot; internal padding preserves link focus-outline context. Footer geometry/hrefs separately asserted on245layouts; priorFooterimages remain historical.",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/heritage-switcher-band-375.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection/heritage",
+      "width": 1440,
+      "kind": "actual-fullpage",
+      "path": "heritage-home-1440.png",
+      "sha256": "85edcb4f7b031f63a3310aaa661455c6f7d57e91bbfd9cdf7f83db1c38064508",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/heritage-home-1440.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection/heritage",
+      "width": 1440,
+      "kind": "actual-switcher-band-element-closeup",
+      "bandRect": {
+        "x": 0,
+        "y": 235.984375,
+        "width": 1440,
+        "height": 159.28125
+      },
+      "path": "heritage-switcher-band-1440.png",
+      "sha256": "30ede08bc6666698be054a422a37bee5dad87b84e3941cdd4ef88ff8cb2cbb66",
+      "scope": "Readable actual component screenshot; internal padding preserves link focus-outline context. Footer geometry/hrefs separately asserted on245layouts; priorFooterimages remain historical.",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/heritage-switcher-band-1440.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 375,
+      "kind": "actual-fullpage",
+      "path": "luxury-home-375.png",
+      "sha256": "86bf134888bb95c4cce232152c04f9b21dedf88ae001a5e56bc8ff2e7c3d99b4",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/luxury-home-375.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 375,
+      "kind": "actual-switcher-band-element-closeup",
+      "bandRect": {
+        "x": 0,
+        "y": 266.984375,
+        "width": 375,
+        "height": 283.34375
+      },
+      "path": "luxury-switcher-band-375.png",
+      "sha256": "44919072d6d53264aa1cef0e1212aa2bb5b03d4c9c9ba344e997c59b2f048219",
+      "scope": "Readable actual component screenshot; internal padding preserves link focus-outline context. Footer geometry/hrefs separately asserted on245layouts; priorFooterimages remain historical.",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/luxury-switcher-band-375.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 1440,
+      "kind": "actual-fullpage",
+      "path": "luxury-home-1440.png",
+      "sha256": "7ff29923d55e8451624980ca9e4bf1be25ffa17f36c0c023d9b1f8ff5a96adce",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/luxury-home-1440.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection/luxury",
+      "width": 1440,
+      "kind": "actual-switcher-band-element-closeup",
+      "bandRect": {
+        "x": 0,
+        "y": 206.484375,
+        "width": 1440,
+        "height": 159.28125
+      },
+      "path": "luxury-switcher-band-1440.png",
+      "sha256": "748c3622758a3ed89809f107e3c1159e09a551767c2b9d7b0abb55ae3df3e621",
+      "scope": "Readable actual component screenshot; internal padding preserves link focus-outline context. Footer geometry/hrefs separately asserted on245layouts; priorFooterimages remain historical.",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/luxury-switcher-band-1440.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection/heritage/portfolio/showcases/qiangang-windows",
+      "width": 375,
+      "kind": "actual-switcher-state-viewport",
+      "path": "switcher-heritage-deep-current-menu-open-375.png",
+      "sha256": "4264ae3db583b303251df6f01d1692dd3836aac3868000a48a3bd433b22ebf1b",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/switcher-heritage-deep-current-menu-open-375.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection/luxury/portfolio/showcases/qiangang-windows",
+      "width": 375,
+      "kind": "actual-switcher-state-viewport",
+      "path": "switcher-luxury-deep-current-menu-open-375.png",
+      "sha256": "c29552e1fbc630a1c079cab64cf7c73da9018f6603dd62c1c0ff99988e2754db",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/switcher-luxury-deep-current-menu-open-375.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection",
+      "width": 375,
+      "kind": "actual-switcher-state-viewport",
+      "path": "gallery-comparison-375.png",
+      "sha256": "b7229aabe8fdaf2048abe42c7a0ab947907427fb0f869860b3b58b33f8030d02",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/gallery-comparison-375.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    },
+    {
+      "route": "/design-collection",
+      "width": 1440,
+      "kind": "actual-switcher-state-viewport",
+      "path": "gallery-comparison-1440.png",
+      "sha256": "d51c09716c9d8b9657de1427ee6335e589aa96a1aa40feba2118d1f356e7cb06",
+      "originalPath": "/tmp/xk-dc006-final/pages-v2/gallery-comparison-1440.png",
+      "mode": "Pages static export",
+      "humanReview": "Root actually inspected this image on 2026-11-26. Long full-page images were resized for composition overview; six original band closeups, two comparison viewports and two mobile-menu viewports inspected at readable detail. No claim of pixel-by-pixel reading of all long-page body text."
+    }
+  ],
+  "limitations": [
+    "Local acceptance screenshots, not public DC006 deployment evidence.",
+    "No physical PDF generated in DC006; unchanged A4/QR bytes bridge plus fresh print-media assertions are documented separately."
+  ]
+}

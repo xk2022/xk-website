@@ -1,0 +1,166 @@
+{
+  "testId": "DC006-FINAL-TOOL-V4-SAME-DOCUMENT-CORRECTION",
+  "status": "READY_AFTER_ACTUAL_TINY4",
+  "entry": "/tmp/xk-dc006-final/browser-v4.cjs",
+  "entrySHA256": "b1a91158cceb8b763b5af68bb7c4415c1e228d707e0d85110d87867548876897",
+  "originalTool": {
+    "path": "/tmp/xk-dc006-final/browser-v3.cjs",
+    "sha256": "dfd1a736cf6ced11051db8045835b82ac7ab593d7b4aaea83f8074b7e42c7711"
+  },
+  "originalSuite": {
+    "path": "/tmp/xk-dc006-final/normal-final/result.json",
+    "sha256": "a787627a378b8ff34743be06fecb1241593541366f7658ee2a2143cd4a9490fa",
+    "status": "FAIL",
+    "counters": {
+      "expectedTests": 417,
+      "tests": 417,
+      "expectedLayouts": 245,
+      "layouts": 245,
+      "expectedAxeScans": 20,
+      "axeScans": 20,
+      "expectedSelectedBusinessAssertions": 24,
+      "expectedSwitcherIdentityCases": 96,
+      "switcherIdentityCases": 96,
+      "selectedBusinessAssertions": 24,
+      "expectedPrintMediaCases": 3,
+      "printMediaCases": 2,
+      "expectedScreenshots": 0,
+      "screenshots": 0,
+      "failures": 34,
+      "violations": 0,
+      "incompleteNodes": 10,
+      "manualEvidenceErrors": 0
+    },
+    "policy": "Original417result and all34FAIL remain unchanged.33sourceForSwitchnull-response tool failures classified only; product staleFooterpathname failure remains product-v1FAIL."
+  },
+  "classifiedToolFailureTestIds": [
+    "SWITCH-IDENTITY-home-main-luxury-TO-modern",
+    "SWITCH-IDENTITY-home-main-luxury-TO-heritage",
+    "SWITCH-IDENTITY-about-main-luxury-TO-modern",
+    "SWITCH-IDENTITY-about-main-luxury-TO-heritage",
+    "SWITCH-IDENTITY-services-main-luxury-TO-modern",
+    "SWITCH-IDENTITY-services-main-luxury-TO-heritage",
+    "SWITCH-IDENTITY-solutions-main-luxury-TO-modern",
+    "SWITCH-IDENTITY-solutions-main-luxury-TO-heritage",
+    "SWITCH-IDENTITY-portfolio-main-luxury-TO-modern",
+    "SWITCH-IDENTITY-portfolio-main-luxury-TO-heritage",
+    "SWITCH-IDENTITY-technical-project-corporate-website-luxury-TO-modern",
+    "SWITCH-IDENTITY-technical-project-corporate-website-luxury-TO-heritage",
+    "SWITCH-IDENTITY-technical-project-enterprise-management-luxury-TO-modern",
+    "SWITCH-IDENTITY-technical-project-enterprise-management-luxury-TO-heritage",
+    "SWITCH-IDENTITY-technical-project-integration-hub-luxury-TO-modern",
+    "SWITCH-IDENTITY-technical-project-integration-hub-luxury-TO-heritage",
+    "SWITCH-IDENTITY-brand-showcase-march-tangbao-luxury-TO-modern",
+    "SWITCH-IDENTITY-brand-showcase-march-tangbao-luxury-TO-heritage",
+    "SWITCH-IDENTITY-brand-showcase-hongjia-birdnest-luxury-TO-modern",
+    "SWITCH-IDENTITY-brand-showcase-hongjia-birdnest-luxury-TO-heritage",
+    "SWITCH-IDENTITY-brand-showcase-yupinyuan-bento-luxury-TO-modern",
+    "SWITCH-IDENTITY-brand-showcase-yupinyuan-bento-luxury-TO-heritage",
+    "SWITCH-IDENTITY-brand-showcase-campaign-website-design-luxury-TO-modern",
+    "SWITCH-IDENTITY-brand-showcase-campaign-website-design-luxury-TO-heritage",
+    "SWITCH-IDENTITY-brand-showcase-honest-diecut-luxury-TO-modern",
+    "SWITCH-IDENTITY-brand-showcase-honest-diecut-luxury-TO-heritage",
+    "SWITCH-IDENTITY-brand-showcase-qiangang-windows-luxury-TO-modern",
+    "SWITCH-IDENTITY-brand-showcase-qiangang-windows-luxury-TO-heritage",
+    "SWITCH-IDENTITY-contact-main-luxury-TO-modern",
+    "SWITCH-IDENTITY-contact-main-luxury-TO-heritage",
+    "SWITCH-IDENTITY-quotation-main-luxury-TO-modern",
+    "SWITCH-IDENTITY-quotation-main-luxury-TO-heritage",
+    "SWITCH-NATIVE-MENU-POINTER-DIRECT-BAND-luxury"
+  ],
+  "newGuard": {
+    "nonNull": "Original strict expectedstatus (published200/explicit404).",
+    "null": "Onlypublished200source; exactsame approvedbefore/after/requestpathname andquery, originbase, unchangedperformance.timeOrigin andrequestedhash; currentmetadata/palette/frame/band validated; samePageearlier actualdocumentGET200 for exactroute/query required. StoredresponseStatusnull/NO_NEW_HTTP_RESPONSE with proof; never relabelledHTTP200.",
+    "otherFailures": "Actualdifferentstyleclick stillrequires nonnullresponse200; network/runtime/resource gates unchanged."
+  },
+  "tinyActual": {
+    "receipt": "/tmp/xk-dc006-final/tiny-normal-preflight-v4-command.json",
+    "receiptSHA256": "bf8948e42c5673a19aa1df92b15e2dd42f755593d7c266f95ee97b506d793193",
+    "actualExitCode": 0,
+    "result": "/tmp/xk-dc006-final/normal-tiny-preflight-v4/result.json",
+    "resultSHA256": "57938d345dcfcf61e4d3b6352848de62b334f87804ce9a31d9ac3216d7857f56",
+    "counters": {
+      "expectedTests": 1,
+      "tests": 1,
+      "expectedLayouts": 1,
+      "layouts": 1,
+      "failures": 0,
+      "switcherInteractions": 1,
+      "sameDocumentSources": 1,
+      "footerSPAChecked": true,
+      "fullSuite": "NOT_EXECUTED"
+    },
+    "sameDocNullActuallyObserved": true,
+    "preFocus": {
+      "navigationAPI": {
+        "available": true,
+        "currententrychange": true
+      },
+      "rawHref": "/design-collection/heritage#services",
+      "policy": "Observed only; activation remains authoritative"
+    },
+    "nativeSwitch": {
+      "url": "http://127.0.0.1:3276/design-collection/heritage#services",
+      "path": "/design-collection/heritage",
+      "hash": "#services",
+      "query": ""
+    },
+    "footerSPA": {
+      "quote": "http://127.0.0.1:3276/quotation",
+      "services": "http://127.0.0.1:3276/services",
+      "servicesBand": {
+        "rows": [
+          {
+            "style": "modern",
+            "tag": "SPAN",
+            "text": "Modern 現代專業\n✓ 目前版本",
+            "href": null,
+            "current": "page",
+            "fallback": null
+          },
+          {
+            "style": "heritage",
+            "tag": "A",
+            "text": "Heritage 懷舊復古\n查看此頁版本",
+            "href": "/design-collection/heritage/services",
+            "current": null,
+            "fallback": null
+          },
+          {
+            "style": "luxury",
+            "tag": "A",
+            "text": "Luxury 奢華精品\n查看此頁版本",
+            "href": "/design-collection/luxury/services",
+            "current": null,
+            "fallback": null
+          }
+        ],
+        "noteId": "_r_3_",
+        "note": "切換風格不帶入聯絡草稿、客戶稱呼與專案名稱，也不會自動複製個人欄位；已儲存的試算選項可還原。"
+      },
+      "quoteInactive": true
+    },
+    "errors": {
+      "consoleErrors": 0,
+      "runtimeErrors": 0,
+      "networkErrors": 0,
+      "privacyLeaks": 0
+    }
+  },
+  "source": {
+    "path": "/tmp/xk-dc006-final/source-bridge-v2.json",
+    "sha256": "e22abef38cb7d76c10d964ee8957edd91d7dfe660eadb52904748f1dc940021b",
+    "fingerprint": "fa0e21576322d94fa7565c61a0b8ef36a1eba6bc3a3dd058f082e4ebe02decac",
+    "files": 218,
+    "UIbridge": "/tmp/xk-dc006/ui/version-bridge.json"
+  },
+  "expectedFullUnchanged": {
+    "tests": 417,
+    "layouts": 245,
+    "axe": 20,
+    "identityCases": 96,
+    "pagesImages": 18,
+    "actualNewPDF": 0
+  },
+  "fullV2": "ROOT_OWNED_PENDING_NO_FULL_RUN_BY_THIS_AGENT"
+}

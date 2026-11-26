@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc006-final/snapshot.cjs"
+  ],
+  "cwd": "/tmp/xk-dc006-build",
+  "startedAt": "2026-11-26T10:50:04.343931+00:00",
+  "finishedAt": "2026-11-26T10:50:04.814609+00:00",
+  "processId": 112869,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 60.0,
+  "logFile": "/tmp/xk-dc006-final/snapshot.log",
+  "logSha256": "480d318ceb72c9c784e5145bbf839cc95505f385ecb2a26eebef19aa2093d07e",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

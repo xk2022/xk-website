@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc006-final/collect-band-overlap.cjs",
+    "normal",
+    "http://127.0.0.1:3276/",
+    "/tmp/xk-dc006-final/normal-v2/result.json",
+    "v2",
+    "/tmp/xk-dc006-build"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T11:23:14.798407+00:00",
+  "finishedAt": "2026-11-26T11:23:17.715571+00:00",
+  "processId": 116462,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc006-final/band-overlap-normal-v2.log",
+  "logSha256": "8bbf71ad4434387b4f0d67329afc0daaa63e1e41741102a1ff151317ed5b09c4",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

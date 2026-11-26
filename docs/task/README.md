@@ -286,14 +286,18 @@ docs(task): add XK website task specifications 006-014
 
 ## DC-004 執行入口
 
-使用者已對 PR #40 的 v1 配色、品牌外框與桌面／手機版型明確核准；[同版本紀錄](../01_design/design-collection/reviews/heritage-v1-approval.md) 滿足品牌前置。完整 Heritage 16 頁依 [DC-004](dc004.md) 及既有工作包實作，與 Modern 16＋Gallery 合計 33 頁。功能、分支驗收與限制見 [實作報告](../reports/dc004-implementation.md)，保留原始失敗與版本邊界。
-
-使用者最新「合併」已授權 PR #40 與 PR #42 依序合併，不重複要求同一確認。PR #40 已實際合併為 `main@0d41ecf495e55b792f966c9fe27bd07c27bc5647`，main 清冊 33 頁；main CI、Pages 部署及正式 33 頁 HTTP 驗證已完成（run 45796333591）。後續事件依 [整合報告](../reports/design-collection-integration.md) 的實際版本記錄。
+使用者已對 PR #40 的 v1 配色、品牌外框與桌面／手機版型核准；[同版本紀錄](../01_design/design-collection/reviews/heritage-v1-approval.md) 滿足品牌前置。完整 Heritage 16 頁的 [規格](dc004.md)／[報告](../reports/dc004-implementation.md) 保留原始失敗與版本邊界。PR #40 已合併為 `0d41ecf495e55b792f966c9fe27bd07c27bc5647`，main run 45796333591 的 CI／Pages 及當時公開 33 頁 HTTP 2,329 PASS 已完成。
 
 ## DC-005 執行入口
 
-使用者以「批准合併」核准 [Luxury v1](../01_design/design-collection/reviews/luxury-v1-approval.md)，[PR #41](https://github.com/xk2022/xk-website/pull/41) 已合併；原 [品牌審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、原型／截圖與 [品牌前置報告](../reports/dc005-brand-review.md) 保留原時點，不回寫為完整功能驗收。
+使用者以「批准合併」核准 [Luxury v1](../01_design/design-collection/reviews/luxury-v1-approval.md)，PR #41 已合併；原 [審閱稿](../01_design/design-collection/reviews/luxury-v1.md)、原型／截圖與 [品牌前置報告](../reports/dc005-brand-review.md) 保留原時點。[完整 DC-005](dc005.md)／[實作報告](../reports/dc005-implementation.md) 的分支驗收不改寫為後續新測試。
 
-[DC-005 完整工作包](dc005.md) 的 16 頁實作與原 33 頁驗收見 [實作報告](../reports/dc005-implementation.md)。[PR #42](https://github.com/xk2022/xk-website/pull/42) 已獲使用者後續明確合併授權，現在整合已合併 Heritage 的 main，本分支清冊為 Modern／Heritage／Luxury 各 16 頁＋Gallery，共 49 頁，待新驗收。當前 main 清冊仍為 33 頁，main CI、Pages 部署及正式 33 頁 HTTP 驗證已完成（run 45796333591）；不能把舊完整測試改稱本次重跑。
+PR #42 已實際合併為 `main@9322810f27e74e5ed4faa35a3b3931b3719f0c9a`；main run 45802200429 於 2026-11-26 10:33:48Z 完成 Pages 部署，獨立公開 HTTP 驗證 3,273 PASS，包含 49 頁、36 assets 與 29 negatives。兩次合併與公開事件依 [整合報告](../reports/design-collection-integration.md) 追溯，不冒稱 DC-006 驗收。
 
-DC-006 尚未開始，待 PR #42 實際合併後接續實作與驗收，另開新 PR 審閱，不自動合併。新舊來源、測試及遠端事件界線見 [整合報告](../reports/design-collection-integration.md)。
+## DC-006 執行入口
+
+[DC-006 規格](dc006.md) 與 [工作包 §8](../01_design/design-collection/work-packages.md#dc006) 已開始在 `feature/design-collection-navigation-seo` 執行，基準為上述已發布 49 頁 main。公司 main `9213a3d8dacb8774d87c26cb736c4a4315779e95` 與前置整合同版，已核讀、無新增適用規範衝突，維持唯讀。
+
+本輪實作共用導航模型／resolver、Header 後且列印隱藏的風格 band、同內容／slug／共同合法 hash 切換、三套 Header／Footer／CTA 同源導覽與 Gallery 七主頁比較。URL 決定風格，Client 僅接輕量公開 DTO；不帶 query／個資，不增加偏好儲存，Quotation 只還原既有 IDs。本機功能與版面驗收已完成；原始 incomplete／網路診斷及限定重驗詳見本輪報告，未把原 suite 退出碼改寫成全數 PASS。
+
+[本輪報告](../reports/dc006-implementation.md) 記錄實際結果、原失敗與限定重驗；[截圖](../screenshots/design-collection/dc006/) 共 18 張實際 Pages 畫面，已逐張檢視。最終 CI／artifact 待新 PR，commit／push feature 後交付審閱，不自動合併；PR #40／#42 的舊合併授權不延伸至此新 PR。DC-007 尚未開始，既有法律、索引、價格、收件與 DNS 邊界保持。

@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc006-final/browser-v3.cjs",
+    "normal",
+    "http://127.0.0.1:3276/",
+    "tiny-preflight-v3",
+    "/tmp/xk-dc006-final/source-bridge.json",
+    "/tmp/xk-dc006-final/fixture.json",
+    "/tmp/xk-dc006-final/catalog.json",
+    "--tiny-preflight"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T11:01:25.180560+00:00",
+  "finishedAt": "2026-11-26T11:01:28.206605+00:00",
+  "processId": 113998,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 180.0,
+  "logFile": "/tmp/xk-dc006-final/tiny-normal-preflight-v3.log",
+  "logSha256": "c240ba36e8e34721a809476c189a16cd744daa222a301bfd61bf4d461c468721",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

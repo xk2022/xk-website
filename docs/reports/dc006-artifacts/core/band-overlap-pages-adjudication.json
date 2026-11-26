@@ -1,0 +1,1067 @@
+{
+  "testId": "DC006-FINAL-BAND-OVERLAP-ADJUDICATION",
+  "status": "PASS_SCOPED_OVERLAP_REVIEW",
+  "mode": "pages",
+  "generatedAt": "2026-11-26T11:36:23.738189+00:00",
+  "original": {
+    "path": "/tmp/xk-dc006-final/pages-v2/result.json",
+    "sha256": "2c72c714683ccdc221e79060a7590eaad42e39c514a0e09ce6982788d40a6084",
+    "originalStatus": "FAIL"
+  },
+  "originalPolicy": "Original formal MANUAL_PENDING/actualExit2 and10incomplete remain untouched. This separate per-target paint/occlusion review does not claim axe0incomplete or fullWCAG/AT.",
+  "evidence": {
+    "path": "/tmp/xk-dc006-final/incomplete-pages-v2/evidence.json",
+    "sha256": "3204ba8b1658182281ddcafd22e273501c074412ac8e19964fd09f65ba785ebd"
+  },
+  "sourceCSS": {
+    "sourceCSS": {
+      "path": "/tmp/xk-dc006-build/src/app/globals.css",
+      "sha256": "02bee1d4a71cd8bd77db2b41dc8c1b78da94ae81e682da14dab8b64084a7e503",
+      "snapshot": "/tmp/xk-dc006-final/incomplete-pages-v2/globals.css.txt"
+    },
+    "switcherCSS": {
+      "path": "/tmp/xk-dc006-build/src/components/design-collection/shared/style-switcher.css",
+      "sha256": "77adf315fe516a8adf57ecac0536c1aaa45380dbd56ab34b4f28166844713edb",
+      "snapshot": "/tmp/xk-dc006-final/incomplete-pages-v2/style-switcher.css.txt"
+    }
+  },
+  "coverageExact": true,
+  "counters": {
+    "PASS_FULL_OPAQUE_OCCLUSION_AND_CLOSED_PAINT": 10
+  },
+  "targets": 10,
+  "minimumClosedContrast": 4.974752735406439,
+  "screenshots": [
+    {
+      "path": "/tmp/xk-dc006-final/incomplete-pages-v2/band375-menu-closed.png",
+      "sha256": "4434acd02e593456438c764bd00df7c2b4f2de10deea7e480907a0d6bc942c70"
+    },
+    {
+      "path": "/tmp/xk-dc006-final/incomplete-pages-v2/band375-menu-open.png",
+      "sha256": "9b5ef723aca05890e894ac4b694a683aa87127321d81571947ece3e56e16128d"
+    }
+  ],
+  "manualVisual": "Normal two actual375x1000 closed/open PNGs inspected: closed all3style items/current/note readable; open menu entirely covers underlying band. Pages screenshots require separate actual observation if this script is reused there.",
+  "rows": [
+    {
+      "testId": "DC006-BAND-OVERLAP-01",
+      "route": "/",
+      "width": 375,
+      "state": "actual-mobile-menu-expanded",
+      "target": [
+        ".design-style-switcher-heading > p:nth-child(1)"
+      ],
+      "text": "網站呈現風格",
+      "originalChecks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          },
+          "relatedNodes": []
+        }
+      ],
+      "evidenceGroupIndex": 0,
+      "evidenceNodeIndex": 0,
+      "status": "PASS_FULL_OPAQUE_OCCLUSION_AND_CLOSED_PAINT",
+      "requiredRatio": 4.5,
+      "closedPaint": {
+        "foreground": [
+          16.0,
+          24.0,
+          40.0
+        ],
+        "opaqueBackground": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "opaqueAncestorPath": "html:nth-of-type(1)>body:nth-of-type(1)>nav:nth-of-type(1)",
+        "contrastRatio": 17.74659431591738,
+        "method": "Fresh opaque foreground and nearest actual opaque surface, all intervening backgrounds transparent and no image/filter/groupopacity/pseudo. Exact WCAGsRGB0.04045 formula, no rounded threshold."
+      },
+      "panel": {
+        "path": "html:nth-of-type(1)>body:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)",
+        "tag": "DIV",
+        "id": "_R_4abrb_",
+        "className": "absolute inset-x-0 top-full border-b bg-background shadow-default",
+        "rect": {
+          "x": 0,
+          "y": 80,
+          "width": 375,
+          "height": 345,
+          "left": 0,
+          "right": 375,
+          "top": 80,
+          "bottom": 425
+        },
+        "style": {
+          "color": "rgb(23, 32, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "filter": "none",
+          "backdropFilter": "none",
+          "mixBlendMode": "normal",
+          "position": "absolute",
+          "zIndex": "auto",
+          "display": "block",
+          "visibility": "visible",
+          "maskImage": "none",
+          "maskMode": "match-source",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, color(srgb 0.0627451 0.101961 0.2 / 0.08) 0px 4px 16px 0px"
+        },
+        "pseudos": [
+          {
+            "pseudo": "::before",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          },
+          {
+            "pseudo": "::after",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          }
+        ]
+      },
+      "coverageRatio": 1,
+      "hitTests": {
+        "inViewport": 9,
+        "topmostPanel": 9,
+        "topmostExposedTarget": 0
+      },
+      "reason": "Entire measured target box is under opaque white menu and9/9 actual hit tests end in panel descendants; closed exact same text/target has passing actual paint. Invisible underlying glyphs are not assigned a fake contrast."
+    },
+    {
+      "testId": "DC006-BAND-OVERLAP-02",
+      "route": "/",
+      "width": 375,
+      "state": "actual-mobile-menu-expanded",
+      "target": [
+        ".design-style-switcher-heading > p:nth-child(2)"
+      ],
+      "text": "同一份內容，不同閱讀方式。",
+      "originalChecks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "9.8pt (13px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          },
+          "relatedNodes": []
+        }
+      ],
+      "evidenceGroupIndex": 0,
+      "evidenceNodeIndex": 1,
+      "status": "PASS_FULL_OPAQUE_OCCLUSION_AND_CLOSED_PAINT",
+      "requiredRatio": 4.5,
+      "closedPaint": {
+        "foreground": [
+          102.0,
+          112.0,
+          133.0
+        ],
+        "opaqueBackground": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "opaqueAncestorPath": "html:nth-of-type(1)>body:nth-of-type(1)>nav:nth-of-type(1)",
+        "contrastRatio": 4.974752735406439,
+        "method": "Fresh opaque foreground and nearest actual opaque surface, all intervening backgrounds transparent and no image/filter/groupopacity/pseudo. Exact WCAGsRGB0.04045 formula, no rounded threshold."
+      },
+      "panel": {
+        "path": "html:nth-of-type(1)>body:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)",
+        "tag": "DIV",
+        "id": "_R_4abrb_",
+        "className": "absolute inset-x-0 top-full border-b bg-background shadow-default",
+        "rect": {
+          "x": 0,
+          "y": 80,
+          "width": 375,
+          "height": 345,
+          "left": 0,
+          "right": 375,
+          "top": 80,
+          "bottom": 425
+        },
+        "style": {
+          "color": "rgb(23, 32, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "filter": "none",
+          "backdropFilter": "none",
+          "mixBlendMode": "normal",
+          "position": "absolute",
+          "zIndex": "auto",
+          "display": "block",
+          "visibility": "visible",
+          "maskImage": "none",
+          "maskMode": "match-source",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, color(srgb 0.0627451 0.101961 0.2 / 0.08) 0px 4px 16px 0px"
+        },
+        "pseudos": [
+          {
+            "pseudo": "::before",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          },
+          {
+            "pseudo": "::after",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          }
+        ]
+      },
+      "coverageRatio": 1,
+      "hitTests": {
+        "inViewport": 9,
+        "topmostPanel": 9,
+        "topmostExposedTarget": 0
+      },
+      "reason": "Entire measured target box is under opaque white menu and9/9 actual hit tests end in panel descendants; closed exact same text/target has passing actual paint. Invisible underlying glyphs are not assigned a fake contrast."
+    },
+    {
+      "testId": "DC006-BAND-OVERLAP-03",
+      "route": "/",
+      "width": 375,
+      "state": "actual-mobile-menu-expanded",
+      "target": [
+        ".design-style-switcher-collection-link"
+      ],
+      "text": "比較三套版面",
+      "originalChecks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          },
+          "relatedNodes": []
+        }
+      ],
+      "evidenceGroupIndex": 0,
+      "evidenceNodeIndex": 2,
+      "status": "PASS_FULL_OPAQUE_OCCLUSION_AND_CLOSED_PAINT",
+      "requiredRatio": 4.5,
+      "closedPaint": {
+        "foreground": [
+          37.0,
+          99.0,
+          235.0
+        ],
+        "opaqueBackground": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "opaqueAncestorPath": "html:nth-of-type(1)>body:nth-of-type(1)>nav:nth-of-type(1)",
+        "contrastRatio": 5.16855556002256,
+        "method": "Fresh opaque foreground and nearest actual opaque surface, all intervening backgrounds transparent and no image/filter/groupopacity/pseudo. Exact WCAGsRGB0.04045 formula, no rounded threshold."
+      },
+      "panel": {
+        "path": "html:nth-of-type(1)>body:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)",
+        "tag": "DIV",
+        "id": "_R_4abrb_",
+        "className": "absolute inset-x-0 top-full border-b bg-background shadow-default",
+        "rect": {
+          "x": 0,
+          "y": 80,
+          "width": 375,
+          "height": 345,
+          "left": 0,
+          "right": 375,
+          "top": 80,
+          "bottom": 425
+        },
+        "style": {
+          "color": "rgb(23, 32, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "filter": "none",
+          "backdropFilter": "none",
+          "mixBlendMode": "normal",
+          "position": "absolute",
+          "zIndex": "auto",
+          "display": "block",
+          "visibility": "visible",
+          "maskImage": "none",
+          "maskMode": "match-source",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, color(srgb 0.0627451 0.101961 0.2 / 0.08) 0px 4px 16px 0px"
+        },
+        "pseudos": [
+          {
+            "pseudo": "::before",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          },
+          {
+            "pseudo": "::after",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          }
+        ]
+      },
+      "coverageRatio": 1,
+      "hitTests": {
+        "inViewport": 9,
+        "topmostPanel": 9,
+        "topmostExposedTarget": 0
+      },
+      "reason": "Entire measured target box is under opaque white menu and9/9 actual hit tests end in panel descendants; closed exact same text/target has passing actual paint. Invisible underlying glyphs are not assigned a fake contrast."
+    },
+    {
+      "testId": "DC006-BAND-OVERLAP-04",
+      "route": "/",
+      "width": 375,
+      "state": "actual-mobile-menu-expanded",
+      "target": [
+        ".design-style-switcher-current > span:nth-child(1)"
+      ],
+      "text": "Modern 現代專業",
+      "originalChecks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          },
+          "relatedNodes": []
+        }
+      ],
+      "evidenceGroupIndex": 0,
+      "evidenceNodeIndex": 3,
+      "status": "PASS_FULL_OPAQUE_OCCLUSION_AND_CLOSED_PAINT",
+      "requiredRatio": 4.5,
+      "closedPaint": {
+        "foreground": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "opaqueBackground": [
+          16.0,
+          24.0,
+          40.0
+        ],
+        "opaqueAncestorPath": "html:nth-of-type(1)>body:nth-of-type(1)>nav:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(1)>span:nth-of-type(1)",
+        "contrastRatio": 17.74659431591738,
+        "method": "Fresh opaque foreground and nearest actual opaque surface, all intervening backgrounds transparent and no image/filter/groupopacity/pseudo. Exact WCAGsRGB0.04045 formula, no rounded threshold."
+      },
+      "panel": {
+        "path": "html:nth-of-type(1)>body:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)",
+        "tag": "DIV",
+        "id": "_R_4abrb_",
+        "className": "absolute inset-x-0 top-full border-b bg-background shadow-default",
+        "rect": {
+          "x": 0,
+          "y": 80,
+          "width": 375,
+          "height": 345,
+          "left": 0,
+          "right": 375,
+          "top": 80,
+          "bottom": 425
+        },
+        "style": {
+          "color": "rgb(23, 32, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "filter": "none",
+          "backdropFilter": "none",
+          "mixBlendMode": "normal",
+          "position": "absolute",
+          "zIndex": "auto",
+          "display": "block",
+          "visibility": "visible",
+          "maskImage": "none",
+          "maskMode": "match-source",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, color(srgb 0.0627451 0.101961 0.2 / 0.08) 0px 4px 16px 0px"
+        },
+        "pseudos": [
+          {
+            "pseudo": "::before",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          },
+          {
+            "pseudo": "::after",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          }
+        ]
+      },
+      "coverageRatio": 1,
+      "hitTests": {
+        "inViewport": 9,
+        "topmostPanel": 9,
+        "topmostExposedTarget": 0
+      },
+      "reason": "Entire measured target box is under opaque white menu and9/9 actual hit tests end in panel descendants; closed exact same text/target has passing actual paint. Invisible underlying glyphs are not assigned a fake contrast."
+    },
+    {
+      "testId": "DC006-BAND-OVERLAP-05",
+      "route": "/",
+      "width": 375,
+      "state": "actual-mobile-menu-expanded",
+      "target": [
+        ".design-style-switcher-current > .design-style-switcher-state"
+      ],
+      "text": "✓ 目前版本",
+      "originalChecks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "9.0pt (12px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          },
+          "relatedNodes": []
+        }
+      ],
+      "evidenceGroupIndex": 0,
+      "evidenceNodeIndex": 4,
+      "status": "PASS_FULL_OPAQUE_OCCLUSION_AND_CLOSED_PAINT",
+      "requiredRatio": 4.5,
+      "closedPaint": {
+        "foreground": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "opaqueBackground": [
+          16.0,
+          24.0,
+          40.0
+        ],
+        "opaqueAncestorPath": "html:nth-of-type(1)>body:nth-of-type(1)>nav:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(1)>span:nth-of-type(1)",
+        "contrastRatio": 17.74659431591738,
+        "method": "Fresh opaque foreground and nearest actual opaque surface, all intervening backgrounds transparent and no image/filter/groupopacity/pseudo. Exact WCAGsRGB0.04045 formula, no rounded threshold."
+      },
+      "panel": {
+        "path": "html:nth-of-type(1)>body:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)",
+        "tag": "DIV",
+        "id": "_R_4abrb_",
+        "className": "absolute inset-x-0 top-full border-b bg-background shadow-default",
+        "rect": {
+          "x": 0,
+          "y": 80,
+          "width": 375,
+          "height": 345,
+          "left": 0,
+          "right": 375,
+          "top": 80,
+          "bottom": 425
+        },
+        "style": {
+          "color": "rgb(23, 32, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "filter": "none",
+          "backdropFilter": "none",
+          "mixBlendMode": "normal",
+          "position": "absolute",
+          "zIndex": "auto",
+          "display": "block",
+          "visibility": "visible",
+          "maskImage": "none",
+          "maskMode": "match-source",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, color(srgb 0.0627451 0.101961 0.2 / 0.08) 0px 4px 16px 0px"
+        },
+        "pseudos": [
+          {
+            "pseudo": "::before",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          },
+          {
+            "pseudo": "::after",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          }
+        ]
+      },
+      "coverageRatio": 1,
+      "hitTests": {
+        "inViewport": 9,
+        "topmostPanel": 9,
+        "topmostExposedTarget": 0
+      },
+      "reason": "Entire measured target box is under opaque white menu and9/9 actual hit tests end in panel descendants; closed exact same text/target has passing actual paint. Invisible underlying glyphs are not assigned a fake contrast."
+    },
+    {
+      "testId": "DC006-BAND-OVERLAP-06",
+      "route": "/",
+      "width": 375,
+      "state": "actual-mobile-menu-expanded",
+      "target": [
+        "a[data-design-switcher-target=\"heritage\"] > span:nth-child(1)"
+      ],
+      "text": "Heritage 懷舊復古",
+      "originalChecks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          },
+          "relatedNodes": []
+        }
+      ],
+      "evidenceGroupIndex": 0,
+      "evidenceNodeIndex": 5,
+      "status": "PASS_FULL_OPAQUE_OCCLUSION_AND_CLOSED_PAINT",
+      "requiredRatio": 4.5,
+      "closedPaint": {
+        "foreground": [
+          16.0,
+          24.0,
+          40.0
+        ],
+        "opaqueBackground": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "opaqueAncestorPath": "html:nth-of-type(1)>body:nth-of-type(1)>nav:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)>a:nth-of-type(1)",
+        "contrastRatio": 17.74659431591738,
+        "method": "Fresh opaque foreground and nearest actual opaque surface, all intervening backgrounds transparent and no image/filter/groupopacity/pseudo. Exact WCAGsRGB0.04045 formula, no rounded threshold."
+      },
+      "panel": {
+        "path": "html:nth-of-type(1)>body:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)",
+        "tag": "DIV",
+        "id": "_R_4abrb_",
+        "className": "absolute inset-x-0 top-full border-b bg-background shadow-default",
+        "rect": {
+          "x": 0,
+          "y": 80,
+          "width": 375,
+          "height": 345,
+          "left": 0,
+          "right": 375,
+          "top": 80,
+          "bottom": 425
+        },
+        "style": {
+          "color": "rgb(23, 32, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "filter": "none",
+          "backdropFilter": "none",
+          "mixBlendMode": "normal",
+          "position": "absolute",
+          "zIndex": "auto",
+          "display": "block",
+          "visibility": "visible",
+          "maskImage": "none",
+          "maskMode": "match-source",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, color(srgb 0.0627451 0.101961 0.2 / 0.08) 0px 4px 16px 0px"
+        },
+        "pseudos": [
+          {
+            "pseudo": "::before",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          },
+          {
+            "pseudo": "::after",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          }
+        ]
+      },
+      "coverageRatio": 1,
+      "hitTests": {
+        "inViewport": 9,
+        "topmostPanel": 9,
+        "topmostExposedTarget": 0
+      },
+      "reason": "Entire measured target box is under opaque white menu and9/9 actual hit tests end in panel descendants; closed exact same text/target has passing actual paint. Invisible underlying glyphs are not assigned a fake contrast."
+    },
+    {
+      "testId": "DC006-BAND-OVERLAP-07",
+      "route": "/",
+      "width": 375,
+      "state": "actual-mobile-menu-expanded",
+      "target": [
+        "a[data-design-switcher-target=\"heritage\"] > .design-style-switcher-state"
+      ],
+      "text": "查看此頁版本",
+      "originalChecks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "9.0pt (12px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          },
+          "relatedNodes": []
+        }
+      ],
+      "evidenceGroupIndex": 0,
+      "evidenceNodeIndex": 6,
+      "status": "PASS_FULL_OPAQUE_OCCLUSION_AND_CLOSED_PAINT",
+      "requiredRatio": 4.5,
+      "closedPaint": {
+        "foreground": [
+          16.0,
+          24.0,
+          40.0
+        ],
+        "opaqueBackground": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "opaqueAncestorPath": "html:nth-of-type(1)>body:nth-of-type(1)>nav:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(2)>a:nth-of-type(1)",
+        "contrastRatio": 17.74659431591738,
+        "method": "Fresh opaque foreground and nearest actual opaque surface, all intervening backgrounds transparent and no image/filter/groupopacity/pseudo. Exact WCAGsRGB0.04045 formula, no rounded threshold."
+      },
+      "panel": {
+        "path": "html:nth-of-type(1)>body:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)",
+        "tag": "DIV",
+        "id": "_R_4abrb_",
+        "className": "absolute inset-x-0 top-full border-b bg-background shadow-default",
+        "rect": {
+          "x": 0,
+          "y": 80,
+          "width": 375,
+          "height": 345,
+          "left": 0,
+          "right": 375,
+          "top": 80,
+          "bottom": 425
+        },
+        "style": {
+          "color": "rgb(23, 32, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "filter": "none",
+          "backdropFilter": "none",
+          "mixBlendMode": "normal",
+          "position": "absolute",
+          "zIndex": "auto",
+          "display": "block",
+          "visibility": "visible",
+          "maskImage": "none",
+          "maskMode": "match-source",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, color(srgb 0.0627451 0.101961 0.2 / 0.08) 0px 4px 16px 0px"
+        },
+        "pseudos": [
+          {
+            "pseudo": "::before",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          },
+          {
+            "pseudo": "::after",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          }
+        ]
+      },
+      "coverageRatio": 1,
+      "hitTests": {
+        "inViewport": 9,
+        "topmostPanel": 9,
+        "topmostExposedTarget": 0
+      },
+      "reason": "Entire measured target box is under opaque white menu and9/9 actual hit tests end in panel descendants; closed exact same text/target has passing actual paint. Invisible underlying glyphs are not assigned a fake contrast."
+    },
+    {
+      "testId": "DC006-BAND-OVERLAP-08",
+      "route": "/",
+      "width": 375,
+      "state": "actual-mobile-menu-expanded",
+      "target": [
+        "a[data-design-switcher-target=\"luxury\"] > span:nth-child(1)"
+      ],
+      "text": "Luxury 奢華精品",
+      "originalChecks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "10.5pt (14px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          },
+          "relatedNodes": []
+        }
+      ],
+      "evidenceGroupIndex": 0,
+      "evidenceNodeIndex": 7,
+      "status": "PASS_FULL_OPAQUE_OCCLUSION_AND_CLOSED_PAINT",
+      "requiredRatio": 4.5,
+      "closedPaint": {
+        "foreground": [
+          16.0,
+          24.0,
+          40.0
+        ],
+        "opaqueBackground": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "opaqueAncestorPath": "html:nth-of-type(1)>body:nth-of-type(1)>nav:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)>a:nth-of-type(1)",
+        "contrastRatio": 17.74659431591738,
+        "method": "Fresh opaque foreground and nearest actual opaque surface, all intervening backgrounds transparent and no image/filter/groupopacity/pseudo. Exact WCAGsRGB0.04045 formula, no rounded threshold."
+      },
+      "panel": {
+        "path": "html:nth-of-type(1)>body:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)",
+        "tag": "DIV",
+        "id": "_R_4abrb_",
+        "className": "absolute inset-x-0 top-full border-b bg-background shadow-default",
+        "rect": {
+          "x": 0,
+          "y": 80,
+          "width": 375,
+          "height": 345,
+          "left": 0,
+          "right": 375,
+          "top": 80,
+          "bottom": 425
+        },
+        "style": {
+          "color": "rgb(23, 32, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "filter": "none",
+          "backdropFilter": "none",
+          "mixBlendMode": "normal",
+          "position": "absolute",
+          "zIndex": "auto",
+          "display": "block",
+          "visibility": "visible",
+          "maskImage": "none",
+          "maskMode": "match-source",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, color(srgb 0.0627451 0.101961 0.2 / 0.08) 0px 4px 16px 0px"
+        },
+        "pseudos": [
+          {
+            "pseudo": "::before",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          },
+          {
+            "pseudo": "::after",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          }
+        ]
+      },
+      "coverageRatio": 1,
+      "hitTests": {
+        "inViewport": 9,
+        "topmostPanel": 9,
+        "topmostExposedTarget": 0
+      },
+      "reason": "Entire measured target box is under opaque white menu and9/9 actual hit tests end in panel descendants; closed exact same text/target has passing actual paint. Invisible underlying glyphs are not assigned a fake contrast."
+    },
+    {
+      "testId": "DC006-BAND-OVERLAP-09",
+      "route": "/",
+      "width": 375,
+      "state": "actual-mobile-menu-expanded",
+      "target": [
+        "a[data-design-switcher-target=\"luxury\"] > .design-style-switcher-state"
+      ],
+      "text": "查看此頁版本",
+      "originalChecks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "9.0pt (12px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          },
+          "relatedNodes": []
+        }
+      ],
+      "evidenceGroupIndex": 0,
+      "evidenceNodeIndex": 8,
+      "status": "PASS_FULL_OPAQUE_OCCLUSION_AND_CLOSED_PAINT",
+      "requiredRatio": 4.5,
+      "closedPaint": {
+        "foreground": [
+          16.0,
+          24.0,
+          40.0
+        ],
+        "opaqueBackground": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "opaqueAncestorPath": "html:nth-of-type(1)>body:nth-of-type(1)>nav:nth-of-type(1)>div:nth-of-type(1)>ul:nth-of-type(1)>li:nth-of-type(3)>a:nth-of-type(1)",
+        "contrastRatio": 17.74659431591738,
+        "method": "Fresh opaque foreground and nearest actual opaque surface, all intervening backgrounds transparent and no image/filter/groupopacity/pseudo. Exact WCAGsRGB0.04045 formula, no rounded threshold."
+      },
+      "panel": {
+        "path": "html:nth-of-type(1)>body:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)",
+        "tag": "DIV",
+        "id": "_R_4abrb_",
+        "className": "absolute inset-x-0 top-full border-b bg-background shadow-default",
+        "rect": {
+          "x": 0,
+          "y": 80,
+          "width": 375,
+          "height": 345,
+          "left": 0,
+          "right": 375,
+          "top": 80,
+          "bottom": 425
+        },
+        "style": {
+          "color": "rgb(23, 32, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "filter": "none",
+          "backdropFilter": "none",
+          "mixBlendMode": "normal",
+          "position": "absolute",
+          "zIndex": "auto",
+          "display": "block",
+          "visibility": "visible",
+          "maskImage": "none",
+          "maskMode": "match-source",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, color(srgb 0.0627451 0.101961 0.2 / 0.08) 0px 4px 16px 0px"
+        },
+        "pseudos": [
+          {
+            "pseudo": "::before",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          },
+          {
+            "pseudo": "::after",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          }
+        ]
+      },
+      "coverageRatio": 1,
+      "hitTests": {
+        "inViewport": 9,
+        "topmostPanel": 9,
+        "topmostExposedTarget": 0
+      },
+      "reason": "Entire measured target box is under opaque white menu and9/9 actual hit tests end in panel descendants; closed exact same text/target has passing actual paint. Invisible underlying glyphs are not assigned a fake contrast."
+    },
+    {
+      "testId": "DC006-BAND-OVERLAP-10",
+      "route": "/",
+      "width": 375,
+      "state": "actual-mobile-menu-expanded",
+      "target": [
+        "#_R_ebrb_"
+      ],
+      "text": "切換風格不帶入聯絡草稿、客戶稱呼與專案名稱，也不會自動複製個人欄位；已儲存的試算選項可還原。",
+      "originalChecks": [
+        {
+          "id": "color-contrast",
+          "message": "Element's background color could not be determined because it is overlapped by another element",
+          "data": {
+            "contrastRatio": 0,
+            "fontSize": "9.8pt (13px)",
+            "fontWeight": "normal",
+            "messageKey": "bgOverlap",
+            "expectedContrastRatio": "4.5:1"
+          },
+          "relatedNodes": []
+        }
+      ],
+      "evidenceGroupIndex": 0,
+      "evidenceNodeIndex": 9,
+      "status": "PASS_FULL_OPAQUE_OCCLUSION_AND_CLOSED_PAINT",
+      "requiredRatio": 4.5,
+      "closedPaint": {
+        "foreground": [
+          16.0,
+          24.0,
+          40.0
+        ],
+        "opaqueBackground": [
+          255.0,
+          255.0,
+          255.0
+        ],
+        "opaqueAncestorPath": "html:nth-of-type(1)>body:nth-of-type(1)>nav:nth-of-type(1)",
+        "contrastRatio": 17.74659431591738,
+        "method": "Fresh opaque foreground and nearest actual opaque surface, all intervening backgrounds transparent and no image/filter/groupopacity/pseudo. Exact WCAGsRGB0.04045 formula, no rounded threshold."
+      },
+      "panel": {
+        "path": "html:nth-of-type(1)>body:nth-of-type(1)>header:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)>div:nth-of-type(1)",
+        "tag": "DIV",
+        "id": "_R_4abrb_",
+        "className": "absolute inset-x-0 top-full border-b bg-background shadow-default",
+        "rect": {
+          "x": 0,
+          "y": 80,
+          "width": 375,
+          "height": 345,
+          "left": 0,
+          "right": 375,
+          "top": 80,
+          "bottom": 425
+        },
+        "style": {
+          "color": "rgb(23, 32, 51)",
+          "backgroundColor": "rgb(255, 255, 255)",
+          "backgroundImage": "none",
+          "opacity": "1",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "filter": "none",
+          "backdropFilter": "none",
+          "mixBlendMode": "normal",
+          "position": "absolute",
+          "zIndex": "auto",
+          "display": "block",
+          "visibility": "visible",
+          "maskImage": "none",
+          "maskMode": "match-source",
+          "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, color(srgb 0.0627451 0.101961 0.2 / 0.08) 0px 4px 16px 0px"
+        },
+        "pseudos": [
+          {
+            "pseudo": "::before",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          },
+          {
+            "pseudo": "::after",
+            "content": "none",
+            "display": "inline",
+            "visibility": "visible",
+            "background": "rgba(0, 0, 0, 0)",
+            "image": "none"
+          }
+        ]
+      },
+      "coverageRatio": 1,
+      "hitTests": {
+        "inViewport": 9,
+        "topmostPanel": 9,
+        "topmostExposedTarget": 0
+      },
+      "reason": "Entire measured target box is under opaque white menu and9/9 actual hit tests end in panel descendants; closed exact same text/target has passing actual paint. Invisible underlying glyphs are not assigned a fake contrast."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "run",
+    "build"
+  ],
+  "cwd": "/tmp/xk-dc006-build",
+  "startedAt": "2026-11-26T10:52:56.316195+00:00",
+  "finishedAt": "2026-11-26T10:53:11.102296+00:00",
+  "processId": 113335,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 600.0,
+  "logFile": "/tmp/xk-dc006-final/build-normal.log",
+  "logSha256": "c76c9603cb1b7ba12f7b1d79eade4a23de9345c1ed1a57fbabc9a1e7123961ce",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,135 @@
+{
+  "testId": "DC006-FINAL-TOOL-FREEZE",
+  "status": "READY_AFTER_ACTUAL_TINY_PREFLIGHT",
+  "formalSuite": "ROOT_OWNED_NOT_EXECUTED_BY_QA_AGENT",
+  "entry": "/tmp/xk-dc006-final/browser-v3.cjs",
+  "entrySHA256": "dfd1a736cf6ced11051db8045835b82ac7ab593d7b4aaea83f8074b7e42c7711",
+  "completionMarker": "DC006_MERGE2_BROWSER_COMPLETE (inherited marker; finaltestId and417counter scope recorded in result)",
+  "modePorts": {
+    "normal": 3276,
+    "pages": 3277
+  },
+  "expected": {
+    "testsPerMode": 417,
+    "baselineAssertions": 297,
+    "newSwitcherAssertions": 120,
+    "layoutsPerMode": 245,
+    "axePerMode": 20,
+    "baselineAffectedAxe": 18,
+    "newGalleryTableAxe": 2,
+    "identityDirectionCases": 96,
+    "selectedBusinessAssertions": 24,
+    "newPDF": 0,
+    "printMediaStyles": 3,
+    "pagesImages": {
+      "fullpage": 8,
+      "bandElementCloseups": 6,
+      "galleryTableViewports": 2,
+      "nativeMenuDeepCurrentFocusViewports": 2,
+      "total": 18
+    }
+  },
+  "switcherOracle": "Approvedfixture pageKey/slug/declaredanchor intersections, non-mainsemantic perpagekey. Does not call implementation resolver. Raw core nativehref exactpath or Pages singletrailing slash; actualfinalHTTP/hash/query remain strict. NextLink Header/Footer retain exactmodehref contract.",
+  "opaqueGuard": "Only initial exactabout:blank/originnull without any prior nonblank mainframenavigation skips forbiddenappstorage APIs. Allrealappdocuments strict.",
+  "originalFailedPreflight": "Exit1 preserved: incorrectly demanded hashhref beforefocus/gesture. Actualv2/v3 show pre-focusstale href, then authoritativefocusrefresh/native200 correcthash. OriginalFAIL not relabelled.",
+  "versionEvidence": [
+    {
+      "tool": "/tmp/xk-dc006-final/browser.cjs",
+      "toolSHA256": "31704d9f894166e701eda0e2df600fac55c90a82fdfe9b35b90a249fd1a10158",
+      "receipt": "/tmp/xk-dc006-final/tiny-normal-preflight-command.json",
+      "receiptSHA256": "cbfea7804bf8b0225656120880c44f78087c462e2cabe6ee1e2b77d8a4ce7f6e",
+      "actualExitCode": 1,
+      "result": "/tmp/xk-dc006-final/normal-tiny-preflight/result.json",
+      "resultSHA256": "07922ccf5ab2772f56950dbbd80daf0539403cb5ebb8aedea52a455f3e239826",
+      "status": "FAIL",
+      "counters": {
+        "expectedTests": 1,
+        "tests": 1,
+        "expectedLayouts": 1,
+        "layouts": 1,
+        "failures": 1,
+        "switcherInteractions": 0,
+        "fullSuite": "NOT_EXECUTED"
+      }
+    },
+    {
+      "tool": "/tmp/xk-dc006-final/browser-v2.cjs",
+      "toolSHA256": "951a6088f1d61cfde501981cd7a5248a5c7e907677c405b04e3c303f4fcb5029",
+      "receipt": "/tmp/xk-dc006-final/tiny-normal-preflight-v2-command.json",
+      "receiptSHA256": "fc39174841fd66798789b4dff3bd5be53c0b0e70417e4411b00b58fb7856a85b",
+      "actualExitCode": 0,
+      "result": "/tmp/xk-dc006-final/normal-tiny-preflight-v2/result.json",
+      "resultSHA256": "f2dd70f0c1736d36c2cc57fa1d6d9a2791708a8142b9973759f0f2f56bf20208",
+      "status": "PASS",
+      "counters": {
+        "expectedTests": 1,
+        "tests": 1,
+        "expectedLayouts": 1,
+        "layouts": 1,
+        "failures": 0,
+        "switcherInteractions": 1,
+        "fullSuite": "NOT_EXECUTED"
+      }
+    },
+    {
+      "tool": "/tmp/xk-dc006-final/browser-v3.cjs",
+      "toolSHA256": "dfd1a736cf6ced11051db8045835b82ac7ab593d7b4aaea83f8074b7e42c7711",
+      "receipt": "/tmp/xk-dc006-final/tiny-normal-preflight-v3-command.json",
+      "receiptSHA256": "61e0e28a3910612701e8d5d52e0fc7e5933346dd579cd7c54527eadd87844124",
+      "actualExitCode": 0,
+      "result": "/tmp/xk-dc006-final/normal-tiny-preflight-v3/result.json",
+      "resultSHA256": "6ccdf9cc3d4ede07c9bdad87ab14f6968963ccc6572bc32e707aa60eaa7f41c0",
+      "status": "PASS",
+      "counters": {
+        "expectedTests": 1,
+        "tests": 1,
+        "expectedLayouts": 1,
+        "layouts": 1,
+        "failures": 0,
+        "switcherInteractions": 1,
+        "fullSuite": "NOT_EXECUTED"
+      }
+    }
+  ],
+  "versionsRetained": true,
+  "v3Changes": "Rootrequested6Footerphotos replaced by6readable actualband elementphotos, explicitFootercontainedgeometry recorded/asserted, native newtab sourceURL unchanged asserted; no appcode change.",
+  "files": [
+    {
+      "path": "/tmp/xk-dc006-final/browser-v3.cjs",
+      "bytes": 64762,
+      "sha256": "dfd1a736cf6ced11051db8045835b82ac7ab593d7b4aaea83f8074b7e42c7711"
+    },
+    {
+      "path": "/tmp/xk-dc006-final/business.cjs",
+      "bytes": 25917,
+      "sha256": "5d705ab2a2b5ebf3f4d375f3808b9f23a964cff7322725225705fc39f202805d"
+    },
+    {
+      "path": "/tmp/xk-dc006-final/monitor.cjs",
+      "bytes": 5594,
+      "sha256": "5a2a01fed9709512cf38ba5b3088adc6f2ea05ac38d587e28124ddd632302af5"
+    },
+    {
+      "path": "/tmp/xk-dc006-final/fixture.json",
+      "bytes": 125016,
+      "sha256": "d515957d32b14b28fcfa3f6484d55ac1dbf9506f8592ea841778a7150737d64c"
+    },
+    {
+      "path": "/tmp/xk-dc006-final/catalog.json",
+      "bytes": 22086,
+      "sha256": "1c4ad0dc46e4d8efbce773fc630a4fc8c5bc57d0c29b0744a0608888c894dd63"
+    },
+    {
+      "path": "/tmp/xk-dc006-final/source-bridge.json",
+      "bytes": 60090,
+      "sha256": "46c09804f5c1de6627712f487019e7ec2772f17632f014697999c5c3c9701a14"
+    }
+  ],
+  "limits": [
+    "Allformal297baseline/new120results remain pending Roottruefullrunners.",
+    "OriginalphysicalPDF/QR acceptance only inherited through Root34unchanged-byte boundary; printmedia additionally checks newband hidden.",
+    "No fullpageWCAG/AT/DC007performance claim; anyincomplete preservedExit2 and freshper-targetmanualevidence.",
+    "OnlysyntheticPII; allmailto prevented. No email/app/backend/send.",
+    "Pages pictures are actual mode-labelled captures, not claimed byteidentical toNormal."
+  ]
+}

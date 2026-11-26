@@ -1,20 +1,9 @@
-import { identifyDesignRoute, resolveDesignHref } from "@/lib/design-collection/routes";
+import { resolveDesignContentHref, resolveDesignHref } from "@/lib/design-collection/routes";
 import type { DesignDetailPageKey, DesignSimplePageKey } from "@/lib/design-collection/types";
 
-/** Presentation-only URL mapping, safe for both server and client consumers. */
+/** Shared content mapping keeps all series on the same approved resolver. */
 export function heritageHref(href: string): string {
-  // A declared in-page destination retains its current page and native behavior.
-  if (/^#[a-z][a-z0-9-]*$/.test(href)) return href;
-  const route = identifyDesignRoute(href);
-  if (!route) return href;
-  const request = route.pageKey === "collection"
-    ? { pageKey: "collection" as const }
-    : route.slug === null
-      ? { pageKey: route.pageKey as DesignSimplePageKey, styleId: "heritage" as const }
-      : { pageKey: route.pageKey as DesignDetailPageKey, styleId: "heritage" as const, slug: route.slug };
-  const resolved = resolveDesignHref({ ...request, ...(route.hash ? { hash: route.hash } : {}) });
-  if (!resolved) throw new Error(`Unpublished Heritage destination: ${href}`);
-  return resolved;
+  return resolveDesignContentHref(href, "heritage");
 }
 
 export function heritagePageHref(pageKey: DesignSimplePageKey, hash?: string): string {

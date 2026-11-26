@@ -1,0 +1,25 @@
+{
+  "status": "FAIL",
+  "command": [
+    "node",
+    "/tmp/xk-dc006-final/browser-v4.cjs",
+    "pages",
+    "http://127.0.0.1:3277/",
+    "v2",
+    "/tmp/xk-dc006-final/source-bridge-v2.json",
+    "/tmp/xk-dc006-final/fixture.json",
+    "/tmp/xk-dc006-final/catalog.json"
+  ],
+  "cwd": "/tmp/xk-dc006-build",
+  "startedAt": "2026-11-26T11:26:02.074204+00:00",
+  "finishedAt": "2026-11-26T11:31:51.442704+00:00",
+  "processId": 116828,
+  "returnCode": 1,
+  "exitCode": 1,
+  "timeoutSeconds": 900.0,
+  "logFile": "/tmp/xk-dc006-final/browser-pages-v2.log",
+  "logSha256": "ad23adf76f58e32ece70ee7c7acbe086a335f19dc744432b39cd2b6b3596ed4e",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

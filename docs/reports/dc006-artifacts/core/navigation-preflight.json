@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "--import",
+    "./scripts/register-test-aliases.mjs",
+    "scripts/test-design-collection-navigation.mjs"
+  ],
+  "cwd": "/tmp/xk-dc006-build",
+  "startedAt": "2026-11-26T10:43:34.943241+00:00",
+  "finishedAt": "2026-11-26T10:43:35.411992+00:00",
+  "processId": 112612,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 120.0,
+  "logFile": "/tmp/xk-dc006-final/navigation-preflight.log",
+  "logSha256": "8fcba87c5efe62a6c5d8c7e05556aba3f183536c03c8e49d585cb2c5e1748fc3",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

@@ -1,0 +1,335 @@
+{
+  "testId": "DC006-QUERY-COMPOSITE-IMPACT-REVIEW",
+  "status": "PASS_SCOPED_IMPACT_RETEST",
+  "generatedAt": "2026-11-26T11:45:03.854546+00:00",
+  "scope": "Onlythe3observedPagesneutralqueryHEADclassification failures; sourceunchanged. No245layout/96switch/417suite rerun or reclassification.",
+  "originalSuite": {
+    "path": "/tmp/xk-dc006-final/pages-v2/result.json",
+    "sha256": "2c72c714683ccdc221e79060a7590eaad42e39c514a0e09ce6982788d40a6084",
+    "status": "FAIL",
+    "actualExitCode": 1,
+    "assertions": 417,
+    "passed": 416,
+    "failedTestIds": [
+      "FINAL-STRICT-PASSIVE-NETWORK-PRIVACY"
+    ],
+    "layouts": 245,
+    "identitySwitches": 96,
+    "axeScans": 20,
+    "axeViolations": 0,
+    "incompleteNodes": 10,
+    "networkErrorsPreserved": 3,
+    "policy": "Original417result remainsFAIL/actualExit1, never renamed417PASS."
+  },
+  "freshFocused": {
+    "path": "/tmp/xk-dc006-final/pages-query-v5/result.json",
+    "sha256": "038ab46ce0e3a30af4ca31132dadea8c72afa79236f4e3aae58dd202fa9f0336",
+    "status": "PASS",
+    "counters": {
+      "expectedTests": 4,
+      "tests": 4,
+      "expectedQueryScenarios": 3,
+      "queryScenarios": 3,
+      "failures": 0,
+      "actualNeutralRSCResponses": 3,
+      "actualNeutralExpectedHeads": 3,
+      "full417": "NOT_RERUN_OR_RELABELLED"
+    },
+    "actualExitCode": 0,
+    "errors": {
+      "networkErrors": 0,
+      "consoleErrors": 0,
+      "runtimeErrors": 0,
+      "privacyLeaks": 0
+    }
+  },
+  "classifierFixtures": {
+    "path": "/tmp/xk-dc006-final/neutral-query-fixtures-v5-result.json",
+    "sha256": "57bdf960dc9d8f93dab832ddc6039c2f9c040e814b4ab71fcce6fe6fb7429251",
+    "actualExitCode": 0,
+    "counts": {
+      "total": 43,
+      "positive": 4,
+      "negative": 39
+    },
+    "scope": "Declaredsyntheticclassifierfixtures, not fabricatedHTTPorproductresults.39negativeguards includeothermode/path/query/test/referrer/redirect/missingcompanion/non2xx/CSS/JS."
+  },
+  "independentOriginalTransport": {
+    "path": "/tmp/xk-dc006-final/transport-review/query-head-independent-review.json",
+    "sha256": "0fa86a806f08be0317b176c7583fd82d42ea493ae1c8a81605bcf56144887e1a",
+    "status": "READ_ONLY_DIAGNOSIS_COMPLETED",
+    "scope": "Exactoldserverdocument/tree/PAGEGET200 and installedNext16.4.6awaitHEAD->treeprotocol; originalHEADandbrowserTree statuses remainnull. Noabortinitiator inferred."
+  },
+  "sourceInputBridge": {
+    "sameSourceBridgeSHA256": "e22abef38cb7d76c10d964ee8957edd91d7dfe660eadb52904748f1dc940021b",
+    "sameFixtureAndCatalogInputs": [
+      {
+        "path": "/tmp/xk-dc006-final/fixture.json",
+        "sha256": "d515957d32b14b28fcfa3f6484d55ac1dbf9506f8592ea841778a7150737d64c"
+      },
+      {
+        "path": "/tmp/xk-dc006-final/catalog.json",
+        "sha256": "1c4ad0dc46e4d8efbce773fc630a4fc8c5bc57d0c29b0744a0608888c894dd63"
+      }
+    ],
+    "unchangedForRetest": true
+  },
+  "receipts": [
+    {
+      "path": "/tmp/xk-dc006-final/neutral-query-retest-v5-command.json",
+      "sha256": "37ef052a6b08be04c4b523f1548916295283b76980502c9bc9f40f8eb0b4c838",
+      "actualExitCode": 0
+    },
+    {
+      "path": "/tmp/xk-dc006-final/neutral-query-fixtures-v5-command.json",
+      "sha256": "d416411a684f13064473c7693d17baf4643cfa17e2b856a5df2f14f18db10471",
+      "actualExitCode": 0
+    },
+    {
+      "path": "/tmp/xk-dc006-final/transport-review/review.receipt.json",
+      "sha256": "132ec558110ad94cce5133e2ec14573e7f7e4679a71ef487608502e1ea8724ff",
+      "actualExitCode": 0
+    }
+  ],
+  "limitation": [
+    "OriginalHEADcompletion and originalbrowserRSCresponse status remainunknown; originalserverGET200 andfreshresponses are separate evidence.",
+    "Fresh3HEADs actually expose200HTML before cancellation; fresh3samequeryRSCtreeGETs actually expose200text/plain with exactRSCheaders/test/referrer. This does not identify why ChromiumreportsERR_ABORTED.",
+    "Thev5exception is restricted toPages3approvedContactpaths/literalsole?source=qa/3exacttestIDs andsamequeryactual2xxcompanion. Allotherquery/CSS/JS/blocked/CORS/4xx/runtime/PII failures staystrict.",
+    "10axeoverlap candidates remainrawincomplete, with separateNormal/Pagescomputed/occlusionmanualreview; thisnetworkreview doesnotclaimaxe0incomplete/fullWCAG/AT.",
+    "Unchanged416priorUIassertions are inheritedthrough exactsource/inputbridge; theiroriginalPASSrows andtheoriginalfinalnetworkFAILareleftasrecorded.",
+    "Noemail/mailapp/backend/send ornewPDF; nofullperformance/platformclaim."
+  ],
+  "rows": [
+    {
+      "testId": "SWITCH-PRIVATE-HASH-NEUTRAL-QUERY-DROP-modern",
+      "originalHead": {
+        "requestId": 26986,
+        "url": "http://127.0.0.1:3277/contact/?source=qa",
+        "error": "net::ERR_ABORTED",
+        "completionStatus": null,
+        "policy": "Original browser HEAD status unknown; neither fresh200 norserverGET200 is backfilled into it."
+      },
+      "originalTree": {
+        "requestIds": [
+          26989
+        ],
+        "browserResponseStatuses": [
+          null
+        ],
+        "serverExact200": [
+          {
+            "lineNumber": 4446,
+            "raw": "127.0.0.1 - - [26/Nov/2026 11:31:19] \"GET /contact/__next._tree.txt?source=qa&_rsc=h2vb-LAkAGynSY5z HTTP/1.1\" 200 -"
+          }
+        ]
+      },
+      "freshHead": {
+        "requestId": 33,
+        "url": "http://127.0.0.1:3277/contact/?source=qa",
+        "error": "net::ERR_ABORTED",
+        "actualResponse": {
+          "url": "http://127.0.0.1:3277/contact/?source=qa",
+          "status": 200,
+          "headers": {
+            "content-length": "192629",
+            "date": "Thu, 26 Nov 2026 11:42:13 GMT",
+            "content-type": "text/html",
+            "last-modified": "Thu, 26 Nov 2026 11:24:22 GMT",
+            "server": "SimpleHTTP/0.6 Python/3.12.14"
+          }
+        },
+        "classification": "EXACT_PAGES_NEUTRAL_QUERY_HEAD_PROBE_CANCELLATION",
+        "completionPolicy": "Recorded actual2xx response before cancellation"
+      },
+      "freshRSCCompanion": {
+        "requestId": 36,
+        "startedAt": "2026-11-26T11:42:13.944Z",
+        "startedDuringTest": "SWITCH-PRIVATE-HASH-NEUTRAL-QUERY-DROP-modern",
+        "url": "http://127.0.0.1:3277/contact/__next._tree.txt?source=qa&_rsc=h2vb-LAkAGynSY5z",
+        "method": "GET",
+        "type": "fetch",
+        "headers": {
+          "rsc": "1",
+          "next-router-segment-prefetch": "/_tree",
+          "sec-ch-ua-platform": "\"Linux\"",
+          "referer": "http://127.0.0.1:3277/contact/?source=qa",
+          "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\"",
+          "sec-ch-ua-mobile": "?0",
+          "next-router-prefetch": "1",
+          "next-url": "/contact",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36"
+        },
+        "status": 200,
+        "contentType": "text/plain",
+        "redirectedFrom": null,
+        "responseObservedAt": "2026-11-26T11:42:13.960Z"
+      },
+      "freshUI": {
+        "status": "PASS",
+        "sourceLiteralQuery": "source=qa",
+        "nativeFinalStatus": 200,
+        "final": {
+          "url": "http://127.0.0.1:3277/design-collection/heritage/contact/",
+          "path": "/design-collection/heritage/contact/",
+          "hash": "",
+          "query": ""
+        },
+        "allPersonalDOMCleared": true
+      }
+    },
+    {
+      "testId": "SWITCH-PRIVATE-HASH-NEUTRAL-QUERY-DROP-heritage",
+      "originalHead": {
+        "requestId": 27086,
+        "url": "http://127.0.0.1:3277/design-collection/heritage/contact/?source=qa",
+        "error": "net::ERR_ABORTED",
+        "completionStatus": null,
+        "policy": "Original browser HEAD status unknown; neither fresh200 norserverGET200 is backfilled into it."
+      },
+      "originalTree": {
+        "requestIds": [
+          27089
+        ],
+        "browserResponseStatuses": [
+          null
+        ],
+        "serverExact200": [
+          {
+            "lineNumber": 4452,
+            "raw": "127.0.0.1 - - [26/Nov/2026 11:31:20] \"GET /design-collection/heritage/contact/__next._tree.txt?source=qa&_rsc=OOrDVippXBWqdQW_ HTTP/1.1\" 200 -"
+          }
+        ]
+      },
+      "freshHead": {
+        "requestId": 129,
+        "url": "http://127.0.0.1:3277/design-collection/heritage/contact/?source=qa",
+        "error": "net::ERR_ABORTED",
+        "actualResponse": {
+          "url": "http://127.0.0.1:3277/design-collection/heritage/contact/?source=qa",
+          "status": 200,
+          "headers": {
+            "content-length": "189576",
+            "date": "Thu, 26 Nov 2026 11:42:14 GMT",
+            "content-type": "text/html",
+            "last-modified": "Thu, 26 Nov 2026 11:24:22 GMT",
+            "server": "SimpleHTTP/0.6 Python/3.12.14"
+          }
+        },
+        "classification": "EXACT_PAGES_NEUTRAL_QUERY_HEAD_PROBE_CANCELLATION",
+        "completionPolicy": "Recorded actual2xx response before cancellation"
+      },
+      "freshRSCCompanion": {
+        "requestId": 132,
+        "startedAt": "2026-11-26T11:42:15.010Z",
+        "startedDuringTest": "SWITCH-PRIVATE-HASH-NEUTRAL-QUERY-DROP-heritage",
+        "url": "http://127.0.0.1:3277/design-collection/heritage/contact/__next._tree.txt?source=qa&_rsc=OOrDVippXBWqdQW_",
+        "method": "GET",
+        "type": "fetch",
+        "headers": {
+          "rsc": "1",
+          "next-router-segment-prefetch": "/_tree",
+          "sec-ch-ua-platform": "\"Linux\"",
+          "referer": "http://127.0.0.1:3277/design-collection/heritage/contact/?source=qa",
+          "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\"",
+          "sec-ch-ua-mobile": "?0",
+          "next-router-prefetch": "1",
+          "next-url": "/design-collection/heritage/contact",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36"
+        },
+        "status": 200,
+        "contentType": "text/plain",
+        "redirectedFrom": null,
+        "responseObservedAt": "2026-11-26T11:42:15.014Z"
+      },
+      "freshUI": {
+        "status": "PASS",
+        "sourceLiteralQuery": "source=qa",
+        "nativeFinalStatus": 200,
+        "final": {
+          "url": "http://127.0.0.1:3277/design-collection/luxury/contact/",
+          "path": "/design-collection/luxury/contact/",
+          "hash": "",
+          "query": ""
+        },
+        "allPersonalDOMCleared": true
+      }
+    },
+    {
+      "testId": "SWITCH-PRIVATE-HASH-NEUTRAL-QUERY-DROP-luxury",
+      "originalHead": {
+        "requestId": 27182,
+        "url": "http://127.0.0.1:3277/design-collection/luxury/contact/?source=qa",
+        "error": "net::ERR_ABORTED",
+        "completionStatus": null,
+        "policy": "Original browser HEAD status unknown; neither fresh200 norserverGET200 is backfilled into it."
+      },
+      "originalTree": {
+        "requestIds": [
+          27184
+        ],
+        "browserResponseStatuses": [
+          null
+        ],
+        "serverExact200": [
+          {
+            "lineNumber": 4455,
+            "raw": "127.0.0.1 - - [26/Nov/2026 11:31:21] \"GET /design-collection/luxury/contact/__next._tree.txt?source=qa&_rsc=hRZp4O8M3PvUgAxW HTTP/1.1\" 200 -"
+          }
+        ]
+      },
+      "freshHead": {
+        "requestId": 221,
+        "url": "http://127.0.0.1:3277/design-collection/luxury/contact/?source=qa",
+        "error": "net::ERR_ABORTED",
+        "actualResponse": {
+          "url": "http://127.0.0.1:3277/design-collection/luxury/contact/?source=qa",
+          "status": 200,
+          "headers": {
+            "content-length": "187535",
+            "date": "Thu, 26 Nov 2026 11:42:15 GMT",
+            "content-type": "text/html",
+            "last-modified": "Thu, 26 Nov 2026 11:24:22 GMT",
+            "server": "SimpleHTTP/0.6 Python/3.12.14"
+          }
+        },
+        "classification": "EXACT_PAGES_NEUTRAL_QUERY_HEAD_PROBE_CANCELLATION",
+        "completionPolicy": "Recorded actual2xx response before cancellation"
+      },
+      "freshRSCCompanion": {
+        "requestId": 223,
+        "startedAt": "2026-11-26T11:42:15.953Z",
+        "startedDuringTest": "SWITCH-PRIVATE-HASH-NEUTRAL-QUERY-DROP-luxury",
+        "url": "http://127.0.0.1:3277/design-collection/luxury/contact/__next._tree.txt?source=qa&_rsc=hRZp4O8M3PvUgAxW",
+        "method": "GET",
+        "type": "fetch",
+        "headers": {
+          "rsc": "1",
+          "next-router-segment-prefetch": "/_tree",
+          "sec-ch-ua-platform": "\"Linux\"",
+          "referer": "http://127.0.0.1:3277/design-collection/luxury/contact/?source=qa",
+          "sec-ch-ua": "\"Not:A-Brand\";v=\"8\", \"Chromium\";v=\"156\"",
+          "sec-ch-ua-mobile": "?0",
+          "next-router-prefetch": "1",
+          "next-url": "/design-collection/luxury/contact",
+          "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36"
+        },
+        "status": 200,
+        "contentType": "text/plain",
+        "redirectedFrom": null,
+        "responseObservedAt": "2026-11-26T11:42:15.957Z"
+      },
+      "freshUI": {
+        "status": "PASS",
+        "sourceLiteralQuery": "source=qa",
+        "nativeFinalStatus": 200,
+        "final": {
+          "url": "http://127.0.0.1:3277/contact/",
+          "path": "/contact/",
+          "hash": "",
+          "query": ""
+        },
+        "allPersonalDOMCleared": true
+      }
+    }
+  ]
+}

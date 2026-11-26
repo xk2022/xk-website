@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "npm",
+    "run",
+    "lint"
+  ],
+  "cwd": "/tmp/xk-dc006-build",
+  "startedAt": "2026-11-26T11:11:15.550026+00:00",
+  "finishedAt": "2026-11-26T11:11:22.510867+00:00",
+  "processId": 115300,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 180.0,
+  "logFile": "/tmp/xk-dc006-final/lint-v2.log",
+  "logSha256": "4832429d90701848a8b0024ae103a7c776fd85ae0c605d9f043272050dc34815",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

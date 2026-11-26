@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "command": [
+    "node",
+    "/tmp/xk-dc006-final/neutral-query-fixtures-v5.cjs",
+    "/tmp/xk-dc006-final/neutral-query-fixtures-v5-result.json"
+  ],
+  "cwd": "/workspace",
+  "startedAt": "2026-11-26T11:40:43.634629+00:00",
+  "finishedAt": "2026-11-26T11:40:43.701955+00:00",
+  "processId": 122547,
+  "returnCode": 0,
+  "exitCode": 0,
+  "timeoutSeconds": 30.0,
+  "logFile": "/tmp/xk-dc006-final/neutral-query-fixtures-v5.log",
+  "logSha256": "d19b6b17b4c4b5be89b2285f497e199b0bcd36fc07e8de63e3a9d343f5138b81",
+  "observationMethod": "subprocess.Popen.wait(): observed OS process return code",
+  "terminationReason": "completed",
+  "signal": null
+}

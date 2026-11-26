@@ -106,3 +106,18 @@ export function getPublishedDesignRoutes(): readonly DesignRouteDescriptor[] {
 
 // Re-export the key identities for consumers that only need this module's API.
 export type { DesignContentPageKey, DesignStyleId };
+
+/** Remap only recognized published company content; external, mailto and unknown URLs stay intact. */
+export function resolveDesignContentHref(href: string, styleId: DesignStyleId): string {
+  if (/^#[a-z][a-z0-9-]*$/.test(href)) return href;
+  const route = identifyDesignRoute(href);
+  if (!route) return href;
+  const request: DesignRouteRequest = route.pageKey === "collection"
+    ? { pageKey: "collection" }
+    : route.slug === null
+      ? { pageKey: route.pageKey, styleId }
+      : { pageKey: route.pageKey, styleId, slug: route.slug };
+  const resolved = resolveDesignHref({ ...request, ...(route.hash ? { hash: route.hash } : {}) });
+  if (!resolved) throw new Error("Content references an unpublished design destination");
+  return resolved;
+}
