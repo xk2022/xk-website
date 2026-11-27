@@ -10,6 +10,7 @@ import { designCollectionRegistry } from "@/config/design-collection";
 import { getDesignHeaderItems } from "@/lib/design-collection/navigation-model";
 import { resolveDesignHref } from "@/lib/design-collection/routes";
 import type { DesignStyleId } from "@/lib/design-collection/types";
+import { KaleidoscopeGateway } from "./kaleidoscope-gateway";
 
 const introduction = {
   eyebrow: "WEBSITE DESIGN SERIES",
@@ -44,10 +45,11 @@ const stylePresentations = {
 export function DesignCollectionGallery() {
   return (
     <>
-      <Section background="surface" aria-labelledby="design-collection-title" className="border-b">
+      <KaleidoscopeGateway />
+      <Section background="surface" aria-labelledby="design-collection-introduction" className="border-b">
         <Container>
           <p lang="en" className="type-caption mb-4 font-semibold text-secondary">{introduction.eyebrow}</p>
-          <h1 id="design-collection-title" lang="en" className="type-h1 max-w-4xl break-words text-primary">{introduction.title}</h1>
+          <h2 id="design-collection-introduction" lang="en" className="type-h1 max-w-4xl break-words text-primary">{introduction.title}</h2>
           <p className="type-body-lg mt-6 max-w-3xl text-foreground">{introduction.description}</p>
           <p className="type-body mt-5 max-w-3xl text-foreground">{introduction.availability}</p>
         </Container>

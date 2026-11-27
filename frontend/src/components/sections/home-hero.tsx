@@ -20,9 +20,9 @@ export function HomeHero() {
           <p lang="en" className="type-caption mb-3 font-semibold tracking-widest text-secondary">
             {homepageHero.eyebrow}
           </p>
-          <h1 id="home-title" className="type-h1 max-w-3xl text-primary">
+          <h2 id="home-title" tabIndex={-1} className="type-h1 max-w-3xl text-primary scroll-mt-6">
             {homepageHero.title}
-          </h1>
+          </h2>
           <p className="type-body mt-5 max-w-xl text-foreground">
             {homepageHero.description}
           </p>
