@@ -1,0 +1,30 @@
+.xkg1-gateway { background: #080c15; color: #fff; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; gap: .75rem; text-align: center; }
+.xkg1-eyebrow { font-size: .7rem; letter-spacing: .16em; color: #b9c5dd; }
+.xkg1-title { font-size: clamp(1.65rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; }
+.xkg1-subtitle, .xkg1-note { color: #d7deec; font-size: .9rem; }
+.xkg1-wheel { position: relative; width: min(100%, 62svh, 38rem); aspect-ratio: 1; isolation: isolate; }
+.xkg1-art, .xkg1-overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+.xkg1-art { object-fit: contain; }
+.xkg1-overlay { z-index: 2; }
+.xkg1-center { position: absolute; inset: 32%; display: grid; place-items: center; z-index: 1; pointer-events: none; }
+.xkg1-logo { width: 86%; height: auto; object-fit: contain; }
+.xkg1-sector { cursor: pointer; }
+.xkg1-hit { fill: transparent; stroke: transparent; stroke-width: 6; }
+.xkg1-effect { opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+.xkg1-modern { animation: xkg1-modernPulse 1.45s ease-in-out 3; }
+.xkg1-heritage { animation: xkg1-heritagePulse 2.15s ease-in-out 2; }
+.xkg1-luxury { animation: xkg1-luxuryPulse 1.5s ease-in-out 3; }
+.xkg1-sector:hover .xkg1-effect, .xkg1-sector:focus-visible .xkg1-effect { opacity: .22; }
+.xkg1-sector:focus-visible .xkg1-hit { stroke: #fff; stroke-width: 8; }
+.xkg1-choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; width: min(100%, 38rem); }
+.xkg1-choice { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: .3rem; padding: .65rem .4rem; min-height: 44px; border: 1px solid currentColor; border-radius: .45rem; font-size: clamp(.75rem, 2.5vw, .95rem); font-weight: 600; transition: background .2s ease; }
+.xkg1-choice:hover { background: #ffffff20; }
+.xkg1-choice:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.xkg1-modernChoice { color: #a8caff; }
+.xkg1-heritageChoice { color: #f4e9d8; }
+.xkg1-luxuryChoice { color: #ffdc87; }
+@keyframes xkg1-modernPulse { 50% { opacity: .20; } }
+@keyframes xkg1-heritagePulse { 50% { opacity: .13; } }
+@keyframes xkg1-luxuryPulse { 35% { opacity: .24; } }
+@media (max-width: 640px) { .xkg1-gateway { min-height: 85svh; } .xkg1-wheel { width: min(100%, 56svh); } }
+@media (prefers-reduced-motion: reduce) { .xkg1-effect, .xkg1-choice { animation: none; transition: none; } }
