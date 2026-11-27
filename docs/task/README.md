@@ -10,6 +10,8 @@
 
 最新功能任務、Bugfix、Design Collection 與文件整理進度以 [Roadmap](ROADMAP.md) 為集中入口。原始規格、工作包及下方歷史進度快照保留，避免重複維護最新狀態。
 
+- [DC-008-01 萬花筒入口](dc008-01.md)：既有 Gallery 首屏整合，獨立 PR 審閱。
+
 ## 問題追蹤與後續 Bugfix
 
 - [2026-11-22 官網問題清單與 Bugfix 待辦](bugfix-backlog-2026-11-22.md)：BF-009～BF-016，共八項，記錄證據、影響、建議分支、前置條件與驗收標準。本輪官網側六項 PASS，BF-010／BF-015 因資料或核准尚缺而 BLOCKED；範圍及目前狀態以清單更新紀錄與 [本輪實作報告](../reports/bf009-016-implementation.md) 為準，不以本機驗收或文件存在推論已部署。

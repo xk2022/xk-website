@@ -1,0 +1,30 @@
+.gateway { background: #080c15; color: #fff; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1rem; gap: .75rem; text-align: center; }
+.eyebrow { font-size: .7rem; letter-spacing: .16em; color: #b9c5dd; }
+.title { font-size: clamp(1.65rem, 4vw, 3rem); font-weight: 700; line-height: 1.15; }
+.subtitle, .note { color: #d7deec; font-size: .9rem; }
+.wheel { position: relative; width: min(100%, 62svh, 38rem); aspect-ratio: 1; isolation: isolate; }
+.art, .overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+.art { object-fit: contain; }
+.overlay { z-index: 2; }
+.center { position: absolute; inset: 32%; display: grid; place-items: center; z-index: 1; pointer-events: none; }
+.logo { width: 86%; height: auto; object-fit: contain; }
+.sector { cursor: pointer; }
+.hit { fill: transparent; stroke: transparent; stroke-width: 6; }
+.effect { opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+.modern { animation: modernPulse 1.45s ease-in-out 3; }
+.heritage { animation: heritagePulse 2.15s ease-in-out 2; }
+.luxury { animation: luxuryPulse 1.5s ease-in-out 3; }
+.sector:hover .effect, .sector:focus-visible .effect { opacity: .22; }
+.sector:focus-visible .hit { stroke: #fff; stroke-width: 8; }
+.choices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; width: min(100%, 38rem); }
+.choice { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: .3rem; padding: .65rem .4rem; min-height: 44px; border: 1px solid currentColor; border-radius: .45rem; font-size: clamp(.75rem, 2.5vw, .95rem); font-weight: 600; transition: background .2s ease; }
+.choice:hover { background: #ffffff20; }
+.choice:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.modernChoice { color: #a8caff; }
+.heritageChoice { color: #f4e9d8; }
+.luxuryChoice { color: #ffdc87; }
+@keyframes modernPulse { 50% { opacity: .20; } }
+@keyframes heritagePulse { 50% { opacity: .13; } }
+@keyframes luxuryPulse { 35% { opacity: .24; } }
+@media (max-width: 640px) { .gateway { min-height: 85svh; } .wheel { width: min(100%, 56svh); } }
+@media (prefers-reduced-motion: reduce) { .effect, .choice { animation: none; transition: none; } }
