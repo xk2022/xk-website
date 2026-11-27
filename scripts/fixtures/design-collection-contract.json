@@ -5,8 +5,8 @@
   "styleStatus": {"modern": "implemented", "heritage": "implemented", "luxury": "implemented"},
   "styleHomePaths": {"modern": "/", "heritage": "/design-collection/heritage", "luxury": "/design-collection/luxury"},
   "heritageLogos": {
-    "header": {"src": "/brand/source/xk-logo-horizontal.svg", "sha256": "08b60bfba88d9598aaaf072bdb7b6e95658784598b8d132a4e3bcb2383446a5b", "viewBox": "0 0 850 204", "width": "850", "height": "204"},
-    "footer": {"src": "/brand/source/xk-logo-white.svg", "sha256": "3ef6fe4c3968992e1c18df2f05233f39ffebd9da26dd9be91e7be81c02087250", "viewBox": "0 0 620 410", "width": "620", "height": "410"}
+    "header": {"src": "/brand/source/v2/xk-logo-dark.svg", "sha256": "fffaaa3cb42d2902578f392d2e3ad16513a041d4c3d5b2dd99dc4bec3744b93c", "viewBox": "0 0 2198 480", "width": "2198", "height": "480"},
+    "footer": {"src": "/brand/source/v2/xk-logo-white.svg", "sha256": "ae9c7bbcc1e44a16afb4ca51e1d8904da6006419d853ed8e2dbac21dd4da0680", "viewBox": "0 0 2198 480", "width": "2198", "height": "480"}
   },
   "collectionStatus": "implemented",
   "namespace": "/design-collection",

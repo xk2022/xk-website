@@ -1,0 +1,992 @@
+[
+  {
+    "style": "modern",
+    "width": 320,
+    "route": "/",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 24,
+          "y": 16,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 24,
+          "y": 426.296875,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 320,
+    "page_errors": []
+  },
+  {
+    "style": "modern",
+    "width": 320,
+    "route": "/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 24,
+          "y": 16,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 24,
+          "y": 426.28125,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 320,
+    "page_errors": []
+  },
+  {
+    "style": "modern",
+    "width": 375,
+    "route": "/",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 24,
+          "y": 16,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 24,
+          "y": 425.84375,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 375,
+    "page_errors": []
+  },
+  {
+    "style": "modern",
+    "width": 375,
+    "route": "/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 24,
+          "y": 16,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 24,
+          "y": 426.203125,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 375,
+    "page_errors": []
+  },
+  {
+    "style": "modern",
+    "width": 768,
+    "route": "/",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 32,
+          "y": 12,
+          "width": 56,
+          "height": 56
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 32,
+          "y": 425.5625,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 768,
+    "page_errors": []
+  },
+  {
+    "style": "modern",
+    "width": 768,
+    "route": "/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 32,
+          "y": 12,
+          "width": 56,
+          "height": 56
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 32,
+          "y": 425.71875,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 768,
+    "page_errors": []
+  },
+  {
+    "style": "modern",
+    "width": 1440,
+    "route": "/",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 128,
+          "y": 12,
+          "width": 56,
+          "height": 56
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 128,
+          "y": 425.53125,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1440,
+    "page_errors": []
+  },
+  {
+    "style": "modern",
+    "width": 1440,
+    "route": "/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 128,
+          "y": 12,
+          "width": 56,
+          "height": 56
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 128,
+          "y": 426.328125,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1440,
+    "page_errors": []
+  },
+  {
+    "style": "modern",
+    "width": 1920,
+    "route": "/",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 368,
+          "y": 12,
+          "width": 56,
+          "height": 56
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 368,
+          "y": 426.15625,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1920,
+    "page_errors": []
+  },
+  {
+    "style": "modern",
+    "width": 1920,
+    "route": "/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 368,
+          "y": 12,
+          "width": 56,
+          "height": 56
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 368,
+          "y": 426.328125,
+          "width": 48,
+          "height": 48
+        },
+        "viewBox": "0 0 504 504",
+        "src": null,
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1920,
+    "page_errors": []
+  },
+  {
+    "style": "heritage",
+    "width": 320,
+    "route": "/design-collection/heritage",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 20,
+          "y": 20,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 20,
+          "y": 424.0625,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 320,
+    "page_errors": []
+  },
+  {
+    "style": "heritage",
+    "width": 320,
+    "route": "/design-collection/heritage/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 20,
+          "y": 20,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 20,
+          "y": 423.96875,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 320,
+    "page_errors": []
+  },
+  {
+    "style": "heritage",
+    "width": 375,
+    "route": "/design-collection/heritage",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 20,
+          "y": 20,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 20,
+          "y": 424.0625,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 375,
+    "page_errors": []
+  },
+  {
+    "style": "heritage",
+    "width": 375,
+    "route": "/design-collection/heritage/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 20,
+          "y": 20,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 20,
+          "y": 423.65625,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 375,
+    "page_errors": []
+  },
+  {
+    "style": "heritage",
+    "width": 768,
+    "route": "/design-collection/heritage",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 30.71875,
+          "y": 26,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 30.71875,
+          "y": 424.078125,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 768,
+    "page_errors": []
+  },
+  {
+    "style": "heritage",
+    "width": 768,
+    "route": "/design-collection/heritage/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 30.71875,
+          "y": 26,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 30.71875,
+          "y": 423.859375,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 768,
+    "page_errors": []
+  },
+  {
+    "style": "heritage",
+    "width": 1440,
+    "route": "/design-collection/heritage",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 130,
+          "y": 26,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 130,
+          "y": 424.015625,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1440,
+    "page_errors": []
+  },
+  {
+    "style": "heritage",
+    "width": 1440,
+    "route": "/design-collection/heritage/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 130,
+          "y": 26,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 130,
+          "y": 423.84375,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1440,
+    "page_errors": []
+  },
+  {
+    "style": "heritage",
+    "width": 1920,
+    "route": "/design-collection/heritage",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 370,
+          "y": 26,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 370,
+          "y": 424.015625,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1920,
+    "page_errors": []
+  },
+  {
+    "style": "heritage",
+    "width": 1920,
+    "route": "/design-collection/heritage/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 370,
+          "y": 26,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 370,
+          "y": 423.46875,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1920,
+    "page_errors": []
+  },
+  {
+    "style": "luxury",
+    "width": 320,
+    "route": "/design-collection/luxury",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 20,
+          "y": 18,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 20,
+          "y": 424.109375,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 320,
+    "page_errors": []
+  },
+  {
+    "style": "luxury",
+    "width": 320,
+    "route": "/design-collection/luxury/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 20,
+          "y": 18,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 20,
+          "y": 423.53125,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 320,
+    "page_errors": []
+  },
+  {
+    "style": "luxury",
+    "width": 375,
+    "route": "/design-collection/luxury",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 20,
+          "y": 18,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 20,
+          "y": 424.015625,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 375,
+    "page_errors": []
+  },
+  {
+    "style": "luxury",
+    "width": 375,
+    "route": "/design-collection/luxury/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 20,
+          "y": 18,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 20,
+          "y": 423.796875,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 375,
+    "page_errors": []
+  },
+  {
+    "style": "luxury",
+    "width": 768,
+    "route": "/design-collection/luxury",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 30.71875,
+          "y": 24,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 30.71875,
+          "y": 423.5625,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 768,
+    "page_errors": []
+  },
+  {
+    "style": "luxury",
+    "width": 768,
+    "route": "/design-collection/luxury/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 30.71875,
+          "y": 24,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 30.71875,
+          "y": 424.078125,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 768,
+    "page_errors": []
+  },
+  {
+    "style": "luxury",
+    "width": 1440,
+    "route": "/design-collection/luxury",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 80,
+          "y": 24,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 80,
+          "y": 423.828125,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1440,
+    "page_errors": []
+  },
+  {
+    "style": "luxury",
+    "width": 1440,
+    "route": "/design-collection/luxury/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 80,
+          "y": 24,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 80,
+          "y": 424.125,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1440,
+    "page_errors": []
+  },
+  {
+    "style": "luxury",
+    "width": 1920,
+    "route": "/design-collection/luxury",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 320,
+          "y": 24,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 320,
+          "y": 423.828125,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1920,
+    "page_errors": []
+  },
+  {
+    "style": "luxury",
+    "width": 1920,
+    "route": "/design-collection/luxury/quotation",
+    "status": 200,
+    "logos": [
+      {
+        "box": {
+          "x": 320,
+          "y": 24,
+          "width": 260,
+          "height": 56.765625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-dark.svg",
+        "valid_image": true
+      },
+      {
+        "box": {
+          "x": 320,
+          "y": 423.75,
+          "width": 240,
+          "height": 52.40625
+        },
+        "viewBox": null,
+        "src": "/brand/source/v2/xk-logo-white.svg",
+        "valid_image": true
+      }
+    ],
+    "old": 0,
+    "doc_width": 1920,
+    "page_errors": []
+  }
+]

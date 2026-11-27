@@ -31,7 +31,7 @@ export function SiteFooter() {
             <Link href={homeHref} className="inline-flex min-h-11 max-w-full items-center gap-3 rounded-sm">
               <XkLogo size={48} variant="white" showWordmark={false} decorative />
               <span lang="en" className="type-body font-semibold">{siteConfig.name}</span>
-              <span className="sr-only">首頁，Logo 為暫定版本</span>
+              <span className="sr-only">首頁</span>
             </Link>
             <p lang="en" className="type-body-lg mt-5 max-w-xs text-primary-foreground/90">{siteConfig.slogan}</p>
             <p className="type-body-sm mt-5 max-w-xs text-primary-foreground/75">整合 Web、Java 與 AI 技術，探索企業的數位可能。</p>

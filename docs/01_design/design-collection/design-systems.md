@@ -6,7 +6,7 @@
 
 同一份 XK SYSTEM／Xplore Kaleidoscope 公司資訊、服務、作品狀態、標語、聯絡與參考價格供三套介面使用。系列名稱是呈現方向，不代表新的公司、產品分類、團隊規模、定價等級或客戶成果。公司正式外框／署名規範繼續有效；展示主體新增角色屬提案，DC-004／DC-005 必須確認其適用範圍。
 
-Logo 使用現有 `public/brand/source/` 原檔，依淺色／深色選正式主版、橫式、符號或反白版本；不拉伸、旋轉、金色染色、CSS filter、陰影或重畫圖形。正式 Inter／Noto Sans TC 是三套的可交付字體基準。可提出 Noto Serif TC 等候選，但只有完成授權、字形、載入成本及 Owner 審閱後才可納入，不能視為公司已核准字體，也不是 Heritage 交付的必要前提。
+Logo 使用現行 [V2.0 原檔與來源紀錄](../../../public/brand/source/README.md)，依淺色／深色選正式主版、橫式、符號或反白版本；不拉伸、旋轉、自行染色、CSS filter、陰影或重畫圖形。V2.0 字標採 Manrope SemiBold 的原始輪廓；正式 Inter／Noto Sans TC 仍為三套的介面字體基準。可提出 Noto Serif TC 等候選，但只有完成授權、字形、載入成本及 Owner 審閱後才可納入，不能視為公司已核准字體，也不是 Heritage 交付的必要前提。
 
 每套都要有自己的 token、字階／間距、component recipe、Header／Footer、Hero、頁面 composition 及視覺驗收紀錄。可共用原生語意、shadcn／Lucide、資料與行為核心；不得只改顏色、替換 banner 或重排同一組 class 就宣稱完成一套系列。
 
