@@ -124,11 +124,25 @@ preview 只供本機檢查，不是正式部署服務。HTTP／native tests 不�
 
 效能門檻 FAIL 先保存固定 profile 的全部原始樣本、真 exit、median／range 及 trace。對照 font completion、Layout、Script Evaluation 與長 task 的實際順序，不能只憑資產數量推論唯一原因。若要改 loading／rendering，先做最小隔離對照，再確認外觀、字體 swap、深頁 anchor、keyboard／focus、所有內容與白色 A4 沒有退化；正式修正後以同 profile 重驗至少三個樣本及受影響完整矩陣。沒有實際 after 不宣稱改善率，也不以換品牌字體、放寬 CPU／網路或只挑有利 run 取得 PASS。尚未修復的真未達目標列 Known Issues，不能宣稱 release 通過。
 
+### R01 原生字體與離屏排版
+
+[R01 規格](../task/dc007-r01.md)及[重驗報告](../reports/dc007-r01-performance.md)延續 Draft PR #45；此處是維護操作邊界，不是正式效能 PASS。公司來源仍為 `f1be01c0c5d8bc5b1238f250838e336bef47b149`，字體／品牌／靜態網站規範沒有新變更。
+
+Noto Sans TC 關鍵子集採原生本機字體宣告，版本仍為 `2.004-H2`、variable weight 100–900、swap，僅預載經審閱的882個普通字碼核心。108個原始分片、其剩餘Unicode範圍及原Arial metrics fallback保留；不將未來新增CJK自動視為已優化。來源、完整OFL、固定母檔與core SHA、精簡字碼及重生命令見[字體維護文件](../../src/app/fonts/README.md)。重生只寫暫存輸出、核對預期SHA，不覆寫正式檔；新文案先重新稽核coverage及UVS，再決定是否更新core。
+
+離屏策略僅在 screen media 對首頁首段以外區塊、試算操作區及Footer啟用；Hero、Header、風格切換與標準A4不延遲，列印維持完整即時排版。保留全部DOM與控制項，不使用固定高度裁切內容。調整intrinsic尺寸或範圍後，驗證深層hash直入／reload、Tab與focus、尋找頁面文字、選項變更／展開、返回導航、完整捲動與早期列印，並觀察實際字體完成與滾動後成本；不能只看首屏TBT。正式after與兩模式回歸完成前，不將pilot或來源檢查寫成驗收通過。
+
+### R01 試算渲染候選與失敗保留
+
+最終候選保留完整 100–900 字體軸、原生 screen 離屏排版與 memoized 摘要。store controller／deferred enablement 試作仍未達標，已撤回；初始化、選取、價格、驗證、複製及列印流程保持原有行為。正式 after、Normal／Pages 回歸、畫面與 PDF／warm 完成前，不得宣稱效能 PASS。
+
+Footer自訂導覽、隱去靜態內容的Suspense及runtime-priority實驗均已撤回，不屬現行建置或維護流程。縮為400／700軸的字體試作也未通過精確glyph檢查；保留原完整variable軸與glyph／UVS證據，glyf／gvar字體不套用CFF修法。失敗原型、程序退出碼與原因只從 [R01 報告](../reports/dc007-r01-performance.md)追溯，不從歷史快照恢復已刪工具、額外建置處理或其測試命令。
+
 ## Logo V2 過渡、Known Issues 與 rollback
 
 公司規範固定參考 [f1be01c0 的 Logo V2 使用規範](https://github.com/xk2022/xplore-kaleidoscope/blob/f1be01c0c5d8bc5b1238f250838e336bef47b149/05_brand/logo-guidelines.md#v10-歷史與過渡素材logo-03) 與 [2026-11-26 confirmed 決議](https://github.com/xk2022/xplore-kaleidoscope/blob/f1be01c0c5d8bc5b1238f250838e336bef47b149/10_decisions/2026-11-26.md)。既有網站／產品暫用原部署素材，待 V2 相應衍生資產交付並驗收後安排更新。一般 UI 仍 Inter／Noto Sans TC；Manrope 600 只屬已轉向量的 Logo 字標。不要把 V2 母稿的存在改成此輪換 Logo、載新字體、全站換色或重染 Logo03 的授權；品牌資產遷移另立範圍並驗證。
 
-目前問題、外部環境限制、未完成 Required 項及實際證據以 [DC-007 報告](../reports/dc007-implementation.md) 的 Known Issues／驗收矩陣為準；本指南不宣稱其已通過。修復只針對可重現缺陷，附原失敗與受影響重驗，不順帶升級依賴或增加業務功能。
+目前問題、外部環境限制、未完成 Required 項及實際證據以 [DC-007 報告](../reports/dc007-implementation.md) 的 Known Issues／驗收矩陣與 [R01 版本報告](../reports/dc007-r01-performance.md)為準；本指南不宣稱其已通過。真人讀屏BLOCKED與原網路未知不能由效能修復自動解除。修復只針對可重現缺陷，附原失敗與受影響重驗，不順帶升級依賴或增加業務功能；仍沿用同一Draft PR等待審閱，不合併或部署。
 
 需要 rollback 時，由 owner 先確認問題版本、最後可用 commit／artifact 與回退後應有的路由清冊。從當時最新 main 建立獨立 rollback 分支，以 revert 形成可審閱 PR；merge commit 先核對 parent／差異再決定 revert 範圍。不 force push、不直接修改 main、不以 DNS 或關閉 guard 規避缺陷。
 

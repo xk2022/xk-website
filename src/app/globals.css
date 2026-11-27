@@ -57,6 +57,12 @@
 @source not "../../docs/reports/dc007-implementation.md";
 @source not "../../docs/reports/dc007-artifacts";
 @source not "../../docs/03_engineering/design-collection-maintenance.md";
+@source not "../../docs/task/dc007-r01.md";
+@source not "../../docs/reports/dc007-r01-performance.md";
+@source not "../../scripts/test-font-assets.mjs";
+@source not "../../scripts/fixtures/font-contract.json";
+@source not "../../scripts/regenerate-font-core.py";
+@source not "./fonts";
 
 :root {
   color-scheme: light;
@@ -293,6 +299,19 @@
     top: 50%;
     right: 2rem;
     background: color-mix(in srgb, var(--accent) 5%, transparent);
+  }
+}
+
+/* Native rendering skips offscreen work, while keeping links, text and controls
+   in the DOM/accessibility tree. Heroes, navigation and print remain eager. */
+@media screen {
+  main:has(> section[aria-labelledby="home-title"]) > section:not(:first-child),
+  [data-deferred-sections] > section:not(:first-child),
+  #quotation-estimator > section.quotation-screen-only:not(#quotation-introduction),
+  #quotation-estimator > section.quotation-preview-section,
+  footer {
+    content-visibility: auto;
+    contain-intrinsic-block-size: auto 1000px;
   }
 }
 

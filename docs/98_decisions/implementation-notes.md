@@ -531,3 +531,9 @@ DC-006 PR #44 已經使用者另次授權合併為 `ee4b4709a9f8daa755e2595a46c1
 六品質指令及 typegen 真 Exit0，native436 PASS；Normal／Pages HTTP分別3274 PASS＋2 N/A、3282 PASS，兩模式各531完整assertions／245 layouts／119 axe，0 violations。原Normal4 FAIL、Pages1 network FAIL及各384 incomplete均保留；工具oracle修正、paint逐項覆核與限定補驗分開記錄。47張本輪真圖、8份實體A4／QR與跨頁列印補圖已完成；真原生200% zoom限Normal16頁，不代替真人讀屏。
 
 18 cold完整，但六組TBT median約1201–1553ms全未達200ms；6 warm／27動作完成，原HEAD review仍保留。真人讀屏Required BLOCKED、原取消請求部分原因未解、效能FAIL，使本輪完整發布門檻未通過。建立Draft PR追蹤，不自動合併／部署；保留既有字體／設計／功能與價格，沒有虛構after改善率或新品牌遷移。細項及真退出碼見[DC-007報告](../reports/dc007-implementation.md)。
+
+## DC-007-R01（2026-11-27）
+
+沿用現有發布測試分支與 Draft PR #45。根據相同效能環境的 fresh before 與 trace，調整 Noto Sans TC 的原生子集載入、screen 離屏排版及試算摘要 memo；完整 100–900 字重軸、字形／UVS、原分片、授權、導覽、靜態輸出、SEO 與業務資料保留。未採用的 Font Loading API、Footer 委派、Suspense、runtime priority、deferred store 及縮窄字體軸原型，與實際失敗／回退證據均保留。
+
+最終來源、各測試真實退出碼與版本影響判斷以 [R01 報告](../reports/dc007-r01-performance.md) 為準；原 [DC-007 報告](../reports/dc007-implementation.md) 保留歷史結果。效能改善不自動解除真人讀屏、歷史網路未知、法律、索引或正式發布門檻；不合併、部署或修改 DNS。

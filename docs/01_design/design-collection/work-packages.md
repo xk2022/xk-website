@@ -111,6 +111,12 @@ DC-004／DC-005 可平行設計；共用來源、registry、layout 及 fixtures 
 - 截圖：三首頁各五寬 15 張；三套 Services／Portfolio／Contact／Quotation 各 375／1440 共 24 張；Gallery 375／1440 兩張；每系列作品詳頁代表 375／1440 六張；6 份 PDF 及跨頁列印必要圖。基礎清單共 47 張網站圖，不含 PDF 渲染及修復對照，全部真實捕捉並人工檢視。
 - 完成：所有 Required assertions 有真 exit／預期／實際／版本／證據；阻擋 FAIL 為 0，外部 BLOCKED 不冒稱完成。確認最終 PR head CI 與 artifact 資源。**本規格不預先授權 merge／deploy**；有當次授權後才驗 main CI、Pages deployment、正式網址／資源／互動，否則交付 PR 等待審閱。
 
+### DC-007 目前狀態與 R01
+
+原 [DC-007 報告](../../reports/dc007-implementation.md) 保留完整驗收、效能 FAIL、incomplete、真人讀屏 BLOCKED 與部分原請求原因未知，不能改寫為已完成。2026-11-27 的 [R01](../../task/dc007-r01.md) 在同分支／[Draft PR #45](https://github.com/xk2022/xk-website/pull/45) 修復效能並重驗；正式 before／after、字體與畫面／操作／PDF回歸依 [R01 報告](../../reports/dc007-r01-performance.md) 的實際證據記錄，不以 pilot 取代本工作包門檻。
+
+原生關鍵字體與僅 screen 的離屏排版維護方式見[維護指南](../../03_engineering/design-collection-maintenance.md)。保留全部內容、原字型／fallback、錨點、focus、標準 A4及兩模式；性能修復不自動解除真人讀屏或網路未知。整體 DC-007 仍未完成，R01不另授權合併或部署。 2026-11-27 正式 R01 最終 18 次冷載已完成：三首頁 TBT 中位數 171.396／171.249／189.397 ms 達標，三試算頁 235.073／246.120／210.042 ms 仍 FAIL；六組 LCP／CLS 中位數達標。效能目標尚未完整通過，原始單筆超標、失敗與其餘 Required 阻擋繼續保留。
+
 ## 10. 功能包的共通測試與證據
 
 以下為 DC-002～DC-007 的未來執行要求，**不是 DC-001 已執行結果**。最終完成版本執行：

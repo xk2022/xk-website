@@ -10,7 +10,7 @@ export { HeritageTechnicalProject, HeritageBrandShowcase } from "./heritage-cont
 export function HeritageHome() {
   const { home, site, services, portfolio, contact } = getDesignContent();
   const featured = portfolio.websiteShowcases.filter((entry) => portfolio.settings.featuredIds.some((id) => id === entry.id));
-  return <div className="htg-page">
+  return <div className="htg-page" data-deferred-sections>
     <HeritageHero id="home-hero" title={home.hero.title} description={home.hero.description} eyebrow={home.hero.eyebrow}>
       <p className="htg-kicker" lang="en">READING INDEX</p>
       <h2>從需求出發，連結每一項技術。</h2>

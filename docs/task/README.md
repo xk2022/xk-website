@@ -307,3 +307,9 @@ DC-006 實作共用導航模型／resolver、Header 後且列印隱藏的風格 
 DC-006 [PR #44](https://github.com/xk2022/xk-website/pull/44) 已合併並部署，滿足前置。本輪 `test/design-collection-release` 保存49頁雙模式驗收、47張實圖、8份實體PDF、18個cold樣本、維護與rollback文件。完整發布門檻仍有TBT目標FAIL、原始網路取消未解及真人讀屏BLOCKED；詳本輪報告，不改寫原FAIL，不自動合併或部署。
 
 本輪入口：[規格](../task/dc007.md)／[實作與驗收](../reports/dc007-implementation.md)／[維護與 rollback](../03_engineering/design-collection-maintenance.md)。
+
+## DC-007-R01 效能修復｜2026-11-27
+
+[R01 規格](dc007-r01.md) 延續原分支及 [Draft PR #45](https://github.com/xk2022/xk-website/pull/45)，以固定條件的 before／after 與完整受影響回歸驗證原生字體載入及離屏排版修復；正式結果見 [R01 報告](../reports/dc007-r01-performance.md)，不把 pilot 當完整 PASS。[字體來源與重生](../../src/app/fonts/README.md)及[維護指引](../03_engineering/design-collection-maintenance.md)記錄已審範圍。
+
+公司來源仍為 `f1be01c0c5d8bc5b1238f250838e336bef47b149`，沒有新增品牌或平台規範。原 DC-007 FAIL／incomplete、真人讀屏 BLOCKED 及網路未知保留；整體發布門檻仍未完成。更新同一 Draft PR 等待審閱，不合併、部署或改 DNS。

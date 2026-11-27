@@ -1,15 +1,17 @@
+import { memo } from "react";
 import Image from "next/image";
 import { CheckSquare, Square } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { quotationCatalog } from "@/config/quotation";
-import { formatQuotationTotal, formatReferencePrice } from "@/lib/quotation/calculation";
-import type { QuotationCatalog, QuotationEstimate, QuotationSelection } from "@/lib/quotation/types";
+import { calculateQuotation, formatQuotationTotal, formatReferencePrice } from "@/lib/quotation/calculation";
+import type { QuotationCatalog, QuotationSelection } from "@/lib/quotation/types";
 
-type Props = { selection: QuotationSelection; estimate: QuotationEstimate; customerName: string; projectName: string; catalog?: QuotationCatalog };
+type Props = { selection: QuotationSelection; customerName: string; projectName: string; catalog?: QuotationCatalog };
 
-export function QuotationSummary({ selection, estimate, customerName, projectName, catalog = quotationCatalog }: Props) {
+export const QuotationSummary = memo(function QuotationSummary({ selection, customerName, projectName, catalog = quotationCatalog }: Props) {
+  const estimate = calculateQuotation(selection, catalog);
   const build = catalog.builds.find(({ id }) => id === selection.buildId);
   const service = catalog.services.find(({ id }) => id === selection.serviceId);
   const complexity = catalog.complexities.find(({ id }) => id === selection.complexity);
@@ -77,4 +79,4 @@ export function QuotationSummary({ selection, estimate, customerName, projectNam
       </Container>
     </Section>
   );
-}
+});

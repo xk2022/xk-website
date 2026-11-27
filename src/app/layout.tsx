@@ -1,25 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_TC } from "next/font/google";
+import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { siteConfig } from "@/config/site";
 import { createWebsiteJsonLd, serializeJsonLd } from "@/lib/seo";
 
+import { notoSansTC } from "./fonts/core-font";
+
 import "./globals.css";
+import "./fonts/noto-sans-tc.css";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
-});
-
-const notoSansTC = Noto_Sans_TC({
-  subsets: ["latin"],
-  // Each Unicode subset already contains all weights; declare it only once.
-  weight: "variable",
-  variable: "--font-noto-sans-tc",
-  display: "swap",
-  preload: false,
 });
 
 export const metadata: Metadata = {

@@ -148,3 +148,7 @@ Pages為主測，固定mobile375×812／DPR1／CPU4、DevTools實際150ms latenc
 | Feature commit／push | PENDING；最終實際SHA於Git／PR呈現，避免自記SHA循環commit |
 | 新PR／exact-head CI／真Pages artifact | PENDING；後發遠端run／artifact／檢查更新同一PR Description，不借用PR44 |
 | 人工review／合併／main CI／部署／公開驗證 | PENDING；本輪未授權merge/deploy，不發布功能分支，沒有本輪部署成功聲明 |
+
+## DC-007-R01 版本邊界（2026-11-27）
+
+本報告以上內容是原 DC-007 的驗收快照，原 FAIL、incomplete、網路未知與真人讀屏 BLOCKED 不變。後續效能修正在相同 `test/design-collection-release`／[Draft PR #45](https://github.com/xk2022/xk-website/pull/45) 進行；[R01 報告](dc007-r01-performance.md) 獨立記錄 fresh before、全部候選、最終來源與重驗結果。不得以 R01 的局部改善回填本報告、解除既有發布阻擋或將整體 DC-007 標為完成。本輪不合併、不部署、不修改 DNS。

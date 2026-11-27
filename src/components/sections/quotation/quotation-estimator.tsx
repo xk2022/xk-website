@@ -417,7 +417,7 @@ export function QuotationEstimator({ styleId = "modern", catalog = quotationCata
         </Container>
       </Section>
 
-      <QuotationSummary selection={selection} estimate={estimate} customerName={customerName} projectName={projectName} catalog={catalog} />
+      <QuotationSummary selection={selection} customerName={customerName} projectName={projectName} catalog={catalog} />
 
       <Section id="quotation-next-step" background="surface" aria-labelledby="quotation-next-step-title" className={cn("quotation-screen-only", "border-t")}>
         <Container>

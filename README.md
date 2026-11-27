@@ -43,13 +43,14 @@ Xplore Kaleidoscope 的品牌官網（BRAND），展示數位品牌、Java 企�
 - [三套 Design System](docs/01_design/design-collection/design-systems.md)
 - [DC-001～007 工作包](docs/01_design/design-collection/work-packages.md)
 - [DC-007 完整驗證報告](docs/reports/dc007-implementation.md)／[47 張本輪截圖](docs/screenshots/design-collection/dc007/)／[維護與 rollback](docs/03_engineering/design-collection-maintenance.md)；發布門檻尚未全通過，依報告追蹤 Required 缺口。
+- [DC-007-R01 效能修復](docs/task/dc007-r01.md)／[修復與重驗報告](docs/reports/dc007-r01-performance.md)／[本機字體來源與重生方式](src/app/fonts/README.md)：沿用 [Draft PR #45](https://github.com/xk2022/xk-website/pull/45)。本輪保留原生完整變數字體、screen 離屏排版及試算摘要 memo；正式 after 與回歸依報告的實際數據判定，不以試跑宣稱通過。未採用原型僅依報告追溯。
 - [DC-006 實作與驗收報告](docs/reports/dc006-implementation.md)／[DC-006 截圖](docs/screenshots/design-collection/dc006/)（18 張歷史 Pages 畫面）
 
 DC-003 的 Modern 16＋Gallery 17 頁驗收保留歷史版本，見 [規格](docs/task/dc003.md)、[核心 API](docs/03_engineering/design-collection-core.md) 與 [報告](docs/reports/dc003-implementation.md)。Heritage 的 [品牌核准](docs/01_design/design-collection/reviews/heritage-v1-approval.md)、[完整規格](docs/task/dc004.md)／[報告](docs/reports/dc004-implementation.md)，以及 Luxury 的 [品牌核准](docs/01_design/design-collection/reviews/luxury-v1-approval.md)、[審閱稿](docs/01_design/design-collection/reviews/luxury-v1.md)、[完整規格](docs/task/dc005.md)／[報告](docs/reports/dc005-implementation.md) 均保留原時點。
 
 [PR #40](https://github.com/xk2022/xk-website/pull/40) 合併為 `0d41ecf495e55b792f966c9fe27bd07c27bc5647`，其 [main CI／Pages](https://github.com/xk2022/xk-website/actions/runs/45796333591) 與公開 33 頁驗證完成；[PR #42](https://github.com/xk2022/xk-website/pull/42) 合併為 `9322810f27e74e5ed4faa35a3b3931b3719f0c9a`，49 頁的部署及公開驗證見 [整合報告](docs/reports/design-collection-integration.md)。這些是 DC-006 的已發布基準，不能改稱本輪新驗收。
 
-本分支 `test/design-collection-release` 依 [DC-007 規格](docs/task/dc007.md) 驗全站內容／行為、五寬、axe／人工可及性、實體 PDF／QR、效能與實際截圖，並補[維護與 rollback 指南](docs/03_engineering/design-collection-maintenance.md)。本輪狀態以[驗證報告](docs/reports/dc007-implementation.md)為準，Required 外部證據缺少不得宣稱完整發布通過。完成後新 PR 審閱，不自動合併、部署或改 DNS。正式索引、法律及品牌素材遷移各有核准邊界。
+本分支 `test/design-collection-release` 保留 [DC-007 規格](docs/task/dc007.md) 與原始驗收紀錄，現依 [R01](docs/task/dc007-r01.md) 修復可重現的效能問題。原效能 FAIL、真人讀屏 BLOCKED 與網路未知各自追蹤；R01 成功也不自動使完整 DC-007 通過。更新同一份 Draft PR #45 等待審閱，不合併、部署或改 DNS。正式索引、法律及品牌素材遷移各有核准邊界。
 
 ## 3. 技術架構
 

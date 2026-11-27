@@ -10,7 +10,7 @@ export { LuxuryTechnicalProject, LuxuryBrandShowcase } from "./luxury-content-de
 export function LuxuryHome() {
   const { home, services, site, contact, portfolio } = getDesignContent();
   const featured = portfolio.websiteShowcases.filter((entry) => portfolio.settings.featuredIds.some((id) => id === entry.id));
-  return <div className="lx-pages">
+  return <div className="lx-pages" data-deferred-sections>
     <LuxuryHero title={home.hero.title} description={home.hero.description} eyebrow={home.hero.eyebrow}>
       <div className="lx-actions">
         <LuxuryInquiry describedBy="home-inquiry-note" />
