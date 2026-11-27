@@ -12,16 +12,16 @@ const sectors = [
   { id: "luxury", name: "Luxury 奢華精品", path: "M 917 259 A 482 482 0 0 1 500 982 L 500 700 A 200 200 0 0 0 673 400 Z", color: "#ffdc87" },
 ] as const satisfies readonly { id: DesignStyleId; name: string; path: string; color: string }[];
 
-export function KaleidoscopeGateway() {
+export function KaleidoscopeGateway({ isHome = false }: Readonly<{ isHome?: boolean }>) {
   const entries = sectors.flatMap((sector) => {
     const href = resolveDesignHref({ styleId: sector.id, pageKey: "home" });
-    return href ? [{ ...sector, href }] : [];
+    return href ? [{ ...sector, href: sector.id === "modern" ? `${href}#home-title` : href }] : [];
   });
 
   return (
-    <section className={styles.gateway} aria-labelledby="design-collection-title">
+    <section className={styles.gateway} aria-labelledby="design-collection-title" data-gateway-location={isHome ? "home" : "gallery"}>
       <p className={styles.eyebrow} lang="en">XPLORE KALEIDOSCOPE · DESIGN COLLECTION</p>
-      <h1 id="design-collection-title" className={styles.title} lang="en">One Brand. Infinite Perspectives.</h1>
+      <h1 id="design-collection-title" className={styles.title} lang="en">{isHome ? "XK SYSTEM — One Brand. Infinite Perspectives." : "One Brand. Infinite Perspectives."}</h1>
       <p className={styles.subtitle}>一個品牌，無限視角。選擇你的設計風格。</p>
       <div className={styles.wheel}>
         <Image src="/design-collection/kaleidoscope-gateway.webp" alt="" width={1024} height={1024} unoptimized loading="eager" fetchPriority="high" className={styles.art} />

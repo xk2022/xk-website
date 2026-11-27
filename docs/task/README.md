@@ -11,6 +11,7 @@
 最新功能任務、Bugfix、Design Collection 與文件整理進度以 [Roadmap](ROADMAP.md) 為集中入口。原始規格、工作包及下方歷史進度快照保留，避免重複維護最新狀態。
 
 - [DC-008-01 萬花筒入口](dc008-01.md)：既有 Gallery 首屏整合，獨立 PR 審閱。
+- [DC-008-02 根網址共同入口](dc008-02.md)：同一 PR 擴充，保留原 Modern 首頁內容及路由。
 
 ## 問題追蹤與後續 Bugfix
 
