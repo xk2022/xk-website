@@ -161,6 +161,23 @@ function verifyStyleHomeLink(links, expectedPath) {
   assert.ok(links[0] === expectedPath || (expectedPath !== "/" && links[0] === `${expectedPath}/`), "Implemented Gallery styles must link only to the approved homepage, with at most its single Pages trailing slash.");
 }
 
+// The custom Tailwind loader emits plain CSS. A successful build alone cannot
+// detect missing CSS Module class exports; verify the actual HTML and its linked CSS.
+function verifyGatewayStyles(html, prefix, requiredClasses, label) {
+  const visible = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
+  assert.doesNotMatch(visible, /class="[^"]*\bundefined\b[^"]*"/, `${label} must not emit undefined class names.`);
+  const css = [...visible.matchAll(/<link\b[^>]*>/g)]
+    .map(([tag]) => tagAttribute(tag, "rel") === "stylesheet" ? tagAttribute(tag, "href") : null)
+    .filter(href => href?.startsWith("/_next/static/") && href.endsWith(".css"))
+    .map(href => readFileSync(join(output, href), "utf8")).join("\n");
+  for (const name of requiredClasses) {
+    const className = `${prefix}-${name}`;
+    assert.ok(visible.match(/class="[^"]*"/g)?.some(tag => tag.slice(7, -1).split(/\s+/).includes(className)), `${label} missing HTML class ${className}.`);
+    assert.ok(new RegExp(`\\.${className}(?![\\w-])`).test(css), `${label} linked CSS missing selector ${className}.`);
+  }
+  assert.match(visible, /fill="transparent"[^>]*class="xkg[12]-hit"/, `${label} transparent SVG hit target must survive CSS failure.`);
+}
+
 function verifyModernFrame(html, label) {
   const markup = html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, "");
   for (const tag of ["header", "main", "footer", "h1"]) {
@@ -487,6 +504,7 @@ for (const [relativePath, pagePath, label] of exportedPages) {
     assert.equal((visible.match(/<main\b/g) ?? []).length, 1);
     assert.equal((visible.match(/<h1\b/g) ?? []).length, 1);
     assert.match(visible, /data-gateway-location="home"/);
+    verifyGatewayStyles(html, "xkg2", ["screen", "wheel", "art", "center", "links", "hit", "choices", "modern-flow", "heritage-shine", "gold-shine", "veil"], label);
     const links = [...visible.matchAll(/<a\b[^>]*>/g)].map(([tag]) => tagAttribute(tag, "href")?.replace(/\/$/, ""));
     for (const href of Object.values(designContract.styleHomePaths)) assert.equal(links.filter(link => link === href).length, 2, `Gateway must contain two accessible links to ${href}.`);
     continue;
@@ -512,6 +530,7 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   const footerPaths = new Set(footerUrls.filter(({ origin }) => origin === siteConfig.url).map(({ pathname }) => pathname.replace(/\/$/, "") || "/"));
   assert.ok(publicSeoPages.every(({ path }) => footerPaths.has(path)), `${label} Footer must list all published routes, including Quotation and Design Collection.`);
   if (pagePath === designContract.collectionRoute.path) {
+    verifyGatewayStyles(html, "xkg1", ["gateway", "wheel", "art", "center", "overlay", "hit", "choices", "effect"], label);
     for (const id of designContract.collectionRoute.anchors) {
       assert.equal([...html.matchAll(/<[a-z][\w-]*\b[^>]*>/g)].filter(([tag]) => tagAttribute(tag, "id") === id).length, 1, `Gallery must render exactly one declared #${id} landmark.`);
     }
