@@ -166,9 +166,13 @@ test("DC-CONTENT-13: the windows proposal is available without becoming client d
   assert.equal(proposal.presentation, "brand-proposal");
   assert.equal(proposal.availability, "available");
   assert.equal(proposal.href, "https://showcase.xplorekaleidoscope.com/qiangang-windows/");
-  assert.ok(proposal.note.includes("模擬操作"));
+  assert.equal(proposal.title, "萬花筒塑鋼門窗");
+  assert.equal(proposal.image.src, "/images/showcases/kaleidoscope-windows.webp");
+  assert.match(proposal.image.alt, /萬花筒塑鋼門窗.*虛構品牌/);
+  assert.match(proposal.note, /虛構品牌.*模擬操作/);
+  assert.doesNotMatch(JSON.stringify(proposal), /千剛實業|大園看樣/);
   assert.ok(proposal.detail.limitations.some((line) => line.includes("品牌提案展示")));
-  assert.deepEqual([proposal.image.width, proposal.image.height], [1280, 800]);
+  assert.deepEqual([proposal.image.width, proposal.image.height], [1280, 720]);
 });
 
 test("DC-CONTENT-14: unavailable templates retain null media/links, sourceHref and attribution", () => {
