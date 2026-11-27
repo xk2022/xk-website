@@ -1,0 +1,2735 @@
+{
+  "testId": "R01-47-LIMITED-MANUAL-VISUAL-REVIEW",
+  "status": "PASS",
+  "statusScope": "Limited manual observations of47actual native tall diagnostic views; not automated geometry or full fixed-height screenshot acceptance, pixel equality, WCAG certification, performance or full release PASS. Original MANUAL_PENDING/TALL_REJECTED/rawFAIL remain unchanged.",
+  "at": "2026-11-27T04:54:56.190996+00:00",
+  "sourceFingerprint": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+  "actualCases": 47,
+  "observedBlockingFindings": 0,
+  "images": [
+    {
+      "filename": "gallery-collection-375.png",
+      "sha256": "4dc2ea99efbb458ceef46869fbc109daa8f1a602fc4e5dfe674d64e39a5b4ea7",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "gallery-collection-1440.png",
+      "sha256": "43d0836dd8b733d1349be802438a3e266718e53ae4638a8f7efa8d42a14374fb",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-home-320.png",
+      "sha256": "f2563afb2b44382e363fe8f157ac32af7d6cde07eb50c2f0731686301884dda5",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-home-375.png",
+      "sha256": "545ace3bf2d8326627c93cdd63452e00254dd90f45177f3c10653af1cf4e45a2",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-home-768.png",
+      "sha256": "d84de675f1f1df352927373263222febc053abbc99454a8f47a50cf0a96d2b48",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-home-1440.png",
+      "sha256": "486e7e72f03e36a4b64eac9e691e3035cca1c95aad8eae968622b7d3eb59a030",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-home-1920.png",
+      "sha256": "83680462e1527bf80448f18724697836a675214b99d6a9a5a41a3149343b6f0a",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-services-375.png",
+      "sha256": "5cdcdc3bce58433dfab13ad86be7129e514201e0fbe662b8199c8b0243ddf8bc",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-services-1440.png",
+      "sha256": "d6f8c903d15c59c07f395b9e54c8cdb868be0650d2edb2413c7fb95eb9795fb6",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-portfolio-375.png",
+      "sha256": "1e2d7ef12158f116b54179cff97cbe27f95354f0df8dbf29ecf695735112f8fa",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-portfolio-1440.png",
+      "sha256": "6c391f64edfc2cb241711b535a521b5f3bbe960c0c344b79f5317612f250043b",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-brand-showcase-march-tangbao-375.png",
+      "sha256": "c71fed6478f26cefa5c9fd6613a2c8d26b39436f089cc79fa5550165411720a9",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-brand-showcase-march-tangbao-1440.png",
+      "sha256": "da7724b567ccdefc692e2be648e75ce0717f1c4211c9a1a61e1a33274e45ce21",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-contact-375.png",
+      "sha256": "64b4b98d75cf036d1a60dee78bd935df60aa374d9f06dfc3e001acfc501b38ad",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-contact-1440.png",
+      "sha256": "c7012f6b2f7aae7912965b58f94ff3e61e2067bbb8dcb3bf7e391288b8860310",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-quotation-375.png",
+      "sha256": "44204873fb172b7ed042ad3e44eca3d7aa1b2c5faf3a8a08ae6e0c0ddb05e938",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "modern-quotation-1440.png",
+      "sha256": "b0ef50a40bc18ac6ec2066e98094cba967499e6d9c317d06205055fe3f0bb562",
+      "reviewer": "root",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-home-320.png",
+      "sha256": "40f2d21e78e457376e3c76c87062bee5c7ed2cc7864c0ca96258c74596516f9a",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-home-375.png",
+      "sha256": "6ab3d77c55a9e97999c79fe574d2564762be5b8ab4a9038dc8f29123f8c74d1e",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-home-768.png",
+      "sha256": "c4af3223af7451f9ad5d2b68d77f2a91badbfe103a5e2a8feaff59b38cc2818a",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-home-1440.png",
+      "sha256": "a22965cc78b359f09c145cf60a2bb38352914c30c5b6c8af5af400206e9c51f3",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-home-1920.png",
+      "sha256": "fcf70ed1b89319293b9f592b90078d6e78c8fbb01ee9209cdbd96b332583ce8d",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-services-375.png",
+      "sha256": "9315134df71a35e8472efbc9acefd63351f2ea5d9062a426144b5ff64845651c",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-services-1440.png",
+      "sha256": "5b2517135ee3e80d4b4dfdd48b427b8109f97dcbb533afb346f1f753d2c39f1d",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-portfolio-375.png",
+      "sha256": "e4a6e038ab8ff870793b0012d43266951fec48576693d2021950e9c54e248f44",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-portfolio-1440.png",
+      "sha256": "90f8dd82230779f9960ee029cd0f6085cf356ba33014bab1d74a929ebc224d0b",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-brand-showcase-march-tangbao-375.png",
+      "sha256": "8eeb18e871acf0c8c6f340bba30f1502d7413d0b5332e934b196b6b3b0b58795",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-brand-showcase-march-tangbao-1440.png",
+      "sha256": "66d8d01eb572c8e3ceaa183144fc9a74ca8c795c7c37c49e74e4eec4ab097e68",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-contact-375.png",
+      "sha256": "cace582a0e8171df6a7e928baf4db1b681570fb0aef19178093f0b4acdc31117",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-contact-1440.png",
+      "sha256": "2ad5dde22f8149b9456b96d125b7b1c6bfb1b7bdab73013e594e127d25e3f2ed",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-quotation-375.png",
+      "sha256": "28e7695feedc92bccdc4b18fc857ae365bb2178d37c094509f98bfb7aebbbdf0",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "heritage-quotation-1440.png",
+      "sha256": "9a82f1be78844cadccaec55b56da8a52b097b307ad0c0b5ece0f1d30b714cbf6",
+      "reviewer": "Heritage reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-home-320.png",
+      "sha256": "ec6c4050bac25871b73c377ae692db7460b2f936fe60082f71ae3faa41450eb3",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-home-375.png",
+      "sha256": "4fdf5583ef7985ebf71157e0e6a56f9dcaf85a8865ff4c6462bfde3aeb3b6355",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-home-768.png",
+      "sha256": "aad8ed1c3bba3d4cea08c9749bbde28d5274794b44c810b6f56bc7891e0f6f8d",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-home-1440.png",
+      "sha256": "d464516b025e85f36a1b189c8470b29789ee0b55bd1c108fa512732f38efb8f5",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-home-1920.png",
+      "sha256": "8468508c8c6c9bcf8252c79c150d75ae54d9599f67d72af32132776d0f5fb297",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-services-375.png",
+      "sha256": "b279578403645af8e97dc202ba6b015394590ebdf0594245207fc0195ad9fe6e",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-services-1440.png",
+      "sha256": "5a80a34d7d949a530c909236282d29f9cc2102692cb8a702f5fbd8bc2ddff260",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-portfolio-375.png",
+      "sha256": "e2c76b8e29df8fff90b9505669ec87834257ea006a98b0346407a9d761dc1a15",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-portfolio-1440.png",
+      "sha256": "44147ad6a2e6645b6a577fd37927d89efda573c1ac7baba951c1e287a6dfcc0c",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-brand-showcase-march-tangbao-375.png",
+      "sha256": "51119b912f59b8c844c7dc5395caa89e96934904e34bdd2445a89dd11f831931",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-brand-showcase-march-tangbao-1440.png",
+      "sha256": "c174f2419cd5804a42bbe11c9cdd7d63dc3635fc8af507319b9140a01de19c72",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-contact-375.png",
+      "sha256": "ad9e5ca67955f727ed3ee5df228043f03e4ee849c10fc4fdcbcdabef5a0a3060",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-contact-1440.png",
+      "sha256": "731ca54cfc4f526279acd4701031f1a7e350ee2735c31bc9d86d5241980d4458",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-quotation-375.png",
+      "sha256": "996e97cb500718312636b7305e3d922c42022b1bc6ce6d8e57c61dee1417abef",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    },
+    {
+      "filename": "luxury-quotation-1440.png",
+      "sha256": "daa4299f367719ab376d26fcf648ac0b7fbce4c53722f0bbc5bd8b53132d7edb",
+      "reviewer": "Luxury reviewer",
+      "scope": "See exact owner notes and capture viewport/deltas in visual-index.json; some long views scaled to6000px by viewer."
+    }
+  ],
+  "ownerReports": {
+    "modern-gallery-review.json": {
+      "testId": "R01-VISUAL-MODERN-GALLERY",
+      "status": "PASS",
+      "at": "2026-11-27T04:49:50.031637+00:00",
+      "reviewer": "root",
+      "sourceFingerprint": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+      "actualFreshViews": 17,
+      "blockingIssuesObserved": 0,
+      "images": [
+        {
+          "filename": "gallery-collection-375.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/gallery-collection-375-tall-diagnostic.png",
+          "sha256": "4dc2ea99efbb458ceef46869fbc109daa8f1a602fc4e5dfe674d64e39a5b4ea7",
+          "status": "PASS",
+          "manualObservation": "三系列卡片與比較表完整，375px 堆疊／1440px 三欄，Footer 可見。",
+          "captureGeometryStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "geometryDeltas": [],
+          "baselineReference": "docs/screenshots/design-collection/dc007/gallery-collection-375.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "gallery-collection-1440.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/gallery-collection-1440-tall-diagnostic.png",
+          "sha256": "43d0836dd8b733d1349be802438a3e266718e53ae4638a8f7efa8d42a14374fb",
+          "status": "PASS",
+          "manualObservation": "三系列卡片與比較表完整，375px 堆疊／1440px 三欄，Footer 可見。",
+          "captureGeometryStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "geometryDeltas": [],
+          "baselineReference": "docs/screenshots/design-collection/dc007/gallery-collection-1440.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-home-320.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-home-320-tall-diagnostic.png",
+          "sha256": "f2563afb2b44382e363fe8f157ac32af7d6cde07eb50c2f0731686301884dda5",
+          "status": "PASS",
+          "manualObservation": "Hero、品牌圖、各服務與方案／作品區、CTA 至 Footer 皆有實際內容；窄版堆疊／寬版欄位完整，未見原 raw fullpage 的大段空白。",
+          "captureGeometryStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "geometryDeltas": [
+            {
+              "index": 1,
+              "id": "main-content",
+              "tag": "MAIN",
+              "property": "height",
+              "before": 16186.6875,
+              "after": 16186.921875,
+              "delta": 0.234375,
+              "absDelta": 0.234375
+            },
+            {
+              "index": 11,
+              "id": "",
+              "tag": "FOOTER",
+              "property": "y",
+              "before": 16592.3125,
+              "after": 16592.546875,
+              "delta": 0.234375,
+              "absDelta": 0.234375
+            }
+          ],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-home-320.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-home-375.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-home-375-tall-diagnostic.png",
+          "sha256": "545ace3bf2d8326627c93cdd63452e00254dd90f45177f3c10653af1cf4e45a2",
+          "status": "PASS",
+          "manualObservation": "Hero、品牌圖、各服務與方案／作品區、CTA 至 Footer 皆有實際內容；窄版堆疊／寬版欄位完整，未見原 raw fullpage 的大段空白。",
+          "captureGeometryStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "geometryDeltas": [
+            {
+              "index": 1,
+              "id": "main-content",
+              "tag": "MAIN",
+              "property": "height",
+              "before": 15337.5,
+              "after": 15337.5625,
+              "delta": 0.0625,
+              "absDelta": 0.0625
+            },
+            {
+              "index": 11,
+              "id": "",
+              "tag": "FOOTER",
+              "property": "y",
+              "before": 15701.84375,
+              "after": 15701.90625,
+              "delta": 0.0625,
+              "absDelta": 0.0625
+            }
+          ],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-home-375.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-home-768.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-home-768-tall-diagnostic.png",
+          "sha256": "d84de675f1f1df352927373263222febc053abbc99454a8f47a50cf0a96d2b48",
+          "status": "PASS",
+          "manualObservation": "Hero、品牌圖、各服務與方案／作品區、CTA 至 Footer 皆有實際內容；窄版堆疊／寬版欄位完整，未見原 raw fullpage 的大段空白。",
+          "captureGeometryStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "geometryDeltas": [
+            {
+              "index": 1,
+              "id": "main-content",
+              "tag": "MAIN",
+              "property": "height",
+              "before": 10785.25,
+              "after": 10785.671875,
+              "delta": 0.421875,
+              "absDelta": 0.421875
+            },
+            {
+              "index": 11,
+              "id": "",
+              "tag": "FOOTER",
+              "property": "y",
+              "before": 11025.53125,
+              "after": 11025.953125,
+              "delta": 0.421875,
+              "absDelta": 0.421875
+            }
+          ],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-home-768.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-home-1440.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-home-1440-tall-diagnostic.png",
+          "sha256": "486e7e72f03e36a4b64eac9e691e3035cca1c95aad8eae968622b7d3eb59a030",
+          "status": "PASS",
+          "manualObservation": "Hero、品牌圖、各服務與方案／作品區、CTA 至 Footer 皆有實際內容；窄版堆疊／寬版欄位完整，未見原 raw fullpage 的大段空白。",
+          "captureGeometryStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "geometryDeltas": [
+            {
+              "index": 1,
+              "id": "main-content",
+              "tag": "MAIN",
+              "property": "height",
+              "before": 8002.046875,
+              "after": 8002.359375,
+              "delta": 0.3125,
+              "absDelta": 0.3125
+            },
+            {
+              "index": 11,
+              "id": "",
+              "tag": "FOOTER",
+              "property": "y",
+              "before": 8242.328125,
+              "after": 8242.640625,
+              "delta": 0.3125,
+              "absDelta": 0.3125
+            }
+          ],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-home-1440.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-home-1920.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-home-1920-tall-diagnostic.png",
+          "sha256": "83680462e1527bf80448f18724697836a675214b99d6a9a5a41a3149343b6f0a",
+          "status": "PASS",
+          "manualObservation": "Hero、品牌圖、各服務與方案／作品區、CTA 至 Footer 皆有實際內容；窄版堆疊／寬版欄位完整，未見原 raw fullpage 的大段空白。",
+          "captureGeometryStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "geometryDeltas": [],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-home-1920.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-services-375.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-services-375-tall-diagnostic.png",
+          "sha256": "5cdcdc3bce58433dfab13ad86be7129e514201e0fbe662b8199c8b0243ddf8bc",
+          "status": "PASS",
+          "manualObservation": "五項服務、方案與流程依寬度排列，Logo 與 CTA 可見，未見卡片相互遮疊或外溢。",
+          "captureGeometryStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "geometryDeltas": [],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-services-375.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-services-1440.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-services-1440-tall-diagnostic.png",
+          "sha256": "d6f8c903d15c59c07f395b9e54c8cdb868be0650d2edb2413c7fb95eb9795fb6",
+          "status": "PASS",
+          "manualObservation": "五項服務、方案與流程依寬度排列，Logo 與 CTA 可見，未見卡片相互遮疊或外溢。",
+          "captureGeometryStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "geometryDeltas": [
+            {
+              "index": 1,
+              "id": "main-content",
+              "tag": "MAIN",
+              "property": "height",
+              "before": 8373,
+              "after": 8373.359375,
+              "delta": 0.359375,
+              "absDelta": 0.359375
+            },
+            {
+              "index": 15,
+              "id": "",
+              "tag": "FOOTER",
+              "property": "y",
+              "before": 8613.28125,
+              "after": 8613.640625,
+              "delta": 0.359375,
+              "absDelta": 0.359375
+            }
+          ],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-services-1440.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-portfolio-375.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-portfolio-375-tall-diagnostic.png",
+          "sha256": "1e2d7ef12158f116b54179cff97cbe27f95354f0df8dbf29ecf695735112f8fa",
+          "status": "PASS",
+          "manualObservation": "六張品牌展示與原生收合區可辨識，狀態文字與圖片保留；窄版堆疊、寬版雙欄，Footer 完整。",
+          "captureGeometryStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "geometryDeltas": [],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-portfolio-375.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-portfolio-1440.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-portfolio-1440-tall-diagnostic.png",
+          "sha256": "6c391f64edfc2cb241711b535a521b5f3bbe960c0c344b79f5317612f250043b",
+          "status": "PASS",
+          "manualObservation": "六張品牌展示與原生收合區可辨識，狀態文字與圖片保留；窄版堆疊、寬版雙欄，Footer 完整。",
+          "captureGeometryStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "geometryDeltas": [],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-portfolio-1440.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-brand-showcase-march-tangbao-375.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-brand-showcase-march-tangbao-375-tall-diagnostic.png",
+          "sha256": "c71fed6478f26cefa5c9fd6613a2c8d26b39436f089cc79fa5550165411720a9",
+          "status": "PASS",
+          "manualObservation": "預覽、圖說、限制、相關服務及來源連結完整；375px 網址自然換行，未見超出版面。",
+          "captureGeometryStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "geometryDeltas": [
+            {
+              "index": 1,
+              "id": "main-content",
+              "tag": "MAIN",
+              "property": "height",
+              "before": 3560.25,
+              "after": 3560.5625,
+              "delta": 0.3125,
+              "absDelta": 0.3125
+            },
+            {
+              "index": 8,
+              "id": "",
+              "tag": "FOOTER",
+              "property": "y",
+              "before": 3924.59375,
+              "after": 3924.90625,
+              "delta": 0.3125,
+              "absDelta": 0.3125
+            }
+          ],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-brand-showcase-march-tangbao-375.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-brand-showcase-march-tangbao-1440.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-brand-showcase-march-tangbao-1440-tall-diagnostic.png",
+          "sha256": "da7724b567ccdefc692e2be648e75ce0717f1c4211c9a1a61e1a33274e45ce21",
+          "status": "PASS",
+          "manualObservation": "預覽、圖說、限制、相關服務及來源連結完整；375px 網址自然換行，未見超出版面。",
+          "captureGeometryStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "geometryDeltas": [
+            {
+              "index": 1,
+              "id": "main-content",
+              "tag": "MAIN",
+              "property": "height",
+              "before": 3811.21875,
+              "after": 3811.359375,
+              "delta": 0.140625,
+              "absDelta": 0.140625
+            },
+            {
+              "index": 8,
+              "id": "",
+              "tag": "FOOTER",
+              "property": "y",
+              "before": 4051.5,
+              "after": 4051.640625,
+              "delta": 0.140625,
+              "absDelta": 0.140625
+            }
+          ],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-brand-showcase-march-tangbao-1440.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-contact-375.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-contact-375-tall-diagnostic.png",
+          "sha256": "64b4b98d75cf036d1a60dee78bd935df60aa374d9f06dfc3e001acfc501b38ad",
+          "status": "PASS",
+          "manualObservation": "表單標籤、輸入區、Email 卡與三步流程可辨識；桌面姓名／Email 並列、手機堆疊，未見遮擋。",
+          "captureGeometryStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "geometryDeltas": [
+            {
+              "index": 1,
+              "id": "main-content",
+              "tag": "MAIN",
+              "property": "height",
+              "before": 7068.34375,
+              "after": 7068.5625,
+              "delta": 0.21875,
+              "absDelta": 0.21875
+            },
+            {
+              "index": 9,
+              "id": "",
+              "tag": "FOOTER",
+              "property": "y",
+              "before": 7432.6875,
+              "after": 7432.90625,
+              "delta": 0.21875,
+              "absDelta": 0.21875
+            }
+          ],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-contact-375.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-contact-1440.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-contact-1440-tall-diagnostic.png",
+          "sha256": "c7012f6b2f7aae7912965b58f94ff3e61e2067bbb8dcb3bf7e391288b8860310",
+          "status": "PASS",
+          "manualObservation": "表單標籤、輸入區、Email 卡與三步流程可辨識；桌面姓名／Email 並列、手機堆疊，未見遮擋。",
+          "captureGeometryStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "geometryDeltas": [
+            {
+              "index": 1,
+              "id": "main-content",
+              "tag": "MAIN",
+              "property": "height",
+              "before": 5082.859375,
+              "after": 5083.359375,
+              "delta": 0.5,
+              "absDelta": 0.5
+            },
+            {
+              "index": 9,
+              "id": "",
+              "tag": "FOOTER",
+              "property": "y",
+              "before": 5323.140625,
+              "after": 5323.640625,
+              "delta": 0.5,
+              "absDelta": 0.5
+            }
+          ],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-contact-1440.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-quotation-375.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-quotation-375-tall-diagnostic.png",
+          "sha256": "44204873fb172b7ed042ad3e44eca3d7aa1b2c5faf3a8a08ae6e0c0ddb05e938",
+          "status": "PASS",
+          "manualObservation": "選項、未選取提示、費用區與縮放 A4／QR 預覽可見，Disabled CTA 可辨識；內容至 Footer 無離屏空白。",
+          "captureGeometryStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "geometryDeltas": [],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-quotation-375.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        },
+        {
+          "filename": "modern-quotation-1440.png",
+          "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-quotation-1440-tall-diagnostic.png",
+          "sha256": "b0ef50a40bc18ac6ec2066e98094cba967499e6d9c317d06205055fe3f0bb562",
+          "status": "PASS",
+          "manualObservation": "選項、未選取提示、費用區與縮放 A4／QR 預覽可見，Disabled CTA 可辨識；內容至 Footer 無離屏空白。",
+          "captureGeometryStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "geometryDeltas": [
+            {
+              "index": 1,
+              "id": "main-content",
+              "tag": "MAIN",
+              "property": "height",
+              "before": 7477.046875,
+              "after": 7477.359375,
+              "delta": 0.3125,
+              "absDelta": 0.3125
+            },
+            {
+              "index": 10,
+              "id": "",
+              "tag": "FOOTER",
+              "property": "y",
+              "before": 7717.328125,
+              "after": 7717.640625,
+              "delta": 0.3125,
+              "absDelta": 0.3125
+            }
+          ],
+          "baselineReference": "docs/screenshots/design-collection/dc007/modern-quotation-1440.png",
+          "baselineComparisonScope": "Current image freshly viewed. Compare with unchanged design/content contracts and original DC007 recorded visual review; no fresh per-pixel baseline equivalence claimed."
+        }
+      ],
+      "scope": "Limited manual layout/visible content review of actual native tall diagnostic PNGs. Same widths, taller capture viewport explicitly recorded; no CSS edits or stitching. Original fixed-height browser acceptance is separate. Some tools resize long images to6000px high, so this is not character-by-character proofreading or pixel/contrast certification. Raw strict geometry/rejection statuses preserved; fractional border/padding and closed-details facts handled separately. Original raw fullpage blank captures are not visual PASS."
+    },
+    "heritage-review.json": {
+      "testId": "R01-HERITAGE-FIFTEEN-MANUAL-VISUAL",
+      "recordedAt": "2026-11-27T04:54:09.100530+00:00",
+      "status": "PASS",
+      "statusScope": "Manual observation only:0observed visual blockers within the images/scales below. Not automationPASS, pixelidentity, fullWCAG, keyboard/AT or live-behavior acceptance.",
+      "blockingFindingCount": 0,
+      "actualCaseCount": 15,
+      "actualOpenedImages": {
+        "freshTallDiagnostics": 15,
+        "freshOriginalTop": 15,
+        "originalDC007Baselines": 15,
+        "nativeBodySamples": 5,
+        "totalImagePathsOpened": 50
+      },
+      "source": {
+        "path": "/tmp/xk-dc007-r01/source-after-v2.json",
+        "fileSha256": "10ec82dc553ee1f0dcc508dc7830613c3496bbf4d469730085620dabc2ac67bc",
+        "fingerprint": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936"
+      },
+      "captureFactsSnapshot": {
+        "path": "/tmp/xk-dc007-r01/visual/heritage-capture-facts-snapshot.json",
+        "sha256": "7372786186736607406746280d6db9f91bbcf7997363fd4c800cf7b837f6e915"
+      },
+      "rawCaptureStatusAtRead": "MANUAL_PENDING",
+      "rawCaseStatuses": {
+        "TALL_REJECTED_FALLBACK_TILES": 12,
+        "MANUAL_PENDING_SUBPIXEL_GEOMETRY": 3
+      },
+      "rawMaxObservedGeometryDelta": 0.453125,
+      "automationBoundary": "Original TALL_REJECTED_FALLBACK_TILES and MANUAL_PENDING_SUBPIXEL_GEOMETRY statuses are preserved. Semantic/over-bound/geometry/visibility observations are copied in the snapshot; this review does not turn those gates into automaticPASS or explain their cause.",
+      "cases": [
+        {
+          "case": "heritage-home-320",
+          "viewOrder": 1,
+          "route": "/design-collection/heritage",
+          "width": 320,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-320-tall-diagnostic.png",
+            "sha256": "40f2d21e78e457376e3c76c87062bee5c7ed2cc7864c0ca96258c74596516f9a",
+            "pngWidth": 320,
+            "pngHeight": 21003,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 91,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-320-original-top.png",
+            "sha256": "a55dc0b34e63ad7cb98226cbc0b4941be38bf71e9874447c64056b28d3487171",
+            "pngWidth": 320,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 320,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-home-320.png",
+            "sha256": "406633ee4681870d9128b6dfdc8a857d385eed8ea243b9c772d087297c667993",
+            "pngWidth": 320,
+            "pngHeight": 20941,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 92,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [
+            {
+              "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-320-tile-009.png",
+              "sha256": "e6ca3d762d4fe428584e1abb5073895dc60972e1ea200ae05aca7bea2fe94837",
+              "pngWidth": 320,
+              "pngHeight": 1000,
+              "kind": "actual-native1000px-viewport-body-sample",
+              "actuallyOpenedWithViewImage": true,
+              "viewerScope": {
+                "maxDisplayedHeightPx": 1000,
+                "approxDisplayedWidthIfHeightLimited": 320,
+                "heightResizedByViewer": false,
+                "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+              }
+            }
+          ],
+          "manualObservations": [
+            "Header logo and wordmark fit the narrow page; native mobile-menu summary, inquiry action and three switch targets remain visible. The original-top image shows readable notices and a wrapped four-line hero title.",
+            "The complete tall image has populated introduction, five services, three plan directions, three featured previews, technology, solutions, cooperation and Footer; no unexplained blank offscreen section is apparent. The native body sample confirms plan copy, inquiry CTA and the first work preview render at320px.",
+            "Single-column rhythm and image/caption arrangement resemble the reference. The tall image is only about91px wide in the6000px-height viewer, so it is used for continuity rather than word-by-word reading."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 62
+        },
+        {
+          "case": "heritage-home-375",
+          "viewOrder": 2,
+          "route": "/design-collection/heritage",
+          "width": 375,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-375-tall-diagnostic.png",
+            "sha256": "6ab3d77c55a9e97999c79fe574d2564762be5b8ab4a9038dc8f29123f8c74d1e",
+            "pngWidth": 375,
+            "pngHeight": 19917,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 113,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-375-original-top.png",
+            "sha256": "7a98ebf32c34a6d2b921c30b7250ac2aae6631c844c11aa43dd73e6352352eb6",
+            "pngWidth": 375,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 375,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-home-375.png",
+            "sha256": "ba1112817080bc9ea39a612283c0f4ec834fab7493371967c89da06c18475811",
+            "pngWidth": 375,
+            "pngHeight": 19855,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 113,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [],
+          "manualObservations": [
+            "At375px the header, switcher, inquiry action, three-line hero and explanatory text fit without apparent horizontal clipping.",
+            "Sections and three preview images are present from hero through the complete Footer. The mobile content stack and visible hierarchy resemble the reference."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 62
+        },
+        {
+          "case": "heritage-home-768",
+          "viewOrder": 3,
+          "route": "/design-collection/heritage",
+          "width": 768,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-768-tall-diagnostic.png",
+            "sha256": "c4af3223af7451f9ad5d2b68d77f2a91badbfe103a5e2a8feaff59b38cc2818a",
+            "pngWidth": 768,
+            "pngHeight": 14169,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 325,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-768-original-top.png",
+            "sha256": "a383338e397bd2120253e4eabf61e68b670158e99a478dbe2ac652e21642f9a7",
+            "pngWidth": 768,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 768,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-home-768.png",
+            "sha256": "942b2783f86f6ff21b33d9433eedc9a8fe47948ac18f4ba0a4c5139e07b7547c",
+            "pngWidth": 768,
+            "pngHeight": 14112,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 327,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [],
+          "manualObservations": [
+            "The tablet header uses the native menu; the two-column hero and narrow reading-index aside remain populated.",
+            "The long aside leaves substantial open area on the hero left, also present in the reference; it does not appear as a newly missing CV block. Service rows, plan columns, work images and Footer remain present."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 57
+        },
+        {
+          "case": "heritage-home-1440",
+          "viewOrder": 4,
+          "route": "/design-collection/heritage",
+          "width": 1440,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-1440-tall-diagnostic.png",
+            "sha256": "a22965cc78b359f09c145cf60a2bb38352914c30c5b6c8af5af400206e9c51f3",
+            "pngWidth": 1440,
+            "pngHeight": 12845,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 673,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-1440-original-top.png",
+            "sha256": "a64715aa0cbc9d91d6950f00988aaf7ad35505ff4c4aa1c938ac7cefa0463cc5",
+            "pngWidth": 1440,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 1440,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-home-1440.png",
+            "sha256": "85edcb4f7b031f63a3310aaa661455c6f7d57e91bbfd9cdf7f83db1c38064508",
+            "pngWidth": 1440,
+            "pngHeight": 12788,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 676,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [],
+          "manualObservations": [
+            "Desktop header/nav and visible inquiry action fit in one balanced frame; the top image shows clear title, body and reading-index text.",
+            "The asymmetric hero/open left area, service directory, three plan columns and three image-led work rows follow the reference arrangement, with no observed collision or missing lower-page section."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 57
+        },
+        {
+          "case": "heritage-home-1920",
+          "viewOrder": 5,
+          "route": "/design-collection/heritage",
+          "width": 1920,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-1920-tall-diagnostic.png",
+            "sha256": "fcf70ed1b89319293b9f592b90078d6e78c8fbb01ee9209cdbd96b332583ce8d",
+            "pngWidth": 1920,
+            "pngHeight": 12845,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 897,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-1920-original-top.png",
+            "sha256": "731543e7eb5e90c4f3458501369f1f87bb6627ff4615dc4e92f645aa5ee748a9",
+            "pngWidth": 1920,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 1920,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-home-1920.png",
+            "sha256": "671e7527291a11b6d8086ab361d1f11ee6c3e9e1e546c131ca5d6e0857f72983",
+            "pngWidth": 1920,
+            "pngHeight": 12788,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 901,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [],
+          "manualObservations": [
+            "Wide-page content retains its centered maximum width, readable left hero and right reading panel; header links and switcher are not stretched offscreen.",
+            "All lower sections and work previews are visible. Whitespace and layout hierarchy resemble the reference rather than expanding into unexplained empty content."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 57
+        },
+        {
+          "case": "heritage-services-375",
+          "viewOrder": 6,
+          "route": "/design-collection/heritage/services",
+          "width": 375,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-services-375-tall-diagnostic.png",
+            "sha256": "9315134df71a35e8472efbc9acefd63351f2ea5d9062a426144b5ff64845651c",
+            "pngWidth": 375,
+            "pngHeight": 18024,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 125,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-services-375-original-top.png",
+            "sha256": "5014df5c8d9287f4259efb74a5b6b9eeb5d7e78467b690cafeab271be507386f",
+            "pngWidth": 375,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 375,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-services-375.png",
+            "sha256": "1c9fa8b32616041d7855ed870a1f08f52c4b8faf0b133edf56866ce8f30ff2d0",
+            "pngWidth": 375,
+            "pngHeight": 17963,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 125,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [
+            {
+              "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-services-375-tile-008.png",
+              "sha256": "ee3f4dd956979926986064108236b33fe78224ddceb92c3ce73756c9b9d21dcd",
+              "pngWidth": 375,
+              "pngHeight": 1000,
+              "kind": "actual-native1000px-viewport-body-sample",
+              "actuallyOpenedWithViewImage": true,
+              "viewerScope": {
+                "maxDisplayedHeightPx": 1000,
+                "approxDisplayedWidthIfHeightLimited": 375,
+                "heightResizedByViewer": false,
+                "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+              }
+            }
+          ],
+          "manualObservations": [
+            "Hero and aside stack cleanly on mobile. The five service directions, three plans, pricing explanation, five detailed service sections and collaboration steps are populated.",
+            "The native body sample shows readable feature lists, a full-width example CTA and the Java section transition, without word clipping or overlapping controls. Overall single-column rhythm resembles the reference."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 61
+        },
+        {
+          "case": "heritage-services-1440",
+          "viewOrder": 7,
+          "route": "/design-collection/heritage/services",
+          "width": 1440,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-services-1440-tall-diagnostic.png",
+            "sha256": "5b2517135ee3e80d4b4dfdd48b427b8109f97dcbb533afb346f1f753d2c39f1d",
+            "pngWidth": 1440,
+            "pngHeight": 11986,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 721,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-services-1440-original-top.png",
+            "sha256": "bb4798c7cddbd78421d4815920a2e3e22bbf13735fa258246d65d080eab0fd19",
+            "pngWidth": 1440,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 1440,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-services-1440.png",
+            "sha256": "846535d34f178f38cabce5b3d4677ef8e0bc678b518f8bcf7d84453bd96eb5ad",
+            "pngWidth": 1440,
+            "pngHeight": 11930,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 724,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [],
+          "manualObservations": [
+            "Service directory rows, three plan columns and three cost-factor explanations remain distinct. Desktop detail sections keep their editorial main/aside arrangement.",
+            "The large existing section whitespace follows the reference. Visible body/CTA/Footer content is present rather than blank CV placeholders; no obvious clipping or overlap is observed."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 56
+        },
+        {
+          "case": "heritage-portfolio-375",
+          "viewOrder": 8,
+          "route": "/design-collection/heritage/portfolio",
+          "width": 375,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-portfolio-375-tall-diagnostic.png",
+            "sha256": "e4a6e038ab8ff870793b0012d43266951fec48576693d2021950e9c54e248f44",
+            "pngWidth": 375,
+            "pngHeight": 15014,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 150,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-portfolio-375-original-top.png",
+            "sha256": "11b0e0c913e35e06622853c73ffe48d7de6e5c66a7d80c3baedc9723b115d4b3",
+            "pngWidth": 375,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 375,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-portfolio-375.png",
+            "sha256": "81b09746daf3a55d505d1c9add0021eb443f928ffc6e1da6c4c8097b847e783c",
+            "pngWidth": 375,
+            "pngHeight": 14952,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 150,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [
+            {
+              "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-portfolio-375-tile-005.png",
+              "sha256": "5a3bdeddb2ef08350ccba28d87edbc98780ab424a5c5fef32fed0249c29acd19",
+              "pngWidth": 375,
+              "pngHeight": 1000,
+              "kind": "actual-native1000px-viewport-body-sample",
+              "actuallyOpenedWithViewImage": true,
+              "viewerScope": {
+                "maxDisplayedHeightPx": 1000,
+                "approxDisplayedWidthIfHeightLimited": 375,
+                "heightResizedByViewer": false,
+                "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+              }
+            }
+          ],
+          "manualObservations": [
+            "All six brand previews are present in the observed order with image, caption, status badges and introduction/source actions; mobile cards remain stacked.",
+            "Template and planned-project summary rows are visibly closed and compact. Technical-direction/status explanations, final CTA and Footer remain present. The native body sample shows a readable self-service preview badge/title/copy."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 62
+        },
+        {
+          "case": "heritage-portfolio-1440",
+          "viewOrder": 9,
+          "route": "/design-collection/heritage/portfolio",
+          "width": 1440,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-portfolio-1440-tall-diagnostic.png",
+            "sha256": "90f8dd82230779f9960ee029cd0f6085cf356ba33014bab1d74a929ebc224d0b",
+            "pngWidth": 1440,
+            "pngHeight": 8928,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 968,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-portfolio-1440-original-top.png",
+            "sha256": "d6282badeaed4d59ca78dea247db653c83d099d4bff2973f10f69f18000073b9",
+            "pngWidth": 1440,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 1440,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-portfolio-1440.png",
+            "sha256": "fedba685426936ee12a99f46ff6fa7ada7de4136f319ea77cd99bdea4807832f",
+            "pngWidth": 1440,
+            "pngHeight": 8871,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 974,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [],
+          "manualObservations": [
+            "Six image-left/text-right work rows are populated with visible captions, badges and actions. Preview images retain their intended proportions.",
+            "Closed template/planned rows and three technical-direction columns follow the reference. No major text/image collision or unexplained empty section is apparent."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 57
+        },
+        {
+          "case": "heritage-contact-375",
+          "viewOrder": 10,
+          "route": "/design-collection/heritage/contact",
+          "width": 375,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-contact-375-tall-diagnostic.png",
+            "sha256": "cace582a0e8171df6a7e928baf4db1b681570fb0aef19178093f0b4acdc31117",
+            "pngWidth": 375,
+            "pngHeight": 10139,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 222,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-contact-375-original-top.png",
+            "sha256": "cf2d0c306f055dd1694d9ff1f87a8c8984427d4a0c7eeac807d46fa28503c0dd",
+            "pngWidth": 375,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 375,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-contact-375.png",
+            "sha256": "1720e7f615e44df3dc281d98f6cc77efb136eb403804567a05bdd147cab3b78f",
+            "pngWidth": 375,
+            "pngHeight": 10077,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 223,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [
+            {
+              "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-contact-375-tile-002.png",
+              "sha256": "37516408e35a01d5f4ba8f0b0c16e38d75a21f120534e1bbac60aedc35c29119",
+              "pngWidth": 375,
+              "pngHeight": 1000,
+              "kind": "actual-native1000px-viewport-body-sample",
+              "actuallyOpenedWithViewImage": true,
+              "viewerScope": {
+                "maxDisplayedHeightPx": 1000,
+                "approxDisplayedWidthIfHeightLimited": 375,
+                "heightResizedByViewer": false,
+                "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+              }
+            }
+          ],
+          "manualObservations": [
+            "Hero inquiry/preparation actions, complete business email, preparation notice and three-step index are visible. The address fits the shown mobile width.",
+            "The native form sample shows readable labels, helper copy, white input areas and select within the335px content width. Blank fields are the intentional initial form state.",
+            "Channels, preparation steps, information-sharing guidance, final actions and Footer remain populated; the self-send/no-direct-send explanation is visible. No new layout clipping is observed compared with the reference."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 62
+        },
+        {
+          "case": "heritage-contact-1440",
+          "viewOrder": 11,
+          "route": "/design-collection/heritage/contact",
+          "width": 1440,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-contact-1440-tall-diagnostic.png",
+            "sha256": "2ad5dde22f8149b9456b96d125b7b1c6bfb1b7bdab73013e594e127d25e3f2ed",
+            "pngWidth": 1440,
+            "pngHeight": 6555,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 1318,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-contact-1440-original-top.png",
+            "sha256": "39bf34dd712f013a7260d9c892863f99b5e73a4d3a9a6df2bf235ca55e55f0e2",
+            "pngWidth": 1440,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 1440,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-contact-1440.png",
+            "sha256": "bfc62b5e454d32eae645264f0140c11b0985927b8f33c10c4a117fcd529c349a",
+            "pngWidth": 1440,
+            "pngHeight": 6499,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 1329,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [],
+          "manualObservations": [
+            "The contact hero and email remain readable. The form uses a wide main column and separate narrow notice aside; name/email sit side by side, with full-width service select and message area below.",
+            "Form actions, channel email/copy control, steps and lower guidance remain distinct. Visible hierarchy and spacing resemble the reference, with no observed clipping or overlap."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 56
+        },
+        {
+          "case": "heritage-quotation-375",
+          "viewOrder": 12,
+          "route": "/design-collection/heritage/quotation",
+          "width": 375,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-quotation-375-tall-diagnostic.png",
+            "sha256": "28e7695feedc92bccdc4b18fc857ae365bb2178d37c094509f98bfb7aebbbdf0",
+            "pngWidth": 375,
+            "pngHeight": 13304,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 169,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-quotation-375-original-top.png",
+            "sha256": "aa5aa08a151ff6ba513cbbe1e9b24c39e40b362cf0424665399a6e9792c2c6ce",
+            "pngWidth": 375,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 375,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-quotation-375.png",
+            "sha256": "e0eaed2bd8e16ec9d3b8b8c7e03aa2e2283318f5cbe7811096db6db3ce2dafeb",
+            "pngWidth": 375,
+            "pngHeight": 13304,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 169,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [
+            {
+              "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-quotation-375-tile-007.png",
+              "sha256": "85537f0d3a4176911a80bbf14a716a4b08a567d01322ba5b6e86a7114bef1c8e",
+              "pngWidth": 375,
+              "pngHeight": 1000,
+              "kind": "actual-native1000px-viewport-body-sample",
+              "actuallyOpenedWithViewImage": true,
+              "viewerScope": {
+                "maxDisplayedHeightPx": 1000,
+                "approxDisplayedWidthIfHeightLimited": 375,
+                "heightResizedByViewer": false,
+                "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+              }
+            }
+          ],
+          "manualObservations": [
+            "The mobile service/build cards stack within the viewport; selected service/complexity have a radio mark, blue border and selected text, visibly more than color alone.",
+            "Initial add-on instructions, empty totals, personal fields and disabled print/copy actions are present; these are intentional initial states rather than missing content.",
+            "The scaled screen A4 preview is visibly white and populated, with logo/twoQR areas. The native body sample confirms readable complexity cards and totals at375px; this is not a new physical-PDF or QR validation."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Footer logo is visible in both Quotation reference and fresh image."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 0
+        },
+        {
+          "case": "heritage-quotation-1440",
+          "viewOrder": 13,
+          "route": "/design-collection/heritage/quotation",
+          "width": 1440,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-quotation-1440-tall-diagnostic.png",
+            "sha256": "9a82f1be78844cadccaec55b56da8a52b097b307ad0c0b5ece0f1d30b714cbf6",
+            "pngWidth": 1440,
+            "pngHeight": 9693,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 891,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-quotation-1440-original-top.png",
+            "sha256": "84c9b7989ea1c91e709551510610c64799679c2e94c91a8b0c5568b421a12a30",
+            "pngWidth": 1440,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 1440,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-quotation-1440.png",
+            "sha256": "5428d48fde4878e078dcab4ec6efe617802eecbdbb60412a8178c4aaa3c11a02",
+            "pngWidth": 1440,
+            "pngHeight": 9693,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 891,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [],
+          "manualObservations": [
+            "Desktop service cards, full-width build choices, three complexity columns, totals and personal fields follow the reference arrangement.",
+            "The white A4 preview, original logo/twoQR regions and final inquiry/manual-copy area are visible. No blank screen-preview region, dark/theme bleed or major control-label clipping is observed."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Footer logo is visible in both Quotation reference and fresh image."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 0
+        },
+        {
+          "case": "heritage-brand-showcase-march-tangbao-375",
+          "viewOrder": 14,
+          "route": "/design-collection/heritage/portfolio/showcases/march-tangbao",
+          "width": 375,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-brand-showcase-march-tangbao-375-tall-diagnostic.png",
+            "sha256": "8eeb18e871acf0c8c6f340bba30f1502d7413d0b5332e934b196b6b3b0b58795",
+            "pngWidth": 375,
+            "pngHeight": 7049,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 319,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-brand-showcase-march-tangbao-375-original-top.png",
+            "sha256": "d1b2061db8a603667606e5c6cbd903629d9a8e0d9fd89758184c55f9f9e31d92",
+            "pngWidth": 375,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 375,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-brand-showcase-march-tangbao-375.png",
+            "sha256": "0526ad9e522c048c0fc7b277945511861f0f3edf4d176f8362f0b9608a929af5",
+            "pngWidth": 375,
+            "pngHeight": 6987,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 6000,
+              "approxDisplayedWidthIfHeightLimited": 322,
+              "heightResizedByViewer": true,
+              "interpretation": "Whole-page continuity/layout observation; not word-by-word reading when heavily reduced."
+            }
+          },
+          "additionalNativeSamples": [],
+          "manualObservations": [
+            "Title, nature/status badges, explanatory limitation and numbered local index fit the mobile page.",
+            "Real preview image and caption render; the long source URL wraps within the content width. Context, design/implementation and limitation lists plus related-service/actions are populated without observed clipping."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 62
+        },
+        {
+          "case": "heritage-brand-showcase-march-tangbao-1440",
+          "viewOrder": 15,
+          "route": "/design-collection/heritage/portfolio/showcases/march-tangbao",
+          "width": 1440,
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-brand-showcase-march-tangbao-1440-tall-diagnostic.png",
+            "sha256": "66d8d01eb572c8e3ceaa183144fc9a74ca8c795c7c37c49e74e4eec4ab097e68",
+            "pngWidth": 1440,
+            "pngHeight": 5027,
+            "kind": "actual-tall-native-viewport-diagnostic",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 5027,
+              "approxDisplayedWidthIfHeightLimited": 1440,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "freshOriginalTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-brand-showcase-march-tangbao-1440-original-top.png",
+            "sha256": "de2b5950eed686986f7d0a354de191d8a3e3dee53fcc1f7b52946c90f71f3c4c",
+            "pngWidth": 1440,
+            "pngHeight": 1000,
+            "kind": "actual-original-width1000px-high-top",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 1000,
+              "approxDisplayedWidthIfHeightLimited": 1440,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "baseline": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/heritage-brand-showcase-march-tangbao-1440.png",
+            "sha256": "86e90ea4bc509c19f25dd17e1b6819a294f5b0d90f56618de3a34c0e6a03fd41",
+            "pngWidth": 1440,
+            "pngHeight": 4971,
+            "kind": "original-DC007-repository-baseline",
+            "actuallyOpenedWithViewImage": true,
+            "viewerScope": {
+              "maxDisplayedHeightPx": 4971,
+              "approxDisplayedWidthIfHeightLimited": 1440,
+              "heightResizedByViewer": false,
+              "interpretation": "Image within6000px viewer-height cap; original-top/body tiles supplement readable text."
+            }
+          },
+          "additionalNativeSamples": [],
+          "manualObservations": [
+            "Hero and editorial aside remain separated; context and usage text preserve the reference hierarchy.",
+            "The large real preview, visible full source URL, paired implementation lists, limitation block and related-service CTA are readable in the full image. Footer logo/links are visible, with no observed overlap or missing section."
+          ],
+          "manualLayoutAndFontComparison": "Observed heading/body hierarchy, apparent weights, line wrapping and editorial arrangement are consistent with the reference at this review scale. This is a qualitative visual comparison, not exact glyph metrics, font-source proof, or pixel identity.",
+          "logos": {
+            "header": "Official horizontal XK mark and wordmark visible without obvious clipping.",
+            "freshFooter": "Official white XK logo visibly rendered in the fresh tall image.",
+            "baselineCaptureDifference": "Except the two Quotation references, the old full-page reference does not visibly show this Footer logo at review scale, whereas the fresh image does. This captured readiness/appearance difference and changed page height are recorded; its cause is not inferred and no App regression is asserted."
+          },
+          "emptyContentObservation": "No unexplained empty main-body section or missing work image/form/preview is observed in this case; ordinary editorial whitespace and initial empty fields remain intentional.",
+          "observedMajorClipOrOverlap": false,
+          "blockingFindings": [],
+          "rawAutomationStatusKept": "TALL_REJECTED_FALLBACK_TILES",
+          "tallIsNotAnOriginalHeightScreenshot": true,
+          "tallPNGByteIdenticalToBaseline": false,
+          "documentHeightDifferenceVsBaselinePNG": 56
+        }
+      ],
+      "overallObservations": [
+        "All15newtall diagnostic images visibly contain their expected main content, work previews/forms/screenA4 where applicable, and complete Footer; no unexplained blank CV body was observed.",
+        "Original-top images provide readable first-screen type, Logo, inquiry action, switcher and hero review;5native-width body samples provide readable mobile card/form/result evidence beyond the tiny long-image viewer.",
+        "The approved paper/main, whiteHeader, deepFooter and blueactions remain visually recognizable. Mobile stacks and desktop editorial columns resemble the corresponding original references.",
+        "Fresh Footer logos visibly render;13old references lack a clearly visible Footer logo while2Quotation references include it. This is recorded as an observed capture difference, not an inferred code/font bug or pixelidentity."
+      ],
+      "limits": [
+        "Tall images use the same width but a different actual native viewport height, up to21003px in this Heritage set. They are diagnostic full-content views, not the original1000px viewport or a claim that all geometry is identical.",
+        "The image viewer shrinks tall images to a maximum6000px height, e.g.320px×21003px becomes approximately91px×6000px. Small body text in those images was not read word-by-word; original-top and the5named body samples define the readable native-size scope.",
+        "Only15Heritage cases were reviewed:Home320/375/768/1440/1920;Services/Portfolio/Contact/Quotation375/1440;Marchdetail375/1440. No claim of all49pages/allwidths or the other32newcases.",
+        "Original raw47CVblank full-page outputs were not used as visualPASS evidence. These observations are based only on the new native-complete diagnostic/top/sample files and the named originalDC007references.",
+        "No browser, new capture, code/CSS/asset/image modification, build, server or Git action was performed for this review. Images were opened directly; PNG headers/SHA were read only for provenance.",
+        "No automatic geometry/visibility/network status was overwritten. Producer receipt/facts and any pending tall-versus-tile acceptance decisions remain separate from this manual report.",
+        "Screenshots show default page states. No assertion of interaction success, actual mail, inputvalidation/errorstates, keyboardfocus, nativezoom, screenreader, contrast ratios, actualPDForQRdecoding is made from these images."
+      ]
+    },
+    "luxury-review.json": {
+      "status": "COMPLETE",
+      "reviewMethod": "Actual local-image viewing, no Browser/capture or App changes. Only reviewed files listed; no invented observations for missing files.",
+      "updatedAt": "2026-11-27T04:52:46.425704+00:00",
+      "expectedCases": 15,
+      "reviewedCases": 15,
+      "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+      "scope": "Luxury baseline15 counterparts. Native tall diagnostic and original-top images are separate evidence; rejected geometry metadata remains untouched.",
+      "pixelEquivalence": "NOT_CLAIMED",
+      "wcagCertification": "NOT_CLAIMED",
+      "automatedQaOverride": false,
+      "captureStatusUnchanged": "MANUAL_PENDING",
+      "captureEvidence": {
+        "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/result.json",
+        "bytes": 53736061,
+        "sha256": "c533086cad4f15639e268e36be78386a5370bf05c8c39420258cd2e920f18c4d"
+      },
+      "ordinaryViewportFullPageValidity": "NOT_OVERRIDDEN_BY_TALL_IMAGE_REVIEW",
+      "overallViewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_15_ACTUALLY_VIEWED_CASES",
+      "cases": [
+        {
+          "testId": "luxury-home-320",
+          "route": "/design-collection/luxury",
+          "width": 320,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-320-tall-diagnostic.png",
+            "file": "luxury-home-320-tall-diagnostic.png",
+            "bytes": 1364080,
+            "sha256": "ec6c4050bac25871b73c377ae692db7460b2f936fe60082f71ae3faa41450eb3",
+            "width": 320,
+            "height": 18905
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-320-original-top.png",
+            "file": "luxury-home-320-original-top.png",
+            "bytes": 84334,
+            "sha256": "3358d8f69d583143fd1fe526e292f8e43b198e24e3819b6a730ea07a01c94788",
+            "width": 320,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-home-320.png",
+            "file": "luxury-home-320.png",
+            "bytes": 1371720,
+            "sha256": "a3cf518dc11d2a7eeb2a35b37a0795451ffa06e29ac8a3bf50a5533a5cc38b1a",
+            "width": 320,
+            "height": 18905
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-home-320.png",
+              "file": "luxury-home-320.png",
+              "bytes": 1371720,
+              "sha256": "a3cf518dc11d2a7eeb2a35b37a0795451ffa06e29ac8a3bf50a5533a5cc38b1a",
+              "width": 320,
+              "height": 18905
+            },
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-home-320-crop0.png",
+              "file": "luxury-home-320-crop0.png",
+              "bytes": 255561,
+              "sha256": "83e4d625104d56dd8ccd321ea3a6211b9146b67bb5ad803510c6164bab9e4391",
+              "width": 375,
+              "height": 1641
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "原viewport頂圖中Logo完整、三版band保留窄欄換行，H1為四行且與舊crop0所見相符；完整長圖可見五服務、三展示、技術／Why／Solutions、CTA及單欄三系列Footer，未見CV遺留空白段或橫向裁切。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 102,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-home-375",
+          "route": "/design-collection/luxury",
+          "width": 375,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-375-tall-diagnostic.png",
+            "file": "luxury-home-375-tall-diagnostic.png",
+            "bytes": 1414056,
+            "sha256": "4fdf5583ef7985ebf71157e0e6a56f9dcaf85a8865ff4c6462bfde3aeb3b6355",
+            "width": 375,
+            "height": 17982
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-375-original-top.png",
+            "file": "luxury-home-375-original-top.png",
+            "bytes": 88021,
+            "sha256": "a6c217d945f87044bc108aaf23eb4147967bdf8fc8baf8fe463924a71908c39f",
+            "width": 375,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-home-375.png",
+            "file": "luxury-home-375.png",
+            "bytes": 1421107,
+            "sha256": "86bf134888bb95c4cce232152c04f9b21dedf88ae001a5e56bc8ff2e7c3d99b4",
+            "width": 375,
+            "height": 17982
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-home-375.png",
+              "file": "luxury-home-375.png",
+              "bytes": 475553,
+              "sha256": "db930568189e7cdfc3ca4f89b60b63bef2580aaf5e3bc1abde161cba96c203b1",
+              "width": 480,
+              "height": 3250
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "頂部Logo、詢價CTA與三版band完整，H1為三行，與舊基準頂部所見相符；長圖可見所有主要區段、三張網站展示及單欄Footer，未見不合理缺頁空洞。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 125,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-home-768",
+          "route": "/design-collection/luxury",
+          "width": 768,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-768-tall-diagnostic.png",
+            "file": "luxury-home-768-tall-diagnostic.png",
+            "bytes": 1869441,
+            "sha256": "aad8ed1c3bba3d4cea08c9749bbde28d5274794b44c810b6f56bc7891e0f6f8d",
+            "width": 768,
+            "height": 16107
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-768-original-top.png",
+            "file": "luxury-home-768-original-top.png",
+            "bytes": 107490,
+            "sha256": "619db30d3069ef04673c4faf687408c7eb71468b9df7332bbed9529691bb87d7",
+            "width": 768,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-home-768.png",
+            "file": "luxury-home-768.png",
+            "bytes": 1877640,
+            "sha256": "31edaa9f2cf8370e8000fc419954183ec7d9984226c5955bc3e7ad59f46a7237",
+            "width": 768,
+            "height": 16107
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-home-768.png",
+              "file": "luxury-home-768.png",
+              "bytes": 1173904,
+              "sha256": "5e223d46340e4e6a85cb9d0c3304de61972cb0831e0323e2a8030390ff39c2fe",
+              "width": 1185,
+              "height": 3663
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "頂部Logo與詢價鈕左右分置，三版band橫排；H1三行與舊基準相符。長圖技術與Why區為雙欄，展示圖與Footer三列皆可見，未見主要區塊裁切。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 286,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-home-1440",
+          "route": "/design-collection/luxury",
+          "width": 1440,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-1440-tall-diagnostic.png",
+            "file": "luxury-home-1440-tall-diagnostic.png",
+            "bytes": 2926989,
+            "sha256": "d464516b025e85f36a1b189c8470b29789ee0b55bd1c108fa512732f38efb8f5",
+            "width": 1440,
+            "height": 17263
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-1440-original-top.png",
+            "file": "luxury-home-1440-original-top.png",
+            "bytes": 129923,
+            "sha256": "b5b498c9cd1e5c84233efd8f8c85801542640937004a9bc06ba093555102b88b",
+            "width": 1440,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-home-1440.png",
+            "file": "luxury-home-1440.png",
+            "bytes": 2936575,
+            "sha256": "7ff29923d55e8451624980ca9e4bf1be25ffa17f36c0c023d9b1f8ff5a96adce",
+            "width": 1440,
+            "height": 17263
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0.046875,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-home-1440.png",
+              "file": "luxury-home-1440.png",
+              "bytes": 2936575,
+              "sha256": "7ff29923d55e8451624980ca9e4bf1be25ffa17f36c0c023d9b1f8ff5a96adce",
+              "width": 1440,
+              "height": 17263
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "桌面Header／Logo／導航／band完整，H1維持三行置中；完整長圖看見所有Service/Plans/Showcases/技術與CTA，Footer三欄與底部copyright可見，未見舊CV空白段。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 500,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-home-1920",
+          "route": "/design-collection/luxury",
+          "width": 1920,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-1920-tall-diagnostic.png",
+            "file": "luxury-home-1920-tall-diagnostic.png",
+            "bytes": 2994052,
+            "sha256": "8468508c8c6c9bcf8252c79c150d75ae54d9599f67d72af32132776d0f5fb297",
+            "width": 1920,
+            "height": 17263
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-1920-original-top.png",
+            "file": "luxury-home-1920-original-top.png",
+            "bytes": 133533,
+            "sha256": "a067394bad0a3ba057f6202ff908c705a1fb065b9f224de45110d5a7c73470f7",
+            "width": 1920,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-home-1920.png",
+            "file": "luxury-home-1920.png",
+            "bytes": 3002880,
+            "sha256": "3e72641e8b21896447f57cfce63e61e6018d03c4c19d2a1ee9880bbd111ce41d",
+            "width": 1920,
+            "height": 17263
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0.046875,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-home-1920.png",
+              "file": "luxury-home-1920.png",
+              "bytes": 490586,
+              "sha256": "874297672b7f0029786174a451fa44a9033fe0cd419a220ff03a29e683d50400",
+              "width": 1185,
+              "height": 1848
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "內容維持置中max-width，Logo／桌面導航／三版band完整；H1三行，卡片節奏與舊基準所見一致。全頁長圖展示／多欄卡片／Footer皆有實際內容，無明顯橫向截斷或空白缺段。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 667,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-services-375",
+          "route": "/design-collection/luxury/services",
+          "width": 375,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-services-375-tall-diagnostic.png",
+            "file": "luxury-services-375-tall-diagnostic.png",
+            "bytes": 1096049,
+            "sha256": "b279578403645af8e97dc202ba6b015394590ebdf0594245207fc0195ad9fe6e",
+            "width": 375,
+            "height": 14904
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-services-375-original-top.png",
+            "file": "luxury-services-375-original-top.png",
+            "bytes": 82634,
+            "sha256": "0ba05460d1ce13ab7ec51452cc8370e10b363e2381e05795821a649e05e4d8a7",
+            "width": 375,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-services-375.png",
+            "file": "luxury-services-375.png",
+            "bytes": 1102839,
+            "sha256": "936ebedc722dc1d88a57050500c39870298f77edf4b50ec744a89b6d0467d22e",
+            "width": 375,
+            "height": 14904
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-services-375.png",
+              "file": "luxury-services-375.png",
+              "bytes": 470455,
+              "sha256": "d7a3aa2c0e0baf7904232f579276012f6c6ae688a732ceca54fb2cb2b8376625",
+              "width": 480,
+              "height": 3250
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "Logo與三版band完整；服務Hero兩行標題與舊基準相符，卡片、方案、Pricing、五項服務詳述、Process與CTA依序有內容；Footer為單欄三系列，未見控制項或文字塊明顯越界。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 151,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-services-1440",
+          "route": "/design-collection/luxury/services",
+          "width": 1440,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-services-1440-tall-diagnostic.png",
+            "file": "luxury-services-1440-tall-diagnostic.png",
+            "bytes": 1298863,
+            "sha256": "5a80a34d7d949a530c909236282d29f9cc2102692cb8a702f5fbd8bc2ddff260",
+            "width": 1440,
+            "height": 13322
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-services-1440-original-top.png",
+            "file": "luxury-services-1440-original-top.png",
+            "bytes": 128668,
+            "sha256": "15363d99d9503d155b7d799412c69a13c23d18622ae9cabcfd633c446e06fc81",
+            "width": 1440,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-services-1440.png",
+            "file": "luxury-services-1440.png",
+            "bytes": 1306764,
+            "sha256": "2920d4ff0786153e801e78b8b11d7ec9536855e55e1bdc3dcff6688cd14ccd16",
+            "width": 1440,
+            "height": 13322
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-services-1440.png",
+              "file": "luxury-services-1440.png",
+              "bytes": 481835,
+              "sha256": "c3ac23ebab5b4e7e884ed755ebcc4e05a3cd65dee726c9f88f55d7668b1998a7",
+              "width": 1185,
+              "height": 2000
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "桌面導航標示服務頁，Hero單行大標題與原基準相符；長頁所有服務內容與方案條目可見，Pricing兩欄及Footer三欄保留，未見CV造成的大塊內容空白或卡片截斷。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 649,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-portfolio-375",
+          "route": "/design-collection/luxury/portfolio",
+          "width": 375,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-portfolio-375-tall-diagnostic.png",
+            "file": "luxury-portfolio-375-tall-diagnostic.png",
+            "bytes": 1277565,
+            "sha256": "e2c76b8e29df8fff90b9505669ec87834257ea006a98b0346407a9d761dc1a15",
+            "width": 375,
+            "height": 14536
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-portfolio-375-original-top.png",
+            "file": "luxury-portfolio-375-original-top.png",
+            "bytes": 83934,
+            "sha256": "d1968a15a855ebcc00ae218f4680671f00fc377fc22a110f12061043ec4bb9ba",
+            "width": 375,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-portfolio-375.png",
+            "file": "luxury-portfolio-375.png",
+            "bytes": 1286044,
+            "sha256": "c2723e0d0f0dee7ca2c8f23f18fddfe91de52346cc6afa1261fe87ff531c1df9",
+            "width": 375,
+            "height": 14536
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0.359375,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-portfolio-375.png",
+              "file": "luxury-portfolio-375.png",
+              "bytes": 477685,
+              "sha256": "be60df9852d4c286be9de89879665888881a39929daefc1ca4664f99672a2ab8",
+              "width": 480,
+              "height": 3250
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "Logo與band完整，Hero兩行標題與舊基準相符；六張品牌展示預覽均可見，後續模板／Planned技術規劃／技術方向及狀態說明沒有缺段，Footer單欄完整。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 155,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-portfolio-1440",
+          "route": "/design-collection/luxury/portfolio",
+          "width": 1440,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-portfolio-1440-tall-diagnostic.png",
+            "file": "luxury-portfolio-1440-tall-diagnostic.png",
+            "bytes": 3844606,
+            "sha256": "44147ad6a2e6645b6a577fd37927d89efda573c1ac7baba951c1e287a6dfcc0c",
+            "width": 1440,
+            "height": 15977
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-portfolio-1440-original-top.png",
+            "file": "luxury-portfolio-1440-original-top.png",
+            "bytes": 120558,
+            "sha256": "d0efd2bb637366998d682c8719fb5c40b99af38a32ab873bbd45ea2e46247c91",
+            "width": 1440,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-portfolio-1440.png",
+            "file": "luxury-portfolio-1440.png",
+            "bytes": 3853303,
+            "sha256": "cf3abb27c5071e93745ac1ad22ab98fdcbbf3495533fb5042d845d300a4c5348",
+            "width": 1440,
+            "height": 15977
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-portfolio-1440.png",
+              "file": "luxury-portfolio-1440.png",
+              "bytes": 560517,
+              "sha256": "fbc72064f3e6b270b3e2ca3d63e859841d031628da6f5f4c041520e295df3608",
+              "width": 1185,
+              "height": 2269
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "頂部Hero維持兩行、導航與三版band完整；全頁六張品牌圖片、技術方向卡與下方CTA均有內容，置中寬度與舊基準所見一致，Footer三欄無明顯裁切。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 541,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-brand-showcase-march-tangbao-375",
+          "route": "/design-collection/luxury/portfolio/showcases/march-tangbao",
+          "width": 375,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-brand-showcase-march-tangbao-375-tall-diagnostic.png",
+            "file": "luxury-brand-showcase-march-tangbao-375-tall-diagnostic.png",
+            "bytes": 514882,
+            "sha256": "51119b912f59b8c844c7dc5395caa89e96934904e34bdd2445a89dd11f831931",
+            "width": 375,
+            "height": 7108
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-brand-showcase-march-tangbao-375-original-top.png",
+            "file": "luxury-brand-showcase-march-tangbao-375-original-top.png",
+            "bytes": 73980,
+            "sha256": "e4548703f72a9dfd24a530e2b39a8a5e392771c308c69bfc42a83c7528d2c64c",
+            "width": 375,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-brand-showcase-march-tangbao-375.png",
+            "file": "luxury-brand-showcase-march-tangbao-375.png",
+            "bytes": 518078,
+            "sha256": "ecbfb002e77451791b867ff0797235e7a3031870a66c433de0a91f43c839b380",
+            "width": 375,
+            "height": 7108
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0.5,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-brand-showcase-march-tangbao-375.png",
+              "file": "luxury-brand-showcase-march-tangbao-375.png",
+              "bytes": 344097,
+              "sha256": "792e194c62ff3be0754dd5f0a7691f6760ab83b11e24ac32e04ab79f608e5deb",
+              "width": 480,
+              "height": 3250
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "三月手工湯包名稱維持單行，Logo與品牌標籤未變形；原生長圖可見背景／使用者情境、網站預覽與來源、設計與限制及相關服務，來源長網址正常換行、Footer單欄無橫向裁切。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 317,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-brand-showcase-march-tangbao-1440",
+          "route": "/design-collection/luxury/portfolio/showcases/march-tangbao",
+          "width": 1440,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-brand-showcase-march-tangbao-1440-tall-diagnostic.png",
+            "file": "luxury-brand-showcase-march-tangbao-1440-tall-diagnostic.png",
+            "bytes": 1040806,
+            "sha256": "c174f2419cd5804a42bbe11c9cdd7d63dc3635fc8af507319b9140a01de19c72",
+            "width": 1440,
+            "height": 6095
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-brand-showcase-march-tangbao-1440-original-top.png",
+            "file": "luxury-brand-showcase-march-tangbao-1440-original-top.png",
+            "bytes": 99322,
+            "sha256": "a5fab301eda6a964668c036efdbed27f6d83ebfee7fbede623be925ded8a3f6d",
+            "width": 1440,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-brand-showcase-march-tangbao-1440.png",
+            "file": "luxury-brand-showcase-march-tangbao-1440.png",
+            "bytes": 1044954,
+            "sha256": "4e3260602a1af50696f009259b9ca2aa54081f70e78da1ea49aee1343526c868",
+            "width": 1440,
+            "height": 6095
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-brand-showcase-march-tangbao-1440.png",
+              "file": "luxury-brand-showcase-march-tangbao-1440.png",
+              "bytes": 379806,
+              "sha256": "45fbaba1879f4ae824556854f6f042e1c42046a3abb16099e1297afe8e70ba5a",
+              "width": 1185,
+              "height": 2000
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "桌面品牌名稱單行與舊基準相符；湯包預覽圖片、來源網址、設計取捨／功能／限制及相關CTA清楚排列，深色區域與Footer三欄完整，沒有空白缺段。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 1418,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-contact-375",
+          "route": "/design-collection/luxury/contact",
+          "width": 375,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-contact-375-tall-diagnostic.png",
+            "file": "luxury-contact-375-tall-diagnostic.png",
+            "bytes": 654123,
+            "sha256": "ad9e5ca67955f727ed3ee5df228043f03e4ee849c10fc4fdcbcdabef5a0a3060",
+            "width": 375,
+            "height": 9497
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-contact-375-original-top.png",
+            "file": "luxury-contact-375-original-top.png",
+            "bytes": 79005,
+            "sha256": "54458977630c9594810793ebb4ea641b64c4739510611b903d429d7df5a821b5",
+            "width": 375,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-contact-375.png",
+            "file": "luxury-contact-375.png",
+            "bytes": 658439,
+            "sha256": "fb46d114e3f62a25975066e8a07c6065c43041a8331125cec90acdf512fad0d9",
+            "width": 375,
+            "height": 9497
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-contact-375.png",
+              "file": "luxury-contact-375.png",
+              "bytes": 366046,
+              "sha256": "ccb27d0874eea5ea5db40cd624642983f4a848b42c83385e19160ae1a46a16c2",
+              "width": 480,
+              "height": 3250
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "Logo與band完整，Contact兩行Hero文字與舊基準相符；詢價欄位為單欄排列，按鈕與Email區、需求準備／下一步／資料範圍說明及Footer皆有內容，未見欄位或文段明顯裁切。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 237,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-contact-1440",
+          "route": "/design-collection/luxury/contact",
+          "width": 1440,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-contact-1440-tall-diagnostic.png",
+            "file": "luxury-contact-1440-tall-diagnostic.png",
+            "bytes": 740192,
+            "sha256": "731ca54cfc4f526279acd4701031f1a7e350ee2735c31bc9d86d5241980d4458",
+            "width": 1440,
+            "height": 6895
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-contact-1440-original-top.png",
+            "file": "luxury-contact-1440-original-top.png",
+            "bytes": 125302,
+            "sha256": "79dcb1a5c21791564471af3e39b3b08a414d32f04bd1d744681b8f035b28a26c",
+            "width": 1440,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-contact-1440.png",
+            "file": "luxury-contact-1440.png",
+            "bytes": 744987,
+            "sha256": "61d392f3dfd1155e1a4d12bdc12b38a601c253f35e5be5b056b931d9ddc3f065",
+            "width": 1440,
+            "height": 6895
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0.375,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-contact-1440.png",
+              "file": "luxury-contact-1440.png",
+              "bytes": 419155,
+              "sha256": "ccd7a73a50ca5ceee08af17ec708d25731bfbf27d161ca02890c185b7ccabd75",
+              "width": 1185,
+              "height": 2000
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "桌面Logo／Contact導航／band完整，Hero兩行與舊基準相符；稱呼與Email兩欄、需求文字框及按鈕皆在容器內，後續說明與Footer三欄可見，沒有CV空白缺段。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 1253,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-quotation-375",
+          "route": "/design-collection/luxury/quotation",
+          "width": 375,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-quotation-375-tall-diagnostic.png",
+            "file": "luxury-quotation-375-tall-diagnostic.png",
+            "bytes": 829238,
+            "sha256": "996e97cb500718312636b7305e3d922c42022b1bc6ce6d8e57c61dee1417abef",
+            "width": 375,
+            "height": 13234
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-quotation-375-original-top.png",
+            "file": "luxury-quotation-375-original-top.png",
+            "bytes": 88867,
+            "sha256": "75745d465327a22416bc7dad76bf6a327f488c30dd8d8299f54aa02e56e58c29",
+            "width": 375,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-quotation-375.png",
+            "file": "luxury-quotation-375.png",
+            "bytes": 835293,
+            "sha256": "e320121e82e0e99c8b19668a0a5681d8558b4303bf2cc045841b37f350bf7154",
+            "width": 375,
+            "height": 13234
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0.046875,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-quotation-375.png",
+              "file": "luxury-quotation-375.png",
+              "bytes": 398416,
+              "sha256": "cd0bf6325c606486b519d8033f35041a51a7164cb82d1e21c6164b1578024b10",
+              "width": 480,
+              "height": 3250
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "窄版Logo與band完整，試算標題單行、步驟／類型／四種建置與複雜度卡垂直排列，與舊基準的結構相符；總額、A4預覽、聯絡摘要框及Footer皆已繪出，未見整段空白或明顯橫向截斷。A4細字與真實列印不在本次縮圖判讀內。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 170,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        },
+        {
+          "testId": "luxury-quotation-1440",
+          "route": "/design-collection/luxury/quotation",
+          "width": 1440,
+          "sourceVersion": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+          "freshTall": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-quotation-1440-tall-diagnostic.png",
+            "file": "luxury-quotation-1440-tall-diagnostic.png",
+            "bytes": 995464,
+            "sha256": "daa4299f367719ab376d26fcf648ac0b7fbce4c53722f0bbc5bd8b53132d7edb",
+            "width": 1440,
+            "height": 10289
+          },
+          "freshOriginalViewportTop": {
+            "path": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-quotation-1440-original-top.png",
+            "file": "luxury-quotation-1440-original-top.png",
+            "bytes": 151273,
+            "sha256": "f9755fd7ccfc1f5fa5b7f73234bc3120c783c4694482c824a4f0411a7e7b4d7b",
+            "width": 1440,
+            "height": 1000
+          },
+          "baselineOriginal": {
+            "path": "/workspace/xk-website/docs/screenshots/design-collection/dc007/luxury-quotation-1440.png",
+            "file": "luxury-quotation-1440.png",
+            "bytes": 1000295,
+            "sha256": "d9e1735717165163c82ee03ae466345298b7fa8bceab75b3841a0529defbb044",
+            "width": 1440,
+            "height": 10289
+          },
+          "captureCaseStatus": "TALL_REJECTED_FALLBACK_TILES",
+          "tallRejectedUnchanged": true,
+          "maxGeometryDeltaOriginalRecord": 0,
+          "semanticDeltaCountOriginalRecord": 0,
+          "baselineViewsActuallyViewed": [
+            {
+              "path": "/tmp/xk-dc007/visual-previews/luxury-quotation-1440.png",
+              "file": "luxury-quotation-1440.png",
+              "bytes": 457251,
+              "sha256": "afc03b0af001a01836a4137d9b987318fb6378bbdbd361dbd9aabe29d9f787cf",
+              "width": 1185,
+              "height": 2000
+            }
+          ],
+          "actualViews": [
+            "fresh native tall full-page image",
+            "fresh original-height top companion",
+            "listed baseline views"
+          ],
+          "observation": "桌面試算標題左置單行、右側Logo資訊卡與原基準相符；服務類型雙欄、複雜度三欄、建置卡、即時摘要與A4白紙預覽均有內容；Footer三欄完整，未見CV遺留空白。此處不替代實際列印／QR與控制操作驗證。",
+          "viewedScopeDecision": "NO_OBVIOUS_VISUAL_REGRESSION_IN_VIEWED_SCOPE",
+          "fullPageDisplayHeightCap": 6000,
+          "estimatedDisplayedFullPageWidth": 840,
+          "lineWrapScope": "Header/band and visible Hero text compared; long body reviewed structurally at reduced scale, not every glyph or line.",
+          "limitations": [
+            "Tall viewport differs from ordinary viewport; original top companion covers only initial viewport.",
+            "6000px image-tool height cap reduces full-page fine text; fractional geometry differences are not decided by this human review.",
+            "No pixel-identical assertion, automated QA override, WCAG certification, interaction result or performance result."
+          ]
+        }
+      ]
+    }
+  }
+}

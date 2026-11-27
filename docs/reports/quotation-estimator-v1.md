@@ -6,7 +6,7 @@
 
 Website 基準：`main@eaadead716f9a277b93aedc10e6fe234f1cc813a`，建立分支前乾淨。執行 [功能規格](../task/quotation-estimator-v1.md)、Repository AGENTS 與 [協作流程](../03_engineering/subagent-workflow.md)。公司 Repository 僅讀最新 main 固定版本 `5be640ab11811b24706101ea13db73185e9ce4d8`，不修改、Commit 或 Push 公司文件。
 
-公司根 `AGENTS.md` 回應 404，完整 recursive tree 無同名檔案。正式路徑已移至 `doc/01_company`、`02_services`、`03_brand`、`04_engineering`、`05_projects`；舊 Week 02 只在 archive。依實際 tree 讀取公司／服務／收費／品牌／工程／網站及部署文件；來源自身部分英譯相對連結失效，不假定檔案存在。十二份核心公司、服務及產品文件的固定 Blob／章節清冊見 [來源清冊](quotation-estimator-artifacts/company-source-inventory.json)；採用來源與逐項價格記於 [集中設定](../../src/config/quotation.ts) 的 `quotationSources`／`quotationSourceDifferences`，未提交完整公司文件、內部時薪或營收模型。
+公司根 `AGENTS.md` 回應 404，完整 recursive tree 無同名檔案。正式路徑已移至 `doc/01_company`、`02_services`、`03_brand`、`04_engineering`、`05_projects`；舊 Week 02 只在 archive。依實際 tree 讀取公司／服務／收費／品牌／工程／網站及部署文件；來源自身部分英譯相對連結失效，不假定檔案存在。十二份核心公司、服務及產品文件的固定 Blob／章節清冊見 [來源清冊](quotation-estimator-artifacts/company-source-inventory.json)；採用來源與逐項價格記於 [集中設定](../../frontend/src/config/quotation.ts) 的 `quotationSources`／`quotationSourceDifferences`，未提交完整公司文件、內部時薪或營收模型。
 
 | 本輪指示／暫定內容 | 依正式來源採用 |
 | --- | --- |

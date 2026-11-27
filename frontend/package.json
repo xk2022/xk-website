@@ -1,0 +1,42 @@
+{
+  "name": "xk-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --max-warnings=0",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/test-contact-inquiry.mjs && node scripts/test-quotation.mjs && node scripts/test-quotation-storage.mjs && npm run test:design-collection && npm run test:fonts",
+    "test:quotation": "node scripts/test-quotation.mjs && node scripts/test-quotation-storage.mjs",
+    "test:fonts": "node scripts/test-font-assets.mjs",
+    "build:pages": "node scripts/build-github-pages.mjs",
+    "test:smoke": "python3 scripts/smoke-website.py",
+    "test:design-collection": "node --import ./scripts/register-test-aliases.mjs scripts/test-design-collection-routes.mjs && node --import ./scripts/register-test-aliases.mjs scripts/test-design-collection-metadata.mjs && node --import ./scripts/register-test-aliases.mjs scripts/test-design-collection-content.mjs && node --import ./scripts/register-test-aliases.mjs scripts/test-design-collection-contracts.mjs && node --import ./scripts/register-test-aliases.mjs scripts/test-design-collection-navigation.mjs"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "cn": "^0.5.2",
+    "lucide-react": "^1.74.0",
+    "next": "16.4.6",
+    "radix-ui": "^1.8.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.4.6",
+    "shadcn": "^4.23.0",
+    "tailwindcss": "4.3.3",
+    "tw-animate-css": "^1.4.0",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

@@ -13,6 +13,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
+defaults:
+  run:
+    working-directory: frontend
+
 jobs:
   quality:
     name: Typecheck, lint and production build
@@ -31,7 +35,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
-          cache-dependency-path: package-lock.json
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Install locked dependencies
         run: npm ci
@@ -54,8 +58,8 @@ jobs:
         with:
           name: nextjs-build-output
           path: |
-            .next/
-            !.next/cache/
+            frontend/.next/
+            !frontend/.next/cache/
           include-hidden-files: true
           if-no-files-found: error
           retention-days: 7
@@ -81,7 +85,7 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
-          cache-dependency-path: package-lock.json
+          cache-dependency-path: frontend/package-lock.json
 
       - name: Read GitHub Pages site configuration
         id: pages
@@ -109,7 +113,7 @@ jobs:
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
-          path: out
+          path: frontend/out
           include-hidden-files: true
           retention-days: 7
 

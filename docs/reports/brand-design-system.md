@@ -179,7 +179,7 @@ Container 接受 `div` 原生屬性及 `className`。Section 接受 `section` �
 
 ## 提供素材與暫定狀態
 
-來源為文件 Repository 的 `assets/brand/logo/svg/`，讀取版本為 `3996730176e4ad7237c66f541d61405f2667934e`。本地保留 primary、symbol、horizontal、white 四份原始 SVG；各檔案原始路徑與 Git Blob SHA 詳列於 [素材來源紀錄](../../public/brand/source/README.md)。
+來源為文件 Repository 的 `assets/brand/logo/svg/`，讀取版本為 `3996730176e4ad7237c66f541d61405f2667934e`。本地保留 primary、symbol、horizontal、white 四份原始 SVG；各檔案原始路徑與 Git Blob SHA 詳列於 [素材來源紀錄](../../frontend/public/brand/source/README.md)。
 
 元件以原始 XML 擷取的兩個 XK 幾何路徑與 18 個品牌文字輪廓呈現，沒有重新設計、改畫或以網頁字體替換字標。原稿配色與 UI Token 分開，保留使用者提供的 `#101828`、`#2563EB`；白色及單色處理沿用已提供版本的色彩方式。
 

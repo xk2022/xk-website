@@ -7,8 +7,8 @@
 - 官網採 GitHub Actions → GitHub Pages；一般 Next.js production build 保留。
 - 所有公開頁面仍為 noindex/nofollow；Sitemap 不發布，Privacy 草案不公開。
 - 2026-11-23 使用者明確指定 `https://www.xplorekaleidoscope.com/`；本輪更新 Canonical／OG 等來源與根路徑建置。Pages API 顯示 www、自訂網域 HTTPS 憑證核准及強制 HTTPS；資源與部署驗收依 [本輪報告](../reports/custom-domain-assets-2026-11-23.md)／PR，不把先前環境 Tunnel 403 判為 DNS 故障。
-- 商務聯絡使用品牌負責人本輪提供的 `system.xk2022@gmail.com`，由 [管道設定](../../src/config/contact.ts) 派生 mailto 詢價。UI／連結及限制依 [本輪報告](../reports/contact-plans-usecase.md)；沒有實寄／收件驗證或自動回覆宣稱。
-- [Privacy 設定](../../src/config/privacy.ts) 仍為 draft-1，資料處理主體、生效日與權利聯絡管道未確認。先前未提供的法律核准，不會因合併網站修正而視為取得。
+- 商務聯絡使用品牌負責人本輪提供的 `system.xk2022@gmail.com`，由 [管道設定](../../frontend/src/config/contact.ts) 派生 mailto 詢價。UI／連結及限制依 [本輪報告](../reports/contact-plans-usecase.md)；沒有實寄／收件驗證或自動回覆宣稱。
+- [Privacy 設定](../../frontend/src/config/privacy.ts) 仍為 draft-1，資料處理主體、生效日與權利聯絡管道未確認。先前未提供的法律核准，不會因合併網站修正而視為取得。
 
 ## 前置條件與證據
 

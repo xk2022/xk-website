@@ -1,5 +1,7 @@
 # 自訂網域部署與資源路徑
 
+2026-11-27 工作區更新：以下 npm／npx、`src/`、`public/` 與前端 scripts 路徑以 `frontend/` 為工作目錄；從 Repo 根先 `cd frontend`。跨元件 runner 留在根 `scripts/`，詳細目錄與歷史路徑對照見 [Repository 結構](../03_engineering/repository-layout.md)。
+
 更新日期：2026-11-23（Asia/Taipei）。目前對外網址為 <https://www.xplorekaleidoscope.com/>，GitHub Pages 在網域根目錄提供靜態網站。
 
 ## 單一設定與建置

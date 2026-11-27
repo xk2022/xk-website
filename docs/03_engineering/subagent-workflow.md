@@ -1,5 +1,7 @@
 # Subagent 協作與驗證流程
 
+2026-11-27 工作區：前端 npm／npx 及應用路徑相對 `frontend/`；下方根 runner 範例使用 `npm --prefix frontend`。詳 [現行結構](repository-layout.md)，歷史 Task 經驗與退出碼不改寫。
+
 本指南將 Task 008 的實際經驗轉成後續任務的預設流程。先讀當次規格與使用者指示；明確要求優先於本指南，不降低驗收標準、不回寫歷史結果，也不沿用其他任務的 merge 或發布授權。
 
 ## 可追溯回顧
@@ -57,7 +59,7 @@ Root 先完成下列事項，再分派可平行工作：
 python3 scripts/run-with-evidence.py \
   --receipt /tmp/xk-task009/build.json \
   --log /tmp/xk-task009/build.log \
-  --timeout 600 -- npm run build
+  --timeout 600 -- npm --prefix frontend run build
 ```
 
 `task009` 只是路徑示例，不表示開始該任務。先以無副作用的短指令確認成功、失敗與 timeout 能正確落盤；正式執行依當次矩陣。每次重試使用新路徑，不覆寫先前 receipt／log。runner 須真正等待子程序，原子寫入回執；缺回執或 exit 未知不得由 JSON PASS、PID 狀態或聊天輸出推認成功。
