@@ -42,7 +42,7 @@ export type SolutionImplementationStep = {
 type TwoOrThree<T> = readonly [T, T] | readonly [T, T, T];
 type SolutionLink = {
   readonly label: string;
-  readonly href: "/services" | "/#contact" | "/about" | `#${string}`;
+  readonly href: "/services" | "/modern#contact" | "/about" | `#${string}`;
 };
 
 export type SolutionDefinition = {
@@ -237,7 +237,7 @@ export const solutionDefinitions = [
       { sourceId: "S03", sections: ["§3 Website Development"], supports: "企業網站、RWD、Next.js 與維護能力。" },
       { sourceId: "S12", sections: ["§2 Business Scenario"], supports: "資訊、手機、SEO 與維護問題，以及一般規劃方向；不是已交付案例。" },
     ],
-    status: "proposed-direction", cta: { label: "討論網站需求", href: "/#contact" },
+    status: "proposed-direction", cta: { label: "討論網站需求", href: "/modern#contact" },
   },
   {
     id: "enterprise-management", anchor: "solution-enterprise-management",
@@ -265,7 +265,7 @@ export const solutionDefinitions = [
       { sourceId: "S03", sections: ["§4–5"], supports: "Java、API、資料與系統架構能力。" },
       { sourceId: "S13", sections: ["§2", "§21"], supports: "分散資料、人工作業與權限問題；不將示例模組當現成管理產品。" },
     ],
-    status: "proposed-direction", cta: { label: "討論系統需求", href: "/#contact" },
+    status: "proposed-direction", cta: { label: "討論系統需求", href: "/modern#contact" },
   },
   {
     id: "system-integration", anchor: "solution-system-integration",
@@ -292,7 +292,7 @@ export const solutionDefinitions = [
       { sourceId: "S03", sections: ["§5–6"], supports: "系統架構、API、資料整合與工作流程能力。" },
       { sourceId: "S14", sections: ["§2", "§6"], supports: "資料孤島、介面差異與模擬交換情境；不宣稱 Hub 或其後續 AI／n8n 已完成。" },
     ],
-    status: "proposed-direction", cta: { label: "討論整合需求", href: "/#contact" },
+    status: "proposed-direction", cta: { label: "討論整合需求", href: "/modern#contact" },
   },
   {
     id: "ai-workflow", anchor: "solution-ai-workflow",
@@ -320,7 +320,7 @@ export const solutionDefinitions = [
       { sourceId: "S08", sections: ["§7", "§10.3–10.4"], supports: "知識搜尋與既有流程整合方向，產品仍須驗證。" },
       { sourceId: "S17", sections: ["§3", "§5", "§15"], supports: "專業服務與企業知識需求，先驗證情境再考慮產品範圍。" },
     ],
-    status: "proposed-direction", cta: { label: "討論 AI 應用需求", href: "/#contact" },
+    status: "proposed-direction", cta: { label: "討論 AI 應用需求", href: "/modern#contact" },
   },
 ] as const satisfies readonly SolutionDefinition[];
 

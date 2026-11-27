@@ -15,7 +15,7 @@ export function ModernNotFound() {
           此網址目前沒有可瀏覽的頁面。您可以返回首頁，或從網站目錄找到已提供的內容。
         </p>
         <div className="mt-8">
-          <Button asChild><Link href="/">返回首頁</Link></Button>
+          <Button asChild><Link href="/modern">返回首頁</Link></Button>
         </div>
       </Container>
     </Section>

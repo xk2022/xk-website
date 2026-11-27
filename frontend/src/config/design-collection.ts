@@ -11,7 +11,7 @@ function freeze<T>(value: T): Readonly<T> {
 }
 
 const contentPages = [
-  { pageKey: "home", path: "/", kind: "simple" },
+  { pageKey: "home", path: "/modern", kind: "simple" },
   { pageKey: "about", path: "/about", kind: "simple" },
   { pageKey: "services", path: "/services", kind: "simple" },
   { pageKey: "solutions", path: "/solutions", kind: "simple" },

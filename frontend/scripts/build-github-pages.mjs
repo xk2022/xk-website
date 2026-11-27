@@ -450,14 +450,15 @@ assert.deepEqual(showcaseSeoPages.map(({ path }) => path), expectedShowcasePaths
 assert.deepEqual(portfolioPages.slice(1).map(({ pagePath }) => pagePath.split("/").at(-1)), showcaseContract.technicalPlanSlugs, "Retain the three original technical plan routes.");
 const expectedPublicPaths = [...showcaseContract.existingPublicPaths, ...expectedShowcasePaths, quotationContract.path, designContract.collectionRoute.path, ...presentationRoutes.map(({ path }) => path), ...(privacyApproved ? ["/privacy"] : [])];
 const publicSeoPages = seoPages.filter(({ availability }) => availability === "public");
-assert.equal(designContract.publishedPaths.length, 49, "Approved three-series integration (PR42) must contain exactly Modern 16, Gallery, Heritage 16 and Luxury 16.");
+assert.equal(designContract.publishedPaths.length, 50, "Approved three-series and independent root gateway require exactly 50 routes.");
 assert.deepEqual([...expectedPublicPaths].sort(), [...designContract.publishedPaths, ...(privacyApproved ? ["/privacy"] : [])].sort(), "Design publication must match the independent route and content contracts.");
 assert.deepEqual(publicSeoPages.map(({ path }) => path).sort(), expectedPublicPaths.sort(), "Public SEO routes must match the independently reviewed route contract.");
 assert.deepEqual(getSeoPage(designContract.collectionRoute.path), { path: designContract.collectionRoute.path, title: designContract.collectionRoute.title, description: designContract.collectionRoute.description, availability: "public" }, "Gallery must retain its independently approved SEO copy.");
 portfolioPages.push(...showcaseSeoPages.map(({ path, title, description }) => ({ pagePath: path, label: `Showcase ${path.split("/").at(-1)}`, title, description })));
 
 const exportedPages = [
-  ["index.html", "", "homepage"],
+  ["index.html", "", "immersive gateway"],
+  ["modern/index.html", "/modern", "Modern homepage"],
   ["about/index.html", "/about", "About Us"],
   ["services/index.html", "/services", "Services"],
   ["solutions/index.html", "/solutions", "Solutions"],
@@ -480,6 +481,16 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   assert.equal(tagAttribute(html.match(/<html\b[^>]*>/)?.[0], "lang"), "zh-TW", `${label} HTML language is incorrect.`);
   verifyReferencedAssets(html, pagePath, label);
   verifySeoMetadata(html, getSeoPage(pagePath || "/"), label);
+  if (!pagePath) {
+    const visible = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
+    assert.doesNotMatch(visible, /<(?:header|footer|form|input|textarea|select)\b/i, "Gateway has no website chrome or forms.");
+    assert.equal((visible.match(/<main\b/g) ?? []).length, 1);
+    assert.equal((visible.match(/<h1\b/g) ?? []).length, 1);
+    assert.match(visible, /data-gateway-location="home"/);
+    const links = [...visible.matchAll(/<a\b[^>]*>/g)].map(([tag]) => tagAttribute(tag, "href")?.replace(/\/$/, ""));
+    for (const href of Object.values(designContract.styleHomePaths)) assert.equal(links.filter(link => link === href).length, 2, `Gateway must contain two accessible links to ${href}.`);
+    continue;
+  }
   verifyModernFrame(html, label);
   verifyEnquiryMarkup(html, label, contentPath);
   const identity = [...designContract.modernRoutes, ...presentationRoutes].find((route) => route.path === (pagePath || "/"));
@@ -518,7 +529,7 @@ for (const [relativePath, pagePath, label] of exportedPages) {
       }
     }
   }
-  if (contentPath === "/" || contentPath === "/services") verifyServicePlans(html, contentPath);
+  if (contentPath === "/modern" || contentPath === "/services") verifyServicePlans(html, contentPath);
 
   if (pagePath === "/solutions") {
     const title = "解決方案 | Xplore Kaleidoscope";

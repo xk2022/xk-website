@@ -48,5 +48,5 @@ export function getDesignDirectoryGroups(order: readonly DesignStyleId[]): reado
     if (route.pageKey === "brand-showcase") return `${content.portfolio.websiteShowcases.find(({ id }) => id === route.slug)?.title ?? route.slug}｜作品介紹`;
     return labels[route.pageKey];
   }
-  return [...order.map((id) => ({ id, title: `${styleNames[id]} 網站目錄`, entries: routes.filter((route) => route.styleId === id).map((route) => ({ href: routeHref(route), label: label(route) })) })), { id: "collection", title: "設計系列目錄", entries: routes.filter(({ pageKey }) => pageKey === "collection").map((route) => ({ href: routeHref(route), label: label(route) })) }];
+  return [...order.map((id) => ({ id, title: `${styleNames[id]} 網站目錄`, entries: routes.filter((route) => route.styleId === id).map((route) => ({ href: routeHref(route), label: label(route) })) })), { id: "collection", title: "設計系列目錄", entries: [{ href: "/", label: "萬花筒共同入口" }, ...routes.filter(({ pageKey }) => pageKey === "collection").map((route) => ({ href: routeHref(route), label: label(route) }))] }];
 }

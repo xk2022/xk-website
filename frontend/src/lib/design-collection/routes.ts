@@ -44,7 +44,7 @@ export function describeDesignRoute(request: DesignRouteRequest): DesignRouteDes
 
   const canonicalPath = (slug ? `${page.path}/${slug}` : page.path) as DesignPath;
   const prefix = style.id === "modern" ? "" : `${designCollectionRegistry.namespace}/${style.id}`;
-  const presentationPath = `${prefix}${canonicalPath === "/" ? "" : canonicalPath}` || "/";
+  const presentationPath = style.id !== "modern" && page.pageKey === "home" ? prefix : `${prefix}${canonicalPath}`;
   const fragment = approvedHash(value.hash, designCollectionRegistry.anchors[style.id][page.pageKey] ?? []);
   const common = { canonicalPath, presentationPath: presentationPath as DesignPath, availability: availability(style.status), ...fragment };
   if (page.kind === "detail" && slug !== null) return Object.freeze({ ...common, pageKey: page.pageKey, styleId: style.id, slug });

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { KaleidoscopeGateway } from "@/components/design-collection/shared/kaleidoscope-gateway";
 
 import { HomeContactCta } from "@/components/sections/home-contact-cta";
 import { HomeFeaturedShowcases } from "@/components/sections/home-featured-showcases";
@@ -14,12 +13,11 @@ import { getSeoPage } from "@/config/seo";
 import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = createPageMetadata(getSeoPage("/"), siteConfig);
+export const metadata: Metadata = createPageMetadata(getSeoPage("/modern"), siteConfig);
 
 export default function HomePage() {
   return (
     <>
-      <KaleidoscopeGateway isHome />
       <HomeHero />
       <HomeIntroduction />
       <HomeServices />

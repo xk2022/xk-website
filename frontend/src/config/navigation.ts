@@ -1,6 +1,6 @@
 // Public navigation includes implemented pages and existing homepage anchors.
 export const primaryNavigation = [
-  { href: "/", label: "首頁" },
+  { href: "/modern", label: "首頁" },
   { href: "/about", label: "關於 XK" },
   { href: "/services", label: "服務項目" },
   { href: "/solutions", label: "解決方案" },

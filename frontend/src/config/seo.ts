@@ -22,7 +22,7 @@ export const seoProtectionPolicy: SeoProtectionPolicy = {
 /** Current approved page copy. Planned, development and error routes are deliberately absent. */
 const modernSeoPages = [
   {
-    path: "/",
+    path: "/modern",
     title: "Xplore Kaleidoscope | Web, Java & AI Digital Solutions",
     description: "Xplore Kaleidoscope 提供網站開發、Java 企業系統、系統架構整合及 AI 商業應用解決方案，協助企業打造數位價值。",
     availability: "public",
@@ -103,11 +103,12 @@ const presentationStyles = [
 ] as const;
 export const seoPages: readonly SeoPage[] = [
   ...modernSeoPages,
+  { path: "/", title: "Xplore Kaleidoscope | Choose Your Perspective", description: "XK SYSTEM 萬花筒品牌入口：選擇現代專業、經典復古或奢華精品三種網站設計風格。", availability: "public" },
   ...presentationStyles.flatMap((style) => modernSeoPages
     .filter((page) => page.availability === "public" && page.path !== "/design-collection")
     .map((page): SeoPage => ({
       ...page,
-      path: `/design-collection/${style.id}${page.path === "/" ? "" : page.path}`,
+      path: `/design-collection/${style.id}${page.path === "/modern" ? "" : page.path}`,
       title: `${page.title}｜${style.name} 設計展示`,
       description: `${page.description} 本頁為 ${style.name} 設計展示，服務範圍與參考資料不因風格改變。`,
       availability: "public",

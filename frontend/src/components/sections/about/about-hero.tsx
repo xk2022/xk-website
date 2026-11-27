@@ -15,7 +15,7 @@ export function AboutHero() {
       <Container className="relative grid items-center gap-10 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
         <div className="min-w-0">
           <nav aria-label="麵包屑導覽" className="type-body-sm mb-8 flex items-center gap-3 text-foreground">
-            <Link href="/" className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">首頁</Link>
+            <Link href="/modern" className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">首頁</Link>
             <span aria-hidden="true">/</span>
             <span aria-current="page">關於 XK</span>
           </nav>

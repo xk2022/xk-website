@@ -20,16 +20,16 @@ export function HomeHero() {
           <p lang="en" className="type-caption mb-3 font-semibold tracking-widest text-secondary">
             {homepageHero.eyebrow}
           </p>
-          <h2 id="home-title" tabIndex={-1} className="type-h1 max-w-3xl text-primary scroll-mt-6">
+          <h1 id="home-title" tabIndex={-1} className="type-h1 max-w-3xl text-primary scroll-mt-6">
             {homepageHero.title}
-          </h2>
+          </h1>
           <p className="type-body mt-5 max-w-xl text-foreground">
             {homepageHero.description}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <InquiryButton descriptionId="home-inquiry-note" className="w-full sm:w-auto" />
             <Button asChild variant="outline" size="lg" className="w-full sm:w-auto">
-              <Link href="/#services">探索我們的服務 <ArrowDown aria-hidden="true" /></Link>
+              <Link href="/modern#services">探索我們的服務 <ArrowDown aria-hidden="true" /></Link>
             </Button>
           </div>
           <p id="home-inquiry-note" className="type-body-sm mt-4 max-w-xl text-foreground">

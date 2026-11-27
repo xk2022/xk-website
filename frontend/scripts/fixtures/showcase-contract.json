@@ -13,7 +13,7 @@
   "featuredIds": ["march-tangbao", "hongjia-birdnest", "honest-diecut"],
   "technicalPlanSlugs": ["corporate-website", "enterprise-management", "integration-hub"],
   "existingPublicPaths": [
-    "/", "/about", "/services", "/solutions", "/portfolio", "/contact",
+    "/", "/modern", "/about", "/services", "/solutions", "/portfolio", "/contact",
     "/portfolio/corporate-website", "/portfolio/enterprise-management", "/portfolio/integration-hub"
   ],
   "portfolioAnchors": ["website-cases", "website-samples", "portfolio-projects"],

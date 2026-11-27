@@ -18,8 +18,8 @@ function requestFor(route, styleId = route.styleId) {
 const published = seoPages.filter(({ availability }) => availability === "public");
 const fixture = JSON.parse(readFileSync(new URL("./fixtures/design-collection-contract.json", import.meta.url), "utf8"));
 const modern = fixture.modernRoutes.map(({ path }) => published.find((page) => page.path === path));
-test("Modern 16, Gallery, Heritage 16 and Luxury 16 are the independent exact 49-page public inventory", () => {
-  assert.equal(published.length, 49);
+test("Modern 16, Gallery, Heritage 16 and Luxury 16 plus gateway are the exact 50-page public inventory", () => {
+  assert.equal(published.length, 50);
   assert.equal(getPublishedDesignRoutes().length, 49);
   assert.equal(modern.length, 16);
   assert.ok(modern.every(Boolean));
@@ -43,7 +43,7 @@ for (const styleId of ["heritage", "luxury"]) {
       const contract = describeDesignMetadata(request);
       assert.equal(contract.availability, "public");
       assert.equal(contract.canonicalPath, page.path);
-      assert.equal(contract.presentationPath, `/design-collection/${styleId}${page.path === "/" ? "" : page.path}`);
+      assert.equal(contract.presentationPath, `/design-collection/${styleId}${page.path === "/modern" ? "" : page.path}`);
       assert.equal(contract.metadata.alternates.canonical, new URL(page.path, "https://www.xplorekaleidoscope.com").href);
       assert.equal(contract.metadata.openGraph.url, `https://www.xplorekaleidoscope.com${contract.presentationPath}`);
       assert.deepEqual(contract.metadata.robots, { index: false, follow: false });
