@@ -15,7 +15,7 @@ export function HeritageHome() {
       <p className="htg-kicker" lang="en">READING INDEX</p>
       <h2>從需求出發，連結每一項技術。</h2>
       <p>{home.hero.portfolioNote}</p>
-      <HeritageChapters items={[{ href: "/#services", label: "服務目錄" }, { href: "/#featured-websites", label: "作品圖說" }, { href: "/#contact", label: "合作與下一步" }]} />
+      <HeritageChapters items={[{ href: "/modern#services", label: "服務目錄" }, { href: "/modern#featured-websites", label: "作品圖說" }, { href: "/modern#contact", label: "合作與下一步" }]} />
       <div className="htg-actions">
         <HeritageInquiry descriptionId="home-inquiry-note" />
         <HeritageLink href={heritagePageHref("quotation")}>立即試算方案</HeritageLink>

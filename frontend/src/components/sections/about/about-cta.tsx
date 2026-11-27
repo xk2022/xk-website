@@ -17,8 +17,8 @@ export function AboutCta() {
           <p className="type-body-lg mt-5 max-w-2xl text-foreground">無論是企業網站、Java 系統、系統整合或 AI 應用，都可以從理解需求開始。</p>
         </div>
         <div className="flex flex-wrap gap-3 lg:justify-end">
-          <Button asChild size="lg"><Link href="/#services">了解服務 <ArrowUpRight aria-hidden="true" /></Link></Button>
-          <Button asChild size="lg" variant="outline"><Link href="/#contact">聯絡 XK <ArrowUpRight aria-hidden="true" /></Link></Button>
+          <Button asChild size="lg"><Link href="/modern#services">了解服務 <ArrowUpRight aria-hidden="true" /></Link></Button>
+          <Button asChild size="lg" variant="outline"><Link href="/modern#contact">聯絡 XK <ArrowUpRight aria-hidden="true" /></Link></Button>
         </div>
       </Container>
     </Section>

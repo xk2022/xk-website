@@ -16,7 +16,7 @@ export function LuxuryHome() {
         <LuxuryInquiry describedBy="home-inquiry-note" />
       </div>
       <p id="home-inquiry-note" className="lx-note">{contact.action.description}</p>
-      <LuxuryChapterLinks items={[{ href: "/#services", label: "探索我們的服務" }, { href: "/portfolio", label: "查看作品展示" }]} />
+      <LuxuryChapterLinks items={[{ href: "/modern#services", label: "探索我們的服務" }, { href: "/portfolio", label: "查看作品展示" }]} />
       <p className="lx-note">{home.hero.portfolioNote}</p>
       <p lang="en">{site.tagline}</p>
       <p lang="en">{site.slogan}</p>

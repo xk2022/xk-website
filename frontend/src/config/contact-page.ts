@@ -18,7 +18,7 @@ export const contactAvailability = getContactAvailability(verifiedContactChannel
 
 export type ContactPageLink = {
   readonly label: string;
-  readonly href: "/" | "/about" | "/services" | "/services#service-plans" | "/services#pricing-guide" | "#contact-channels" | `/services#${ServiceId}`;
+  readonly href: "/modern" | "/about" | "/services" | "/services#service-plans" | "/services#pricing-guide" | "#contact-channels" | `/services#${ServiceId}`;
 };
 
 export type ContactServiceLink = ContactPageLink & {
@@ -164,7 +164,7 @@ export const contactPage = {
     fallbackLinks: [
       { label: "了解服務", href: "/services" },
       { label: "認識 XK", href: "/about" },
-      { label: "返回首頁", href: "/" },
+      { label: "返回首頁", href: "/modern" },
     ],
   },
   preparation: {
@@ -203,7 +203,7 @@ export const contactPage = {
     links: [
       { label: "比較服務方案", href: "/services#service-plans" },
       { label: "了解報價評估方式", href: "/services#pricing-guide" },
-      { label: "返回首頁", href: "/" },
+      { label: "返回首頁", href: "/modern" },
     ],
   },
   sourceRefs: contactPageSources,

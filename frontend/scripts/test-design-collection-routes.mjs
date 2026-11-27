@@ -24,10 +24,10 @@ test("DC2-ROUTE-01: independent style, nine content keys and collection publicat
 test("DC5-INTEGRATION-ROUTE-01: independent exact 49-path publication with the original Modern 16", () => {
   const published = getPublishedDesignRoutes();
   assert.equal(published.length, 49);
-  assert.deepEqual(published.map(({ presentationPath }) => presentationPath).sort(), [...fixture.publishedPaths].sort());
+  assert.deepEqual(published.map(({ presentationPath }) => presentationPath).sort(), fixture.publishedPaths.filter(path => path !== fixture.gatewayPath).sort());
   assert.deepEqual(published.filter(({ styleId }) => styleId === "modern").map(({ presentationPath }) => presentationPath), fixture.modernRoutes.map(({ path }) => path));
   assert.ok(published.every(({ styleId, availability }) => ["modern", "heritage", "luxury", null].includes(styleId) && availability === "public"));
-  assert.deepEqual(published.map(({ presentationPath }) => presentationPath).sort(), seoPages.filter(({ availability }) => availability === "public").map(({ path }) => path).sort());
+  assert.deepEqual(published.map(({ presentationPath }) => presentationPath).sort(), seoPages.filter(({ availability, path }) => availability === "public" && path !== fixture.gatewayPath).map(({ path }) => path).sort());
 });
 
 for (const route of fixture.modernRoutes) {
@@ -164,7 +164,7 @@ test("DC2-ROUTE-07: invalid identities/combinations/data and publication-bypass 
 });
 
 const rejectedPaths = [
-  "", "about", "?email=PRIVATE", "#contact", "/modern", "/modern/about", "/design-collection/modern", "/design-collection/modern/about",
+  "", "about", "?email=PRIVATE", "#contact", "/", "/modern/about", "/design-collection/modern", "/design-collection/modern/about",
   "/privacy", "/dev/design-system", "/sitemap.xml", "/api/contact", "/services/website-development",
   "/design-collection/unknown", "/design-collection/heritage/privacy", "/design-collection/luxury/dev/design-system",
   "/design-collection/heritage/services/website-development", "/design-collection/luxury/portfolio/unknown",
@@ -190,7 +190,7 @@ test("DC2-ROUTE-08: strict reverse lookup rejects unknowns, aliases, traversal, 
 test("DC2-ROUTE-09: declared global/semantic anchors do not cross page boundaries", () => {
   assert.equal(resolveDesignHref({ pageKey: "about", styleId: "modern", hash: "approach" }), "/about#approach");
   assert.equal(resolveDesignHref({ pageKey: "about", styleId: "modern", hash: "contact-form" }), "/about");
-  assert.equal(resolveDesignHref({ pageKey: "home", styleId: "modern", hash: "main-content" }), "/#main-content");
+  assert.equal(resolveDesignHref({ pageKey: "home", styleId: "modern", hash: "main-content" }), "/modern#main-content");
   assert.equal(resolveDesignHref({ pageKey: "contact", styleId: "modern", hash: "contact-inquiry-email" }), "/contact");
 });
 

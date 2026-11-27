@@ -2,6 +2,7 @@
 
 import { useId, useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 import { resolveStyleSwitch, type DesignNavigationModel } from "@/lib/design-collection/navigation";
 
@@ -55,7 +56,7 @@ export function StyleSwitcherClient({ model }: { model: DesignNavigationModel })
   return (
     <nav data-design-switcher className="design-style-switcher" aria-label="網站設計風格">
       <div className="design-style-switcher-inner">
-        <div className="design-style-switcher-heading"><p>網站呈現風格</p><p>同一份內容，不同閱讀方式。</p><a href={model.collectionHref} data-design-collection-link className="design-style-switcher-collection-link">比較三套版面</a></div>
+        <div className="design-style-switcher-heading"><p>網站呈現風格</p><p>同一份內容，不同閱讀方式。</p><Link href="/" prefetch={false} className="design-style-switcher-collection-link">返回萬花筒入口</Link><a href={model.collectionHref} data-design-collection-link className="design-style-switcher-collection-link">比較三套版面</a></div>
         <ul className="design-style-switcher-options">
           {model.styles.map((style) => {
             const destination = resolveStyleSwitch(model, pathname, hash, style.id);

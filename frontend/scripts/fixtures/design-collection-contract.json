@@ -1,9 +1,10 @@
 {
   "reviewedAt": "2026-11-26",
   "baseline": "0d41ecf",
-  "scope": "Approved three-series integration (PR42) of Modern, Heritage and Luxury implementations: 16 pages per style plus Gallery, exactly 49 public routes.",
+  "scope": "Approved three-series integration plus independent immersive root gateway: 16 pages per style, Gallery and gateway, exactly 50 public routes.",
   "styleStatus": {"modern": "implemented", "heritage": "implemented", "luxury": "implemented"},
-  "styleHomePaths": {"modern": "/", "heritage": "/design-collection/heritage", "luxury": "/design-collection/luxury"},
+  "styleHomePaths": {"modern": "/modern", "heritage": "/design-collection/heritage", "luxury": "/design-collection/luxury"},
+  "gatewayPath": "/",
   "heritageLogos": {
     "header": {"src": "/brand/source/xk-logo-horizontal.svg", "sha256": "08b60bfba88d9598aaaf072bdb7b6e95658784598b8d132a4e3bcb2383446a5b", "viewBox": "0 0 850 204", "width": "850", "height": "204"},
     "footer": {"src": "/brand/source/xk-logo-white.svg", "sha256": "3ef6fe4c3968992e1c18df2f05233f39ffebd9da26dd9be91e7be81c02087250", "viewBox": "0 0 620 410", "width": "620", "height": "410"}
@@ -25,7 +26,7 @@
     "quotation": ["main-content", "quotation-introduction", "quotation-services", "quotation-builds", "quotation-addons", "quotation-complexity", "quotation-results", "quotation-print-summary", "quotation-next-step"]
   },
   "modernRoutes": [
-    {"pageKey": "home", "path": "/"},
+    {"pageKey": "home", "path": "/modern"},
     {"pageKey": "about", "path": "/about"},
     {"pageKey": "services", "path": "/services"},
     {"pageKey": "solutions", "path": "/solutions"},
@@ -49,7 +50,7 @@
     "anchors": ["main-content", "design-styles", "compare-pages"]
   },
   "heritageRoutes": [
-    {"pageKey": "home", "path": "/design-collection/heritage", "canonicalPath": "/"},
+    {"pageKey": "home", "path": "/design-collection/heritage", "canonicalPath": "/modern"},
     {"pageKey": "about", "path": "/design-collection/heritage/about", "canonicalPath": "/about"},
     {"pageKey": "services", "path": "/design-collection/heritage/services", "canonicalPath": "/services"},
     {"pageKey": "solutions", "path": "/design-collection/heritage/solutions", "canonicalPath": "/solutions"},
@@ -67,7 +68,7 @@
     {"pageKey": "quotation", "path": "/design-collection/heritage/quotation", "canonicalPath": "/quotation"}
   ],
   "luxuryRoutes": [
-    {"pageKey": "home", "path": "/design-collection/luxury", "canonicalPath": "/"},
+    {"pageKey": "home", "path": "/design-collection/luxury", "canonicalPath": "/modern"},
     {"pageKey": "about", "path": "/design-collection/luxury/about", "canonicalPath": "/about"},
     {"pageKey": "services", "path": "/design-collection/luxury/services", "canonicalPath": "/services"},
     {"pageKey": "solutions", "path": "/design-collection/luxury/solutions", "canonicalPath": "/solutions"},
@@ -86,6 +87,7 @@
   ],
   "publishedPaths": [
     "/",
+    "/modern",
     "/about",
     "/services",
     "/solutions",
@@ -142,8 +144,8 @@
     {"modern": 16, "collection": 1, "heritage": 16, "luxury": 16, "total": 49}
   ],
   "anchorExamples": [
-    {"pageKey": "home", "hash": "contact", "href": "/#contact"},
-    {"pageKey": "home", "hash": "service-ai-solutions", "href": "/#service-ai-solutions"},
+    {"pageKey": "home", "hash": "contact", "href": "/modern#contact"},
+    {"pageKey": "home", "hash": "service-ai-solutions", "href": "/modern#service-ai-solutions"},
     {"pageKey": "services", "hash": "ai-automation", "href": "/services#ai-automation"},
     {"pageKey": "services", "hash": "pricing-guide", "href": "/services#pricing-guide"},
     {"pageKey": "portfolio", "hash": "website-cases", "href": "/portfolio#website-cases"},

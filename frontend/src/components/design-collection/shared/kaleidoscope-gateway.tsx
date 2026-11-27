@@ -15,7 +15,7 @@ const sectors = [
 export function KaleidoscopeGateway({ isHome = false }: Readonly<{ isHome?: boolean }>) {
   const entries = sectors.flatMap((sector) => {
     const href = resolveDesignHref({ styleId: sector.id, pageKey: "home" });
-    return href ? [{ ...sector, href: sector.id === "modern" ? `${href}#home-title` : href }] : [];
+    return href ? [{ ...sector, href }] : [];
   });
 
   return (

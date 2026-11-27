@@ -514,7 +514,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         self.check("Privacy remains an unpublished draft", "draft", self.data["privacyPolicy"]["status"])
         self.public_pages = [page for page in self.data["seoPages"] if page["availability"] == "public"]
         expected_paths = self.contract["existingPublicPaths"] + ["/portfolio/showcases/" + item for item in self.contract["brandOrder"]] + [self.quotation_contract["path"], self.design_contract["collectionRoute"]["path"]] + [route["path"] for route in self.presentation_routes]
-        self.check("Independent approved three-series integration (PR42) route count", 49, len(self.design_contract["publishedPaths"]))
+        self.check("Independent approved three-series and gateway route count", 50, len(self.design_contract["publishedPaths"]))
         self.check("Independent publication and content inventories agree", sorted(self.design_contract["publishedPaths"]), sorted(expected_paths))
         self.check("Independent public route inventory", sorted(expected_paths), sorted(page["path"] for page in self.public_pages))
         gallery = self.design_contract["collectionRoute"]
@@ -575,9 +575,9 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         content_path = self.content_path(path)
         config = self.data["showcases"]
         articles = [element for element in doc.all("article") if "data-showcase-id" in element.attrs]
-        expected_ids = self.contract["featuredIds"] if content_path == "/" else self.contract["brandOrder"] + self.contract["templateIds"]
+        expected_ids = self.contract["featuredIds"] if content_path == "/modern" else self.contract["brandOrder"] + self.contract["templateIds"]
         # Featured cards retain the approved brand order, independently of the selection-list order.
-        if content_path == "/":
+        if content_path == "/modern":
             expected_ids = [item for item in self.contract["brandOrder"] if item in expected_ids]
         self.check(f"{path} rendered card inventory/order", expected_ids, [element.attrs["data-showcase-id"] for element in articles])
         for card in articles:
@@ -761,6 +761,13 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
         for path, doc in self.documents.items():
             content_path = self.content_path(path)
             self.metadata(path, doc)
+            if path == self.design_contract["gatewayPath"]:
+                self.check("Gateway has no header/footer or form and a single main/h1", [0, 0, 0, 1, 1], [len(doc.all(tag)) for tag in ["header", "footer", "form", "main", "h1"]])
+                links = [anchor.attrs.get("href", "").rstrip("/") for anchor in doc.all("a")]
+                for href in self.design_contract["styleHomePaths"].values():
+                    self.check("Gateway two links to " + href, 2, links.count(href))
+                self.links_and_resources(path, doc)
+                continue
             self.check(f"{path} has one complete Modern frame and skip destination", [], modern_frame_errors(doc))
             self.links_and_resources(path, doc)
             self.enquiry_markup(path, doc)
@@ -794,9 +801,9 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
                     if self.design_contract["styleStatus"].get(style_id) == "planned":
                         self.check(f"Gallery {style_id} has no fake button", 0, len(card.all("button")))
                         self.check(f"Gallery {style_id} states that it is planned", True, "規劃中" in card.text())
-            if content_path in {"/", "/portfolio"}:
+            if content_path in {"/modern", "/portfolio"}:
                 self.cards(path, doc)
-            if content_path in {"/", "/services"}:
+            if content_path in {"/modern", "/services"}:
                 self.service_plans(path, doc)
             if content_path == "/portfolio":
                 ids = {element.attrs["id"] for element in doc.all() if "id" in element.attrs}
@@ -828,7 +835,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             missing = [text for text in chunks if re.sub(r"\s+", "", text) not in normalized]
             self.content_parity_diagnostics.append({"path": route["path"], "canonicalPath": route["canonicalPath"], "comparedChunks": len(chunks), "candidateMissingChunks": missing, "status": "REVIEW_REQUIRED" if missing else "NO_CANDIDATE_OMISSIONS", "notes": "Diagnostic only: distinguish missing DTO facts, limitations and prices from permitted editorial/UI changes. This does not prove that every source field is rendered."})
         negative = ["/privacy", "/dev/design-system", "/sitemap.xml", "/portfolio/unknown-smoke-route", "/portfolio/showcases/unknown-smoke-route", "/quotation/unknown-smoke-route", "/api/quotation", "/unknown-smoke-route"]
-        negative.extend(["/modern", "/modern/about", "/design-collection/modern", "/design-collection/modern/about", "/design-collection/unknown-smoke-route"])
+        negative.extend(["/modern/about", "/design-collection/modern", "/design-collection/modern/about", "/design-collection/unknown-smoke-route"])
         for style_id in ("heritage", "luxury"):
             negative.extend(self.design_contract["namespace"] + "/" + style_id + suffix for suffix in (
                 "/privacy", "/dev/design-system", "/portfolio/unknown-smoke-route", "/portfolio/showcases/unknown-smoke-route",

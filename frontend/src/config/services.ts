@@ -70,7 +70,7 @@ export const servicesPage = {
     englishTitle: "Our Services",
     description: "Xplore Kaleidoscope（XK）整合 Web、Java 與 AI 技術，從品牌網站、企業系統到跨系統整合，協助企業建立符合實際需求的數位解決方案。",
     primaryCta: { label: "探索服務內容", href: "#service-overview" },
-    secondaryCta: { label: "討論數位需求", href: "/#contact" },
+    secondaryCta: { label: "討論數位需求", href: "/modern#contact" },
   },
   overview: {
     title: "從需求出發，連結每一項技術。",
@@ -94,9 +94,9 @@ export const servicesPage = {
   cta: {
     title: "從一個需求，開始探索數位可能。",
     description: "無論是企業網站、Java 系統、系統整合、AI 應用或部署規劃，都可以從理解問題與目標開始。",
-    primary: { label: "前往聯絡資訊", href: "/#contact" },
+    primary: { label: "前往聯絡資訊", href: "/modern#contact" },
     secondary: { label: "認識 XK", href: "/about" },
-    home: { label: "返回首頁", href: "/" },
+    home: { label: "返回首頁", href: "/modern" },
   },
 } as const;
 

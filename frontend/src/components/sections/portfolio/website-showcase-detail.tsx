@@ -30,7 +30,7 @@ export function WebsiteShowcaseDetail({ showcase }: { showcase: AvailableBrandSh
         <BrandPattern variant="gradient" />
         <Container className="relative min-w-0">
           <nav aria-label="麵包屑導覽" className="type-body-sm mb-8 flex min-w-0 flex-wrap items-center gap-x-3 gap-y-1 text-foreground">
-            <Link href="/" className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">首頁</Link>
+            <Link href="/modern" className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">首頁</Link>
             <span aria-hidden="true">/</span>
             <Link href="/portfolio#website-cases" className="inline-flex min-h-11 items-center rounded-sm hover:text-secondary">作品展示</Link>
             <span aria-hidden="true">/</span>
