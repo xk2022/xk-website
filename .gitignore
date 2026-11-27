@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Standard frontend workspace (root legacy caches remain ignored above).
+/frontend/node_modules/
+/frontend/.next/
+/frontend/out/
+/frontend/build/
+/frontend/coverage/
+/frontend/.vercel/
+
+# Python evidence/smoke tooling cache
+__pycache__/
+*.py[cod]

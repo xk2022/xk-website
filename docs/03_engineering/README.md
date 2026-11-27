@@ -1,60 +1,46 @@
 # 官網技術架構與工程入口
 
-本文件整理已存在的程式與工程文件，核對基準：2026-11-26，DC-003 分支（main `aa100ad` 為 base）。不新增架構決策或開發需求。版本以 [package.json](../../package.json)／[package-lock.json](../../package-lock.json) 為準，公司層級規範見 [XK SYSTEM 文件](https://github.com/xk2022/xplore-kaleidoscope)。
+更新：2026-11-27。目前三系列各 16 頁與 Gallery，共 49 個公開網址；工程目錄依公司最新版共用首層規範整理。詳細搬移、操作及歷史證據相容方式見 [Repository 結構](repository-layout.md)。舊 DC-003 的 17 頁架構描述保留於 [整理前固定版本](https://github.com/xk2022/xk-website/blob/075aaa0e4a382fbab442b85931269915c626ac37/docs/03_engineering/README.md)，不再當作現況。
 
 ## 現行架構
 
 | 層級 | 實際來源與職責 |
 | --- | --- |
-| 網頁與 Layout | [src/app](../../src/app) — Next.js 技術 root（font／Metadata／JSON-LD）、`(modern)` 群組與 Gallery |
-| 呈現與共用元件 | [src/components](../../src/components) — brand、layout、sections、ui、dev 與 design-collection |
-| 內容設定 | [src/config](../../src/config) — 品牌、服務、作品、聯絡、試算與 SEO 的單一來源 |
-| 共用邏輯 | [src/lib](../../src/lib) — SEO、聯絡草稿、試算及三風格核心 |
-| 靜態素材 | [public](../../public) — 品牌、圖示、案例、試算 QR |
-| 品質工具 | [scripts](../../scripts)、[fixtures](../../scripts/fixtures) — 測試、靜態匯出與 HTTP 驗收 |
-| 發布 | [CI workflow](../../.github/workflows/ci.yml) — PR 品質與 Pages artifact、main 自動部署 |
-| 文件 | [docs](../README.md) — 規格、設計、驗收證據及歷史 |
+| 網頁與 Layout | [frontend/src/app](../../frontend/src/app)：單一技術 root、Modern 群組、Gallery、Heritage／Luxury 路由 |
+| 呈現與共用元件 | [frontend/src/components](../../frontend/src/components)：品牌、Layout、Sections、UI 與三系列呈現 |
+| 內容設定 | [frontend/src/config](../../frontend/src/config)：品牌、服務、作品、聯絡、試算及 SEO 的單一來源 |
+| 共用邏輯 | [frontend/src/lib](../../frontend/src/lib)：SEO、聯絡草稿、試算及 Design Collection 核心 |
+| Design System | [frontend/src/design-systems](../../frontend/src/design-systems)：各系列 scoped tokens／recipes |
+| 靜態素材 | [frontend/public](../../frontend/public)：品牌、圖示、案例、QR 與授權文字 |
+| 前端品質工具 | [frontend/scripts](../../frontend/scripts)：建置、單元測試、fixtures、HTTP smoke |
+| 跨元件工具 | [scripts](../../scripts)：OS 退出回執、不可變證據引用核對 |
+| 發布 | [CI workflow](../../.github/workflows/ci.yml)：PR 品質／Pages artifact，main 發布 |
+| 文件 | [文件索引](../README.md)：設計、營運、工程、部署、任務、報告及證據 |
 
-Next.js 16.4.6、React 19.3.1、TypeScript 5、Tailwind CSS 4.3.3、shadcn/ui／Lucide、Node.js 24.x。現行是獨立前端官網，未引入 Backend、資料庫、CMS。
+版本以 [package.json](../../frontend/package.json) 與 [lockfile](../../frontend/package-lock.json) 為準；Next.js App Router、React、TypeScript、Tailwind CSS 4、shadcn/ui、Lucide、Node.js 24 與獨立靜態官網架構沿用。保留目錄沒有啟用 Backend 或資料庫。
 
-```mermaid
-flowchart TD
-  A["App Router 與 Layout"] --> B["頁面／UI 元件"]
-  B --> C["內容設定"]
-  B --> D["聯絡／試算共用邏輯"]
-  C --> E["Design Collection 共用核心"]
-  D --> E
-```
+## 三風格現況
 
-DC-003 將原 Modern 外框搬入 group 並新增 Gallery，消費 DC-002 路由／Metadata 核心；Heritage／Luxury 容器仍未實作。Modern facade 位於 [src/design-systems/modern](../../src/design-systems/modern)，引用原 tokens／recipes。
+| 項目 | 現況與來源 |
+| --- | --- |
+| Modern | 16 頁，保留根網址與 ModernFrame |
+| Heritage | 16 頁，獨立編輯式版面與 scoped tokens；[核准紀錄](../01_design/design-collection/reviews/heritage-v1-approval.md) |
+| Luxury | 16 頁，獨立深色／金色版面與 scoped tokens；[核准紀錄](../01_design/design-collection/reviews/luxury-v1-approval.md) |
+| Gallery／切換 | 三系列入口與同頁識別；registry／路由／導航集中於共用核心 |
+| 內容與 SEO | 共用資料；Modern canonical、展示系列 canonical／OG 分工、全站 noindex/nofollow |
+| 聯絡／試算 | 共用本機草稿、參考計算、選項 ID storage 與 A4；沒有站內收件 |
 
-## 三風格架構對照
-
-| 項目 | 現況 | 權威來源 |
-| --- | --- | --- |
-| Modern 16 頁 | 原 URL、ModernFrame 與 `(modern)` group | [根 README](../../README.md)、[核心契約](design-collection-core.md) |
-| Gallery | 本輪新增 `/design-collection/`，合計 17 頁；[任務／驗收](../task/dc003.md) | [架構規格](../01_design/design-collection/architecture.md) |
-| Heritage、Luxury | 規劃中，未輸出新路由 | [架構規格](../01_design/design-collection/architecture.md) |
-| 共用內容及路由 | DC-002 已合併 | [registry](../../src/config/design-collection.ts)、[核心模組](../../src/lib/design-collection) |
-| 各系列 Token／版面 | 契約已定義；視覺實作及核准待後續 | [設計索引](../01_design/README.md) |
-| 聯絡與試算 | 既有本機草稿及參考計算；無站內收件 | [核心 API](design-collection-core.md)、[回覆流程](../02_operations/contact-response-workflow.md) |
-
-三風格完成目標是 49 頁（16 × 3 + Gallery），不是現在的頁數。實作順序及各階段驗收依 [DC 工作包](../01_design/design-collection/work-packages.md)，不得把規劃回傳值當公開連結。
+已提供的三套版面與 DC-007 的完整發布驗收是不同狀態；效能、網路未知與真人讀屏缺口見 [R01 報告](../reports/dc007-r01-performance.md)，不因整理或合併改為 PASS。
 
 ## 工程文件索引
 
 | 需求 | 入口 |
 | --- | --- |
-| 快速啟動、版本、建置 | [根 README](../../README.md) |
+| 快速啟動、版本、建置 | [根 README](../../README.md)、[Repository 結構](repository-layout.md) |
 | 協作、分支、驗收 | [AGENTS](../../AGENTS.md)、[協作流程](subagent-workflow.md) |
-| 共用核心 API、狀態與隔離 | [Design Collection 核心](design-collection-core.md) |
-| 本機／Pages HTTP 回歸 | [Smoke](website-smoke.md) |
-| 效能測量 | [量測指南](performance-measurement.md) |
+| 共用核心 API、狀態與隔離 | [核心契約](design-collection-core.md) |
+| 本機／Pages HTTP 驗收 | [Smoke](website-smoke.md) |
+| 字體與效能 | [字體來源／重生](../../frontend/src/app/fonts/README.md)、[效能量測](performance-measurement.md) |
+| 三系列維護與 rollback | [維護指南](design-collection-maintenance.md) |
 | 正式網址及發布門檻 | [網域](../04_deployment/custom-domain-deployment.md)、[SEO](../04_deployment/seo-operations.md)、[發布清單](../04_deployment/publication-readiness.md) |
-| 工作包及驗收證據 | [任務索引](../task/README.md)、[報告索引](../reports/README.md) |
-
-## DOC-004 整理範圍
-
-核對現有 Git tree、manifest、DC-001 規格與 DC-002 核心使用契約；集中入口並引用既有詳文。原始設計規格、資料、頁面、驗收報告、依賴與部署設定均未變更。
-
-DC-003 依當次使用者指示同步更新本索引的實際程式分工；DOC-004 首次整理的歷史範圍不代表本輪未改程式。
+| 進度與驗證 | [任務索引](../task/README.md)、[報告索引](../reports/README.md) |

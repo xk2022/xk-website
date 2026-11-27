@@ -6,7 +6,7 @@
 | --- | --- |
 | `01_design/` | [設計索引](01_design/README.md)：[架構](01_design/design-collection/architecture.md)、[Design System](01_design/design-collection/design-systems.md)、[工作包](01_design/design-collection/work-packages.md) |
 | `02_operations/` | 商務營運：[聯絡與回覆流程](02_operations/contact-response-workflow.md) |
-| `03_engineering/` | [技術架構與工程索引](03_engineering/README.md)：[協作流程](03_engineering/subagent-workflow.md)、[Smoke](03_engineering/website-smoke.md)、[效能量測](03_engineering/performance-measurement.md)、[Design Collection 核心](03_engineering/design-collection-core.md) |
+| `03_engineering/` | [技術架構與工程索引](03_engineering/README.md)：[Repository 結構](03_engineering/repository-layout.md)、[協作流程](03_engineering/subagent-workflow.md)、[Smoke](03_engineering/website-smoke.md)、[效能量測](03_engineering/performance-measurement.md)、[Design Collection 核心](03_engineering/design-collection-core.md) |
 | `04_deployment/` | 發布與部署：[網域](04_deployment/custom-domain-deployment.md)、[發布前置](04_deployment/publication-readiness.md)、[SEO](04_deployment/seo-operations.md) |
 | `task/` | [Roadmap](task/ROADMAP.md)、[任務索引](task/README.md)、正式規格、DC 工作包與 Bugfix backlog |
 | `reports/` | [實作與驗收索引](reports/README.md)、原始證據封存 |
@@ -22,7 +22,7 @@
 - `task/`、`reports/`、`screenshots/` 保持原路徑，保護既有任務契約、證據 manifest、歷史網址及 Tailwind 排除設定；不為編號一致性重寫證據。
 - 保留原始驗收、失敗與重驗，不將規劃視為已實作或已發布。歷史報告的原時點路徑可留作歷史描述；導覽連結指向目前實際文件。
 - 檔名使用 kebab-case；保留既有 Task ID 命名。新增或搬移文件需同步更新根 README、AGENTS 及相關連結。
-- 本次僅整理文件，不變更網站內容、路由、價格、SEO 發布狀態、DNS 或部署。
+- 此目錄原 DOC-001～006 的整理不變更部署；2026-11-27 另依使用者授權整理前端工作區並合併發布，詳 [Repository 結構](03_engineering/repository-layout.md)。網站內容、路由、價格、SEO 與 DNS 維持既有決定。
 
 ## 搬移對照
 

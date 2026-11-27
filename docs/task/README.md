@@ -310,6 +310,10 @@ DC-006 [PR #44](https://github.com/xk2022/xk-website/pull/44) 已合併並部署
 
 ## DC-007-R01 效能修復｜2026-11-27
 
-[R01 規格](dc007-r01.md) 延續原分支及 [Draft PR #45](https://github.com/xk2022/xk-website/pull/45)，以固定條件的 before／after 與完整受影響回歸驗證原生字體載入及離屏排版修復；正式結果見 [R01 報告](../reports/dc007-r01-performance.md)，不把 pilot 當完整 PASS。[字體來源與重生](../../src/app/fonts/README.md)及[維護指引](../03_engineering/design-collection-maintenance.md)記錄已審範圍。
+[R01 規格](dc007-r01.md) 延續原分支及 [Draft PR #45](https://github.com/xk2022/xk-website/pull/45)，以固定條件的 before／after 與完整受影響回歸驗證原生字體載入及離屏排版修復；正式結果見 [R01 報告](../reports/dc007-r01-performance.md)，不把 pilot 當完整 PASS。[字體來源與重生](../../frontend/src/app/fonts/README.md)及[維護指引](../03_engineering/design-collection-maintenance.md)記錄已審範圍。
 
 公司來源仍為 `f1be01c0c5d8bc5b1238f250838e336bef47b149`，沒有新增品牌或平台規範。原 DC-007 FAIL／incomplete、真人讀屏 BLOCKED 及網路未知保留；整體發布門檻仍未完成。更新同一 Draft PR 等待審閱，不合併、部署或改 DNS。
+
+## Repository 整理與授權部署｜2026-11-27
+
+使用者已明確授權同 [PR #45](https://github.com/xk2022/xk-website/pull/45) 合併與部署，並要求依公司最新規範整理前端工作區及 README。[目錄與操作](../03_engineering/repository-layout.md)／[本次紀錄](../reports/repository-organization-2026-11-27.md) 說明 `frontend/`、CI 及不可變歷史證據引用。此授權不把 DC-007/R01 效能 FAIL、網路未知或真人讀屏 BLOCKED 改成完成；本機、PR CI、合併、main CI、部署與公開驗證各自記錄。

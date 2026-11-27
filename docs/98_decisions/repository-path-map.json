@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "sourceCommit": "075aaa0e4a382fbab442b85931269915c626ac37",
+  "purpose": "Resolve immutable historical repository references after the2026-11-27 frontend migration. Prefer existing original path; map missing paths once; verify original SHA. This does not relabel old tests as current.",
+  "prefixMoves": [
+    {
+      "from": "src/",
+      "to": "frontend/src/"
+    },
+    {
+      "from": "public/",
+      "to": "frontend/public/"
+    },
+    {
+      "from": "scripts/",
+      "to": "frontend/scripts/"
+    }
+  ],
+  "fileMoves": {
+    "package.json": "frontend/package.json",
+    "package-lock.json": "frontend/package-lock.json",
+    "next.config.ts": "frontend/next.config.ts",
+    "tsconfig.json": "frontend/tsconfig.json",
+    "eslint.config.mjs": "frontend/eslint.config.mjs",
+    "components.json": "frontend/components.json"
+  },
+  "unchangedPaths": [
+    "scripts/run-with-evidence.py",
+    ".github/",
+    "docs/",
+    ".nvmrc",
+    ".editorconfig"
+  ]
+}

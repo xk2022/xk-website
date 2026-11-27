@@ -108,7 +108,7 @@ Core corpus 來自 49 公開 HTML（排除 script/style，包含 aria／placehol
 
 早期 v3 UVS 缺項失敗保留，採用的是補齊後 v4。當前 Gstatic v40 的 108 檔 raw SHA 全不符，舊 version 首檔 probe 也不符，真 Exit 1 保留；沒有補造失落的原 URL。Legacy 精確來源為已驗 Next/font/google artifact，master／OFL／glyph proof 分別證實底層來源與精確性。
 
-400–700 縮軸試驗雖由 281,768B 降至 264,116B，仍有 **3524／3528 ordinary failures、48／48 UVS failures、356 advance failures**，不採用。此字型為 glyf／gvar，CFF 策略不適用；未把實驗候選當正式字型。維護入口為 [font README](../../src/app/fonts/README.md)、compact metadata、固定 codepoints、`scripts/regenerate-font-core.py` 與 10 項 unit；固定清單重生不等於重新掃描未來 corpus。完整 proof 在 `font-assets/verified-facts.json`、`glyph-proof-v4.json`、`uvs-audit.json`、reproduction 與縮軸／table-experiment 原始結果。
+400–700 縮軸試驗雖由 281,768B 降至 264,116B，仍有 **3524／3528 ordinary failures、48／48 UVS failures、356 advance failures**，不採用。此字型為 glyf／gvar，CFF 策略不適用；未把實驗候選當正式字型。維護入口為 [font README](../../frontend/src/app/fonts/README.md)、compact metadata、固定 codepoints、`scripts/regenerate-font-core.py` 與 10 項 unit；固定清單重生不等於重新掃描未來 corpus。完整 proof 在 `font-assets/verified-facts.json`、`glyph-proof-v4.json`、`uvs-audit.json`、reproduction 與縮軸／table-experiment 原始結果。
 
 ## 6. 最終品質、HTTP 與本機產物
 

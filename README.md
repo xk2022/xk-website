@@ -1,144 +1,117 @@
-# XK Website — XK SYSTEM 官方形象網站
+[正式官網：www.xplorekaleidoscope.com](https://www.xplorekaleidoscope.com/)
 
-Xplore Kaleidoscope 的品牌官網（BRAND），展示數位品牌、Java 企業系統、系統整合及 AI 應用服務，提供作品瀏覽、需求整理與參考方案試算。
+# XK Website｜XK SYSTEM 官方企業網站
 
-- [正式官網](https://www.xplorekaleidoscope.com/)
-- [作品展示](https://www.xplorekaleidoscope.com/portfolio/)
-- [方案試算](https://www.xplorekaleidoscope.com/quotation/)
-- [文件總索引](docs/README.md) · [開發任務](docs/task/README.md) · [協作規範](AGENTS.md)
+Xplore Kaleidoscope 的自有企業形象官網，介紹網站建置、Java 企業系統、系統整合與 AI 應用服務，讓訪客了解合作方式、瀏覽展示並整理詢價需求。
 
-## 1. 目前功能
+## 專案資訊
 
-| 功能 | 路徑 | 說明 |
-| --- | --- | --- |
-| 品牌首頁 | `/` | 品牌定位、服務、精選展示與詢價 |
-| 關於 XK | `/about/` | 品牌介紹、使命、能力與工作方式 |
-| 服務項目 | `/services/` | 五大服務方向與合作流程 |
-| 解決方案 | `/solutions/` | 依企業需求提供規劃方向 |
-| 作品展示 | `/portfolio/` | 六項自製品牌／提案展示、第三方模板及三項技術規劃，依實際狀態標示 |
-| 作品詳頁 | `/portfolio/[slug]/`、`/portfolio/showcases/[slug]/` | 僅輸出已定義的 slug |
-| 聯絡我們 | `/contact/` | 需求摘要、複製與 Email 草稿；由訪客自行寄出 |
-| 方案試算 | `/quotation/` | 建置與加購參考金額、A4 摘要及 Email 詢價草稿 |
-| 設計系列 | `/design-collection/` | Modern／Heritage／Luxury 三套完整系列與同頁切換已合併發布；DC-007 執行完整驗收 |
-
-正式 main `ee4b4709a9f8daa755e2595a46c158b3c92d8229` 已合併 [DC-006 PR #44](https://github.com/xk2022/xk-website/pull/44)，三系列各 16 頁＋Gallery，共 49 頁；[main CI／Pages](https://github.com/xk2022/xk-website/actions/runs/45820416409) 與部署後公開驗證已完成。DC-007 的新驗收與外部必要項另記於[本輪報告](docs/reports/dc007-implementation.md)，不能借用前置部署稱本輪通過。
-
-展示及規劃不等於客戶交付；試算不是正式報價、訂單或付款。聯絡與試算均沒有站內直接收件端點；聯絡資料只留在頁面記憶體，試算僅保存選項 ID，不保存客戶稱呼及專案名稱。
-
-更多：[Contact 報告](docs/reports/contact-inquiry-form.md)、[試算規格](docs/task/quotation-estimator-v1.md)、[試算報告](docs/reports/quotation-estimator-v1.md)。
-
-## 2. XK Design Collection
-
-同一品牌、三套獨立版面，資料與互動核心共用。
-
-| 系列 | 入口方向 | 狀態 |
-| --- | --- | --- |
-| Modern 現代專業 | 現有根路徑 | 原 16 頁已發布；DC-002 共用核心、DC-003 相容整合已合併 |
-| Heritage 懷舊復古 | `/design-collection/heritage/` | v1 已核准；完整功能 PR #40 已合併、部署並完成公開驗證 |
-| Luxury 奢華精品 | `/design-collection/luxury/` | v1 已由 PR #41 核准；完整功能 PR #42 已合併、部署並完成公開驗證 |
-
-三系列各 16 頁、Gallery、同頁切換與共用導航均已在 [DC-006](docs/task/dc006.md) 合併發布；本輪 [DC-007](docs/task/dc007.md) 執行完整驗收與維護準備。子網域及正式索引仍須另行授權。
-
-- [架構規格](docs/01_design/design-collection/architecture.md)
-- [三套 Design System](docs/01_design/design-collection/design-systems.md)
-- [DC-001～007 工作包](docs/01_design/design-collection/work-packages.md)
-- [DC-007 完整驗證報告](docs/reports/dc007-implementation.md)／[47 張本輪截圖](docs/screenshots/design-collection/dc007/)／[維護與 rollback](docs/03_engineering/design-collection-maintenance.md)；發布門檻尚未全通過，依報告追蹤 Required 缺口。
-- [DC-007-R01 效能修復](docs/task/dc007-r01.md)／[修復與重驗報告](docs/reports/dc007-r01-performance.md)／[本機字體來源與重生方式](src/app/fonts/README.md)：沿用 [Draft PR #45](https://github.com/xk2022/xk-website/pull/45)。本輪保留原生完整變數字體、screen 離屏排版及試算摘要 memo；正式 after 與回歸依報告的實際數據判定，不以試跑宣稱通過。未採用原型僅依報告追溯。
-- [DC-006 實作與驗收報告](docs/reports/dc006-implementation.md)／[DC-006 截圖](docs/screenshots/design-collection/dc006/)（18 張歷史 Pages 畫面）
-
-DC-003 的 Modern 16＋Gallery 17 頁驗收保留歷史版本，見 [規格](docs/task/dc003.md)、[核心 API](docs/03_engineering/design-collection-core.md) 與 [報告](docs/reports/dc003-implementation.md)。Heritage 的 [品牌核准](docs/01_design/design-collection/reviews/heritage-v1-approval.md)、[完整規格](docs/task/dc004.md)／[報告](docs/reports/dc004-implementation.md)，以及 Luxury 的 [品牌核准](docs/01_design/design-collection/reviews/luxury-v1-approval.md)、[審閱稿](docs/01_design/design-collection/reviews/luxury-v1.md)、[完整規格](docs/task/dc005.md)／[報告](docs/reports/dc005-implementation.md) 均保留原時點。
-
-[PR #40](https://github.com/xk2022/xk-website/pull/40) 合併為 `0d41ecf495e55b792f966c9fe27bd07c27bc5647`，其 [main CI／Pages](https://github.com/xk2022/xk-website/actions/runs/45796333591) 與公開 33 頁驗證完成；[PR #42](https://github.com/xk2022/xk-website/pull/42) 合併為 `9322810f27e74e5ed4faa35a3b3931b3719f0c9a`，49 頁的部署及公開驗證見 [整合報告](docs/reports/design-collection-integration.md)。這些是 DC-006 的已發布基準，不能改稱本輪新驗收。
-
-本分支 `test/design-collection-release` 保留 [DC-007 規格](docs/task/dc007.md) 與原始驗收紀錄，現依 [R01](docs/task/dc007-r01.md) 修復可重現的效能問題。原效能 FAIL、真人讀屏 BLOCKED 與網路未知各自追蹤；R01 成功也不自動使完整 DC-007 通過。更新同一份 Draft PR #45 等待審閱，不合併、部署或改 DNS。正式索引、法律及品牌素材遷移各有核准邊界。
-
-## 3. 技術架構
-
-| 項目 | 現行配置 |
+| 項目 | 內容 |
 | --- | --- |
-| Framework | Next.js 16.4.6（App Router） |
-| UI | React 19.3.1、TypeScript 5、Tailwind CSS 4.3.3、shadcn/ui、Lucide |
-| Runtime | Node.js 24.x、npm |
-| Hosting | GitHub Actions → GitHub Pages；保留一般 Next.js production build |
-| Data | 集中式 TypeScript 設定，不依賴 Backend、資料庫或 CMS |
+| 專案名稱 | XK SYSTEM 官方企業網站 |
+| Repository | [xk2022/xk-website](https://github.com/xk2022/xk-website) |
+| 網站類型 | Corporate Website（CORP／企業形象官網） |
+| 專案狀態 | production；既有正式官網持續維護 |
+| 專案性質 | XK 自主規劃及維護的自有官網 |
+| 主要使用者 | 有網站、企業系統、整合或 AI 應用需求的訪客與潛在合作對象 |
+| 核心用途 | 公司與服務資訊、合作流程、展示瀏覽、需求整理與參考試算 |
+| 正式網址／部署 | `https://www.xplorekaleidoscope.com/`；自有 GitHub Actions → GitHub Pages，網域根路徑 |
+| 維護狀態 | 持續維護；驗收缺口見下方報告 |
+| 最後更新 | 2026-11-27 |
 
-現有網站以共用 Layout、UI 元件與資料設定組成。DC-002 已抽取共用核心；三風格依 DC 規格各自實作呈現層，完成度與部署狀態見上表；尚未落地的架構不能視為現有程式。
+分類及資訊結構依公司 [README 範本](https://github.com/xk2022/xplore-kaleidoscope/blob/76252e621ecb5c508494b49d4cd1eabd340b7e81/06_engineering/website-project-readme-template.md)與[網站分類規範](https://github.com/xk2022/xplore-kaleidoscope/blob/76252e621ecb5c508494b49d4cd1eabd340b7e81/06_engineering/website-repository-naming.md)。保留既有 repo 名稱；網站分類不觸發改名或 DNS 變更。
 
-| 路徑 | 職責 |
+## 功能與使用界線
+
+| 功能 | 入口／用途 |
 | --- | --- |
-| `src/app/` | App Router、頁面、Metadata、全域樣式 |
-| `src/components/` | Layout、Sections、UI 元件 |
-| `src/config/` | 品牌、服務、案例、聯絡、試算及 SEO 設定 |
-| `src/lib/` | 共享工具、驗證與計算 |
-| `public/` | 靜態素材 |
-| `scripts/` | 建置、測試及驗收工具 |
-| `.github/workflows/` | CI／Pages 工作流程 |
-| `docs/` | 規格、設計、報告及證據 |
+| 公司與服務資訊 | `/about/`、`/services/`：定位、能力、服務及合作流程 |
+| 解決方向 | `/solutions/`：需求情境及相關服務，依實際規劃狀態標示 |
+| 作品瀏覽 | `/portfolio/` 與已登錄詳頁；保留品牌提案、第三方模板署名及技術規劃狀態 |
+| 聯絡需求整理 | `/contact/`：檢查、預覽、複製摘要及開啟 Email 草稿，由訪客自行寄出 |
+| 方案參考試算 | `/quotation/`：選項與費用狀態、標準 A4 摘要、固定 QR 及 Email 詢價草稿 |
+| Design Collection | `/design-collection/`：Modern、Heritage、Luxury 三種呈現，共用內容與互動核心 |
 
-完整技術與資料夾對照見 [工程索引](docs/03_engineering/README.md)，設計規格入口見 [設計索引](docs/01_design/README.md)。
+既有正式網站已有三系列各 16 頁＋Gallery，共 49 個公開 URL。Design Collection 是官網內的呈現系列，並非不同服務等級或另一個公司。本站的正式 www／Pages 部署與作品集的 XK Showcase Hub 分開管理；不把此 repo 改成中央展示平台，也不填入未確認的展示 slug 或網域。
 
-精確依賴以 [package.json](package.json) 與 [package-lock.json](package-lock.json) 為準。
+展示、提案與規劃不等於客戶交付。試算保留參考／待審價格、面議及一次／年度費用差異，不是正式報價、訂單或付款承諾。Contact／Quotation 沒有站內直接收件端點；個人欄位只留目前頁面記憶體，試算 LocalStorage 僅保存選項 ID。詳見[聯絡流程](docs/reports/contact-inquiry-form.md)與[試算規格](docs/task/quotation-estimator-v1.md)。
 
-## 4. 本機開發
+## 交付與驗收狀態
 
-安裝 Node.js 24.x，從 Repo 根目錄執行：
+正式官網持續運作，與新一輪 release acceptance 分別追蹤。使用者已授權 [PR #45](https://github.com/xk2022/xk-website/pull/45) 合併及部署；實際 merge、main CI、發布版本與公開驗證以 PR／部署紀錄為準。本次資料夾整理也須核對其實際發布版本，不能由授權或本機建置推認已部署。
+
+DC-007／R01 驗收仍 **FAIL／BLOCKED**：三系列 Quotation 的正式 TBT 中位數仍超過 200ms；Pages 有原始 required-image abort／完成狀態未知；Required 真人讀屏紀錄仍缺。改善、限定人工補證、CI 或部署成功都不會自動關閉這些缺口。原 FAIL、incomplete 與重驗界線保留於 [DC-007 報告](docs/reports/dc007-implementation.md)及 [R01 效能與回歸報告](docs/reports/dc007-r01-performance.md)。
+
+SEO 維持 noindex／nofollow、Sitemap 未發布；Privacy 為受控草案。索引、法律、聯絡收件服務及品牌素材遷移各有自己的核准門檻。
+
+## 技術與目錄
+
+Next.js 16.4.6 App Router、React 19.3.1、TypeScript、Tailwind CSS 4、shadcn/ui 與 Lucide。前端使用集中式 TypeScript 設定；目前沒有 Backend、資料庫或 CMS。精確依賴以 [frontend/package.json](frontend/package.json) 與 [鎖定檔](frontend/package-lock.json)為準。
+
+```text
+xk-website/
+├── frontend/                 前端套件、框架設定與建置工作目錄
+│   ├── src/                  頁面、元件、內容設定及共用邏輯
+│   ├── public/               靜態素材
+│   ├── scripts/              前端建置與測試工具
+│   ├── package.json
+│   └── package-lock.json
+├── backend/                  預留，尚無後端實作
+├── infrastructure/           預留
+├── tests/e2e/                預留跨元件 E2E 目錄
+├── scripts/                  跨目錄驗收與證據工具
+├── docs/                     規格、工程指南、報告及歷史證據
+├── .github/workflows/        品質檢查與正式 Pages 工作流程
+├── AGENTS.md
+└── README.md
+```
+
+前端來源、資產與套件統一放在 `frontend/`；未啟用目錄以 README／`.gitkeep` 保留，不表示已建置相應系統。歷史 raw 證據維持原 bytes，移動後的定位與驗證依本輪路徑映射，不改寫舊測試結果。
+
+## 本機開發與驗證
+
+使用 Node.js 24.x 與 npm；HTTP smoke／證據工具另需 Python 3。從 repo 根目錄開始，以下指令在同一個 shell 執行：
 
 ```sh
+cd frontend
 npm ci
 npm run dev
 ```
 
-開啟 <http://localhost:3000>。一般開發不需 Backend 或環境變數。內部設計驗收頁為 `/dev/design-system`；Privacy 草案僅供受控審閱，勿部署預覽旗標至公開環境。
+開啟 <http://localhost:3000>。一般開發不需要後端；Privacy 的受控預覽旗標不可用於公開部署。
 
-## 5. 測試與品質
+品質與一般正式建置也在 `frontend/` 執行：
 
 ```sh
-npm ci
+npx next typegen
 npm run typecheck
 npm run lint
 npm test
 npm run build
-npm run build:pages
 ```
 
-一般 production 模式在完成 `npm run build` 後以 `npm run start` 驗收，停止服務後再建 Pages；兩者共用建置工作區。Pages 輸出於 `out/`，使用靜態 HTTP server 預覽，不使用 `npm run start` 提供 Pages 產物。
+`npm run start` 提供一般 Next.js production 模式。停止該服務後再執行 Pages 建置，兩種模式共用 `frontend/.next/`：
 
-- 試算定向測試：`npm run test:quotation`。
-- Design Collection 核心定向測試：`npm run test:design-collection`（亦納入 `npm test`）。
-- 網站 smoke、Responsive、Accessibility、Performance 等實際驗收依 [Smoke 指引](docs/03_engineering/website-smoke.md)、[效能量測](docs/03_engineering/performance-measurement.md) 與當次任務規格。
-- [CI 工作流程](.github/workflows/ci.yml) 負責品質及靜態建置；所有結果以實際 head/run 為準。
+```sh
+npm run build:pages
+python3 -m http.server 3281 --bind 127.0.0.1 --directory out
+```
 
-## 6. 部署與公開限制
+Pages 產物位於 `frontend/out/`，本機靜態預覽為 <http://127.0.0.1:3281/>。正式效能量測須遵循固定 profile 與 server 契約，不能用此簡易預覽替代。定向測試入口為 `npm run test:quotation`、`npm run test:design-collection`、`npm run test:fonts`；HTTP smoke 使用 `npm run test:smoke -- --base-url <實際網址>`。所有測試結果須綁定實際版本，詳見工程指南。
 
-| 項目 | 目前狀態 |
+## 部署、維護與文件
+
+正式 www 由本 repo 的 [GitHub Actions](.github/workflows/ci.yml) 部署到 GitHub Pages，保留空 basePath／assetPrefix；一般 Next.js build 相容路徑也保留。Vercel 尚無本 repo 的正式環境驗收紀錄。公開 URL、深層 reload、資產及主要操作要對實際部署版本另驗；授權合併、CI、部署及 DC-007 acceptance 是不同事實。
+
+| 文件入口 | 用途 |
 | --- | --- |
-| GitHub Pages | 正式對外平台，www 自訂網域根路徑 |
-| Vercel | Next.js 相容建置保留；未確認正式專案及部署 |
-| SEO | 保護模式，noindex/nofollow；Sitemap 未發布 |
-| Privacy | 內部草案，未核准的正式政策不對外輸出 |
-| 收件／價格 | Email 草稿，無站內收件；價格為參考、未核准項目保留待確認 |
+| [文件總索引](docs/README.md) | 現行分類與完整文件入口 |
+| [AGENTS](AGENTS.md)／[協作流程](docs/03_engineering/subagent-workflow.md) | 權責、來源、分支與驗收規則 |
+| [任務索引](docs/task/README.md)／[Roadmap](docs/task/ROADMAP.md) | 規格、進度與當前工作 |
+| [工程索引](docs/03_engineering/README.md)／[Smoke](docs/03_engineering/website-smoke.md) | 程式、驗收及工具使用 |
+| [Design Collection 維護](docs/03_engineering/design-collection-maintenance.md) | 共用內容、路由、切換、print 與 rollback |
+| [效能量測](docs/03_engineering/performance-measurement.md)／[字型維護](frontend/src/app/fonts/README.md) | 固定量測及字型來源／重生契約 |
+| [網域部署](docs/04_deployment/custom-domain-deployment.md)／[發布準備](docs/04_deployment/publication-readiness.md) | 正式網址與尚需核准的公開事項 |
+| [DC-007](docs/reports/dc007-implementation.md)／[R01](docs/reports/dc007-r01-performance.md) | Known Issues、實際結果與原始證據界線 |
 
-PR 執行品質檢查及 Pages artifact；main 的既有工作流程負責正式部署。合併、CI、部署、公開實測與業務核准各自核對，不能互相取代。
-
-參考：[網域部署](docs/04_deployment/custom-domain-deployment.md)、[SEO](docs/04_deployment/seo-operations.md)、[發布前置清單](docs/04_deployment/publication-readiness.md)。
-
-## 7. Roadmap
-
-現行任務進度、依賴、已合併 PR 與發布證據集中於 [Roadmap](docs/task/ROADMAP.md)。詳細功能範圍依 [任務索引](docs/task/README.md) 與 [DC 工作包](docs/01_design/design-collection/work-packages.md)；未完成項目不列為已提供功能。
-
-## 8. 文件與協作
-
-| 入口 | 用途 |
-| --- | --- |
-| [README](README.md) | 最新專案概要、快速入門及狀態 |
-| [AGENTS](AGENTS.md) | 開發、AI Agent、驗收及 Git 規則 |
-| [docs/README](docs/README.md) | 文件分類及連結 |
-| [docs/task/README](docs/task/README.md) | 任務規格、進度與交付 |
-| [歷史決策](docs/98_decisions/implementation-notes.md) | 既有實作與歷史限制 |
-| [公司規範](https://github.com/xk2022/xplore-kaleidoscope) | 公司層級品牌與工程規範 |
-
-歷史詳細內容保留在各 Task、報告及 [重構前 README 固定版本](https://github.com/xk2022/xk-website/blob/9a7ca8ebef026b6be49e8fe51f3afa1057a3768b/README.md)。後續更新摘要與來源連結，不再逐項追加整段實作報告。
-
-## 9. 品牌與權利
-
-XK SYSTEM 品牌與自有內容不得僅因 Repo 可公開瀏覽而推定開放授權；第三方模板、圖片、商標與案例各依來源及授權使用。本 Repo 未見獨立 LICENSE 文件；授權範圍須由權利人確認。
+品牌、自有內容與第三方素材各依權利及來源使用；公開 repo 不等於授權轉用全部內容。字型 OFL 與模板署名保留，其他授權範圍由權利人確認。

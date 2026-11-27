@@ -96,3 +96,7 @@ DOC-005／DOC-006 已分別由 PR #37／#38 合併；DC-003 已由 [PR #39](http
 DC-006 [PR #44](https://github.com/xk2022/xk-website/pull/44) 已合併並部署，滿足前置。本輪 `test/design-collection-release` 保存49頁雙模式驗收、47張實圖、8份實體PDF、18個cold樣本、維護與rollback文件。完整發布門檻仍有TBT目標FAIL、原始網路取消未解及真人讀屏BLOCKED；詳本輪報告，不改寫原FAIL，不自動合併或部署。
 
 本輪入口：[規格](../task/dc007.md)／[實作與驗收](../reports/dc007-implementation.md)／[維護與 rollback](../03_engineering/design-collection-maintenance.md)。
+
+## Repository 整理與授權部署｜2026-11-27
+
+使用者已明確授權同 [PR #45](https://github.com/xk2022/xk-website/pull/45) 合併與部署，並要求依公司最新規範整理前端工作區及 README。[目錄與操作](../03_engineering/repository-layout.md)／[本次紀錄](../reports/repository-organization-2026-11-27.md) 說明 `frontend/`、CI 及不可變歷史證據引用。此授權不把 DC-007/R01 效能 FAIL、網路未知或真人讀屏 BLOCKED 改成完成；本機、PR CI、合併、main CI、部署與公開驗證各自記錄。

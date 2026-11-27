@@ -46,6 +46,8 @@
 | 合併整合 | [整合報告](design-collection-integration.md)；33→49 頁版本、真實 merge／CI／部署／公開驗證及原始失敗，獨立於 DC-006 新功能驗收 |
 | DC-006 三系列切換與導航 | [規格](../task/dc006.md)、[本輪報告](dc006-implementation.md)、[18 張已檢視 Pages 截圖](../screenshots/design-collection/dc006/)；本機功能與版面驗收已完成，原始 incomplete／網路診斷及限定重驗詳報告；PR #44 已合併並完成精確 CI／artifact／main 部署；原始測試界線保留 |
 | DC-007 完整驗收與發布準備 | [工作包](../01_design/design-collection/work-packages.md#dc007)；[規格](../task/dc007.md)／[本輪報告](dc007-implementation.md) 驗收紀錄已建立；發布FAIL／BLOCKED，不以既有49頁推定通過 |
+| DC-007-R01 效能修復 | [正式前後數據與原始失敗](dc007-r01-performance.md)；三首頁 TBT 中位數達標，三試算頁仍 FAIL；其他網路與 AT 缺口保留 |
+| 2026-11-27 結構整理與授權部署 | [本次紀錄](repository-organization-2026-11-27.md)、[操作入口](../03_engineering/repository-layout.md)；使用者已授權同 PR #45 合併部署，實際遠端事件見 PR，不把合併當驗收通過 |
 
 ## 證據保存
 

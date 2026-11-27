@@ -1,5 +1,7 @@
 # Design Collection 共用核心使用契約
 
+2026-11-27 工作區更新：以下 npm／npx、`src/`、`public/` 與前端 scripts 路徑以 `frontend/` 為工作目錄；從 Repo 根先 `cd frontend`。跨元件 runner 留在根 `scripts/`，詳細目錄與歷史路徑對照見 [Repository 結構](repository-layout.md)。
+
 日期：2026-11-26。已合併基準含 DC-006 PR #44，main `ee4b4709a9f8daa755e2595a46c158b3c92d8229`；目前 [DC-007](../task/dc007.md) 在 `test/design-collection-release` 執行完整驗收，結果見[本輪報告](../reports/dc007-implementation.md)。架構依據：[DC-001](../task/dc001.md)、[架構](../01_design/design-collection/architecture.md) 與 [工作包](../01_design/design-collection/work-packages.md)。
 
 ## 當前邊界
