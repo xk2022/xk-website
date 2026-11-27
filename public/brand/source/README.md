@@ -1,36 +1,16 @@
 # XK Logo 素材來源與使用紀錄
 
-本目錄保留使用者提供的原始 SVG，來源為 `xk2022/xplore-kaleidoscope` 文件 Repository，讀取版本：
+現行識別為 2026-11-26 核准、2026-11-27 完成衍生素材驗收的 Logo V2.0。公司來源以 [原始資產交付提交](https://github.com/xk2022/xplore-kaleidoscope/tree/d7d0ffd95f199ddf7f9ef820f7562e3e70571f3e/assets/brand/logo/v2) 固定追溯，現行規範見 [公司 Logo 規範](https://github.com/xk2022/xplore-kaleidoscope/blob/main/05_brand/logo-guidelines.md)。
 
-`3996730176e4ad7237c66f541d61405f2667934e`
+- [v2/](v2/)：現行 SVG 素材，逐檔保留公司來源 bytes。唯一設計母稿為 `xk-logo-premium-horizontal-master-v2.svg`，Git Blob SHA `47ee4f275431cf48660fd46d4d5b8b7090dfc83f`。
+- [v1/](v1/)：Logo 03 原始 SVG、原網站 icon 與當時的來源紀錄，僅供歷史追溯。
 
-原始素材位於 `assets/brand/logo/`，本次僅複製至網站 Repository；未修改文件 Repository，也未重新設計 Logo。
+## 元件與背景
 
-| 本地檔案 | 原始路徑 | 原始 Git Blob SHA |
-| --- | --- | --- |
-| `xk-logo-primary.svg` | `assets/brand/logo/svg/xk-logo-primary.svg` | `bac5a304361d732222d0cee59e8e9d0a0ddf599d` |
-| `xk-logo-symbol.svg` | `assets/brand/logo/svg/xk-logo-symbol.svg` | `277fafce8fd03edcfc1bb9c34458318ddcd4ed22` |
-| `xk-logo-horizontal.svg` | `assets/brand/logo/svg/xk-logo-horizontal.svg` | `e1a52e7e30c943df03a5805d06754204fa4ce484` |
-| `xk-logo-white.svg` | `assets/brand/logo/svg/xk-logo-white.svg` | `5c633abff13f5c99e21d9d5b936b5205b36c7f24` |
+完整字標保留 Manrope SemiBold 600 向量輪廓，不重排文字。Modern 共用 `XkLogo` 擷取母稿兩個 XK 路徑、18 個字標輪廓及原始 transforms；橫式 viewBox 為 2198 × 480，小型符號為 504 × 504。
 
-原始設計檔 `assets/brand/logo/source/original-design-files/xk-logo-03-master.svg` 與 `xk-logo-primary.svg` 內容完全相同，Git Blob SHA 同為 `bac5a304361d732222d0cee59e8e9d0a0ddf599d`。
+淺色背景使用黑 X／藍 K 的 Light Combination 或 Light Monogram（#0C1017、#3977A8）；深色背景使用全白版本。Premium 黑金藍版位於 v2，適用曜石黑背景（#0C1017、#C5A46D、#3977A8）。既有三套網站配色與一般介面字體 Inter／Noto Sans TC 維持各自設計。
 
-依 Task 002，這組素材仍標示為「暫定版本（Provisional Logo）」。使用者提供完成的設計素材，不等於本次實作宣稱其已獲最終品牌核准。
+Heritage、Luxury 的現有白底 Header 使用 `xk-logo-dark.svg`，深色 Footer 使用 `xk-logo-white.svg`；Quotation 亦使用 Light Combination。保留原始比例與透明底，不加 filter 或重畫圖形。完整橫式建議寬 240 px，Modern 窄版使用符號搭配可讀品牌名稱；列印版實體打樣另行驗證。
 
-## 元件整合
-
-`src/components/brand/xk-logo-data.ts` 由本目錄原始 XML 擷取兩個 XK 路徑、18 個品牌文字輪廓路徑與原始 transform。`XkLogo` 使用 inline SVG；保留原始幾何形狀、比例及文字輪廓，不以網頁字體重畫品牌文字。
-
-- 顯示品牌文字時，使用橫式原稿的 `850 × 204` viewBox、symbol transform 與 wordmark transform。
-- 僅顯示圖形時，使用圖形原稿的 `472 × 472` viewBox 與原始留白。
-- `primary` 保留原稿的深色與藍色；`white` 使用原稿已提供的全白處理；`monochrome` 使用原稿已提供的深色單色處理。白色及單色在橫式／圖形式元件中沿用相同路徑，不改畫字形。
-- 原稿內重複的 `symbol`、`wordmark` ID 未帶入元件，避免同頁多次使用時產生重複 DOM ID。
-- 非裝飾用途提供「Xplore Kaleidoscope Logo（暫定版本）」的可及名稱與 title；已有可見文字標籤的連結可使用 `decorative` 避免重複朗讀。
-
-## 色彩與檔名注意事項
-
-原始 Logo 使用 `#101828`、`#2563EB` 及白色。這是保留使用者提供素材的例外，不代表更改 Task 002 已確認的 UI 品牌色票。元件透過集中管理的 `--logo-primary`、`--logo-secondary` 與白色 `--background` 使用這些色彩，其他介面仍遵循正式指定的八個初期色彩 Token。
-
-來源 Repository 的 `xk-logo-dark.svg` 與 primary、master 完全相同；它表示深色圖稿，不能視為適用深色背景的反白版本。深色背景請使用 `white` 版本並維持足夠對比。
-
-橫式原稿的文字輪廓相對圖形較小，請以實際尺寸檢查可讀性；手機 Header 使用圖形搭配可讀的 HTML 品牌名稱，完整橫式圖稿保留於有足夠空間的展示情境。保留原始比例及安全留白，不任意壓縮、旋轉、改畫或加入未核准的效果。
+網站的 `src/app/icon.svg`、`src/app/favicon.ico` 和 `src/app/apple-icon.png` 複製公司 V2 favicon，分別保留 Blob SHA `759c0370142e6ae4f145a5120a42c93047bffa4d`、`b9da95d601e24907d6731aa18b20682808a204fd`、`8211b5332225dbb604559a50059fc9c796bb657b`。

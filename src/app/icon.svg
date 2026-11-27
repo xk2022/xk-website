@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 472 472" role="img" aria-label="XK">
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 432" role="img" aria-label="XK">
   <title>XK</title>
-  <g id="symbol" transform="translate(55 103.5) scale(1)">
-    <path fill="#101828" d="M11 0H92L148 66L212 0H328L296 46H234L146 136L224 237H301L324 265H173L130 209L88 264H0L98 129Z"/>
-    <path fill="#2563EB" d="M193 110L241 64V113L294 55H353L286 132L362 223H298L241 156V224L193 175Z"/>
+  <rect width="432" height="432" fill="#0C1017" />
+  <g id="monogram" transform="translate(24 96)">
+    <path id="x" fill="#C5A46D" d="M0 0H80L136 56L192 0V88L160 120L192 152V240L136 184L80 240H0L120 120Z" />
+    <path id="k" fill="#3977A8" d="M192 0H248V64L312 0H384L264 120L384 240H312L248 176V240H192V152L224 120L192 88Z" />
   </g>
 </svg>

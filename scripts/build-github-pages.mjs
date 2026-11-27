@@ -483,7 +483,7 @@ for (const [relativePath, pagePath, label] of exportedPages) {
   verifyModernFrame(html, label);
   verifyEnquiryMarkup(html, label, contentPath);
   const identity = [...designContract.modernRoutes, ...presentationRoutes].find((route) => route.path === (pagePath || "/"));
-  if (designContract.heritageRoutes.some((route) => route.path === pagePath)) {
+  if (presentationRoutes.some((route) => route.path === pagePath)) {
     for (const [landmark, logo] of Object.entries(designContract.heritageLogos)) {
       const section = html.match(new RegExp(`<${landmark}\\b[^>]*>[\\s\\S]*?</${landmark}>`))?.[0] ?? "";
       const images = [...section.matchAll(/<img\b[^>]*>/g)].map(([tag]) => tag).filter((tag) => tagAttribute(tag, "src") === logo.src);

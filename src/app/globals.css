@@ -23,6 +23,8 @@
 @source not "../../docs/reports/contact-inquiry-artifacts";
 @source not "../../docs/reports/quotation-estimator-v1.md";
 @source not "../../docs/reports/quotation-estimator-artifacts";
+@source not "../../docs/reports/logo-v2-integration.md";
+@source not "../../docs/reports/logo-v2-artifacts";
 
 /* Pure DC-002 contracts and evidence contain no rendered utility classes. */
 @source not "../lib/design-collection";
@@ -88,8 +90,8 @@
   --destructive: #b42318;
 
   /* Supplied artwork colors are preserved independently of UI brand tokens. */
-  --logo-primary: #101828;
-  --logo-secondary: #2563eb;
+  --logo-primary: #0c1017;
+  --logo-secondary: #3977a8;
 
   /* Responsive type roles; unitless line heights support mixed CJK/Latin text. */
   --type-display-size: clamp(2.5rem, 1.65rem + 3.6vw, 4rem);

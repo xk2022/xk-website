@@ -1,5 +1,7 @@
 # Task 001 implementation notes
 
+> 現行品牌識別已於 2026-11-27 配合公司 Logo V2.0 更新。歷史任務當時的 Logo 狀態與實作紀錄繼續保留；現行來源、使用及封存規則見 [Logo 素材來源](../../public/brand/source/README.md)。
+
 ## Repository inspection
 
 Inspection date: 2026-11-18.

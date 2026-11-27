@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 504 504" role="img" aria-label="XK">
+  <title>XK</title>
+  <g id="monogram" transform="translate(60 132)">
+    <path id="x" fill="#0C1017" d="M0 0H80L136 56L192 0V88L160 120L192 152V240L136 184L80 240H0L120 120Z" />
+    <path id="k" fill="#3977A8" d="M192 0H248V64L312 0H384L264 120L384 240H312L248 176V240H192V152L224 120L192 88Z" />
+  </g>
+</svg>

@@ -222,7 +222,7 @@ export function QuotationEstimator({ styleId = "modern", catalog = quotationCata
               <p className="type-body-sm mt-4 max-w-3xl font-medium text-foreground">本頁價格僅供參考試算，參考數值待審閱；實際範圍、費用與合作條件需另行確認，不構成正式報價、訂單或付款承諾。</p>
             </div>
             <div className="min-w-0 rounded-lg border bg-background p-6">
-              <Image src="/brand/source/xk-logo-horizontal.svg" alt="XK 正式品牌識別" width={850} height={204} unoptimized className="h-auto w-full max-w-80" />
+              <Image src="/brand/source/v2/xk-logo-dark.svg" alt="XK 正式品牌識別" width={2198} height={480} unoptimized className="h-auto w-full max-w-80" />
               <p className="type-body mt-5 font-semibold text-primary">XK SYSTEM</p>
               <p className="type-body-sm mt-2 text-muted-foreground">網站建置、系統開發、系統優化與 AI 應用整合。</p>
             </div>

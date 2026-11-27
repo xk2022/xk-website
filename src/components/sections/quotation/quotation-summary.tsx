@@ -26,7 +26,7 @@ export function QuotationSummary({ selection, estimate, customerName, projectNam
         <div className="quotation-preview-container">
           <article data-a4-sheet="true" aria-label="A4 方案摘要，非正式報價" className="quotation-paper">
             <div data-summary-header="true" className="quotation-paper-header">
-              <Image src="/brand/source/xk-logo-horizontal.svg" alt="探索萬象科技 XK SYSTEM 正式 Logo" width={850} height={204} unoptimized loading="eager" className="quotation-paper-logo" />
+              <Image src="/brand/source/v2/xk-logo-dark.svg" alt="探索萬象科技 XK SYSTEM 正式 Logo" width={2198} height={480} unoptimized loading="eager" className="quotation-paper-logo" />
               <div><p>XK SYSTEM · Digital Solution Estimator</p><h3>數位服務方案摘要</h3><p>V1 參考試算 · 非正式報價單</p></div>
             </div>
             <dl className="quotation-paper-meta">

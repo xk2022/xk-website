@@ -30,7 +30,7 @@ export function SiteHeader() {
           >
             {siteConfig.name}
           </span>
-          <span className="sr-only">首頁，Logo 為暫定版本</span>
+          <span className="sr-only">首頁</span>
         </Link>
 
         <nav aria-label="主要導覽" className="hidden lg:block">

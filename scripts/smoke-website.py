@@ -764,7 +764,7 @@ console.log(JSON.stringify({showcases,seoPages,seoProtectionPolicy,siteConfig,pa
             self.check(f"{path} has one complete Modern frame and skip destination", [], modern_frame_errors(doc))
             self.links_and_resources(path, doc)
             self.enquiry_markup(path, doc)
-            if any(route["path"] == path for route in self.design_contract["heritageRoutes"]):
+            if any(route["path"] == path for route in self.design_contract["heritageRoutes"] + self.design_contract["luxuryRoutes"]):
                 for landmark, logo in self.design_contract["heritageLogos"].items():
                     images = [image for element in doc.all(landmark) for image in element.all("img") if image.attrs.get("src") == logo["src"]]
                     self.check(f"{path} uses the approved {landmark} Logo", 1, len(images))

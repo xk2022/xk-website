@@ -17,7 +17,7 @@ export interface XkLogoProps {
   decorative?: boolean;
 }
 
-/** Supplied XK artwork, retained as a provisional brand identity. */
+/** Approved XK V2 artwork. */
 export function XkLogo({
   size = 96,
   variant = "primary",
@@ -25,24 +25,23 @@ export function XkLogo({
   className,
   decorative = false,
 }: XkLogoProps) {
-  const primaryFill =
-    variant === "white" ? "var(--background)" : "var(--logo-primary)";
+  const primaryFill = variant === "white" ? "#FFFFFF" : "var(--logo-primary)";
   const secondaryFill =
     variant === "primary" ? "var(--logo-secondary)" : primaryFill;
-  const label = "Xplore Kaleidoscope Logo（暫定版本）";
+  const label = "Xplore Kaleidoscope Logo";
 
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox={showWordmark ? "0 0 850 204" : "0 0 472 472"}
-      width={showWordmark ? (size * 850) / 204 : size}
+      viewBox={showWordmark ? "0 0 2198 480" : "0 0 504 504"}
+      width={showWordmark ? (size * 2198) / 480 : size}
       height={size}
       className={cn("inline-block h-auto max-w-full shrink-0 align-middle", className)}
       role={decorative ? undefined : "img"}
       aria-label={decorative ? undefined : label}
       aria-hidden={decorative ? true : undefined}
       focusable="false"
-      data-provisional="true"
+      data-logo-version="2"
       data-variant={variant}
     >
       {!decorative && <title>{label}</title>}

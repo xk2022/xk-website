@@ -106,7 +106,7 @@ export default async function DesignSystemPage() {
             不列入正式網站導覽。
           </p>
           <p className="type-caption mt-6 inline-flex rounded-full border bg-background px-4 py-2 text-foreground">
-            開發驗收工具 · Logo 暫定版本
+            開發驗收工具 · Logo V2.0 正式版本
           </p>
           <nav aria-label="設計系統章節" className="mt-10 border-t pt-5">
             <ul className="flex flex-wrap gap-x-5 gap-y-1">
@@ -134,7 +134,7 @@ export default async function DesignSystemPage() {
                   <span lang="en" className="type-body-sm text-center font-semibold text-primary">Xplore Kaleidoscope</span>
                 </div>
               </div>
-              <figcaption className="type-body-sm mt-6 text-muted-foreground">Primary · 原稿配色，暫定版本</figcaption>
+              <figcaption className="type-body-sm mt-6 text-muted-foreground">Primary · 原稿配色，V2.0</figcaption>
             </figure>
             <figure className="flex min-w-0 flex-col justify-between rounded-lg bg-primary p-6 text-primary-foreground sm:p-8">
               <div className="flex min-h-48 items-center justify-center">
@@ -144,7 +144,7 @@ export default async function DesignSystemPage() {
                   <span lang="en" className="type-body-sm text-center font-semibold text-primary-foreground">Xplore Kaleidoscope</span>
                 </div>
               </div>
-              <figcaption className="type-body-sm mt-6">White · 深色背景，暫定版本</figcaption>
+              <figcaption className="type-body-sm mt-6">White · 深色背景，V2.0</figcaption>
             </figure>
             <figure className="flex min-w-0 flex-col justify-between rounded-lg border bg-surface p-6 sm:p-8">
               <div className="flex min-h-48 items-center justify-center">
@@ -154,13 +154,13 @@ export default async function DesignSystemPage() {
                   <span lang="en" className="type-body-sm text-center font-semibold text-primary">Xplore Kaleidoscope</span>
                 </div>
               </div>
-              <figcaption className="type-body-sm mt-6 text-muted-foreground">Monochrome · 單色，暫定版本</figcaption>
+              <figcaption className="type-body-sm mt-6 text-muted-foreground">Monochrome · 單色，V2.0</figcaption>
             </figure>
             <figure className="flex min-w-0 flex-col justify-between rounded-lg border bg-background p-6 sm:p-8">
               <div className="flex min-h-48 flex-wrap items-center justify-center gap-5">
                 {[48, 72, 112].map((size) => <XkLogo key={size} size={size} showWordmark={false} />)}
               </div>
-              <figcaption className="type-body-sm mt-6 text-muted-foreground">Symbol · 48 / 72 / 112px，暫定版本</figcaption>
+              <figcaption className="type-body-sm mt-6 text-muted-foreground">Symbol · 48 / 72 / 112px，V2.0</figcaption>
             </figure>
           </div>
           <p className="type-body-sm mt-6 max-w-3xl text-muted-foreground">

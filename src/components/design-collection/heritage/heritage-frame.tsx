@@ -26,7 +26,7 @@ export function HeritageFrame({ children, pageKey }: Readonly<{ children: ReactN
       <header className="htg-header">
         <div className="htg-container htg-masthead">
           <Link href={homeHref} className="htg-brand-link" aria-label={`${site.name} Heritage 首頁`}>
-            <Image src="/brand/source/xk-logo-horizontal.svg" width={850} height={204} alt={site.name} unoptimized className="htg-brand-image" />
+            <Image src="/brand/source/v2/xk-logo-dark.svg" width={2198} height={480} alt={site.name} unoptimized className="htg-brand-image" />
           </Link>
           <p className="htg-brand-note"><span lang="en">HERITAGE / XK DESIGN COLLECTION</span>相同品牌內容，編輯式閱讀呈現</p>
         </div>
@@ -37,7 +37,7 @@ export function HeritageFrame({ children, pageKey }: Readonly<{ children: ReactN
       <main id="main-content" tabIndex={-1} className="htg-main">{children}</main>
       <footer className="htg-footer">
         <div className="htg-container">
-          <div className="htg-footer-introduction"><Link href={homeHref} className="htg-footer-brand" aria-label={`${site.name} Heritage 首頁`}><Image src="/brand/source/xk-logo-white.svg" width={620} height={410} alt={site.name} unoptimized loading="lazy" className="htg-footer-logo" /></Link><div><p lang="en" className="htg-footer-slogan">{site.slogan}</p><p>同一份 XK 品牌、服務與作品資料，以 Heritage 編輯式版面呈現。</p></div></div>
+          <div className="htg-footer-introduction"><Link href={homeHref} className="htg-footer-brand" aria-label={`${site.name} Heritage 首頁`}><Image src="/brand/source/v2/xk-logo-white.svg" width={2198} height={480} alt={site.name} unoptimized loading="lazy" className="htg-footer-logo" /></Link><div><p lang="en" className="htg-footer-slogan">{site.slogan}</p><p>同一份 XK 品牌、服務與作品資料，以 Heritage 編輯式版面呈現。</p></div></div>
           <div className="htg-footer-directories">{directories.map(({ id, title, entries }) => <nav key={id} aria-labelledby={`heritage-directory-${id}`}><h2 id={`heritage-directory-${id}`}>{title}</h2><ul>{entries.map(({ href, label }) => <li key={href}><Link href={href}>{label}</Link></li>)}</ul></nav>)}</div>
           <div className="htg-footer-end"><p lang="en">© {new Date().getFullYear()} {site.name}. All rights reserved.</p><p>隱私權政策：待核准公開</p></div>
         </div>
