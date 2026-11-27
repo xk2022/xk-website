@@ -1,14 +1,24 @@
 # 效能量測與重驗
 
+2026-11-27 工作區更新：以下 npm／npx、`src/`、`public/` 與前端 scripts 路徑以 `frontend/` 為工作目錄；從 Repo 根先 `cd frontend`。跨元件 runner 留在根 `scripts/`，詳細目錄與歷史路徑對照見 [Repository 結構](repository-layout.md)。
+
 依 [Task 011](../task/task011.md) 執行。數據、指令、原始 runs 與受測版本見 [本次報告](../reports/task011-implementation.md)；本指南描述重現條件，不是跨裝置效能保證。
+
+目前 [DC-007-R01](../task/dc007-r01.md) 沿用本指南的固定profile與傳輸模型，實際範圍以當次規格為準：49頁兩模式回歸，效能採六個代表route各三次before／after及六組warm。下文Task011的九頁與一般模式效能比較是當時矩陣，不覆蓋R01範圍。結果寫入 [R01 報告](../reports/dc007-r01-performance.md)，原DC007失敗保留；R01 開發階段沿用 Draft PR #45 且不合併部署。2026-11-27 使用者另已授權同 PR 合併與部署，見 [Repository 結構](repository-layout.md)；完整 DC-007 的 Required 缺口仍保留。
 
 ## 準備與版本
 
 先核對最新 main、工作樹、公開部署 SHA 與所有真實路由，保留使用者變更。鎖定 Node.js 24.x、現有 lockfile、瀏覽器及工具版本；測試工具安裝於 Repository 外，不修改應用 Dependencies。依 [協作流程](subagent-workflow.md) 從首個長指令保存真實退出回執。
 
-正式量測使用 production 產物。先 `npm ci`、`npm run build`，以 loopback production server 測代表頁；停止服務後才執行 `npm run build:pages`，以獨立靜態伺服器提供 `/xk-website/`。不要以 dev／HMR、`next start` 或另一版本的產物冒充 Pages。
+正式量測使用 production 產物。先 `npm ci`、`npm run build`，以 loopback production server 測代表頁；停止服務後才執行 `npm run build:pages`，以獨立靜態伺服器提供當前 `src/config/deployment.ts` 指定的www根路徑／空basePath。Task011的 `/xk-website/` 屬歷史部署範例。不要以 dev／HMR、`next start` 或另一版本的產物冒充 Pages。
 
 在修改前固定 baseline；記錄程式碼 Commit 及逐檔 SHA。先 review 可重現瓶頸、預期作用與風險，再做最小修改。沒有證據時不拆 Client Component、不停用 Link 預取、不新增 lazy wrapper 或預載全部中文字體。
+
+R01的原生本機Noto核心仍保留variable軸、swap、原始108分片與fallback；固定來源／license／Unicode覆蓋與重生方式見[字體維護](../../frontend/src/app/fonts/README.md)。離屏排版只作用於screen，不延遲Hero／導覽／標準A4；維護與hash／focus／scroll／print回歸見[DC維護指南](design-collection-maintenance.md)。pilot只作候選選擇，正式after、每次超標及完整回歸仍須保存，不能把較晚字體完成或捲動工作移出量測後宣稱收益。
+
+R01 最終保留原生完整 100–900 字體軸、screen 離屏排版與試算摘要 memo；store controller／deferred view 原型未採用，使用者選取、價格、驗證與 print／copy 資料維持即時一致。正式 after 與回歸狀態見 R01 報告；以[維護指南](design-collection-maintenance.md)及當次規格控制範圍，不把pilot或延後工作當成正式收益。
+
+Footer委派、自靜態內容中移除可見H1的Suspense、runtime-priority及縮窄400／700字體軸等原型未採用；原程序與失敗僅依 [R01 報告](../reports/dc007-r01-performance.md)追溯。現行指南不要求已撤回的manifest loader、額外HTML建置處理或原型測試命令；保留原NextLink、靜態完整內容、字體glyph／UVS契約與既有建置流程。
 
 ## 固定 profiles
 

@@ -13,12 +13,18 @@
 | 7 | [DC-005 完整實作報告](../reports/dc005-implementation.md) | 已合併 Luxury 16 頁的實作、驗收與限制 |
 | 8 | [Heritage v1 品牌核准](design-collection/reviews/heritage-v1-approval.md)／[DC-004 完整實作報告](../reports/dc004-implementation.md) | 已合併系列的版本核准、功能驗收與限制 |
 | 9 | [合併整合報告](../reports/design-collection-integration.md) | 33→49 頁版本界線及實際 merge／部署／公開事件 |
-| 10 | [DC-006 規格](../task/dc006.md)／[本輪報告](../reports/dc006-implementation.md) | 三系列切換、導航與 SEO 整合；本機功能與版面驗收完成，最終 CI／artifact 待新 PR |
+| 10 | [DC-006 規格](../task/dc006.md)／[本輪報告](../reports/dc006-implementation.md) | 三系列切換、導航與 SEO 整合；本機功能與版面驗收完成，PR #44 的精確 CI／artifact、合併與 main 部署已完成 |
 
-目前正式 main `9322810f27e74e5ed4faa35a3b3931b3719f0c9a` 已合併並發布 Modern／Heritage／Luxury 各 16 頁及 Gallery，共 49 頁。PR #40／#42 的實際 merge、main CI／Pages 及公開驗證見 [整合報告](../reports/design-collection-integration.md)，原系列規格、審閱核准與報告保留版本邊界。
+目前正式 main `ee4b4709a9f8daa755e2595a46c158b3c92d8229` 已合併並發布 Modern／Heritage／Luxury 各 16 頁及 Gallery，共 49 頁。PR #40／#42 的實際 merge、main CI／Pages 及公開驗證見 [整合報告](../reports/design-collection-integration.md)，原系列規格、審閱核准與報告保留版本邊界。
 
-本分支 `feature/design-collection-navigation-seo` 正執行 [DC-006](../task/dc006.md)／[工作包 §8](design-collection/work-packages.md#dc006)：三套 Frame 的共用風格切換、Header／Footer／CTA href 映射與 Gallery 七個主頁的三系列比較。沿用已核准品牌與同源資料，不引入新的 palette、字體、Logo 或價格差異。共用導航與三套呈現已接入，本機功能與版面驗收已完成；原始 incomplete／網路診斷及限定重驗詳見本輪報告，不概稱所有測試 PASS。
+已合併的 `feature/design-collection-navigation-seo` 實作 [DC-006](../task/dc006.md)／[工作包 §8](design-collection/work-packages.md#dc006)：三套 Frame 的共用風格切換、Header／Footer／CTA href 映射與 Gallery 七個主頁的三系列比較。沿用已核准品牌與同源資料，不引入新的 palette、字體、Logo 或價格差異。共用導航與三套呈現已接入，本機功能與版面驗收已完成；原始 incomplete／網路診斷及限定重驗詳見本輪報告，不概稱所有測試 PASS。
 
-[DC-006 報告](../reports/dc006-implementation.md) 保留實際退出碼與診斷；[本輪截圖](../screenshots/design-collection/dc006/) 為 18 張實際 Pages 畫面，已逐張檢視。最終 CI／artifact 待新 PR；交付審閱，不自動合併或發布；DC-007 尚未開始。最新狀態以 [根 README](../../README.md)／[Roadmap](../task/ROADMAP.md) 為準。
+[DC-006 報告](../reports/dc006-implementation.md) 保留實際退出碼與診斷；[DC-006 截圖](../screenshots/design-collection/dc006/) 為 18 張實際 Pages 畫面，已逐張檢視。PR #44 已依使用者另次授權合併，精確 CI／artifact 與 main 部署完成；DC-007 另見下列紀錄。最新狀態以 [根 README](../../README.md)／[Roadmap](../task/ROADMAP.md) 為準。
 
 技術資料夾、建置及測試入口見 [工程索引](../03_engineering/README.md)。公司正式品牌規範仍由 [公司文件](https://github.com/xk2022/xplore-kaleidoscope) 管理；不將風格提案視為已核准公司識別。
+
+## DC-007 執行紀錄｜2026-11-26
+
+DC-006 [PR #44](https://github.com/xk2022/xk-website/pull/44) 已合併並部署，滿足前置。本輪 `test/design-collection-release` 保存49頁雙模式驗收、47張實圖、8份實體PDF、18個cold樣本、維護與rollback文件。完整發布門檻仍有TBT目標FAIL、原始網路取消未解及真人讀屏BLOCKED；詳本輪報告，不改寫原FAIL，不自動合併或部署。
+
+本輪入口：[規格](../task/dc007.md)／[實作與驗收](../reports/dc007-implementation.md)／[維護與 rollback](../03_engineering/design-collection-maintenance.md)。

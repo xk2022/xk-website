@@ -1,0 +1,833 @@
+{
+  "sourceFingerprint": "661f6cd2ac68add9e0887849819b8568f647b867ee72b8fa85ecf27beb39f16c",
+  "mode": "Pages static export",
+  "actuallyViewedImages": 47,
+  "originalSha256Matches": 47,
+  "visibleBlockingIssueCount": 0,
+  "limitations": [
+    "Overview and top/middle/footer crop inspection; not every glyph of every long page was read.",
+    "No human screen reader acceptance inferred."
+  ],
+  "nonBlockingIssues": [
+    "Heritage Contact 375/1440 repeats native step marker and content 01/02/03; cosmetic only, text fully legible."
+  ],
+  "images": [
+    {
+      "filename": "gallery-collection-375.png",
+      "route": "/design-collection",
+      "width": 375,
+      "originalSha256": "b315d99fcd9b2301b226e38bed37af8d891c71367f815693891155eaabf53ebf",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/gallery-collection-375.png",
+      "viewedPreviewSha256": "5f6869e80fac86f39c19b9ccb7b61a192f30a2632583a2197d74cfc04a80c7ea",
+      "scope": "Whole-page composition overview plus original top/middle/footer crops; not a claim to read every glyph at thumbnail scale. Raw original retained. HTTP/DTO checks cover content facts; axe/geometry/nativezoom cover separate criteria.",
+      "observations": [
+        "目錄三個風格入口及七主頁比較表可見，current/fallback 文字、CTA 與頁尾均在版面內。",
+        "窄欄卡片與比較表自然換行，未見可見橫向截斷或重疊。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "gallery-collection-1440.png",
+      "route": "/design-collection",
+      "width": 1440,
+      "originalSha256": "5870c6182dbd80aedbea0349c3afe4b0843db3c97a038784849a77a1d9e63a61",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/gallery-collection-1440.png",
+      "viewedPreviewSha256": "f951648843fc58cfcc191cc1354fd7a2a26a739e08c503deb68c37d8011681cb",
+      "scope": "Whole-page composition overview plus original top/middle/footer crops; not a claim to read every glyph at thumbnail scale. Raw original retained. HTTP/DTO checks cover content facts; axe/geometry/nativezoom cover separate criteria.",
+      "observations": [
+        "目錄三個風格入口及七主頁比較表可見，current/fallback 文字、CTA 與頁尾均在版面內。",
+        "桌面三欄卡片與比較表層級清晰，頁尾保有完整目錄。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "modern-brand-showcase-march-tangbao-375.png",
+      "route": "/portfolio/showcases/march-tangbao",
+      "width": 375,
+      "originalSha256": "670757c6a488c4d63ee895c8d0044db0f1f611ee4e84a8fcae286d500a8bcf1a",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/modern-brand-showcase-march-tangbao-375.png",
+      "viewedPreviewSha256": "202cd15161e8e19bd2c698bfb96c4b6060c43b02f40d3f0e31215bf1f39ab882",
+      "scope": "Whole-page composition overview plus original top/middle/footer crops; not a claim to read every glyph at thumbnail scale. Raw original retained. HTTP/DTO checks cover content facts; axe/geometry/nativezoom cover separate criteria.",
+      "observations": [
+        "三月手工湯包標題、展示背景、原型網站圖片與來源連結可見；內容明示自製展示與示意素材界線，未包裝為客戶交付成果。",
+        "單欄標題、資訊、相關服務 CTA 與Footer自然排列，長連結可換行。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "modern-brand-showcase-march-tangbao-1440.png",
+      "route": "/portfolio/showcases/march-tangbao",
+      "width": 1440,
+      "originalSha256": "e5f09973511bef0a3e88aaf6433b8e278c708f2656539e85a1705ba76e700092",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/modern-brand-showcase-march-tangbao-1440.png",
+      "viewedPreviewSha256": "175dd6799b2f072cf94801f97d1c1839cdd99560130a7493997adb1c6d8a0146",
+      "scope": "Whole-page composition overview plus original top/middle/footer crops; not a claim to read every glyph at thumbnail scale. Raw original retained. HTTP/DTO checks cover content facts; axe/geometry/nativezoom cover separate criteria.",
+      "observations": [
+        "三月手工湯包標題、展示背景、原型網站圖片與來源連結可見；內容明示自製展示與示意素材界線，未包裝為客戶交付成果。",
+        "桌面標題與預覽／範圍／相關服務段落分層清楚，原型圖片正常顯示，Footer目錄保持三欄。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "heritage-brand-showcase-march-tangbao-375.png",
+      "route": "/design-collection/heritage/portfolio/showcases/march-tangbao",
+      "width": 375,
+      "originalSha256": "0526ad9e522c048c0fc7b277945511861f0f3edf4d176f8362f0b9608a929af5",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/heritage-brand-showcase-march-tangbao-375.png",
+      "viewedPreviewSha256": "cf8bf507652624243ab9bd4d0203545e87bb7453a9dfd82561b149ce51a6b93a",
+      "scope": "Whole-page composition overview plus original top/middle/footer crops; not a claim to read every glyph at thumbnail scale. Raw original retained. HTTP/DTO checks cover content facts; axe/geometry/nativezoom cover separate criteria.",
+      "observations": [
+        "三月手工湯包標題、展示背景、原型網站圖片與來源連結可見；內容明示自製展示與示意素材界線，未包裝為客戶交付成果。",
+        "單欄標題、資訊、相關服務 CTA 與Footer自然排列，長連結可換行。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "heritage-brand-showcase-march-tangbao-1440.png",
+      "route": "/design-collection/heritage/portfolio/showcases/march-tangbao",
+      "width": 1440,
+      "originalSha256": "86e90ea4bc509c19f25dd17e1b6819a294f5b0d90f56618de3a34c0e6a03fd41",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/heritage-brand-showcase-march-tangbao-1440.png",
+      "viewedPreviewSha256": "c64e773687c591a29cefd91a85396c1833ffe433e9c4d117890b3f643e9d1abd",
+      "scope": "Whole-page composition overview plus original top/middle/footer crops; not a claim to read every glyph at thumbnail scale. Raw original retained. HTTP/DTO checks cover content facts; axe/geometry/nativezoom cover separate criteria.",
+      "observations": [
+        "三月手工湯包標題、展示背景、原型網站圖片與來源連結可見；內容明示自製展示與示意素材界線，未包裝為客戶交付成果。",
+        "桌面標題與預覽／範圍／相關服務段落分層清楚，原型圖片正常顯示，Footer目錄保持三欄。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "luxury-brand-showcase-march-tangbao-375.png",
+      "route": "/design-collection/luxury/portfolio/showcases/march-tangbao",
+      "width": 375,
+      "originalSha256": "ecbfb002e77451791b867ff0797235e7a3031870a66c433de0a91f43c839b380",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/luxury-brand-showcase-march-tangbao-375.png",
+      "viewedPreviewSha256": "792e194c62ff3be0754dd5f0a7691f6760ab83b11e24ac32e04ab79f608e5deb",
+      "scope": "Whole-page composition overview plus original top/middle/footer crops; not a claim to read every glyph at thumbnail scale. Raw original retained. HTTP/DTO checks cover content facts; axe/geometry/nativezoom cover separate criteria.",
+      "observations": [
+        "三月手工湯包標題、展示背景、原型網站圖片與來源連結可見；內容明示自製展示與示意素材界線，未包裝為客戶交付成果。",
+        "單欄標題、資訊、相關服務 CTA 與Footer自然排列，長連結可換行。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "luxury-brand-showcase-march-tangbao-1440.png",
+      "route": "/design-collection/luxury/portfolio/showcases/march-tangbao",
+      "width": 1440,
+      "originalSha256": "4e3260602a1af50696f009259b9ca2aa54081f70e78da1ea49aee1343526c868",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/luxury-brand-showcase-march-tangbao-1440.png",
+      "viewedPreviewSha256": "45fbaba1879f4ae824556854f6f042e1c42046a3abb16099e1297afe8e70ba5a",
+      "scope": "Whole-page composition overview plus original top/middle/footer crops; not a claim to read every glyph at thumbnail scale. Raw original retained. HTTP/DTO checks cover content facts; axe/geometry/nativezoom cover separate criteria.",
+      "observations": [
+        "三月手工湯包標題、展示背景、原型網站圖片與來源連結可見；內容明示自製展示與示意素材界線，未包裝為客戶交付成果。",
+        "桌面標題與預覽／範圍／相關服務段落分層清楚，原型圖片正常顯示，Footer目錄保持三欄。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "modern-home-320.png",
+      "route": "/",
+      "width": 320,
+      "originalPath": "/tmp/xk-dc007/pages-final/modern-home-320.png",
+      "originalSha256": "1734f7a704d41c0dd1a4d834adb99850c3540fbc859005fa59695de1d2cbec6a",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/modern-home-320.png",
+      "viewedPreviewSha256": "e7403dfa4e6ee9382472130f4f8a4e7950d56ddee355659bf7f0c238813b1c8b",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "頁首 Logo 與選單按鈕分居兩側，三個風格項目保持同列並自然換行，current Modern 深色底清楚。",
+        "Hero 中文標題在窄欄分成四行，兩個主要動作垂直排列，mail-client 說明與作品入口各有獨立空間。",
+        "中段作品卡單欄堆疊，截圖、描述、列表和兩顆動作按鈕未互相重疊；頁尾長連結自然換行，版權與待確認隱私文字仍在深色區內。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "modern-home-375.png",
+      "route": "/",
+      "width": 375,
+      "originalPath": "/tmp/xk-dc007/pages-final/modern-home-375.png",
+      "originalSha256": "f4dfd5ecf318b3200dc4bf139447388fb1968dc6b3d3245b1c95b418459174b1",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/modern-home-375.png",
+      "viewedPreviewSha256": "b322aa406223aadbb3026fcb577fd488299db86f9b72352b3e56d9cee93f6810",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "頁首與三欄風格列在 375 寬度內排列，Hero 標題與兩個全寬按鈕有清楚閱讀層級。",
+        "Hero 標籤可換行；作品中段的卡片描述與按鈕有完整邊界，單欄往下延續。",
+        "頁尾連結列垂直留白充分，版權行與待確認隱私文字無可見相撞。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "modern-home-768.png",
+      "route": "/",
+      "width": 768,
+      "originalPath": "/tmp/xk-dc007/pages-final/modern-home-768.png",
+      "originalSha256": "b6f24654b3a05491a141ec2cf37df15941e94f780f545aa9ab76dff256c490a5",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/modern-home-768.png",
+      "viewedPreviewSha256": "b5878265ad606c2c6bc07f04d1fd2d94808dbd849d393a57e88e428cd290e1a1",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "平板頁首採選單按鈕，風格說明與三選項改成橫向配置，Hero 標題、說明與並排 CTA 保留空間。",
+        "Hero 品牌圖轉至文案下方；全頁 overview 可見服務和作品採兩欄，尾項留在下一列，未見強行三欄擠壓。",
+        "中段兩張作品卡的按鈕底線整齊，頁尾多欄長標題有換行而不侵入相鄰欄。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "modern-home-1440.png",
+      "route": "/",
+      "width": 1440,
+      "originalPath": "/tmp/xk-dc007/pages-final/modern-home-1440.png",
+      "originalSha256": "c3de4a2683f35a1077d3ecd3ee92c63fc25727d47970c66bdcf0dc46cdf7f629",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/modern-home-1440.png",
+      "viewedPreviewSha256": "9fad9dc46860bef74d5c090bf0b68232c91d907b104b8410d06ea4499409ca31",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "桌面橫向導覽與右側 CTA 可辨，風格切換列在 header 與 Hero 之間保持獨立。",
+        "Hero 左文案右品牌圖雙欄，主標、兩個 CTA、品牌 slogan 與圖像無可見重疊。",
+        "作品三卡的動作區對齊，Technology 區有明確間隔；頁尾欄位與最下方版權區保持分離。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "modern-home-1920.png",
+      "route": "/",
+      "width": 1920,
+      "originalPath": "/tmp/xk-dc007/pages-final/modern-home-1920.png",
+      "originalSha256": "952e3d415dcc9238237d6c1d41f3e4c74e020ef4ae7d20225275ce39e8f7b589",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/modern-home-1920.png",
+      "viewedPreviewSha256": "aeaed65a5fb84d62894bb17ee116712bc7b004c7545215297f5b45709ed871c5",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "寬桌面內容維持置中最大寬度，兩側留白增加，header 和風格列未被拉散至視窗邊緣。",
+        "Hero 左文案與右圖保留平衡，主標未出現極長單行，服務、作品與技術區在 overview 中節奏一致。",
+        "作品三欄與頁尾多欄排列穩定，底部版權及隱私狀態分居兩端且無可見碰撞。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "heritage-home-320.png",
+      "route": "/design-collection/heritage",
+      "width": 320,
+      "originalPath": "/tmp/xk-dc007/pages-final/heritage-home-320.png",
+      "originalSha256": "406633ee4681870d9128b6dfdc8a857d385eed8ea243b9c772d087297c667993",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/heritage-home-320.png",
+      "viewedPreviewSha256": "275f0402fd9a318a2969b229e5bda36cb1a7215c5e3f5fa896dba61f50a62ab5",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "窄螢幕 Header 採可展開網站導覽，詢價按鈕及說明獨立一列，風格卡片仍可辨認 current Heritage。",
+        "米色 Hero 主標自然換行；Reading Index 位於文案之下，邊線與編號建立編輯式閱讀層級。",
+        "作品區改為單欄，預覽圖、caption、展示狀態與描述互相分離；深色頁尾的長標題換行且未超出欄寬。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "heritage-home-375.png",
+      "route": "/design-collection/heritage",
+      "width": 375,
+      "originalPath": "/tmp/xk-dc007/pages-final/heritage-home-375.png",
+      "originalSha256": "ba1112817080bc9ea39a612283c0f4ec834fab7493371967c89da06c18475811",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/heritage-home-375.png",
+      "viewedPreviewSha256": "2a2e9553125441f0ece6371bac8cc4777cf6ea241d104e31de875ce075cd8a44",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "Header Logo、原生網站導覽與詢價區依序排列，三個風格選項在同列自然換行。",
+        "Hero 主標三行，Reading Index 三個編號和詢價按鈕清楚；沒有將側欄硬塞在窄文案旁。",
+        "中段圖片有 caption，粗細分隔線可辨；頁尾長連結及版權、待核准隱私文字仍完整置於深色區。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "heritage-home-768.png",
+      "route": "/design-collection/heritage",
+      "width": 768,
+      "originalPath": "/tmp/xk-dc007/pages-final/heritage-home-768.png",
+      "originalSha256": "942b2783f86f6ff21b33d9433eedc9a8fe47948ac18f4ba0a4c5139e07b7547c",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/heritage-home-768.png",
+      "viewedPreviewSha256": "53db3480ceed25fe38c9dd344715b0bc83d21f3c5aba6bcc966bc895dfb362ad",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "平板仍採可展開導覽，Logo 與 Heritage 標識分居兩端，風格列橫向配置。",
+        "Hero 在此寬度使用較窄 Reading Index 右欄，因此左下留白較多；屬可見構圖取捨，未見文字遮疊或溢出。",
+        "作品採左大圖右文案，標籤和 bullets 有分隔；頁尾三欄中較窄的第三欄長標題自然換行，未壓入鄰欄。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "heritage-home-1440.png",
+      "route": "/design-collection/heritage",
+      "width": 1440,
+      "originalPath": "/tmp/xk-dc007/pages-final/heritage-home-1440.png",
+      "originalSha256": "85edcb4f7b031f63a3310aaa661455c6f7d57e91bbfd9cdf7f83db1c38064508",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/heritage-home-1440.png",
+      "viewedPreviewSha256": "09c90eb8cd7391c87c38e22cbc6c123beda3892cba194b35dbefb534d67939e4",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "桌面導覽完整橫列，current 首頁以藍色標示；風格切換與導覽、Hero 分區清楚。",
+        "Hero 主標左欄、Reading Index 右欄的編輯式構圖穩定，詢價與試算入口可辨，保留較大的文案下方留白。",
+        "作品預覽大圖、caption 和右側摘要對齊；Footer 欄位長標題換行，底部版權與待核准隱私文案分離。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "heritage-home-1920.png",
+      "route": "/design-collection/heritage",
+      "width": 1920,
+      "originalPath": "/tmp/xk-dc007/pages-final/heritage-home-1920.png",
+      "originalSha256": "671e7527291a11b6d8086ab361d1f11ee6c3e9e1e546c131ca5d6e0857f72983",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/heritage-home-1920.png",
+      "viewedPreviewSha256": "0c8233c08b5a7d982623a44e975759e1fdb32c0ab17f540f74344bb26d415f28",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "寬桌面維持置中內容寬度，頁首 Logo／系列標識與橫向導覽相互分開。",
+        "Hero 主標與索引側欄有清楚分工；overview 可見章節邊線、作品圖說和交替背景維持全頁閱讀節奏。",
+        "中段大圖與摘要均保留可辨留白；頁尾三列目錄與最下方版權區沒有可見裁切或遮擋。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "luxury-home-320.png",
+      "route": "/design-collection/luxury",
+      "width": 320,
+      "originalPath": "/tmp/xk-dc007/pages-final/luxury-home-320.png",
+      "originalSha256": "a3cf518dc11d2a7eeb2a35b37a0795451ffa06e29ac8a3bf50a5533a5cc38b1a",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/luxury-home-320.png",
+      "viewedPreviewSha256": "aa8372d9752749711d64495b7412091d66dd116665cc74d1517098b0ae02243d",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "白色 Header 的 Logo、全寬詢價與可展開目錄依序排列，current Luxury 在三欄風格列中清楚。",
+        "深色 Hero 的中央大標自然折行，青色主 CTA 與下方兩個文字入口分開，未見文字壓住按鈕。",
+        "作品單欄且 bullets 與文案同一閱讀欄；Technology 標題可換行，頁尾長連結自然折行，仍保留版權與隱私狀態。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "luxury-home-375.png",
+      "route": "/design-collection/luxury",
+      "width": 375,
+      "originalPath": "/tmp/xk-dc007/pages-final/luxury-home-375.png",
+      "originalSha256": "86bf134888bb95c4cce232152c04f9b21dedf88ae001a5e56bc8ff2e7c3d99b4",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/luxury-home-375.png",
+      "viewedPreviewSha256": "db930568189e7cdfc3ca4f89b60b63bef2580aaf5e3bc1abde161cba96c203b1",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "白色導覽區、風格帶與深色 Hero 形成清楚三段，窄版 CTA 有完整邊界。",
+        "Hero 三行標題置中，輔助說明、青色 CTA 與服務／作品文字入口各有留白，未見水平裁切。",
+        "中段展示圖、狀態標籤與工業製造 bullets 清楚分開；Footer 一欄長清單與底部版權區無可見重疊。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "luxury-home-768.png",
+      "route": "/design-collection/luxury",
+      "width": 768,
+      "originalPath": "/tmp/xk-dc007/pages-final/luxury-home-768.png",
+      "originalSha256": "31edaa9f2cf8370e8000fc419954183ec7d9984226c5955bc3e7ad59f46a7237",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/luxury-home-768.png",
+      "viewedPreviewSha256": "5e223d46340e4e6a85cb9d0c3304de61972cb0831e0323e2a8030390ff39c2fe",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "平板 Header 的 Logo 與右側詢價可辨，可展開目錄仍為獨立列；三風格項目橫向排列。",
+        "深色 Hero 置中主標與描述，CTA 與服務／作品並排入口各有明確空間。",
+        "作品保留單欄大預覽與 caption；overview 中技術卡改兩欄，頁尾多欄第三欄較窄但連結可換行而無可見越界。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "luxury-home-1440.png",
+      "route": "/design-collection/luxury",
+      "width": 1440,
+      "originalPath": "/tmp/xk-dc007/pages-final/luxury-home-1440.png",
+      "originalSha256": "7ff29923d55e8451624980ca9e4bf1be25ffa17f36c0c023d9b1f8ff5a96adce",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/luxury-home-1440.png",
+      "viewedPreviewSha256": "59b51c1cc2f7a00fd730d849342daf36b9e717b34e80d0687f83c4e411f9a9a6",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "桌面白色頁首有完整導覽與系列標識，風格選項與深色 Hero 之間有明確邊界。",
+        "Hero 中央主標、描述、青色詢價 CTA 與兩個入口的間距一致，沒有與上下章節重疊。",
+        "作品大圖以白底呈現於深色區內，caption 和標籤分離；全頁 overview 可見單欄編輯式作品節奏及桌面技術卡網格，頁尾目錄分欄穩定。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "luxury-home-1920.png",
+      "route": "/design-collection/luxury",
+      "width": 1920,
+      "originalPath": "/tmp/xk-dc007/pages-final/luxury-home-1920.png",
+      "originalSha256": "3e72641e8b21896447f57cfce63e61e6018d03c4c19d2a1ee9880bbd111ce41d",
+      "manifestSha256Match": true,
+      "viewedPreview": "/tmp/xk-dc007/visual-previews/luxury-home-1920.png",
+      "viewedPreviewSha256": "874297672b7f0029786174a451fa44a9033fe0cd419a220ff03a29e683d50400",
+      "viewedContent": "Existing composite: whole-page overview at left plus top, middle and footer crops at right. All 15 composites were actually emitted by view_image and visually inspected.",
+      "scope": "全頁 overview 用於章節、密度、欄位與留白判讀；右側 top/middle/footer 裁切用於局部排版判讀。不宣稱讀完 overview 全部細字，不代替實際 keyboard、AT、對比值、幾何及連結驗證。",
+      "observations": [
+        "大視窗仍以置中最大寬度組織 header 與 Hero，風格帶未貼住外邊緣。",
+        "深色 Hero 的短金線、品牌名、主標與青色 CTA 形成清楚軸線，左右保留一致空間。",
+        "中段作品大圖與圖說維持順序，overview 可見主要章節之間留白與分隔線；頁尾多欄和底部版權區無可見相撞。"
+      ],
+      "visibleBlockingIssues": [],
+      "visualLayoutStatus": "PASS_WITH_STATED_SCOPE"
+    },
+    {
+      "filename": "modern-services-375.png",
+      "sha256": "a5dad364ce46252f3eb45f50448b3b0a6e817fa700cbec4b72648f50b4170520",
+      "route": "/services",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/modern-services-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/modern-services-375.png",
+      "previewSha256": "7b4612fc3e32a6677f9dd29e7e95b36ad5ba5f3cb6e6badc1a49f059f28aec4f",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "手機單欄內容與三個風格按鈕完整容納；標題、三個CTA及品牌圖像無可見互疊。",
+        "中段系統整合服務的段落、清單及技術標籤留有間距；頁尾連結和待確認隱私文字可見。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "modern-services-1440.png",
+      "sha256": "2719736529f9cc089302c89305950d6c2c226a941e5dfa115a0c85d3d87b2138",
+      "route": "/services",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/modern-services-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/modern-services-1440.png",
+      "previewSha256": "0de87a1cac86a1d9e611bde0ce687676ca7b263e98d566153e703092a3587dc4",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面首屏採文字／品牌圖像雙欄，導覽與風格列各自成列，CTA沒有重疊。",
+        "中段服務雙欄、清單和標籤有清楚分組；頁尾多系列連結分欄，底部版權與隱私文字完整。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "modern-portfolio-375.png",
+      "sha256": "21d76d54459fa48f9034003c073cb93b667f54300725981f9cb3100654b1b931",
+      "route": "/portfolio",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/modern-portfolio-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/modern-portfolio-375.png",
+      "previewSha256": "d2a6345c05e45e11f417f0e1aba45b7190f707421c41a7a6495eb94ab235d4b5",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "手機首屏標題、按鈕及品牌圖像依序單欄排列；總覽中的六個品牌預覽圖皆有畫面，未見破圖。",
+        "中段模板與技術規劃收合控制項可見，Planned／規劃中文案與可瀏覽品牌分段；頁尾底部完整。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "modern-portfolio-1440.png",
+      "sha256": "c0cb3c6a7bdde1ae0587f2fd336aa4bc080e4f4fa4e54240fba6a51bbcc50673",
+      "route": "/portfolio",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/modern-portfolio-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/modern-portfolio-1440.png",
+      "previewSha256": "ae20a26fa161b1742ec799a2abf46e4e061254da5a84592f3e56c3f7e5f42d79",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面首屏雙欄與品牌卡片雙欄網格對齊，總覽可辨識六張不同預覽圖。",
+        "模板及技術展示規劃區域的標題、說明、收合控制項有間距；中裁所見卡片兩個動作未互疊，Footer分欄可見。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "modern-contact-375.png",
+      "sha256": "ae6a6cf48afa2b02196acb27c97f5bd5fb21d5f138bccc144246c3c6c65e0cda",
+      "route": "/contact",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/modern-contact-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/modern-contact-375.png",
+      "previewSha256": "42f75a993bee0b5826df33695822bd9dba7d681ee9977c65d425801e570eeecf",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "手機首屏顯示填寫詢問／立即詢價兩CTA，並明示開啟郵件程式、自行寄出、本站不代寄；Email文字容納於欄寬。",
+        "全頁總覽的表單區控制項依序排列；中裁的三階段回覆說明與頁尾連結無可見互疊。表單各欄全文不在原尺寸裁切內，未逐一讀標籤。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "modern-contact-1440.png",
+      "sha256": "8558d6afaacd56254b7b4868da9319ea5c7d0f6e3be2e6088ffca0ca88472a2d",
+      "route": "/contact",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/modern-contact-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/modern-contact-1440.png",
+      "previewSha256": "d8fa03e04734b3869da6fe3991cbdb01830a471fffe5215cf8e650eecb55e563",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面首屏文字與品牌圖像雙欄、兩個CTA及草稿寄信說明排列完整。",
+        "總覽表單以寬卡片呈現；中裁的準備事項三卡、相關服務連結和三階段說明分組清楚，Footer底部完整。未逐字檢視總覽表單標籤。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "modern-quotation-375.png",
+      "sha256": "8f988fae89914833a48cfe07f878ae7f19e0fc3cad2ae298558390f616a905cf",
+      "route": "/quotation",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/modern-quotation-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/modern-quotation-375.png",
+      "previewSha256": "e8b2a8016f4bb3840a425f9e938e259086de8f28441a68963556f85e0d52af8e",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "手機試算頁標題、參考價格待審說明、Logo卡與流程步驟各自單欄排列。",
+        "中裁顯示0項、基礎建置／一次性附加／一次性總計尚未選擇及年度費用未選年度項目；未以0金額代替未知。總覽白底A4摘要與Footer可見。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "modern-quotation-1440.png",
+      "sha256": "99000d0fb735ae6a7f076bee3b0a15c340d578240aa1eae552a048ec601441e9",
+      "route": "/quotation",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/modern-quotation-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/modern-quotation-1440.png",
+      "previewSha256": "89ddb60c0771f08599047e7d4f9e5dea735ac1aa07ea7399e57d9f1f2bf86311",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面試算首屏資訊層次清楚，流程三欄和重設按鈕沒有互疊。",
+        "中裁顯示一次性與年度分欄、第三方費用另計、兩個有標籤的選填輸入與停用列印按鈕，並有先選建置種類的提示；Footer底部完整。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "heritage-services-375.png",
+      "sha256": "1c9fa8b32616041d7855ed870a1f08f52c4b8faf0b133edf56866ce8f30ff2d0",
+      "route": "/design-collection/heritage/services",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/heritage-services-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/heritage-services-375.png",
+      "previewSha256": "51bee0de6a080fe551e4b69d583741ec2586d4751f7dd2e2af78eb4b472e359d",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "白色品牌外框及風格切換區在米色服務內容前獨立排列；手機標題自然換行，藍色CTA完整。",
+        "中裁的系統整合服務、適用情境及條列清單無可見重疊；Footer長連結能換行，版權／待核准隱私文字可見。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "heritage-services-1440.png",
+      "sha256": "846535d34f178f38cabce5b3d4677ef8e0bc678b518f8bcf7d84453bd96eb5ad",
+      "route": "/design-collection/heritage/services",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/heritage-services-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/heritage-services-1440.png",
+      "previewSha256": "15e086513955b3dc95bed0550f0538fc9bb5434d7647090cffacbe89792d1bef",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面品牌外框、導覽當前頁及風格列清楚；米色首屏以主標與右側摘要目錄分欄。",
+        "中裁服務標題、敘述、服務／技術清單沿欄位排列，未見溢出；Footer三系列連結分欄和底部文字完整。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "heritage-portfolio-375.png",
+      "sha256": "81b09746daf3a55d505d1c9add0021eb443f928ffc6e1da6c4c8097b847e783c",
+      "route": "/design-collection/heritage/portfolio",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/heritage-portfolio-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/heritage-portfolio-375.png",
+      "previewSha256": "3ba6bd3c481327425f3635e085a7be35850217359e1234644badfd472e017f34",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "手機作品頁的摘要目錄、品牌卡預覽依序單欄，六張預覽圖在總覽中均可辨識。",
+        "中裁千剛模擬展示限制說明、作品介紹／外連動作和模板狀態列表完整；素材待整理暫停外連與可瀏覽項目明確區分，Footer可見。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "heritage-portfolio-1440.png",
+      "sha256": "fedba685426936ee12a99f46ff6fa7ada7de4136f319ea77cd99bdea4807832f",
+      "route": "/design-collection/heritage/portfolio",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/heritage-portfolio-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/heritage-portfolio-1440.png",
+      "previewSha256": "dac12369fa38a21164cf7543ea67feb8dec1edc13e82095190903dd042f256f5",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面作品採大預覽圖與介紹雙欄，首屏摘要目錄及三個分區入口可見。",
+        "中裁宏能預覽、文字與兩個動作無重疊；千剛卡清楚標示品牌提案展示。Footer欄位和底部文字完整。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "heritage-contact-375.png",
+      "sha256": "1720e7f615e44df3dc281d98f6cc77efb136eb403804567a05bdd147cab3b78f",
+      "route": "/design-collection/heritage/contact",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/heritage-contact-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/heritage-contact-375.png",
+      "previewSha256": "98775c3e0673312a260600c1272266a27f52df518d0f43f81a46b66ca1a87ccb",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "手機首屏詢價CTA與草稿說明、Email、需求整理摘要各自成段；總覽表單輸入區未見超出欄寬。",
+        "中裁準備需求與下一步清單文字完整，但可見原生序號與內容序號重複（例如「3. 03」及「1. 01」）。Footer底部完整；表單各標籤不在可逐字讀取的原尺寸裁切內。"
+      ],
+      "issues": [
+        {
+          "id": "DC007-VIS-CONTENT-01",
+          "severity": "low",
+          "blocking": false,
+          "region": "準備需求／下一步有序清單",
+          "observed": "原生列表序號與內容中的兩位數序號同時顯示，例如「3. 03」。",
+          "effect": "重複編號；所見文字仍完整可讀，未見遮擋。",
+          "recommendation": "後續整理為單一視覺編號來源，保留有序清單語意。"
+        }
+      ],
+      "disposition": "REVIEWED_WITH_NONBLOCKING_OBSERVATION"
+    },
+    {
+      "filename": "heritage-contact-1440.png",
+      "sha256": "bfc62b5e454d32eae645264f0140c11b0985927b8f33c10c4a117fcd529c349a",
+      "route": "/design-collection/heritage/contact",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/heritage-contact-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/heritage-contact-1440.png",
+      "previewSha256": "5ba6ba34e29c047dc913cd5203e18a8adff48e6501675a5687f8156f2e4122dd",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面首屏聯絡內容與右側摘要分欄，立即詢價說明明示本站不代寄，Email與複製按鈕可見。",
+        "中裁準備三件事顯示「1. 01」「2. 02」「3. 03」重複編號；內容及服務連結仍完整無遮擋。Footer分欄與隱私待核准文字完整。"
+      ],
+      "issues": [
+        {
+          "id": "DC007-VIS-CONTENT-01",
+          "severity": "low",
+          "blocking": false,
+          "region": "準備需求／下一步有序清單",
+          "observed": "原生列表序號與內容中的兩位數序號同時顯示，例如「3. 03」。",
+          "effect": "重複編號；所見文字仍完整可讀，未見遮擋。",
+          "recommendation": "後續整理為單一視覺編號來源，保留有序清單語意。"
+        }
+      ],
+      "disposition": "REVIEWED_WITH_NONBLOCKING_OBSERVATION"
+    },
+    {
+      "filename": "heritage-quotation-375.png",
+      "sha256": "e0eaed2bd8e16ec9d3b8b8c7e03aa2e2283318f5cbe7811096db6db3ce2dafeb",
+      "route": "/design-collection/heritage/quotation",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/heritage-quotation-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/heritage-quotation-375.png",
+      "previewSha256": "3337482684a43976e0ac1354a8c7e6928f60c02fe8c32f778811ba720ce70ccf",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "手機首屏有清除個人欄位／只還原ID／共用A4摘要說明，標題、待審價格聲明與Logo卡排列完整。",
+        "中裁Standard／Advanced原生單選控制項、Basic已選狀態及0項試算摘要可見，文字未溢出卡片；Footer完整。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "heritage-quotation-1440.png",
+      "sha256": "5428d48fde4878e078dcab4ec6efe617802eecbdbb60412a8178c4aaa3c11a02",
+      "route": "/design-collection/heritage/quotation",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/heritage-quotation-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/heritage-quotation-1440.png",
+      "previewSha256": "937e8e61da9bc5fb3d82284dbb7832772255e6ff48955d174a703279cc1a43e7",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面試算頁保留品牌外框、風格當前狀態、個人資料清除提示及三步驟列。",
+        "中裁三種程度的單選與已選標示可辨識，基礎／附加／一次性與年度分欄、第三方費用另計清楚；總覽標準白色A4摘要與Footer可見。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "luxury-services-375.png",
+      "sha256": "936ebedc722dc1d88a57050500c39870298f77edf4b50ec744a89b6d0467d22e",
+      "route": "/design-collection/luxury/services",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/luxury-services-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/luxury-services-375.png",
+      "previewSha256": "d7a3aa2c0e0baf7904232f579276012f6c6ae688a732ceca54fb2cb2b8376625",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "手機白色品牌外框和深色內容分界清楚；標題置中自然換行，青色主要CTA完整。",
+        "中裁Java及系統整合的適用情境、服務內容與技術範圍收合入口可見，文字沒有互疊；Footer連結及底部版權完整。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "luxury-services-1440.png",
+      "sha256": "2920d4ff0786153e801e78b8b11d7ec9536855e55e1bdc3dcff6688cd14ccd16",
+      "route": "/design-collection/luxury/services",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/luxury-services-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/luxury-services-1440.png",
+      "previewSha256": "c3ac23ebab5b4e7e884ed755ebcc4e05a3cd65dee726c9f88f55d7668b1998a7",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面深色首屏標題、簡介、三個CTA置中且間隔清楚；白色外框與風格列獨立。",
+        "中裁服務說明、收合入口及延伸動作完整排列；總覽各服務區段有分隔，Footer三系列分欄及底部文字可見。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "luxury-portfolio-375.png",
+      "sha256": "c2723e0d0f0dee7ca2c8f23f18fddfe91de52346cc6afa1261fe87ff531c1df9",
+      "route": "/design-collection/luxury/portfolio",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/luxury-portfolio-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/luxury-portfolio-375.png",
+      "previewSha256": "be60df9852d4c286be9de89879665888881a39929daefc1ca4664f99672a2ab8",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "手機作品首屏、風格當前狀態與品牌預覽圖依序完整；總覽六張預覽均有圖像。",
+        "中裁第三方模板狀態列表清楚顯示兩項素材待整理暫停外連，技術展示三項均明示Planned／規劃中並有收合入口；Footer完整。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "luxury-portfolio-1440.png",
+      "sha256": "cf3abb27c5071e93745ac1ad22ab98fdcbbf3495533fb5042d845d300a4c5348",
+      "route": "/design-collection/luxury/portfolio",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/luxury-portfolio-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/luxury-portfolio-1440.png",
+      "previewSha256": "fbc72064f3e6b270b3e2ca3d63e859841d031628da6f5f4c041520e295df3608",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面首屏置中，大尺寸品牌預覽順序排列；未見破圖或圖文互疊。",
+        "中裁宏能展示圖、品牌名稱、模擬不寄送限制及動作完整，下一張千剛預覽開始位置清楚；Footer分欄與底部文字完整。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "luxury-contact-375.png",
+      "sha256": "fb46d114e3f62a25975066e8a07c6065c43041a8331125cec90acdf512fad0d9",
+      "route": "/design-collection/luxury/contact",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/luxury-contact-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/luxury-contact-375.png",
+      "previewSha256": "ccb27d0874eea5ea5db40cd624642983f4a848b42c83385e19160ae1a46a16c2",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "手機首屏麵包屑以首頁／斜線／聯絡我們垂直置中；主標、CTA、草稿不代寄說明與Email各自成段，未見互疊。",
+        "總覽表單控制項位於深色容器內；中裁準備事項及下一步採收合清單，相關服務連結與Footer可見。表單各標籤未在原尺寸裁切逐字核讀。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "luxury-contact-1440.png",
+      "sha256": "61d392f3dfd1155e1a4d12bdc12b38a601c253f35e5be5b056b931d9ddc3f065",
+      "route": "/design-collection/luxury/contact",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/luxury-contact-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/luxury-contact-1440.png",
+      "previewSha256": "ccd7a73a50ca5ceee08af17ec708d25731bfbf27d161ca02890c185b7ccabd75",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面首屏麵包屑水平，主標與CTA置中；明示開啟郵件草稿、不代寄及商務Email。",
+        "中裁Email複製按鈕、準備事項展開內容與其他收合入口、服務連結均清楚分隔；Footer底部完整。總覽表單全文未逐字核讀。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "luxury-quotation-375.png",
+      "sha256": "e320121e82e0e99c8b19668a0a5681d8558b4303bf2cc045841b37f350bf7154",
+      "route": "/design-collection/luxury/quotation",
+      "width": 375,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/luxury-quotation-375.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/luxury-quotation-375.png",
+      "previewSha256": "cd0bf6325c606486b519d8033f35041a51a7164cb82d1e21c6164b1578024b10",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "手機深色試算首屏顯示個人欄位清除及ID還原提示；Logo保有白底，待審價格聲明完整。",
+        "中裁Basic已選狀態、Standard／Advanced單選控制項與說明無溢出，0項試算及尚未選項目狀態可見；總覽白底A4摘要及Footer完整。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    },
+    {
+      "filename": "luxury-quotation-1440.png",
+      "sha256": "d9e1735717165163c82ee03ae466345298b7fa8bceab75b3841a0529defbb044",
+      "route": "/design-collection/luxury/quotation",
+      "width": 1440,
+      "rawPath": "/tmp/xk-dc007-build/docs/screenshots/design-collection/dc007/luxury-quotation-1440.png",
+      "previewPath": "/tmp/xk-dc007/visual-previews/luxury-quotation-1440.png",
+      "previewSha256": "afc03b0af001a01836a4137d9b987318fb6378bbdbd361dbd9aabe29d9f787cf",
+      "actualViewImagePerformed": true,
+      "observations": [
+        "桌面深色試算首屏、Logo白底卡與三步驟排列清楚，風格當前狀態可見。",
+        "中裁程度僅為需求標記、不改變參考金額的說明與三個單選控制項完整，0項及一次／年度摘要分欄；白底A4摘要與Footer可見。"
+      ],
+      "issues": [],
+      "disposition": "NO_ISSUE_OBSERVED_IN_REVIEWED_SCOPE"
+    }
+  ]
+}

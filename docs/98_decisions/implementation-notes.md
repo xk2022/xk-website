@@ -519,3 +519,21 @@ PR #40 已合併為 `0d41ecf495e55b792f966c9fe27bd07c27bc5647`，main CI／Pages
 原 normal suite Exit 2 保留 10 項 overlap incomplete；原 Pages suite Exit 1 保留同 10 項與三筆帶 `source=qa` 的 HEAD canceled，僅 final network gate FAIL。10 項逐筆人工判讀皆 PASS；三筆 query 的限定重驗與原始網路診斷由 [本輪報告](../reports/dc006-implementation.md) 保存，不預填其結果，不把原 suite 改成 Exit 0 或籠統宣稱所有測試 PASS。[本輪截圖](../screenshots/design-collection/dc006/) 已有真實畫面；既有啟動時 PENDING 與舊歷史退出碼不回寫。
 
 最終 exact-head CI／artifact 待新 PR；交付審閱、不自動合併，PR #40／#42 舊合併授權不延伸，DC-007 尚未開始。法律、索引、價格、收件、DNS 與既有公開 main 的版本界線保持。
+
+## 2026-11-26｜DC-007 啟動與範圍
+
+DC-006 PR #44 已經使用者另次授權合併為 `ee4b4709a9f8daa755e2595a46c158b3c92d8229`，main run 45820416409 的 Pages deploy 12:33:10Z 成功，實際公開驗證及原始 browser transport 判讀記於同 PR。這是 DC-007 已發布基準，不挪用為本輪結果。
+
+本輪執行 [DC-007](../task/dc007.md) 原工作包完整驗收，分支 `test/design-collection-release`。公司 main 更新為 `f1be01c0c5d8bc5b1238f250838e336bef47b149`，新增正式 Logo V2；logo guidelines 明文保留既有網站部署素材，故此輪不擴成 Logo／字體／色票遷移。只新增窄 Tailwind 文件／證據排除，不改介面 declarations。真人讀屏與真 browser zoom、實體 PDF、全頁 axe、47 圖及效能分別以實際證據驗收，沒有外部證據則 Required BLOCKED。沒有新增功能、索引／法律批准、後端、依賴或部署設定，也不自動合併本輪新 PR。
+
+## 2026-11-26 UTC｜DC-007 本輪驗收交付界線
+
+六品質指令及 typegen 真 Exit0，native436 PASS；Normal／Pages HTTP分別3274 PASS＋2 N/A、3282 PASS，兩模式各531完整assertions／245 layouts／119 axe，0 violations。原Normal4 FAIL、Pages1 network FAIL及各384 incomplete均保留；工具oracle修正、paint逐項覆核與限定補驗分開記錄。47張本輪真圖、8份實體A4／QR與跨頁列印補圖已完成；真原生200% zoom限Normal16頁，不代替真人讀屏。
+
+18 cold完整，但六組TBT median約1201–1553ms全未達200ms；6 warm／27動作完成，原HEAD review仍保留。真人讀屏Required BLOCKED、原取消請求部分原因未解、效能FAIL，使本輪完整發布門檻未通過。建立Draft PR追蹤，不自動合併／部署；保留既有字體／設計／功能與價格，沒有虛構after改善率或新品牌遷移。細項及真退出碼見[DC-007報告](../reports/dc007-implementation.md)。
+
+## DC-007-R01（2026-11-27）
+
+沿用現有發布測試分支與 Draft PR #45。根據相同效能環境的 fresh before 與 trace，調整 Noto Sans TC 的原生子集載入、screen 離屏排版及試算摘要 memo；完整 100–900 字重軸、字形／UVS、原分片、授權、導覽、靜態輸出、SEO 與業務資料保留。未採用的 Font Loading API、Footer 委派、Suspense、runtime priority、deferred store 及縮窄字體軸原型，與實際失敗／回退證據均保留。
+
+最終來源、各測試真實退出碼與版本影響判斷以 [R01 報告](../reports/dc007-r01-performance.md) 為準；原 [DC-007 報告](../reports/dc007-implementation.md) 保留歷史結果。效能改善不自動解除真人讀屏、歷史網路未知、法律、索引或正式發布門檻；不合併、部署或修改 DNS。

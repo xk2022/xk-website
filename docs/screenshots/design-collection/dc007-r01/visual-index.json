@@ -1,0 +1,1615 @@
+{
+  "testId": "R01-47-ACTUAL-NATIVE-SCREENSHOTS",
+  "createdAt": "2026-11-27T04:51:27.853618+00:00",
+  "sourceFingerprint": "9d18fdf7aaac71987afaae10aeb969784b0929bdd5d4f8bfd366fc1599f84936",
+  "scope": "47 actual native tall-viewport diagnostic PNG bytes; same widths, explicitly different capture height. No CSS override or image stitching. Fixed-height layout/browser acceptance separate. All raw capture statuses, rejected-case facts, original-top companions and original blank fullpage images retained in R01 evidence archive. Never a pixel-identical/geometry/performance PASS.",
+  "actualWrapperExitCode": 2,
+  "images": [
+    {
+      "path": "gallery-collection-375.png",
+      "sha256": "4dc2ea99efbb458ceef46869fbc109daa8f1a602fc4e5dfe674d64e39a5b4ea7",
+      "bytes": 398673,
+      "route": "/design-collection",
+      "width": 375,
+      "style": null,
+      "pageKey": "collection",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/gallery-collection-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 6796
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "gallery-collection-1440.png",
+      "sha256": "43d0836dd8b733d1349be802438a3e266718e53ae4638a8f7efa8d42a14374fb",
+      "bytes": 390490,
+      "route": "/design-collection",
+      "width": 1440,
+      "style": null,
+      "pageKey": "collection",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/gallery-collection-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 4317
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-home-320.png",
+      "sha256": "f2563afb2b44382e363fe8f157ac32af7d6cde07eb50c2f0731686301884dda5",
+      "bytes": 1529212,
+      "route": "/",
+      "width": 320,
+      "style": "modern",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-home-320-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 320,
+        "height": 20076
+      },
+      "originalFixedViewport": {
+        "width": 320,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 16186.6875,
+          "after": 16186.921875,
+          "delta": 0.234375,
+          "absDelta": 0.234375
+        },
+        {
+          "index": 11,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 16592.3125,
+          "after": 16592.546875,
+          "delta": 0.234375,
+          "absDelta": 0.234375
+        }
+      ],
+      "maxObservedGeometryDelta": 0.234375,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-home-375.png",
+      "sha256": "545ace3bf2d8326627c93cdd63452e00254dd90f45177f3c10653af1cf4e45a2",
+      "bytes": 1608794,
+      "route": "/",
+      "width": 375,
+      "style": "modern",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-home-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 19140
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 15337.5,
+          "after": 15337.5625,
+          "delta": 0.0625,
+          "absDelta": 0.0625
+        },
+        {
+          "index": 11,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 15701.84375,
+          "after": 15701.90625,
+          "delta": 0.0625,
+          "absDelta": 0.0625
+        }
+      ],
+      "maxObservedGeometryDelta": 0.0625,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-home-768.png",
+      "sha256": "d84de675f1f1df352927373263222febc053abbc99454a8f47a50cf0a96d2b48",
+      "bytes": 1712475,
+      "route": "/",
+      "width": 768,
+      "style": "modern",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-home-768-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 768,
+        "height": 13277
+      },
+      "originalFixedViewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 10785.25,
+          "after": 10785.671875,
+          "delta": 0.421875,
+          "absDelta": 0.421875
+        },
+        {
+          "index": 11,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 11025.53125,
+          "after": 11025.953125,
+          "delta": 0.421875,
+          "absDelta": 0.421875
+        }
+      ],
+      "maxObservedGeometryDelta": 0.421875,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-home-1440.png",
+      "sha256": "486e7e72f03e36a4b64eac9e691e3035cca1c95aad8eae968622b7d3eb59a030",
+      "bytes": 1816984,
+      "route": "/",
+      "width": 1440,
+      "style": "modern",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-home-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 10137
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 8002.046875,
+          "after": 8002.359375,
+          "delta": 0.3125,
+          "absDelta": 0.3125
+        },
+        {
+          "index": 11,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 8242.328125,
+          "after": 8242.640625,
+          "delta": 0.3125,
+          "absDelta": 0.3125
+        }
+      ],
+      "maxObservedGeometryDelta": 0.3125,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-home-1920.png",
+      "sha256": "83680462e1527bf80448f18724697836a675214b99d6a9a5a41a3149343b6f0a",
+      "bytes": 1914205,
+      "route": "/",
+      "width": 1920,
+      "style": "modern",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-home-1920-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1920,
+        "height": 10223
+      },
+      "originalFixedViewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-services-375.png",
+      "sha256": "5cdcdc3bce58433dfab13ad86be7129e514201e0fbe662b8199c8b0243ddf8bc",
+      "bytes": 1391219,
+      "route": "/services",
+      "width": 375,
+      "style": "modern",
+      "pageKey": "services",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-services-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 19628
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-services-1440.png",
+      "sha256": "d6f8c903d15c59c07f395b9e54c8cdb868be0650d2edb2413c7fb95eb9795fb6",
+      "bytes": 1529251,
+      "route": "/services",
+      "width": 1440,
+      "style": "modern",
+      "pageKey": "services",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-services-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 10508
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 8373,
+          "after": 8373.359375,
+          "delta": 0.359375,
+          "absDelta": 0.359375
+        },
+        {
+          "index": 15,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 8613.28125,
+          "after": 8613.640625,
+          "delta": 0.359375,
+          "absDelta": 0.359375
+        }
+      ],
+      "maxObservedGeometryDelta": 0.359375,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-portfolio-375.png",
+      "sha256": "1e2d7ef12158f116b54179cff97cbe27f95354f0df8dbf29ecf695735112f8fa",
+      "bytes": 1365877,
+      "route": "/portfolio",
+      "width": 375,
+      "style": "modern",
+      "pageKey": "portfolio",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-portfolio-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 15135
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-portfolio-1440.png",
+      "sha256": "6c391f64edfc2cb241711b535a521b5f3bbe960c0c344b79f5317612f250043b",
+      "bytes": 1953007,
+      "route": "/portfolio",
+      "width": 1440,
+      "style": "modern",
+      "pageKey": "portfolio",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-portfolio-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 9342
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-brand-showcase-march-tangbao-375.png",
+      "sha256": "c71fed6478f26cefa5c9fd6613a2c8d26b39436f089cc79fa5550165411720a9",
+      "bytes": 559978,
+      "route": "/portfolio/showcases/march-tangbao",
+      "width": 375,
+      "style": "modern",
+      "pageKey": "brand-showcase",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-brand-showcase-march-tangbao-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 7363
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 3560.25,
+          "after": 3560.5625,
+          "delta": 0.3125,
+          "absDelta": 0.3125
+        },
+        {
+          "index": 8,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 3924.59375,
+          "after": 3924.90625,
+          "delta": 0.3125,
+          "absDelta": 0.3125
+        }
+      ],
+      "maxObservedGeometryDelta": 0.3125,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-brand-showcase-march-tangbao-1440.png",
+      "sha256": "da7724b567ccdefc692e2be648e75ce0717f1c4211c9a1a61e1a33274e45ce21",
+      "bytes": 1072509,
+      "route": "/portfolio/showcases/march-tangbao",
+      "width": 1440,
+      "style": "modern",
+      "pageKey": "brand-showcase",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-brand-showcase-march-tangbao-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 5946
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 3811.21875,
+          "after": 3811.359375,
+          "delta": 0.140625,
+          "absDelta": 0.140625
+        },
+        {
+          "index": 8,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 4051.5,
+          "after": 4051.640625,
+          "delta": 0.140625,
+          "absDelta": 0.140625
+        }
+      ],
+      "maxObservedGeometryDelta": 0.140625,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-contact-375.png",
+      "sha256": "64b4b98d75cf036d1a60dee78bd935df60aa374d9f06dfc3e001acfc501b38ad",
+      "bytes": 875730,
+      "route": "/contact",
+      "width": 375,
+      "style": "modern",
+      "pageKey": "contact",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-contact-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 10871
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 7068.34375,
+          "after": 7068.5625,
+          "delta": 0.21875,
+          "absDelta": 0.21875
+        },
+        {
+          "index": 9,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 7432.6875,
+          "after": 7432.90625,
+          "delta": 0.21875,
+          "absDelta": 0.21875
+        }
+      ],
+      "maxObservedGeometryDelta": 0.21875,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-contact-1440.png",
+      "sha256": "c7012f6b2f7aae7912965b58f94ff3e61e2067bbb8dcb3bf7e391288b8860310",
+      "bytes": 1068983,
+      "route": "/contact",
+      "width": 1440,
+      "style": "modern",
+      "pageKey": "contact",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-contact-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 7218
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 5082.859375,
+          "after": 5083.359375,
+          "delta": 0.5,
+          "absDelta": 0.5
+        },
+        {
+          "index": 9,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 5323.140625,
+          "after": 5323.640625,
+          "delta": 0.5,
+          "absDelta": 0.5
+        }
+      ],
+      "maxObservedGeometryDelta": 0.5,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-quotation-375.png",
+      "sha256": "44204873fb172b7ed042ad3e44eca3d7aa1b2c5faf3a8a08ae6e0c0ddb05e938",
+      "bytes": 813724,
+      "route": "/quotation",
+      "width": 375,
+      "style": "modern",
+      "pageKey": "quotation",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-quotation-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 13586
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "modern-quotation-1440.png",
+      "sha256": "b0ef50a40bc18ac6ec2066e98094cba967499e6d9c317d06205055fe3f0bb562",
+      "bytes": 936753,
+      "route": "/quotation",
+      "width": 1440,
+      "style": "modern",
+      "pageKey": "quotation",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/modern-quotation-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 9612
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 7477.046875,
+          "after": 7477.359375,
+          "delta": 0.3125,
+          "absDelta": 0.3125
+        },
+        {
+          "index": 10,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 7717.328125,
+          "after": 7717.640625,
+          "delta": 0.3125,
+          "absDelta": 0.3125
+        }
+      ],
+      "maxObservedGeometryDelta": 0.3125,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-home-320.png",
+      "sha256": "40f2d21e78e457376e3c76c87062bee5c7ed2cc7864c0ca96258c74596516f9a",
+      "bytes": 1488604,
+      "route": "/design-collection/heritage",
+      "width": 320,
+      "style": "heritage",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-320-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 320,
+        "height": 21003
+      },
+      "originalFixedViewport": {
+        "width": 320,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-home-375.png",
+      "sha256": "6ab3d77c55a9e97999c79fe574d2564762be5b8ab4a9038dc8f29123f8c74d1e",
+      "bytes": 1547536,
+      "route": "/design-collection/heritage",
+      "width": 375,
+      "style": "heritage",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 19917
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 16457.9375,
+          "after": 16458.140625,
+          "delta": 0.203125,
+          "absDelta": 0.203125
+        },
+        {
+          "index": 11,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 17012.65625,
+          "after": 17012.859375,
+          "delta": 0.203125,
+          "absDelta": 0.203125
+        }
+      ],
+      "maxObservedGeometryDelta": 0.203125,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-home-768.png",
+      "sha256": "c4af3223af7451f9ad5d2b68d77f2a91badbfe103a5e2a8feaff59b38cc2818a",
+      "bytes": 1686930,
+      "route": "/design-collection/heritage",
+      "width": 768,
+      "style": "heritage",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-768-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 768,
+        "height": 14169
+      },
+      "originalFixedViewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 12255.15625,
+          "after": 12255.375,
+          "delta": 0.21875,
+          "absDelta": 0.21875
+        },
+        {
+          "index": 11,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 12655.21875,
+          "after": 12655.4375,
+          "delta": 0.21875,
+          "absDelta": 0.21875
+        }
+      ],
+      "maxObservedGeometryDelta": 0.21875,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-home-1440.png",
+      "sha256": "a22965cc78b359f09c145cf60a2bb38352914c30c5b6c8af5af400206e9c51f3",
+      "bytes": 2113076,
+      "route": "/design-collection/heritage",
+      "width": 1440,
+      "style": "heritage",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 12845
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 11145.78125,
+          "after": 11145.984375,
+          "delta": 0.203125,
+          "absDelta": 0.203125
+        },
+        {
+          "index": 11,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 11541.046875,
+          "after": 11541.25,
+          "delta": 0.203125,
+          "absDelta": 0.203125
+        }
+      ],
+      "maxObservedGeometryDelta": 0.203125,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-home-1920.png",
+      "sha256": "fcf70ed1b89319293b9f592b90078d6e78c8fbb01ee9209cdbd96b332583ce8d",
+      "bytes": 2160089,
+      "route": "/design-collection/heritage",
+      "width": 1920,
+      "style": "heritage",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-home-1920-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1920,
+        "height": 12845
+      },
+      "originalFixedViewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 11145.78125,
+          "after": 11145.984375,
+          "delta": 0.203125,
+          "absDelta": 0.203125
+        },
+        {
+          "index": 11,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 11541.046875,
+          "after": 11541.25,
+          "delta": 0.203125,
+          "absDelta": 0.203125
+        }
+      ],
+      "maxObservedGeometryDelta": 0.203125,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-services-375.png",
+      "sha256": "9315134df71a35e8472efbc9acefd63351f2ea5d9062a426144b5ff64845651c",
+      "bytes": 1293553,
+      "route": "/design-collection/heritage/services",
+      "width": 375,
+      "style": "heritage",
+      "pageKey": "services",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-services-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 18024
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-services-1440.png",
+      "sha256": "5b2517135ee3e80d4b4dfdd48b427b8109f97dcbb533afb346f1f753d2c39f1d",
+      "bytes": 1369669,
+      "route": "/design-collection/heritage/services",
+      "width": 1440,
+      "style": "heritage",
+      "pageKey": "services",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-services-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 11986
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-portfolio-375.png",
+      "sha256": "e4a6e038ab8ff870793b0012d43266951fec48576693d2021950e9c54e248f44",
+      "bytes": 1297003,
+      "route": "/design-collection/heritage/portfolio",
+      "width": 375,
+      "style": "heritage",
+      "pageKey": "portfolio",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-portfolio-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 15014
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 11554.796875,
+          "after": 11555.140625,
+          "delta": 0.34375,
+          "absDelta": 0.34375
+        },
+        {
+          "index": 10,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 12109.515625,
+          "after": 12109.859375,
+          "delta": 0.34375,
+          "absDelta": 0.34375
+        }
+      ],
+      "maxObservedGeometryDelta": 0.34375,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-portfolio-1440.png",
+      "sha256": "90f8dd82230779f9960ee029cd0f6085cf356ba33014bab1d74a929ebc224d0b",
+      "bytes": 2213310,
+      "route": "/design-collection/heritage/portfolio",
+      "width": 1440,
+      "style": "heritage",
+      "pageKey": "portfolio",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-portfolio-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 8928
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 7228.6875,
+          "after": 7228.984375,
+          "delta": 0.296875,
+          "absDelta": 0.296875
+        },
+        {
+          "index": 10,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 7623.953125,
+          "after": 7624.25,
+          "delta": 0.296875,
+          "absDelta": 0.296875
+        }
+      ],
+      "maxObservedGeometryDelta": 0.296875,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-brand-showcase-march-tangbao-375.png",
+      "sha256": "8eeb18e871acf0c8c6f340bba30f1502d7413d0b5332e934b196b6b3b0b58795",
+      "bytes": 526671,
+      "route": "/design-collection/heritage/portfolio/showcases/march-tangbao",
+      "width": 375,
+      "style": "heritage",
+      "pageKey": "brand-showcase",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-brand-showcase-march-tangbao-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 7049
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 3590.0625,
+          "after": 3590.140625,
+          "delta": 0.078125,
+          "absDelta": 0.078125
+        },
+        {
+          "index": 8,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 4144.78125,
+          "after": 4144.859375,
+          "delta": 0.078125,
+          "absDelta": 0.078125
+        }
+      ],
+      "maxObservedGeometryDelta": 0.078125,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-brand-showcase-march-tangbao-1440.png",
+      "sha256": "66d8d01eb572c8e3ceaa183144fc9a74ca8c795c7c37c49e74e4eec4ab097e68",
+      "bytes": 941565,
+      "route": "/design-collection/heritage/portfolio/showcases/march-tangbao",
+      "width": 1440,
+      "style": "heritage",
+      "pageKey": "brand-showcase",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-brand-showcase-march-tangbao-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 5027
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-contact-375.png",
+      "sha256": "cace582a0e8171df6a7e928baf4db1b681570fb0aef19178093f0b4acdc31117",
+      "bytes": 751707,
+      "route": "/design-collection/heritage/contact",
+      "width": 375,
+      "style": "heritage",
+      "pageKey": "contact",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-contact-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 10139
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 6679.6875,
+          "after": 6680.140625,
+          "delta": 0.453125,
+          "absDelta": 0.453125
+        },
+        {
+          "index": 9,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 7234.40625,
+          "after": 7234.859375,
+          "delta": 0.453125,
+          "absDelta": 0.453125
+        }
+      ],
+      "maxObservedGeometryDelta": 0.453125,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-contact-1440.png",
+      "sha256": "2ad5dde22f8149b9456b96d125b7b1c6bfb1b7bdab73013e594e127d25e3f2ed",
+      "bytes": 791420,
+      "route": "/design-collection/heritage/contact",
+      "width": 1440,
+      "style": "heritage",
+      "pageKey": "contact",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-contact-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 6555
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-quotation-375.png",
+      "sha256": "28e7695feedc92bccdc4b18fc857ae365bb2178d37c094509f98bfb7aebbbdf0",
+      "bytes": 838016,
+      "route": "/design-collection/heritage/quotation",
+      "width": 375,
+      "style": "heritage",
+      "pageKey": "quotation",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-quotation-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 13304
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "heritage-quotation-1440.png",
+      "sha256": "9a82f1be78844cadccaec55b56da8a52b097b307ad0c0b5ece0f1d30b714cbf6",
+      "bytes": 960105,
+      "route": "/design-collection/heritage/quotation",
+      "width": 1440,
+      "style": "heritage",
+      "pageKey": "quotation",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/heritage-quotation-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 9693
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "MANUAL_PENDING_SUBPIXEL_GEOMETRY",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 7993.8125,
+          "after": 7993.984375,
+          "delta": 0.171875,
+          "absDelta": 0.171875
+        },
+        {
+          "index": 10,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 8389.078125,
+          "after": 8389.25,
+          "delta": 0.171875,
+          "absDelta": 0.171875
+        }
+      ],
+      "maxObservedGeometryDelta": 0.171875,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-home-320.png",
+      "sha256": "ec6c4050bac25871b73c377ae692db7460b2f936fe60082f71ae3faa41450eb3",
+      "bytes": 1364080,
+      "route": "/design-collection/luxury",
+      "width": 320,
+      "style": "luxury",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-320-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 320,
+        "height": 18905
+      },
+      "originalFixedViewport": {
+        "width": 320,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-home-375.png",
+      "sha256": "4fdf5583ef7985ebf71157e0e6a56f9dcaf85a8865ff4c6462bfde3aeb3b6355",
+      "bytes": 1414056,
+      "route": "/design-collection/luxury",
+      "width": 375,
+      "style": "luxury",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 17982
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-home-768.png",
+      "sha256": "aad8ed1c3bba3d4cea08c9749bbde28d5274794b44c810b6f56bc7891e0f6f8d",
+      "bytes": 1869441,
+      "route": "/design-collection/luxury",
+      "width": 768,
+      "style": "luxury",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-768-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 768,
+        "height": 16107
+      },
+      "originalFixedViewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-home-1440.png",
+      "sha256": "d464516b025e85f36a1b189c8470b29789ee0b55bd1c108fa512732f38efb8f5",
+      "bytes": 2926989,
+      "route": "/design-collection/luxury",
+      "width": 1440,
+      "style": "luxury",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 17263
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 15647.5,
+          "after": 15647.546875,
+          "delta": 0.046875,
+          "absDelta": 0.046875
+        },
+        {
+          "index": 12,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 16013.265625,
+          "after": 16013.3125,
+          "delta": 0.046875,
+          "absDelta": 0.046875
+        }
+      ],
+      "maxObservedGeometryDelta": 0.046875,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-home-1920.png",
+      "sha256": "8468508c8c6c9bcf8252c79c150d75ae54d9599f67d72af32132776d0f5fb297",
+      "bytes": 2994052,
+      "route": "/design-collection/luxury",
+      "width": 1920,
+      "style": "luxury",
+      "pageKey": "home",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-home-1920-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1920,
+        "height": 17263
+      },
+      "originalFixedViewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 15647.5,
+          "after": 15647.546875,
+          "delta": 0.046875,
+          "absDelta": 0.046875
+        },
+        {
+          "index": 12,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 16013.265625,
+          "after": 16013.3125,
+          "delta": 0.046875,
+          "absDelta": 0.046875
+        }
+      ],
+      "maxObservedGeometryDelta": 0.046875,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-services-375.png",
+      "sha256": "b279578403645af8e97dc202ba6b015394590ebdf0594245207fc0195ad9fe6e",
+      "bytes": 1096049,
+      "route": "/design-collection/luxury/services",
+      "width": 375,
+      "style": "luxury",
+      "pageKey": "services",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-services-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 14904
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-services-1440.png",
+      "sha256": "5a80a34d7d949a530c909236282d29f9cc2102692cb8a702f5fbd8bc2ddff260",
+      "bytes": 1298863,
+      "route": "/design-collection/luxury/services",
+      "width": 1440,
+      "style": "luxury",
+      "pageKey": "services",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-services-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 13322
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-portfolio-375.png",
+      "sha256": "e2c76b8e29df8fff90b9505669ec87834257ea006a98b0346407a9d761dc1a15",
+      "bytes": 1277565,
+      "route": "/design-collection/luxury/portfolio",
+      "width": 375,
+      "style": "luxury",
+      "pageKey": "portfolio",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-portfolio-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 14536
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 11174.1875,
+          "after": 11174.546875,
+          "delta": 0.359375,
+          "absDelta": 0.359375
+        },
+        {
+          "index": 10,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 11724.515625,
+          "after": 11724.875,
+          "delta": 0.359375,
+          "absDelta": 0.359375
+        }
+      ],
+      "maxObservedGeometryDelta": 0.359375,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-portfolio-1440.png",
+      "sha256": "44147ad6a2e6645b6a577fd37927d89efda573c1ac7baba951c1e287a6dfcc0c",
+      "bytes": 3844606,
+      "route": "/design-collection/luxury/portfolio",
+      "width": 1440,
+      "style": "luxury",
+      "pageKey": "portfolio",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-portfolio-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 15977
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-brand-showcase-march-tangbao-375.png",
+      "sha256": "51119b912f59b8c844c7dc5395caa89e96934904e34bdd2445a89dd11f831931",
+      "bytes": 514882,
+      "route": "/design-collection/luxury/portfolio/showcases/march-tangbao",
+      "width": 375,
+      "style": "luxury",
+      "pageKey": "brand-showcase",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-brand-showcase-march-tangbao-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 7108
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 3746.046875,
+          "after": 3746.546875,
+          "delta": 0.5,
+          "absDelta": 0.5
+        },
+        {
+          "index": 8,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 4296.375,
+          "after": 4296.875,
+          "delta": 0.5,
+          "absDelta": 0.5
+        }
+      ],
+      "maxObservedGeometryDelta": 0.5,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-brand-showcase-march-tangbao-1440.png",
+      "sha256": "c174f2419cd5804a42bbe11c9cdd7d63dc3635fc8af507319b9140a01de19c72",
+      "bytes": 1040806,
+      "route": "/design-collection/luxury/portfolio/showcases/march-tangbao",
+      "width": 1440,
+      "style": "luxury",
+      "pageKey": "brand-showcase",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-brand-showcase-march-tangbao-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 6095
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-contact-375.png",
+      "sha256": "ad9e5ca67955f727ed3ee5df228043f03e4ee849c10fc4fdcbcdabef5a0a3060",
+      "bytes": 654123,
+      "route": "/design-collection/luxury/contact",
+      "width": 375,
+      "style": "luxury",
+      "pageKey": "contact",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-contact-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 9497
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-contact-1440.png",
+      "sha256": "731ca54cfc4f526279acd4701031f1a7e350ee2735c31bc9d86d5241980d4458",
+      "bytes": 740192,
+      "route": "/design-collection/luxury/contact",
+      "width": 1440,
+      "style": "luxury",
+      "pageKey": "contact",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-contact-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 6895
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 5279.171875,
+          "after": 5279.546875,
+          "delta": 0.375,
+          "absDelta": 0.375
+        },
+        {
+          "index": 9,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 5644.9375,
+          "after": 5645.3125,
+          "delta": 0.375,
+          "absDelta": 0.375
+        }
+      ],
+      "maxObservedGeometryDelta": 0.375,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-quotation-375.png",
+      "sha256": "996e97cb500718312636b7305e3d922c42022b1bc6ce6d8e57c61dee1417abef",
+      "bytes": 829238,
+      "route": "/design-collection/luxury/quotation",
+      "width": 375,
+      "style": "luxury",
+      "pageKey": "quotation",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-quotation-375-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 375,
+        "height": 13234
+      },
+      "originalFixedViewport": {
+        "width": 375,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [
+        {
+          "index": 1,
+          "id": "main-content",
+          "tag": "MAIN",
+          "property": "height",
+          "before": 9872.5,
+          "after": 9872.546875,
+          "delta": 0.046875,
+          "absDelta": 0.046875
+        },
+        {
+          "index": 10,
+          "id": "",
+          "tag": "FOOTER",
+          "property": "y",
+          "before": 10422.828125,
+          "after": 10422.875,
+          "delta": 0.046875,
+          "absDelta": 0.046875
+        }
+      ],
+      "maxObservedGeometryDelta": 0.046875,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    },
+    {
+      "path": "luxury-quotation-1440.png",
+      "sha256": "daa4299f367719ab376d26fcf648ac0b7fbce4c53722f0bbc5bd8b53132d7edb",
+      "bytes": 995464,
+      "route": "/design-collection/luxury/quotation",
+      "width": 1440,
+      "style": "luxury",
+      "pageKey": "quotation",
+      "sourcePath": "/tmp/xk-dc007-r01/qa/native-complete-pages-retained-v2/luxury-quotation-1440-tall-diagnostic.png",
+      "captureViewport": {
+        "width": 1440,
+        "height": 10289
+      },
+      "originalFixedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "rawCaptureStatus": "TALL_REJECTED_FALLBACK_TILES",
+      "geometryDeltas": [],
+      "maxObservedGeometryDelta": 0,
+      "semanticDeltas": [],
+      "manualReviewRef": "visual-review.json"
+    }
+  ]
+}

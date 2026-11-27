@@ -1,0 +1,124 @@
+{
+  "testId": "R01-POST-ARCHIVE-DELIVERY-APPENDIX",
+  "integrity": "PASS",
+  "scope": "Completed final lint,44-check delivery integrity and actual archive completion receipts after immutable main archive. Main3383-record manifest remains unchanged. No QA/performance/remoteCI/deployment status inferred.",
+  "files": [
+    {
+      "sourcePath": "/tmp/xk-dc007-r01/final-lint.json",
+      "path": "final-lint.json.gz",
+      "encoding": "gzip",
+      "rawBytes": 568,
+      "rawSha256": "9f559f42815af353fc7a565fd865884cf13cc725fa25af1a928e93bb5bd5d9d1",
+      "encodedBytes": 377,
+      "encodedSha256": "2c4f52ad9b908dce37c31fd1fc3e60fa4968878406c1e536382b27c51aeb98b0"
+    },
+    {
+      "sourcePath": "/tmp/xk-dc007-r01/final-lint.log",
+      "path": "final-lint.log.gz",
+      "encoding": "gzip",
+      "rawBytes": 54,
+      "rawSha256": "4696703654c92426c8748b7837936df0036098577fdcb7af6f2ee9d9db2e79e6",
+      "encodedBytes": 71,
+      "encodedSha256": "1c97765aff6f36dac171db00f4cd008e87f54e12c0ad4799bcd8020b3ad04359"
+    },
+    {
+      "sourcePath": "/tmp/xk-dc007-r01/final-delivery-integrity.json",
+      "path": "final-delivery-integrity.json.gz",
+      "encoding": "gzip",
+      "rawBytes": 272566,
+      "rawSha256": "4c790f9ea5aa45999dc8896358c7fab3ebe2db6122d0879eb9f7103127101fd0",
+      "encodedBytes": 19857,
+      "encodedSha256": "39dc8643ba681c0d74bd226de0eabcce1154f8a6230fb4f0a07ec6b2c99c49bd"
+    },
+    {
+      "sourcePath": "/tmp/xk-dc007-r01/final-delivery-integrity-command.json",
+      "path": "final-delivery-integrity-command.json.gz",
+      "encoding": "gzip",
+      "rawBytes": 606,
+      "rawSha256": "00a3b127abc82028bb9a4ef95b07c33111b137d6bb312f223e15118fe4577627",
+      "encodedBytes": 395,
+      "encodedSha256": "ebf5ec1f555dfe79f153362a9fdd2fb7f0de10773bb4065697fb5764637291a8"
+    },
+    {
+      "sourcePath": "/tmp/xk-dc007-r01/final-delivery-integrity.log",
+      "path": "final-delivery-integrity.log.gz",
+      "encoding": "gzip",
+      "rawBytes": 76,
+      "rawSha256": "a1ef2d6d8e0897e42a2952d7247bc6a42db6301e79693bc1b24ad53844995125",
+      "encodedBytes": 76,
+      "encodedSha256": "a48ba365b02d7594b0de2be34d37f07a3ee58fa62316aa751e28a4e1e2d460b5"
+    },
+    {
+      "sourcePath": "/tmp/xk-dc007-r01/archive-r01-process-v2.json",
+      "path": "archive-r01-process-v2.json.gz",
+      "encoding": "gzip",
+      "rawBytes": 607,
+      "rawSha256": "c319d31e55362dbe1a6f1ac5b99622fdf46a321fe0cf923f6a72cc583346021d",
+      "encodedBytes": 388,
+      "encodedSha256": "3b018b114660776bdcf1ed65dd05e88da72766c16415158a22387f904fffd97d"
+    },
+    {
+      "sourcePath": "/tmp/xk-dc007-r01-archive-execution-summary.json",
+      "path": "xk-dc007-r01-archive-execution-summary.json.gz",
+      "encoding": "gzip",
+      "rawBytes": 2632,
+      "rawSha256": "cbc90ce65b7c99f6973edf15d6ecdac3a9a11c47a23586bc42ae9f1f2d39b726",
+      "encodedBytes": 1157,
+      "encodedSha256": "60902da59fca9692e1e926a7aba65df816a0d0b0b00c9d34659a14e8ffd9f6ed"
+    },
+    {
+      "sourcePath": "/tmp/xk-dc007-r01-delivery-append.py",
+      "path": "xk-dc007-r01-delivery-append.py.gz",
+      "encoding": "gzip",
+      "rawBytes": 1717,
+      "rawSha256": "76a1517ea3d8b23b35ee5d2f37d85747649f88c43061ed49aa352462d804f09d",
+      "encodedBytes": 881,
+      "encodedSha256": "f9616285aec69728cb1055b130c19b1e210082e4949d9358a8cc299fafd5a019"
+    },
+    {
+      "sourcePath": "/tmp/xk-dc007-r01-staged-whitespace-original.json",
+      "path": "xk-dc007-r01-staged-whitespace-original.json.gz",
+      "encoding": "gzip",
+      "rawBytes": 603,
+      "rawSha256": "801bfc681c6e659557cd463c73241af4f91a7539f48fc4ab3c4eab3ebb2d6b68",
+      "encodedBytes": 396,
+      "encodedSha256": "965c9834fe36405d00895d515c07c5e8b50c240f8b38a15c8f23006b565386e3"
+    },
+    {
+      "sourcePath": "/tmp/xk-dc007-r01-staged-whitespace-original.log",
+      "path": "xk-dc007-r01-staged-whitespace-original.log.gz",
+      "encoding": "gzip",
+      "rawBytes": 240,
+      "rawSha256": "6b613442ea353b3ddf758e51d95e55f5a00c565cfd17b49da85140dd63f94a1d",
+      "encodedBytes": 142,
+      "encodedSha256": "17604967eb70adc577f13b4bd8e5b5adabf124490aa92c7d4bf0ac37f4da3bb5"
+    },
+    {
+      "sourcePath": "/tmp/xk-dc007-r01-staged-whitespace-remainder.json",
+      "path": "xk-dc007-r01-staged-whitespace-remainder.json.gz",
+      "encoding": "gzip",
+      "rawBytes": 713,
+      "rawSha256": "58ac17e07539e79e090aab81bbf83560fe3c8d0376bcacd4abd323e9dc20a292",
+      "encodedBytes": 444,
+      "encodedSha256": "226e8e2f8b96c6c8d37cd6c2ba45df5079e2bfd32c0c372e75e9f55295aa6053"
+    },
+    {
+      "sourcePath": "/tmp/xk-dc007-r01-staged-whitespace-remainder.log",
+      "path": "xk-dc007-r01-staged-whitespace-remainder.log.gz",
+      "encoding": "gzip",
+      "rawBytes": 0,
+      "rawSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encodedBytes": 20,
+      "encodedSha256": "59869db34853933b239f1e2219cf7d431da006aa919635478511fabbfc8849d2"
+    }
+  ],
+  "nonPassingDeliveryChecks": [
+    {
+      "testId": "R01-STAGED-WHITESPACE-DEFAULT",
+      "status": "FAIL",
+      "actualExitCode": 2,
+      "reason": "Exactly2pinned upstream OFL copies retain one original end-of-line space at line21. Source/public SHA1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9. Preserve verbatim licensed bytes rather than alter the independently pinned contract.",
+      "supplement": "Only these2paths excluded in separate remainder check, actual0. Original globalFAIL not relabeled PASS; nonblocking vendored-text formatting exception, no App impact."
+    }
+  ]
+}

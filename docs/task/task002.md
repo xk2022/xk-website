@@ -41,7 +41,7 @@
 - [Task 001 標準規格](task001.md)、[Task 001 英文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.md) 與 [繁體中文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task001-implementation-notes.zh-TW.md)。
 - [Task 002 繁體中文原稿](https://github.com/xk2022/xk-website/blob/895b9878b6c6244cf225772f6c4f8d3e5d97affe/docs/task/task002.zh-TW.md)；本檔重構前英文原稿保留於 Git 歷史。
 - [歷史實作紀錄](../98_decisions/implementation-notes.md) 與 [品牌設計系統／API／Task 002 實作報告](../reports/brand-design-system.md)。
-- [網站內保留素材的來源紀錄](../../public/brand/source/README.md)。
+- [網站內保留素材的來源紀錄](../../frontend/public/brand/source/README.md)。
 - 文件 Repository `doc/01_business-plan/week-02/` 的 `01_brand-identity_品牌視覺識別規範.md`、`02_logo-guidelines_XK Logo 設計與使用規範.md`、`03_color-palette_品牌色彩系統規範.md`、`04_typography_品牌字體與排版規範.md` 及相關架構／MVP。正式執行須核對 Tree、Commit／Blob，不假設短檔名存在。
 
 優先順序為使用者當次明確指示、已確認品牌決策與已合併網站架構、本規格、經核對的業務文件、舊規劃。舊 monorepo／Backend／UI 色票不得覆蓋獨立網站、既有技術及八色票。原稿 Logo 創建要求與已提供 SVG 按第 6 節處理，不修改文件 Repository 或原始素材。

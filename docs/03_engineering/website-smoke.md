@@ -1,5 +1,7 @@
 # Website smoke 與展示維護
 
+2026-11-27 工作區更新：以下 npm／npx、`src/`、`public/` 與前端 scripts 路徑以 `frontend/` 為工作目錄；從 Repo 根先 `cd frontend`。跨元件 runner 留在根 `scripts/`，詳細目錄與歷史路徑對照見 [Repository 結構](repository-layout.md)。
+
 `npm run test:smoke` 是 BF-016 的 HTTP／HTML 共用入口。它使用 Python 3 標準函式庫與 Node.js 24 的原生 TypeScript import，不安裝 npm 或 Python 套件，也不會 build、啟動 server、修改來源或變更部署。
 
 目前正式網址與空 Base Path 契約見 [自訂網域部署指南](../04_deployment/custom-domain-deployment.md)。舊 `/xk-website` 預覽路徑已不適用。
@@ -24,7 +26,7 @@ npm run test:smoke -- --base-url https://www.xplorekaleidoscope.com/ --output /t
 需保留外層真正程序退出證據時，使用既有 runner：
 
 ```sh
-python3 scripts/run-with-evidence.py \
+python3 ../scripts/run-with-evidence.py \
   --receipt /tmp/xk-bugfix-smoke/pages-receipt.json \
   --log /tmp/xk-bugfix-smoke/pages.log \
   --timeout 600 -- npm run test:smoke -- \
@@ -36,14 +38,14 @@ python3 scripts/run-with-evidence.py \
 
 ## 檢查範圍
 
-- 從原生 `seo.ts`／`website-showcases.ts` 取得現行內容，與獨立的 [核准契約](../../scripts/fixtures/showcase-contract.json) 比對：六品牌順序、四模板、首頁精選、分類、原九路由及六個新增品牌詳頁。
+- 從原生 `seo.ts`／`website-showcases.ts` 取得現行內容，與獨立的 [核准契約](../../frontend/scripts/fixtures/showcase-contract.json) 比對：六品牌順序、四模板、首頁精選、分類、原九路由及六個新增品牌詳頁。
 - 每個公開頁 HTTP 200／HTML、解碼後的唯一 `<head><title>`、description、Canonical、OG、Twitter、noindex／nofollow、語言、僅含真實 WebSite 欄位的 JSON-LD。
 - 所有站內 `<a>` 的公開 route、Pages base path 及 fragment 目標；未知目的地會失敗，不能因未列入 registry 就忽略。
 - 本機 script／stylesheet／preload／圖片等 HTML 資源的 HTTP 200 與 base path；圖片的 Content-Type、實際 bytes 與 PNG／JPEG／GIF／WebP／SVG header 尺寸。這不是完整瀏覽器圖片解碼，也不解析 CSS 內的背景圖。
 - 首頁精選與 Portfolio 的每張展示卡：`data-showcase-id`／state／presentation、可見分類、可用外連與真實預覽、品牌詳頁入口、第三方模板署名。`preparing`／`reference-only` 必須是 null href／image，沒有假圖或失效外站按鈕。
 - 原三個技術詳頁的 Planned 與缺乏實作／系統畫面的誠實說明；About／Solutions 的對外人數強調回歸。Contact 僅允許獨立契約指定的四欄本機郵件草稿表單，不宣稱提交或送達。
-- `/quotation` 加入第 16 個公開路由清冊及 Footer。獨立 [試算契約](../../scripts/fixtures/quotation-contract.json) 鎖定四服務、九建置、17 附加項目、三需求程度、正式五種產品碼與待審參考價。SSR 只允許未 hydration 前停用的 13 個原生 input 與一份唯讀摘要，不允許 form／提交動作；儲存只在專用模組保存方案 ID。選擇、計算、個資、列印與 QR 另由原生測試及瀏覽器驗收，HTTP 通過不能替代它們。
-- [Contact 契約](../../scripts/fixtures/contact-contract.json) 獨立鎖定唯一收件人、subject/body 靜態提示、方案 context 與三步流程；解析 mailto 不寄信。Home／Services 的三方案與 pricing-guide 不採未核准數字價格。
+- `/quotation` 加入第 16 個公開路由清冊及 Footer。獨立 [試算契約](../../frontend/scripts/fixtures/quotation-contract.json) 鎖定四服務、九建置、17 附加項目、三需求程度、正式五種產品碼與待審參考價。SSR 只允許未 hydration 前停用的 13 個原生 input 與一份唯讀摘要，不允許 form／提交動作；儲存只在專用模組保存方案 ID。選擇、計算、個資、列印與 QR 另由原生測試及瀏覽器驗收，HTTP 通過不能替代它們。
+- [Contact 契約](../../frontend/scripts/fixtures/contact-contract.json) 獨立鎖定唯一收件人、subject/body 靜態提示、方案 context 與三步流程；解析 mailto 不寄信。Home／Services 的三方案與 pricing-guide 不採未核准數字價格。
 - `/privacy`、`/dev/design-system`、`/sitemap.xml`、未知一般 route、未知技術與品牌 slug 的真實 HTTP 404；robots 的精確保護規則，以及公開 HTML 不包含 Privacy 草案正文。
 
 外部展示首頁與已知來源素材是獨立選項，不是官網本地資源通過的推論：
@@ -63,7 +65,7 @@ smoke 不包含瀏覽器排版、響應式、互動選單、鍵盤／Focus、Red
 ## 新增或維護展示
 
 1. 先確認來源、真實功能／素材、展示性質及公開範圍。只有可瀏覽、可核對的來源才用 `available`；未就緒時使用既有 unavailable union，保持 null href／image 與誠實說明。第三方模板保留 publisher attribution；來源有缺漏時保留 `sourceHref` 作為維護紀錄，不提供失效展示按鈕。
-2. 修改 [website-showcases.ts](../../src/config/website-showcases.ts)：資料、presentation、availability、詳頁內容及 `showcaseSettings`。UI 數量、首頁精選和衍生 `showcaseSeoPages` 使用這份來源，不另寫固定總數。品牌詳頁路徑由 `showcaseDetailPath(id)` 統一產生。
+2. 修改 [website-showcases.ts](../../frontend/src/config/website-showcases.ts)：資料、presentation、availability、詳頁內容及 `showcaseSettings`。UI 數量、首頁精選和衍生 `showcaseSeoPages` 使用這份來源，不另寫固定總數。品牌詳頁路徑由 `showcaseDetailPath(id)` 統一產生。
 3. 可用圖片放在 `public/images/showcases/`，記錄真實來源／擷取與權利證據；不要補畫假截圖。沒有新圖片就保留 unavailable 狀態。
 4. 有明確批准的 inventory、排序、精選、分類、來源狀態或公開路由變更時，同步審閱獨立契約。它刻意不從 config 產生，防止刪案、換序或擴張發布範圍時驗證跟著一起失效。技術規劃的升級仍需其獨立證據，不因新增品牌詳頁改變原三個 PLANNED。
 5. 執行適用的 typecheck／lint、一般 build、`build:pages` 及兩個 server 的 smoke；依實際 UI／路由影響補瀏覽器驗收。`build:pages` 自動執行靜態輸出守門，包含精確 HTML 清冊、registry Metadata、未知 export、Privacy／dev payload 與資源檢查；CI workflow 不需新增或改動。
